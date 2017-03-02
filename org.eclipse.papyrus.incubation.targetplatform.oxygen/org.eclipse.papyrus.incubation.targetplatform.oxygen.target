@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Papyrus Oxygen" sequenceNumber="1488475101">
+<target name="Papyrus Oxygen" sequenceNumber="1488476081">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.draw2d.feature.group" version="0.0.0"/>
@@ -44,12 +44,18 @@
       <repository id="eclipse-oxygen" location="http://download.eclipse.org/releases/oxygen/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
-      <repository id="eclipse-papyrus-developer-master" location="https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/"/>
-    </location>
-    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.query.sdk.feature.group" version="1.10.0.201606071631"/>
       <repository id="emfQuery" location="http://download.eclipse.org/modeling/emf/query/updates/releases"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.elk.feature.feature.group" version="0.1.0.201607121925"/>
+      <unit id="org.eclipse.elk.ui.feature.feature.group" version="0.1.0.201607121925"/>
+      <unit id="org.eclipse.elk.gmf.feature.feature.group" version="0.1.0.201607121925"/>
+      <repository id="elk" location="http://download.eclipse.org/elk/updates/releases/0.1.0/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
+      <repository id="eclipse-papyrus-developer-master" location="https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/"/>
     </location>
   </locations>
 </target>

@@ -10,3 +10,7 @@ tests/**/.metadata/
 **/src/site/resources/images/rcptt-screenshots
 # sonarlint temporary directory
 sonarlint/
+
+#intellij files
+.idea/
+*.iml

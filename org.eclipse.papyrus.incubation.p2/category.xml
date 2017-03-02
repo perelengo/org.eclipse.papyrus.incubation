@@ -33,4 +33,11 @@
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>   
 
+   <feature url="features/org.eclipse.papyrus.infra.gmfdiag.elk.feature_0.1.0.qualifier.jar" id="org.eclipse.papyrus.infra.gmfdiag.elk.feature" version="0.1.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+   <feature url="features/org.eclipse.papyrus.infra.gmfdiag.elk.feature.source_0.1.0.qualifier.jar" id="org.eclipse.papyrus.infra.gmfdiag.elk.feature.source" version="0.1.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>   
+
 </site>

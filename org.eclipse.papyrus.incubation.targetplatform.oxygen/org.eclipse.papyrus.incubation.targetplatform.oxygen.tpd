@@ -47,3 +47,15 @@ location "https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSu
 location emfQuery "http://download.eclipse.org/modeling/emf/query/updates/releases" {
 	org.eclipse.emf.query.sdk.feature.group
 }
+
+// required by ELK integration
+location elk "http://download.eclipse.org/elk/updates/releases/0.1.0/" {
+	  org.eclipse.elk.feature.feature.group
+	  org.eclipse.elk.ui.feature.feature.group
+	  org.eclipse.elk.gmf.feature.feature.group
+}
+
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/" eclipse-papyrus-developer-master {
+	org.eclipse.papyrus.junit.feature.feature.group lazy
+}
+

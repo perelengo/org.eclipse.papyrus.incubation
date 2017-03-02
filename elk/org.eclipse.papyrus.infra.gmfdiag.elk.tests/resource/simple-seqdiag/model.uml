@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oZplkF8OEeaUPsS62Sin0w" name="simple-seqdiag">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_obSkUF8OEeaUPsS62Sin0w" name="Interaction1">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_3G9ukF8OEeaUPsS62Sin0w" name="Lifeline0" coveredBy="_B6XmwF8PEeaUPsS62Sin0w _cGmNoF8QEeaUPsS62Sin0w"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_43mlwF8OEeaUPsS62Sin0w" name="Lifeline1" coveredBy="_B6YN0F8PEeaUPsS62Sin0w _bzjV0F8QEeaUPsS62Sin0w _cthDsF8QEeaUPsS62Sin0w"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_HIpNAF8QEeaUPsS62Sin0w" name="Lifeline2" coveredBy="_bzj84F8QEeaUPsS62Sin0w _cGm0sF8QEeaUPsS62Sin0w _ctgcoF8QEeaUPsS62Sin0w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_bzjV0F8QEeaUPsS62Sin0w" name="Message0Send" covered="_43mlwF8OEeaUPsS62Sin0w" message="_bziHsF8QEeaUPsS62Sin0w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_bzj84F8QEeaUPsS62Sin0w" name="Message0Recv" covered="_HIpNAF8QEeaUPsS62Sin0w" message="_bziHsF8QEeaUPsS62Sin0w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_cGmNoF8QEeaUPsS62Sin0w" name="Message1Send" covered="_3G9ukF8OEeaUPsS62Sin0w" message="_cGk_gF8QEeaUPsS62Sin0w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_cGm0sF8QEeaUPsS62Sin0w" name="Message1Recv" covered="_HIpNAF8QEeaUPsS62Sin0w" message="_cGk_gF8QEeaUPsS62Sin0w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_cthDsF8QEeaUPsS62Sin0w" name="Message2Recv" covered="_43mlwF8OEeaUPsS62Sin0w" message="_ctfOgF8QEeaUPsS62Sin0w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_B6YN0F8PEeaUPsS62Sin0w" name="MessageRecv" covered="_43mlwF8OEeaUPsS62Sin0w" message="_B6RgIF8PEeaUPsS62Sin0w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_B6XmwF8PEeaUPsS62Sin0w" name="MessageSend" covered="_3G9ukF8OEeaUPsS62Sin0w" message="_B6RgIF8PEeaUPsS62Sin0w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ctgcoF8QEeaUPsS62Sin0w" name="Message2Send" covered="_HIpNAF8QEeaUPsS62Sin0w" message="_ctfOgF8QEeaUPsS62Sin0w"/>
+    <message xmi:type="uml:Message" xmi:id="_B6RgIF8PEeaUPsS62Sin0w" name="Message" messageSort="asynchCall" receiveEvent="_B6YN0F8PEeaUPsS62Sin0w" sendEvent="_B6XmwF8PEeaUPsS62Sin0w"/>
+    <message xmi:type="uml:Message" xmi:id="_bziHsF8QEeaUPsS62Sin0w" name="Message0" messageSort="asynchCall" receiveEvent="_bzj84F8QEeaUPsS62Sin0w" sendEvent="_bzjV0F8QEeaUPsS62Sin0w"/>
+    <message xmi:type="uml:Message" xmi:id="_cGk_gF8QEeaUPsS62Sin0w" name="Message1" messageSort="asynchCall" receiveEvent="_cGm0sF8QEeaUPsS62Sin0w" sendEvent="_cGmNoF8QEeaUPsS62Sin0w"/>
+    <message xmi:type="uml:Message" xmi:id="_ctfOgF8QEeaUPsS62Sin0w" name="Message2" messageSort="asynchCall" receiveEvent="_cthDsF8QEeaUPsS62Sin0w" sendEvent="_ctgcoF8QEeaUPsS62Sin0w"/>
+  </packagedElement>
+</uml:Model>
