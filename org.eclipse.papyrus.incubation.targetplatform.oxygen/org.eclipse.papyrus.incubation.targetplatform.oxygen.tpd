@@ -30,15 +30,18 @@ location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
  org.eclipse.wst.xml_core.feature.feature.group lazy
  org.eclipse.xpand.feature.group lazy
  org.eclipse.xsd.feature.group lazy
- org.eclipse.xtend.feature.group lazy
- org.eclipse.xtend.sdk.feature.group lazy
+// org.eclipse.xtend.feature.group lazy
+// org.eclipse.xtend.sdk.feature.group lazy
  org.eclipse.xtext.runtime.feature.group lazy
  org.eclipse.xtext.sdk.feature.group lazy
  org.eclipse.xtext.ui.feature.group lazy
  org.eclipse.xtext.xbase.feature.group lazy
  org.eclipse.xtext.xbase.lib.feature.group lazy
  org.eclipse.xwt.feature.feature.group lazy
+ org.eclipse.xtend2.lib lazy
+ org.eclipse.acceleo.feature.group lazy
 }
+
 
 location "https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/" eclipse-papyrus-developer-master {
 	org.eclipse.papyrus.junit.feature.feature.group lazy
@@ -55,7 +58,12 @@ location elk "http://download.eclipse.org/elk/updates/releases/0.1.0/" {
 	  org.eclipse.elk.gmf.feature.feature.group
 }
 
-location "https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/" eclipse-papyrus-developer-master {
-	org.eclipse.papyrus.junit.feature.feature.group lazy
+
+location xpand "http://download.eclipse.org/modeling/m2t/xpand/updates/releases/R201605260315/" {
+	org.eclipse.xpand.sdk.feature.group
+	org.eclipse.xtend.feature.group
 }
 
+location gmfTooling "http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.3.1a" {
+	org.eclipse.gmf.tooling.codegen.xtend2.feature.group
+} 

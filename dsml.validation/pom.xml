@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.eclipse.papyrus</groupId>
+		<artifactId>org.eclipse.papyrus.incubation</artifactId>		
+		<version>3.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>org.eclipse.papyrus.dsml.validation.parent</artifactId>
+	<version>1.2.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>org.eclipse.papyrus.dsml.validation</module>
+		<module>org.eclipse.papyrus.dsml.validation.generator</module>
+		<module>org.eclipse.papyrus.dsml.validation.model</module>
+		<module>org.eclipse.papyrus.dsml.validation.model.ui</module>
+		<module>org.eclipse.papyrus.dsml.validation.properties</module>
+		<module>org.eclipse.papyrus.dsml.validation.wizard</module>
+		<module>org.eclipse.papyrus.extra.dsml.validation.feature</module>
+	</modules>	
+	
+</project>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Papyrus Oxygen" sequenceNumber="1488476081">
+<target name="Papyrus Oxygen" sequenceNumber="1488476925">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.draw2d.feature.group" version="0.0.0"/>
@@ -33,15 +33,19 @@
       <unit id="org.eclipse.wst.xml_core.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xpand.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xsd.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.xtend.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.xtend.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xtext.runtime.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xtext.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xtext.ui.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xtext.xbase.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xtext.xbase.lib.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xwt.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xtend2.lib" version="0.0.0"/>
+      <unit id="org.eclipse.acceleo.feature.group" version="0.0.0"/>
       <repository id="eclipse-oxygen" location="http://download.eclipse.org/releases/oxygen/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
+      <repository id="eclipse-papyrus-developer-master" location="https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.query.sdk.feature.group" version="1.10.0.201606071631"/>
@@ -54,8 +58,13 @@
       <repository id="elk" location="http://download.eclipse.org/elk/updates/releases/0.1.0/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
-      <repository id="eclipse-papyrus-developer-master" location="https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/"/>
+      <unit id="org.eclipse.xpand.sdk.feature.group" version="2.2.0.v201605260315"/>
+      <unit id="org.eclipse.xtend.feature.group" version="2.2.0.v201605260315"/>
+      <repository id="xpand" location="http://download.eclipse.org/modeling/m2t/xpand/updates/releases/R201605260315/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.gmf.tooling.codegen.xtend2.feature.group" version="3.3.1.201509291144"/>
+      <repository id="gmfTooling" location="http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.3.1a"/>
     </location>
   </locations>
 </target>
