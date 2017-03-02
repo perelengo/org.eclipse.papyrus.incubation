@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.eclipse.papyrus</groupId>
+		<artifactId>org.eclipse.papyrus.incubation</artifactId>		
+		<version>3.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>org.eclipse.papyrus.refactoring.parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>org.eclipse.papyrus.refactoring</module>
+		<!--FIXME: Already commented in Papyrus core repository <module>org.eclipse.papyrus.refactoring.tests</module>-->
+		<module>org.eclipse.papyrus.uml.refactoring.mutation</module>
+		<module>org.eclipse.papyrus.uml.refactoring.qvtTransformation</module>
+		<module>org.eclipse.papyrus.uml.refactoring.replace</module>
+		<!-- FIXME: A feature is missing for this incubating component -->
+	</modules>	
+	
+</project>

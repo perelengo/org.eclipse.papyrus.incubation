@@ -7,15 +7,34 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>umlexport</module>
-
+		<module>refactoring</module>
 		<!-- Releng -->
 		<module>org.eclipse.papyrus.incubation.targetplatform.oxygen</module>
 		<module>org.eclipse.papyrus.incubation.p2</module>
 	</modules>
 	<properties>
 		<tycho-version>0.26.0</tycho-version>
+		<mylyn.wikitext.version>2.4.0-SNAPSHOT</mylyn.wikitext.version>
 	</properties>
-	<build>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>org.eclipse.cbi.maven.plugins</id>
+			<name>Eclipse CBI</name>
+			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>eclipse.org-mylyn</id>
+			<!-- url>https://repo.eclipse.org/content/repositories/mylyn-releases/</url -->
+			<url>https://repo.eclipse.org/content/repositories/mylyn/</url>
+		</pluginRepository>
+	</pluginRepositories>	
+<build>
 <pluginManagement>
 			<plugins>
 				<plugin>
@@ -146,8 +165,8 @@
 				<artifactId>tycho-compiler-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<optimize>true</optimize>
 					<showWarnings>true</showWarnings>
 				</configuration>

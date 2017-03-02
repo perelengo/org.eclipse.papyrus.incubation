@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head>
+<body>
+	<h1 id="How_to_implement_your_own_Papyrus_refactoring">How to implement your own Papyrus refactoring</h1>
+	<h2 id="Introduction">Introduction</h2>
+		<p>The PRF (Papyrus Refactoring Framework) helps developers to create undoable and previewable Papyrus model refactorings. The PRF also warns the user if the transformation invalidates the model.</p>
+		<p>In this page you will learn how to implement your own Papyrus transformation using the PRF.</p>
+	
+	<h2 id="Implementing_the_transformation">Implementing the transformation</h2>
+		<p><b>Before beginning the implementation you need to add the dependencies:</b> <i>org.eclipse.papyrus.infra.refactoring</i>, <i>org.eclipse.papyrus.infra.core</i>,<i>org.eclipse.ltk.core.refactoring</i>, <i>org.eclipse.ltk.ui.refactoring</i>.</p>
+		<p>Then you have to do is to implement a class which extends <i>AbstractPapyrusTransformation</i> (which is a <i>WizardPage</i>).</p>
+		<p>In the constructor you have to indicate the human readable name of your transformation.</p><p>Then you need to implement the following methods:</p>
+		<ul>
+		<li><pre> public void createControl(Composite parent);</pre> In this method you have to implement the control which will be displayed in the UI refactoring wizard. You are are responsible for ensuring the created control can be accessed via <i>getControl()</i>, typically you instantiate your <i>composite</i> and set the control like this: <i>setControl(composite)</i></li>
+		</ul>
+		<ul>
+		<li><pre>public RefactoringStatus checkFinalConditions();</pre> This method is called when the user clicks on the "OK" or "Preview" button. Here you check that all conditions are fulfilled to execute the transformation. Typically you verify that all the informations needed to do the transformation are given by the user. You have to return a <a href="http://help.eclipse.org/neon/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ltk/core/refactoring/RefactoringStatus.html">RefactoringStatus</a>.</li>
+		</ul>
+		<p>	Example:
+			<pre>	// In this example we assume that the String newString has to be given by the user in the UI.
+			RefactoringStatus status = new RefactoringStatus; // When a RefactoringStatus is instantiated his severity is 'OK'.
+			if(fNewString==null){
+				status.addFatalError("You have to indicate the new string"); // We add a fatal error indicating to the user that he has to enter the new string if he wants to execute the refactoring.
+			} </pre>
+		</p>
+		<ul>
+		<li><pre>public void execute(ModelSet modelSetToTransform);</pre> Here you will implement your transformation. The transformation has to be done on the parameter modelSetToTransform which is a ModelSet, <b>if you don't respect this rule the preview tool won't work properly</b>.</li>
+		</ul>
+		<p>Furthermore you may override the method <i>checkInitialConditions()</i> if you need to check some conditions before opening the UI. In the example below we verify the user has selected at least one element.</p><pre>
+		public RefactoringStatus checkInitialConditions(){
+		if(PapyrusRefactoringUtils.getSelectedElements().size()==0){
+			status.addFatalError("You have to select at least one element");
+		 }
+		} 
+		</pre>
+		<p>Moreover you inherit the field <i>fModelSet</i>,it represents the ModelSet on which the transformation will be done. You can use it in the <i>checkInitialConditions(), checkFinalConditions()</i> or even <i>createControl()</i> methods.</p>
+
+	<h2 id="Helper_classes">Helper classes</h2>
+		<p>The PRF also provides helper classes, which extend <i>AbstractPapyrusTransformation</i>, if you want to implement a refactoring that execute the same transformation on each element from a specified list of <i>EObject</i>.</p>
+		<p>Fist of all, you need to implement the <i>ITransformationOnElement</i> interface. 
+		In the <i>transformationToExecute(EObject element)</i> you have to implement a transformation that applies itself on the given <i>EObject</i> in parameter.</p>
+		<p>In the example below, if the element is a NamedElement we change his name to "toto".</p>
+		<pre>
+			public void transformationToExecute(EObject element){
+				if(element instanceof NamedElement){
+					((NamedElement)element).setName("toto");
+				}
+			}
+		</pre>
+		<p>Then you override one the following helper classes:</p>
+		<ul>
+		<li><i>AbstractTransformationOnElement</i>, in this case you will have to implement the methods:<pre>public Collection&lt;EObject&gt; getElementsListToTransform(); //In this method you have to return the list of <i>EObject</i> on which you want to apply your transformation.</pre><pre>public ITransformationOnElement getTransformationOnElement();//Here you will return your implementation of the <i>ITransformationOnElement</i> interface. </pre> </li>
+		</ul>
+		<ul>
+		<li><i>AbstractAllModelTransformation</i>, this class extends <i>AbstractTransformationOnElement</i> but the <i>getElementsListToTransform()</i> method is already implemented it returns the list of all the <i>EObject</i> of the model. You will only need to implement the <i> getTransformationOnElement()</i> method.</li>
+		</ul>
+		<ul>
+		<li><i>AbstractSelectedElementsTransformation</i>, this class is similar to <i>AbstractAllModelTransformation</i> except that the <i>EObject</i> on which the transformation will be applied is the list of the selected elements by the user.</li>
+		</ul>
+		<p>If you decide to override one of this helper classes you won't have to override the <i>execute()</i> method but you still need to implement the <i>createControl()</i>, <i>checkFinalConditions</i>, and maybe <i>checkFinalConditions</i> methods.
+		By overriding one of this classes, the user will be able, in the preview page, to check the elements on which he really wants the refactoring to be applied.</p>
+	
+	<h2 id="Util_class">Util class</h2>
+		<p>To facilitate the implementation of your refactoring you can use the <i>PapyrusRefactoringUtils</i> class.
+		You can use, from this class, the following methods: </p>
+		<ul>
+		<li><i>getUMLRoot(ModelSet modelSet);</i> Return the UML Root if this ModelSet have an UML Model, null otherwise.</li>
+		</ul>
+		<ul>
+		<li><i>getAllElements(ModelSet modelSet);</i> Return all the semantic elements from this ModelSet.</li>
+		</ul>
+		<ul>
+		<li><i>getSelectedElements(ModelSet modelSet);</i> Return the selected elements in the Papyrus Editor or in the Model Explorer.</li>
+		</ul>
+		<ul>
+		<li><i>searchElements(EClass[] participantsTypes, ModelSet modelSet);</i> Return all the instances of the metaclasses given in <i>participantsTypes</i>, in the given ModelSet.</li>
+		</ul>
+		<ul>
+		<li><i>findEObjectInModelSet(EObject target,ModelSet modelSet);</i> Return the corresponding EObject (which will be a clone of the <i>target</i> parameter) in the wanted ModelSet. You may use this method in your transformation implementation if you want to use,in the <i>execute</i> method an EObject, you have not gotten neither from the <i>modelSetToTransform</i> parameter.</li>
+		</ul>
+	
+	<h2 id="Launching_the_refactoring">Launching the refactoring</h2>
+		<p>First you have to instantiate a <i>PapyrusRefactoringOperation</i>, then you trigger the <i>run</i> method where you want to launch your Papyrus refactoring, for example in a handler. <pre>PapyrusRefactoringOperation operation=new PapyrusRefactoringOperation(myPapyrusTransformation);
+		operation.run();
+		</pre></p>
+	
+	<h2 id="Add_an_entry_to_the_refactoring_menu">Add an entry to the refactoring menu</h2>
+		<p>A menu, named "Model Refactor", is available in the Papyrus Editor and Model Explorer contextual menus. It's id is: "org.eclipse.papyrus.refactoring.menu". If you want to add a menu entry for you refactoring in the "Model Refactor" menu, you will have to contribute to the "org.eclipse.ui.menus" extension point.
+		The following example adds an entry for a refactoring named "MyRefactoring".</p>
+		<pre>&lt;extension point="org.eclipse.ui.menus"&gt;
+		     &lt;menuContribution
+		           allPopups="false"
+		           locationURI="popup:org.eclipse.papyrus.refactoring.menu?after=additions"&gt;
+		        &lt;command
+		              commandId="org.eclipse.papyrus.refactoring.MyRefactoring.command"
+		              id="MyRefactoring"
+		              label="MyRefactoring"
+		              style="push"&gt;
+		        &lt;/command&gt;
+		     &lt;/menuContribution&gt;
+		  &lt;/extension&gt;
+		  &lt;extension
+		        point="org.eclipse.ui.commands"&gt;
+		     &lt;command
+		           id="org.eclipse.papyrus.refactoring.MyRefactoring.command"
+		           name="MyRefactoringCommand"&gt;
+		     &lt;/command&gt;
+		  &lt;/extension&gt;
+		  &lt;extension
+		        point="org.eclipse.ui.handlers"&gt;
+		     &lt;handler
+		           class="org.eclipse.papyrus.refactoring.MyRefactoring.MyRefactoringHandler"
+		           commandId="org.eclipse.papyrus.refactoring.MyRefactoring.command"&gt;
+		</pre><pre>     &lt;/handler&gt;
+		  &lt;/extension&gt;
+		</pre>
+		<p>Typically, in the handler your launch the refactoring (see the section before).</p>
+		
+	<h2 id="Add_your_refactoring_user_documentation">Add your refactoring user documentation</h2>
+		<p>To add your refactoring user help to the available refactorings list in the context help, put
+		'../org.eclipse.papyrus.infra.refactoring.doc/resource/refactoring_user_guide.xml#refactoring_list' in the anchor field.</p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc label="Model Refactor" link_to="../../../plugins/doc/org.eclipse.papyrus.infra.doc/toc.xml#PapyrusDocUser" topic="doc/Dev_user.html">
+   <topic href="doc/Dev_user.html" label="Model Refactor">
+      <topic href="resource/Dev_user.html" label="Model Refactor Wizard">
+      </topic>
+      <topic label="Available Refactorings">
+         <anchor id="refactoring_list"/>
+      </topic>
+   </topic>
+	
+</toc>

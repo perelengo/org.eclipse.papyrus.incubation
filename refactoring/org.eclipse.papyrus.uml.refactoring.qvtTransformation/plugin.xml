@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension
+         point="org.eclipse.ui.menus">
+      <!-- <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.papyrus.refactoring.menu?after=org.eclipse.papyrus.refactoring.mutation">
+         <command
+               commandId="org.eclipse.papyrus.refactoring.qvtTransformation.command"
+               id="org.eclipse.papyrus.refactoring.qvtTransformation.command"
+               icon="icons/refactor.png"
+               label="%transformationContribution.label"
+               style="push"
+               tooltip="%transformationContribution.tooltip">
+         </command>
+      </menuContribution> -->
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="org.eclipse.papyrus.refactoring.qvtTransformation.command"
+            name="%transformationCommand.name">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.eclipse.papyrus.refactoring.qvttransformation.handler.SelectQVTTransformationHandler"
+            commandId="org.eclipse.papyrus.refactoring.qvtTransformation.command">
+      </handler>
+   </extension>
+
+</plugin>

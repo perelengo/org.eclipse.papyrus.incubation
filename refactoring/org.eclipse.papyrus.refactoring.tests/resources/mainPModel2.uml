@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_NMreYDxmEeahauIA6xbtgA" name="RootElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_Oce5YDxmEeahauIA6xbtgA" name="Class1"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="___M7ADxmEeahauIA6xbtgA" name="Interface1">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DNjtYjxnEeahauIA6xbtgA" name="basicclass" association="_DNjGUDxnEeahauIA6xbtgA">
+      <type xmi:type="uml:Class" href="mainPModel1.uml#_Lt2lYDxlEeahauIA6xbtgA"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DNjGUDxnEeahauIA6xbtgA" memberEnd="_DNjtYjxnEeahauIA6xbtgA _DNjtYzxnEeahauIA6xbtgA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DNjtYDxnEeahauIA6xbtgA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DNjtYTxnEeahauIA6xbtgA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_DNjtYzxnEeahauIA6xbtgA" name="interface1" type="___M7ADxmEeahauIA6xbtgA" association="_DNjGUDxnEeahauIA6xbtgA"/>
+  </packagedElement>
+</uml:Model>

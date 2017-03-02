@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <!-- <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="org.eclipse.papyrus.refactoring.ui.RefactoringPapyrusSearchPage"
+            enabled="true"
+            extensions="di:99"
+            icon="icons/PapyrusSearch.png"
+            id="org.eclipse.papyrus.search.ui.pages.PapyrusSearchPage"
+            label="%searchPageLabel"
+            showScopeSection="true">
+      </page>
+   </extension> -->
+   <extension
+         point="org.eclipse.ltk.ui.refactoring.changePreviewViewers">
+      <changePreviewViewer
+            class="org.eclipse.papyrus.refactoring.ui.PapyrusRefactoringPreview"
+            id="org.eclipse.papyrus.refactoring.changePreviewViewer">
+         <enablement>
+            <instanceof
+                  value="org.eclipse.papyrus.refactoring.core.IPreviewablePapyrusChange">
+            </instanceof>
+         </enablement>
+      </changePreviewViewer>
+   </extension>
+   <extension
+         point="org.eclipse.ltk.ui.refactoring.statusContextViewers">
+      <statusContextViewer
+            class="org.eclipse.papyrus.refactoring.ui.PapyrusStatusContextViewer"
+            id="org.eclipse.papyrus.infra.refactoring.statusContextViewer">
+         <enablement>
+            <instanceof
+                  value="org.eclipse.papyrus.refactoring.core.PapyrusRefactoringValidationStatusContext">
+            </instanceof>
+         </enablement>
+      </statusContextViewer>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.modelexplorer.popup?after=org.eclipse.papyrus.views.modelexplorer.popup.validation">
+         <menu
+               icon="icons/Papyrus_16x16.gif"
+               id="org.eclipse.papyrus.refactoring.menu"
+               label="%refactoringContribution.label">
+            <visibleWhen>
+               <or>
+                  <with
+                        variable="activeEditorId">
+                     <equals
+                           value="org.eclipse.papyrus.infra.core.papyrusEditor">
+                     </equals>
+                  </with>
+                  <count
+                        value="+">
+                  </count>
+               </or>
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+      
+      <menuContribution
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu?after=org.eclipse.papyrus.views.modelexplorer.popup.validation">
+         <menu
+               icon="icons/Papyrus_16x16.gif"
+               id="org.eclipse.papyrus.refactoring.menu"
+               label="%refactoringContribution.label">
+           <visibleWhen>
+               <or>
+                  <with
+                        variable="activeEditorId">
+                     <equals
+                           value="org.eclipse.papyrus.infra.core.papyrusEditor">
+                     </equals>
+                  </with>
+                  <count
+                        value="+">
+                  </count>
+               </or>
+            </visibleWhen>
+           </menu>
+      </menuContribution>
+   </extension>
+   
+	<extension
+         point="org.eclipse.help.toc">
+      	<toc
+            file="doc/refactoring_user_guide.xml"
+            primary="false">
+     	 </toc>
+       <toc
+             file="doc/refactoring_dev_guide.xml"
+             primary="true">
+       </toc>
+	</extension>
+
+</plugin>

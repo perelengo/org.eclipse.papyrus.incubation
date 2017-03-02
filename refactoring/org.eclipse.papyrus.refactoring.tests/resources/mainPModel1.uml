@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ProfileRootElement="http:///schemas/ProfileRootElement/_ZOaqYD61EeahauIA6xbtgA/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ProfileRootElement/_ZOaqYD61EeahauIA6xbtgA/5 refactoringProfile.profile.uml#_ZOaqYT61EeahauIA6xbtgA">
+  <uml:Model xmi:id="_KnzjUDxlEeahauIA6xbtgA" name="RootElement">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Lt2lYDxlEeahauIA6xbtgA" name="basicClass">
+      <generalization xmi:type="uml:Generalization" xmi:id="_phGg0DxnEeahauIA6xbtgA">
+        <general xmi:type="uml:Component" href="secondaryPModel1.uml#_m2eGkDxnEeahauIA6xbtgA"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NzKFADxlEeahauIA6xbtgA" name="classWithProperty">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YP_3UDxlEeahauIA6xbtgA" name="classProperty"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bSmFoDxlEeahauIA6xbtgA" name="associationSource">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_i4uJgDxlEeahauIA6xbtgA" name="associationtarget" type="_d-cn4DxlEeahauIA6xbtgA" association="_i4rtQDxlEeahauIA6xbtgA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_d-cn4DxlEeahauIA6xbtgA" name="associationTarget"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_i4rtQDxlEeahauIA6xbtgA" name="Association" memberEnd="_i4uJgDxlEeahauIA6xbtgA _i4uwkDxlEeahauIA6xbtgA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_i4ticDxlEeahauIA6xbtgA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i4ticTxlEeahauIA6xbtgA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_i4uwkDxlEeahauIA6xbtgA" name="associationsource" type="_bSmFoDxlEeahauIA6xbtgA" association="_i4rtQDxlEeahauIA6xbtgA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_q4v7IDxlEeahauIA6xbtgA" name="parentPackage">
+      <packagedElement xmi:type="uml:Package" xmi:id="_t7ghgDxlEeahauIA6xbtgA" name="childPackage">
+        <packagedElement xmi:type="uml:Class" xmi:id="_zZPVgDxlEeahauIA6xbtgA" name="generalizationSource">
+          <generalization xmi:type="uml:Generalization" xmi:id="_64U9QDxlEeahauIA6xbtgA" general="_2CsrEDxlEeahauIA6xbtgA"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_8-PVUDxvEeahauIA6xbtgA" name="generalizationSourceProperty"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_T2mGcD3LEeahauIA6xbtgA" name="generalizationSourceHiddenProperty"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="_2CsrEDxlEeahauIA6xbtgA" name="generalizationTarget"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_IjZVQD4KEeahauIA6xbtgA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bC-YQD61EeahauIA6xbtgA" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bC-YQT61EeahauIA6xbtgA" key="Version" value="0.0.6"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bC-YQj61EeahauIA6xbtgA" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bC-YQz61EeahauIA6xbtgA" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bC-YRD61EeahauIA6xbtgA" key="Date" value="2016-06-30"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bC-YRT61EeahauIA6xbtgA" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IjZ8UD4KEeahauIA6xbtgA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="refactoringProfile.profile.uml#_ZOaqYT61EeahauIA6xbtgA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="refactoringProfile.profile.uml#_K8sfAD32EeahauIA6xbtgA"/>
+    </profileApplication>
+  </uml:Model>
+  <ProfileRootElement:Stereotype2 xmi:id="_JyuPID4KEeahauIA6xbtgA" base_Class="_d-cn4DxlEeahauIA6xbtgA"/>
+  <ProfileRootElement:Stereotype1 xmi:id="_Jzlx0D4KEeahauIA6xbtgA" base_Class="_d-cn4DxlEeahauIA6xbtgA"/>
+  <ProfileRootElement:Stereotype1 xmi:id="_B84dYD6QEeahauIA6xbtgA" base_Class="_zZPVgDxlEeahauIA6xbtgA"/>
+</xmi:XMI>
