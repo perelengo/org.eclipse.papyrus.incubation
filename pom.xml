@@ -10,6 +10,7 @@
 		<module>refactoring</module>
 		<module>diagramtemplate</module>
 		<module>alf</module>
+		<module>layers</module>
 		<!-- Releng -->
 		<module>org.eclipse.papyrus.incubation.targetplatform.oxygen</module>
 		<module>org.eclipse.papyrus.incubation.p2</module>

@@ -25,5 +25,12 @@
    <feature url="features/org.eclipse.papyrus.uml.alf.extra.feature.source_0.7.0.qualifier.jar" id="org.eclipse.papyrus.uml.alf.extra.feature.source" version="0.7.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
 	</feature>
-   
+
+   <feature url="features/org.eclipse.papyrus.layers.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.layers.feature" version="1.2.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature> 
+   <feature url="features/org.eclipse.papyrus.layers.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.layers.feature.source" version="1.2.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>   
+
 </site>

@@ -47,4 +47,3 @@ location "https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSu
 location emfQuery "http://download.eclipse.org/modeling/emf/query/updates/releases" {
 	org.eclipse.emf.query.sdk.feature.group
 }
-
