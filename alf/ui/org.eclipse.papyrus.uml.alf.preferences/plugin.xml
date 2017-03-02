@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.eclipse.papyrus.embeddededitors"
+            class="org.eclipse.papyrus.uml.alf.preferences.AlfIntegrationPreferences"
+            id="org.eclipse.papyrus.uml.alf.preferences.alf_preferences"
+            name="Alf (Action Language for Foundational UML)">
+      </page>
+   </extension>
+
+</plugin>

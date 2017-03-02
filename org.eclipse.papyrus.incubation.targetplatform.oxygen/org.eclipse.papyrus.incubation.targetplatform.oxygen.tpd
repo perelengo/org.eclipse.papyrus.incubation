@@ -40,4 +40,11 @@ location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
  org.eclipse.xwt.feature.feature.group lazy
 }
 
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/" eclipse-papyrus-developer-master {
+	org.eclipse.papyrus.junit.feature.feature.group lazy
+}
+
+location emfQuery "http://download.eclipse.org/modeling/emf/query/updates/releases" {
+	org.eclipse.emf.query.sdk.feature.group
+}
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="TreeOutlinePage">
+         <propertySection
+               class="org.eclipse.papyrus.uml.alf.properties.xtext.sheet.AlfEditionPropertySection"
+               enablesFor="1"
+               filter="org.eclipse.papyrus.uml.alf.properties.xtext.sheet.AlfEditorPropertySectionFilter"
+               id="alf.property.section.AdvancedEditingPropertySection"
+               tab="alf_editing">
+            <input
+                  type="org.eclipse.gmf.runtime.notation.View">
+            </input>
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+      </propertySections>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="TreeOutlinePage">
+         <propertyTab
+               afterTab="uml"
+               category="org.eclipse.papyrus"
+               id="alf_editing"
+               indented="true"
+               label="ALF">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+</plugin>

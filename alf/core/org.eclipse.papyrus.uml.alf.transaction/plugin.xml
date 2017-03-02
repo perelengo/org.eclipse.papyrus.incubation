@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.infra.core.service">
+      <service
+            classname="org.eclipse.papyrus.uml.alf.transaction.observation.FUMLElementService"
+            description="Service to register a listener onto model elements that are in the fUML subset"
+            id="org.eclipse.papyrus.uml.alf.transaction.observation.FUMLElementService"
+            priority="1"
+            startKind="startup">
+         <dependsOn
+               description="Editing domain which will receive the fUML listener"
+               serviceKeyRef="org.eclipse.emf.transaction.TransactionalEditingDomain">
+         </dependsOn>
+      </service>
+   </extension>
+
+</plugin>
