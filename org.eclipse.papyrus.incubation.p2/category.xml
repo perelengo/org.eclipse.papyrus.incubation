@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-     <category-def name="org.eclipse.papyrus.incubation.category" label="Papyrus Incubation">
-      <description>
-         Papyrus incubating features
-      </description>
-   </category-def>
    <feature url="features/org.eclipse.papyrus.uml.export.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.uml.export.feature" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
    <feature url="features/org.eclipse.papyrus.uml.export.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.uml.export.feature.source" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
-   </feature>   
+   </feature>
    <feature url="features/org.eclipse.papyrus.extra.diagramtemplate.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.extra.diagramtemplate.feature" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
    <feature url="features/org.eclipse.papyrus.extra.diagramtemplate.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.extra.diagramtemplate.feature.source" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
-   </feature>  
-
+   </feature>
    <feature url="features/org.eclipse.papyrus.uml.alf.extra.feature_0.7.0.qualifier.jar" id="org.eclipse.papyrus.uml.alf.extra.feature" version="0.7.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
-   </feature> 
-
+   </feature>
    <feature url="features/org.eclipse.papyrus.uml.alf.extra.feature.source_0.7.0.qualifier.jar" id="org.eclipse.papyrus.uml.alf.extra.feature.source" version="0.7.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
-	</feature>
-
+   </feature>
    <feature url="features/org.eclipse.papyrus.layers.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.layers.feature" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
-   </feature> 
+   </feature>
    <feature url="features/org.eclipse.papyrus.layers.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.layers.feature.source" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
-   </feature>   
-
+   </feature>
    <feature url="features/org.eclipse.papyrus.infra.gmfdiag.elk.feature_0.1.0.qualifier.jar" id="org.eclipse.papyrus.infra.gmfdiag.elk.feature" version="0.1.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
    <feature url="features/org.eclipse.papyrus.infra.gmfdiag.elk.feature.source_0.1.0.qualifier.jar" id="org.eclipse.papyrus.infra.gmfdiag.elk.feature.source" version="0.1.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
-   </feature>   
-
+   </feature>
+   <category-def name="org.eclipse.papyrus.incubation.category" label="Papyrus Incubation">
+      <description>
+         Papyrus incubating features
+      </description>
+   </category-def>
+   <repository-reference location="http://download.eclipse.org/elk/updates/releases/" enabled="true" />
 </site>
