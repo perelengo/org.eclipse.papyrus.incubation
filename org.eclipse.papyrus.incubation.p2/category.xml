@@ -35,5 +35,5 @@
          Papyrus incubating features
       </description>
    </category-def>
-   <repository-reference location="http://download.eclipse.org/elk/updates/releases/" enabled="true" />
+   <repository-reference location="http://download.eclipse.org/elk/updates/releases/0.1.0/" enabled="true" />
 </site>
