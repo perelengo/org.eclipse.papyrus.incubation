@@ -7,8 +7,8 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>umlexport</module>
-		<module>refactoring</module>
-		<module>diagramtemplate</module>
+		<!-- compilation error 11/04/2017 <module>refactoring</module> -->
+		<!-- compilation error 11/04/2017 <module>diagramtemplate</module>   -->
 		<module>alf</module>
 		<module>layers</module>
 		<module>elk</module>
@@ -18,7 +18,7 @@
 		<module>org.eclipse.papyrus.incubation.p2</module>
 	</modules>
 	<properties>
-		<tycho-version>0.26.0</tycho-version>
+		<tycho-version>1.0.0</tycho-version>
 		<mylyn.wikitext.version>2.4.0-SNAPSHOT</mylyn.wikitext.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

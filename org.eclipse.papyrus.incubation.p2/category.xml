@@ -6,12 +6,14 @@
    <feature url="features/org.eclipse.papyrus.uml.export.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.uml.export.feature.source" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
+   <!-- TODO restore when compilation error solved
    <feature url="features/org.eclipse.papyrus.extra.diagramtemplate.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.extra.diagramtemplate.feature" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
    <feature url="features/org.eclipse.papyrus.extra.diagramtemplate.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.extra.diagramtemplate.feature.source" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
+   -->
    <feature url="features/org.eclipse.papyrus.uml.alf.extra.feature_0.7.0.qualifier.jar" id="org.eclipse.papyrus.uml.alf.extra.feature" version="0.7.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
@@ -30,6 +32,12 @@
    <feature url="features/org.eclipse.papyrus.infra.gmfdiag.elk.feature.source_0.1.0.qualifier.jar" id="org.eclipse.papyrus.infra.gmfdiag.elk.feature.source" version="0.1.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
+
+   <feature url="features/org.eclipse.papyrus.extra.dsml.validation.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.extra.dsml.validation.feature" version="1.2.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+   
+   
    <category-def name="org.eclipse.papyrus.incubation.category" label="Papyrus Incubation">
       <description>
          Papyrus incubating features
