@@ -36,6 +36,9 @@
    <feature url="features/org.eclipse.papyrus.extra.dsml.validation.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.extra.dsml.validation.feature" version="1.2.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
+   <feature url="features/org.eclipse.papyrus.extra.dsml.validation.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.extra.dsml.validation.feature.source" version="1.2.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
    
    
    <category-def name="org.eclipse.papyrus.incubation.category" label="Papyrus Incubation">
