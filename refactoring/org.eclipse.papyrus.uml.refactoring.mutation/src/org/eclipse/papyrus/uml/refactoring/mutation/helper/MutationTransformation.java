@@ -17,8 +17,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -33,6 +31,7 @@ import org.eclipse.gmf.runtime.diagram.core.util.ViewRefactorHelper;
 import org.eclipse.gmf.runtime.diagram.core.util.ViewUtil;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
+import org.eclipse.gmf.runtime.emf.type.core.IClientContext;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.type.core.IHintedType;
 import org.eclipse.gmf.runtime.emf.type.core.ISpecializationType;
@@ -49,10 +48,11 @@ import org.eclipse.gmf.runtime.notation.Shape;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
+import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.emf.gmf.command.GMFtoEMFCommandWrapper;
 import org.eclipse.papyrus.infra.gmfdiag.common.commands.SemanticElementAdapter;
-import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationUtils;
 import org.eclipse.papyrus.infra.gmfdiag.common.service.visualtype.VisualTypeService;
+import org.eclipse.papyrus.infra.services.edit.context.TypeContext;
 import org.eclipse.papyrus.infra.services.edit.service.ElementEditServiceUtils;
 import org.eclipse.papyrus.infra.services.edit.service.IElementEditService;
 import org.eclipse.papyrus.refactoring.refactoringOnElement.ITransformationOnElement;
@@ -144,7 +144,17 @@ public class MutationTransformation extends ViewRefactorHelper implements ITrans
 			return;
 		}
 
-		fProvider = ElementEditServiceUtils.getCommandProvider(fNewElementType);
+		IClientContext context = null;
+		try {
+			context = TypeContext.getContext(parent);
+		} catch (ServiceException e) {
+			Activator.log.error(e);
+		}
+
+		if (context == null) {
+			return;
+		}
+		fProvider = ElementEditServiceUtils.getCommandProvider(fNewElementType, context);
 		if (fProvider == null) {
 			return;
 		}

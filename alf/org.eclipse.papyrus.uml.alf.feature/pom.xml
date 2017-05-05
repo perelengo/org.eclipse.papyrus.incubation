@@ -6,7 +6,7 @@
 		<artifactId>org.eclipse.papyrus.alf.parent</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>org.eclipse.papyrus.uml.alf.extra.feature</artifactId>
+	<artifactId>org.eclipse.papyrus.uml.alf.feature</artifactId>
 	<version>0.7.0-SNAPSHOT</version>
 	<packaging>eclipse-feature</packaging>
 </project>

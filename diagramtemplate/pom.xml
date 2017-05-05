@@ -15,7 +15,7 @@
 		<!--FIXME: Was already commented in the Papyrus  core build <module>org.eclipse.papyrus.diagramtemplate.doc</module> -->
 		<module>org.eclipse.papyrus.diagramtemplate.edit</module>
 		<module>org.eclipse.papyrus.diagramtemplate.editor</module>
-		<module>org.eclipse.papyrus.extra.diagramtemplate.feature</module>
+		<module>org.eclipse.papyrus.diagramtemplate.feature</module>
 	</modules>	
 	
 </project>

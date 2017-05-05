@@ -15,7 +15,7 @@
 		<module>org.eclipse.papyrus.uml.refactoring.mutation</module>
 		<module>org.eclipse.papyrus.uml.refactoring.qvtTransformation</module>
 		<module>org.eclipse.papyrus.uml.refactoring.replace</module>
-		<!-- FIXME: A feature is missing for this incubating component -->
+		<module>org.eclipse.papyrus.refactoring.feature</module>
 	</modules>	
 	
 </project>

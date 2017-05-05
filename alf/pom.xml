@@ -12,7 +12,7 @@
 	<modules>
 		<module>core</module>
 		<module>ui</module>
-		<module>org.eclipse.papyrus.uml.alf.extra.feature</module>
+		<module>org.eclipse.papyrus.uml.alf.feature</module>
 		
 		<!-- FIXME: was present in Papyrus core repositoy but unused in the build
 		<module>org.eclipse.papyrus.alf.sdk-feature</module>

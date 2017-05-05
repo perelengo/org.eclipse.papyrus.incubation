@@ -40,7 +40,7 @@ import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.newchild.CreationMenuRegistry;
 import org.eclipse.papyrus.infra.newchild.elementcreationmenumodel.CreationMenu;
 import org.eclipse.papyrus.infra.newchild.elementcreationmenumodel.Folder;
-import org.eclipse.papyrus.infra.services.edit.internal.context.TypeContext;
+import org.eclipse.papyrus.infra.services.edit.context.TypeContext;
 import org.eclipse.papyrus.infra.services.edit.service.ElementEditServiceUtils;
 import org.eclipse.papyrus.infra.services.edit.service.IElementEditService;
 import org.eclipse.papyrus.refactoring.Activator;
@@ -120,59 +120,69 @@ public class MutationRefactoring extends AbstractSelectedElementsTransformation 
 		fNewTypeTreeViewer.setComparator(new ViewerComparator());
 
 		Map<IElementType, EObject> umlTypesInput = new HashMap<>();
+		// EObject modelRoot = PapyrusRefactoringUtils.getUMLRoot(fModelSet);
+		// Model model = modelRoot instanceof Model ? (Model) modelRoot : null;
+		// if (model != null) {
+		// for (Profile profile : model.getAllAppliedProfiles()) {
+		// // TODO retrieve the elementTypes according to the applied profiles
+		// }
+		// }
+
+
+		ElementTypeRegistry registry = ElementTypeRegistry.getInstance();
+		EObject elementToMutate = getElementToMutate();
+		EObject elementToMutateParent = elementToMutate.eContainer() != null ? elementToMutate.eContainer() : elementToMutate;
+		IElementType relationshipType = UMLElementTypes.RELATIONSHIP;
+
+		IClientContext context = null;
 		try {
-			// EObject modelRoot = PapyrusRefactoringUtils.getUMLRoot(fModelSet);
-			// Model model = modelRoot instanceof Model ? (Model) modelRoot : null;
-			// if (model != null) {
-			// for (Profile profile : model.getAllAppliedProfiles()) {
-			// // TODO retrieve the elementTypes according to the applied profiles
-			// }
-			// }
-
-
-			ElementTypeRegistry registry = ElementTypeRegistry.getInstance();
-			EObject elementToMutate = getElementToMutate();
-			EObject elementToMutateParent = elementToMutate.eContainer() != null ? elementToMutate.eContainer() : elementToMutate;
-			IElementType relationshipType = UMLElementTypes.RELATIONSHIP;
-			IClientContext clientContext = TypeContext.getContext();
-			IElementType elementToMutateType = registry.getElementType(elementToMutate, clientContext);
-			boolean elementToMutateIsRelationship = Arrays.asList(elementToMutateType.getAllSuperTypes()).contains(relationshipType);
-
-			Set<IElementType> relationshipTypes = new HashSet<>();
-			Set<IElementType> nodeTypes = new HashSet<>();
-
-			for (Folder folder : CreationMenuRegistry.getInstance().getRootFolder()) {
-				// System.err.println(folder.getLabel() + ", " + folder.eContents().size());
-				for (EObject eObject : folder.eContents()) {
-					if (eObject instanceof CreationMenu) {
-						CreationMenu creationMenu = (CreationMenu) eObject;
-						IElementType menuElementType = registry.getType(creationMenu.getElementTypeIdRef());
-						if (menuElementType == null) {
-							continue;
-						}
-
-						if (Arrays.asList(menuElementType.getAllSuperTypes()).contains(relationshipType)) {
-							relationshipTypes.add(menuElementType);
-						} else {
-							nodeTypes.add(menuElementType);
-						}
-					}
-				}
-			}
-
-			if (elementToMutateIsRelationship) {
-				umlTypesInput = getRelationshipTypes(elementToMutateParent, elementToMutate, relationshipTypes);
-			} else {
-				umlTypesInput = getNodeTypes(elementToMutateParent, elementToMutate, nodeTypes);
-			}
-
-			umlTypesInput.remove(elementToMutateType);
-			// System.err.println("finalMenu, " + umlTypesInput.size());
-
-
+			context = TypeContext.getContext(elementToMutate);
 		} catch (ServiceException e) {
 			Activator.log.error(e);
 		}
+
+		if (context == null) {
+			return;
+		}
+		IElementType elementToMutateType = registry.getElementType(elementToMutate, context);
+		boolean elementToMutateIsRelationship = Arrays.asList(elementToMutateType.getAllSuperTypes()).contains(relationshipType);
+
+		Set<IElementType> relationshipTypes = new HashSet<>();
+		Set<IElementType> nodeTypes = new HashSet<>();
+
+		for (Folder folder : CreationMenuRegistry.getInstance().getRootFolder()) {
+			// System.err.println(folder.getLabel() + ", " + folder.eContents().size());
+			for (EObject eObject : folder.eContents()) {
+				if (eObject instanceof CreationMenu) {
+					CreationMenu creationMenu = (CreationMenu) eObject;
+					IElementType menuElementType = registry.getType(creationMenu.getElementType().getIdentifier());
+					if (!context.includes(menuElementType)) {
+						continue;
+					}
+					if (menuElementType == null) {
+						continue;
+					}
+
+					if (Arrays.asList(menuElementType.getAllSuperTypes()).contains(relationshipType)) {
+						relationshipTypes.add(menuElementType);
+					} else {
+						nodeTypes.add(menuElementType);
+					}
+				}
+			}
+		}
+
+		if (elementToMutateIsRelationship) {
+			umlTypesInput = getRelationshipTypes(elementToMutateParent, elementToMutate, relationshipTypes);
+		} else {
+			umlTypesInput = getNodeTypes(elementToMutateParent, elementToMutate, nodeTypes);
+		}
+
+		umlTypesInput.remove(elementToMutateType);
+		// System.err.println("finalMenu, " + umlTypesInput.size());
+
+
+
 
 		fNewTypeTreeViewer.setLabelProvider(new ElementTypeLabelProvider());
 		fNewTypeTreeViewer.setContentProvider(new ElemenetTypeContentProvider());

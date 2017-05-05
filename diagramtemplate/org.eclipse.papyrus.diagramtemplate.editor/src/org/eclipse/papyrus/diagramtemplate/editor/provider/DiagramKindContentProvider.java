@@ -21,6 +21,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.papyrus.commands.CreationCommandDescriptor;
 import org.eclipse.papyrus.commands.CreationCommandRegistry;
 import org.eclipse.papyrus.commands.ICreationCommandRegistry;
+import org.eclipse.papyrus.infra.viewpoints.policy.ViewPrototype;
 
 /**
  *
@@ -53,13 +54,13 @@ public class DiagramKindContentProvider implements IStructuredContentProvider {
 	 */
 	public Object[] getElements(Object inputElement) {
 		if (inputElement instanceof List) {
-			List<String> categories = (List<String>) inputElement;
+			List<ViewPrototype> categories = (List<ViewPrototype>) inputElement;
 
-			List<CreationCommandDescriptor> result = new ArrayList<CreationCommandDescriptor>();
+			List<ViewPrototype> result = new ArrayList<ViewPrototype>();
 			for (CreationCommandDescriptor desc : getCreationCommandRegistry().getCommandDescriptors()) {
-				for (String category : categories) {
-					if (category.equalsIgnoreCase(desc.getLanguage())) {
-						result.add(desc);
+				for (ViewPrototype category : categories) {
+					if (category.getLabel().equalsIgnoreCase(desc.getLabel())) {
+						result.add(category);
 						break;
 					}
 				}

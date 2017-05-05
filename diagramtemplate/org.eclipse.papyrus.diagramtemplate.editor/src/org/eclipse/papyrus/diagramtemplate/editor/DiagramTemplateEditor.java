@@ -96,8 +96,12 @@ import org.eclipse.papyrus.diagramtemplate.editor.provider.WhatContentProvider;
 import org.eclipse.papyrus.diagramtemplate.launcher.DiagramTemplateLauncher;
 import org.eclipse.papyrus.diagramtemplate.provider.DiagramTemplateItemProviderAdapterFactory;
 import org.eclipse.papyrus.diagramtemplate.utils.Messages;
-import org.eclipse.papyrus.uml.diagram.wizards.category.DiagramCategoryDescriptor;
-import org.eclipse.papyrus.uml.diagram.wizards.category.DiagramCategoryRegistry;
+import org.eclipse.papyrus.infra.architecture.ArchitectureDomainManager;
+import org.eclipse.papyrus.infra.architecture.representation.PapyrusRepresentationKind;
+import org.eclipse.papyrus.infra.core.architecture.RepresentationKind;
+import org.eclipse.papyrus.infra.core.architecture.merged.MergedArchitectureContext;
+import org.eclipse.papyrus.infra.core.architecture.merged.MergedArchitectureViewpoint;
+import org.eclipse.papyrus.infra.viewpoints.policy.ViewPrototype;
 import org.eclipse.papyrus.uml.diagram.wizards.kind.DiagramKindLabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
@@ -242,7 +246,7 @@ public class DiagramTemplateEditor extends EditorPart {
 	/**
 	 * List of diagram categories to consider
 	 */
-	List<String> diagramCategories = new ArrayList<String>();
+	Collection<ViewPrototype> representationsKinds = new ArrayList<ViewPrototype>();
 
 	/**
 	 * The IFile object corresponding to the model to process
@@ -417,8 +421,20 @@ public class DiagramTemplateEditor extends EditorPart {
 	 * Helper method to initialize the diagram categories (kinds)
 	 */
 	protected void initializeDiagramCategories() {
-		for (DiagramCategoryDescriptor diagramCategoryDescriptor : DiagramCategoryRegistry.getInstance().getDiagramCategories()) {
-			diagramCategories.add(diagramCategoryDescriptor.getLabel());
+		ArchitectureDomainManager manager = ArchitectureDomainManager.getInstance();
+		Collection<MergedArchitectureContext> contexts = manager.getVisibleArchitectureContexts();
+
+		for (MergedArchitectureContext mergedArchitectureContext : contexts) {
+			Collection<MergedArchitectureViewpoint> viewpoints = mergedArchitectureContext.getViewpoints();
+
+			for (MergedArchitectureViewpoint mergedArchitectureViewpoint : viewpoints) {
+				Collection<RepresentationKind> representations = mergedArchitectureViewpoint.getRepresentationKinds();
+				for (RepresentationKind representationKind : representations) {
+					if (representationKind instanceof PapyrusRepresentationKind) {
+						representationsKinds.add(ViewPrototype.get((PapyrusRepresentationKind) representationKind));
+					}
+				}
+			}
 		}
 	}
 
@@ -430,7 +446,7 @@ public class DiagramTemplateEditor extends EditorPart {
 	 * @param list
 	 *            the list to search in
 	 * @return
-	 *         true if found false else
+	 * 		true if found false else
 	 */
 	protected boolean containsElement(EObject object, List<?> list) {
 		if (list != null) {
@@ -1015,7 +1031,7 @@ public class DiagramTemplateEditor extends EditorPart {
 		});
 		diagramCheckboxTableViewer.setContentProvider(new DiagramKindContentProvider());
 		diagramCheckboxTableViewer.setLabelProvider(new DiagramKindLabelProvider());
-		diagramCheckboxTableViewer.setInput(diagramCategories);
+		diagramCheckboxTableViewer.setInput(representationsKinds);
 
 		diagramCheckboxTableViewer.setCheckStateProvider(new ICheckStateProvider() {
 

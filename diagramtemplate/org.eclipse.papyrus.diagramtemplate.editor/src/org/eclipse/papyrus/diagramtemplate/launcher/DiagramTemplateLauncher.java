@@ -46,15 +46,21 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.papyrus.commands.CreationCommandDescriptor;
+import org.eclipse.papyrus.commands.CreationCommandRegistry;
+import org.eclipse.papyrus.commands.ICreationCommandRegistry;
 import org.eclipse.papyrus.diagramtemplate.AbstractSelection;
 import org.eclipse.papyrus.diagramtemplate.DiagramDefinition;
 import org.eclipse.papyrus.diagramtemplate.Selection;
 import org.eclipse.papyrus.diagramtemplate.SelectionKind;
 import org.eclipse.papyrus.diagramtemplate.SelectionRef;
 import org.eclipse.papyrus.diagramtemplate.Template;
-import org.eclipse.papyrus.diagramtemplate.editor.provider.DiagramKindContentProvider;
 import org.eclipse.papyrus.diagramtemplate.utils.Messages;
 import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
+import org.eclipse.papyrus.infra.architecture.ArchitectureDomainManager;
+import org.eclipse.papyrus.infra.architecture.representation.PapyrusRepresentationKind;
+import org.eclipse.papyrus.infra.core.architecture.RepresentationKind;
+import org.eclipse.papyrus.infra.core.architecture.merged.MergedArchitectureContext;
+import org.eclipse.papyrus.infra.core.architecture.merged.MergedArchitectureViewpoint;
 import org.eclipse.papyrus.infra.core.editor.BackboneException;
 import org.eclipse.papyrus.infra.core.resource.ModelMultiException;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
@@ -65,8 +71,7 @@ import org.eclipse.papyrus.infra.core.services.ServicesRegistry;
 import org.eclipse.papyrus.infra.core.utils.DiResourceSet;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationUtils;
 import org.eclipse.papyrus.infra.ui.editor.IMultiDiagramEditor;
-import org.eclipse.papyrus.uml.diagram.wizards.category.DiagramCategoryDescriptor;
-import org.eclipse.papyrus.uml.diagram.wizards.category.DiagramCategoryRegistry;
+import org.eclipse.papyrus.infra.viewpoints.policy.ViewPrototype;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
@@ -127,7 +132,7 @@ public class DiagramTemplateLauncher {
 	 * Get the singleton
 	 *
 	 * @return
-	 *         the DiagramTemplateLauncher singleton
+	 * 		the DiagramTemplateLauncher singleton
 	 */
 	public final synchronized static DiagramTemplateLauncher getInstance() {
 		if (instance == null) {
@@ -139,13 +144,54 @@ public class DiagramTemplateLauncher {
 	/**
 	 * List of diagram categories to consider
 	 */
-	protected List<String> diagramCategories;
+	protected List<ViewPrototype> representationsKinds;
 
-	protected void initializeDiagramCategories() {
-		diagramCategories = new ArrayList<String>();
-		for (DiagramCategoryDescriptor diagramCategoryDescriptor : DiagramCategoryRegistry.getInstance().getDiagramCategories()) {
-			diagramCategories.add(diagramCategoryDescriptor.getLabel());
+	protected void initializeDiagramCategories(ModelSet modelSet) {
+		representationsKinds = new ArrayList<ViewPrototype>();
+
+		ArchitectureDomainManager manager = ArchitectureDomainManager.getInstance();
+		Collection<MergedArchitectureContext> contexts = manager.getVisibleArchitectureContexts();
+
+		for (MergedArchitectureContext mergedArchitectureContext : contexts) {
+			Collection<MergedArchitectureViewpoint> viewpoints = mergedArchitectureContext.getViewpoints();
+
+			for (MergedArchitectureViewpoint mergedArchitectureViewpoint : viewpoints) {
+				Collection<RepresentationKind> representations = mergedArchitectureViewpoint.getRepresentationKinds();
+				for (RepresentationKind representationKind : representations) {
+					if (representationKind instanceof PapyrusRepresentationKind) {
+						representationsKinds.add(ViewPrototype.get((PapyrusRepresentationKind) representationKind));
+					}
+				}
+			}
 		}
+	}
+
+	/**
+	 * Gets the creation command registry.
+	 *
+	 * @return the creation command registry
+	 */
+	private ICreationCommandRegistry getCreationCommandRegistry() {
+		return CreationCommandRegistry.getInstance(org.eclipse.papyrus.infra.ui.Activator.PLUGIN_ID);
+	}
+
+	public Object[] getCommands(Object inputElement) {
+		if (inputElement instanceof List) {
+			List<ViewPrototype> categories = (List<ViewPrototype>) inputElement;
+
+			List<CreationCommandDescriptor> result = new ArrayList<CreationCommandDescriptor>();
+			for (CreationCommandDescriptor desc : getCreationCommandRegistry().getCommandDescriptors()) {
+				for (ViewPrototype category : categories) {
+					if (category.getLabel().equalsIgnoreCase(desc.getLabel())) {
+						result.add(desc);
+						break;
+					}
+				}
+			}
+
+			return result.toArray();
+		}
+		return null;
 	}
 
 	/**
@@ -154,16 +200,15 @@ public class DiagramTemplateLauncher {
 	 * @param commandID
 	 *            the commandID to find
 	 * @return
-	 *         the corresponding CreationCommandDescriptor
+	 * 		the corresponding CreationCommandDescriptor
 	 */
 	protected CreationCommandDescriptor getCreation(String commandID) {
-		DiagramKindContentProvider provider = new DiagramKindContentProvider();
-		List<Object> diagramsKindlist = Arrays.asList(provider.getElements(diagramCategories));
+		List<Object> diagramsKindlist = Arrays.asList(getCommands(representationsKinds));
 
 		for (Object object : diagramsKindlist) {
 			CreationCommandDescriptor command = (CreationCommandDescriptor) object;
 
-			if (command.getCommandId().compareTo(commandID) == 0) {
+			if (command.getCommandId().equals(commandID)) {
 				return command;
 			}
 		}
@@ -346,7 +391,7 @@ public class DiagramTemplateLauncher {
 	 * @param position
 	 *            position is used to try to distribute the drop
 	 * @return
-	 *         the editPart in which the element has been actually added
+	 * 		the editPart in which the element has been actually added
 	 */
 	protected EditPart showElementIn(EObject elementToShow, DiagramEditor activeEditor, EditPart editPart, int position) {
 
@@ -413,7 +458,7 @@ public class DiagramTemplateLauncher {
 	 * @param stereotypedBy
 	 *            the qulifiedName of the stereotype to match
 	 * @return
-	 *         true if matches false else.
+	 * 		true if matches false else.
 	 */
 	protected boolean matchStereotypedBy(EObject element, String stereotypedBy) {
 		if (element instanceof Element) {
@@ -627,13 +672,15 @@ public class DiagramTemplateLauncher {
 	 *            The template to execute
 	 */
 	public void execute(Template template) {
-		initializeDiagramCategories();
+
 		diagramsInResource = new ArrayList<String>();
 		diagramsCreated = new HashMap<String, AbstractSelection>();
 		creationReport = new HashMap<EObject, CreationReportKind>();
 
 		if (template != null) {
 			ModelSet modelSet = new DiResourceSet();
+
+
 
 			if (template.getTargetRoot().eResource() != null) {
 				String targetModelLocation = template.getTargetRoot().eResource().getURI().toPlatformString(false);
@@ -645,6 +692,7 @@ public class DiagramTemplateLauncher {
 
 					try {
 						modelSet.loadModels(file);
+						initializeDiagramCategories(modelSet);
 					} catch (ModelMultiException ex) {
 						ex.printStackTrace(System.out);
 					}

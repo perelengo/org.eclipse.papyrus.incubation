@@ -2,10 +2,10 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>org.eclipse.papyrus.dsml.validation.parent</artifactId>
 		<groupId>org.eclipse.papyrus</groupId>
-		<version>1.2.0-SNAPSHOT</version>
+		<artifactId>org.eclipse.papyrus.refactoring.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>org.eclipse.papyrus.extra.dsml.validation.feature</artifactId>
+	<artifactId>org.eclipse.papyrus.refactoring.feature</artifactId>
 	<packaging>eclipse-feature</packaging>
 </project>

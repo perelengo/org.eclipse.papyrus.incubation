@@ -7,8 +7,8 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>umlexport</module>
-		<!-- compilation error 11/04/2017 <module>refactoring</module> -->
-		<!-- compilation error 11/04/2017 <module>diagramtemplate</module>   -->
+		<module>refactoring</module>
+		<module>diagramtemplate</module>
 		<module>alf</module>
 		<module>layers</module>
 		<module>elk</module>
