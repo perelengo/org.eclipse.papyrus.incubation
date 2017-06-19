@@ -11,7 +11,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.papyrus.dsml.validation.model;bundle-version="1.2.0",
  org.eclipse.uml2.uml;bundle-version="3.2.100",
  org.eclipse.papyrus.dsml.validation.generator;bundle-version="1.2.0",
- org.eclipse.acceleo.engine;bundle-version="3.1.1",
  org.eclipse.papyrus.infra.core.log;bundle-version="1.2.0",
  org.eclipse.papyrus.dsml.validation;bundle-version="1.2.0"
 Bundle-Vendor: %pluginProvider
