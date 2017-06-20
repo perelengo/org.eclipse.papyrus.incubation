@@ -16,6 +16,10 @@
 		<module>org.eclipse.papyrus.incubation.p2</module>
 	</modules>	
 	
+	<properties>
+		<jarSignerVersion>1.1.2</jarSignerVersion>
+	</properties>
+	
 	<profiles>
 	<profile>
 			<id>packAndSign</id> <!-- Stable release profile. Takes +30min. Eclipse servers only -->
@@ -25,7 +29,7 @@
 					<plugin>
 						<groupId>org.eclipse.tycho.extras</groupId>
 						<artifactId>tycho-pack200a-plugin</artifactId>
-						<version>${tychoExtrasVersion}</version>
+						<version>${tycho-version}</version>
 						<executions>
 							<execution>
 								<id>pack200-normalize</id>
@@ -51,7 +55,7 @@
 					<plugin>
 						<groupId>org.eclipse.tycho.extras</groupId>
 						<artifactId>tycho-pack200b-plugin</artifactId>
-						<version>${tychoExtrasVersion}</version>
+						<version>${tycho-version}</version>
 						<executions>
 							<execution>
 								<id>pack200-pack</id>
