@@ -14,8 +14,7 @@
 		<module>elk</module>
 		<module>dsml.validation</module>
 		<!-- Releng -->
-		<module>org.eclipse.papyrus.incubation.targetplatform.oxygen</module>
-		<module>org.eclipse.papyrus.incubation.p2</module>
+		<module>releng</module>
 	</modules>
 	<properties>
 		<tycho-version>1.0.0</tycho-version>

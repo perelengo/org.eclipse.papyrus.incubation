@@ -12,7 +12,6 @@ location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
  org.eclipse.equinox.executable.feature.group lazy
  org.eclipse.equinox.p2.discovery.feature.feature.group lazy
  org.eclipse.gmf.feature.group lazy
- org.eclipse.gmf.tooling.runtime.feature.group lazy
  org.eclipse.jdt.feature.group lazy
  org.eclipse.m2m.qvt.oml.feature.group lazy
  org.eclipse.m2m.qvt.oml.project lazy // no feature
@@ -37,7 +36,6 @@ location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
  org.eclipse.xtext.xbase.feature.group lazy
  org.eclipse.xtext.xbase.lib.feature.group lazy
  org.eclipse.xwt.feature.feature.group lazy
- org.eclipse.xtend2.lib lazy
  org.eclipse.acceleo.feature.group lazy
 }
 
@@ -50,31 +48,32 @@ location "https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSu
 }
 
 location emfQuery "http://download.eclipse.org/modeling/emf/query/updates/releases" {
-	org.eclipse.emf.query.sdk.feature.group
+	org.eclipse.emf.query.sdk.feature.group lazy
 }
 
 // required by ELK integration
 location elk "http://download.eclipse.org/elk/updates/releases/0.1.0/" {
-	  org.eclipse.elk.feature.feature.group
-	  org.eclipse.elk.ui.feature.feature.group
-	  org.eclipse.elk.gmf.feature.feature.group
+	  org.eclipse.elk.feature.feature.group lazy
+	  org.eclipse.elk.ui.feature.feature.group lazy
+	  org.eclipse.elk.gmf.feature.feature.group lazy
 }
 
 location nattable "http://download.eclipse.org/nattable/releases/1.5.0/repository" {
-	org.eclipse.nebula.widgets.nattable.core.feature.feature.group
-	org.eclipse.nebula.widgets.nattable.core.source.feature.feature.group
-	org.eclipse.nebula.widgets.nattable.extension.glazedlists.feature.feature.group
-	org.eclipse.nebula.widgets.nattable.extension.glazedlists.source.feature.feature.group
-	org.eclipse.nebula.widgets.nattable.extension.nebula.feature.feature.group
-	org.eclipse.nebula.widgets.nattable.extension.nebula.source.feature.feature.group
+	org.eclipse.nebula.widgets.nattable.core.feature.feature.group lazy
+	org.eclipse.nebula.widgets.nattable.core.source.feature.feature.group lazy
+	org.eclipse.nebula.widgets.nattable.extension.glazedlists.feature.feature.group lazy
+	org.eclipse.nebula.widgets.nattable.extension.glazedlists.source.feature.feature.group lazy
+	org.eclipse.nebula.widgets.nattable.extension.nebula.feature.feature.group lazy
+	org.eclipse.nebula.widgets.nattable.extension.nebula.source.feature.feature.group lazy
 }
 
 
 location xpand "http://download.eclipse.org/modeling/m2t/xpand/updates/releases/R201605260315/" {
-	org.eclipse.xpand.sdk.feature.group
-	org.eclipse.xtend.feature.group
+	org.eclipse.xpand.sdk.feature.group lazy
+	org.eclipse.xtend.feature.group lazy
 }
 
 location gmfTooling "http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.3.1a" {
-	org.eclipse.gmf.tooling.codegen.xtend2.feature.group
+	org.eclipse.gmf.tooling.codegen.xtend2.feature.group lazy
+ 	org.eclipse.gmf.tooling.runtime.feature.group lazy
 } 

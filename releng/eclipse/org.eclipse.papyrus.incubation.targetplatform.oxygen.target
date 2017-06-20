@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Papyrus Oxygen" sequenceNumber="1491900207">
+<target name="Papyrus Oxygen" sequenceNumber="1497948323">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.draw2d.feature.group" version="0.0.0"/>
@@ -15,7 +15,6 @@
       <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.gmf.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.gmf.tooling.runtime.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.m2m.qvt.oml.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.m2m.qvt.oml.project" version="0.0.0"/>
@@ -38,45 +37,45 @@
       <unit id="org.eclipse.xtext.xbase.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xtext.xbase.lib.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xwt.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.xtend2.lib" version="0.0.0"/>
       <unit id="org.eclipse.acceleo.feature.group" version="0.0.0"/>
-      <repository id="eclipse-oxygen" location="http://download.eclipse.org/releases/oxygen/"/>
+      <repository id="eclipse-oxygen" location="file:/home/data/httpd/download.eclipse.org/releases/oxygen/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="0.0.0"/>
-      <repository id="Papyrus-Nightly-Main" location="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/oxygen/main"/>
+      <repository id="Papyrus-Nightly-Main" location="file:/home/data/httpd/download.eclipse.org/modeling/mdt/papyrus/updates/nightly/oxygen/main"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
       <repository id="eclipse-papyrus-developer-master" location="https://hudson.eclipse.org/papyrus/job/Papyrus-Master-Developer/lastSuccessfulBuild/artifact/repository/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.emf.query.sdk.feature.group" version="1.10.0.201606071631"/>
-      <repository id="emfQuery" location="http://download.eclipse.org/modeling/emf/query/updates/releases"/>
+      <unit id="org.eclipse.emf.query.sdk.feature.group" version="0.0.0"/>
+      <repository id="emfQuery" location="file:/home/data/httpd/download.eclipse.org/modeling/emf/query/updates/releases"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.elk.feature.feature.group" version="0.1.0.201607121925"/>
-      <unit id="org.eclipse.elk.ui.feature.feature.group" version="0.1.0.201607121925"/>
-      <unit id="org.eclipse.elk.gmf.feature.feature.group" version="0.1.0.201607121925"/>
-      <repository id="elk" location="http://download.eclipse.org/elk/updates/releases/0.1.0/"/>
+      <unit id="org.eclipse.elk.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.elk.ui.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.elk.gmf.feature.feature.group" version="0.0.0"/>
+      <repository id="elk" location="file:/home/data/httpd/download.eclipse.org/elk/updates/releases/0.1.0/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.nebula.widgets.nattable.core.feature.feature.group" version="1.5.0.201703192131"/>
-      <unit id="org.eclipse.nebula.widgets.nattable.core.source.feature.feature.group" version="1.5.0.201703192131"/>
-      <unit id="org.eclipse.nebula.widgets.nattable.extension.glazedlists.feature.feature.group" version="1.5.0.201703192131"/>
-      <unit id="org.eclipse.nebula.widgets.nattable.extension.glazedlists.source.feature.feature.group" version="1.5.0.201703192131"/>
-      <unit id="org.eclipse.nebula.widgets.nattable.extension.nebula.feature.feature.group" version="1.1.0.201703192131"/>
-      <unit id="org.eclipse.nebula.widgets.nattable.extension.nebula.source.feature.feature.group" version="1.1.0.201703192131"/>
-      <repository id="nattable" location="http://download.eclipse.org/nattable/releases/1.5.0/repository"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.core.source.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.extension.glazedlists.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.extension.glazedlists.source.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.extension.nebula.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.extension.nebula.source.feature.feature.group" version="0.0.0"/>
+      <repository id="nattable" location="file:/home/data/httpd/download.eclipse.org/nattable/releases/1.5.0/repository"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.xpand.sdk.feature.group" version="2.2.0.v201605260315"/>
-      <unit id="org.eclipse.xtend.feature.group" version="2.2.0.v201605260315"/>
-      <repository id="xpand" location="http://download.eclipse.org/modeling/m2t/xpand/updates/releases/R201605260315/"/>
+      <unit id="org.eclipse.xpand.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.xtend.feature.group" version="0.0.0"/>
+      <repository id="xpand" location="file:/home/data/httpd/download.eclipse.org/modeling/m2t/xpand/updates/releases/R201605260315/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.gmf.tooling.codegen.xtend2.feature.group" version="3.3.1.201509291144"/>
-      <repository id="gmfTooling" location="http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.3.1a"/>
+      <unit id="org.eclipse.gmf.tooling.codegen.xtend2.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.gmf.tooling.runtime.feature.group" version="0.0.0"/>
+      <repository id="gmfTooling" location="file:/home/data/httpd/download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.3.1a"/>
     </location>
   </locations>
 </target>
