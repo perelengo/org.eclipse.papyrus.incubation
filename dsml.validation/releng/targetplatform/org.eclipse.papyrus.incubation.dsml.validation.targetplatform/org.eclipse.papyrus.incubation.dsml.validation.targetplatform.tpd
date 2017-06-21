@@ -1,0 +1,16 @@
+target "Papyrus Oxygen" with source requirements
+
+location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
+	org.eclipse.ui lazy
+	org.eclipse.uml2.types lazy
+	org.eclipse.uml2.uml lazy
+	org.eclipse.papyrus.uml.extensionpoints lazy
+	org.eclipse.ocl lazy
+	org.eclipse.ocl.ecore lazy
+	org.eclipse.xtext.xbase.lib lazy
+	org.eclipse.xtend.lib lazy
+	org.eclipse.papyrus.uml.tools.utils lazy
+	org.eclipse.papyrus.uml.diagram.common lazy
+	org.eclipse.papyrus.eclipse.project.editors lazy
+}
+

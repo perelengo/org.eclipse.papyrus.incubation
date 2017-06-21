@@ -12,7 +12,7 @@
 	<packaging>pom</packaging>
 	
 	<modules>
-		<module>org.eclipse.papyrus.incubation.targetplatform.oxygen</module>
+		<module>targetplatform</module>
 		<module>org.eclipse.papyrus.incubation.p2</module>
 	</modules>	
 	

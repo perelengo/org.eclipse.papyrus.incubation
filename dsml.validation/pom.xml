@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<parent>
 		<groupId>org.eclipse.papyrus</groupId>
 		<artifactId>org.eclipse.papyrus.incubation</artifactId>		
 		<version>3.0.0-SNAPSHOT</version>
 	</parent>
+	
 	<artifactId>org.eclipse.papyrus.dsml.validation.parent</artifactId>
 	<version>1.2.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -19,5 +21,21 @@
 		<module>org.eclipse.papyrus.dsml.validation.wizard</module>
 		<module>org.eclipse.papyrus.dsml.validation.feature</module>
 	</modules>	
+	
+	<profiles>
+		<profile>
+	      <id>dsml.validation</id>	
+	     
+		  <properties>
+			<targetplatform.groupId>org.eclipse.papyrus</targetplatform.groupId>
+			<targetplatform.artifactId>org.eclipse.papyrus.incubation.dsml.validation.targetplatform</targetplatform.artifactId>
+			<targetplatform.version>1.2.0-SNAPSHOT</targetplatform.version>
+		  </properties>
+	            
+	      <modules>
+	      	<module>releng</module>
+	      </modules>
+	    </profile>
+	</profiles>
 	
 </project>
