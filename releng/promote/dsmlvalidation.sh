@@ -24,10 +24,12 @@ subRepo="dsml.validation"
 #The specific localization
 remoteRoot="/home/data/httpd/download.eclipse.org"
 remoteUpdateSiteRoot="modeling/mdt/papyrus"
-remoteJobDir=${remoteRoot}/${remoteUpdateSiteRoot}/${repo}
+remoteUpdateSiteDir=${remoteRoot}/${remoteUpdateSiteRoot}/${repo}/${subRepo}
+echo "remoteUpdateSiteDir: $remoteUpdateSiteDir"
 
 #The localization of the local build target
 targetResults="archive/${subRepo}/releng/org.eclipse.papyrus.${repo}.${subRepo}.p2/target/repository"
+echo "targetResults: $targetResults"
 
 #The rcpPrompote.sh script may be used to publish the Incubation build results. 
 if [ $# -eq 6 -o $# -eq 7  ];
@@ -130,11 +132,10 @@ then
 fi
 
 localResults=${jobDir}/${targetResults}
-echo "localResults=${localResults}"
+echo "localResults: ${localResults}"
 
 ########### Promote Job ###########
-updateSiteDir=$remoteJobDir/$subRepo
-destination=$updateSite/$eclipseTarget/${releaseLabel}${releaseLabelSuffix}
+destination=$remoteUpdateSiteDir/$eclipseTarget/${releaseLabel}${releaseLabelSuffix}
 echo "Destination: $destination"
 
 if [ "$override" == "n" ];
@@ -179,14 +180,16 @@ setAccessRights "$tmpdir"
 mkdir -p $destination
 echo "Promoting the Job to $destination"
 mv $tmpdir/* $destination
-setAccessRights "$updateSiteDir"
+setAccessRights "$destination"
 
 # Clean up
 echo "Cleaning up"
 rm -rf $tmpdir
 
 ########### Update composites ###########
-cd $updateSiteDir
+#updateSiteDir=
+#echo "updateSiteDir: $updateSiteDir"
+#cd $updateSiteDir
 
 function updateComposites() {
 childrenArray=()
