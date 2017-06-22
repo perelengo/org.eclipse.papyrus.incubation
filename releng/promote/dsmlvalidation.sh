@@ -15,7 +15,7 @@
 ##Additional variables to specify for each project
 
 #The root url that enables to find the job with ${hudsonJobRootUrl}/$jobName/$buildId
-hudsonJobRootUrl="https://hudson.eclipse.org/papyrus/job/"
+hudsonJobRootUrl="https://hudson.eclipse.org/papyrus/job"
 
 #The name of the tool
 repo="incubation"
@@ -27,7 +27,7 @@ remoteUpdateSiteRoot="modeling/mdt/papyrus"
 remoteJobDir=${remoteRoot}/${remoteUpdateSiteRoot}/${repo}
 
 #The localization of the local build target
-targetResults="archive/${subRepo}/releng/org.eclipse.papyrus.${repo}.${subRepo}.p2/target/repository/"
+targetResults="archive/${subRepo}/releng/org.eclipse.papyrus.${repo}.${subRepo}.p2/target/repository"
 
 #The rcpPrompote.sh script may be used to publish the Incubation build results. 
 if [ $# -eq 6 -o $# -eq 7  ];
@@ -162,10 +162,12 @@ cd $localResults
 tmpdir=$localResults/tmp
 #Clean if already exists
 rm -rf $tmpdir
-#mkdir $tmpdir
+mkdir $tmpdir
 
 #Copy the contents onto the temp folder and change the permissions
-cp -R * tmp/
+#cp -R * tmp
+rsync -av --exclude='$tmpdir' $localResults/* $tmpdir
+
 setAccessRights "$tmpdir"
 
 #No error if exists, makes parent directories as needed
