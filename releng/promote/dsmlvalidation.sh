@@ -168,13 +168,18 @@ mkdir $tmpdir
 #cp -R * tmp
 rsync -av --exclude='$tmpdir' $localResults/* $tmpdir
 
+function setAccessRights() {
+	chmod -R 775 "$1"
+	chgrp -hR modeling.mdt.papyrus "$1"
+}
+
 setAccessRights "$tmpdir"
 
 #No error if exists, makes parent directories as needed
 mkdir -p $destination
 echo "Promoting the Job to $destination"
 mv $tmpdir/* $destination
-setAcessRights "$updateSiteDir"
+setAccessRights "$updateSiteDir"
 
 # Clean up
 echo "Cleaning up"
@@ -182,13 +187,6 @@ rm -rf $tmpdir
 
 ########### Update composites ###########
 cd $updateSiteDir
-#updateComposites
-
-
-function setAccessRights() {
-	chmod -R 775 "$1"
-	chgrp -hR modeling.mdt.papyrus "$1"
-}
 
 function updateComposites() {
 childrenArray=()
@@ -231,3 +229,5 @@ cat > "compositeContent.xml" <<EOF
 </repository>
 EOF
 }
+
+#updateComposites
