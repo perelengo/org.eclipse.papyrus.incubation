@@ -1,6 +1,6 @@
-target "Papyrus Oxygen" with source requirements
+target "Dsml Validation - Oxygen" with source requirements
 
-location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
+location "http://download.eclipse.org/releases/oxygen/" {
 	org.eclipse.ui lazy
 	org.eclipse.uml2.types lazy
 	org.eclipse.uml2.uml lazy

@@ -14,17 +14,21 @@
 
 ##Additional variables to specify for each project
 
-#The root url that enables to find the job with ${hudsonJobRootUrl}/$jobName/$buildId
+#The root url that enables to find the job with ${hudsonJobRootUrl}/$jobName/$buildNumber
 hudsonJobRootUrl="https://hudson.eclipse.org/papyrus/job"
 
 #The name of the tool
 repo="incubation"
-subRepo="dsml.validation"
+subRepo="diagramtemplate"
+updates="updates"
+drops="downloads/drops"
 
 #The specific localization
 remoteRoot="/home/data/httpd/download.eclipse.org"
-remoteUpdateSiteRoot="modeling/mdt/papyrus"
-remoteUpdateSiteDir=${remoteRoot}/${remoteUpdateSiteRoot}/${repo}/${subRepo}
+papyrusRoot="modeling/mdt/papyrus"
+remoteUpdateSiteRoot=${remoteRoot}/${papyrusRoot}/${repo}
+remoteUpdateSite=${remoteUpdateSiteRoot}/${subRepo}
+remoteUpdateSiteDir=${remoteUpdateSite}/${updates}
 echo "remoteUpdateSiteDir: $remoteUpdateSiteDir"
 
 #The localization of the local build target
@@ -32,19 +36,25 @@ targetResults="archive/${subRepo}/releng/org.eclipse.papyrus.${repo}.${subRepo}.
 echo "targetResults: $targetResults"
 
 #The rcpPrompote.sh script may be used to publish the Incubation build results. 
-if [ $# -eq 6 -o $# -eq 7  ];
-then
-	jobName=$1
+#if [ $# -eq 6 -o $# -eq 7  ];
+#then
+#	jobName=$1
+jobName="Papyrus-Incubation-DiagramTemplate"
 	echo "jobName: $jobName"
-	buildId=$2
-	echo "buildId: $buildId"
-	buildType=$3
-	echo "buildType: $buildType"
-	releaseLabel=$4	
+#	buildNumber=$2
+buildNumber="4"
+	echo "buildNumber: $buildNumber"
+#	releaseType=$3
+releaseType="i"
+	echo "releaseType: $releaseType"
+#	releaseLabel=$4	
+releaseLabel="1.2.0"
 	echo "releaseLabel: $releaseLabel"
-	eclipseTarget=$5	
+#	eclipseTarget=$5
+eclipseTarget="oxygen"	
 	echo "eclipseTarget: $eclipseTarget"
-	override=$6	
+#	override=$6	
+override="y"
 	echo "override: $override"
 
 	if [ -n "$7" ];
@@ -52,10 +62,10 @@ then
 		releaseLabelSuffix=$7
 		echo "releaseLabelSuffix: $releaseLabelSuffix"
 	fi
-else
-	echo "Missing so parameters: command jobName buildId buildType releaseLabel eclipseTarget override [releaseLabelSuffix]"
-	exit 1;
-fi
+#else
+#	echo "Missing so parameters: command jobName buildNumber releaseType releaseLabel eclipseTarget override [releaseLabelSuffix]"
+#	exit 1;
+#fi
 
 ###########jobName parameter###########
 if [ -z "$jobName" ];
@@ -64,20 +74,20 @@ then
 	exit 1
 fi
 
-###########buildId parameter###########
-if [ -z "$buildId" ];
+###########buildNumber parameter###########
+if [ -z "$buildNumber" ];
 then
 	echo "The id of the $jobName build you want to promote must be specified"
 	exit 1
 fi
 
-###########buildType parameter###########
-if [ -z "$buildType" ];
+###########releaseType parameter###########
+if [ -z "$releaseType" ];
 then
     echo "The type of build you want to publish to [i(integration), s(table), r(elease)]."
     exit;
 fi
-echo "Publishing as $buildType build"
+echo "Publishing as $releaseType build"
 
 ###########releaseLabel parameter###########
 if [ -z "$releaseLabel" ];
@@ -109,25 +119,25 @@ else
 	echo "Will not override the previous arifacts if found"
 fi
 
-########### Compute local build results using buildId ###########
-if [ "$buildId" = "lastStable" -o "$buildId" = "lastSuccessful" ];
+########### Compute local build results using buildNumber ###########
+if [ "$buildNumber" = "lastStable" -o "$buildNumber" = "lastSuccessful" ];
 then
 	# Reverse lookup the build id (in case lastSuccessful or lastStable was used)
 	for i in $(find ~/.hudson/jobs/$jobName/builds/ -type l)
 	do
-		if [ "$(readlink -f $i)" = "$(readlink -f ~/.hudson/jobs/$jobName/$buildId)" ];
+		if [ "$(readlink -f $i)" = "$(readlink -f ~/.hudson/jobs/$jobName/$buildNumber)" ];
 		then
-			buildId=${i##*/}
+			buildNumber=${i##*/}
 		fi
 	done
-	echo "Reverse lookup (lastStable/lastSuccessful) yielded buildId: $buildId"
+	echo "Reverse lookup (lastStable/lastSuccessful) yielded buildNumber: $buildNumber"
 fi
 
-echo "~/.hudson/jobs/${jobName}/builds/${buildId}"
-jobDir=$(readlink -f ~/.hudson/jobs/${jobName}/builds/${buildId})
+echo "~/.hudson/jobs/${jobName}/builds/${buildNumber}"
+jobDir=$(readlink -f ~/.hudson/jobs/${jobName}/builds/${buildNumber})
 if ! [ -d $jobDir ];
 then
-	echo "The specified buildId does not refer to an existing build: $buildId"
+	echo "The specified buildNumber does not refer to an existing build: $buildNumber"
 	exit 1
 fi
 
@@ -159,59 +169,42 @@ then
 	fi
 fi
 
+#Go to the artifact directory
 cd $localResults
-tmpdir=$localResults/tmp
-#Clean if already exists
-rm -rf $tmpdir
-mkdir $tmpdir
-
-#Copy the contents onto the temp folder and change the permissions
-#cp -R * tmp
-rsync -av --exclude='$tmpdir' $localResults/* $tmpdir
-
-function setAccessRights() {
-	chmod -R 775 "$1"
-	chgrp -hR modeling.mdt.papyrus "$1"
-}
-
-setAccessRights "$tmpdir"
-
+echo "Promoting the Job to $destination"
 #No error if exists, makes parent directories as needed
 mkdir -p $destination
-echo "Promoting the Job to $destination"
-mv $tmpdir/* $destination
-setAccessRights "$destination"
 
-# Clean up
-echo "Cleaning up"
-rm -rf $tmpdir
+#Copy the contents onto the temp folder and change the permissions
+cp -R * $destination
+
 
 ########### Update composites ###########
-#updateSiteDir=
-#echo "updateSiteDir: $updateSiteDir"
-#cd $updateSiteDir
+# TODO update composite root ./eclipseTarget/* and parent ./*
+echo "Update Composites"
+timestamp=$(date +%s000)
 
+# This function indents the text with two white spaces
+indent() {
+sed 's/^/  /';
+}
+
+# This function is used to generate the composites
 function updateComposites() {
-childrenArray=()
-while IFS= read -r -d $'\0'; do
-	childrenArray+=("$REPLY")
-done < <(find . -maxdepth 1 -type d  \( ! -iname ".*" \))
-
-children=${find . -maxdepth 1 -type d  \( ! -iname ".*" \) | wc -l}
-timestamp=${date+%s000}
-
 cat > "compositeArtifacts.xml" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <repository name="Papyrus" type="org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository" version="1.0.0">
   <properties size="1">
-    <property name="p2.timestamp" value="${timestamp}"/>
+    <property name="p2.timestamp" value="$1"/>
   </properties>
-  <children size="${children}">
-    ${for file in *; do 
-		if [ -d $folder ]; then 
-		echo "<child location='${folder}'/>"
-		fi
-	done)	
+  <children size="$2">
+$(	
+for file in *; do 
+if [ -d $file ]; then 
+    printf "<child location='${file}'/>" | indent | indent
+fi
+done
+)
   </children>
 </repository>
 EOF
@@ -220,17 +213,46 @@ cat > "compositeContent.xml" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <repository name="Papyrus" type="org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository" version="1.0.0">
   <properties size="1">
-    <property name="p2.timestamp" value="$(timestamp)"/>
+    <property name="p2.timestamp" value="$1"/>
   </properties>
-  <children size="${children}">
-    ${for file in *; do 
-		if [ -d $folder ]; then 
-		echo "<child location='${folder}'/>"
-		fi
-	done)	
+  <children size="$2">
+$(	
+for file in *; do 
+if [ -d $file ]; then 
+    printf "<child location='${file}'/>" | indent | indent
+fi
+done
+)
   </children>
 </repository>
 EOF
 }
 
-#updateComposites
+echo "Update root composites: $remoteUpdateSite"
+cd $remoteUpdateSite
+childrenCount=$(find . -maxdepth 1 -type d  \( ! -iname ".*" \) | wc -l)
+updateComposites $timestamp $childrenCount
+
+echo "Update eclipseTarget composites: $remoteUpdateSiteDir"
+cd $remoteUpdateSiteDir
+childrenCount=$(find . -maxdepth 1 -type d  \( ! -iname ".*" \) | wc -l)
+updateComposites $timestamp $childrenCount
+
+echo "Update releaseLabel composites: $remoteUpdateSiteDir/$eclipseTarget"
+cd $remoteUpdateSiteDir/$eclipseTarget
+childrenCount=$(find . -maxdepth 1 -type d  \( ! -iname ".*" \) | wc -l)
+updateComposites $timestamp $childrenCount
+
+
+########### Set Access Rights ###########
+
+# This function sets the acess rights to allow all memebers of the group to edit the files
+function setAccessRights() {
+	chmod -R 775 "$1"
+	chgrp -hR modeling.mdt.papyrus "$1"
+}
+echo "Set access right -R: $remoteUpdateSiteDir"
+setAccessRights $remoteUpdateSiteDir
+
+
+echo "publishing done."

@@ -1,0 +1,17 @@
+target "Diagram Template - Oxygen" with source requirements
+
+location "http://download.eclipse.org/releases/oxygen/" {
+ org.eclipse.core.runtime lazy
+ org.eclipse.emf.ecore lazy
+ org.eclipse.emf.edit lazy
+ org.eclipse.core.resources lazy
+ org.eclipse.emf.ecore.xmi lazy
+ org.eclipse.emf.edit.ui lazy
+ org.eclipse.ui.ide lazy
+ org.eclipse.uml2.uml lazy
+ org.eclipse.uml2.uml.edit lazy
+ org.eclipse.papyrus.editor lazy
+ org.eclipse.gmf.runtime.diagram.ui.actions lazy
+ org.eclipse.papyrus.uml.diagram.wizards lazy
+}
+
