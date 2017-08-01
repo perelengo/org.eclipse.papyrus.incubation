@@ -14,10 +14,10 @@
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
 
-   <feature url="features/org.eclipse.papyrus.uml.alf.feature_0.7.0.qualifier.jar" id="org.eclipse.papyrus.uml.alf.feature" version="0.7.0.qualifier">
+   <feature url="features/org.eclipse.papyrus.uml.alf.integration.feature_0.7.0.qualifier.jar" id="org.eclipse.papyrus.uml.alf.integration.feature" version="0.7.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
-   <feature url="features/org.eclipse.papyrus.uml.alf.feature.source_0.7.0.qualifier.jar" id="org.eclipse.papyrus.uml.alf.feature.source" version="0.7.0.qualifier">
+   <feature url="features/org.eclipse.papyrus.uml.alf.integration.feature.source_0.7.0.qualifier.jar" id="org.eclipse.papyrus.uml.alf.integration.feature.source" version="0.7.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
    
