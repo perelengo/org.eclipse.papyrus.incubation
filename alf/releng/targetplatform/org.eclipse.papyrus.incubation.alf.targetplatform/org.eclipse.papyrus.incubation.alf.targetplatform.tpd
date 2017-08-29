@@ -1,0 +1,20 @@
+target "Alf - Oxygen" with source requirements
+
+location "http://download.eclipse.org/releases/oxygen/" {
+ org.eclipse.ui lazy
+
+}
+
+//manualUpdate
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/" Papyrus-Oxygen {
+ org.eclipse.papyrus.uml.alf lazy
+ org.eclipse.papyrus.uml.xtext.integration.ui lazy
+ org.eclipse.papyrus.uml.properties lazy
+ org.eclipse.papyrus.uml.alf.ui lazy
+ 
+}
+
+//updateFrom("MDT UML2",0) 
+location uml "http://download.eclipse.org/modeling/mdt/uml2/updates/5.3" {
+ org.eclipse.uml2.uml lazy
+}

@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
-		<groupId>org.eclipse.papyrus</groupId>
-		<artifactId>org.eclipse.papyrus.incubation</artifactId>		
-		<version>3.0.0-SNAPSHOT</version>
+		<groupId>org.eclipse.papyrus.incubation</groupId>
+		<artifactId>org.eclipse.papyrus.incubation.all</artifactId>		
+		<version>3.1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>org.eclipse.papyrus.layers.parent</artifactId>
+
+	<groupId>org.eclipse.papyrus.incubation.layers</groupId>
+	<artifactId>org.eclipse.papyrus.incubation.layers.parent</artifactId>
 	<version>1.2.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<modules>
-		<module>org.eclipse.papyrus.layers.notationmodel.edit</module>
-		<module>org.eclipse.papyrus.layers.runtime</module>
-		<module>org.eclipse.papyrus.layers.stackmodel</module>
-		<module>org.eclipse.papyrus.layers.stackmodel.diagram</module>
-		<module>org.eclipse.papyrus.layers.stackmodel.edit</module>
-		<module>org.eclipse.papyrus.layers.stackmodel.editor</module>
-		<module>org.eclipse.papyrus.layers.ui</module>
-		<module>org.eclipse.papyrus.layers.feature</module>
-		
-		<!-- FIXME present in Papyrus core repo but not in the build 
-		org.eclipse.papyrus.layers.dev.ui
-		org.eclipse.papyrus.layers.integrationtests
-		org.eclipse.papyrus.layers.stackmodel.tests
-		org.eclipse.papyrus.layers.updatesite
-		-->
-		
+		<module>features</module>
+		<module>plugins</module>
+		<module>tests</module>		
 	</modules>	
-	
+		
+	<profiles>
+		<profile>
+	      <id>layers</id>	
+	     
+		  <properties>
+			<targetplatform.groupId>org.eclipse.papyrus.incubation.layers</targetplatform.groupId>
+			<targetplatform.artifactId>org.eclipse.papyrus.incubation.layers.targetplatform</targetplatform.artifactId>
+			<targetplatform.version>1.2.0-SNAPSHOT</targetplatform.version>
+		  </properties>
+	            
+	      <modules>
+	      	<module>releng</module>
+	      </modules>
+	    </profile>
+	</profiles>
+		
 </project>

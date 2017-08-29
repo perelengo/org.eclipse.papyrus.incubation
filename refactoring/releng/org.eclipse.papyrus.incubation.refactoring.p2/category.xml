@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <feature url="features/org.eclipse.papyrus.refactoring.feature_0.0.1.qualifier.jar" id="org.eclipse.papyrus.refactoring.feature" version="0.0.1.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+   <feature url="features/org.eclipse.papyrus.refactoring.feature.source_0.0.1.qualifier.jar" id="org.eclipse.papyrus.refactoring.feature.source" version="0.0.1.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+  
+  <category-def name="org.eclipse.papyrus.incubation.category" label="Papyrus Incubation">
+      <description>
+         Papyrus Incubation features
+      </description>
+   </category-def>
+</site>

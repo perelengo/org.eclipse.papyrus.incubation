@@ -3,23 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
-		<groupId>org.eclipse.papyrus</groupId>
-		<artifactId>org.eclipse.papyrus.incubation</artifactId>		
-		<version>3.0.0-SNAPSHOT</version>
+		<groupId>org.eclipse.papyrus.incubation</groupId>
+		<artifactId>org.eclipse.papyrus.incubation.all</artifactId>		
+		<version>3.1.0-SNAPSHOT</version>
 	</parent>
 	
-	<artifactId>org.eclipse.papyrus.dsml.validation.parent</artifactId>
+	<groupId>org.eclipse.papyrus.incubation.dsml.validation</groupId>
+	<artifactId>org.eclipse.papyrus.incubation.dsml.validation.parent</artifactId>
 	<version>1.2.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<modules>
-		<module>org.eclipse.papyrus.dsml.validation</module>
-		<module>org.eclipse.papyrus.dsml.validation.generator</module>
-		<module>org.eclipse.papyrus.dsml.validation.model</module>
-		<module>org.eclipse.papyrus.dsml.validation.model.ui</module>
-		<module>org.eclipse.papyrus.dsml.validation.properties</module>
-		<module>org.eclipse.papyrus.dsml.validation.wizard</module>
-		<module>org.eclipse.papyrus.dsml.validation.feature</module>
+		<module>features</module>
+		<module>plugins</module>
 	</modules>	
 	
 	<profiles>
@@ -27,7 +23,7 @@
 	      <id>dsml.validation</id>	
 	     
 		  <properties>
-			<targetplatform.groupId>org.eclipse.papyrus</targetplatform.groupId>
+			<targetplatform.groupId>org.eclipse.papyrus.incubation.dsml.validation</targetplatform.groupId>
 			<targetplatform.artifactId>org.eclipse.papyrus.incubation.dsml.validation.targetplatform</targetplatform.artifactId>
 			<targetplatform.version>1.2.0-SNAPSHOT</targetplatform.version>
 		  </properties>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.eclipse.papyrus.incubation.layers</groupId>
+		<artifactId>org.eclipse.papyrus.incubation.layers.parent</artifactId>	
+		<version>1.2.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>org.eclipse.papyrus.incubation.layers.plugins</artifactId>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>org.eclipse.papyrus.layers.notationmodel.edit</module>
+		<module>org.eclipse.papyrus.layers.runtime</module>
+		<module>org.eclipse.papyrus.layers.stackmodel</module>
+		<module>org.eclipse.papyrus.layers.stackmodel.diagram</module>
+		<module>org.eclipse.papyrus.layers.stackmodel.edit</module>
+		<module>org.eclipse.papyrus.layers.stackmodel.editor</module>
+		<module>org.eclipse.papyrus.layers.ui</module>
+		
+		<!-- FIXME present in Papyrus core repo but not in the build 
+		org.eclipse.papyrus.layers.dev.ui
+		org.eclipse.papyrus.layers.updatesite
+		-->
+	</modules>	
+	
+</project>

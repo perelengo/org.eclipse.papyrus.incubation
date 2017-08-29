@@ -1,0 +1,37 @@
+target "Refactoring - Oxygen" with source requirements
+
+location "http://download.eclipse.org/releases/oxygen/" {
+ org.eclipse.ui lazy
+ org.eclipse.ltk.ui.refactoring lazy
+ org.eclipse.m2m.qvt.oml.runtime lazy
+ org.eclipse.equinox.launcher lazy
+ org.eclipse.ui.ide.application lazy
+ 
+}
+
+
+//manualUpdate
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/" Papyrus-Oxygen {
+ org.eclipse.papyrus.infra.core lazy
+ org.eclipse.papyrus.infra.emf lazy
+ org.eclipse.papyrus.uml.search.ui lazy
+ org.eclipse.papyrus.infra.gmfdiag.common lazy
+ org.eclipse.papyrus.uml.service.types lazy
+ org.eclipse.papyrus.infra.gmfdiag.css lazy
+ org.eclipse.papyrus.uml.diagram.usecase lazy
+ org.eclipse.papyrus.views.modelexplorer.newchild lazy
+ 
+}
+
+//manualUpdate
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen-Developer/lastSuccessfulBuild/artifact/repository/" Papyrus-Oxygen-Developer {
+ org.eclipse.papyrus.junit.framework lazy
+ org.eclipse.papyrus.junit.utils lazy
+ org.eclipse.papyrus.tests.framework lazy
+ 
+}
+
+location gmfTooling "http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.3.1a" {
+ org.eclipse.gmf.codegen lazy
+ 
+} 

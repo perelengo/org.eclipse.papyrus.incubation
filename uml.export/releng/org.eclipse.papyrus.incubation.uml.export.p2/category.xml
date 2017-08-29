@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <feature url="features/org.eclipse.papyrus.uml.export.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.uml.export.feature" version="1.2.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+   <feature url="features/org.eclipse.papyrus.uml.export.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.uml.export.feature.source" version="1.2.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+  
+  <category-def name="org.eclipse.papyrus.incubation.category" label="Papyrus Incubation">
+      <description>
+         Papyrus Incubation features
+      </description>
+   </category-def>
+</site>

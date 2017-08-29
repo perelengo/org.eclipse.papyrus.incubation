@@ -8,10 +8,20 @@ location "http://download.eclipse.org/releases/oxygen/" {
  org.eclipse.emf.ecore.xmi lazy
  org.eclipse.emf.edit.ui lazy
  org.eclipse.ui.ide lazy
- org.eclipse.uml2.uml lazy
- org.eclipse.uml2.uml.edit lazy
- org.eclipse.papyrus.editor lazy
  org.eclipse.gmf.runtime.diagram.ui.actions lazy
- org.eclipse.papyrus.uml.diagram.wizards lazy
+ 
 }
 
+//manualUpdate
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/" Papyrus-Oxygen {
+ org.eclipse.papyrus.uml.diagram.wizards lazy
+ org.eclipse.papyrus.editor lazy
+ 
+}
+
+//updateFrom("MDT UML2",0) 
+location uml "http://download.eclipse.org/modeling/mdt/uml2/updates/5.3" {
+ org.eclipse.uml2.uml lazy
+ org.eclipse.uml2.uml.edit lazy
+ 
+}

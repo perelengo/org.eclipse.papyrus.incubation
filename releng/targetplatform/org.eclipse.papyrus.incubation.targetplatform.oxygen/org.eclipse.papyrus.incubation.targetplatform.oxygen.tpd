@@ -1,4 +1,4 @@
-target "Papyrus Oxygen" with source requirements
+target "Papyrus Incubation - Oxygen" with source requirements
 
 location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
  org.eclipse.draw2d.feature.group lazy

@@ -1,0 +1,50 @@
+target "ELK - Oxygen" with source requirements
+
+location "http://download.eclipse.org/releases/oxygen/" {
+ org.eclipse.ui lazy
+ org.eclipse.gmf.runtime.diagram.ui lazy
+ org.eclipse.xtend.lib lazy
+ org.eclipse.xtend lazy
+ org.eclipse.emf.mwe2.lib lazy
+ org.eclipse.uml2.codegen.ecore lazy
+ org.eclipse.emf lazy
+ org.eclipse.uml2.uml.resources lazy
+ org.eclipse.equinox.launcher lazy
+ org.eclipse.ui.ide.application lazy
+}
+
+//manualUpdate
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/" Papyrus-Oxygen {
+ org.eclipse.papyrus.infra.core lazy
+ org.eclipse.papyrus.infra.gmfdiag.common lazy
+ org.eclipse.papyrus.editor lazy
+ org.eclipse.papyrus.uml.diagram.clazz lazy
+ org.eclipse.papyrus.infra.gmfdiag.export lazy
+ org.eclipse.papyrus.views.modelexplorer lazy
+ 
+}
+
+//manualUpdate
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen-Developer/lastSuccessfulBuild/artifact/repository/" Papyrus-Oxygen-Developer {
+ org.eclipse.papyrus.junit.framework lazy
+ org.eclipse.papyrus.junit.utils lazy
+ org.eclipse.papyrus.tests.framework lazy
+ 
+}
+
+// required by ELK integration
+location elk "http://download.eclipse.org/elk/updates/releases/0.1.0/" {
+ org.eclipse.elk.feature.feature.group lazy
+ org.eclipse.elk.ui.feature.feature.group lazy
+ org.eclipse.elk.gmf.feature.feature.group lazy
+}
+
+location gmfTooling "http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.3.1a" {
+ org.eclipse.gmf.tooling.codegen.xtend2.feature.group lazy
+ org.eclipse.gmf.tooling.runtime.feature.group lazy
+} 
+
+location upr "http://download.eclipse.org/upr/0.9RC1/update/" {
+ org.eclipse.upr.utp lazy
+	
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Diagram Template - Oxygen" sequenceNumber="1498378130">
+<target name="Diagram Template - Oxygen" sequenceNumber="1504218131">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.core.runtime" version="0.0.0"/>
@@ -11,12 +11,18 @@
       <unit id="org.eclipse.emf.ecore.xmi" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit.ui" version="0.0.0"/>
       <unit id="org.eclipse.ui.ide" version="0.0.0"/>
+      <unit id="org.eclipse.gmf.runtime.diagram.ui.actions" version="0.0.0"/>
+      <repository location="http://download.eclipse.org/releases/oxygen/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.papyrus.uml.diagram.wizards" version="0.0.0"/>
+      <unit id="org.eclipse.papyrus.editor" version="0.0.0"/>
+      <repository id="Papyrus-Oxygen" location="https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.uml2.uml" version="0.0.0"/>
       <unit id="org.eclipse.uml2.uml.edit" version="0.0.0"/>
-      <unit id="org.eclipse.papyrus.editor" version="0.0.0"/>
-      <unit id="org.eclipse.gmf.runtime.diagram.ui.actions" version="0.0.0"/>
-      <unit id="org.eclipse.papyrus.uml.diagram.wizards" version="0.0.0"/>
-      <repository location="http://download.eclipse.org/releases/oxygen/"/>
+      <repository id="uml" location="http://download.eclipse.org/modeling/mdt/uml2/updates/5.3"/>
     </location>
   </locations>
 </target>

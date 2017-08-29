@@ -1,0 +1,17 @@
+target "UML export - Oxygen" with source requirements
+
+location "http://download.eclipse.org/releases/oxygen/" {
+ org.eclipse.uml2.uml lazy
+ org.eclipse.uml2.common.edit lazy
+ org.eclipse.papyrus.editor lazy
+ 
+}
+
+
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/" Papyrus-Nightly-Oxygen {
+ org.eclipse.papyrus.views.modelexplorer lazy
+ org.eclipse.papyrus.uml.extensionpoints lazy
+ org.eclipse.papyrus.eclipse.project.editors lazy
+ org.eclipse.papyrus.uml.tools lazy
+ 
+}
