@@ -1,0 +1,27 @@
+target "Layers - Oxygen" with source requirements
+
+location "http://download.eclipse.org/releases/oxygen/" {
+ org.eclipse.ui lazy
+ org.eclipse.gmf.runtime.notation lazy
+ org.eclipse.gmf.runtime.notation.edit lazy
+ org.eclipse.gmf.runtime.notation.providers lazy
+ org.junit lazy
+ org.eclipse.uml2.uml lazy
+ org.eclipse.uml2.common.edit lazy
+ org.eclipse.emf lazy
+ org.eclipse.uml2.uml.edit lazy
+ org.eclipse.emf.databinding.edit lazy
+ org.eclipse.emf.query.ocl lazy
+ 
+}
+
+//manualUpdate
+location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/" Papyrus-Oxygen {
+ org.eclipse.papyrus.infra.core lazy
+ org.eclipse.papyrus.infra.gmfdiag.common lazy
+ org.eclipse.papyrus.infra.emf.diagram.common lazy
+ org.eclipse.papyrus.views.modelexplorer lazy
+ org.eclipse.papyrus.infra.gmfdiag.hyperlink lazy
+ org.eclipse.papyrus.integrationtests.editor lazy
+ 
+}

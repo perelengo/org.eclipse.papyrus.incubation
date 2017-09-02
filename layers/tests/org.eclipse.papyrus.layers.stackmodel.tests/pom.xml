@@ -5,17 +5,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	
 	<parent>
 		<groupId>org.eclipse.papyrus.incubation.layers</groupId>
-		<artifactId>org.eclipse.papyrus.incubation.layers.parent</artifactId>	
+		<artifactId>org.eclipse.papyrus.incubation.layers.tests</artifactId>
 		<version>1.2.0-SNAPSHOT</version>
 	</parent>
-	
-	<artifactId>org.eclipse.papyrus.incubation.layers.tests</artifactId>
-	<packaging>pom</packaging>
-	
-	<modules>
-		<!-- FIXME present in Papyrus core repo but not in the build 
-		<module>org.eclipse.papyrus.layers.integrationtests</module>
-		<module>org.eclipse.papyrus.layers.stackmodel.tests</module> -->
-	</modules>	
+
+	<artifactId>org.eclipse.papyrus.layers.stackmodel.tests</artifactId>
+  	<packaging>eclipse-test-plugin</packaging>
 	
 </project>

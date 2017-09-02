@@ -1,6 +1,0 @@
-target "Layers - Oxygen" with source requirements
-
-location "http://download.eclipse.org/releases/oxygen/" {
-
-}
-
