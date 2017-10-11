@@ -28,7 +28,7 @@ import org.eclipse.papyrus.infra.core.sasheditor.editor.ISashWindowsContainer;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.ui.util.ServiceUtilsForIEvaluationContext;
 import org.eclipse.papyrus.layers.runtime.NotationDiagramHelper;
-import org.eclipse.papyrus.layers.runtime.model.LayersModel;
+import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
 import org.eclipse.ui.IEditorPart;
 
@@ -237,7 +237,7 @@ public abstract class AbstractLayerCommand extends AbstractHandler {
 		}
 
 		// Lookup the Layer model
-		LayersModel layersModel = (LayersModel) ServiceUtilsForIEvaluationContext.getInstance().getModelSet(context).getModel(LayersModel.MODEL_ID);
+		LayersModelResource layersModel = (LayersModelResource) ServiceUtilsForIEvaluationContext.getInstance().getModelSet(context).getModel(LayersModelResource.MODEL_ID);
 		// Return a new instance of the Helper
 		return new NotationDiagramHelper(layersModel, diagram);
 	}

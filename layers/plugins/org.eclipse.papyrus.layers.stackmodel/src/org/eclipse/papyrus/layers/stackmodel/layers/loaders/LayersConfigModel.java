@@ -115,31 +115,33 @@ public class LayersConfigModel {
 
 		// Create properties
 		Folder propertiesFolder = createFolder(getRootFolder(), "properties");
-		PropertyId propertyIsVisible = createPropertyId(propertiesFolder, "isVisible", typeBoolean);
-		PropertyId propertyIsAbstract = createPropertyId(propertiesFolder, "isAbstract", typeBoolean);
-		PropertyId propertyFill = createPropertyId(propertiesFolder, "fill", typeFill);
+		// PropertyId propertyIsVisible = createPropertyId(propertiesFolder, "isVisible", typeBoolean);
+		// PropertyId propertyIsAbstract = createPropertyId(propertiesFolder, "isAbstract", typeBoolean);
+		// PropertyId propertyFill = createPropertyId(propertiesFolder, "fill", typeFill);
 		PropertyId propertyLine = createPropertyId(propertiesFolder, "line", typeLine);
 		PropertyId propertyFont = createPropertyId(propertiesFolder, "font", typeFont);
 		PropertyId propertyBgcolor = createPropertyId(propertiesFolder, "bgcolor", typeColor);
 		PropertyId propertyFgcolor = createPropertyId(propertiesFolder, "fgcolor", typeColor);
 
+		PropertyId propertyCSS = createPropertyId(propertiesFolder, "css", typeString);
+
 		// Bind operators to layers
 		Folder opBindingFolder = createFolder(getRootFolder(), "opBindings");
 
 		LayerOperatorMultipleBinding layerOpBindingsA = createLayerOperatorsMultipleBinding(opBindingFolder, stackedLayersOperatorConfig);
-		createOperatorBinding(layerOpBindingsA, propertyIsVisible, operatorBooleanAnd);
-		createOperatorBinding(layerOpBindingsA, propertyIsAbstract, operatorBooleanAnd);
-		createOperatorBinding(layerOpBindingsA, propertyFill, operatorFillAverage);
+		// createOperatorBinding(layerOpBindingsA, propertyIsVisible, operatorBooleanAnd);
+		// createOperatorBinding(layerOpBindingsA, propertyIsAbstract, operatorBooleanAnd);
+		// createOperatorBinding(layerOpBindingsA, propertyFill, operatorFillAverage);
 
 		LayerOperatorMultipleBinding layerOpBindingsB = createLayerOperatorsMultipleBinding(opBindingFolder, stackedLayersOperatorMinimunConfig);
-		createOperatorBinding(layerOpBindingsB, propertyIsVisible, operatorBooleanOr);
-		createOperatorBinding(layerOpBindingsB, propertyIsAbstract, operatorBooleanOr);
-		createOperatorBinding(layerOpBindingsB, propertyFill, operatorFillAverage);
+		// createOperatorBinding(layerOpBindingsB, propertyIsVisible, operatorBooleanOr);
+		// createOperatorBinding(layerOpBindingsB, propertyIsAbstract, operatorBooleanOr);
+		// createOperatorBinding(layerOpBindingsB, propertyFill, operatorFillAverage);
 
 		LayerOperatorMultipleBinding layerOpBindingsAverage = createLayerOperatorsMultipleBinding(opBindingFolder, stackedLayersOperatorAverage);
-		createOperatorBinding(layerOpBindingsAverage, propertyIsVisible, operatorBooleanOr);
-		createOperatorBinding(layerOpBindingsAverage, propertyIsAbstract, operatorBooleanOr);
-		createOperatorBinding(layerOpBindingsAverage, propertyFill, operatorFillAverage);
+		// createOperatorBinding(layerOpBindingsAverage, propertyIsVisible, operatorBooleanOr);
+		// createOperatorBinding(layerOpBindingsAverage, propertyIsAbstract, operatorBooleanOr);
+		// createOperatorBinding(layerOpBindingsAverage, propertyFill, operatorFillAverage);
 
 	}
 

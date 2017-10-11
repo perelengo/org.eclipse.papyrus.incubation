@@ -12,7 +12,7 @@ package org.eclipse.papyrus.layers.runtime;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.papyrus.layers.runtime.model.ILayersModelRootEventListener;
-import org.eclipse.papyrus.layers.runtime.model.LayersModel;
+import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.layers.runtime.model.LayersModelEventRootNotifier;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
@@ -20,7 +20,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 
 /**
  * This class is used to notify listeners of events on the LayerStack life cycle.
- * The class require the {@link LayersModel} to register itself to appropriate objects.
+ * The class require the {@link LayersModelResource} to register itself to appropriate objects.
  * The class take care to check if the {@link LayersStackApplication} exist or not.
  * So, it can be used in all cases, even if the {@link LayersStackApplication} is not
  * created.
@@ -45,7 +45,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifier {
 
 	protected State state;
 
-	protected LayersModel layersModel;
+	protected LayersModelResource layersModel;
 
 	/**
 	 * Notifier on {@link LayersStack} life cycle events
@@ -82,7 +82,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifier {
 	 *
 	 * @param layersModel
 	 */
-	public LayersStackAndApplicationLifeCycleEventNotifier(LayersModel layersModel) {
+	public LayersStackAndApplicationLifeCycleEventNotifier(LayersModelResource layersModel) {
 		this.layersModel = layersModel;
 		createListeners();
 		initState();
@@ -95,8 +95,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifier {
 
 		if (layersModel.lookupLayerStackApplication() != null) {
 			transitionInitToApplicationCreatedState();
-		}
-		else {
+		} else {
 			transitionInitToNoApplicationState();
 		}
 	}
@@ -157,7 +156,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifier {
 	/**
 	 * Dispose the synchronizer
 	 */
-	protected void dispose() {
+	public void dispose() {
 		// Deactivate listeners
 		deleteListeners();
 		layersModel = null;
@@ -169,7 +168,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifier {
 	 *
 	 * @return
 	 */
-	protected boolean isDisposed() {
+	public boolean isDisposed() {
 		return state == State.disposed;
 	}
 

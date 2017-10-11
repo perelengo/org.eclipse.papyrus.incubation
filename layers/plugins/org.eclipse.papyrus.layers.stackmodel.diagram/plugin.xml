@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension
+   <!--extension
          point="org.eclipse.papyrus.infra.ui.papyrusDiagram">
       <editorDiagram
             actionBarContributorId="org.eclipse.papyrus.uml.diagram.common.part.UMLDiagramActionBarContributor"
@@ -16,7 +16,7 @@
             description="Create a Layers Tree Editor (EMF Tree Editor)"
             id="org.eclipse.papyrus.layers.stackmodel.diagram.createDiagram"
             name="Create Layers Tree">
-      </command>
+      </comman>
       <command
             description="Create a child of the selected model element"
             id="org.eclipse.papyrus.layers.stackmodel.diagram.ui.handlers.emfchildrenmenu"
@@ -41,10 +41,10 @@
             class="org.eclipse.papyrus.layers.stackmodel.diagram.ui.handlers.ShowCreateChildCommand"
             commandId="org.eclipse.papyrus.layers.stackmodel.diagram.ui.handlers.emfchildrenmenu">
       </handler>
-   </extension>
+   </extension-->
    <extension
          point="org.eclipse.ui.menus">
-      <menuContribution
+      <!--menuContribution
             locationURI="menu:org.eclipse.papyrus.ui.menu">
          <menu
                id="org.eclipse.papyrus.uml.diagram.ui.menu.diagrams"
@@ -84,15 +84,15 @@
                   tooltip="Create a new Layers Tree">
             </command>
          </menu>
-      </menuContribution>
-      <menuContribution
+      </menuContribution-->
+      <!--menuContribution
             allPopups="false"
             locationURI="popup:org.eclipse.papyrus.layers.stackmodel.diagram.ui.contextmenu">
          <menu
                id="org.eclipse.papyrus.layers.stackmodel.ui.popupmenu"
                label="Layers">
          </menu>
-      </menuContribution>
+      </menuContribution-->
    </extension>
 
 </plugin>

@@ -14,7 +14,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	
 	<modules>
 		<!-- FIXME present in Papyrus core repo but not in the build 
-		<module>org.eclipse.papyrus.layers.integrationtests</module>
+		<module>org.eclipse.papyrus.layers.integration.tests</module>
+		<module>org.eclipse.papyrus.layers.runtime.tests</module>
 		<module>org.eclipse.papyrus.layers.stackmodel.tests</module> -->
 	</modules>	
 	

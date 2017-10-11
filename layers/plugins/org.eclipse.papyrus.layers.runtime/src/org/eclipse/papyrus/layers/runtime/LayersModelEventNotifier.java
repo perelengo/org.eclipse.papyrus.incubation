@@ -138,8 +138,7 @@ public class LayersModelEventNotifier {
 				// case Notification.UNSET:
 				// // A key is added
 				// break;
-				case Notification.ADD:
-				{
+				case Notification.ADD: {
 					// An entry is added
 					StringToTypeInstanceMapImpl entry = (StringToTypeInstanceMapImpl) notification.getNewValue();
 					// System.out.println("ADD" + entry.getValue()
@@ -151,8 +150,7 @@ public class LayersModelEventNotifier {
 					firePropertyValueAddedEvent(notification);
 					break;
 				}
-				case Notification.REMOVE:
-				{
+				case Notification.REMOVE: {
 					// An entry is removed
 					StringToTypeInstanceMapImpl entry = (StringToTypeInstanceMapImpl) notification.getOldValue();
 					// System.out.println("REMOVE" + entry.getValue()
@@ -225,6 +223,14 @@ public class LayersModelEventNotifier {
 	public LayersModelEventNotifier(LayersStack layersStack) {
 		this.layersStack = layersStack;
 		activate();
+	}
+
+	/**
+	 * 
+	 * @return the listeners
+	 */
+	public List<ILayersModelEventListener> getListeners() {
+		return listeners;
 	}
 
 	/**

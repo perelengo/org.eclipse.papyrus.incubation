@@ -21,7 +21,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 
 
 /**
- * This class listen to a {@link LayersModel} and send following events to listeners:
+ * This class listen to a {@link LayersModelResource} and send following events to listeners:
  * <ul>
  * <li>root of type {@link LayersStackApplication} added</li>
  * <li>root of type {@link LayersStackApplication} removed</li>
@@ -32,7 +32,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
  */
 public class LayersModelEventRootNotifier {
 
-	protected LayersModel layersModel;
+	protected LayersModelResource layersModel;
 
 	/**
 	 * List of listener to notify.
@@ -85,7 +85,7 @@ public class LayersModelEventRootNotifier {
 	 *
 	 * @param layersModel
 	 */
-	public LayersModelEventRootNotifier(LayersModel layersModel) {
+	public LayersModelEventRootNotifier(LayersModelResource layersModel) {
 		this.layersModel = layersModel;
 		activate();
 	}
@@ -121,7 +121,7 @@ public class LayersModelEventRootNotifier {
 	 *
 	 * @return
 	 */
-	protected boolean isDisposed() {
+	public boolean isDisposed() {
 		return layersModel == null;
 	}
 
@@ -156,7 +156,7 @@ public class LayersModelEventRootNotifier {
 	}
 
 	/**
-	 * Called by events when a root is added to the {@link LayersModel}
+	 * Called by events when a root is added to the {@link LayersModelResource}
 	 *
 	 * @param msg
 	 */
@@ -167,7 +167,7 @@ public class LayersModelEventRootNotifier {
 	}
 
 	/**
-	 * Called by events when a root is added to the {@link LayersModel}
+	 * Called by events when a root is added to the {@link LayersModelResource}
 	 *
 	 * @param msg
 	 */

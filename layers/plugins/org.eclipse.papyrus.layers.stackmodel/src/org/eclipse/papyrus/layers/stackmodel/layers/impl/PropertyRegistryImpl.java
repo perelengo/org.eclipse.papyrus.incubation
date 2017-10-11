@@ -114,13 +114,15 @@ public class PropertyRegistryImpl extends MinimalEObjectImpl.Container implement
 				// "num", "int",
 				// "addr", "String",
 				// "isValid", "boolean", "true",
-				"isVisible", "boolean", "true",
-				"isAbstract", "boolean", "false",
-				"fill", "Fill", "0, 15053796", // "transparency, fillColor"
-				"line", "LineType", "0, -1", // "lineColor, lineWith"
-				"font", "FontType", "Segoe UI, 9, 0, false", // "FontName, FontHeight, FontColor, Bold"
-		// "bgcolor", "Color",
+				// "bgcolor", "Color",
 				// "fgcolor", "Color",
+
+				"css", "String", "",
+				"isVisible", "boolean", "true",
+				// "isAbstract", "boolean", "false",
+				// "fill", "Fill", "0, 15053796", // "transparency, fillColor"
+				// "line", "LineType", "0, -1", // "lineColor, lineWith"
+				// "font", "FontType", "Segoe UI, 9, 0, false", // "FontName, FontHeight, FontColor, Bold"
 		};
 
 		for (int i = 0; i < properties.length; i += 3) {
@@ -217,8 +219,7 @@ public class PropertyRegistryImpl extends MinimalEObjectImpl.Container implement
 			if (msgs != null) {
 				msgs.dispatch();
 			}
-		}
-		else if (eNotificationRequired()) {
+		} else if (eNotificationRequired()) {
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY, newTypeRegistry, newTypeRegistry));
 		}
 	}

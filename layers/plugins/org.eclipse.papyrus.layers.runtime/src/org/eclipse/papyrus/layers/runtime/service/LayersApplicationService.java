@@ -19,7 +19,7 @@ import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.core.services.ServicesRegistry;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
 import org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer;
-import org.eclipse.papyrus.layers.runtime.model.LayersModel;
+import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 
 /**
@@ -29,6 +29,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 public class LayersApplicationService implements IService {
 
 	public static final String SERVICEID = "org.eclipse.papyrus.layers.runtime.service.LayersApplicationService";
+
 	/**
 	 * ModelSet to retrieve models
 	 */
@@ -38,10 +39,11 @@ public class LayersApplicationService implements IService {
 	 * The synchronizer used to listen on events and to synchronize layers and notation.
 	 */
 	protected LayerStackApplicationSynchronizer layersSynchronizer;
+
 	/**
 	 * associated layerModel.
 	 */
-	private LayersModel layersModel;
+	private LayersModelResource layersModel;
 
 	/**
 	 * The {@link NotationModel}
@@ -79,7 +81,7 @@ public class LayersApplicationService implements IService {
 
 		// Try to get the associated model
 		try {
-			layersModel = (LayersModel) modelSet.getModelChecked(LayersModel.MODEL_ID);
+			layersModel = (LayersModelResource) modelSet.getModelChecked(LayersModelResource.MODEL_ID);
 			notationModel = (NotationModel) modelSet.getModelChecked(NotationModel.MODEL_ID);
 		} catch (NotFoundException e) {
 			throw new ServiceException("Can't get layer model", e);
@@ -93,8 +95,7 @@ public class LayersApplicationService implements IService {
 		if (log.isDebugEnabled()) {
 			if (isAlreadyExist) {
 				log.debug("LayerApplication already exist in modelSet");
-			}
-			else {
+			} else {
 				log.debug("LayerApplication do not exist in modelSet");
 			}
 		}

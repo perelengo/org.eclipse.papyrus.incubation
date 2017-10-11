@@ -11,7 +11,7 @@
 package org.eclipse.papyrus.layers.runtime;
 
 import org.eclipse.gmf.runtime.notation.Diagram;
-import org.eclipse.papyrus.layers.runtime.model.LayersModel;
+import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 
@@ -36,7 +36,7 @@ public class NotationDiagramHelper {
 	/**
 	 * Layers model.
 	 */
-	protected LayersModel layersModel;
+	protected LayersModelResource layersModel;
 
 	protected LayersStackApplication layersApplication;
 
@@ -91,7 +91,7 @@ public class NotationDiagramHelper {
 	 * @param layersModel
 	 *
 	 */
-	public NotationDiagramHelper(LayersModel layersModel, Diagram diagram) {
+	public NotationDiagramHelper(LayersModelResource layersModel, Diagram diagram) {
 		this.diagram = diagram;
 		this.layersModel = layersModel;
 

@@ -83,6 +83,7 @@ public class RegistriesLoader implements ILayerOperatorDescriptorRegistryLoader 
 		// Populate LayerOperator with operators
 		for (OperatorBinding binding : model.getAllOperatorBinding()) {
 			try {
+				System.err.println("binding.getPropertyId().getName(): " + binding.getPropertyId().getName());
 				Property property = propertyRegistry.getProperty(binding.getPropertyId().getName());
 				String layerDescriptorName = binding.getLayerOperatorConfig().getName();
 				String operatorName = binding.getOperator().getName();

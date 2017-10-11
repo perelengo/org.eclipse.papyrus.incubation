@@ -19,7 +19,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
 import org.eclipse.papyrus.layers.runtime.model.ILayersModelRootEventListener;
-import org.eclipse.papyrus.layers.runtime.model.LayersModel;
+import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.layers.runtime.model.LayersModelEventRootNotifier;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
@@ -55,7 +55,7 @@ public class LayerStackApplicationSynchronizer implements ILayersModelRootEventL
 
 	protected State state;
 
-	protected LayersModel layersModel;
+	protected LayersModelResource layersModel;
 	protected NotationModel notationModel;
 
 	/**
@@ -74,7 +74,7 @@ public class LayerStackApplicationSynchronizer implements ILayersModelRootEventL
 	protected LayersStackApplicationEventNotifier layersStackApplicationEventNotifier;
 
 	/**
-	 * Notifier on {@link LayersModel} events.
+	 * Notifier on {@link LayersModelResource} events.
 	 */
 	protected LayersModelEventRootNotifier layersModelEventRootNotifier;
 
@@ -82,7 +82,7 @@ public class LayerStackApplicationSynchronizer implements ILayersModelRootEventL
 	 * Constructor.
 	 *
 	 */
-	public LayerStackApplicationSynchronizer(LayersModel layersModel, NotationModel notationModel) {
+	public LayerStackApplicationSynchronizer(LayersModelResource layersModel, NotationModel notationModel) {
 
 		this.layersModel = layersModel;
 		this.notationModel = notationModel;
@@ -97,8 +97,7 @@ public class LayerStackApplicationSynchronizer implements ILayersModelRootEventL
 
 		if (layersModel.lookupLayerStackApplication() != null) {
 			transitionInitToApplicationCreatedState();
-		}
-		else {
+		} else {
 			transitionInitToNoApplicationState();
 		}
 	}
@@ -177,7 +176,7 @@ public class LayerStackApplicationSynchronizer implements ILayersModelRootEventL
 	/**
 	 * @return the layersModel
 	 */
-	public LayersModel getLayersModel() {
+	public LayersModelResource getLayersModel() {
 		return layersModel;
 	}
 
@@ -282,7 +281,7 @@ public class LayerStackApplicationSynchronizer implements ILayersModelRootEventL
 	 *
 	 * @return
 	 */
-	protected boolean isDisposed() {
+	public boolean isDisposed() {
 		return state == State.disposed;
 	}
 

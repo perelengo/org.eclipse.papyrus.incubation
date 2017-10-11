@@ -97,7 +97,7 @@ public class NotationDiagramRemovedFromResourceEventNotifier {
 	/**
 	 * Dispose the synchronizer
 	 */
-	protected void dispose() {
+	public void dispose() {
 		// Deactivate listeners
 		deactivate();
 		notationModel = null;
@@ -108,7 +108,7 @@ public class NotationDiagramRemovedFromResourceEventNotifier {
 	 *
 	 * @return
 	 */
-	protected boolean isDisposed() {
+	public boolean isDisposed() {
 		return notationModel == null;
 	}
 

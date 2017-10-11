@@ -16,7 +16,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.papyrus.layers.runtime.model.LayersModel;
+import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
@@ -34,7 +34,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
  */
 public class LayersStackApplicationEventNotifier {
 
-	protected LayersModel layersModel;
+	protected LayersModelResource layersModel;
 
 	/**
 	 * List of listener to notify.
@@ -77,7 +77,7 @@ public class LayersStackApplicationEventNotifier {
 	 *
 	 * @param layersModel
 	 */
-	public LayersStackApplicationEventNotifier(LayersModel layersModel) {
+	public LayersStackApplicationEventNotifier(LayersModelResource layersModel) {
 		this.layersModel = layersModel;
 		activate();
 	}
@@ -89,7 +89,7 @@ public class LayersStackApplicationEventNotifier {
 	 * @param activate
 	 *            True if the notifier should be activated immediately. False otherwise.
 	 */
-	public LayersStackApplicationEventNotifier(LayersModel layersModel, boolean activate) {
+	public LayersStackApplicationEventNotifier(LayersModelResource layersModel, boolean activate) {
 		this.layersModel = layersModel;
 		if (activate) {
 			activate();
@@ -125,7 +125,7 @@ public class LayersStackApplicationEventNotifier {
 	/**
 	 * Dispose the synchronizer
 	 */
-	protected void dispose() {
+	public void dispose() {
 		// Deactivate listeners
 		deactivate();
 		layersModel = null;
@@ -136,7 +136,7 @@ public class LayersStackApplicationEventNotifier {
 	 *
 	 * @return
 	 */
-	protected boolean isDisposed() {
+	public boolean isDisposed() {
 		return layersModel == null;
 	}
 

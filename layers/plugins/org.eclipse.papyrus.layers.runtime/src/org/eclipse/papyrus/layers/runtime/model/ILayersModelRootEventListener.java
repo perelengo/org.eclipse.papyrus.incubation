@@ -24,7 +24,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 public interface ILayersModelRootEventListener {
 
 	/**
-	 * Called by events when a root of type {@link LayersStackApplication} is added to the {@link LayersModel} elements.
+	 * Called by events when a root of type {@link LayersStackApplication} is added to the {@link LayersModelResource} elements.
 	 *
 	 * @param msg
 	 */

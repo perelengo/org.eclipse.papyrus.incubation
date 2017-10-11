@@ -122,7 +122,8 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 		// propertySetters = new EObjectResolvingEList<PropertySetter>(PropertySetter.class, this, LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS);
 		// }
 		if (propertySetters == null) {
-			propertySetters = new PropertyIndexedList<PropertySetter>(getSetterMap(), PropertySetter.class, this, LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS, LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP, PropertySetter.NULL_PROPERTY_SETTER);
+			propertySetters = new PropertyIndexedList<PropertySetter>(getSetterMap(), PropertySetter.class, this, LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS, LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP,
+					PropertySetter.NULL_PROPERTY_SETTER);
 		}
 		return propertySetters;
 	}
@@ -189,8 +190,7 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 			if (msgs != null) {
 				msgs.dispatch();
 			}
-		}
-		else if (eNotificationRequired()) {
+		} else if (eNotificationRequired()) {
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION, newApplication, newApplication));
 		}
 

@@ -5,7 +5,7 @@
          point="org.eclipse.ui.views">
       <view
             category="org.eclipse.papyrus.views.category"
-            class="org.eclipse.papyrus.layers3.ui.view.LayersExplorerView"
+            class="org.eclipse.papyrus.layers.ui.view.LayersExplorerView"
             icon="icons/LayersStackApplication.gif"
             id="org.eclipse.papyrus.layers.ui.view.layersexplorer"
             name="LayersExplorer"
@@ -35,12 +35,12 @@
       </command>
       <command
             id="org.eclipse.papyrus.layers.ui.commands.createlayer"
-            name="Create Layer">
+            name="Create Basic Layer">
       </command>
-      <command
+      <!--command
             id="org.eclipse.papyrus.layers.ui.commands.createregexplayer"
             name="Create RegExp Layer">
-      </command>
+      </command-->
       <command
             id="org.eclipse.papyrus.layers.ui.commands.createtoplayeroperator"
             name="Create Top Layer Operator">
@@ -49,10 +49,10 @@
             id="org.eclipse.papyrus.layers.ui.commands.createstackedLayerOperator"
             name="Create Stacked Layer Operator">
       </command>
-      <command
+      <!--command
             id="org.eclipse.papyrus.layers.ui.commands.attachPropertyToLayer"
             name="Attach a Property to a Layer">
-      </command>
+      </command-->
       <command
             id="org.eclipse.papyrus.layers.ui.commands.attachPropertiesToLayer"
             name="Attach Properties to a Layer">
@@ -61,17 +61,17 @@
             id="org.eclipse.papyrus.layers.ui.commands.attachDiagramViewsToLayer"
             name="Attach Multiple Diagram Views to a Layer">
       </command>
-      <command
-            defaultHandler="org.eclipse.papyrus.layers3.ui.commands.CreateLayerOperatorsFromParameter"
+      <!--command
+            defaultHandler="org.eclipse.papyrus.layers.ui.commands.CreateLayerOperatorsFromParameter"
             id="org.eclipse.papyrus.layers.ui.commands.createLayerOperator"
             name="Create LayerOperators">
          <commandParameter
                id="org.eclipse.papyrus.layers.ui.createLayerOperator.parameters"
                name="name"
                optional="true"
-               values="org.eclipse.papyrus.layers3.ui.commands.LayerOperatorsParameterValues">
+               values="org.eclipse.papyrus.layers.ui.commands.LayerOperatorsParameterValues">
          </commandParameter>
-      </command>
+      </command-->
       <command
             id="org.eclipse.papyrus.layers.ui.commands.openlayersexplorerview"
             name="Open Layers Explorer">
@@ -90,62 +90,62 @@
       </command>
    </extension>
    <extension
-         name="Layers v3"
+         name="Layers"
          point="org.eclipse.ui.handlers">
       <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.AttachLayerStackCommand"
+            class="org.eclipse.papyrus.layers.ui.commands.AttachLayerStackCommand"
             commandId="org.eclipse.papyrus.layers.ui.commands.attachLayerStack">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.DetachLayerStackCommand"
+            class="org.eclipse.papyrus.layers.ui.commands.DetachLayerStackCommand"
             commandId="org.eclipse.papyrus.layers.ui.commands.detachLayerStack">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.CreateLayerHandler"
+            class="org.eclipse.papyrus.layers.ui.commands.CreateLayerHandler"
             commandId="org.eclipse.papyrus.layers.ui.commands.createlayer">
       </handler>
-      <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.CreateRegExpLayerHandler"
+      <!--handler
+            class="org.eclipse.papyrus.layers.ui.commands.CreateRegExpLayerHandler"
             commandId="org.eclipse.papyrus.layers.ui.commands.createregexplayer">
-      </handler>
+      </handler-->
       <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.CreateTopLayerOperatorHandler"
+            class="org.eclipse.papyrus.layers.ui.commands.CreateTopLayerOperatorHandler"
             commandId="org.eclipse.papyrus.layers.ui.commands.createtoplayeroperator">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.CreateStackedLayerOperatorHandler"
+            class="org.eclipse.papyrus.layers.ui.commands.CreateStackedLayerOperatorHandler"
             commandId="org.eclipse.papyrus.layers.ui.commands.createstackedLayerOperator">
       </handler>
-      <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.AttachPropertyToLayer"
+      <!--handler
+            class="org.eclipse.papyrus.layers.ui.commands.AttachPropertyToLayer"
             commandId="org.eclipse.papyrus.layers.ui.commands.attachPropertyToLayer">
-      </handler>
+      </handler-->
       <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.AttachPropertyFromListToLayer"
+            class="org.eclipse.papyrus.layers.ui.commands.AttachPropertyFromListToLayer"
             commandId="org.eclipse.papyrus.layers.ui.commands.attachPropertiesToLayer">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.AttachDiagramViewsToLayer"
+            class="org.eclipse.papyrus.layers.ui.commands.AttachDiagramViewsToLayer"
             commandId="org.eclipse.papyrus.layers.ui.commands.attachDiagramViewsToLayer">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.commands.DeleteItemHandler"
+            class="org.eclipse.papyrus.layers.ui.commands.DeleteItemHandler"
             commandId="org.eclipse.papyrus.layers.ui.commands.delete">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.handlers.OpenLayerExplorerHandler"
+            class="org.eclipse.papyrus.layers.ui.handlers.OpenLayerExplorerHandler"
             commandId="org.eclipse.papyrus.layers.ui.commands.openlayersexplorerview">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.handlers.AttachDiagramSelectedItemsToCurrentLayer"
+            class="org.eclipse.papyrus.layers.ui.handlers.AttachDiagramSelectedItemsToCurrentLayer"
             commandId="org.eclipse.papyrus.layers.ui.commands.attachitemselectedindiagramtocurrentlayer">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.handlers.RemoveDiagramSelectedItemsFromCurrentLayer"
+            class="org.eclipse.papyrus.layers.ui.handlers.RemoveDiagramSelectedItemsFromCurrentLayer"
             commandId="org.eclipse.papyrus.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer">
       </handler>
       <handler
-            class="org.eclipse.papyrus.layers3.ui.handlers.CreateAllViewsDerivedLayerHandler"
+            class="org.eclipse.papyrus.layers.ui.handlers.CreateAllViewsDerivedLayerHandler"
             commandId="org.eclipse.papyrus.layers.ui.commands.createallviewsderivedlayer">
       </handler>
    </extension>
@@ -177,17 +177,18 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.layers.stackmodel.ui.popupmenu">
+            locationURI="popup:org.eclipse.papyrus.layers.stackmodel.diagram.ui.contextmenu">
+            <!--locationURI="popup:org.eclipse.papyrus.layers.stackmodel.ui.popupmenu"-->
          <menu
                label="Create Layers ..."
                tooltip="Create a new leaf layers">
             <command
                   commandId="org.eclipse.papyrus.layers.ui.commands.createlayer"
-                  label="Create Layer"
+                  label="Create Basic Layer"
                   style="push"
                   tooltip="Create a new Layer in selected parent">
             </command>
-            <command
+            <!--command
                   commandId="org.eclipse.papyrus.layers.ui.commands.createregexplayer"
                   label="Create RegExp  Layer"
                   style="push"
@@ -198,9 +199,9 @@
                   label="Create AllViews Layer"
                   style="push"
                   tooltip="Create a All Views Derived Layer">
-            </command>
+            </command-->
          </menu>
-         <menu
+         <!--menu
                commandId="org.eclipse.papyrus.layers.ui.commands.createLayerOperator"
                id="org.eclipse.papyrus.layers.explorer.contextmenu.operators"
                label="Create Operators ..."
@@ -251,7 +252,7 @@
                      value="stackedLayersOperatorAverage">
                </parameter>
             </command>
-         </menu>
+         </menu-->
          <command
                commandId="org.eclipse.papyrus.layers.ui.commands.attachPropertiesToLayer"
                label="Attach Properties"
@@ -271,7 +272,7 @@
                style="push"
                tooltip="Delete Selected Item from the Layer Explorer">
          </command>
-         <command
+         <!--command
                commandId="org.eclipse.papyrus.layers.ui.commands.attachitemselectedindiagramtocurrentlayer"
                label="Attach Selected Views to Layer"
                style="push"
@@ -282,7 +283,23 @@
                label="Remove Selected Views from Layer"
                style="push"
                tooltip="Remove selected views from the layer selected in the LayersExplorer">
-         </command>
+         </command-->
+         <!--separator
+               name="endseparator"
+               visible="true">
+         </separator>
+            <command
+                  commandId="org.eclipse.papyrus.layers.ui.commands.attachLayerStack"
+                  label="Attach Layer Stack"
+                  style="push"
+                  tooltip="Attach a Layer Stack to the diagram">
+            </command>
+            <command
+                  commandId="org.eclipse.papyrus.layers.ui.commands.detachLayerStack"
+                  label="Detach Layer Stack"
+                  style="push"
+                  tooltip="Detach a Layer Stack to the diagram">
+            </command-->
          <separator
                name="endseparator"
                visible="false">
@@ -310,7 +327,7 @@
                   style="push"
                   tooltip="Open the Layers Explorer View">
             </command>
-            <command
+            <!--command
                   commandId="org.eclipse.papyrus.layers.ui.commands.attachitemselectedindiagramtocurrentlayer"
                   label="Attach Views to Current Layer"
                   style="push"
@@ -321,14 +338,14 @@
                   label="Remove Views from Current Layer"
                   style="push"
                   tooltip="Remove selected views from the layer currently selected in the LayersExplorer">
-            </command>
+            </command-->
          </menu>
       </menuContribution>
    </extension>
    <extension
          point="org.eclipse.papyrus.infra.properties.contexts">
       <context
-            contextModel="properties/properties-orig.ctx"
+            contextModel="properties/properties.ctx"
             isCustomizable="true">
       </context>
    </extension>
