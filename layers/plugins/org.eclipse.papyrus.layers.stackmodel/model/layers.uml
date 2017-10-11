@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
   <uml:Model xmi:id="_gAOFQLcqEeK8_t7Rpq6ZJA" name="layers">
     <ownedComment xmi:type="uml:Comment" xmi:id="_7_dC4HbuEeOlpfB_tZS-QA" annotatedElement="_gAOFQLcqEeK8_t7Rpq6ZJA">
       <body>Start the LayesStack.&#xD;
@@ -26,7 +26,7 @@ the initialisation can differ if the LayersStack is created by the user or by EM
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iiUlMtqCEeKQqZMBCFd2Uw" value="1"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_gT0asNa7EeKPiuTfpuvqHA" clientDependency="_2bk1oHpGEeOlpfB_tZS-QA" name="LayersStack">
+    <packagedElement xmi:type="uml:Class" xmi:id="_gT0asNa7EeKPiuTfpuvqHA" name="LayersStack">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_cHaqsNbGEeKPiuTfpuvqHA" name="layers" type="_9IaAANjiEeKQqZMBCFd2Uw" aggregation="composite" association="_cHkbsNbGEeKPiuTfpuvqHA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cHaqsdbGEeKPiuTfpuvqHA"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cHaqstbGEeKPiuTfpuvqHA" value="1"/>
@@ -247,7 +247,7 @@ This is done immediately after the owner of the array know the application or th
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_HPKEcNhdEeKgkM6XJF9t4A" name="return" type="_AjTZ8Na8EeKPiuTfpuvqHA" direction="return"/>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AjTZ8Na8EeKPiuTfpuvqHA" clientDependency="_g2QFQO8YEeK0p4PkXjd-_Q" name="TypeInstance" isAbstract="true">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AjTZ8Na8EeKPiuTfpuvqHA" name="TypeInstance" isAbstract="true">
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_g2QFQO8YEeK0p4PkXjd-_Q" name="InterfaceRealization1" client="_AjTZ8Na8EeKPiuTfpuvqHA" supplier="_XZJOcO8UEeK0p4PkXjd-_Q" contract="_XZJOcO8UEeK0p4PkXjd-_Q"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ZFFKAEczEeOEBJ2PxFQgyQ" name="setValueFromString">
         <ownedComment xmi:type="uml:Comment" xmi:id="_ghl-4EczEeOEBJ2PxFQgyQ">
@@ -699,7 +699,7 @@ Associated behavior are stopped.</body>
         </ownedComment>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_HoKjcNjjEeKQqZMBCFd2Uw" clientDependency="_0RxQgHpGEeOlpfB_tZS-QA" name="LayerOperator" isAbstract="true">
+    <packagedElement xmi:type="uml:Class" xmi:id="_HoKjcNjjEeKQqZMBCFd2Uw" name="LayerOperator" isAbstract="true">
       <generalization xmi:type="uml:Generalization" xmi:id="_OJCPcNjjEeKQqZMBCFd2Uw" general="_9IaAANjiEeKQqZMBCFd2Uw"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_emyegNjnEeKQqZMBCFd2Uw" name="layers" type="_9IaAANjiEeKQqZMBCFd2Uw" isOrdered="true" aggregation="composite" association="_em-rwNjnEeKQqZMBCFd2Uw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_emyegdjnEeKQqZMBCFd2Uw"/>
