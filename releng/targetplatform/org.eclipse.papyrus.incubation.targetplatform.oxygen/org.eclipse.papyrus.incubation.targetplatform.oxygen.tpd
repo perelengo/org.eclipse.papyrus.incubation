@@ -35,7 +35,6 @@ location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
  org.eclipse.xtext.ui.feature.group lazy
  org.eclipse.xtext.xbase.feature.group lazy
  org.eclipse.xtext.xbase.lib.feature.group lazy
- org.eclipse.xwt.feature.feature.group lazy
  org.eclipse.acceleo.feature.group lazy
 }
 
@@ -45,6 +44,10 @@ location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBu
 
 location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen-Developer/lastSuccessfulBuild/artifact/repository/" Papyrus-Developer-Oxygen {
 	org.eclipse.papyrus.junit.feature.feature.group lazy
+}
+
+location xwt "http://download.eclipse.org/xwt/updates" {
+	org.eclipse.xwt.feature.feature.group [1.3.1,2.0.0)
 }
 
 location emfQuery "http://download.eclipse.org/modeling/emf/query/updates/releases" {
@@ -76,4 +79,4 @@ location xpand "http://download.eclipse.org/modeling/m2t/xpand/updates/releases/
 location gmfTooling "http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.3.1a" {
 	org.eclipse.gmf.tooling.codegen.xtend2.feature.group lazy
  	org.eclipse.gmf.tooling.runtime.feature.group lazy
-} 
+}

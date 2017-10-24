@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Papyrus Oxygen" sequenceNumber="1501593087">
+<target name="Papyrus Incubation - Oxygen" sequenceNumber="1508853285">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.draw2d.feature.group" version="0.0.0"/>
@@ -36,7 +36,6 @@
       <unit id="org.eclipse.xtext.ui.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xtext.xbase.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xtext.xbase.lib.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.xwt.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.acceleo.feature.group" version="0.0.0"/>
       <repository id="eclipse-oxygen" location="file:/home/data/httpd/download.eclipse.org/releases/oxygen/"/>
     </location>
@@ -47,6 +46,10 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
       <repository id="Papyrus-Developer-Oxygen" location="https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen-Developer/lastSuccessfulBuild/artifact/repository/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.xwt.feature.feature.group" version="1.3.1.I20171018-2059"/>
+      <repository id="xwt" location="file:/home/data/httpd/download.eclipse.org/xwt/updates"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.query.sdk.feature.group" version="0.0.0"/>
