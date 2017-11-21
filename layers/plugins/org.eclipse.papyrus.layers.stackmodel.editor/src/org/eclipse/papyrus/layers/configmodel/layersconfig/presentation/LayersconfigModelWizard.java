@@ -85,8 +85,7 @@ public class LayersconfigModelWizard extends Wizard implements INewWizard {
 	 *
 	 * @generated
 	 */
-	public static final List<String> FILE_EXTENSIONS =
-			Collections.unmodifiableList(Arrays.asList(LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersconfigEditorFilenameExtensions").split("\\s*,\\s*")));
+	public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays.asList(LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersconfigEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -95,8 +94,7 @@ public class LayersconfigModelWizard extends Wizard implements INewWizard {
 	 *
 	 * @generated
 	 */
-	public static final String FORMATTED_FILE_EXTENSIONS =
-			LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersconfigEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+	public static final String FORMATTED_FILE_EXTENSIONS = LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersconfigEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -228,44 +226,41 @@ public class LayersconfigModelWizard extends Wizard implements INewWizard {
 
 			// Do the work within an operation.
 			//
-			WorkspaceModifyOperation operation =
-					new WorkspaceModifyOperation() {
-						@Override
-						protected void execute(IProgressMonitor progressMonitor) {
-							try {
-								// Create a resource set
-								//
-								ResourceSet resourceSet = new ResourceSetImpl();
+			WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
+				@Override
+				protected void execute(IProgressMonitor progressMonitor) {
+					try {
+						// Create a resource set
+						//
+						ResourceSet resourceSet = new ResourceSetImpl();
 
-								// Get the URI of the model file.
-								//
-								URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
+						// Get the URI of the model file.
+						//
+						URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
 
-								// Create a resource for this file.
-								//
-								Resource resource = resourceSet.createResource(fileURI);
+						// Create a resource for this file.
+						//
+						Resource resource = resourceSet.createResource(fileURI);
 
-								// Add the initial model object to the contents.
-								//
-								EObject rootObject = createInitialModel();
-								if (rootObject != null) {
-									resource.getContents().add(rootObject);
-								}
-
-								// Save the contents of the resource to the file system.
-								//
-								Map<Object, Object> options = new HashMap<Object, Object>();
-								options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
-								resource.save(options);
-							}
-							catch (Exception exception) {
-								LayersconfigEditorPlugin.INSTANCE.log(exception);
-							}
-							finally {
-								progressMonitor.done();
-							}
+						// Add the initial model object to the contents.
+						//
+						EObject rootObject = createInitialModel();
+						if (rootObject != null) {
+							resource.getContents().add(rootObject);
 						}
-					};
+
+						// Save the contents of the resource to the file system.
+						//
+						Map<Object, Object> options = new HashMap<Object, Object>();
+						options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
+						resource.save(options);
+					} catch (Exception exception) {
+						LayersconfigEditorPlugin.INSTANCE.log(exception);
+					} finally {
+						progressMonitor.done();
+					}
+				}
+			};
 
 			getContainer().run(false, false, operation);
 
@@ -276,21 +271,19 @@ public class LayersconfigModelWizard extends Wizard implements INewWizard {
 			final IWorkbenchPart activePart = page.getActivePart();
 			if (activePart instanceof ISetSelectionTarget) {
 				final ISelection targetSelection = new StructuredSelection(modelFile);
-				getShell().getDisplay().asyncExec
-						(new Runnable() {
-							@Override
-							public void run() {
-								((ISetSelectionTarget) activePart).selectReveal(targetSelection);
-							}
-						});
+				getShell().getDisplay().asyncExec(new Runnable() {
+					@Override
+					public void run() {
+						((ISetSelectionTarget) activePart).selectReveal(targetSelection);
+					}
+				});
 			}
 
 			// Open an editor on the new file.
 			//
 			try {
-				page.openEditor
-						(new FileEditorInput(modelFile),
-								workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
+				page.openEditor(new FileEditorInput(modelFile),
+						workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
 			} catch (PartInitException exception) {
 				MessageDialog.openError(workbenchWindow.getShell(), LayersconfigEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
@@ -372,7 +365,7 @@ public class LayersconfigModelWizard extends Wizard implements INewWizard {
 
 		/**
 		 * @generated
-		 *            <!-- begin-user-doc -->
+		 * 			<!-- begin-user-doc -->
 		 *            <!-- end-user-doc -->
 		 */
 		protected List<String> encodings;
@@ -477,13 +470,12 @@ public class LayersconfigModelWizard extends Wizard implements INewWizard {
 		 *
 		 * @generated
 		 */
-		protected ModifyListener validator =
-				new ModifyListener() {
-					@Override
-					public void modifyText(ModifyEvent e) {
-						setPageComplete(validatePage());
-					}
-				};
+		protected ModifyListener validator = new ModifyListener() {
+			@Override
+			public void modifyText(ModifyEvent e) {
+				setPageComplete(validatePage());
+			}
+		};
 
 		/**
 		 * <!-- begin-user-doc -->
@@ -508,8 +500,7 @@ public class LayersconfigModelWizard extends Wizard implements INewWizard {
 				if (initialObjectField.getItemCount() == 1) {
 					initialObjectField.clearSelection();
 					encodingField.setFocus();
-				}
-				else {
+				} else {
 					encodingField.clearSelection();
 					initialObjectField.setFocus();
 				}

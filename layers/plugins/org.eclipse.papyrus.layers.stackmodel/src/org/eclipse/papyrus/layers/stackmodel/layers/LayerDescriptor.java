@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerDescriptor#getPropertyRegistry <em>Property Registry</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerDescriptor#getPropertyRegistry <em>Property Registry</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerDescriptor()
  * @model
@@ -39,7 +39,6 @@ public interface LayerDescriptor extends EObject {
 	 * If the meaning of the '<em>Property Registry</em>' reference isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Property Registry</em>' reference.
 	 * @see #setPropertyRegistry(PropertyRegistry)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerDescriptor_PropertyRegistry()
@@ -52,9 +51,7 @@ public interface LayerDescriptor extends EObject {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerDescriptor#getPropertyRegistry <em>Property Registry</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Property Registry</em>' reference.
+	 * @param value the new value of the '<em>Property Registry</em>' reference.
 	 * @see #getPropertyRegistry()
 	 * @generated
 	 */

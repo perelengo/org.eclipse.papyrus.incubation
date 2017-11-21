@@ -38,7 +38,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class LayersStackItemProvider
@@ -53,7 +52,6 @@ public class LayersStackItemProvider
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayersStackItemProvider(AdapterFactory adapterFactory) {
@@ -64,7 +62,6 @@ public class LayersStackItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -84,100 +81,96 @@ public class LayersStackItemProvider
 	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayersStack_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayersStack_name_feature", "_UI_LayersStack_type"),
-						LayersPackage.Literals.LAYERS_STACK__NAME,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayersStack_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayersStack_name_feature", "_UI_LayersStack_type"),
+				 LayersPackage.Literals.LAYERS_STACK__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Description feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addDescriptionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayersStack_description_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayersStack_description_feature", "_UI_LayersStack_type"),
-						LayersPackage.Literals.LAYERS_STACK__DESCRIPTION,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayersStack_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayersStack_description_feature", "_UI_LayersStack_type"),
+				 LayersPackage.Literals.LAYERS_STACK__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Diagram feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addDiagramPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayersStack_diagram_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayersStack_diagram_feature", "_UI_LayersStack_type"),
-						LayersPackage.Literals.LAYERS_STACK__DIAGRAM,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayersStack_diagram_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayersStack_diagram_feature", "_UI_LayersStack_type"),
+				 LayersPackage.Literals.LAYERS_STACK__DIAGRAM,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the State feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addStatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayersStack_state_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayersStack_state_feature", "_UI_LayersStack_type"),
-						LayersPackage.Literals.LAYERS_STACK__STATE,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayersStack_state_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayersStack_state_feature", "_UI_LayersStack_type"),
+				 LayersPackage.Literals.LAYERS_STACK__STATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -192,7 +185,6 @@ public class LayersStackItemProvider
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -207,7 +199,6 @@ public class LayersStackItemProvider
 	 * This returns LayersStack.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -243,7 +234,6 @@ public class LayersStackItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -251,14 +241,14 @@ public class LayersStackItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LayersStack.class)) {
-		case LayersPackage.LAYERS_STACK__NAME:
-		case LayersPackage.LAYERS_STACK__DESCRIPTION:
-		case LayersPackage.LAYERS_STACK__STATE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case LayersPackage.LAYERS_STACK__LAYERS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case LayersPackage.LAYERS_STACK__NAME:
+			case LayersPackage.LAYERS_STACK__DESCRIPTION:
+			case LayersPackage.LAYERS_STACK__STATE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case LayersPackage.LAYERS_STACK__LAYERS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -268,7 +258,6 @@ public class LayersStackItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -276,41 +265,40 @@ public class LayersStackItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
-						LayersFactory.eINSTANCE.createTopLayerOperator()));
+				 LayersFactory.eINSTANCE.createTopLayerOperator()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
-						LayersFactory.eINSTANCE.createStackedLayerOperator()));
+				 LayersFactory.eINSTANCE.createStackedLayerOperator()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
-						LayersFactory.eINSTANCE.createCustomLayerOperator()));
+				 LayersFactory.eINSTANCE.createCustomLayerOperator()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
-						LayersFactory.eINSTANCE.createRegExpLayer()));
+				 LayersFactory.eINSTANCE.createRegExpLayer()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
-						LayersFactory.eINSTANCE.createLayer()));
+				 LayersFactory.eINSTANCE.createLayer()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
-						LayersFactory.eINSTANCE.createAllViewsDerivedLayer()));
+				 LayersFactory.eINSTANCE.createAllViewsDerivedLayer()));
 	}
 
 	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

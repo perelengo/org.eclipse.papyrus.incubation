@@ -24,13 +24,13 @@ import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getDescriptors <em>Descriptors</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getPropertyOperators <em>Property Operators</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getPropertyCollectionSize <em>Property Collection Size</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getDefaultOperator <em>Default Operator</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getDescriptors <em>Descriptors</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getPropertyOperators <em>Property Operators</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getPropertyCollectionSize <em>Property Collection Size</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getDefaultOperator <em>Default Operator</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperatorDescriptorRegistry()
  * @model
@@ -45,7 +45,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * If the meaning of the '<em>Descriptors</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Descriptors</em>' containment reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperatorDescriptorRegistry_Descriptors()
 	 * @model containment="true" transient="true" ordered="false"
@@ -61,7 +60,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * If the meaning of the '<em>Property Operators</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Property Operators</em>' containment reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperatorDescriptorRegistry_PropertyOperators()
 	 * @model containment="true" transient="true"
@@ -76,7 +74,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * If the meaning of the '<em>Property Collection Size</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Property Collection Size</em>' attribute.
 	 * @see #setPropertyCollectionSize(int)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperatorDescriptorRegistry_PropertyCollectionSize()
@@ -89,9 +86,7 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getPropertyCollectionSize <em>Property Collection Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Property Collection Size</em>' attribute.
+	 * @param value the new value of the '<em>Property Collection Size</em>' attribute.
 	 * @see #getPropertyCollectionSize()
 	 * @generated
 	 */
@@ -104,7 +99,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * If the meaning of the '<em>Default Operator</em>' reference isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Default Operator</em>' reference.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperatorDescriptorRegistry_DefaultOperator()
 	 * @model required="true" transient="true" changeable="false" ordered="false"
@@ -115,7 +109,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model descriptorRequired="true" descriptorOrdered="false"
 	 * @generated
 	 */
@@ -124,7 +117,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" nameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
@@ -133,7 +125,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model operatorRequired="true" operatorOrdered="false"
 	 * @generated
 	 */
@@ -142,7 +133,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" nameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
@@ -151,9 +141,7 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" propertyRequired="true" propertyOrdered="false" operatorNameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" operatorNameRequired="true"
-	 *        operatorNameOrdered="false" layerDescriptorNameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" layerDescriptorNameRequired="true" layerDescriptorNameOrdered="false"
+	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" propertyRequired="true" propertyOrdered="false" operatorNameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" operatorNameRequired="true" operatorNameOrdered="false" layerDescriptorNameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" layerDescriptorNameRequired="true" layerDescriptorNameOrdered="false"
 	 * @generated
 	 */
 	void attachOperatorToDescriptor(Property property, String operatorName, String layerDescriptorName) throws NotFoundException;
@@ -161,7 +149,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" layerOperatorIDDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" layerOperatorIDRequired="true" layerOperatorIDOrdered="false"
 	 * @generated
 	 */

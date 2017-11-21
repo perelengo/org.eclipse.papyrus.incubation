@@ -125,9 +125,7 @@ public class FolderItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((Folder) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_Folder_type") :
-				getString("_UI_Folder_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_Folder_type") : getString("_UI_Folder_type") + " " + label;
 	}
 
 	/**
@@ -162,35 +160,23 @@ public class FolderItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-				(createChildParameter
-				(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
-						LayersconfigFactory.eINSTANCE.createFolder()));
+		newChildDescriptors.add(createChildParameter(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
+				LayersconfigFactory.eINSTANCE.createFolder()));
 
-		newChildDescriptors.add
-				(createChildParameter
-				(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
-						LayersconfigFactory.eINSTANCE.createLayerOperatorConfig()));
+		newChildDescriptors.add(createChildParameter(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
+				LayersconfigFactory.eINSTANCE.createLayerOperatorConfig()));
 
-		newChildDescriptors.add
-				(createChildParameter
-				(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
-						LayersconfigFactory.eINSTANCE.createOperatorConfig()));
+		newChildDescriptors.add(createChildParameter(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
+				LayersconfigFactory.eINSTANCE.createOperatorConfig()));
 
-		newChildDescriptors.add
-				(createChildParameter
-				(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
-						LayersconfigFactory.eINSTANCE.createPropertyId()));
+		newChildDescriptors.add(createChildParameter(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
+				LayersconfigFactory.eINSTANCE.createPropertyId()));
 
-		newChildDescriptors.add
-				(createChildParameter
-				(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
-						LayersconfigFactory.eINSTANCE.createTypeConfig()));
+		newChildDescriptors.add(createChildParameter(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
+				LayersconfigFactory.eINSTANCE.createTypeConfig()));
 
-		newChildDescriptors.add
-				(createChildParameter
-				(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
-						LayersconfigFactory.eINSTANCE.createLayerOperatorMultipleBinding()));
+		newChildDescriptors.add(createChildParameter(LayersconfigPackage.Literals.FOLDER__FOLDER_ELEMENTS,
+				LayersconfigFactory.eINSTANCE.createLayerOperatorMultipleBinding()));
 	}
 
 }

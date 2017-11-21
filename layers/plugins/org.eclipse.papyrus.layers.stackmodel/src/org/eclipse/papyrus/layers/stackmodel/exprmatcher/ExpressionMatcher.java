@@ -205,8 +205,8 @@ public class ExpressionMatcher implements IValueChangedEventListener {
 					// "self.oclAsType(Shape).visible = true",
 					getExpression(),
 					NotationPackage.Literals.VIEW
-					// null
-					);
+			// null
+			);
 		} catch (ParserException e) {
 			// TODO Auto-generated catch block
 			condition = null;

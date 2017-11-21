@@ -23,8 +23,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.NullInstance;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Null Instance</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -32,7 +30,6 @@ public class NullInstanceImpl extends TypeInstanceImpl implements NullInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected NullInstanceImpl() {
@@ -42,7 +39,6 @@ public class NullInstanceImpl extends TypeInstanceImpl implements NullInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -53,7 +49,6 @@ public class NullInstanceImpl extends TypeInstanceImpl implements NullInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -66,14 +61,13 @@ public class NullInstanceImpl extends TypeInstanceImpl implements NullInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.NULL_INSTANCE___GET_INSTANCE:
-			return getInstance();
+			case LayersPackage.NULL_INSTANCE___GET_INSTANCE:
+				return getInstance();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

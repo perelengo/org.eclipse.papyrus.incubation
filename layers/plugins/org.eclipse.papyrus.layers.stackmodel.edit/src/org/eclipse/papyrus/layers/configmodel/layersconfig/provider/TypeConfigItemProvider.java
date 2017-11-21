@@ -90,9 +90,7 @@ public class TypeConfigItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((TypeConfig) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_TypeConfig_type") :
-				getString("_UI_TypeConfig_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_TypeConfig_type") : getString("_UI_TypeConfig_type") + " " + label;
 	}
 
 	/**

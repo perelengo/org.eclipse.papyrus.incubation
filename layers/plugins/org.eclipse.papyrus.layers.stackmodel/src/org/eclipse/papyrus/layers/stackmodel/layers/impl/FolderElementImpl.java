@@ -21,8 +21,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Folder Element</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -30,7 +28,6 @@ public abstract class FolderElementImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected FolderElementImpl() {
@@ -40,7 +37,6 @@ public abstract class FolderElementImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

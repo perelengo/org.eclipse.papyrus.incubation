@@ -1509,6 +1509,17 @@ The interface provide one method allowing to add a LayerExpression to the contai
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_qpEQ4HpGEeOlpfB_tZS-QA" name="layer" type="_9IaAANjiEeKQqZMBCFd2Uw"/>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_DEE3EM-FEeep-sEmK3jrig" name="CSSPropertySetter">
+      <generalization xmi:type="uml:Generalization" xmi:id="_FFptQM-FEeep-sEmK3jrig" general="_fyVlIO3vEeKwLp35IbAIig"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JqnGMM-FEeep-sEmK3jrig" name="CSSType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Lq474M-FEeep-sEmK3jrig" general="_EoL3oNhcEeKgkM6XJF9t4A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_dxmCkM-FEeep-sEmK3jrig" name="CSSInstance">
+      <generalization xmi:type="uml:Generalization" xmi:id="_iC0nMM-FEeep-sEmK3jrig" general="_AjTZ8Na8EeKPiuTfpuvqHA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jnqeEM-FEeep-sEmK3jrig" name="stylesheet" type="_x4gtgM-FEeep-sEmK3jrig" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_x4gtgM-FEeep-sEmK3jrig" name="Stylesheet"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_X07z8LcsEeK8_t7Rpq6ZJA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X2lZwLcsEeK8_t7Rpq6ZJA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
@@ -1551,4 +1562,5 @@ The interface provide one method allowing to add a LayerExpression to the contai
   <Ecore:EReference xmi:id="_1yMvsA2hEeOjX-JbGFEH7w" isTransient="true" base_Property="_rTr0UA2fEeOjX-JbGFEH7w"/>
   <Ecore:EAttribute xmi:id="_iczSMA2qEeOjX-JbGFEH7w" isTransient="true" base_Property="_RrX8YA2qEeOjX-JbGFEH7w"/>
   <Ecore:EAttribute xmi:id="_8zffIGQ7EeOlpfB_tZS-QA" isTransient="true" base_Property="_xcbgQGQ7EeOlpfB_tZS-QA"/>
+  <Ecore:EClass xmi:id="_bPJhsM-KEeetPZE5PnL6FA" instanceClassName="org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.StyleSheet" base_Interface="_x4gtgM-FEeep-sEmK3jrig" className="StyleSheet"/>
 </xmi:XMI>

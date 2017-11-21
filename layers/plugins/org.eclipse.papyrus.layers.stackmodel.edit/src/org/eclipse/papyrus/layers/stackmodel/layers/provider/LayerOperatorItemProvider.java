@@ -19,12 +19,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayerOperator;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
@@ -34,22 +29,14 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class LayerOperatorItemProvider
-		extends LayerExpressionItemProvider
-		implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+		extends LayerExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayerOperatorItemProvider(AdapterFactory adapterFactory) {
@@ -60,7 +47,6 @@ public class LayerOperatorItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -73,11 +59,11 @@ public class LayerOperatorItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -92,7 +78,6 @@ public class LayerOperatorItemProvider
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -107,15 +92,14 @@ public class LayerOperatorItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LayerOperator) object).getName();
+		String label = ((LayerOperator)object).getName();
 		return label == null || label.length() == 0 ?
-				getString("_UI_LayerOperator_type") :
-				getString("_UI_LayerOperator_type") + " " + label;
+			getString("_UI_LayerOperator_type") :
+			getString("_UI_LayerOperator_type") + " " + label;
 	}
 
 	/**
@@ -123,7 +107,6 @@ public class LayerOperatorItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -131,9 +114,9 @@ public class LayerOperatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LayerOperator.class)) {
-		case LayersPackage.LAYER_OPERATOR__LAYERS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case LayersPackage.LAYER_OPERATOR__LAYERS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -143,7 +126,6 @@ public class LayerOperatorItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -151,34 +133,34 @@ public class LayerOperatorItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
-						LayersFactory.eINSTANCE.createTopLayerOperator()));
+				 LayersFactory.eINSTANCE.createTopLayerOperator()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
-						LayersFactory.eINSTANCE.createStackedLayerOperator()));
+				 LayersFactory.eINSTANCE.createStackedLayerOperator()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
-						LayersFactory.eINSTANCE.createCustomLayerOperator()));
+				 LayersFactory.eINSTANCE.createCustomLayerOperator()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
-						LayersFactory.eINSTANCE.createRegExpLayer()));
+				 LayersFactory.eINSTANCE.createRegExpLayer()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
-						LayersFactory.eINSTANCE.createLayer()));
+				 LayersFactory.eINSTANCE.createLayer()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
-						LayersFactory.eINSTANCE.createAllViewsDerivedLayer()));
+				 LayersFactory.eINSTANCE.createAllViewsDerivedLayer()));
 	}
 
 }

@@ -82,19 +82,17 @@ public class OperatorBindingItemProvider
 	 * @generated
 	 */
 	protected void addOperatorPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_OperatorBinding_operator_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_OperatorBinding_operator_feature", "_UI_OperatorBinding_type"),
-						LayersconfigPackage.Literals.OPERATOR_BINDING__OPERATOR,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_OperatorBinding_operator_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_OperatorBinding_operator_feature", "_UI_OperatorBinding_type"),
+				LayersconfigPackage.Literals.OPERATOR_BINDING__OPERATOR,
+				true,
+				false,
+				true,
+				null,
+				null,
+				null));
 	}
 
 	/**
@@ -105,19 +103,17 @@ public class OperatorBindingItemProvider
 	 * @generated
 	 */
 	protected void addLayerOperatorConfigPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_OperatorBinding_layerOperatorConfig_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_OperatorBinding_layerOperatorConfig_feature", "_UI_OperatorBinding_type"),
-						LayersconfigPackage.Literals.OPERATOR_BINDING__LAYER_OPERATOR_CONFIG,
-						false,
-						false,
-						false,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_OperatorBinding_layerOperatorConfig_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_OperatorBinding_layerOperatorConfig_feature", "_UI_OperatorBinding_type"),
+				LayersconfigPackage.Literals.OPERATOR_BINDING__LAYER_OPERATOR_CONFIG,
+				false,
+				false,
+				false,
+				null,
+				null,
+				null));
 	}
 
 	/**
@@ -128,19 +124,17 @@ public class OperatorBindingItemProvider
 	 * @generated
 	 */
 	protected void addPropertyIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_OperatorBinding_propertyId_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_OperatorBinding_propertyId_feature", "_UI_OperatorBinding_type"),
-						LayersconfigPackage.Literals.OPERATOR_BINDING__PROPERTY_ID,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_OperatorBinding_propertyId_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_OperatorBinding_propertyId_feature", "_UI_OperatorBinding_type"),
+				LayersconfigPackage.Literals.OPERATOR_BINDING__PROPERTY_ID,
+				true,
+				false,
+				true,
+				null,
+				null,
+				null));
 	}
 
 	/**

@@ -31,7 +31,6 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.LayerApplicationFactory} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class LayerApplicationFactoryItemProvider
@@ -46,7 +45,6 @@ public class LayerApplicationFactoryItemProvider
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayerApplicationFactoryItemProvider(AdapterFactory adapterFactory) {
@@ -57,7 +55,6 @@ public class LayerApplicationFactoryItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -73,7 +70,6 @@ public class LayerApplicationFactoryItemProvider
 	 * This returns LayerApplicationFactory.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -85,7 +81,6 @@ public class LayerApplicationFactoryItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -98,7 +93,6 @@ public class LayerApplicationFactoryItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -112,7 +106,6 @@ public class LayerApplicationFactoryItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -124,7 +117,6 @@ public class LayerApplicationFactoryItemProvider
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

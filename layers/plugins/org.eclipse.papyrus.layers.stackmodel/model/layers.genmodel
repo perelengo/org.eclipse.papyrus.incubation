@@ -7,24 +7,28 @@
     usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation"
     operationReflection="true" importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
-    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
-    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
     <details key="DUPLICATE_FEATURES" value="DISCARD"/>
-    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
-    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
-    <details key="COMMENTS" value="PROCESS"/>
-    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
-    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
-    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
-    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
     <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
     <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
     <details key="REDEFINING_OPERATIONS" value="REPORT"/>
-    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
-    <details key="DERIVED_FEATURES" value="PROCESS"/>
-    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
     <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
-    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
   </genAnnotations>
   <foreignModel>layers.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Layers" basePackage="org.eclipse.papyrus.layers.stackmodel"
@@ -222,8 +226,8 @@
           ecoreFeature="ecore:EReference layers.ecore#//LayerApplicationFactory/application"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//PropertySetterRegistry">
-      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
-          createChild="true" ecoreFeature="ecore:EReference layers.ecore#//PropertySetterRegistry/propertySetters"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//PropertySetterRegistry/propertySetters"/>
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference layers.ecore#//PropertySetterRegistry/setterMap"/>
       <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
@@ -238,7 +242,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//PropertySetterRegistry/addPropertySetter/setter"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//PropertySetter">
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//PropertySetter">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//PropertySetter/property"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//PropertySetter/propertyName"/>
@@ -258,8 +262,8 @@
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference layers.ecore#//LayerOperatorDescriptorRegistry/propertyOperators"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//LayerOperatorDescriptorRegistry/propertyCollectionSize"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//LayerOperatorDescriptorRegistry/defaultOperator"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" notify="false"
+          createChild="false" ecoreFeature="ecore:EReference layers.ecore#//LayerOperatorDescriptorRegistry/defaultOperator"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//LayerOperatorDescriptorRegistry/addLayerOperatorDescriptor">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//LayerOperatorDescriptorRegistry/addLayerOperatorDescriptor/descriptor"/>
       </genOperations>
@@ -304,7 +308,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//PropertyOperator/getComputePropertyValueCommand/property"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//AbstractLayerOperator">
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//AbstractLayerOperator">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//AbstractLayerOperator/layerOperatorDescriptor"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//AbstractLayerOperator/layerOperatorDescriptorName"/>
@@ -449,8 +453,7 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//StackedLayerOperatorDescriptor"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CustomPropertyOperator">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CustomPropertyOperator/classname"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EAttribute layers.ecore#//CustomPropertyOperator/operatorInstance"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CustomPropertyOperator/operatorInstance"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CustomPropertyOperator/classBundleID"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//CustomPropertyOperator/resetOperatorInstance"/>
     </genClasses>
@@ -458,5 +461,12 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//OrStackedLayerOperatorDescriptor"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//IsAbstractUmlSetter"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//AllViewsDerivedLayer"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSPropertySetter"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSType"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSInstance">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//CSSInstance/stylesheet"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//StyleSheet"/>
   </genPackages>
 </genmodel:GenModel>

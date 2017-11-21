@@ -19,12 +19,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression;
@@ -34,23 +29,15 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class LayerExpressionItemProvider
 		extends
-		ApplicationDependantElementItemProvider
-		implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+		ApplicationDependantElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayerExpressionItemProvider(AdapterFactory adapterFactory) {
@@ -61,7 +48,6 @@ public class LayerExpressionItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -84,176 +70,168 @@ public class LayerExpressionItemProvider
 	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerExpression_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_name_feature", "_UI_LayerExpression_type"),
-						LayersPackage.Literals.LAYER_EXPRESSION__NAME,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerExpression_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_name_feature", "_UI_LayerExpression_type"),
+				 LayersPackage.Literals.LAYER_EXPRESSION__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Description feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addDescriptionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerExpression_description_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_description_feature", "_UI_LayerExpression_type"),
-						LayersPackage.Literals.LAYER_EXPRESSION__DESCRIPTION,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerExpression_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_description_feature", "_UI_LayerExpression_type"),
+				 LayersPackage.Literals.LAYER_EXPRESSION__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Is Layer Enabled Internal feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addIsLayerEnabledInternalPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerExpression_isLayerEnabledInternal_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_isLayerEnabledInternal_feature", "_UI_LayerExpression_type"),
-						LayersPackage.Literals.LAYER_EXPRESSION__IS_LAYER_ENABLED_INTERNAL,
-						false,
-						false,
-						false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerExpression_isLayerEnabledInternal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_isLayerEnabledInternal_feature", "_UI_LayerExpression_type"),
+				 LayersPackage.Literals.LAYER_EXPRESSION__IS_LAYER_ENABLED_INTERNAL,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Is Layer Enabled feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addIsLayerEnabledPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerExpression_isLayerEnabled_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_isLayerEnabled_feature", "_UI_LayerExpression_type"),
-						LayersPackage.Literals.LAYER_EXPRESSION__IS_LAYER_ENABLED,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerExpression_isLayerEnabled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_isLayerEnabled_feature", "_UI_LayerExpression_type"),
+				 LayersPackage.Literals.LAYER_EXPRESSION__IS_LAYER_ENABLED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Is Branch Enabled feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addIsBranchEnabledPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerExpression_isBranchEnabled_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_isBranchEnabled_feature", "_UI_LayerExpression_type"),
-						LayersPackage.Literals.LAYER_EXPRESSION__IS_BRANCH_ENABLED,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerExpression_isBranchEnabled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_isBranchEnabled_feature", "_UI_LayerExpression_type"),
+				 LayersPackage.Literals.LAYER_EXPRESSION__IS_BRANCH_ENABLED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Owning Layers Stack feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addOwningLayersStackPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerExpression_owningLayersStack_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_owningLayersStack_feature", "_UI_LayerExpression_type"),
-						LayersPackage.Literals.LAYER_EXPRESSION__OWNING_LAYERS_STACK,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerExpression_owningLayersStack_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_owningLayersStack_feature", "_UI_LayerExpression_type"),
+				 LayersPackage.Literals.LAYER_EXPRESSION__OWNING_LAYERS_STACK,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the State feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addStatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerExpression_state_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_state_feature", "_UI_LayerExpression_type"),
-						LayersPackage.Literals.LAYER_EXPRESSION__STATE,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerExpression_state_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerExpression_state_feature", "_UI_LayerExpression_type"),
+				 LayersPackage.Literals.LAYER_EXPRESSION__STATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LayerExpression) object).getName();
+		String label = ((LayerExpression)object).getName();
 		return label == null || label.length() == 0 ?
-				getString("_UI_LayerExpression_type") :
-				getString("_UI_LayerExpression_type") + " " + label;
+			getString("_UI_LayerExpression_type") :
+			getString("_UI_LayerExpression_type") + " " + label;
 	}
 
 	/**
@@ -261,7 +239,6 @@ public class LayerExpressionItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -269,14 +246,14 @@ public class LayerExpressionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LayerExpression.class)) {
-		case LayersPackage.LAYER_EXPRESSION__NAME:
-		case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
-		case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED_INTERNAL:
-		case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
-		case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
-		case LayersPackage.LAYER_EXPRESSION__STATE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case LayersPackage.LAYER_EXPRESSION__NAME:
+			case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
+			case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED_INTERNAL:
+			case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
+			case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
+			case LayersPackage.LAYER_EXPRESSION__STATE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -286,7 +263,6 @@ public class LayerExpressionItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

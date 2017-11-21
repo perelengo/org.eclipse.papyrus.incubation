@@ -20,8 +20,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.NullPropertySetter;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Null Property Setter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -40,7 +38,6 @@ public class NullPropertySetterImpl extends PropertySetterImpl implements NullPr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

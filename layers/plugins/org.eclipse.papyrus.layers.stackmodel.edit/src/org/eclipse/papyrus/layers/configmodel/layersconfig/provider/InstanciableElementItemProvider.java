@@ -85,19 +85,17 @@ public class InstanciableElementItemProvider
 	 * @generated
 	 */
 	protected void addClassnamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InstanciableElement_classname_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_classname_feature", "_UI_InstanciableElement_type"),
-						LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__CLASSNAME,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_InstanciableElement_classname_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_classname_feature", "_UI_InstanciableElement_type"),
+				LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__CLASSNAME,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -108,19 +106,17 @@ public class InstanciableElementItemProvider
 	 * @generated
 	 */
 	protected void addBundleIDPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InstanciableElement_bundleID_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_bundleID_feature", "_UI_InstanciableElement_type"),
-						LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__BUNDLE_ID,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_InstanciableElement_bundleID_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_bundleID_feature", "_UI_InstanciableElement_type"),
+				LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__BUNDLE_ID,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -131,19 +127,17 @@ public class InstanciableElementItemProvider
 	 * @generated
 	 */
 	protected void addDisplayNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InstanciableElement_displayName_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_displayName_feature", "_UI_InstanciableElement_type"),
-						LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__DISPLAY_NAME,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_InstanciableElement_displayName_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_displayName_feature", "_UI_InstanciableElement_type"),
+				LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__DISPLAY_NAME,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -154,19 +148,17 @@ public class InstanciableElementItemProvider
 	 * @generated
 	 */
 	protected void addIconPathPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InstanciableElement_iconPath_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_iconPath_feature", "_UI_InstanciableElement_type"),
-						LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__ICON_PATH,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_InstanciableElement_iconPath_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_iconPath_feature", "_UI_InstanciableElement_type"),
+				LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__ICON_PATH,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -177,19 +169,17 @@ public class InstanciableElementItemProvider
 	 * @generated
 	 */
 	protected void addClassnameKindPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InstanciableElement_classnameKind_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_classnameKind_feature", "_UI_InstanciableElement_type"),
-						LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__CLASSNAME_KIND,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_InstanciableElement_classnameKind_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_InstanciableElement_classnameKind_feature", "_UI_InstanciableElement_type"),
+				LayersconfigPackage.Literals.INSTANCIABLE_ELEMENT__CLASSNAME_KIND,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -214,9 +204,7 @@ public class InstanciableElementItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((InstanciableElement) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_InstanciableElement_type") :
-				getString("_UI_InstanciableElement_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_InstanciableElement_type") : getString("_UI_InstanciableElement_type") + " " + label;
 	}
 
 	/**

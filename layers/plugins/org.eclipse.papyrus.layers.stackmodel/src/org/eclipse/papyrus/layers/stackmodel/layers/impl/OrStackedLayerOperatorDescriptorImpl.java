@@ -20,8 +20,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.OrStackedLayerOperatorDescri
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Or Stacked Layer Operator Descriptor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -40,7 +38,6 @@ public class OrStackedLayerOperatorDescriptorImpl extends StackedLayerOperatorDe
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

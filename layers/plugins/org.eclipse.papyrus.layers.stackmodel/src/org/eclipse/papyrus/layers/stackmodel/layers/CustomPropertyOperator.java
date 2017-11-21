@@ -23,12 +23,12 @@ import org.eclipse.papyrus.layers.stackmodel.operators.CustomPropertyOperatorsIn
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getClassname <em>Classname</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getOperatorInstance <em>Operator Instance</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getClassBundleID <em>Class Bundle ID</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getClassname <em>Classname</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getOperatorInstance <em>Operator Instance</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getClassBundleID <em>Class Bundle ID</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getCustomPropertyOperator()
  * @model
@@ -42,7 +42,6 @@ public interface CustomPropertyOperator extends PropertyOperator {
 	 * If the meaning of the '<em>Classname</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Classname</em>' attribute.
 	 * @see #setClassname(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getCustomPropertyOperator_Classname()
@@ -55,9 +54,7 @@ public interface CustomPropertyOperator extends PropertyOperator {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getClassname <em>Classname</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Classname</em>' attribute.
+	 * @param value the new value of the '<em>Classname</em>' attribute.
 	 * @see #getClassname()
 	 * @generated
 	 */
@@ -70,7 +67,6 @@ public interface CustomPropertyOperator extends PropertyOperator {
 	 * If the meaning of the '<em>Operator Instance</em>' reference isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Operator Instance</em>' attribute.
 	 * @see #setOperatorInstance(CustomPropertyOperatorsInstance)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getCustomPropertyOperator_OperatorInstance()
@@ -83,9 +79,7 @@ public interface CustomPropertyOperator extends PropertyOperator {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getOperatorInstance <em>Operator Instance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Operator Instance</em>' attribute.
+	 * @param value the new value of the '<em>Operator Instance</em>' attribute.
 	 * @see #getOperatorInstance()
 	 * @generated
 	 */
@@ -98,7 +92,6 @@ public interface CustomPropertyOperator extends PropertyOperator {
 	 * If the meaning of the '<em>Class Bundle ID</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Class Bundle ID</em>' attribute.
 	 * @see #setClassBundleID(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getCustomPropertyOperator_ClassBundleID()
@@ -111,9 +104,7 @@ public interface CustomPropertyOperator extends PropertyOperator {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#getClassBundleID <em>Class Bundle ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Class Bundle ID</em>' attribute.
+	 * @param value the new value of the '<em>Class Bundle ID</em>' attribute.
 	 * @see #getClassBundleID()
 	 * @generated
 	 */
@@ -122,7 +113,6 @@ public interface CustomPropertyOperator extends PropertyOperator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException"
 	 * @generated
 	 */

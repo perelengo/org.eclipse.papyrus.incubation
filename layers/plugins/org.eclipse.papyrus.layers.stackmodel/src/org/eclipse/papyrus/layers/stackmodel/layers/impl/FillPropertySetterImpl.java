@@ -25,8 +25,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Fill Property Setter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -46,7 +44,6 @@ public class FillPropertySetterImpl extends PropertySetterImpl implements FillPr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -70,8 +67,7 @@ public class FillPropertySetterImpl extends PropertySetterImpl implements FillPr
 		if (view instanceof FillStyle) {
 			// Try directly (case of Shape ...)
 			style = (FillStyle) view;
-		}
-		else {
+		} else {
 			// Try as additionnal style
 			style = (FillStyle) view.getStyle(NotationPackage.eINSTANCE.getFillStyle());
 		}

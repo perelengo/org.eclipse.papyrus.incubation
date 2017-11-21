@@ -313,48 +313,45 @@ public class LayersconfigEditor
 	 *
 	 * @generated
 	 */
-	protected IPartListener partListener =
-			new IPartListener() {
-				@Override
-				public void partActivated(IWorkbenchPart p) {
-					if (p instanceof ContentOutline) {
-						if (((ContentOutline) p).getCurrentPage() == contentOutlinePage) {
-							getActionBarContributor().setActiveEditor(LayersconfigEditor.this);
+	protected IPartListener partListener = new IPartListener() {
+		@Override
+		public void partActivated(IWorkbenchPart p) {
+			if (p instanceof ContentOutline) {
+				if (((ContentOutline) p).getCurrentPage() == contentOutlinePage) {
+					getActionBarContributor().setActiveEditor(LayersconfigEditor.this);
 
-							setCurrentViewer(contentOutlineViewer);
-						}
-					}
-					else if (p instanceof PropertySheet) {
-						if (propertySheetPages.contains(((PropertySheet) p).getCurrentPage())) {
-							getActionBarContributor().setActiveEditor(LayersconfigEditor.this);
-							handleActivate();
-						}
-					}
-					else if (p == LayersconfigEditor.this) {
-						handleActivate();
-					}
+					setCurrentViewer(contentOutlineViewer);
 				}
+			} else if (p instanceof PropertySheet) {
+				if (propertySheetPages.contains(((PropertySheet) p).getCurrentPage())) {
+					getActionBarContributor().setActiveEditor(LayersconfigEditor.this);
+					handleActivate();
+				}
+			} else if (p == LayersconfigEditor.this) {
+				handleActivate();
+			}
+		}
 
-				@Override
-				public void partBroughtToTop(IWorkbenchPart p) {
-					// Ignore.
-				}
+		@Override
+		public void partBroughtToTop(IWorkbenchPart p) {
+			// Ignore.
+		}
 
-				@Override
-				public void partClosed(IWorkbenchPart p) {
-					// Ignore.
-				}
+		@Override
+		public void partClosed(IWorkbenchPart p) {
+			// Ignore.
+		}
 
-				@Override
-				public void partDeactivated(IWorkbenchPart p) {
-					// Ignore.
-				}
+		@Override
+		public void partDeactivated(IWorkbenchPart p) {
+			// Ignore.
+		}
 
-				@Override
-				public void partOpened(IWorkbenchPart p) {
-					// Ignore.
-				}
-			};
+		@Override
+		public void partOpened(IWorkbenchPart p) {
+			// Ignore.
+		}
+	};
 
 	/**
 	 * Resources that have been removed since last activation.
@@ -408,62 +405,57 @@ public class LayersconfigEditor
 	 *
 	 * @generated
 	 */
-	protected EContentAdapter problemIndicationAdapter =
-			new EContentAdapter() {
-				@Override
-				public void notifyChanged(Notification notification) {
-					if (notification.getNotifier() instanceof Resource) {
-						switch (notification.getFeatureID(Resource.class)) {
-						case Resource.RESOURCE__IS_LOADED:
-						case Resource.RESOURCE__ERRORS:
-						case Resource.RESOURCE__WARNINGS: {
-							Resource resource = (Resource) notification.getNotifier();
-							Diagnostic diagnostic = analyzeResourceProblems(resource, null);
-							if (diagnostic.getSeverity() != Diagnostic.OK) {
-								resourceToDiagnosticMap.put(resource, diagnostic);
-							}
-							else {
-								resourceToDiagnosticMap.remove(resource);
-							}
-
-							if (updateProblemIndication) {
-								getSite().getShell().getDisplay().asyncExec
-										(new Runnable() {
-											@Override
-											public void run() {
-												updateProblemIndication();
-											}
-										});
-							}
-							break;
-						}
-						}
+	protected EContentAdapter problemIndicationAdapter = new EContentAdapter() {
+		@Override
+		public void notifyChanged(Notification notification) {
+			if (notification.getNotifier() instanceof Resource) {
+				switch (notification.getFeatureID(Resource.class)) {
+				case Resource.RESOURCE__IS_LOADED:
+				case Resource.RESOURCE__ERRORS:
+				case Resource.RESOURCE__WARNINGS: {
+					Resource resource = (Resource) notification.getNotifier();
+					Diagnostic diagnostic = analyzeResourceProblems(resource, null);
+					if (diagnostic.getSeverity() != Diagnostic.OK) {
+						resourceToDiagnosticMap.put(resource, diagnostic);
+					} else {
+						resourceToDiagnosticMap.remove(resource);
 					}
-					else {
-						super.notifyChanged(notification);
-					}
-				}
 
-				@Override
-				protected void setTarget(Resource target) {
-					basicSetTarget(target);
-				}
-
-				@Override
-				protected void unsetTarget(Resource target) {
-					basicUnsetTarget(target);
-					resourceToDiagnosticMap.remove(target);
 					if (updateProblemIndication) {
-						getSite().getShell().getDisplay().asyncExec
-								(new Runnable() {
-									@Override
-									public void run() {
-										updateProblemIndication();
-									}
-								});
+						getSite().getShell().getDisplay().asyncExec(new Runnable() {
+							@Override
+							public void run() {
+								updateProblemIndication();
+							}
+						});
 					}
+					break;
 				}
-			};
+				}
+			} else {
+				super.notifyChanged(notification);
+			}
+		}
+
+		@Override
+		protected void setTarget(Resource target) {
+			basicSetTarget(target);
+		}
+
+		@Override
+		protected void unsetTarget(Resource target) {
+			basicUnsetTarget(target);
+			resourceToDiagnosticMap.remove(target);
+			if (updateProblemIndication) {
+				getSite().getShell().getDisplay().asyncExec(new Runnable() {
+					@Override
+					public void run() {
+						updateProblemIndication();
+					}
+				});
+			}
+		}
+	};
 
 	/**
 	 * This listens for workspace changes.
@@ -472,81 +464,76 @@ public class LayersconfigEditor
 	 *
 	 * @generated
 	 */
-	protected IResourceChangeListener resourceChangeListener =
-			new IResourceChangeListener() {
-				@Override
-				public void resourceChanged(IResourceChangeEvent event) {
-					IResourceDelta delta = event.getDelta();
-					try {
-						class ResourceDeltaVisitor implements IResourceDeltaVisitor {
-							protected ResourceSet resourceSet = editingDomain.getResourceSet();
-							protected Collection<Resource> changedResources = new ArrayList<Resource>();
-							protected Collection<Resource> removedResources = new ArrayList<Resource>();
+	protected IResourceChangeListener resourceChangeListener = new IResourceChangeListener() {
+		@Override
+		public void resourceChanged(IResourceChangeEvent event) {
+			IResourceDelta delta = event.getDelta();
+			try {
+				class ResourceDeltaVisitor implements IResourceDeltaVisitor {
+					protected ResourceSet resourceSet = editingDomain.getResourceSet();
+					protected Collection<Resource> changedResources = new ArrayList<Resource>();
+					protected Collection<Resource> removedResources = new ArrayList<Resource>();
 
-							@Override
-							public boolean visit(IResourceDelta delta) {
-								if (delta.getResource().getType() == IResource.FILE) {
-									if (delta.getKind() == IResourceDelta.REMOVED ||
-											delta.getKind() == IResourceDelta.CHANGED && delta.getFlags() != IResourceDelta.MARKERS) {
-										Resource resource = resourceSet.getResource(URI.createPlatformResourceURI(delta.getFullPath().toString(), true), false);
-										if (resource != null) {
-											if (delta.getKind() == IResourceDelta.REMOVED) {
-												removedResources.add(resource);
-											}
-											else if (!savedResources.remove(resource)) {
-												changedResources.add(resource);
-											}
-										}
+					@Override
+					public boolean visit(IResourceDelta delta) {
+						if (delta.getResource().getType() == IResource.FILE) {
+							if (delta.getKind() == IResourceDelta.REMOVED ||
+									delta.getKind() == IResourceDelta.CHANGED && delta.getFlags() != IResourceDelta.MARKERS) {
+								Resource resource = resourceSet.getResource(URI.createPlatformResourceURI(delta.getFullPath().toString(), true), false);
+								if (resource != null) {
+									if (delta.getKind() == IResourceDelta.REMOVED) {
+										removedResources.add(resource);
+									} else if (!savedResources.remove(resource)) {
+										changedResources.add(resource);
 									}
-									return false;
 								}
-
-								return true;
 							}
-
-							public Collection<Resource> getChangedResources() {
-								return changedResources;
-							}
-
-							public Collection<Resource> getRemovedResources() {
-								return removedResources;
-							}
+							return false;
 						}
 
-						final ResourceDeltaVisitor visitor = new ResourceDeltaVisitor();
-						delta.accept(visitor);
-
-						if (!visitor.getRemovedResources().isEmpty()) {
-							getSite().getShell().getDisplay().asyncExec
-									(new Runnable() {
-										@Override
-										public void run() {
-											removedResources.addAll(visitor.getRemovedResources());
-											if (!isDirty()) {
-												getSite().getPage().closeEditor(LayersconfigEditor.this, false);
-											}
-										}
-									});
-						}
-
-						if (!visitor.getChangedResources().isEmpty()) {
-							getSite().getShell().getDisplay().asyncExec
-									(new Runnable() {
-										@Override
-										public void run() {
-											changedResources.addAll(visitor.getChangedResources());
-											if (getSite().getPage().getActiveEditor() == LayersconfigEditor.this) {
-												handleActivate();
-											}
-										}
-									});
-						}
+						return true;
 					}
-					catch (CoreException exception) {
-						LayersconfigEditorPlugin.INSTANCE.log(exception);
+
+					public Collection<Resource> getChangedResources() {
+						return changedResources;
+					}
+
+					public Collection<Resource> getRemovedResources() {
+						return removedResources;
 					}
 				}
-			};
+
+				final ResourceDeltaVisitor visitor = new ResourceDeltaVisitor();
+				delta.accept(visitor);
+
+				if (!visitor.getRemovedResources().isEmpty()) {
+					getSite().getShell().getDisplay().asyncExec(new Runnable() {
+						@Override
+						public void run() {
+							removedResources.addAll(visitor.getRemovedResources());
+							if (!isDirty()) {
+								getSite().getPage().closeEditor(LayersconfigEditor.this, false);
+							}
+						}
+					});
+				}
+
+				if (!visitor.getChangedResources().isEmpty()) {
+					getSite().getShell().getDisplay().asyncExec(new Runnable() {
+						@Override
+						public void run() {
+							changedResources.addAll(visitor.getChangedResources());
+							if (getSite().getPage().getActiveEditor() == LayersconfigEditor.this) {
+								handleActivate();
+							}
+						}
+					});
+				}
+			} catch (CoreException exception) {
+				LayersconfigEditorPlugin.INSTANCE.log(exception);
+			}
+		}
+	};
 
 	/**
 	 * Handles activation of the editor or it's associated views.
@@ -569,14 +556,12 @@ public class LayersconfigEditor
 		if (!removedResources.isEmpty()) {
 			if (handleDirtyConflict()) {
 				getSite().getPage().closeEditor(LayersconfigEditor.this, false);
-			}
-			else {
+			} else {
 				removedResources.clear();
 				changedResources.clear();
 				savedResources.clear();
 			}
-		}
-		else if (!changedResources.isEmpty()) {
+		} else if (!changedResources.isEmpty()) {
 			changedResources.removeAll(savedResources);
 			handleChangedResources();
 			changedResources.clear();
@@ -630,13 +615,11 @@ public class LayersconfigEditor
 	 */
 	protected void updateProblemIndication() {
 		if (updateProblemIndication) {
-			BasicDiagnostic diagnostic =
-					new BasicDiagnostic
-					(Diagnostic.OK,
-							"org.eclipse.papyrus.layers.stackmodel.editor",
-							0,
-							null,
-							new Object[] { editingDomain.getResourceSet() });
+			BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
+					"org.eclipse.papyrus.layers.stackmodel.editor",
+					0,
+					null,
+					new Object[] { editingDomain.getResourceSet() });
 			for (Diagnostic childDiagnostic : resourceToDiagnosticMap.values()) {
 				if (childDiagnostic.getSeverity() != Diagnostic.OK) {
 					diagnostic.add(childDiagnostic);
@@ -649,8 +632,7 @@ public class LayersconfigEditor
 				if (diagnostic.getSeverity() != Diagnostic.OK) {
 					setActivePage(lastEditorPage);
 				}
-			}
-			else if (diagnostic.getSeverity() != Diagnostic.OK) {
+			} else if (diagnostic.getSeverity() != Diagnostic.OK) {
 				ProblemEditorPart problemEditorPart = new ProblemEditorPart();
 				problemEditorPart.setDiagnostic(diagnostic);
 				problemEditorPart.setMarkerHelper(markerHelper);
@@ -685,10 +667,9 @@ public class LayersconfigEditor
 	 * @generated
 	 */
 	protected boolean handleDirtyConflict() {
-		return MessageDialog.openQuestion
-				(getSite().getShell(),
-						getString("_UI_FileConflict_label"),
-						getString("_WARN_FileConflict"));
+		return MessageDialog.openQuestion(getSite().getShell(),
+				getString("_UI_FileConflict_label"),
+				getString("_WARN_FileConflict"));
 	}
 
 	/**
@@ -725,35 +706,32 @@ public class LayersconfigEditor
 
 		// Add a listener to set the most recent command's affected objects to be the selection of the viewer with focus.
 		//
-		commandStack.addCommandStackListener
-				(new CommandStackListener() {
+		commandStack.addCommandStackListener(new CommandStackListener() {
+			@Override
+			public void commandStackChanged(final EventObject event) {
+				getContainer().getDisplay().asyncExec(new Runnable() {
 					@Override
-					public void commandStackChanged(final EventObject event) {
-						getContainer().getDisplay().asyncExec
-								(new Runnable() {
-									@Override
-									public void run() {
-										firePropertyChange(IEditorPart.PROP_DIRTY);
+					public void run() {
+						firePropertyChange(IEditorPart.PROP_DIRTY);
 
-										// Try to select the affected objects.
-										//
-										Command mostRecentCommand = ((CommandStack) event.getSource()).getMostRecentCommand();
-										if (mostRecentCommand != null) {
-											setSelectionToViewer(mostRecentCommand.getAffectedObjects());
-										}
-										for (Iterator<PropertySheetPage> i = propertySheetPages.iterator(); i.hasNext();) {
-											PropertySheetPage propertySheetPage = i.next();
-											if (propertySheetPage.getControl().isDisposed()) {
-												i.remove();
-											}
-											else {
-												propertySheetPage.refresh();
-											}
-										}
-									}
-								});
+						// Try to select the affected objects.
+						//
+						Command mostRecentCommand = ((CommandStack) event.getSource()).getMostRecentCommand();
+						if (mostRecentCommand != null) {
+							setSelectionToViewer(mostRecentCommand.getAffectedObjects());
+						}
+						for (Iterator<PropertySheetPage> i = propertySheetPages.iterator(); i.hasNext();) {
+							PropertySheetPage propertySheetPage = i.next();
+							if (propertySheetPage.getControl().isDisposed()) {
+								i.remove();
+							} else {
+								propertySheetPage.refresh();
+							}
+						}
 					}
 				});
+			}
+		});
 
 		// Create the editing domain with a special command stack.
 		//
@@ -784,17 +762,16 @@ public class LayersconfigEditor
 		// Make sure it's okay.
 		//
 		if (theSelection != null && !theSelection.isEmpty()) {
-			Runnable runnable =
-					new Runnable() {
-						@Override
-						public void run() {
-							// Try to select the items in the current content viewer of the editor.
-							//
-							if (currentViewer != null) {
-								currentViewer.setSelection(new StructuredSelection(theSelection.toArray()), true);
-							}
-						}
-					};
+			Runnable runnable = new Runnable() {
+				@Override
+				public void run() {
+					// Try to select the items in the current content viewer of the editor.
+					//
+					if (currentViewer != null) {
+						currentViewer.setSelection(new StructuredSelection(theSelection.toArray()), true);
+					}
+				}
+			};
 			getSite().getShell().getDisplay().asyncExec(runnable);
 		}
 	}
@@ -908,15 +885,14 @@ public class LayersconfigEditor
 			if (selectionChangedListener == null) {
 				// Create the listener on demand.
 				//
-				selectionChangedListener =
-						new ISelectionChangedListener() {
-							// This just notifies those things that are affected by the section.
-							//
-							@Override
-							public void selectionChanged(SelectionChangedEvent selectionChangedEvent) {
-								setSelection(selectionChangedEvent.getSelection());
-							}
-						};
+				selectionChangedListener = new ISelectionChangedListener() {
+					// This just notifies those things that are affected by the section.
+					//
+					@Override
+					public void selectionChanged(SelectionChangedEvent selectionChangedEvent) {
+						setSelection(selectionChangedEvent.getSelection());
+					}
+				};
 			}
 
 			// Stop listening to the old one.
@@ -1012,24 +988,20 @@ public class LayersconfigEditor
 	 */
 	public Diagnostic analyzeResourceProblems(Resource resource, Exception exception) {
 		if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
-			BasicDiagnostic basicDiagnostic =
-					new BasicDiagnostic
-					(Diagnostic.ERROR,
-							"org.eclipse.papyrus.layers.stackmodel.editor",
-							0,
-							getString("_UI_CreateModelError_message", resource.getURI()),
-							new Object[] { exception == null ? (Object) resource : exception });
+			BasicDiagnostic basicDiagnostic = new BasicDiagnostic(Diagnostic.ERROR,
+					"org.eclipse.papyrus.layers.stackmodel.editor",
+					0,
+					getString("_UI_CreateModelError_message", resource.getURI()),
+					new Object[] { exception == null ? (Object) resource : exception });
 			basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
 			return basicDiagnostic;
-		}
-		else if (exception != null) {
+		} else if (exception != null) {
 			return new BasicDiagnostic(Diagnostic.ERROR,
 					"org.eclipse.papyrus.layers.stackmodel.editor",
 					0,
 					getString("_UI_CreateModelError_message", resource.getURI()),
 					new Object[] { exception });
-		}
-		else {
+		} else {
 			return Diagnostic.OK_INSTANCE;
 		}
 	}
@@ -1053,21 +1025,20 @@ public class LayersconfigEditor
 			// Create a page for the selection tree view.
 			//
 			{
-				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								Tree tree = new Tree(composite, SWT.MULTI);
-								TreeViewer newTreeViewer = new TreeViewer(tree);
-								return newTreeViewer;
-							}
+				ViewerPane viewerPane = new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
+					@Override
+					public Viewer createViewer(Composite composite) {
+						Tree tree = new Tree(composite, SWT.MULTI);
+						TreeViewer newTreeViewer = new TreeViewer(tree);
+						return newTreeViewer;
+					}
 
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					@Override
+					public void requestActivation() {
+						super.requestActivation();
+						setCurrentViewerPane(this);
+					}
+				};
 				viewerPane.createControl(getContainer());
 
 				selectionViewer = (TreeViewer) viewerPane.getViewer();
@@ -1088,21 +1059,20 @@ public class LayersconfigEditor
 			// Create a page for the parent tree view.
 			//
 			{
-				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								Tree tree = new Tree(composite, SWT.MULTI);
-								TreeViewer newTreeViewer = new TreeViewer(tree);
-								return newTreeViewer;
-							}
+				ViewerPane viewerPane = new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
+					@Override
+					public Viewer createViewer(Composite composite) {
+						Tree tree = new Tree(composite, SWT.MULTI);
+						TreeViewer newTreeViewer = new TreeViewer(tree);
+						return newTreeViewer;
+					}
 
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					@Override
+					public void requestActivation() {
+						super.requestActivation();
+						setCurrentViewerPane(this);
+					}
+				};
 				viewerPane.createControl(getContainer());
 
 				parentViewer = (TreeViewer) viewerPane.getViewer();
@@ -1118,19 +1088,18 @@ public class LayersconfigEditor
 			// This is the page for the list viewer
 			//
 			{
-				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								return new ListViewer(composite);
-							}
+				ViewerPane viewerPane = new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
+					@Override
+					public Viewer createViewer(Composite composite) {
+						return new ListViewer(composite);
+					}
 
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					@Override
+					public void requestActivation() {
+						super.requestActivation();
+						setCurrentViewerPane(this);
+					}
+				};
 				viewerPane.createControl(getContainer());
 				listViewer = (ListViewer) viewerPane.getViewer();
 				listViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
@@ -1144,19 +1113,18 @@ public class LayersconfigEditor
 			// This is the page for the tree viewer
 			//
 			{
-				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								return new TreeViewer(composite);
-							}
+				ViewerPane viewerPane = new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
+					@Override
+					public Viewer createViewer(Composite composite) {
+						return new TreeViewer(composite);
+					}
 
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					@Override
+					public void requestActivation() {
+						super.requestActivation();
+						setCurrentViewerPane(this);
+					}
+				};
 				viewerPane.createControl(getContainer());
 				treeViewer = (TreeViewer) viewerPane.getViewer();
 				treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
@@ -1172,19 +1140,18 @@ public class LayersconfigEditor
 			// This is the page for the table viewer.
 			//
 			{
-				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								return new TableViewer(composite);
-							}
+				ViewerPane viewerPane = new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
+					@Override
+					public Viewer createViewer(Composite composite) {
+						return new TableViewer(composite);
+					}
 
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					@Override
+					public void requestActivation() {
+						super.requestActivation();
+						setCurrentViewerPane(this);
+					}
+				};
 				viewerPane.createControl(getContainer());
 				tableViewer = (TableViewer) viewerPane.getViewer();
 
@@ -1216,19 +1183,18 @@ public class LayersconfigEditor
 			// This is the page for the table tree viewer.
 			//
 			{
-				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								return new TreeViewer(composite);
-							}
+				ViewerPane viewerPane = new ViewerPane(getSite().getPage(), LayersconfigEditor.this) {
+					@Override
+					public Viewer createViewer(Composite composite) {
+						return new TreeViewer(composite);
+					}
 
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					@Override
+					public void requestActivation() {
+						super.requestActivation();
+						setCurrentViewerPane(this);
+					}
+				};
 				viewerPane.createControl(getContainer());
 
 				treeViewerWithColumns = (TreeViewer) viewerPane.getViewer();
@@ -1257,39 +1223,36 @@ public class LayersconfigEditor
 				setPageText(pageIndex, getString("_UI_TreeWithColumnsPage_label"));
 			}
 
-			getSite().getShell().getDisplay().asyncExec
-					(new Runnable() {
-						@Override
-						public void run() {
-							setActivePage(0);
-						}
-					});
+			getSite().getShell().getDisplay().asyncExec(new Runnable() {
+				@Override
+				public void run() {
+					setActivePage(0);
+				}
+			});
 		}
 
 		// Ensures that this editor will only display the page's tab
 		// area if there are more than one page
 		//
-		getContainer().addControlListener
-				(new ControlAdapter() {
-					boolean guard = false;
+		getContainer().addControlListener(new ControlAdapter() {
+			boolean guard = false;
 
-					@Override
-					public void controlResized(ControlEvent event) {
-						if (!guard) {
-							guard = true;
-							hideTabs();
-							guard = false;
-						}
-					}
-				});
+			@Override
+			public void controlResized(ControlEvent event) {
+				if (!guard) {
+					guard = true;
+					hideTabs();
+					guard = false;
+				}
+			}
+		});
 
-		getSite().getShell().getDisplay().asyncExec
-				(new Runnable() {
-					@Override
-					public void run() {
-						updateProblemIndication();
-					}
-				});
+		getSite().getShell().getDisplay().asyncExec(new Runnable() {
+			@Override
+			public void run() {
+				updateProblemIndication();
+			}
+		});
 	}
 
 	/**
@@ -1358,14 +1321,11 @@ public class LayersconfigEditor
 	public Object getAdapter(Class key) {
 		if (key.equals(IContentOutlinePage.class)) {
 			return showOutlineView() ? getContentOutlinePage() : null;
-		}
-		else if (key.equals(IPropertySheetPage.class)) {
+		} else if (key.equals(IPropertySheetPage.class)) {
 			return getPropertySheetPage();
-		}
-		else if (key.equals(IGotoMarker.class)) {
+		} else if (key.equals(IGotoMarker.class)) {
 			return this;
-		}
-		else {
+		} else {
 			return super.getAdapter(key);
 		}
 	}
@@ -1422,15 +1382,14 @@ public class LayersconfigEditor
 
 			// Listen to selection so that we can handle it is a special way.
 			//
-			contentOutlinePage.addSelectionChangedListener
-					(new ISelectionChangedListener() {
-						// This ensures that we handle selections correctly.
-						//
-						@Override
-						public void selectionChanged(SelectionChangedEvent event) {
-							handleContentOutlineSelection(event.getSelection());
-						}
-					});
+			contentOutlinePage.addSelectionChangedListener(new ISelectionChangedListener() {
+				// This ensures that we handle selections correctly.
+				//
+				@Override
+				public void selectionChanged(SelectionChangedEvent event) {
+					handleContentOutlineSelection(event.getSelection());
+				}
+			});
 		}
 
 		return contentOutlinePage;
@@ -1444,20 +1403,19 @@ public class LayersconfigEditor
 	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
-		PropertySheetPage propertySheetPage =
-				new ExtendedPropertySheetPage(editingDomain) {
-					@Override
-					public void setSelectionToViewer(List<?> selection) {
-						LayersconfigEditor.this.setSelectionToViewer(selection);
-						LayersconfigEditor.this.setFocus();
-					}
+		PropertySheetPage propertySheetPage = new ExtendedPropertySheetPage(editingDomain) {
+			@Override
+			public void setSelectionToViewer(List<?> selection) {
+				LayersconfigEditor.this.setSelectionToViewer(selection);
+				LayersconfigEditor.this.setFocus();
+			}
 
-					@Override
-					public void setActionBars(IActionBars actionBars) {
-						super.setActionBars(actionBars);
-						getActionBarContributor().shareGlobalActions(this, actionBars);
-					}
-				};
+			@Override
+			public void setActionBars(IActionBars actionBars) {
+				super.setActionBars(actionBars);
+				getActionBarContributor().shareGlobalActions(this, actionBars);
+			}
+		};
 		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
 		propertySheetPages.add(propertySheetPage);
 
@@ -1491,8 +1449,7 @@ public class LayersconfigEditor
 					// Set the selection to the widget.
 					//
 					selectionViewer.setSelection(new StructuredSelection(selectionList));
-				}
-				else {
+				} else {
 					// Set the input to the widget.
 					//
 					if (currentViewerPane.getViewer().getInput() != selectedElement) {
@@ -1533,32 +1490,30 @@ public class LayersconfigEditor
 
 		// Do the work within an operation because this is a long running activity that modifies the workbench.
 		//
-		WorkspaceModifyOperation operation =
-				new WorkspaceModifyOperation() {
-					// This is the method that gets invoked when the operation runs.
-					//
-					@Override
-					public void execute(IProgressMonitor monitor) {
-						// Save the resources to the file system.
-						//
-						boolean first = true;
-						for (Resource resource : editingDomain.getResourceSet().getResources()) {
-							if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
-								try {
-									long timeStamp = resource.getTimeStamp();
-									resource.save(saveOptions);
-									if (resource.getTimeStamp() != timeStamp) {
-										savedResources.add(resource);
-									}
-								}
-								catch (Exception exception) {
-									resourceToDiagnosticMap.put(resource, analyzeResourceProblems(resource, exception));
-								}
-								first = false;
+		WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
+			// This is the method that gets invoked when the operation runs.
+			//
+			@Override
+			public void execute(IProgressMonitor monitor) {
+				// Save the resources to the file system.
+				//
+				boolean first = true;
+				for (Resource resource : editingDomain.getResourceSet().getResources()) {
+					if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
+						try {
+							long timeStamp = resource.getTimeStamp();
+							resource.save(saveOptions);
+							if (resource.getTimeStamp() != timeStamp) {
+								savedResources.add(resource);
 							}
+						} catch (Exception exception) {
+							resourceToDiagnosticMap.put(resource, analyzeResourceProblems(resource, exception));
 						}
+						first = false;
 					}
-				};
+				}
+			}
+		};
 
 		updateProblemIndication = false;
 		try {
@@ -1643,10 +1598,7 @@ public class LayersconfigEditor
 		(editingDomain.getResourceSet().getResources().get(0)).setURI(uri);
 		setInputWithNotify(editorInput);
 		setPartName(editorInput.getName());
-		IProgressMonitor progressMonitor =
-				getActionBars().getStatusLineManager() != null ?
-						getActionBars().getStatusLineManager().getProgressMonitor() :
-						new NullProgressMonitor();
+		IProgressMonitor progressMonitor = getActionBars().getStatusLineManager() != null ? getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
 		doSave(progressMonitor);
 	}
 
@@ -1691,8 +1643,7 @@ public class LayersconfigEditor
 	public void setFocus() {
 		if (currentViewerPane != null) {
 			currentViewerPane.setFocus();
-		}
-		else {
+		} else {
 			getControl(getActivePage()).setFocus();
 		}
 	}
@@ -1758,8 +1709,7 @@ public class LayersconfigEditor
 	 * @generated
 	 */
 	public void setStatusLineManager(ISelection selection) {
-		IStatusLineManager statusLineManager = currentViewer != null && currentViewer == contentOutlineViewer ?
-				contentOutlineStatusLineManager : getActionBars().getStatusLineManager();
+		IStatusLineManager statusLineManager = currentViewer != null && currentViewer == contentOutlineViewer ? contentOutlineStatusLineManager : getActionBars().getStatusLineManager();
 
 		if (statusLineManager != null) {
 			if (selection instanceof IStructuredSelection) {
@@ -1779,8 +1729,7 @@ public class LayersconfigEditor
 					break;
 				}
 				}
-			}
-			else {
+			} else {
 				statusLineManager.setMessage("");
 			}
 		}

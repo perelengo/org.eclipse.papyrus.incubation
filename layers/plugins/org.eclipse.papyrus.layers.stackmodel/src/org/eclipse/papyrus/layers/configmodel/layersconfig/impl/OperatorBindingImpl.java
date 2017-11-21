@@ -247,8 +247,7 @@ public class OperatorBindingImpl extends MinimalEObjectImpl.Container implements
 			if (msgs != null) {
 				msgs.dispatch();
 			}
-		}
-		else if (eNotificationRequired()) {
+		} else if (eNotificationRequired()) {
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersconfigPackage.OPERATOR_BINDING__OWNER, newOwner, newOwner));
 		}
 	}

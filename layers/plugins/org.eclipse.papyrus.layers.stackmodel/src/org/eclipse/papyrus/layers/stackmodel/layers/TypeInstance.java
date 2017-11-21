@@ -30,7 +30,6 @@ public interface TypeInstance extends EObject, ComputePropertyValueCommand {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model valueDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
@@ -39,7 +38,6 @@ public interface TypeInstance extends EObject, ComputePropertyValueCommand {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */

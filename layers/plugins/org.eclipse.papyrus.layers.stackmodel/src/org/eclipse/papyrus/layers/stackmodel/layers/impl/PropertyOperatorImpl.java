@@ -30,10 +30,10 @@ import org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.PropertyOperatorImpl#getName <em>Name</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.PropertyOperatorImpl#getName <em>Name</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -42,7 +42,6 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -53,7 +52,6 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -63,7 +61,6 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected PropertyOperatorImpl() {
@@ -73,7 +70,6 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -84,7 +80,6 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -95,22 +90,19 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.PROPERTY_OPERATOR__NAME, oldName, name));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -123,14 +115,13 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_OPERATOR__NAME:
-			return getName();
+			case LayersPackage.PROPERTY_OPERATOR__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,15 +129,14 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_OPERATOR__NAME:
-			setName((String) newValue);
-			return;
+			case LayersPackage.PROPERTY_OPERATOR__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -154,15 +144,14 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_OPERATOR__NAME:
-			setName(NAME_EDEFAULT);
-			return;
+			case LayersPackage.PROPERTY_OPERATOR__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -170,14 +159,13 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_OPERATOR__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case LayersPackage.PROPERTY_OPERATOR__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -185,19 +173,19 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST:
-			try {
-				return getComputePropertyValueCommand((EList<ComputePropertyValueCommand>) arguments.get(0));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
+			case LayersPackage.PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST:
+				try {
+					return getComputePropertyValueCommand((EList<ComputePropertyValueCommand>)arguments.get(0));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -205,14 +193,11 @@ public class PropertyOperatorImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
-			return super.toString();
-		}
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");

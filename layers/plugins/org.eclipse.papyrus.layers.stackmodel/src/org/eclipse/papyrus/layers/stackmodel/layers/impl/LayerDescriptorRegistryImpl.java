@@ -31,10 +31,10 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.LayerDescriptorRegistryImpl#getLayerDescriptors <em>Layer Descriptors</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.LayerDescriptorRegistryImpl#getLayerDescriptors <em>Layer Descriptors</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -43,7 +43,6 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	 * The cached value of the '{@link #getLayerDescriptors() <em>Layer Descriptors</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getLayerDescriptors()
 	 * @generated
 	 * @ordered
@@ -53,7 +52,6 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected LayerDescriptorRegistryImpl() {
@@ -63,7 +61,6 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -74,7 +71,6 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -88,14 +84,13 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
-			return ((InternalEList<?>) getLayerDescriptors()).basicRemove(otherEnd, msgs);
+			case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
+				return ((InternalEList<?>)getLayerDescriptors()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -103,14 +98,13 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
-			return getLayerDescriptors();
+			case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
+				return getLayerDescriptors();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,17 +112,16 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
-			getLayerDescriptors().clear();
-			getLayerDescriptors().addAll((Collection<? extends LayerDescriptor>) newValue);
-			return;
+			case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
+				getLayerDescriptors().clear();
+				getLayerDescriptors().addAll((Collection<? extends LayerDescriptor>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -136,15 +129,14 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
-			getLayerDescriptors().clear();
-			return;
+			case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
+				getLayerDescriptors().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -152,14 +144,13 @@ public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
-			return layerDescriptors != null && !layerDescriptors.isEmpty();
+			case LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS:
+				return layerDescriptors != null && !layerDescriptors.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

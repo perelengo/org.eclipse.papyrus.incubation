@@ -51,7 +51,7 @@ public final class LayersconfigEditorPlugin extends EMFPlugin {
 	 */
 	public LayersconfigEditorPlugin() {
 		super(new ResourceLocator[] {
-				});
+		});
 	}
 
 	/**

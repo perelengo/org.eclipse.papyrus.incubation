@@ -206,8 +206,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 				// Do it if the cmd is not null
 				if (commands != null && commands.get(i) != null) {
 					setter.setValue(views.get(i), commands.get(i).getCmdValue());
-				}
-				else {
+				} else {
 					log.info(this.getClass().getSimpleName() + "ERROR - a cmd is null " + commands);
 				}
 			}

@@ -25,8 +25,6 @@ import org.eclipse.uml2.uml.Classifier;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>is Abstract Uml Setter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -46,7 +44,6 @@ public class IsAbstractUmlSetterImpl extends PropertySetterImpl implements IsAbs
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

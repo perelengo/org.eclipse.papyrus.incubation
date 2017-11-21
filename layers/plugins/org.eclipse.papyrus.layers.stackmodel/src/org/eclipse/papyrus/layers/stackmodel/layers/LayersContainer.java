@@ -23,7 +23,6 @@ public interface LayersContainer extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model layerRequired="true" layerOrdered="false"
 	 * @generated
 	 */

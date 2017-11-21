@@ -22,10 +22,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerDescriptorRegistry#getLayerDescriptors <em>Layer Descriptors</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerDescriptorRegistry#getLayerDescriptors <em>Layer Descriptors</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerDescriptorRegistry()
  * @model
@@ -40,7 +40,6 @@ public interface LayerDescriptorRegistry extends EObject {
 	 * If the meaning of the '<em>Layer Descriptors</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Layer Descriptors</em>' containment reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerDescriptorRegistry_LayerDescriptors()
 	 * @model containment="true" ordered="false"

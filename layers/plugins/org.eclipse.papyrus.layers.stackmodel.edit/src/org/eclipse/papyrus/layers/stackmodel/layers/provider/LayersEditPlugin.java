@@ -21,7 +21,6 @@ import org.eclipse.gmf.runtime.notation.NotationEditPlugin;
  * This is the central singleton for the Layers edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public final class LayersEditPlugin extends EMFPlugin {
@@ -29,7 +28,6 @@ public final class LayersEditPlugin extends EMFPlugin {
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public static final LayersEditPlugin INSTANCE = new LayersEditPlugin();
@@ -38,7 +36,6 @@ public final class LayersEditPlugin extends EMFPlugin {
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	private static Implementation plugin;
@@ -47,21 +44,20 @@ public final class LayersEditPlugin extends EMFPlugin {
 	 * Create the instance.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayersEditPlugin() {
-		super(new ResourceLocator[] {
-				EcoreEditPlugin.INSTANCE,
-				NotationEditPlugin.INSTANCE,
-		});
+		super
+		  (new ResourceLocator [] {
+		     EcoreEditPlugin.INSTANCE,
+		     NotationEditPlugin.INSTANCE,
+		   });
 	}
 
 	/**
 	 * Returns the singleton instance of the Eclipse plugin.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the singleton instance.
 	 * @generated
 	 */
@@ -74,7 +70,6 @@ public final class LayersEditPlugin extends EMFPlugin {
 	 * Returns the singleton instance of the Eclipse plugin.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the singleton instance.
 	 * @generated
 	 */
@@ -86,7 +81,6 @@ public final class LayersEditPlugin extends EMFPlugin {
 	 * The actual implementation of the Eclipse <b>Plugin</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public static class Implementation extends EclipsePlugin {
@@ -94,7 +88,6 @@ public final class LayersEditPlugin extends EMFPlugin {
 		 * Creates an instance.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 *
 		 * @generated
 		 */
 		public Implementation() {

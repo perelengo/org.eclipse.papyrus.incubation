@@ -23,11 +23,11 @@ import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#getPropertyOperators <em>Property Operators</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#getName <em>Name</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#getPropertyOperators <em>Property Operators</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#getName <em>Name</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperatorDescriptor()
  * @model
@@ -42,7 +42,6 @@ public interface LayerOperatorDescriptor extends EObject {
 	 * If the meaning of the '<em>Property Operators</em>' reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Property Operators</em>' reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperatorDescriptor_PropertyOperators()
 	 * @model transient="true"
@@ -57,7 +56,6 @@ public interface LayerOperatorDescriptor extends EObject {
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperatorDescriptor_Name()
@@ -70,9 +68,7 @@ public interface LayerOperatorDescriptor extends EObject {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -81,7 +77,6 @@ public interface LayerOperatorDescriptor extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */
@@ -90,7 +85,6 @@ public interface LayerOperatorDescriptor extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model propertyRequired="true" propertyOrdered="false" operatorRequired="true" operatorOrdered="false"
 	 * @generated
 	 */
@@ -99,7 +93,6 @@ public interface LayerOperatorDescriptor extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -108,7 +101,6 @@ public interface LayerOperatorDescriptor extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model sizeDataType="org.eclipse.papyrus.layers.stackmodel.layers.int" sizeRequired="true" sizeOrdered="false" defaultPropertyOperatorRequired="true" defaultPropertyOperatorOrdered="false"
 	 * @generated
 	 */

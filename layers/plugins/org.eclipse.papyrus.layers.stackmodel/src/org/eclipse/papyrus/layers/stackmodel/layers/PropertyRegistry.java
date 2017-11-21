@@ -23,12 +23,12 @@ import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getProperties <em>Properties</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getTypeRegistry <em>Type Registry</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getPropertiesCount <em>Properties Count</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getTypeRegistry <em>Type Registry</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getPropertiesCount <em>Properties Count</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getPropertyRegistry()
  * @model
@@ -43,7 +43,6 @@ public interface PropertyRegistry extends EObject {
 	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Properties</em>' containment reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getPropertyRegistry_Properties()
 	 * @model containment="true"
@@ -58,7 +57,6 @@ public interface PropertyRegistry extends EObject {
 	 * If the meaning of the '<em>Type Registry</em>' containment reference isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Type Registry</em>' containment reference.
 	 * @see #setTypeRegistry(TypeRegistry)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getPropertyRegistry_TypeRegistry()
@@ -71,9 +69,7 @@ public interface PropertyRegistry extends EObject {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getTypeRegistry <em>Type Registry</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Type Registry</em>' containment reference.
+	 * @param value the new value of the '<em>Type Registry</em>' containment reference.
 	 * @see #getTypeRegistry()
 	 * @generated
 	 */
@@ -86,7 +82,6 @@ public interface PropertyRegistry extends EObject {
 	 * If the meaning of the '<em>Properties Count</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Properties Count</em>' attribute.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getPropertyRegistry_PropertiesCount()
 	 * @model dataType="org.eclipse.papyrus.layers.stackmodel.layers.int" required="true" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
@@ -97,9 +92,7 @@ public interface PropertyRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @model dataType="org.eclipse.papyrus.layers.stackmodel.layers.int" required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" propertyNameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String"
-	 *        propertyNameRequired="true" propertyNameOrdered="false"
+	 * @model dataType="org.eclipse.papyrus.layers.stackmodel.layers.int" required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" propertyNameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" propertyNameRequired="true" propertyNameOrdered="false"
 	 * @generated
 	 */
 	int getPropertyIndex(String propertyName) throws NotFoundException;
@@ -107,7 +100,6 @@ public interface PropertyRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" propertyNameDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" propertyNameRequired="true" propertyNameOrdered="false"
 	 * @generated
 	 */
@@ -116,7 +108,6 @@ public interface PropertyRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */

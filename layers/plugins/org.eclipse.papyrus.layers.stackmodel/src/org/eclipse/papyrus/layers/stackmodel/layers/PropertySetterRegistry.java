@@ -24,12 +24,12 @@ import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getPropertySetters <em>Property Setters</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getSetterMap <em>Setter Map</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getApplication <em>Application</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getPropertySetters <em>Property Setters</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getSetterMap <em>Setter Map</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getApplication <em>Application</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getPropertySetterRegistry()
  * @model
@@ -44,7 +44,6 @@ public interface PropertySetterRegistry extends EObject {
 	 * If the meaning of the '<em>Property Setters</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Property Setters</em>' reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getPropertySetterRegistry_PropertySetters()
 	 * @model
@@ -61,10 +60,9 @@ public interface PropertySetterRegistry extends EObject {
 	 * If the meaning of the '<em>Setter Map</em>' map isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Setter Map</em>' map.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getPropertySetterRegistry_SetterMap()
-	 * @model mapType="org.eclipse.papyrus.layers.stackmodel.layers.StringToPropertySetter<org.eclipse.papyrus.layers.stackmodel.layers.String, org.eclipse.papyrus.layers.stackmodel.layers.PropertySetter>" ordered="false"
+	 * @model mapType="org.eclipse.papyrus.layers.stackmodel.layers.StringToPropertySetter&lt;org.eclipse.papyrus.layers.stackmodel.layers.String, org.eclipse.papyrus.layers.stackmodel.layers.PropertySetter&gt;" ordered="false"
 	 * @generated
 	 */
 	EMap<String, PropertySetter> getSetterMap();
@@ -77,7 +75,6 @@ public interface PropertySetterRegistry extends EObject {
 	 * If the meaning of the '<em>Application</em>' container reference isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Application</em>' container reference.
 	 * @see #setApplication(LayersStackApplication)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getPropertySetterRegistry_Application()
@@ -91,9 +88,7 @@ public interface PropertySetterRegistry extends EObject {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getApplication <em>Application</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Application</em>' container reference.
+	 * @param value the new value of the '<em>Application</em>' container reference.
 	 * @see #getApplication()
 	 * @generated
 	 */
@@ -102,7 +97,6 @@ public interface PropertySetterRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */
@@ -111,7 +105,6 @@ public interface PropertySetterRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.NotFoundException" propertyDataType="org.eclipse.papyrus.layers.stackmodel.layers.String" propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */
@@ -120,7 +113,6 @@ public interface PropertySetterRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model setterRequired="true" setterOrdered="false"
 	 * @generated
 	 */

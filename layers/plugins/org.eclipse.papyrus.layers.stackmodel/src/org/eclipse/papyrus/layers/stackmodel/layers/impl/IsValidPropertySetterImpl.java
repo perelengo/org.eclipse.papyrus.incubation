@@ -22,8 +22,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Is Valid Property Setter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,6 @@ public class IsValidPropertySetterImpl extends PropertySetterImpl implements IsV
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

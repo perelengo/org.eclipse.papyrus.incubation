@@ -38,7 +38,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * This is the item provider adapter for a {@link java.util.Map.Entry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class StringToPropertySetterItemProvider
@@ -53,7 +52,6 @@ public class StringToPropertySetterItemProvider
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public StringToPropertySetterItemProvider(AdapterFactory adapterFactory) {
@@ -64,7 +62,6 @@ public class StringToPropertySetterItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -81,31 +78,30 @@ public class StringToPropertySetterItemProvider
 	 * This adds a property descriptor for the Key feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addKeyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_StringToPropertySetter_key_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_StringToPropertySetter_key_feature", "_UI_StringToPropertySetter_type"),
-						LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__KEY,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_StringToPropertySetter_key_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_StringToPropertySetter_key_feature", "_UI_StringToPropertySetter_type"),
+				 LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__KEY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -120,7 +116,6 @@ public class StringToPropertySetterItemProvider
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -135,7 +130,6 @@ public class StringToPropertySetterItemProvider
 	 * This returns StringToPropertySetter.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -147,12 +141,11 @@ public class StringToPropertySetterItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		Map.Entry<?, ?> stringToPropertySetter = (Map.Entry<?, ?>) object;
+		Map.Entry<?, ?> stringToPropertySetter = (Map.Entry<?, ?>)object;
 		return "" + stringToPropertySetter.getKey() + " -> " + stringToPropertySetter.getValue();
 	}
 
@@ -161,7 +154,6 @@ public class StringToPropertySetterItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -169,12 +161,12 @@ public class StringToPropertySetterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Map.Entry.class)) {
-		case LayersPackage.STRING_TO_PROPERTY_SETTER__KEY:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case LayersPackage.STRING_TO_PROPERTY_SETTER__VALUE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case LayersPackage.STRING_TO_PROPERTY_SETTER__KEY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case LayersPackage.STRING_TO_PROPERTY_SETTER__VALUE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -184,7 +176,6 @@ public class StringToPropertySetterItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -192,46 +183,50 @@ public class StringToPropertySetterItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
-						LayersFactory.eINSTANCE.createFillPropertySetter()));
+				 LayersFactory.eINSTANCE.createFillPropertySetter()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
-						LayersFactory.eINSTANCE.createIsValidPropertySetter()));
+				 LayersFactory.eINSTANCE.createIsValidPropertySetter()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
-						LayersFactory.eINSTANCE.createNullPropertySetter()));
+				 LayersFactory.eINSTANCE.createNullPropertySetter()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
-						LayersFactory.eINSTANCE.createLinePropertySetter()));
+				 LayersFactory.eINSTANCE.createLinePropertySetter()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
-						LayersFactory.eINSTANCE.createFontPropertySetter()));
+				 LayersFactory.eINSTANCE.createFontPropertySetter()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
-						LayersFactory.eINSTANCE.createIsVisiblePropertySetter()));
+				 LayersFactory.eINSTANCE.createIsVisiblePropertySetter()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
-						LayersFactory.eINSTANCE.createIsAbstractUmlSetter()));
+				 LayersFactory.eINSTANCE.createIsAbstractUmlSetter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
+				 LayersFactory.eINSTANCE.createCSSPropertySetter()));
 	}
 
 	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

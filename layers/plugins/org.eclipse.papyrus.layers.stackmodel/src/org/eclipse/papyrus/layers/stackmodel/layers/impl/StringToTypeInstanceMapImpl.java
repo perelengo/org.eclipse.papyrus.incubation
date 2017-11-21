@@ -30,20 +30,19 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeInstanceMapImpl#getTypedKey <em>Key</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeInstanceMapImpl#getTypedValue <em>Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeInstanceMapImpl#getTypedKey <em>Key</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeInstanceMapImpl#getTypedValue <em>Value</em>}</li>
+ * </ul>
  *
  * @generated
  */
-public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String, TypeInstance> {
+public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,TypeInstance> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
@@ -54,7 +53,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
@@ -65,7 +63,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getTypedValue()
 	 * @generated
 	 * @ordered
@@ -75,7 +72,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected StringToTypeInstanceMapImpl() {
@@ -85,7 +81,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -96,7 +91,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public String getTypedKey() {
@@ -106,21 +100,18 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void setTypedKey(String newKey) {
 		String oldKey = key;
 		key = newKey;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY, oldKey, key));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public TypeInstance getTypedValue() {
@@ -130,7 +121,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public NotificationChain basicSetTypedValue(TypeInstance newValue, NotificationChain msgs) {
@@ -138,11 +128,7 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE, oldValue, newValue);
-			if (msgs == null) {
-				msgs = notification;
-			} else {
-				msgs.add(notification);
-			}
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -150,39 +136,32 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void setTypedValue(TypeInstance newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
-			if (value != null) {
-				msgs = ((InternalEObject) value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE, null, msgs);
-			}
-			if (newValue != null) {
-				msgs = ((InternalEObject) newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE, null, msgs);
-			}
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE, null, msgs);
 			msgs = basicSetTypedValue(newValue, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-			}
+			if (msgs != null) msgs.dispatch();
 		}
-		else if (eNotificationRequired()) {
+		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE, newValue, newValue));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
-			return basicSetTypedValue(null, msgs);
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
+				return basicSetTypedValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -190,7 +169,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -201,7 +179,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -212,7 +189,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -223,7 +199,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -236,28 +211,26 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	public EMap<String, TypeInstance> getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap<String, TypeInstance>) container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap<String, TypeInstance>)container.eGet(eContainmentFeature());
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
-			return getTypedKey();
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
-			return getTypedValue();
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
+				return getTypedKey();
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
+				return getTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,18 +238,17 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
-			setTypedKey((String) newValue);
-			return;
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
-			setTypedValue((TypeInstance) newValue);
-			return;
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
+				setTypedKey((String)newValue);
+				return;
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
+				setTypedValue((TypeInstance)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -284,18 +256,17 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
-			setTypedKey(KEY_EDEFAULT);
-			return;
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
-			setTypedValue((TypeInstance) null);
-			return;
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
+				setTypedKey(KEY_EDEFAULT);
+				return;
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
+				setTypedValue((TypeInstance)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -303,16 +274,15 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
-			return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-		case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
-			return value != null;
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
+				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
+			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__VALUE:
+				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -320,14 +290,11 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
-			return super.toString();
-		}
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (key: ");
@@ -339,7 +306,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected int hash = -1;
@@ -347,7 +313,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -362,7 +327,6 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

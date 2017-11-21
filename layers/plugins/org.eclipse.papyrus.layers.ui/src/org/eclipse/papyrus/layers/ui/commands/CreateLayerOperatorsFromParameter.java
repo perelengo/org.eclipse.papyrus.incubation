@@ -130,8 +130,7 @@ public class CreateLayerOperatorsFromParameter extends AbstractLayersCommand {
 		if (selection instanceof LayersStack) {
 			LayersStack stack = (LayersStack) selection;
 			stack.setLayers(layerOperator);
-		}
-		else {
+		} else {
 			LayerOperator operator = (LayerOperator) selection;
 			operator.getLayers().add(layerOperator);
 		}

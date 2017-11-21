@@ -38,7 +38,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * This is the item provider adapter for a {@link java.util.Map.Entry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class StringToTypeMapItemProvider
@@ -53,7 +52,6 @@ public class StringToTypeMapItemProvider
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public StringToTypeMapItemProvider(AdapterFactory adapterFactory) {
@@ -64,7 +62,6 @@ public class StringToTypeMapItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -81,31 +78,30 @@ public class StringToTypeMapItemProvider
 	 * This adds a property descriptor for the Key feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addKeyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_StringToTypeMap_key_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_StringToTypeMap_key_feature", "_UI_StringToTypeMap_type"),
-						LayersPackage.Literals.STRING_TO_TYPE_MAP__KEY,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_StringToTypeMap_key_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_StringToTypeMap_key_feature", "_UI_StringToTypeMap_type"),
+				 LayersPackage.Literals.STRING_TO_TYPE_MAP__KEY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -120,7 +116,6 @@ public class StringToTypeMapItemProvider
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -135,7 +130,6 @@ public class StringToTypeMapItemProvider
 	 * This returns StringToTypeMap.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -147,12 +141,11 @@ public class StringToTypeMapItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		Map.Entry<?, ?> stringToTypeMap = (Map.Entry<?, ?>) object;
+		Map.Entry<?, ?> stringToTypeMap = (Map.Entry<?, ?>)object;
 		return "" + stringToTypeMap.getKey() + " -> " + stringToTypeMap.getValue();
 	}
 
@@ -161,7 +154,6 @@ public class StringToTypeMapItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -169,12 +161,12 @@ public class StringToTypeMapItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Map.Entry.class)) {
-		case LayersPackage.STRING_TO_TYPE_MAP__KEY:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case LayersPackage.STRING_TO_TYPE_MAP__KEY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -184,7 +176,6 @@ public class StringToTypeMapItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -192,51 +183,55 @@ public class StringToTypeMapItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-						LayersFactory.eINSTANCE.createIntType()));
+				 LayersFactory.eINSTANCE.createIntType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-						LayersFactory.eINSTANCE.createBooleanType()));
+				 LayersFactory.eINSTANCE.createBooleanType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-						LayersFactory.eINSTANCE.createStringType()));
+				 LayersFactory.eINSTANCE.createStringType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-						LayersFactory.eINSTANCE.createCustomType()));
+				 LayersFactory.eINSTANCE.createCustomType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-						LayersFactory.eINSTANCE.createColor()));
+				 LayersFactory.eINSTANCE.createColor()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-						LayersFactory.eINSTANCE.createFill()));
+				 LayersFactory.eINSTANCE.createFill()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-						LayersFactory.eINSTANCE.createLineType()));
+				 LayersFactory.eINSTANCE.createLineType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-						LayersFactory.eINSTANCE.createFontType()));
+				 LayersFactory.eINSTANCE.createFontType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
+				 LayersFactory.eINSTANCE.createCSSType()));
 	}
 
 	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

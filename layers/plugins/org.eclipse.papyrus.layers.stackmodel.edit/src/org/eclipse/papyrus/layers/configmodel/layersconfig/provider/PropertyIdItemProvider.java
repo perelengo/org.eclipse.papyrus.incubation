@@ -79,19 +79,17 @@ public class PropertyIdItemProvider
 	 * @generated
 	 */
 	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PropertyId_type_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PropertyId_type_feature", "_UI_PropertyId_type"),
-						LayersconfigPackage.Literals.PROPERTY_ID__TYPE,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_PropertyId_type_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PropertyId_type_feature", "_UI_PropertyId_type"),
+				LayersconfigPackage.Literals.PROPERTY_ID__TYPE,
+				true,
+				false,
+				true,
+				null,
+				null,
+				null));
 	}
 
 	/**
@@ -116,9 +114,7 @@ public class PropertyIdItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((PropertyId) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_PropertyId_type") :
-				getString("_UI_PropertyId_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_PropertyId_type") : getString("_UI_PropertyId_type") + " " + label;
 	}
 
 	/**

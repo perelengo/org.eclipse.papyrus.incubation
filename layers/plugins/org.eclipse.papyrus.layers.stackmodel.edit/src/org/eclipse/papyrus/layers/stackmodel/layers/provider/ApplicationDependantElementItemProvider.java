@@ -33,7 +33,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.ApplicationDependantElement} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class ApplicationDependantElementItemProvider
@@ -48,7 +47,6 @@ public class ApplicationDependantElementItemProvider
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public ApplicationDependantElementItemProvider(AdapterFactory adapterFactory) {
@@ -59,7 +57,6 @@ public class ApplicationDependantElementItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -76,30 +73,28 @@ public class ApplicationDependantElementItemProvider
 	 * This adds a property descriptor for the Application feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addApplicationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ApplicationDependantElement_application_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ApplicationDependantElement_application_feature", "_UI_ApplicationDependantElement_type"),
-						LayersPackage.Literals.APPLICATION_DEPENDANT_ELEMENT__APPLICATION,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApplicationDependantElement_application_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApplicationDependantElement_application_feature", "_UI_ApplicationDependantElement_type"),
+				 LayersPackage.Literals.APPLICATION_DEPENDANT_ELEMENT__APPLICATION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -112,7 +107,6 @@ public class ApplicationDependantElementItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -126,7 +120,6 @@ public class ApplicationDependantElementItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -138,7 +131,6 @@ public class ApplicationDependantElementItemProvider
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

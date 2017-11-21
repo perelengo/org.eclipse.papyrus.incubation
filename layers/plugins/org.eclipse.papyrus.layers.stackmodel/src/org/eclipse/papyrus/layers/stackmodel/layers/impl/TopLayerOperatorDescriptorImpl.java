@@ -24,8 +24,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TopLayerOperatorDescriptor;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Top Layer Operator Descriptor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -75,7 +73,6 @@ public class TopLayerOperatorDescriptorImpl extends LayerOperatorDescriptorImpl 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

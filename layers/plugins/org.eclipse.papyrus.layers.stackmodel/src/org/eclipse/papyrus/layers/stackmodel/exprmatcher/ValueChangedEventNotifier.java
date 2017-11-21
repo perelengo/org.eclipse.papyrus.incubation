@@ -67,8 +67,7 @@ public class ValueChangedEventNotifier extends EContentAdapter {
 		// Now, filter
 		if (isDiagramRootView(notification)) {
 			fireValueChangedEvent(notification);
-		}
-		else if (isUmlDomainElementChanged(notification)) {
+		} else if (isUmlDomainElementChanged(notification)) {
 			fireValueChangedEvent(notification);
 		}
 
@@ -253,17 +252,14 @@ public class ValueChangedEventNotifier extends EContentAdapter {
 	 * Handles a notification by calling {@link #handleContainment handleContainment} for any containment-based notification.
 	 */
 	@Override
-	protected void selfAdapt(Notification notification)
-	{
+	protected void selfAdapt(Notification notification) {
 		if (log.isDebugEnabled()) {
 			log.debug(this.getClass().getSimpleName() + ".selfAdapt(" + notification + ")");
 		}
 
-		if (notification.getFeature() == NotationPackage.eINSTANCE.getView_Element())
-		{
+		if (notification.getFeature() == NotationPackage.eINSTANCE.getView_Element()) {
 			handleContainment(notification);
-		}
-		else {
+		} else {
 			super.selfAdapt(notification);
 		}
 	}

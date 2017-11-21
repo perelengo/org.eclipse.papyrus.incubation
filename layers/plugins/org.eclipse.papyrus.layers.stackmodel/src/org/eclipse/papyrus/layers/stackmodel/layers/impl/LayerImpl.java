@@ -20,8 +20,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Layer</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -39,7 +37,6 @@ public class LayerImpl extends AbstractLayerImpl implements Layer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

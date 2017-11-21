@@ -20,7 +20,8 @@ import org.eclipse.papyrus.layers.stackmodel.layers.provider.LayersItemProviderA
  * This factory and its overloaded Providers removed extra nodes in the tree. <br>
  * The factory extends the original one {@link LayersItemProviderAdapterFactory}. <br>
  * To override an ItemProvider, different strategies can be used, depending if we override one single node,
- * or a hierarchy of node (inheritance). <h2>Single Node</h2>
+ * or a hierarchy of node (inheritance).
+ * <h2>Single Node</h2>
  * <ul>
  * <li>Create, in custom, a new XxxItemProvider extending the original one.</li>
  * <li>Add corresponding createXxxItemProvider() in {@link LayersItemProviderAdapterFactory}</li>
@@ -44,7 +45,8 @@ import org.eclipse.papyrus.layers.stackmodel.layers.provider.LayersItemProviderA
  * <li>in the method, create the instance of the property, provide the factory, and an instance of the extendedClass</li>
  * <li></li>
  * </ul>
- * <li></li> </ul>
+ * <li></li>
+ * </ul>
  *
  * <br>
  * To use a custom Providers, it is necessary to create it in this factory.

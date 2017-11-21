@@ -37,8 +37,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeInstanceMap
  * @generated
  */
 public class AbstractLayerItemProvider
-		extends org.eclipse.papyrus.layers.stackmodel.layers.provider.AbstractLayerItemProvider
-{
+		extends org.eclipse.papyrus.layers.stackmodel.layers.provider.AbstractLayerItemProvider {
 	/**
 	 * The extended object, used as a delegate. This delegate is usually the original implementation
 	 * of the ItemProvider.
@@ -91,8 +90,7 @@ public class AbstractLayerItemProvider
 	@Override
 	public Collection<?> getChildren(Object object) {
 		ChildrenStore store = getChildrenStore(object);
-		if (store != null)
-		{
+		if (store != null) {
 			return store.getChildren();
 		}
 
@@ -100,44 +98,32 @@ public class AbstractLayerItemProvider
 		List<Object> result = store != null ? null : new ArrayList<Object>();
 		EObject eObject = (EObject) object;
 
-		for (EStructuralFeature feature : getChildrenFeatures(object))
-		{
-			if (feature.isMany())
-			{
+		for (EStructuralFeature feature : getChildrenFeatures(object)) {
+			if (feature.isMany()) {
 				List<?> children = (List<?>) getValue(eObject, feature);
 				int index = 0;
-				for (Object unwrappedChild : children)
-				{
+				for (Object unwrappedChild : children) {
 					if (!isValidChild(unwrappedChild)) {
 						continue;
 					}
 					//
 					Object child = wrap(eObject, feature, unwrappedChild, index);
-					if (store != null)
-					{
+					if (store != null) {
 						store.getList(feature).add(child);
-					}
-					else if (result != null)
-					{
+					} else if (result != null) {
 						result.add(child);
 					}
 					index++;
 
 				}
-			}
-			else
-			{
+			} else {
 				// Single value
 				Object child = getValue(eObject, feature);
-				if (child != null && isValidChild(child))
-				{
+				if (child != null && isValidChild(child)) {
 					child = wrap(eObject, feature, child, CommandParameter.NO_INDEX);
-					if (store != null)
-					{
+					if (store != null) {
 						store.setValue(feature, child);
-					}
-					else if (result != null)
-					{
+					} else if (result != null) {
 						result.add(child);
 					}
 				}

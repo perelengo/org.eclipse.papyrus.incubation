@@ -86,58 +86,57 @@ public class LayersconfigAdapterFactory extends AdapterFactoryImpl {
 	 *
 	 * @generated
 	 */
-	protected LayersconfigSwitch<Adapter> modelSwitch =
-			new LayersconfigSwitch<Adapter>() {
-				@Override
-				public Adapter caseFolder(Folder object) {
-					return createFolderAdapter();
-				}
+	protected LayersconfigSwitch<Adapter> modelSwitch = new LayersconfigSwitch<Adapter>() {
+		@Override
+		public Adapter caseFolder(Folder object) {
+			return createFolderAdapter();
+		}
 
-				@Override
-				public Adapter caseFolderElement(FolderElement object) {
-					return createFolderElementAdapter();
-				}
+		@Override
+		public Adapter caseFolderElement(FolderElement object) {
+			return createFolderElementAdapter();
+		}
 
-				@Override
-				public Adapter caseLayerOperatorConfig(LayerOperatorConfig object) {
-					return createLayerOperatorConfigAdapter();
-				}
+		@Override
+		public Adapter caseLayerOperatorConfig(LayerOperatorConfig object) {
+			return createLayerOperatorConfigAdapter();
+		}
 
-				@Override
-				public Adapter caseInstanciableElement(InstanciableElement object) {
-					return createInstanciableElementAdapter();
-				}
+		@Override
+		public Adapter caseInstanciableElement(InstanciableElement object) {
+			return createInstanciableElementAdapter();
+		}
 
-				@Override
-				public Adapter caseOperatorConfig(OperatorConfig object) {
-					return createOperatorConfigAdapter();
-				}
+		@Override
+		public Adapter caseOperatorConfig(OperatorConfig object) {
+			return createOperatorConfigAdapter();
+		}
 
-				@Override
-				public Adapter casePropertyId(PropertyId object) {
-					return createPropertyIdAdapter();
-				}
+		@Override
+		public Adapter casePropertyId(PropertyId object) {
+			return createPropertyIdAdapter();
+		}
 
-				@Override
-				public Adapter caseTypeConfig(TypeConfig object) {
-					return createTypeConfigAdapter();
-				}
+		@Override
+		public Adapter caseTypeConfig(TypeConfig object) {
+			return createTypeConfigAdapter();
+		}
 
-				@Override
-				public Adapter caseLayerOperatorMultipleBinding(LayerOperatorMultipleBinding object) {
-					return createLayerOperatorMultipleBindingAdapter();
-				}
+		@Override
+		public Adapter caseLayerOperatorMultipleBinding(LayerOperatorMultipleBinding object) {
+			return createLayerOperatorMultipleBindingAdapter();
+		}
 
-				@Override
-				public Adapter caseOperatorBinding(OperatorBinding object) {
-					return createOperatorBindingAdapter();
-				}
+		@Override
+		public Adapter caseOperatorBinding(OperatorBinding object) {
+			return createOperatorBindingAdapter();
+		}
 
-				@Override
-				public Adapter defaultCase(EObject object) {
-					return createEObjectAdapter();
-				}
-			};
+		@Override
+		public Adapter defaultCase(EObject object) {
+			return createEObjectAdapter();
+		}
+	};
 
 	/**
 	 * Creates an adapter for the <code>target</code>.

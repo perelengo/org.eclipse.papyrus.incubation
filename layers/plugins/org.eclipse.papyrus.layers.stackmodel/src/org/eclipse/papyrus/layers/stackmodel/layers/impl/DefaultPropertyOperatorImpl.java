@@ -20,8 +20,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Default Property Operator</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -29,7 +27,6 @@ public class DefaultPropertyOperatorImpl extends PropertyOperatorImpl implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected DefaultPropertyOperatorImpl() {
@@ -39,7 +36,6 @@ public class DefaultPropertyOperatorImpl extends PropertyOperatorImpl implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

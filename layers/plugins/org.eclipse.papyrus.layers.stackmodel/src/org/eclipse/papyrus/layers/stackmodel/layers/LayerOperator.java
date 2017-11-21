@@ -22,10 +22,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperator#getLayers <em>Layers</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperator#getLayers <em>Layers</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperator()
  * @model abstract="true"
@@ -41,7 +41,6 @@ public interface LayerOperator extends LayerExpression, LayersContainer {
 	 * If the meaning of the '<em>Layers</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Layers</em>' containment reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerOperator_Layers()
 	 * @model containment="true"

@@ -27,10 +27,10 @@ import org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.LayerDescriptorImpl#getPropertyRegistry <em>Property Registry</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.LayerDescriptorImpl#getPropertyRegistry <em>Property Registry</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -39,7 +39,6 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	 * The cached value of the '{@link #getPropertyRegistry() <em>Property Registry</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getPropertyRegistry()
 	 * @generated
 	 * @ordered
@@ -49,7 +48,6 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected LayerDescriptorImpl() {
@@ -59,7 +57,6 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -70,18 +67,16 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public PropertyRegistry getPropertyRegistry() {
 		if (propertyRegistry != null && propertyRegistry.eIsProxy()) {
-			InternalEObject oldPropertyRegistry = (InternalEObject) propertyRegistry;
-			propertyRegistry = (PropertyRegistry) eResolveProxy(oldPropertyRegistry);
+			InternalEObject oldPropertyRegistry = (InternalEObject)propertyRegistry;
+			propertyRegistry = (PropertyRegistry)eResolveProxy(oldPropertyRegistry);
 			if (propertyRegistry != oldPropertyRegistry) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY, oldPropertyRegistry, propertyRegistry));
-				}
 			}
 		}
 		return propertyRegistry;
@@ -90,7 +85,6 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public PropertyRegistry basicGetPropertyRegistry() {
@@ -100,32 +94,27 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setPropertyRegistry(PropertyRegistry newPropertyRegistry) {
 		PropertyRegistry oldPropertyRegistry = propertyRegistry;
 		propertyRegistry = newPropertyRegistry;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY, oldPropertyRegistry, propertyRegistry));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY:
-			if (resolve) {
-				return getPropertyRegistry();
-			}
-			return basicGetPropertyRegistry();
+			case LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY:
+				if (resolve) return getPropertyRegistry();
+				return basicGetPropertyRegistry();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -133,15 +122,14 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY:
-			setPropertyRegistry((PropertyRegistry) newValue);
-			return;
+			case LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY:
+				setPropertyRegistry((PropertyRegistry)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -149,15 +137,14 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY:
-			setPropertyRegistry((PropertyRegistry) null);
-			return;
+			case LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY:
+				setPropertyRegistry((PropertyRegistry)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -165,14 +152,13 @@ public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY:
-			return propertyRegistry != null;
+			case LayersPackage.LAYER_DESCRIPTOR__PROPERTY_REGISTRY:
+				return propertyRegistry != null;
 		}
 		return super.eIsSet(featureID);
 	}

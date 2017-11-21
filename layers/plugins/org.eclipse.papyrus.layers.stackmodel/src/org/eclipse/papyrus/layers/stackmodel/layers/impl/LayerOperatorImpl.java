@@ -34,10 +34,10 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.LayerOperatorImpl#getLayers <em>Layers</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.LayerOperatorImpl#getLayers <em>Layers</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -46,7 +46,6 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	 * The cached value of the '{@link #getLayers() <em>Layers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getLayers()
 	 * @generated
 	 * @ordered
@@ -56,7 +55,6 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected LayerOperatorImpl() {
@@ -66,7 +64,6 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -77,7 +74,6 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -104,14 +100,13 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.LAYER_OPERATOR__LAYERS:
-			return ((InternalEList<?>) getLayers()).basicRemove(otherEnd, msgs);
+			case LayersPackage.LAYER_OPERATOR__LAYERS:
+				return ((InternalEList<?>)getLayers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -119,14 +114,13 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.LAYER_OPERATOR__LAYERS:
-			return getLayers();
+			case LayersPackage.LAYER_OPERATOR__LAYERS:
+				return getLayers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -134,17 +128,16 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.LAYER_OPERATOR__LAYERS:
-			getLayers().clear();
-			getLayers().addAll((Collection<? extends LayerExpression>) newValue);
-			return;
+			case LayersPackage.LAYER_OPERATOR__LAYERS:
+				getLayers().clear();
+				getLayers().addAll((Collection<? extends LayerExpression>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -152,15 +145,14 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYER_OPERATOR__LAYERS:
-			getLayers().clear();
-			return;
+			case LayersPackage.LAYER_OPERATOR__LAYERS:
+				getLayers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -168,14 +160,13 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYER_OPERATOR__LAYERS:
-			return layers != null && !layers.isEmpty();
+			case LayersPackage.LAYER_OPERATOR__LAYERS:
+				return layers != null && !layers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -183,17 +174,14 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == LayersContainer.class) {
 			switch (baseOperationID) {
-			case LayersPackage.LAYERS_CONTAINER___ADD_LAYER__LAYEREXPRESSION:
-				return LayersPackage.LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION;
-			default:
-				return -1;
+				case LayersPackage.LAYERS_CONTAINER___ADD_LAYER__LAYEREXPRESSION: return LayersPackage.LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION;
+				default: return -1;
 			}
 		}
 		return super.eDerivedOperationID(baseOperationID, baseClass);
@@ -202,15 +190,14 @@ public abstract class LayerOperatorImpl extends LayerExpressionImpl implements L
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION:
-			addLayer((LayerExpression) arguments.get(0));
-			return null;
+			case LayersPackage.LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION:
+				addLayer((LayerExpression)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

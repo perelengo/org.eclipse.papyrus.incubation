@@ -30,20 +30,19 @@ import org.eclipse.papyrus.layers.stackmodel.layers.Type;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeMapImpl#getTypedValue <em>Value</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeMapImpl#getTypedKey <em>Key</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeMapImpl#getTypedValue <em>Value</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeMapImpl#getTypedKey <em>Key</em>}</li>
+ * </ul>
  *
  * @generated
  */
-public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String, Type> {
+public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Type> {
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getTypedValue()
 	 * @generated
 	 * @ordered
@@ -54,7 +53,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
@@ -65,7 +63,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
@@ -75,7 +72,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected StringToTypeMapImpl() {
@@ -85,7 +81,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -96,7 +91,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public Type getTypedValue() {
@@ -106,7 +100,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public NotificationChain basicSetTypedValue(Type newValue, NotificationChain msgs) {
@@ -114,11 +107,7 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LayersPackage.STRING_TO_TYPE_MAP__VALUE, oldValue, newValue);
-			if (msgs == null) {
-				msgs = notification;
-			} else {
-				msgs.add(notification);
-			}
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -126,32 +115,25 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void setTypedValue(Type newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
-			if (value != null) {
-				msgs = ((InternalEObject) value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.STRING_TO_TYPE_MAP__VALUE, null, msgs);
-			}
-			if (newValue != null) {
-				msgs = ((InternalEObject) newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.STRING_TO_TYPE_MAP__VALUE, null, msgs);
-			}
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.STRING_TO_TYPE_MAP__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.STRING_TO_TYPE_MAP__VALUE, null, msgs);
 			msgs = basicSetTypedValue(newValue, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-			}
+			if (msgs != null) msgs.dispatch();
 		}
-		else if (eNotificationRequired()) {
+		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.STRING_TO_TYPE_MAP__VALUE, newValue, newValue));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public String getTypedKey() {
@@ -161,28 +143,25 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void setTypedKey(String newKey) {
 		String oldKey = key;
 		key = newKey;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.STRING_TO_TYPE_MAP__KEY, oldKey, key));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
-			return basicSetTypedValue(null, msgs);
+			case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
+				return basicSetTypedValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -190,16 +169,15 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
-			return getTypedValue();
-		case LayersPackage.STRING_TO_TYPE_MAP__KEY:
-			return getTypedKey();
+			case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
+				return getTypedValue();
+			case LayersPackage.STRING_TO_TYPE_MAP__KEY:
+				return getTypedKey();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -207,18 +185,17 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
-			setTypedValue((Type) newValue);
-			return;
-		case LayersPackage.STRING_TO_TYPE_MAP__KEY:
-			setTypedKey((String) newValue);
-			return;
+			case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
+				setTypedValue((Type)newValue);
+				return;
+			case LayersPackage.STRING_TO_TYPE_MAP__KEY:
+				setTypedKey((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -226,18 +203,17 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
-			setTypedValue((Type) null);
-			return;
-		case LayersPackage.STRING_TO_TYPE_MAP__KEY:
-			setTypedKey(KEY_EDEFAULT);
-			return;
+			case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
+				setTypedValue((Type)null);
+				return;
+			case LayersPackage.STRING_TO_TYPE_MAP__KEY:
+				setTypedKey(KEY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -245,16 +221,15 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
-			return value != null;
-		case LayersPackage.STRING_TO_TYPE_MAP__KEY:
-			return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
+			case LayersPackage.STRING_TO_TYPE_MAP__VALUE:
+				return value != null;
+			case LayersPackage.STRING_TO_TYPE_MAP__KEY:
+				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -262,14 +237,11 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
-			return super.toString();
-		}
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (key: ");
@@ -281,7 +253,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected int hash = -1;
@@ -289,7 +260,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -304,7 +274,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -315,7 +284,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -326,7 +294,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -337,7 +304,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -348,7 +314,6 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -361,13 +326,12 @@ public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	public EMap<String, Type> getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap<String, Type>) container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap<String, Type>)container.eGet(eContainmentFeature());
 	}
 
 } // StringToTypeMapImpl

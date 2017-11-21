@@ -96,6 +96,7 @@ import org.eclipse.jface.viewers.TableLayout;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.provider.StylesheetsItemProviderAdapterFactory;
 import org.eclipse.papyrus.layers.stackmodel.layers.provider.LayersItemProviderAdapterFactory;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CTabFolder;
@@ -136,7 +137,6 @@ import org.eclipse.ui.views.properties.PropertySheetPage;
  * This is an example of a Layers model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class LayersEditor
@@ -146,7 +146,6 @@ public class LayersEditor
 	 * This keeps track of the editing domain that is used to track all changes to the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected AdapterFactoryEditingDomain editingDomain;
@@ -155,7 +154,6 @@ public class LayersEditor
 	 * This is the one adapter factory used for providing views of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected ComposedAdapterFactory adapterFactory;
@@ -164,7 +162,6 @@ public class LayersEditor
 	 * This is the content outline page.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected IContentOutlinePage contentOutlinePage;
@@ -173,7 +170,6 @@ public class LayersEditor
 	 * This is a kludge...
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected IStatusLineManager contentOutlineStatusLineManager;
@@ -182,7 +178,6 @@ public class LayersEditor
 	 * This is the content outline page's viewer.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected TreeViewer contentOutlineViewer;
@@ -191,7 +186,6 @@ public class LayersEditor
 	 * This is the property sheet page.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected List<PropertySheetPage> propertySheetPages = new ArrayList<PropertySheetPage>();
@@ -201,7 +195,6 @@ public class LayersEditor
 	 * The parent relation must be correctly defined for this to work.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected TreeViewer selectionViewer;
@@ -210,7 +203,6 @@ public class LayersEditor
 	 * This inverts the roll of parent and child in the content provider and show parents as a tree.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected TreeViewer parentViewer;
@@ -219,7 +211,6 @@ public class LayersEditor
 	 * This shows how a tree view works.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected TreeViewer treeViewer;
@@ -229,7 +220,6 @@ public class LayersEditor
 	 * A list viewer doesn't support icons.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected ListViewer listViewer;
@@ -239,7 +229,6 @@ public class LayersEditor
 	 * A table can be used as a list with icons.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected TableViewer tableViewer;
@@ -248,7 +237,6 @@ public class LayersEditor
 	 * This shows how a tree view with columns works.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected TreeViewer treeViewerWithColumns;
@@ -257,7 +245,6 @@ public class LayersEditor
 	 * This keeps track of the active viewer pane, in the book.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected ViewerPane currentViewerPane;
@@ -266,7 +253,6 @@ public class LayersEditor
 	 * This keeps track of the active content viewer, which may be either one of the viewers in the pages or the content outline viewer.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected Viewer currentViewer;
@@ -275,7 +261,6 @@ public class LayersEditor
 	 * This listens to which ever viewer is active.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected ISelectionChangedListener selectionChangedListener;
@@ -284,7 +269,6 @@ public class LayersEditor
 	 * This keeps track of all the {@link org.eclipse.jface.viewers.ISelectionChangedListener}s that are listening to this editor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected Collection<ISelectionChangedListener> selectionChangedListeners = new ArrayList<ISelectionChangedListener>();
@@ -293,7 +277,6 @@ public class LayersEditor
 	 * This keeps track of the selection of the editor as a whole.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected ISelection editorSelection = StructuredSelection.EMPTY;
@@ -303,7 +286,6 @@ public class LayersEditor
 	 * in Eclipse's Problems View.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected MarkerHelper markerHelper = new EditUIMarkerHelper();
@@ -312,57 +294,45 @@ public class LayersEditor
 	 * This listens for when the outline becomes active
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
-	protected IPartListener partListener =
-			new IPartListener() {
-				@Override
-				public void partActivated(IWorkbenchPart p) {
-					if (p instanceof ContentOutline) {
-						if (((ContentOutline) p).getCurrentPage() == contentOutlinePage) {
-							getActionBarContributor().setActiveEditor(LayersEditor.this);
+	protected IPartListener partListener = new IPartListener() {
+			public void partActivated(IWorkbenchPart p) {
+				if (p instanceof ContentOutline) {
+					if (((ContentOutline)p).getCurrentPage() == contentOutlinePage) {
+						getActionBarContributor().setActiveEditor(LayersEditor.this);
 
-							setCurrentViewer(contentOutlineViewer);
-						}
+						setCurrentViewer(contentOutlineViewer);
 					}
-					else if (p instanceof PropertySheet) {
-						if (propertySheetPages.contains(((PropertySheet) p).getCurrentPage())) {
-							getActionBarContributor().setActiveEditor(LayersEditor.this);
-							handleActivate();
-						}
-					}
-					else if (p == LayersEditor.this) {
+				}
+				else if (p instanceof PropertySheet) {
+					if (propertySheetPages.contains(((PropertySheet)p).getCurrentPage())) {
+						getActionBarContributor().setActiveEditor(LayersEditor.this);
 						handleActivate();
 					}
 				}
-
-				@Override
-				public void partBroughtToTop(IWorkbenchPart p) {
-					// Ignore.
+				else if (p == LayersEditor.this) {
+					handleActivate();
 				}
-
-				@Override
-				public void partClosed(IWorkbenchPart p) {
-					// Ignore.
-				}
-
-				@Override
-				public void partDeactivated(IWorkbenchPart p) {
-					// Ignore.
-				}
-
-				@Override
-				public void partOpened(IWorkbenchPart p) {
-					// Ignore.
-				}
-			};
+			}
+			public void partBroughtToTop(IWorkbenchPart p) {
+				// Ignore.
+			}
+			public void partClosed(IWorkbenchPart p) {
+				// Ignore.
+			}
+			public void partDeactivated(IWorkbenchPart p) {
+				// Ignore.
+			}
+			public void partOpened(IWorkbenchPart p) {
+				// Ignore.
+			}
+		};
 
 	/**
 	 * Resources that have been removed since last activation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected Collection<Resource> removedResources = new ArrayList<Resource>();
@@ -371,7 +341,6 @@ public class LayersEditor
 	 * Resources that have been changed since last activation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected Collection<Resource> changedResources = new ArrayList<Resource>();
@@ -380,7 +349,6 @@ public class LayersEditor
 	 * Resources that have been saved.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected Collection<Resource> savedResources = new ArrayList<Resource>();
@@ -389,7 +357,6 @@ public class LayersEditor
 	 * Map to store the diagnostic associated with a resource.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected Map<Resource, Diagnostic> resourceToDiagnosticMap = new LinkedHashMap<Resource, Diagnostic>();
@@ -398,7 +365,6 @@ public class LayersEditor
 	 * Controls whether the problem indication should be updated.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected boolean updateProblemIndication = true;
@@ -407,19 +373,19 @@ public class LayersEditor
 	 * Adapter used to update the problem indication when resources are demanded loaded.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
-	protected EContentAdapter problemIndicationAdapter =
-			new EContentAdapter() {
-				@Override
-				public void notifyChanged(Notification notification) {
-					if (notification.getNotifier() instanceof Resource) {
-						switch (notification.getFeatureID(Resource.class)) {
+	protected EContentAdapter problemIndicationAdapter = new EContentAdapter() {
+			protected boolean dispatching;
+
+			@Override
+			public void notifyChanged(Notification notification) {
+				if (notification.getNotifier() instanceof Resource) {
+					switch (notification.getFeatureID(Resource.class)) {
 						case Resource.RESOURCE__IS_LOADED:
 						case Resource.RESOURCE__ERRORS:
 						case Resource.RESOURCE__WARNINGS: {
-							Resource resource = (Resource) notification.getNotifier();
+							Resource resource = (Resource)notification.getNotifier();
 							Diagnostic diagnostic = analyzeResourceProblems(resource, null);
 							if (diagnostic.getSeverity() != Diagnostic.OK) {
 								resourceToDiagnosticMap.put(resource, diagnostic);
@@ -427,145 +393,134 @@ public class LayersEditor
 							else {
 								resourceToDiagnosticMap.remove(resource);
 							}
-
-							if (updateProblemIndication) {
-								getSite().getShell().getDisplay().asyncExec
-										(new Runnable() {
-											@Override
-											public void run() {
-												updateProblemIndication();
-											}
-										});
-							}
+							dispatchUpdateProblemIndication();
 							break;
 						}
-						}
-					}
-					else {
-						super.notifyChanged(notification);
 					}
 				}
+				else {
+					super.notifyChanged(notification);
+				}
+			}
 
-				@Override
-				protected void setTarget(Resource target) {
-					basicSetTarget(target);
+			protected void dispatchUpdateProblemIndication() {
+				if (updateProblemIndication && !dispatching) {
+					dispatching = true;
+					getSite().getShell().getDisplay().asyncExec
+						(new Runnable() {
+							 public void run() {
+								 dispatching = false;
+								 updateProblemIndication();
+							 }
+						 });
 				}
+			}
 
-				@Override
-				protected void unsetTarget(Resource target) {
-					basicUnsetTarget(target);
-					resourceToDiagnosticMap.remove(target);
-					if (updateProblemIndication) {
-						getSite().getShell().getDisplay().asyncExec
-								(new Runnable() {
-									@Override
-									public void run() {
-										updateProblemIndication();
-									}
-								});
-					}
-				}
-			};
+			@Override
+			protected void setTarget(Resource target) {
+				basicSetTarget(target);
+			}
+
+			@Override
+			protected void unsetTarget(Resource target) {
+				basicUnsetTarget(target);
+				resourceToDiagnosticMap.remove(target);
+				dispatchUpdateProblemIndication();
+			}
+		};
 
 	/**
 	 * This listens for workspace changes.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
-	protected IResourceChangeListener resourceChangeListener =
-			new IResourceChangeListener() {
-				@Override
-				public void resourceChanged(IResourceChangeEvent event) {
-					IResourceDelta delta = event.getDelta();
-					try {
-						class ResourceDeltaVisitor implements IResourceDeltaVisitor {
-							protected ResourceSet resourceSet = editingDomain.getResourceSet();
-							protected Collection<Resource> changedResources = new ArrayList<Resource>();
-							protected Collection<Resource> removedResources = new ArrayList<Resource>();
+	protected IResourceChangeListener resourceChangeListener = new IResourceChangeListener() {
+			public void resourceChanged(IResourceChangeEvent event) {
+				IResourceDelta delta = event.getDelta();
+				try {
+					class ResourceDeltaVisitor implements IResourceDeltaVisitor {
+						protected ResourceSet resourceSet = editingDomain.getResourceSet();
+						protected Collection<Resource> changedResources = new ArrayList<Resource>();
+						protected Collection<Resource> removedResources = new ArrayList<Resource>();
 
-							@Override
-							public boolean visit(IResourceDelta delta) {
-								if (delta.getResource().getType() == IResource.FILE) {
-									if (delta.getKind() == IResourceDelta.REMOVED ||
-											delta.getKind() == IResourceDelta.CHANGED && delta.getFlags() != IResourceDelta.MARKERS) {
-										Resource resource = resourceSet.getResource(URI.createPlatformResourceURI(delta.getFullPath().toString(), true), false);
-										if (resource != null) {
-											if (delta.getKind() == IResourceDelta.REMOVED) {
-												removedResources.add(resource);
-											}
-											else if (!savedResources.remove(resource)) {
-												changedResources.add(resource);
-											}
+						public boolean visit(IResourceDelta delta) {
+							if (delta.getResource().getType() == IResource.FILE) {
+								if (delta.getKind() == IResourceDelta.REMOVED ||
+								    delta.getKind() == IResourceDelta.CHANGED && delta.getFlags() != IResourceDelta.MARKERS) {
+									Resource resource = resourceSet.getResource(URI.createPlatformResourceURI(delta.getFullPath().toString(), true), false);
+									if (resource != null) {
+										if (delta.getKind() == IResourceDelta.REMOVED) {
+											removedResources.add(resource);
+										}
+										else if (!savedResources.remove(resource)) {
+											changedResources.add(resource);
 										}
 									}
-									return false;
 								}
-
-								return true;
+								return false;
 							}
 
-							public Collection<Resource> getChangedResources() {
-								return changedResources;
-							}
-
-							public Collection<Resource> getRemovedResources() {
-								return removedResources;
-							}
+							return true;
 						}
 
-						final ResourceDeltaVisitor visitor = new ResourceDeltaVisitor();
-						delta.accept(visitor);
-
-						if (!visitor.getRemovedResources().isEmpty()) {
-							getSite().getShell().getDisplay().asyncExec
-									(new Runnable() {
-										@Override
-										public void run() {
-											removedResources.addAll(visitor.getRemovedResources());
-											if (!isDirty()) {
-												getSite().getPage().closeEditor(LayersEditor.this, false);
-											}
-										}
-									});
+						public Collection<Resource> getChangedResources() {
+							return changedResources;
 						}
 
-						if (!visitor.getChangedResources().isEmpty()) {
-							getSite().getShell().getDisplay().asyncExec
-									(new Runnable() {
-										@Override
-										public void run() {
-											changedResources.addAll(visitor.getChangedResources());
-											if (getSite().getPage().getActiveEditor() == LayersEditor.this) {
-												handleActivate();
-											}
-										}
-									});
+						public Collection<Resource> getRemovedResources() {
+							return removedResources;
 						}
 					}
-					catch (CoreException exception) {
-						LayersEditorPlugin.INSTANCE.log(exception);
+
+					final ResourceDeltaVisitor visitor = new ResourceDeltaVisitor();
+					delta.accept(visitor);
+
+					if (!visitor.getRemovedResources().isEmpty()) {
+						getSite().getShell().getDisplay().asyncExec
+							(new Runnable() {
+								 public void run() {
+									 removedResources.addAll(visitor.getRemovedResources());
+									 if (!isDirty()) {
+										 getSite().getPage().closeEditor(LayersEditor.this, false);
+									 }
+								 }
+							 });
+					}
+
+					if (!visitor.getChangedResources().isEmpty()) {
+						getSite().getShell().getDisplay().asyncExec
+							(new Runnable() {
+								 public void run() {
+									 changedResources.addAll(visitor.getChangedResources());
+									 if (getSite().getPage().getActiveEditor() == LayersEditor.this) {
+										 handleActivate();
+									 }
+								 }
+							 });
 					}
 				}
-			};
+				catch (CoreException exception) {
+					LayersEditorPlugin.INSTANCE.log(exception);
+				}
+			}
+		};
 
 	/**
 	 * Handles activation of the editor or it's associated views.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void handleActivate() {
 		// Recompute the read only state.
 		//
 		if (editingDomain.getResourceToReadOnlyMap() != null) {
-			editingDomain.getResourceToReadOnlyMap().clear();
+		  editingDomain.getResourceToReadOnlyMap().clear();
 
-			// Refresh any actions that may become enabled or disabled.
-			//
-			setSelection(getSelection());
+		  // Refresh any actions that may become enabled or disabled.
+		  //
+		  setSelection(getSelection());
 		}
 
 		if (!removedResources.isEmpty()) {
@@ -590,7 +545,6 @@ public class LayersEditor
 	 * Handles what to do with changed resources on activation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void handleChangedResources() {
@@ -606,7 +560,8 @@ public class LayersEditor
 					resource.unload();
 					try {
 						resource.load(Collections.EMPTY_MAP);
-					} catch (IOException exception) {
+					}
+					catch (IOException exception) {
 						if (!resourceToDiagnosticMap.containsKey(resource)) {
 							resourceToDiagnosticMap.put(resource, analyzeResourceProblems(resource, exception));
 						}
@@ -627,18 +582,17 @@ public class LayersEditor
 	 * Updates the problems indication with the information described in the specified diagnostic.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void updateProblemIndication() {
 		if (updateProblemIndication) {
 			BasicDiagnostic diagnostic =
-					new BasicDiagnostic
+				new BasicDiagnostic
 					(Diagnostic.OK,
-							"org.eclipse.papyrus.layers.stackmodel.editor",
-							0,
-							null,
-							new Object[] { editingDomain.getResourceSet() });
+					 "org.eclipse.papyrus.layers.stackmodel.editor",
+					 0,
+					 null,
+					 new Object [] { editingDomain.getResourceSet() });
 			for (Diagnostic childDiagnostic : resourceToDiagnosticMap.values()) {
 				if (childDiagnostic.getSeverity() != Diagnostic.OK) {
 					diagnostic.add(childDiagnostic);
@@ -647,7 +601,7 @@ public class LayersEditor
 
 			int lastEditorPage = getPageCount() - 1;
 			if (lastEditorPage >= 0 && getEditor(lastEditorPage) instanceof ProblemEditorPart) {
-				((ProblemEditorPart) getEditor(lastEditorPage)).setDiagnostic(diagnostic);
+				((ProblemEditorPart)getEditor(lastEditorPage)).setDiagnostic(diagnostic);
 				if (diagnostic.getSeverity() != Diagnostic.OK) {
 					setActivePage(lastEditorPage);
 				}
@@ -661,19 +615,18 @@ public class LayersEditor
 					setPageText(lastEditorPage, problemEditorPart.getPartName());
 					setActivePage(lastEditorPage);
 					showTabs();
-				} catch (PartInitException exception) {
+				}
+				catch (PartInitException exception) {
 					LayersEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
 			if (markerHelper.hasMarkers(editingDomain.getResourceSet())) {
-				markerHelper.deleteMarkers(editingDomain.getResourceSet());
-				if (diagnostic.getSeverity() != Diagnostic.OK) {
-					try {
-						markerHelper.createMarkers(diagnostic);
-					} catch (CoreException exception) {
-						LayersEditorPlugin.INSTANCE.log(exception);
-					}
+				try {
+					markerHelper.updateMarkers(diagnostic);
+				}
+				catch (CoreException exception) {
+					LayersEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -683,21 +636,20 @@ public class LayersEditor
 	 * Shows a dialog that asks if conflicting changes should be discarded.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected boolean handleDirtyConflict() {
-		return MessageDialog.openQuestion
+		return
+			MessageDialog.openQuestion
 				(getSite().getShell(),
-						getString("_UI_FileConflict_label"),
-						getString("_WARN_FileConflict"));
+				 getString("_UI_FileConflict_label"),
+				 getString("_WARN_FileConflict"));
 	}
 
 	/**
 	 * This creates a model editor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayersEditor() {
@@ -709,7 +661,6 @@ public class LayersEditor
 	 * This sets up the editing domain for the model editor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void initializeEditingDomain() {
@@ -719,6 +670,7 @@ public class LayersEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new LayersItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new StylesheetsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new EcoreItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new NotationItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
@@ -730,34 +682,32 @@ public class LayersEditor
 		// Add a listener to set the most recent command's affected objects to be the selection of the viewer with focus.
 		//
 		commandStack.addCommandStackListener
-				(new CommandStackListener() {
-					@Override
-					public void commandStackChanged(final EventObject event) {
-						getContainer().getDisplay().asyncExec
-								(new Runnable() {
-									@Override
-									public void run() {
-										firePropertyChange(IEditorPart.PROP_DIRTY);
+			(new CommandStackListener() {
+				 public void commandStackChanged(final EventObject event) {
+					 getContainer().getDisplay().asyncExec
+						 (new Runnable() {
+							  public void run() {
+								  firePropertyChange(IEditorPart.PROP_DIRTY);
 
-										// Try to select the affected objects.
-										//
-										Command mostRecentCommand = ((CommandStack) event.getSource()).getMostRecentCommand();
-										if (mostRecentCommand != null) {
-											setSelectionToViewer(mostRecentCommand.getAffectedObjects());
-										}
-										for (Iterator<PropertySheetPage> i = propertySheetPages.iterator(); i.hasNext();) {
-											PropertySheetPage propertySheetPage = i.next();
-											if (propertySheetPage.getControl().isDisposed()) {
-												i.remove();
-											}
-											else {
-												propertySheetPage.refresh();
-											}
-										}
-									}
-								});
-					}
-				});
+								  // Try to select the affected objects.
+								  //
+								  Command mostRecentCommand = ((CommandStack)event.getSource()).getMostRecentCommand();
+								  if (mostRecentCommand != null) {
+									  setSelectionToViewer(mostRecentCommand.getAffectedObjects());
+								  }
+								  for (Iterator<PropertySheetPage> i = propertySheetPages.iterator(); i.hasNext(); ) {
+									  PropertySheetPage propertySheetPage = i.next();
+									  if (propertySheetPage.getControl().isDisposed()) {
+										  i.remove();
+									  }
+									  else {
+										  propertySheetPage.refresh();
+									  }
+								  }
+							  }
+						  });
+				 }
+			 });
 
 		// Create the editing domain with a special command stack.
 		//
@@ -768,7 +718,6 @@ public class LayersEditor
 	 * This is here for the listener to be able to call it.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -780,7 +729,6 @@ public class LayersEditor
 	 * This sets the selection into whichever viewer is active.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void setSelectionToViewer(Collection<?> collection) {
@@ -789,26 +737,25 @@ public class LayersEditor
 		//
 		if (theSelection != null && !theSelection.isEmpty()) {
 			Runnable runnable =
-					new Runnable() {
-						@Override
-						public void run() {
-							// Try to select the items in the current content viewer of the editor.
-							//
-							if (currentViewer != null) {
-								currentViewer.setSelection(new StructuredSelection(theSelection.toArray()), true);
-							}
+				new Runnable() {
+					public void run() {
+						// Try to select the items in the current content viewer of the editor.
+						//
+						if (currentViewer != null) {
+							currentViewer.setSelection(new StructuredSelection(theSelection.toArray()), true);
 						}
-					};
+					}
+				};
 			getSite().getShell().getDisplay().asyncExec(runnable);
 		}
 	}
 
 	/**
 	 * This returns the editing domain as required by the {@link IEditingDomainProvider} interface.
-	 * This is important for implementing the static methods of {@link AdapterFactoryEditingDomain} and for supporting {@link org.eclipse.emf.edit.ui.action.CommandAction}.
+	 * This is important for implementing the static methods of {@link AdapterFactoryEditingDomain}
+	 * and for supporting {@link org.eclipse.emf.edit.ui.action.CommandAction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -819,14 +766,12 @@ public class LayersEditor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public class ReverseAdapterFactoryContentProvider extends AdapterFactoryContentProvider {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 *
 		 * @generated
 		 */
 		public ReverseAdapterFactoryContentProvider(AdapterFactory adapterFactory) {
@@ -836,11 +781,10 @@ public class LayersEditor
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 *
 		 * @generated
 		 */
 		@Override
-		public Object[] getElements(Object object) {
+		public Object [] getElements(Object object) {
 			Object parent = super.getParent(object);
 			return (parent == null ? Collections.EMPTY_SET : Collections.singleton(parent)).toArray();
 		}
@@ -848,11 +792,10 @@ public class LayersEditor
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 *
 		 * @generated
 		 */
 		@Override
-		public Object[] getChildren(Object object) {
+		public Object [] getChildren(Object object) {
 			Object parent = super.getParent(object);
 			return (parent == null ? Collections.EMPTY_SET : Collections.singleton(parent)).toArray();
 		}
@@ -860,7 +803,6 @@ public class LayersEditor
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 *
 		 * @generated
 		 */
 		@Override
@@ -872,7 +814,6 @@ public class LayersEditor
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 *
 		 * @generated
 		 */
 		@Override
@@ -884,7 +825,6 @@ public class LayersEditor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void setCurrentViewerPane(ViewerPane viewerPane) {
@@ -902,7 +842,6 @@ public class LayersEditor
 	 * is the current one.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void setCurrentViewer(Viewer viewer) {
@@ -913,14 +852,13 @@ public class LayersEditor
 				// Create the listener on demand.
 				//
 				selectionChangedListener =
-						new ISelectionChangedListener() {
-							// This just notifies those things that are affected by the section.
-							//
-							@Override
-							public void selectionChanged(SelectionChangedEvent selectionChangedEvent) {
-								setSelection(selectionChangedEvent.getSelection());
-							}
-						};
+					new ISelectionChangedListener() {
+						// This just notifies those things that are affected by the section.
+						//
+						public void selectionChanged(SelectionChangedEvent selectionChangedEvent) {
+							setSelection(selectionChangedEvent.getSelection());
+						}
+					};
 			}
 
 			// Stop listening to the old one.
@@ -949,7 +887,6 @@ public class LayersEditor
 	 * This returns the viewer as required by the {@link IViewerProvider} interface.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -986,25 +923,25 @@ public class LayersEditor
 	 * This is the method called to load a resource into the editing domain's resource set based on the editor's input.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void createModel() {
-		URI resourceURI = EditUIUtil.getURI(getEditorInput());
+		URI resourceURI = EditUIUtil.getURI(getEditorInput(), editingDomain.getResourceSet().getURIConverter());
 		Exception exception = null;
 		Resource resource = null;
 		try {
 			// Load the resource through the editing domain.
 			//
 			resource = editingDomain.getResourceSet().getResource(resourceURI, true);
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			exception = e;
 			resource = editingDomain.getResourceSet().getResource(resourceURI, false);
 		}
 
 		Diagnostic diagnostic = analyzeResourceProblems(resource, exception);
 		if (diagnostic.getSeverity() != Diagnostic.OK) {
-			resourceToDiagnosticMap.put(resource, analyzeResourceProblems(resource, exception));
+			resourceToDiagnosticMap.put(resource,  analyzeResourceProblems(resource, exception));
 		}
 		editingDomain.getResourceSet().eAdapters().add(problemIndicationAdapter);
 	}
@@ -1014,27 +951,29 @@ public class LayersEditor
 	 * and the specified exception (if any).
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public Diagnostic analyzeResourceProblems(Resource resource, Exception exception) {
-		if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
+		boolean hasErrors = !resource.getErrors().isEmpty();
+		if (hasErrors || !resource.getWarnings().isEmpty()) {
 			BasicDiagnostic basicDiagnostic =
-					new BasicDiagnostic
-					(Diagnostic.ERROR,
-							"org.eclipse.papyrus.layers.stackmodel.editor",
-							0,
-							getString("_UI_CreateModelError_message", resource.getURI()),
-							new Object[] { exception == null ? (Object) resource : exception });
+				new BasicDiagnostic
+					(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
+					 "org.eclipse.papyrus.layers.stackmodel.editor",
+					 0,
+					 getString("_UI_CreateModelError_message", resource.getURI()),
+					 new Object [] { exception == null ? (Object)resource : exception });
 			basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
 			return basicDiagnostic;
 		}
 		else if (exception != null) {
-			return new BasicDiagnostic(Diagnostic.ERROR,
-					"org.eclipse.papyrus.layers.stackmodel.editor",
-					0,
-					getString("_UI_CreateModelError_message", resource.getURI()),
-					new Object[] { exception });
+			return
+				new BasicDiagnostic
+					(Diagnostic.ERROR,
+					 "org.eclipse.papyrus.layers.stackmodel.editor",
+					 0,
+					 getString("_UI_CreateModelError_message", resource.getURI()),
+					 new Object[] { exception });
 		}
 		else {
 			return Diagnostic.OK_INSTANCE;
@@ -1045,7 +984,6 @@ public class LayersEditor
 	 * This is the method used by the framework to install your own controls.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1061,24 +999,24 @@ public class LayersEditor
 			//
 			{
 				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								Tree tree = new Tree(composite, SWT.MULTI);
-								TreeViewer newTreeViewer = new TreeViewer(tree);
-								return newTreeViewer;
-							}
-
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					new ViewerPane(getSite().getPage(), LayersEditor.this) {
+						@Override
+						public Viewer createViewer(Composite composite) {
+							Tree tree = new Tree(composite, SWT.MULTI);
+							TreeViewer newTreeViewer = new TreeViewer(tree);
+							return newTreeViewer;
+						}
+						@Override
+						public void requestActivation() {
+							super.requestActivation();
+							setCurrentViewerPane(this);
+						}
+					};
 				viewerPane.createControl(getContainer());
 
-				selectionViewer = (TreeViewer) viewerPane.getViewer();
+				selectionViewer = (TreeViewer)viewerPane.getViewer();
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
+				selectionViewer.setUseHashlookup(true);
 
 				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				selectionViewer.setInput(editingDomain.getResourceSet());
@@ -1096,23 +1034,22 @@ public class LayersEditor
 			//
 			{
 				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								Tree tree = new Tree(composite, SWT.MULTI);
-								TreeViewer newTreeViewer = new TreeViewer(tree);
-								return newTreeViewer;
-							}
-
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					new ViewerPane(getSite().getPage(), LayersEditor.this) {
+						@Override
+						public Viewer createViewer(Composite composite) {
+							Tree tree = new Tree(composite, SWT.MULTI);
+							TreeViewer newTreeViewer = new TreeViewer(tree);
+							return newTreeViewer;
+						}
+						@Override
+						public void requestActivation() {
+							super.requestActivation();
+							setCurrentViewerPane(this);
+						}
+					};
 				viewerPane.createControl(getContainer());
 
-				parentViewer = (TreeViewer) viewerPane.getViewer();
+				parentViewer = (TreeViewer)viewerPane.getViewer();
 				parentViewer.setAutoExpandLevel(30);
 				parentViewer.setContentProvider(new ReverseAdapterFactoryContentProvider(adapterFactory));
 				parentViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
@@ -1126,20 +1063,19 @@ public class LayersEditor
 			//
 			{
 				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								return new ListViewer(composite);
-							}
-
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					new ViewerPane(getSite().getPage(), LayersEditor.this) {
+						@Override
+						public Viewer createViewer(Composite composite) {
+							return new ListViewer(composite);
+						}
+						@Override
+						public void requestActivation() {
+							super.requestActivation();
+							setCurrentViewerPane(this);
+						}
+					};
 				viewerPane.createControl(getContainer());
-				listViewer = (ListViewer) viewerPane.getViewer();
+				listViewer = (ListViewer)viewerPane.getViewer();
 				listViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 				listViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 
@@ -1152,20 +1088,19 @@ public class LayersEditor
 			//
 			{
 				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								return new TreeViewer(composite);
-							}
-
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					new ViewerPane(getSite().getPage(), LayersEditor.this) {
+						@Override
+						public Viewer createViewer(Composite composite) {
+							return new TreeViewer(composite);
+						}
+						@Override
+						public void requestActivation() {
+							super.requestActivation();
+							setCurrentViewerPane(this);
+						}
+					};
 				viewerPane.createControl(getContainer());
-				treeViewer = (TreeViewer) viewerPane.getViewer();
+				treeViewer = (TreeViewer)viewerPane.getViewer();
 				treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 				treeViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 
@@ -1180,20 +1115,19 @@ public class LayersEditor
 			//
 			{
 				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								return new TableViewer(composite);
-							}
-
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					new ViewerPane(getSite().getPage(), LayersEditor.this) {
+						@Override
+						public Viewer createViewer(Composite composite) {
+							return new TableViewer(composite);
+						}
+						@Override
+						public void requestActivation() {
+							super.requestActivation();
+							setCurrentViewerPane(this);
+						}
+					};
 				viewerPane.createControl(getContainer());
-				tableViewer = (TableViewer) viewerPane.getViewer();
+				tableViewer = (TableViewer)viewerPane.getViewer();
 
 				Table table = tableViewer.getTable();
 				TableLayout layout = new TableLayout();
@@ -1211,7 +1145,7 @@ public class LayersEditor
 				selfColumn.setText(getString("_UI_SelfColumn_label"));
 				selfColumn.setResizable(true);
 
-				tableViewer.setColumnProperties(new String[] { "a", "b" });
+				tableViewer.setColumnProperties(new String [] {"a", "b"});
 				tableViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 				tableViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 
@@ -1224,21 +1158,20 @@ public class LayersEditor
 			//
 			{
 				ViewerPane viewerPane =
-						new ViewerPane(getSite().getPage(), LayersEditor.this) {
-							@Override
-							public Viewer createViewer(Composite composite) {
-								return new TreeViewer(composite);
-							}
-
-							@Override
-							public void requestActivation() {
-								super.requestActivation();
-								setCurrentViewerPane(this);
-							}
-						};
+					new ViewerPane(getSite().getPage(), LayersEditor.this) {
+						@Override
+						public Viewer createViewer(Composite composite) {
+							return new TreeViewer(composite);
+						}
+						@Override
+						public void requestActivation() {
+							super.requestActivation();
+							setCurrentViewerPane(this);
+						}
+					};
 				viewerPane.createControl(getContainer());
 
-				treeViewerWithColumns = (TreeViewer) viewerPane.getViewer();
+				treeViewerWithColumns = (TreeViewer)viewerPane.getViewer();
 
 				Tree tree = treeViewerWithColumns.getTree();
 				tree.setLayoutData(new FillLayout());
@@ -1255,7 +1188,7 @@ public class LayersEditor
 				selfColumn.setResizable(true);
 				selfColumn.setWidth(200);
 
-				treeViewerWithColumns.setColumnProperties(new String[] { "a", "b" });
+				treeViewerWithColumns.setColumnProperties(new String [] {"a", "b"});
 				treeViewerWithColumns.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 				treeViewerWithColumns.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 
@@ -1265,38 +1198,35 @@ public class LayersEditor
 			}
 
 			getSite().getShell().getDisplay().asyncExec
-					(new Runnable() {
-						@Override
-						public void run() {
-							setActivePage(0);
-						}
-					});
+				(new Runnable() {
+					 public void run() {
+						 setActivePage(0);
+					 }
+				 });
 		}
 
 		// Ensures that this editor will only display the page's tab
 		// area if there are more than one page
 		//
 		getContainer().addControlListener
-				(new ControlAdapter() {
-					boolean guard = false;
-
-					@Override
-					public void controlResized(ControlEvent event) {
-						if (!guard) {
-							guard = true;
-							hideTabs();
-							guard = false;
-						}
+			(new ControlAdapter() {
+				boolean guard = false;
+				@Override
+				public void controlResized(ControlEvent event) {
+					if (!guard) {
+						guard = true;
+						hideTabs();
+						guard = false;
 					}
-				});
+				}
+			 });
 
 		getSite().getShell().getDisplay().asyncExec
-				(new Runnable() {
-					@Override
-					public void run() {
-						updateProblemIndication();
-					}
-				});
+			(new Runnable() {
+				 public void run() {
+					 updateProblemIndication();
+				 }
+			 });
 	}
 
 	/**
@@ -1304,14 +1234,13 @@ public class LayersEditor
 	 * this hides the single tab at the bottom.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void hideTabs() {
 		if (getPageCount() <= 1) {
 			setPageText(0, "");
 			if (getContainer() instanceof CTabFolder) {
-				((CTabFolder) getContainer()).setTabHeight(1);
+				((CTabFolder)getContainer()).setTabHeight(1);
 				Point point = getContainer().getSize();
 				getContainer().setSize(point.x, point.y + 6);
 			}
@@ -1323,14 +1252,13 @@ public class LayersEditor
 	 * this shows the tabs at the bottom.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void showTabs() {
 		if (getPageCount() > 1) {
 			setPageText(0, getString("_UI_SelectionPage_label"));
 			if (getContainer() instanceof CTabFolder) {
-				((CTabFolder) getContainer()).setTabHeight(SWT.DEFAULT);
+				((CTabFolder)getContainer()).setTabHeight(SWT.DEFAULT);
 				Point point = getContainer().getSize();
 				getContainer().setSize(point.x, point.y - 6);
 			}
@@ -1341,7 +1269,6 @@ public class LayersEditor
 	 * This is used to track the active viewer.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1357,7 +1284,6 @@ public class LayersEditor
 	 * This is how the framework determines which interfaces we implement.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@SuppressWarnings("rawtypes")
@@ -1381,7 +1307,6 @@ public class LayersEditor
 	 * This accesses a cached version of the content outliner.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public IContentOutlinePage getContentOutlinePage() {
@@ -1397,6 +1322,7 @@ public class LayersEditor
 
 					// Set up the tree viewer.
 					//
+					contentOutlineViewer.setUseHashlookup(true);
 					contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 					contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 					contentOutlineViewer.setInput(editingDomain.getResourceSet());
@@ -1406,9 +1332,9 @@ public class LayersEditor
 					createContextMenuFor(contentOutlineViewer);
 
 					if (!editingDomain.getResourceSet().getResources().isEmpty()) {
-						// Select the root object in the view.
-						//
-						contentOutlineViewer.setSelection(new StructuredSelection(editingDomain.getResourceSet().getResources().get(0)), true);
+					  // Select the root object in the view.
+					  //
+					  contentOutlineViewer.setSelection(new StructuredSelection(editingDomain.getResourceSet().getResources().get(0)), true);
 					}
 				}
 
@@ -1430,14 +1356,13 @@ public class LayersEditor
 			// Listen to selection so that we can handle it is a special way.
 			//
 			contentOutlinePage.addSelectionChangedListener
-					(new ISelectionChangedListener() {
-						// This ensures that we handle selections correctly.
-						//
-						@Override
-						public void selectionChanged(SelectionChangedEvent event) {
-							handleContentOutlineSelection(event.getSelection());
-						}
-					});
+				(new ISelectionChangedListener() {
+					 // This ensures that we handle selections correctly.
+					 //
+					 public void selectionChanged(SelectionChangedEvent event) {
+						 handleContentOutlineSelection(event.getSelection());
+					 }
+				 });
 		}
 
 		return contentOutlinePage;
@@ -1447,24 +1372,23 @@ public class LayersEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
-				new ExtendedPropertySheetPage(editingDomain) {
-					@Override
-					public void setSelectionToViewer(List<?> selection) {
-						LayersEditor.this.setSelectionToViewer(selection);
-						LayersEditor.this.setFocus();
-					}
+			new ExtendedPropertySheetPage(editingDomain) {
+				@Override
+				public void setSelectionToViewer(List<?> selection) {
+					LayersEditor.this.setSelectionToViewer(selection);
+					LayersEditor.this.setFocus();
+				}
 
-					@Override
-					public void setActionBars(IActionBars actionBars) {
-						super.setActionBars(actionBars);
-						getActionBarContributor().shareGlobalActions(this, actionBars);
-					}
-				};
+				@Override
+				public void setActionBars(IActionBars actionBars) {
+					super.setActionBars(actionBars);
+					getActionBarContributor().shareGlobalActions(this, actionBars);
+				}
+			};
 		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
 		propertySheetPages.add(propertySheetPage);
 
@@ -1475,12 +1399,11 @@ public class LayersEditor
 	 * This deals with how we want selection in the outliner to affect the other views.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void handleContentOutlineSelection(ISelection selection) {
 		if (currentViewerPane != null && !selection.isEmpty() && selection instanceof IStructuredSelection) {
-			Iterator<?> selectedElements = ((IStructuredSelection) selection).iterator();
+			Iterator<?> selectedElements = ((IStructuredSelection)selection).iterator();
 			if (selectedElements.hasNext()) {
 				// Get the first selected element.
 				//
@@ -1515,19 +1438,17 @@ public class LayersEditor
 	 * This is for implementing {@link IEditorPart} and simply tests the command stack.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean isDirty() {
-		return ((BasicCommandStack) editingDomain.getCommandStack()).isSaveNeeded();
+		return ((BasicCommandStack)editingDomain.getCommandStack()).isSaveNeeded();
 	}
 
 	/**
 	 * This is for implementing {@link IEditorPart} and simply saves the model file.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1541,31 +1462,33 @@ public class LayersEditor
 		// Do the work within an operation because this is a long running activity that modifies the workbench.
 		//
 		WorkspaceModifyOperation operation =
-				new WorkspaceModifyOperation() {
-					// This is the method that gets invoked when the operation runs.
+			new WorkspaceModifyOperation() {
+				// This is the method that gets invoked when the operation runs.
+				//
+				@Override
+				public void execute(IProgressMonitor monitor) {
+					// Save the resources to the file system.
 					//
-					@Override
-					public void execute(IProgressMonitor monitor) {
-						// Save the resources to the file system.
-						//
-						boolean first = true;
-						for (Resource resource : editingDomain.getResourceSet().getResources()) {
-							if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
-								try {
-									long timeStamp = resource.getTimeStamp();
-									resource.save(saveOptions);
-									if (resource.getTimeStamp() != timeStamp) {
-										savedResources.add(resource);
-									}
+					boolean first = true;
+					List<Resource> resources = editingDomain.getResourceSet().getResources();
+					for (int i = 0; i < resources.size(); ++i) {
+						Resource resource = resources.get(i);
+						if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
+							try {
+								long timeStamp = resource.getTimeStamp();
+								resource.save(saveOptions);
+								if (resource.getTimeStamp() != timeStamp) {
+									savedResources.add(resource);
 								}
-								catch (Exception exception) {
-									resourceToDiagnosticMap.put(resource, analyzeResourceProblems(resource, exception));
-								}
-								first = false;
 							}
+							catch (Exception exception) {
+								resourceToDiagnosticMap.put(resource, analyzeResourceProblems(resource, exception));
+							}
+							first = false;
 						}
 					}
-				};
+				}
+			};
 
 		updateProblemIndication = false;
 		try {
@@ -1575,9 +1498,10 @@ public class LayersEditor
 
 			// Refresh the necessary state.
 			//
-			((BasicCommandStack) editingDomain.getCommandStack()).saveIsDone();
+			((BasicCommandStack)editingDomain.getCommandStack()).saveIsDone();
 			firePropertyChange(IEditorPart.PROP_DIRTY);
-		} catch (Exception exception) {
+		}
+		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
 			LayersEditorPlugin.INSTANCE.log(exception);
@@ -1591,7 +1515,6 @@ public class LayersEditor
 	 * The implementation uses the URI converter from the editor's resource set to try to open an input stream.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected boolean isPersisted(Resource resource) {
@@ -1602,7 +1525,8 @@ public class LayersEditor
 				result = true;
 				stream.close();
 			}
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			// Ignore
 		}
 		return result;
@@ -1612,7 +1536,6 @@ public class LayersEditor
 	 * This always returns true because it is not currently supported.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1624,7 +1547,6 @@ public class LayersEditor
 	 * This also changes the editor's input.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1643,7 +1565,6 @@ public class LayersEditor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void doSaveAs(URI uri, IEditorInput editorInput) {
@@ -1651,16 +1572,15 @@ public class LayersEditor
 		setInputWithNotify(editorInput);
 		setPartName(editorInput.getName());
 		IProgressMonitor progressMonitor =
-				getActionBars().getStatusLineManager() != null ?
-						getActionBars().getStatusLineManager().getProgressMonitor() :
-						new NullProgressMonitor();
+			getActionBars().getStatusLineManager() != null ?
+				getActionBars().getStatusLineManager().getProgressMonitor() :
+				new NullProgressMonitor();
 		doSave(progressMonitor);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1675,7 +1595,6 @@ public class LayersEditor
 	 * This is called during startup.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1691,7 +1610,6 @@ public class LayersEditor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1708,7 +1626,6 @@ public class LayersEditor
 	 * This implements {@link org.eclipse.jface.viewers.ISelectionProvider}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1720,7 +1637,6 @@ public class LayersEditor
 	 * This implements {@link org.eclipse.jface.viewers.ISelectionProvider}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1732,7 +1648,6 @@ public class LayersEditor
 	 * This implements {@link org.eclipse.jface.viewers.ISelectionProvider} to return this editor's overall selection.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1745,7 +1660,6 @@ public class LayersEditor
 	 * Calling this result will notify the listeners.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1761,30 +1675,29 @@ public class LayersEditor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public void setStatusLineManager(ISelection selection) {
 		IStatusLineManager statusLineManager = currentViewer != null && currentViewer == contentOutlineViewer ?
-				contentOutlineStatusLineManager : getActionBars().getStatusLineManager();
+			contentOutlineStatusLineManager : getActionBars().getStatusLineManager();
 
 		if (statusLineManager != null) {
 			if (selection instanceof IStructuredSelection) {
-				Collection<?> collection = ((IStructuredSelection) selection).toList();
+				Collection<?> collection = ((IStructuredSelection)selection).toList();
 				switch (collection.size()) {
-				case 0: {
-					statusLineManager.setMessage(getString("_UI_NoObjectSelected"));
-					break;
-				}
-				case 1: {
-					String text = new AdapterFactoryItemDelegator(adapterFactory).getText(collection.iterator().next());
-					statusLineManager.setMessage(getString("_UI_SingleObjectSelected", text));
-					break;
-				}
-				default: {
-					statusLineManager.setMessage(getString("_UI_MultiObjectSelected", Integer.toString(collection.size())));
-					break;
-				}
+					case 0: {
+						statusLineManager.setMessage(getString("_UI_NoObjectSelected"));
+						break;
+					}
+					case 1: {
+						String text = new AdapterFactoryItemDelegator(adapterFactory).getText(collection.iterator().next());
+						statusLineManager.setMessage(getString("_UI_SingleObjectSelected", text));
+						break;
+					}
+					default: {
+						statusLineManager.setMessage(getString("_UI_MultiObjectSelected", Integer.toString(collection.size())));
+						break;
+					}
 				}
 			}
 			else {
@@ -1797,7 +1710,6 @@ public class LayersEditor
 	 * This looks up a string in the plugin's plugin.properties file.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	private static String getString(String key) {
@@ -1808,39 +1720,35 @@ public class LayersEditor
 	 * This looks up a string in plugin.properties, making a substitution.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return LayersEditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
+		return LayersEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**
 	 * This implements {@link org.eclipse.jface.action.IMenuListener} to help fill the context menus with contributions from the Edit menu.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void menuAboutToShow(IMenuManager menuManager) {
-		((IMenuListener) getEditorSite().getActionBarContributor()).menuAboutToShow(menuManager);
+		((IMenuListener)getEditorSite().getActionBarContributor()).menuAboutToShow(menuManager);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public EditingDomainActionBarContributor getActionBarContributor() {
-		return (EditingDomainActionBarContributor) getEditorSite().getActionBarContributor();
+		return (EditingDomainActionBarContributor)getEditorSite().getActionBarContributor();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public IActionBars getActionBars() {
@@ -1850,7 +1758,6 @@ public class LayersEditor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public AdapterFactory getAdapterFactory() {
@@ -1860,7 +1767,6 @@ public class LayersEditor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -1892,7 +1798,6 @@ public class LayersEditor
 	 * Returns whether the outline view should be presented to the user.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected boolean showOutlineView() {

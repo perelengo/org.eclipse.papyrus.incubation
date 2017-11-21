@@ -22,10 +22,10 @@ import org.eclipse.gmf.runtime.notation.NamedStyle;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerNamedStyle#getLayersStack <em>Layers Stack</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerNamedStyle#getLayersStack <em>Layers Stack</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerNamedStyle()
  * @model
@@ -40,7 +40,6 @@ public interface LayerNamedStyle extends NamedStyle {
 	 * If the meaning of the '<em>Layers Stack</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Layers Stack</em>' containment reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayerNamedStyle_LayersStack()
 	 * @model containment="true" ordered="false"

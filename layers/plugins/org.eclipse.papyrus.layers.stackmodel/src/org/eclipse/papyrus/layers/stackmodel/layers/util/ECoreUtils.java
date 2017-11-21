@@ -56,25 +56,21 @@ public class ECoreUtils {
 	 *             If no ancestor is found.
 	 */
 	public static EObject lookupAncestorOfType(EObject child, EClass type) throws NotFoundException {
-		if (child != null)
-		{
+		if (child != null) {
 			if (type.isInstance(child)) {
 				return child;
 			}
 
 			int count = 0;
-			for (EObject parent = child.eContainer(); parent != null; parent = parent.eContainer())
-			{
-				if (++count > 100000)
-				{
+			for (EObject parent = child.eContainer(); parent != null; parent = parent.eContainer()) {
+				if (++count > 100000) {
 					return lookupAncestorOfType(child, type);
 				}
 				// Check if this is the correct type
 				if (type.isInstance(parent)) {
 					return parent;
 				}
-				if (parent == child)
-				{
+				if (parent == child) {
 					throw new IllegalStateException("There is a cycle in the containment hierarchy of " + child);
 				}
 			}

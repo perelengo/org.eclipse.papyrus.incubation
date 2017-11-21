@@ -90,9 +90,7 @@ public class OperatorConfigItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((OperatorConfig) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_OperatorConfig_type") :
-				getString("_UI_OperatorConfig_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_OperatorConfig_type") : getString("_UI_OperatorConfig_type") + " " + label;
 	}
 
 	/**

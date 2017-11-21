@@ -25,10 +25,10 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.IntInstanceImpl#getValue <em>Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.IntInstanceImpl#getValue <em>Value</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -37,7 +37,6 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
@@ -48,7 +47,6 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
@@ -58,7 +56,6 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected IntInstanceImpl() {
@@ -68,7 +65,6 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -79,7 +75,6 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -90,29 +85,26 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setValue(int newValue) {
 		int oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.INT_INSTANCE__VALUE, oldValue, value));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.INT_INSTANCE__VALUE:
-			return getValue();
+			case LayersPackage.INT_INSTANCE__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,15 +112,14 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.INT_INSTANCE__VALUE:
-			setValue((Integer) newValue);
-			return;
+			case LayersPackage.INT_INSTANCE__VALUE:
+				setValue((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -136,15 +127,14 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.INT_INSTANCE__VALUE:
-			setValue(VALUE_EDEFAULT);
-			return;
+			case LayersPackage.INT_INSTANCE__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -152,14 +142,13 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.INT_INSTANCE__VALUE:
-			return value != VALUE_EDEFAULT;
+			case LayersPackage.INT_INSTANCE__VALUE:
+				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -206,14 +195,11 @@ public class IntInstanceImpl extends TypeInstanceImpl implements IntInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
-			return super.toString();
-		}
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");

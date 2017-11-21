@@ -28,15 +28,15 @@ import org.eclipse.papyrus.layers.stackmodel.layers.Metamodel;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getName <em>Name</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getDescription <em>Description</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getNsuri <em>Nsuri</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getPluginID <em>Plugin ID</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getEPackageInstanceName <em>EPackage Instance Name</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#isTypeValid <em>Is Type Valid</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getNsuri <em>Nsuri</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getPluginID <em>Plugin ID</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#getEPackageInstanceName <em>EPackage Instance Name</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.MetamodelImpl#isTypeValid <em>Is Type Valid</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -46,7 +46,6 @@ public class MetamodelImpl extends
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -57,7 +56,6 @@ public class MetamodelImpl extends
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -68,7 +66,6 @@ public class MetamodelImpl extends
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
@@ -79,7 +76,6 @@ public class MetamodelImpl extends
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
@@ -90,7 +86,6 @@ public class MetamodelImpl extends
 	 * The default value of the '{@link #getNsuri() <em>Nsuri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getNsuri()
 	 * @generated
 	 * @ordered
@@ -101,7 +96,6 @@ public class MetamodelImpl extends
 	 * The cached value of the '{@link #getNsuri() <em>Nsuri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getNsuri()
 	 * @generated
 	 * @ordered
@@ -112,7 +106,6 @@ public class MetamodelImpl extends
 	 * The default value of the '{@link #getPluginID() <em>Plugin ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getPluginID()
 	 * @generated
 	 * @ordered
@@ -123,7 +116,6 @@ public class MetamodelImpl extends
 	 * The cached value of the '{@link #getPluginID() <em>Plugin ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getPluginID()
 	 * @generated
 	 * @ordered
@@ -134,7 +126,6 @@ public class MetamodelImpl extends
 	 * The default value of the '{@link #getEPackageInstanceName() <em>EPackage Instance Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getEPackageInstanceName()
 	 * @generated
 	 * @ordered
@@ -145,7 +136,6 @@ public class MetamodelImpl extends
 	 * The cached value of the '{@link #getEPackageInstanceName() <em>EPackage Instance Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getEPackageInstanceName()
 	 * @generated
 	 * @ordered
@@ -156,7 +146,6 @@ public class MetamodelImpl extends
 	 * The default value of the '{@link #isTypeValid() <em>Is Type Valid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #isTypeValid()
 	 * @generated
 	 * @ordered
@@ -167,7 +156,6 @@ public class MetamodelImpl extends
 	 * The cached value of the '{@link #isTypeValid() <em>Is Type Valid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #isTypeValid()
 	 * @generated
 	 * @ordered
@@ -177,7 +165,6 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected MetamodelImpl() {
@@ -187,7 +174,6 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -198,7 +184,6 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -209,22 +194,19 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.METAMODEL__NAME, oldName, name));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -235,22 +217,19 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.METAMODEL__DESCRIPTION, oldDescription, description));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -261,22 +240,19 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setNsuri(String newNsuri) {
 		String oldNsuri = nsuri;
 		nsuri = newNsuri;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.METAMODEL__NSURI, oldNsuri, nsuri));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -287,22 +263,19 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setPluginID(String newPluginID) {
 		String oldPluginID = pluginID;
 		pluginID = newPluginID;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.METAMODEL__PLUGIN_ID, oldPluginID, pluginID));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -313,22 +286,19 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setEPackageInstanceName(String newEPackageInstanceName) {
 		String oldEPackageInstanceName = ePackageInstanceName;
 		ePackageInstanceName = newEPackageInstanceName;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME, oldEPackageInstanceName, ePackageInstanceName));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -339,22 +309,19 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setIsTypeValid(boolean newIsTypeValid) {
 		boolean oldIsTypeValid = isTypeValid;
 		isTypeValid = newIsTypeValid;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.METAMODEL__IS_TYPE_VALID, oldIsTypeValid, isTypeValid));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -367,24 +334,23 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.METAMODEL__NAME:
-			return getName();
-		case LayersPackage.METAMODEL__DESCRIPTION:
-			return getDescription();
-		case LayersPackage.METAMODEL__NSURI:
-			return getNsuri();
-		case LayersPackage.METAMODEL__PLUGIN_ID:
-			return getPluginID();
-		case LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME:
-			return getEPackageInstanceName();
-		case LayersPackage.METAMODEL__IS_TYPE_VALID:
-			return isTypeValid();
+			case LayersPackage.METAMODEL__NAME:
+				return getName();
+			case LayersPackage.METAMODEL__DESCRIPTION:
+				return getDescription();
+			case LayersPackage.METAMODEL__NSURI:
+				return getNsuri();
+			case LayersPackage.METAMODEL__PLUGIN_ID:
+				return getPluginID();
+			case LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME:
+				return getEPackageInstanceName();
+			case LayersPackage.METAMODEL__IS_TYPE_VALID:
+				return isTypeValid();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -392,30 +358,29 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.METAMODEL__NAME:
-			setName((String) newValue);
-			return;
-		case LayersPackage.METAMODEL__DESCRIPTION:
-			setDescription((String) newValue);
-			return;
-		case LayersPackage.METAMODEL__NSURI:
-			setNsuri((String) newValue);
-			return;
-		case LayersPackage.METAMODEL__PLUGIN_ID:
-			setPluginID((String) newValue);
-			return;
-		case LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME:
-			setEPackageInstanceName((String) newValue);
-			return;
-		case LayersPackage.METAMODEL__IS_TYPE_VALID:
-			setIsTypeValid((Boolean) newValue);
-			return;
+			case LayersPackage.METAMODEL__NAME:
+				setName((String)newValue);
+				return;
+			case LayersPackage.METAMODEL__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case LayersPackage.METAMODEL__NSURI:
+				setNsuri((String)newValue);
+				return;
+			case LayersPackage.METAMODEL__PLUGIN_ID:
+				setPluginID((String)newValue);
+				return;
+			case LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME:
+				setEPackageInstanceName((String)newValue);
+				return;
+			case LayersPackage.METAMODEL__IS_TYPE_VALID:
+				setIsTypeValid((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -423,30 +388,29 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.METAMODEL__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case LayersPackage.METAMODEL__DESCRIPTION:
-			setDescription(DESCRIPTION_EDEFAULT);
-			return;
-		case LayersPackage.METAMODEL__NSURI:
-			setNsuri(NSURI_EDEFAULT);
-			return;
-		case LayersPackage.METAMODEL__PLUGIN_ID:
-			setPluginID(PLUGIN_ID_EDEFAULT);
-			return;
-		case LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME:
-			setEPackageInstanceName(EPACKAGE_INSTANCE_NAME_EDEFAULT);
-			return;
-		case LayersPackage.METAMODEL__IS_TYPE_VALID:
-			setIsTypeValid(IS_TYPE_VALID_EDEFAULT);
-			return;
+			case LayersPackage.METAMODEL__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case LayersPackage.METAMODEL__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case LayersPackage.METAMODEL__NSURI:
+				setNsuri(NSURI_EDEFAULT);
+				return;
+			case LayersPackage.METAMODEL__PLUGIN_ID:
+				setPluginID(PLUGIN_ID_EDEFAULT);
+				return;
+			case LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME:
+				setEPackageInstanceName(EPACKAGE_INSTANCE_NAME_EDEFAULT);
+				return;
+			case LayersPackage.METAMODEL__IS_TYPE_VALID:
+				setIsTypeValid(IS_TYPE_VALID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -454,24 +418,23 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.METAMODEL__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case LayersPackage.METAMODEL__DESCRIPTION:
-			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case LayersPackage.METAMODEL__NSURI:
-			return NSURI_EDEFAULT == null ? nsuri != null : !NSURI_EDEFAULT.equals(nsuri);
-		case LayersPackage.METAMODEL__PLUGIN_ID:
-			return PLUGIN_ID_EDEFAULT == null ? pluginID != null : !PLUGIN_ID_EDEFAULT.equals(pluginID);
-		case LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME:
-			return EPACKAGE_INSTANCE_NAME_EDEFAULT == null ? ePackageInstanceName != null : !EPACKAGE_INSTANCE_NAME_EDEFAULT.equals(ePackageInstanceName);
-		case LayersPackage.METAMODEL__IS_TYPE_VALID:
-			return isTypeValid != IS_TYPE_VALID_EDEFAULT;
+			case LayersPackage.METAMODEL__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case LayersPackage.METAMODEL__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case LayersPackage.METAMODEL__NSURI:
+				return NSURI_EDEFAULT == null ? nsuri != null : !NSURI_EDEFAULT.equals(nsuri);
+			case LayersPackage.METAMODEL__PLUGIN_ID:
+				return PLUGIN_ID_EDEFAULT == null ? pluginID != null : !PLUGIN_ID_EDEFAULT.equals(pluginID);
+			case LayersPackage.METAMODEL__EPACKAGE_INSTANCE_NAME:
+				return EPACKAGE_INSTANCE_NAME_EDEFAULT == null ? ePackageInstanceName != null : !EPACKAGE_INSTANCE_NAME_EDEFAULT.equals(ePackageInstanceName);
+			case LayersPackage.METAMODEL__IS_TYPE_VALID:
+				return isTypeValid != IS_TYPE_VALID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -479,14 +442,13 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.METAMODEL___GET_EPACKAGE:
-			return getEPackage();
+			case LayersPackage.METAMODEL___GET_EPACKAGE:
+				return getEPackage();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -494,14 +456,11 @@ public class MetamodelImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
-			return super.toString();
-		}
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");

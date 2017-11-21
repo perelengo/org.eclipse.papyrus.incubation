@@ -20,12 +20,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.papyrus.layers.stackmodel.layers.Folder;
@@ -36,22 +31,14 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.Folder} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class FolderItemProvider
-		extends FolderElementItemProvider
-		implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+		extends FolderElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public FolderItemProvider(AdapterFactory adapterFactory) {
@@ -62,7 +49,6 @@ public class FolderItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -79,31 +65,30 @@ public class FolderItemProvider
 	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Folder_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Folder_name_feature", "_UI_Folder_type"),
-						LayersPackage.Literals.FOLDER__NAME,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Folder_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Folder_name_feature", "_UI_Folder_type"),
+				 LayersPackage.Literals.FOLDER__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -118,7 +103,6 @@ public class FolderItemProvider
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -133,7 +117,6 @@ public class FolderItemProvider
 	 * This returns Folder.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -145,15 +128,14 @@ public class FolderItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Folder) object).getName();
+		String label = ((Folder)object).getName();
 		return label == null || label.length() == 0 ?
-				getString("_UI_Folder_type") :
-				getString("_UI_Folder_type") + " " + label;
+			getString("_UI_Folder_type") :
+			getString("_UI_Folder_type") + " " + label;
 	}
 
 	/**
@@ -161,7 +143,6 @@ public class FolderItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -169,12 +150,12 @@ public class FolderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Folder.class)) {
-		case LayersPackage.FOLDER__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case LayersPackage.FOLDER__ELEMENTS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case LayersPackage.FOLDER__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case LayersPackage.FOLDER__ELEMENTS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -184,7 +165,6 @@ public class FolderItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -192,64 +172,69 @@ public class FolderItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createLayersStackApplication()));
+				 LayersFactory.eINSTANCE.createLayersStackApplication()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createProperty()));
+				 LayersFactory.eINSTANCE.createProperty()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createMetamodel()));
+				 LayersFactory.eINSTANCE.createMetamodel()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createFolder()));
+				 LayersFactory.eINSTANCE.createFolder()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createIntType()));
+				 LayersFactory.eINSTANCE.createIntType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createBooleanType()));
+				 LayersFactory.eINSTANCE.createBooleanType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createStringType()));
+				 LayersFactory.eINSTANCE.createStringType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createCustomType()));
+				 LayersFactory.eINSTANCE.createCustomType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createColor()));
+				 LayersFactory.eINSTANCE.createColor()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createFill()));
+				 LayersFactory.eINSTANCE.createFill()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createLineType()));
+				 LayersFactory.eINSTANCE.createLineType()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-						LayersFactory.eINSTANCE.createFontType()));
+				 LayersFactory.eINSTANCE.createFontType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LayersPackage.Literals.FOLDER__ELEMENTS,
+				 LayersFactory.eINSTANCE.createCSSType()));
 	}
 
 }

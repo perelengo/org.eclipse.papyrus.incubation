@@ -79,18 +79,16 @@ public class LayersconfigActionBarContributor
 	 *
 	 * @generated
 	 */
-	protected IAction showPropertiesViewAction =
-			new Action(LayersconfigEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
-				@Override
-				public void run() {
-					try {
-						getPage().showView("org.eclipse.ui.views.PropertySheet");
-					}
-					catch (PartInitException exception) {
-						LayersconfigEditorPlugin.INSTANCE.log(exception);
-					}
-				}
-			};
+	protected IAction showPropertiesViewAction = new Action(LayersconfigEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+		@Override
+		public void run() {
+			try {
+				getPage().showView("org.eclipse.ui.views.PropertySheet");
+			} catch (PartInitException exception) {
+				LayersconfigEditorPlugin.INSTANCE.log(exception);
+			}
+		}
+	};
 
 	/**
 	 * This action refreshes the viewer of the current editor if the editor
@@ -100,23 +98,22 @@ public class LayersconfigActionBarContributor
 	 *
 	 * @generated
 	 */
-	protected IAction refreshViewerAction =
-			new Action(LayersconfigEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
-				@Override
-				public boolean isEnabled() {
-					return activeEditorPart instanceof IViewerProvider;
-				}
+	protected IAction refreshViewerAction = new Action(LayersconfigEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+		@Override
+		public boolean isEnabled() {
+			return activeEditorPart instanceof IViewerProvider;
+		}
 
-				@Override
-				public void run() {
-					if (activeEditorPart instanceof IViewerProvider) {
-						Viewer viewer = ((IViewerProvider) activeEditorPart).getViewer();
-						if (viewer != null) {
-							viewer.refresh();
-						}
-					}
+		@Override
+		public void run() {
+			if (activeEditorPart instanceof IViewerProvider) {
+				Viewer viewer = ((IViewerProvider) activeEditorPart).getViewer();
+				if (viewer != null) {
+					viewer.refresh();
 				}
-			};
+			}
+		}
+	};
 
 	/**
 	 * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateChildAction} corresponding to each descriptor
@@ -214,13 +211,12 @@ public class LayersconfigActionBarContributor
 
 		// Force an update because Eclipse hides empty menus now.
 		//
-		submenuManager.addMenuListener
-				(new IMenuListener() {
-					@Override
-					public void menuAboutToShow(IMenuManager menuManager) {
-						menuManager.updateAll(true);
-					}
-				});
+		submenuManager.addMenuListener(new IMenuListener() {
+			@Override
+			public void menuAboutToShow(IMenuManager menuManager) {
+				menuManager.updateAll(true);
+			}
+		});
 
 		addGlobalActions(submenuManager);
 	}
@@ -244,8 +240,7 @@ public class LayersconfigActionBarContributor
 		}
 		if (part == null) {
 			selectionProvider = null;
-		}
-		else {
+		} else {
 			selectionProvider = part.getSite().getSelectionProvider();
 			selectionProvider.addSelectionChangedListener(this);
 
@@ -358,8 +353,7 @@ public class LayersconfigActionBarContributor
 			for (IAction action : actions) {
 				if (contributionID != null) {
 					manager.insertBefore(contributionID, action);
-				}
-				else {
+				} else {
 					manager.add(action);
 				}
 			}

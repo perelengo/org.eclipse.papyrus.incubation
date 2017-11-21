@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.runtime.notation.NamedStyle;
 import org.eclipse.gmf.runtime.notation.Style;
 import org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand;
+import org.eclipse.papyrus.layers.stackmodel.layers.*;
 import org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayer;
 import org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator;
 import org.eclipse.papyrus.layers.stackmodel.layers.AllViewsDerivedLayer;
@@ -92,7 +93,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeRegistry;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage
  * @generated
  */
@@ -101,7 +101,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected static LayersPackage modelPackage;
@@ -110,7 +109,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * Creates an instance of the adapter factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayersAdapterFactory() {
@@ -124,7 +122,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- begin-user-doc -->
 	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return whether this factory is applicable for the type of the object.
 	 * @generated
 	 */
@@ -134,7 +131,7 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 			return true;
 		}
 		if (object instanceof EObject) {
-			return ((EObject) object).eClass().getEPackage() == modelPackage;
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
 	}
@@ -143,385 +140,322 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * The switch that delegates to the <code>createXXX</code> methods.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
-	protected LayersSwitch<Adapter> modelSwitch =
-			new LayersSwitch<Adapter>() {
-				@Override
-				public Adapter caseLayerNamedStyle(LayerNamedStyle object) {
-					return createLayerNamedStyleAdapter();
-				}
-
-				@Override
-				public Adapter caseLayersStack(LayersStack object) {
-					return createLayersStackAdapter();
-				}
-
-				@Override
-				public Adapter caseLayerExpression(LayerExpression object) {
-					return createLayerExpressionAdapter();
-				}
-
-				@Override
-				public Adapter caseApplicationDependantElement(ApplicationDependantElement object) {
-					return createApplicationDependantElementAdapter();
-				}
-
-				@Override
-				public Adapter caseLayersStackApplication(LayersStackApplication object) {
-					return createLayersStackApplicationAdapter();
-				}
-
-				@Override
-				public Adapter caseFolderElement(FolderElement object) {
-					return createFolderElementAdapter();
-				}
-
-				@Override
-				public Adapter caseLayerStackDescriptorRegistry(LayerStackDescriptorRegistry object) {
-					return createLayerStackDescriptorRegistryAdapter();
-				}
-
-				@Override
-				public Adapter casePropertyRegistry(PropertyRegistry object) {
-					return createPropertyRegistryAdapter();
-				}
-
-				@Override
-				public Adapter caseProperty(Property object) {
-					return createPropertyAdapter();
-				}
-
-				@Override
-				public Adapter caseType(Type object) {
-					return createTypeAdapter();
-				}
-
-				@Override
-				public Adapter caseMetamodel(Metamodel object) {
-					return createMetamodelAdapter();
-				}
-
-				@Override
-				public Adapter caseTypeInstance(TypeInstance object) {
-					return createTypeInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseComputePropertyValueCommandItf(ComputePropertyValueCommand object) {
-					return createComputePropertyValueCommandItfAdapter();
-				}
-
-				@Override
-				public Adapter caseTypeRegistry(TypeRegistry object) {
-					return createTypeRegistryAdapter();
-				}
-
-				@Override
-				public Adapter caseStringToTypeMap(Map.Entry<String, Type> object) {
-					return createStringToTypeMapAdapter();
-				}
-
-				@Override
-				public Adapter caseLayerDescriptorRegistry(LayerDescriptorRegistry object) {
-					return createLayerDescriptorRegistryAdapter();
-				}
-
-				@Override
-				public Adapter caseLayerDescriptor(LayerDescriptor object) {
-					return createLayerDescriptorAdapter();
-				}
-
-				@Override
-				public Adapter caseLayerApplicationFactory(LayerApplicationFactory object) {
-					return createLayerApplicationFactoryAdapter();
-				}
-
-				@Override
-				public Adapter casePropertySetterRegistry(PropertySetterRegistry object) {
-					return createPropertySetterRegistryAdapter();
-				}
-
-				@Override
-				public Adapter casePropertySetter(PropertySetter object) {
-					return createPropertySetterAdapter();
-				}
-
-				@Override
-				public Adapter caseStringToPropertySetter(Map.Entry<String, PropertySetter> object) {
-					return createStringToPropertySetterAdapter();
-				}
-
-				@Override
-				public Adapter caseLayerOperatorDescriptorRegistry(LayerOperatorDescriptorRegistry object) {
-					return createLayerOperatorDescriptorRegistryAdapter();
-				}
-
-				@Override
-				public Adapter caseLayerOperatorDescriptor(LayerOperatorDescriptor object) {
-					return createLayerOperatorDescriptorAdapter();
-				}
-
-				@Override
-				public Adapter casePropertyOperator(PropertyOperator object) {
-					return createPropertyOperatorAdapter();
-				}
-
-				@Override
-				public Adapter caseAbstractLayerOperator(AbstractLayerOperator object) {
-					return createAbstractLayerOperatorAdapter();
-				}
-
-				@Override
-				public Adapter caseLayerOperator(LayerOperator object) {
-					return createLayerOperatorAdapter();
-				}
-
-				@Override
-				public Adapter caseLayersContainer(LayersContainer object) {
-					return createLayersContainerAdapter();
-				}
-
-				@Override
-				public Adapter caseDefaultPropertyOperator(DefaultPropertyOperator object) {
-					return createDefaultPropertyOperatorAdapter();
-				}
-
-				@Override
-				public Adapter caseAbstractLayer(AbstractLayer object) {
-					return createAbstractLayerAdapter();
-				}
-
-				@Override
-				public Adapter caseStringToTypeInstanceMap(Map.Entry<String, TypeInstance> object) {
-					return createStringToTypeInstanceMapAdapter();
-				}
-
-				@Override
-				public Adapter caseFolder(Folder object) {
-					return createFolderAdapter();
-				}
-
-				@Override
-				public Adapter caseIntInstance(IntInstance object) {
-					return createIntInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseBooleanInstance(BooleanInstance object) {
-					return createBooleanInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseStringInstance(StringInstance object) {
-					return createStringInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseIntType(IntType object) {
-					return createIntTypeAdapter();
-				}
-
-				@Override
-				public Adapter caseBooleanType(BooleanType object) {
-					return createBooleanTypeAdapter();
-				}
-
-				@Override
-				public Adapter caseStringType(StringType object) {
-					return createStringTypeAdapter();
-				}
-
-				@Override
-				public Adapter caseCustomType(CustomType object) {
-					return createCustomTypeAdapter();
-				}
-
-				@Override
-				public Adapter caseTopLayerOperator(TopLayerOperator object) {
-					return createTopLayerOperatorAdapter();
-				}
-
-				@Override
-				public Adapter caseStackedLayerOperator(StackedLayerOperator object) {
-					return createStackedLayerOperatorAdapter();
-				}
-
-				@Override
-				public Adapter caseCustomLayerOperator(CustomLayerOperator object) {
-					return createCustomLayerOperatorAdapter();
-				}
-
-				@Override
-				public Adapter casePropertyIndex(PropertyIndex object) {
-					return createPropertyIndexAdapter();
-				}
-
-				@Override
-				public Adapter caseStringToPropertyIndexMap(Map.Entry<String, PropertyIndex> object) {
-					return createStringToPropertyIndexMapAdapter();
-				}
-
-				@Override
-				public Adapter caseSimpleLayerDescriptor(SimpleLayerDescriptor object) {
-					return createSimpleLayerDescriptorAdapter();
-				}
-
-				@Override
-				public Adapter caseRegExpLayerDescriptor(RegExpLayerDescriptor object) {
-					return createRegExpLayerDescriptorAdapter();
-				}
-
-				@Override
-				public Adapter caseNullInstance(NullInstance object) {
-					return createNullInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseRegExpLayer(RegExpLayer object) {
-					return createRegExpLayerAdapter();
-				}
-
-				@Override
-				public Adapter caseLayer(Layer object) {
-					return createLayerAdapter();
-				}
-
-				@Override
-				public Adapter caseColor(Color object) {
-					return createColorAdapter();
-				}
-
-				@Override
-				public Adapter caseColorInstance(ColorInstance object) {
-					return createColorInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseFillInstance(FillInstance object) {
-					return createFillInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseFill(Fill object) {
-					return createFillAdapter();
-				}
-
-				@Override
-				public Adapter caseFillPropertySetter(FillPropertySetter object) {
-					return createFillPropertySetterAdapter();
-				}
-
-				@Override
-				public Adapter caseIsValidPropertySetter(IsValidPropertySetter object) {
-					return createIsValidPropertySetterAdapter();
-				}
-
-				@Override
-				public Adapter caseNullPropertySetter(NullPropertySetter object) {
-					return createNullPropertySetterAdapter();
-				}
-
-				@Override
-				public Adapter caseLineType(LineType object) {
-					return createLineTypeAdapter();
-				}
-
-				@Override
-				public Adapter caseLineInstance(LineInstance object) {
-					return createLineInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseLinePropertySetter(LinePropertySetter object) {
-					return createLinePropertySetterAdapter();
-				}
-
-				@Override
-				public Adapter caseFontPropertySetter(FontPropertySetter object) {
-					return createFontPropertySetterAdapter();
-				}
-
-				@Override
-				public Adapter caseFontInstance(FontInstance object) {
-					return createFontInstanceAdapter();
-				}
-
-				@Override
-				public Adapter caseFontType(FontType object) {
-					return createFontTypeAdapter();
-				}
-
-				@Override
-				public Adapter caseIsVisiblePropertySetter(IsVisiblePropertySetter object) {
-					return createIsVisiblePropertySetterAdapter();
-				}
-
-				@Override
-				public Adapter caseTopLayerOperatorDescriptor(TopLayerOperatorDescriptor object) {
-					return createTopLayerOperatorDescriptorAdapter();
-				}
-
-				@Override
-				public Adapter caseStackedLayerOperatorDescriptor(StackedLayerOperatorDescriptor object) {
-					return createStackedLayerOperatorDescriptorAdapter();
-				}
-
-				@Override
-				public Adapter caseCustomPropertyOperator(CustomPropertyOperator object) {
-					return createCustomPropertyOperatorAdapter();
-				}
-
-				@Override
-				public Adapter caseAndStackedLayerOperatorDescriptor(AndStackedLayerOperatorDescriptor object) {
-					return createAndStackedLayerOperatorDescriptorAdapter();
-				}
-
-				@Override
-				public Adapter caseOrStackedLayerOperatorDescriptor(OrStackedLayerOperatorDescriptor object) {
-					return createOrStackedLayerOperatorDescriptorAdapter();
-				}
-
-				@Override
-				public Adapter caseIsAbstractUmlSetter(IsAbstractUmlSetter object) {
-					return createIsAbstractUmlSetterAdapter();
-				}
-
-				@Override
-				public Adapter caseAllViewsDerivedLayer(AllViewsDerivedLayer object) {
-					return createAllViewsDerivedLayerAdapter();
-				}
-
-				@Override
-				public Adapter caseStyle(Style object) {
-					return createStyleAdapter();
-				}
-
-				@Override
-				public Adapter caseNamedStyle(NamedStyle object) {
-					return createNamedStyleAdapter();
-				}
-
-				@Override
-				public Adapter defaultCase(EObject object) {
-					return createEObjectAdapter();
-				}
-			};
+	protected LayersSwitch<Adapter> modelSwitch = new LayersSwitch<Adapter>() {
+			@Override
+			public Adapter caseLayerNamedStyle(LayerNamedStyle object) {
+				return createLayerNamedStyleAdapter();
+			}
+			@Override
+			public Adapter caseLayersStack(LayersStack object) {
+				return createLayersStackAdapter();
+			}
+			@Override
+			public Adapter caseLayerExpression(LayerExpression object) {
+				return createLayerExpressionAdapter();
+			}
+			@Override
+			public Adapter caseApplicationDependantElement(ApplicationDependantElement object) {
+				return createApplicationDependantElementAdapter();
+			}
+			@Override
+			public Adapter caseLayersStackApplication(LayersStackApplication object) {
+				return createLayersStackApplicationAdapter();
+			}
+			@Override
+			public Adapter caseFolderElement(FolderElement object) {
+				return createFolderElementAdapter();
+			}
+			@Override
+			public Adapter caseLayerStackDescriptorRegistry(LayerStackDescriptorRegistry object) {
+				return createLayerStackDescriptorRegistryAdapter();
+			}
+			@Override
+			public Adapter casePropertyRegistry(PropertyRegistry object) {
+				return createPropertyRegistryAdapter();
+			}
+			@Override
+			public Adapter caseProperty(Property object) {
+				return createPropertyAdapter();
+			}
+			@Override
+			public Adapter caseType(Type object) {
+				return createTypeAdapter();
+			}
+			@Override
+			public Adapter caseMetamodel(Metamodel object) {
+				return createMetamodelAdapter();
+			}
+			@Override
+			public Adapter caseTypeInstance(TypeInstance object) {
+				return createTypeInstanceAdapter();
+			}
+			@Override
+			public Adapter caseComputePropertyValueCommandItf(ComputePropertyValueCommand object) {
+				return createComputePropertyValueCommandItfAdapter();
+			}
+			@Override
+			public Adapter caseTypeRegistry(TypeRegistry object) {
+				return createTypeRegistryAdapter();
+			}
+			@Override
+			public Adapter caseStringToTypeMap(Map.Entry<String, Type> object) {
+				return createStringToTypeMapAdapter();
+			}
+			@Override
+			public Adapter caseLayerDescriptorRegistry(LayerDescriptorRegistry object) {
+				return createLayerDescriptorRegistryAdapter();
+			}
+			@Override
+			public Adapter caseLayerDescriptor(LayerDescriptor object) {
+				return createLayerDescriptorAdapter();
+			}
+			@Override
+			public Adapter caseLayerApplicationFactory(LayerApplicationFactory object) {
+				return createLayerApplicationFactoryAdapter();
+			}
+			@Override
+			public Adapter casePropertySetterRegistry(PropertySetterRegistry object) {
+				return createPropertySetterRegistryAdapter();
+			}
+			@Override
+			public Adapter casePropertySetter(PropertySetter object) {
+				return createPropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseStringToPropertySetter(Map.Entry<String, PropertySetter> object) {
+				return createStringToPropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseLayerOperatorDescriptorRegistry(LayerOperatorDescriptorRegistry object) {
+				return createLayerOperatorDescriptorRegistryAdapter();
+			}
+			@Override
+			public Adapter caseLayerOperatorDescriptor(LayerOperatorDescriptor object) {
+				return createLayerOperatorDescriptorAdapter();
+			}
+			@Override
+			public Adapter casePropertyOperator(PropertyOperator object) {
+				return createPropertyOperatorAdapter();
+			}
+			@Override
+			public Adapter caseAbstractLayerOperator(AbstractLayerOperator object) {
+				return createAbstractLayerOperatorAdapter();
+			}
+			@Override
+			public Adapter caseLayerOperator(LayerOperator object) {
+				return createLayerOperatorAdapter();
+			}
+			@Override
+			public Adapter caseLayersContainer(LayersContainer object) {
+				return createLayersContainerAdapter();
+			}
+			@Override
+			public Adapter caseDefaultPropertyOperator(DefaultPropertyOperator object) {
+				return createDefaultPropertyOperatorAdapter();
+			}
+			@Override
+			public Adapter caseAbstractLayer(AbstractLayer object) {
+				return createAbstractLayerAdapter();
+			}
+			@Override
+			public Adapter caseStringToTypeInstanceMap(Map.Entry<String, TypeInstance> object) {
+				return createStringToTypeInstanceMapAdapter();
+			}
+			@Override
+			public Adapter caseFolder(Folder object) {
+				return createFolderAdapter();
+			}
+			@Override
+			public Adapter caseIntInstance(IntInstance object) {
+				return createIntInstanceAdapter();
+			}
+			@Override
+			public Adapter caseBooleanInstance(BooleanInstance object) {
+				return createBooleanInstanceAdapter();
+			}
+			@Override
+			public Adapter caseStringInstance(StringInstance object) {
+				return createStringInstanceAdapter();
+			}
+			@Override
+			public Adapter caseIntType(IntType object) {
+				return createIntTypeAdapter();
+			}
+			@Override
+			public Adapter caseBooleanType(BooleanType object) {
+				return createBooleanTypeAdapter();
+			}
+			@Override
+			public Adapter caseStringType(StringType object) {
+				return createStringTypeAdapter();
+			}
+			@Override
+			public Adapter caseCustomType(CustomType object) {
+				return createCustomTypeAdapter();
+			}
+			@Override
+			public Adapter caseTopLayerOperator(TopLayerOperator object) {
+				return createTopLayerOperatorAdapter();
+			}
+			@Override
+			public Adapter caseStackedLayerOperator(StackedLayerOperator object) {
+				return createStackedLayerOperatorAdapter();
+			}
+			@Override
+			public Adapter caseCustomLayerOperator(CustomLayerOperator object) {
+				return createCustomLayerOperatorAdapter();
+			}
+			@Override
+			public Adapter casePropertyIndex(PropertyIndex object) {
+				return createPropertyIndexAdapter();
+			}
+			@Override
+			public Adapter caseStringToPropertyIndexMap(Map.Entry<String, PropertyIndex> object) {
+				return createStringToPropertyIndexMapAdapter();
+			}
+			@Override
+			public Adapter caseSimpleLayerDescriptor(SimpleLayerDescriptor object) {
+				return createSimpleLayerDescriptorAdapter();
+			}
+			@Override
+			public Adapter caseRegExpLayerDescriptor(RegExpLayerDescriptor object) {
+				return createRegExpLayerDescriptorAdapter();
+			}
+			@Override
+			public Adapter caseNullInstance(NullInstance object) {
+				return createNullInstanceAdapter();
+			}
+			@Override
+			public Adapter caseRegExpLayer(RegExpLayer object) {
+				return createRegExpLayerAdapter();
+			}
+			@Override
+			public Adapter caseLayer(Layer object) {
+				return createLayerAdapter();
+			}
+			@Override
+			public Adapter caseColor(Color object) {
+				return createColorAdapter();
+			}
+			@Override
+			public Adapter caseColorInstance(ColorInstance object) {
+				return createColorInstanceAdapter();
+			}
+			@Override
+			public Adapter caseFillInstance(FillInstance object) {
+				return createFillInstanceAdapter();
+			}
+			@Override
+			public Adapter caseFill(Fill object) {
+				return createFillAdapter();
+			}
+			@Override
+			public Adapter caseFillPropertySetter(FillPropertySetter object) {
+				return createFillPropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseIsValidPropertySetter(IsValidPropertySetter object) {
+				return createIsValidPropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseNullPropertySetter(NullPropertySetter object) {
+				return createNullPropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseLineType(LineType object) {
+				return createLineTypeAdapter();
+			}
+			@Override
+			public Adapter caseLineInstance(LineInstance object) {
+				return createLineInstanceAdapter();
+			}
+			@Override
+			public Adapter caseLinePropertySetter(LinePropertySetter object) {
+				return createLinePropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseFontPropertySetter(FontPropertySetter object) {
+				return createFontPropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseFontInstance(FontInstance object) {
+				return createFontInstanceAdapter();
+			}
+			@Override
+			public Adapter caseFontType(FontType object) {
+				return createFontTypeAdapter();
+			}
+			@Override
+			public Adapter caseIsVisiblePropertySetter(IsVisiblePropertySetter object) {
+				return createIsVisiblePropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseTopLayerOperatorDescriptor(TopLayerOperatorDescriptor object) {
+				return createTopLayerOperatorDescriptorAdapter();
+			}
+			@Override
+			public Adapter caseStackedLayerOperatorDescriptor(StackedLayerOperatorDescriptor object) {
+				return createStackedLayerOperatorDescriptorAdapter();
+			}
+			@Override
+			public Adapter caseCustomPropertyOperator(CustomPropertyOperator object) {
+				return createCustomPropertyOperatorAdapter();
+			}
+			@Override
+			public Adapter caseAndStackedLayerOperatorDescriptor(AndStackedLayerOperatorDescriptor object) {
+				return createAndStackedLayerOperatorDescriptorAdapter();
+			}
+			@Override
+			public Adapter caseOrStackedLayerOperatorDescriptor(OrStackedLayerOperatorDescriptor object) {
+				return createOrStackedLayerOperatorDescriptorAdapter();
+			}
+			@Override
+			public Adapter caseIsAbstractUmlSetter(IsAbstractUmlSetter object) {
+				return createIsAbstractUmlSetterAdapter();
+			}
+			@Override
+			public Adapter caseAllViewsDerivedLayer(AllViewsDerivedLayer object) {
+				return createAllViewsDerivedLayerAdapter();
+			}
+			@Override
+			public Adapter caseCSSPropertySetter(CSSPropertySetter object) {
+				return createCSSPropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseCSSType(CSSType object) {
+				return createCSSTypeAdapter();
+			}
+			@Override
+			public Adapter caseCSSInstance(CSSInstance object) {
+				return createCSSInstanceAdapter();
+			}
+			@Override
+			public Adapter caseStyle(Style object) {
+				return createStyleAdapter();
+			}
+			@Override
+			public Adapter caseNamedStyle(NamedStyle object) {
+				return createNamedStyleAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
 
 	/**
 	 * Creates an adapter for the <code>target</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param target
-	 *            the object to adapt.
+	 * @param target the object to adapt.
 	 * @return the adapter for the <code>target</code>.
 	 * @generated
 	 */
 	@Override
 	public Adapter createAdapter(Notifier target) {
-		return modelSwitch.doSwitch((EObject) target);
+		return modelSwitch.doSwitch((EObject)target);
 	}
 
 
@@ -531,7 +465,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerNamedStyle
 	 * @generated
@@ -546,7 +479,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersStack
 	 * @generated
@@ -561,7 +493,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.Layer
 	 * @generated
@@ -576,7 +507,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.Color
 	 * @generated
@@ -591,7 +521,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.ColorInstance
 	 * @generated
@@ -606,7 +535,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.FillInstance
 	 * @generated
@@ -621,7 +549,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.Fill
 	 * @generated
@@ -636,7 +563,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.FillPropertySetter
 	 * @generated
@@ -651,7 +577,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.IsValidPropertySetter
 	 * @generated
@@ -666,7 +591,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.NullPropertySetter
 	 * @generated
@@ -681,7 +605,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LineType
 	 * @generated
@@ -696,7 +619,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LineInstance
 	 * @generated
@@ -711,7 +633,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LinePropertySetter
 	 * @generated
@@ -726,7 +647,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.FontPropertySetter
 	 * @generated
@@ -741,7 +661,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.FontInstance
 	 * @generated
@@ -756,7 +675,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.FontType
 	 * @generated
@@ -771,7 +689,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.IsVisiblePropertySetter
 	 * @generated
@@ -786,7 +703,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry
 	 * @generated
@@ -801,7 +717,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.TopLayerOperatorDescriptor
 	 * @generated
@@ -816,7 +731,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.StackedLayerOperatorDescriptor
 	 * @generated
@@ -831,7 +745,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator
 	 * @generated
@@ -846,7 +759,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.AndStackedLayerOperatorDescriptor
 	 * @generated
@@ -861,7 +773,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.OrStackedLayerOperatorDescriptor
 	 * @generated
@@ -876,7 +787,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.IsAbstractUmlSetter
 	 * @generated
@@ -891,7 +801,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.AllViewsDerivedLayer
 	 * @generated
@@ -901,12 +810,53 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.layers.stackmodel.layers.CSSPropertySetter <em>CSS Property Setter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.layers.stackmodel.layers.CSSPropertySetter
+	 * @generated
+	 */
+	public Adapter createCSSPropertySetterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.layers.stackmodel.layers.CSSType <em>CSS Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.layers.stackmodel.layers.CSSType
+	 * @generated
+	 */
+	public Adapter createCSSTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.layers.stackmodel.layers.CSSInstance <em>CSS Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.layers.stackmodel.layers.CSSInstance
+	 * @generated
+	 */
+	public Adapter createCSSInstanceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance <em>Type Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance
 	 * @generated
@@ -921,7 +871,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand
 	 * @generated
@@ -936,7 +885,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see java.util.Map.Entry
 	 * @generated
@@ -951,7 +899,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerDescriptor
 	 * @generated
@@ -966,7 +913,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerApplicationFactory
 	 * @generated
@@ -981,7 +927,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry
 	 * @generated
@@ -996,7 +941,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertySetter
 	 * @generated
@@ -1011,7 +955,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see java.util.Map.Entry
 	 * @generated
@@ -1026,7 +969,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayer
 	 * @generated
@@ -1041,7 +983,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.Property
 	 * @generated
@@ -1056,7 +997,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.FolderElement
 	 * @generated
@@ -1071,7 +1011,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression
 	 * @generated
@@ -1086,7 +1025,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.ApplicationDependantElement
 	 * @generated
@@ -1101,7 +1039,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.Type
 	 * @generated
@@ -1116,7 +1053,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.Metamodel
 	 * @generated
@@ -1131,7 +1067,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.Folder
 	 * @generated
@@ -1146,7 +1081,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.IntInstance
 	 * @generated
@@ -1161,7 +1095,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.BooleanInstance
 	 * @generated
@@ -1176,7 +1109,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.StringInstance
 	 * @generated
@@ -1191,7 +1123,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.IntType
 	 * @generated
@@ -1206,7 +1137,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.BooleanType
 	 * @generated
@@ -1221,7 +1151,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.StringType
 	 * @generated
@@ -1236,7 +1165,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.CustomType
 	 * @generated
@@ -1251,7 +1179,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication
 	 * @generated
@@ -1266,7 +1193,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerStackDescriptorRegistry
 	 * @generated
@@ -1281,7 +1207,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry
 	 * @generated
@@ -1296,7 +1221,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see java.util.Map.Entry
 	 * @generated
@@ -1311,7 +1235,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.SimpleLayerDescriptor
 	 * @generated
@@ -1326,7 +1249,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayerDescriptor
 	 * @generated
@@ -1341,7 +1263,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.NullInstance
 	 * @generated
@@ -1356,7 +1277,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer
 	 * @generated
@@ -1371,7 +1291,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertyIndex
 	 * @generated
@@ -1386,7 +1305,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.TypeRegistry
 	 * @generated
@@ -1401,7 +1319,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see java.util.Map.Entry
 	 * @generated
@@ -1416,7 +1333,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerDescriptorRegistry
 	 * @generated
@@ -1431,7 +1347,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperator
 	 * @generated
@@ -1446,7 +1361,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersContainer
 	 * @generated
@@ -1461,7 +1375,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator
 	 * @generated
@@ -1476,7 +1389,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor
 	 * @generated
@@ -1491,7 +1403,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator
 	 * @generated
@@ -1506,7 +1417,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.DefaultPropertyOperator
 	 * @generated
@@ -1521,7 +1431,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.TopLayerOperator
 	 * @generated
@@ -1536,7 +1445,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.StackedLayerOperator
 	 * @generated
@@ -1551,7 +1459,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.CustomLayerOperator
 	 * @generated
@@ -1566,7 +1473,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.gmf.runtime.notation.Style
 	 * @generated
@@ -1581,7 +1487,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @see org.eclipse.gmf.runtime.notation.NamedStyle
 	 * @generated
@@ -1595,7 +1500,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null.
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the new adapter.
 	 * @generated
 	 */

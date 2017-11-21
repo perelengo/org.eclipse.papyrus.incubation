@@ -20,11 +20,11 @@ package org.eclipse.papyrus.layers.stackmodel.layers;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#getLayerOperatorDescriptor <em>Layer Operator Descriptor</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#getLayerOperatorDescriptorName <em>Layer Operator Descriptor Name</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#getLayerOperatorDescriptor <em>Layer Operator Descriptor</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#getLayerOperatorDescriptorName <em>Layer Operator Descriptor Name</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getAbstractLayerOperator()
  * @model abstract="true"
@@ -39,7 +39,6 @@ public interface AbstractLayerOperator extends LayerOperator {
 	 * If the meaning of the '<em>Layer Operator Descriptor</em>' reference isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Layer Operator Descriptor</em>' reference.
 	 * @see #setLayerOperatorDescriptor(LayerOperatorDescriptor)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getAbstractLayerOperator_LayerOperatorDescriptor()
@@ -52,9 +51,7 @@ public interface AbstractLayerOperator extends LayerOperator {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#getLayerOperatorDescriptor <em>Layer Operator Descriptor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Layer Operator Descriptor</em>' reference.
+	 * @param value the new value of the '<em>Layer Operator Descriptor</em>' reference.
 	 * @see #getLayerOperatorDescriptor()
 	 * @generated
 	 */
@@ -67,7 +64,6 @@ public interface AbstractLayerOperator extends LayerOperator {
 	 * If the meaning of the '<em>Layer Operator Descriptor Name</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Layer Operator Descriptor Name</em>' attribute.
 	 * @see #setLayerOperatorDescriptorName(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getAbstractLayerOperator_LayerOperatorDescriptorName()
@@ -80,9 +76,7 @@ public interface AbstractLayerOperator extends LayerOperator {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#getLayerOperatorDescriptorName <em>Layer Operator Descriptor Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Layer Operator Descriptor Name</em>' attribute.
+	 * @param value the new value of the '<em>Layer Operator Descriptor Name</em>' attribute.
 	 * @see #getLayerOperatorDescriptorName()
 	 * @generated
 	 */
@@ -91,7 +85,6 @@ public interface AbstractLayerOperator extends LayerOperator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model kind="operation" dataType="org.eclipse.papyrus.layers.stackmodel.layers.boolean" required="true" ordered="false"
 	 * @generated
 	 */
@@ -100,7 +93,6 @@ public interface AbstractLayerOperator extends LayerOperator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model
 	 * @generated
 	 */

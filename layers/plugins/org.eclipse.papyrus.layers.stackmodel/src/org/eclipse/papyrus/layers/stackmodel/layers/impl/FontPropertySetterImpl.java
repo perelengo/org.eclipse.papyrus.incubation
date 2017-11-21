@@ -25,8 +25,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Font Property Setter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -45,7 +43,6 @@ public class FontPropertySetterImpl extends PropertySetterImpl implements FontPr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -69,8 +66,7 @@ public class FontPropertySetterImpl extends PropertySetterImpl implements FontPr
 		if (view instanceof FontStyle) {
 			// Try directly (case of Shape ...)
 			style = (FontStyle) view;
-		}
-		else {
+		} else {
 			// Try as additionnal style
 			style = (FontStyle) view.getStyle(NotationPackage.eINSTANCE.getFontStyle());
 		}

@@ -22,10 +22,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.TypeRegistry#getTypes <em>Types</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.TypeRegistry#getTypes <em>Types</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getTypeRegistry()
  * @model
@@ -41,10 +41,9 @@ public interface TypeRegistry extends EObject {
 	 * If the meaning of the '<em>Types</em>' map isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Types</em>' map.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getTypeRegistry_Types()
-	 * @model mapType="org.eclipse.papyrus.layers.stackmodel.layers.StringToTypeMap<org.eclipse.papyrus.layers.stackmodel.layers.String, org.eclipse.papyrus.layers.stackmodel.layers.Type>" ordered="false"
+	 * @model mapType="org.eclipse.papyrus.layers.stackmodel.layers.StringToTypeMap&lt;org.eclipse.papyrus.layers.stackmodel.layers.String, org.eclipse.papyrus.layers.stackmodel.layers.Type&gt;" ordered="false"
 	 * @generated
 	 */
 	EMap<String, Type> getTypes();

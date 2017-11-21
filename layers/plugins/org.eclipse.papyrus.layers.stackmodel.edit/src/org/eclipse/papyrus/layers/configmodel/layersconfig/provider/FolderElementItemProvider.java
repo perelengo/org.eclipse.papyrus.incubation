@@ -83,19 +83,17 @@ public class FolderElementItemProvider
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_FolderElement_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FolderElement_name_feature", "_UI_FolderElement_type"),
-						LayersconfigPackage.Literals.FOLDER_ELEMENT__NAME,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_FolderElement_name_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_FolderElement_name_feature", "_UI_FolderElement_type"),
+				LayersconfigPackage.Literals.FOLDER_ELEMENT__NAME,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -120,9 +118,7 @@ public class FolderElementItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((FolderElement) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_FolderElement_type") :
-				getString("_UI_FolderElement_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_FolderElement_type") : getString("_UI_FolderElement_type") + " " + label;
 	}
 
 	/**

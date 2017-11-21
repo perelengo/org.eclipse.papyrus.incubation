@@ -21,8 +21,11 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.StylesheetsPackage;
+import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.impl.StylesheetsPackageImpl;
 import org.eclipse.papyrus.layers.stackmodel.BadStateException;
 import org.eclipse.papyrus.layers.stackmodel.LayersException;
 import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
@@ -34,6 +37,9 @@ import org.eclipse.papyrus.layers.stackmodel.layers.AndStackedLayerOperatorDescr
 import org.eclipse.papyrus.layers.stackmodel.layers.ApplicationDependantElement;
 import org.eclipse.papyrus.layers.stackmodel.layers.BooleanInstance;
 import org.eclipse.papyrus.layers.stackmodel.layers.BooleanType;
+import org.eclipse.papyrus.layers.stackmodel.layers.CSSInstance;
+import org.eclipse.papyrus.layers.stackmodel.layers.CSSPropertySetter;
+import org.eclipse.papyrus.layers.stackmodel.layers.CSSType;
 import org.eclipse.papyrus.layers.stackmodel.layers.Color;
 import org.eclipse.papyrus.layers.stackmodel.layers.ColorInstance;
 import org.eclipse.papyrus.layers.stackmodel.layers.CustomLayerOperator;
@@ -101,14 +107,14 @@ import org.eclipse.papyrus.layers.stackmodel.operators.CustomPropertyOperatorsIn
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerNamedStyleEClass = null;
@@ -116,7 +122,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layersStackEClass = null;
@@ -124,7 +130,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerExpressionEClass = null;
@@ -132,7 +138,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass applicationDependantElementEClass = null;
@@ -140,7 +146,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layersStackApplicationEClass = null;
@@ -148,7 +154,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass folderElementEClass = null;
@@ -156,7 +162,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerStackDescriptorRegistryEClass = null;
@@ -164,7 +170,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass propertyRegistryEClass = null;
@@ -172,7 +178,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass propertyEClass = null;
@@ -180,7 +186,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass typeEClass = null;
@@ -188,7 +194,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass metamodelEClass = null;
@@ -196,7 +202,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass typeInstanceEClass = null;
@@ -204,7 +210,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass computePropertyValueCommandItfEClass = null;
@@ -212,7 +218,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass typeRegistryEClass = null;
@@ -220,7 +226,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass stringToTypeMapEClass = null;
@@ -228,7 +234,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerDescriptorRegistryEClass = null;
@@ -236,7 +242,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerDescriptorEClass = null;
@@ -244,7 +250,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerApplicationFactoryEClass = null;
@@ -252,7 +258,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass propertySetterRegistryEClass = null;
@@ -260,7 +266,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass propertySetterEClass = null;
@@ -268,7 +274,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass stringToPropertySetterEClass = null;
@@ -276,7 +282,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass abstractLayerEClass = null;
@@ -284,7 +290,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass stringToTypeInstanceMapEClass = null;
@@ -292,7 +298,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass folderEClass = null;
@@ -300,7 +306,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass intInstanceEClass = null;
@@ -308,7 +314,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass booleanInstanceEClass = null;
@@ -316,7 +322,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass stringInstanceEClass = null;
@@ -324,7 +330,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass intTypeEClass = null;
@@ -332,7 +338,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass booleanTypeEClass = null;
@@ -340,7 +346,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass stringTypeEClass = null;
@@ -348,7 +354,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass customTypeEClass = null;
@@ -356,7 +362,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerOperatorEClass = null;
@@ -364,7 +370,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layersContainerEClass = null;
@@ -372,7 +378,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass abstractLayerOperatorEClass = null;
@@ -380,7 +386,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerOperatorDescriptorEClass = null;
@@ -388,7 +394,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass propertyOperatorEClass = null;
@@ -396,7 +402,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass defaultPropertyOperatorEClass = null;
@@ -404,7 +410,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass topLayerOperatorEClass = null;
@@ -412,7 +418,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass stackedLayerOperatorEClass = null;
@@ -420,7 +426,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass customLayerOperatorEClass = null;
@@ -428,7 +434,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass propertyIndexEClass = null;
@@ -436,7 +442,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass stringToPropertyIndexMapEClass = null;
@@ -444,7 +450,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass simpleLayerDescriptorEClass = null;
@@ -452,7 +458,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass regExpLayerDescriptorEClass = null;
@@ -460,7 +466,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass nullInstanceEClass = null;
@@ -468,7 +474,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass regExpLayerEClass = null;
@@ -476,7 +482,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerEClass = null;
@@ -484,7 +490,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass colorEClass = null;
@@ -492,7 +498,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass colorInstanceEClass = null;
@@ -500,7 +506,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass fillInstanceEClass = null;
@@ -508,7 +514,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass fillEClass = null;
@@ -516,7 +522,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass fillPropertySetterEClass = null;
@@ -524,7 +530,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass isValidPropertySetterEClass = null;
@@ -532,7 +538,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass nullPropertySetterEClass = null;
@@ -540,7 +546,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass lineTypeEClass = null;
@@ -548,7 +554,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass lineInstanceEClass = null;
@@ -556,7 +562,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass linePropertySetterEClass = null;
@@ -564,7 +570,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass fontPropertySetterEClass = null;
@@ -572,7 +578,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass fontInstanceEClass = null;
@@ -580,7 +586,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass fontTypeEClass = null;
@@ -588,7 +594,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass isVisiblePropertySetterEClass = null;
@@ -596,7 +602,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass layerOperatorDescriptorRegistryEClass = null;
@@ -604,7 +610,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass topLayerOperatorDescriptorEClass = null;
@@ -612,7 +618,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass stackedLayerOperatorDescriptorEClass = null;
@@ -620,7 +626,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass customPropertyOperatorEClass = null;
@@ -628,7 +634,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass andStackedLayerOperatorDescriptorEClass = null;
@@ -636,7 +642,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass orStackedLayerOperatorDescriptorEClass = null;
@@ -644,7 +650,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass isAbstractUmlSetterEClass = null;
@@ -652,7 +658,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EClass allViewsDerivedLayerEClass = null;
@@ -660,7 +666,31 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
+	 * @generated
+	 */
+	private EClass cssPropertySetterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	private EClass cssTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	private EClass cssInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EEnum layerStateEEnum = null;
@@ -668,7 +698,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EEnum eventLevelEEnum = null;
@@ -676,7 +706,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType stringEDataType = null;
@@ -684,7 +714,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType booleanEDataType = null;
@@ -692,7 +722,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType ePackageEDataType = null;
@@ -700,7 +730,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType badStateExceptionEDataType = null;
@@ -708,7 +738,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType layersExceptionEDataType = null;
@@ -716,7 +746,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType notFoundExceptionEDataType = null;
@@ -724,7 +754,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType computePropertyValueCommandEDataType = null;
@@ -732,7 +762,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType intEDataType = null;
@@ -740,7 +770,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType objectEDataType = null;
@@ -748,17 +778,22 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private EDataType customPropertyOpertorInstanceEDataType = null;
 
 	/**
-	 * Creates an instance of the model <b>Package</b>, registered with {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
 	 * <p>
-	 * Note: the correct way to create the package is via the static factory method {@link #init init()}, which also performs initialization of the package, or returns the registered package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 *
+	 * Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#eNS_URI
 	 * @see #init()
@@ -771,26 +806,27 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private static boolean isInited = false;
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 *
+	 * 
 	 * <p>
-	 * This method is used to initialize {@link LayersPackage#eINSTANCE} when that field is accessed. Clients should not invoke it directly. Instead, they should simply access that field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 *
+	 * This method is used to initialize {@link LayersPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
 	public static LayersPackage init() {
-		if (isInited) {
+		if (isInited)
 			return (LayersPackage) EPackage.Registry.INSTANCE.getEPackage(LayersPackage.eNS_URI);
-		}
 
 		// Obtain or create and register package
 		LayersPackageImpl theLayersPackage = (LayersPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof LayersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new LayersPackageImpl());
@@ -798,13 +834,20 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		EcorePackage.eINSTANCE.eClass();
 		NotationPackage.eINSTANCE.eClass();
+
+		// Obtain or create and register interdependencies
+		StylesheetsPackageImpl theStylesheetsPackage = (StylesheetsPackageImpl) (EPackage.Registry.INSTANCE.getEPackage(StylesheetsPackage.eNS_URI) instanceof StylesheetsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StylesheetsPackage.eNS_URI)
+				: StylesheetsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theLayersPackage.createPackageContents();
+		theStylesheetsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theLayersPackage.initializePackageContents();
+		theStylesheetsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theLayersPackage.freeze();
@@ -818,7 +861,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -829,7 +872,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -840,7 +883,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -851,7 +894,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -862,7 +905,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -873,7 +916,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -884,7 +927,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -895,7 +938,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -906,7 +949,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -917,7 +960,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -928,7 +971,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -939,7 +982,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -950,7 +993,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -961,7 +1004,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -972,7 +1015,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -983,7 +1026,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -994,7 +1037,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1005,7 +1048,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1016,7 +1059,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1027,7 +1070,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1038,7 +1081,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1049,7 +1092,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1060,7 +1103,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1071,7 +1114,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1082,7 +1125,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1093,7 +1136,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1104,7 +1147,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1115,7 +1158,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1126,7 +1169,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1137,7 +1180,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1148,7 +1191,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1159,7 +1202,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1170,7 +1213,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1181,7 +1224,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1192,7 +1235,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1203,7 +1246,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1214,7 +1257,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1225,7 +1268,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1236,7 +1279,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1247,7 +1290,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1258,7 +1301,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1269,7 +1312,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1280,7 +1323,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1291,7 +1334,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1302,7 +1345,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1313,7 +1356,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1324,7 +1367,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1335,7 +1378,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1346,7 +1389,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1357,7 +1400,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1368,7 +1411,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1379,7 +1422,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1390,7 +1433,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1401,7 +1444,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1412,7 +1455,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1423,7 +1466,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1434,7 +1477,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1445,7 +1488,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1456,7 +1499,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1467,7 +1510,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1478,7 +1521,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1489,7 +1532,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1500,7 +1543,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1511,7 +1554,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1522,7 +1565,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1533,7 +1576,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1544,7 +1587,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1555,7 +1598,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1566,7 +1609,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1577,7 +1620,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1588,7 +1631,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1599,7 +1642,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1610,7 +1653,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1621,7 +1664,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1632,7 +1675,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1643,7 +1686,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1654,7 +1697,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1665,7 +1708,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1676,7 +1719,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1687,7 +1730,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1698,7 +1741,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1709,7 +1752,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1720,7 +1763,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1731,7 +1774,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1742,7 +1785,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1753,7 +1796,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1764,7 +1807,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1775,7 +1818,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1786,7 +1829,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1797,7 +1840,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1808,7 +1851,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1819,7 +1862,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1830,7 +1873,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1841,7 +1884,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1852,7 +1895,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1863,7 +1906,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1874,7 +1917,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1885,7 +1928,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1896,7 +1939,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1907,7 +1950,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1918,7 +1961,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1929,7 +1972,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1940,7 +1983,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1951,7 +1994,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1962,7 +2005,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1973,7 +2016,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1984,7 +2027,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -1995,7 +2038,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2006,7 +2049,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2017,7 +2060,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2028,7 +2071,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2039,7 +2082,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2050,7 +2093,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2061,7 +2104,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2072,7 +2115,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2083,7 +2126,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2094,7 +2137,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2105,7 +2148,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2116,7 +2159,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2127,7 +2170,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2138,7 +2181,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2149,7 +2192,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2160,7 +2203,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2171,7 +2214,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2182,7 +2225,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2193,7 +2236,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2204,7 +2247,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2215,7 +2258,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2226,7 +2269,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2237,7 +2280,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2248,7 +2291,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2259,7 +2302,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2270,7 +2313,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2281,7 +2324,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2292,7 +2335,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2303,7 +2346,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2314,7 +2357,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2325,7 +2368,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2336,7 +2379,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2347,7 +2390,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2358,7 +2401,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2369,7 +2412,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2380,7 +2423,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2391,7 +2434,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2402,7 +2445,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2413,7 +2456,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2424,7 +2467,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2435,7 +2478,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2446,7 +2489,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2457,7 +2500,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2468,7 +2511,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2479,7 +2522,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2490,7 +2533,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2501,7 +2544,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2512,7 +2555,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2523,7 +2566,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2534,7 +2577,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2545,7 +2588,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2556,7 +2599,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2567,7 +2610,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2578,7 +2621,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2589,7 +2632,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2600,7 +2643,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2611,7 +2654,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2622,7 +2665,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2633,7 +2676,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2644,7 +2687,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2655,7 +2698,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2666,7 +2709,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2677,7 +2720,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2688,7 +2731,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2699,7 +2742,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2710,7 +2753,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2721,7 +2764,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2732,7 +2775,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2743,7 +2786,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2754,7 +2797,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2765,7 +2808,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2776,7 +2819,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2787,7 +2830,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2798,7 +2841,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2809,7 +2852,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2820,7 +2863,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2831,7 +2874,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2842,7 +2885,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2853,7 +2896,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2864,7 +2907,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2875,7 +2918,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2886,7 +2929,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2897,7 +2940,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2908,7 +2951,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2919,7 +2962,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2930,7 +2973,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2941,7 +2984,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2952,7 +2995,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2963,7 +3006,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2974,7 +3017,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2985,7 +3028,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -2996,7 +3039,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3007,7 +3050,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3018,7 +3061,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3029,7 +3072,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3040,7 +3083,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3051,7 +3094,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3062,7 +3105,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3073,7 +3116,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3084,7 +3127,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3095,7 +3138,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3106,7 +3149,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3117,7 +3160,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3128,7 +3171,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3139,7 +3182,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3150,7 +3193,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3161,7 +3204,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3172,7 +3215,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3183,7 +3226,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3194,7 +3237,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3205,7 +3248,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3216,7 +3259,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3227,7 +3270,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3238,7 +3281,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3249,7 +3292,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3260,7 +3303,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3271,7 +3314,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3282,7 +3325,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3293,7 +3336,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3304,7 +3347,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3315,7 +3358,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3326,7 +3369,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3337,7 +3380,51 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
+	 * @generated
+	 */
+	@Override
+	public EClass getCSSPropertySetter() {
+		return cssPropertySetterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public EClass getCSSType() {
+		return cssTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public EClass getCSSInstance() {
+		return cssInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public EReference getCSSInstance_Stylesheet() {
+		return (EReference) cssInstanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3348,7 +3435,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3359,7 +3446,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3370,7 +3457,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3381,7 +3468,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3392,7 +3479,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3403,7 +3490,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3414,7 +3501,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3425,7 +3512,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3436,7 +3523,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3447,7 +3534,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3458,7 +3545,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3469,7 +3556,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -3480,7 +3567,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private boolean isCreated = false;
@@ -3490,13 +3577,12 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	public void createPackageContents() {
-		if (isCreated) {
+		if (isCreated)
 			return;
-		}
 		isCreated = true;
 
 		// Create classes and their features
@@ -3798,6 +3884,13 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 
 		allViewsDerivedLayerEClass = createEClass(ALL_VIEWS_DERIVED_LAYER);
 
+		cssPropertySetterEClass = createEClass(CSS_PROPERTY_SETTER);
+
+		cssTypeEClass = createEClass(CSS_TYPE);
+
+		cssInstanceEClass = createEClass(CSS_INSTANCE);
+		createEReference(cssInstanceEClass, CSS_INSTANCE__STYLESHEET);
+
 		// Create enums
 		layerStateEEnum = createEEnum(LAYER_STATE);
 		eventLevelEEnum = createEEnum(EVENT_LEVEL);
@@ -3818,7 +3911,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	private boolean isInitialized = false;
@@ -3828,13 +3921,12 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	 * method is guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	public void initializePackageContents() {
-		if (isInitialized) {
+		if (isInitialized)
 			return;
-		}
 		isInitialized = true;
 
 		// Initialize package
@@ -3844,6 +3936,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 
 		// Obtain other dependent packages
 		NotationPackage theNotationPackage = (NotationPackage) EPackage.Registry.INSTANCE.getEPackage(NotationPackage.eNS_URI);
+		StylesheetsPackage theStylesheetsPackage = (StylesheetsPackage) EPackage.Registry.INSTANCE.getEPackage(StylesheetsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -3900,6 +3993,9 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		orStackedLayerOperatorDescriptorEClass.getESuperTypes().add(this.getStackedLayerOperatorDescriptor());
 		isAbstractUmlSetterEClass.getESuperTypes().add(this.getPropertySetter());
 		allViewsDerivedLayerEClass.getESuperTypes().add(this.getAbstractLayer());
+		cssPropertySetterEClass.getESuperTypes().add(this.getPropertySetter());
+		cssTypeEClass.getESuperTypes().add(this.getType());
+		cssInstanceEClass.getESuperTypes().add(this.getTypeInstance());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(layerNamedStyleEClass, LayerNamedStyle.class, "LayerNamedStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4198,8 +4294,8 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		initEClass(abstractLayerOperatorEClass, AbstractLayerOperator.class, "AbstractLayerOperator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractLayerOperator_LayerOperatorDescriptor(), this.getLayerOperatorDescriptor(), null, "layerOperatorDescriptor", null, 1, 1, AbstractLayerOperator.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAbstractLayerOperator_LayerOperatorDescriptorName(), this.getString(), "layerOperatorDescriptorName", null, 1, 1, AbstractLayerOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAbstractLayerOperator_LayerOperatorDescriptorName(), this.getString(), "layerOperatorDescriptorName", null, 1, 1, AbstractLayerOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEOperation(getAbstractLayerOperator__IsDescriptorSet(), this.getboolean(), "isDescriptorSet", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -4218,8 +4314,8 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		initEClass(abstractLayerEClass, AbstractLayer.class, "AbstractLayer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractLayer_PropertyValues(), this.getTypeInstance(), null, "propertyValues", null, 0, -1, AbstractLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getAbstractLayer_PropertyValueMap(), this.getStringToTypeInstanceMap(), null, "propertyValueMap", null, 0, -1, AbstractLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAbstractLayer_PropertyValueMap(), this.getStringToTypeInstanceMap(), null, "propertyValueMap", null, 0, -1, AbstractLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				!IS_DERIVED, !IS_ORDERED);
 		initEReference(getAbstractLayer_LayerDescriptor(), this.getLayerDescriptor(), null, "layerDescriptor", null, 1, 1, AbstractLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
 				!IS_DERIVED, !IS_ORDERED);
 		initEReference(getAbstractLayer_Views(), theNotationPackage.getView(), null, "views", null, 0, -1, AbstractLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -4278,7 +4374,8 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		initEAttribute(getPropertyIndex_Index(), this.getint(), "index", null, 1, 1, PropertyIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(stringToPropertyIndexMapEClass, Map.Entry.class, "StringToPropertyIndexMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStringToPropertyIndexMap_Value(), this.getPropertyIndex(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getStringToPropertyIndexMap_Value(), this.getPropertyIndex(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 		initEAttribute(getStringToPropertyIndexMap_Key(), this.getString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(simpleLayerDescriptorEClass, SimpleLayerDescriptor.class, "SimpleLayerDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4294,7 +4391,8 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		initEAttribute(getRegExpLayer_Language(), this.getString(), "language", null, 1, 1, RegExpLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRegExpLayer_IsDomainChangedEventDependant(), this.getboolean(), "isDomainChangedEventDependant", null, 1, 1, RegExpLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRegExpLayer_DomainChangedEventLevel(), this.getEventLevel(), "domainChangedEventLevel", null, 1, 1, RegExpLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRegExpLayer_IsDiagramChangedEventDependant(), this.getboolean(), "isDiagramChangedEventDependant", null, 1, 1, RegExpLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRegExpLayer_IsDiagramChangedEventDependant(), this.getboolean(), "isDiagramChangedEventDependant", null, 1, 1, RegExpLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 		initEAttribute(getRegExpLayer_DiagramChangedEventLevel(), this.getEventLevel(), "diagramChangedEventLevel", null, 1, 1, RegExpLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRegExpLayer_ExpressionContextObjectType(), this.getString(), "expressionContextObjectType", null, 1, 1, RegExpLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -4383,6 +4481,14 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 
 		initEClass(allViewsDerivedLayerEClass, AllViewsDerivedLayer.class, "AllViewsDerivedLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(cssPropertySetterEClass, CSSPropertySetter.class, "CSSPropertySetter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(cssTypeEClass, CSSType.class, "CSSType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(cssInstanceEClass, CSSInstance.class, "CSSInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCSSInstance_Stylesheet(), theStylesheetsPackage.getStyleSheet(), null, "stylesheet", null, 1, 1, CSSInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(layerStateEEnum, LayerState.class, "LayerState");
 		addEEnumLiteral(layerStateEEnum, LayerState.DETACHED);
@@ -4416,7 +4522,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {

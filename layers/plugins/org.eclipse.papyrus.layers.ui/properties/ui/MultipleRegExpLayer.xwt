@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Composite xmlns:j="clr-namespace:java.lang" xmlns="http://www.eclipse.org/xwt/presentation"
+<Composite xmlns="http://www.eclipse.org/xwt/presentation"
+	xmlns:j="clr-namespace:java.lang" xmlns:ppe="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets"
 	xmlns:ppel="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets.layout"
-	xmlns:ppe="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets"
 	xmlns:x="http://www.eclipse.org/xwt">
 	<Composite.layout>
 		<ppel:PropertiesLayout></ppel:PropertiesLayout>
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}" property="layers:RegExpLayer:language"></ppe:StringEditor>
+		<ppe:BooleanRadio input="{Binding}"
+			property="layers:RegExpLayer:isDomainChangedEventDependant"></ppe:BooleanRadio>
+		<ppe:BooleanRadio input="{Binding}"
+			property="layers:RegExpLayer:isDiagramChangedEventDependant"></ppe:BooleanRadio>
+		<ppe:BooleanRadio input="{Binding}"
+			property="layers:LayerExpression:isLayerEnabled"></ppe:BooleanRadio>
+		<ppe:BooleanRadio input="{Binding}"
+			property="layers:LayerExpression:isBranchEnabled"></ppe:BooleanRadio>
 	</Composite>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:BooleanCheckbox input="{Binding}"
-			property="layers:LayerExpression:isLayerEnabled"></ppe:BooleanCheckbox>
+		<ppe:EnumCombo input="{Binding}"
+			property="layers:RegExpLayer:domainChangedEventLevel"></ppe:EnumCombo>
+		<ppe:EnumCombo input="{Binding}"
+			property="layers:RegExpLayer:diagramChangedEventLevel"></ppe:EnumCombo>
+		<ppe:EnumCombo input="{Binding}" property="layers:LayerExpression:state"></ppe:EnumCombo>
 	</Composite>
 </Composite>

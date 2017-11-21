@@ -345,7 +345,7 @@
    <extension
          point="org.eclipse.papyrus.infra.properties.contexts">
       <context
-            contextModel="properties/properties.ctx"
+            contextModel="properties/layers.ctx"
             isCustomizable="true">
       </context>
    </extension>

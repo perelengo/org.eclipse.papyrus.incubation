@@ -90,9 +90,7 @@ public class LayerOperatorConfigItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((LayerOperatorConfig) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_LayerOperatorConfig_type") :
-				getString("_UI_LayerOperatorConfig_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_LayerOperatorConfig_type") : getString("_UI_LayerOperatorConfig_type") + " " + label;
 	}
 
 	/**

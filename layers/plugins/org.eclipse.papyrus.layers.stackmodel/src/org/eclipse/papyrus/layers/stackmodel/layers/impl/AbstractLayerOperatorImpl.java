@@ -39,11 +39,11 @@ import org.eclipse.papyrus.layers.stackmodel.layers.Property;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.AbstractLayerOperatorImpl#getLayerOperatorDescriptor <em>Layer Operator Descriptor</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.AbstractLayerOperatorImpl#getLayerOperatorDescriptorName <em>Layer Operator Descriptor Name</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.AbstractLayerOperatorImpl#getLayerOperatorDescriptor <em>Layer Operator Descriptor</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.AbstractLayerOperatorImpl#getLayerOperatorDescriptorName <em>Layer Operator Descriptor Name</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -52,7 +52,6 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	 * The cached value of the '{@link #getLayerOperatorDescriptor() <em>Layer Operator Descriptor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getLayerOperatorDescriptor()
 	 * @generated
 	 * @ordered
@@ -63,7 +62,6 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	 * The default value of the '{@link #getLayerOperatorDescriptorName() <em>Layer Operator Descriptor Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getLayerOperatorDescriptorName()
 	 * @generated
 	 * @ordered
@@ -73,7 +71,6 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	 * The cached value of the '{@link #getLayerOperatorDescriptorName() <em>Layer Operator Descriptor Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getLayerOperatorDescriptorName()
 	 * @generated
 	 * @ordered
@@ -83,7 +80,6 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected AbstractLayerOperatorImpl() {
@@ -93,7 +89,6 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -104,18 +99,16 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public LayerOperatorDescriptor getLayerOperatorDescriptor() {
 		if (layerOperatorDescriptor != null && layerOperatorDescriptor.eIsProxy()) {
-			InternalEObject oldLayerOperatorDescriptor = (InternalEObject) layerOperatorDescriptor;
-			layerOperatorDescriptor = (LayerOperatorDescriptor) eResolveProxy(oldLayerOperatorDescriptor);
+			InternalEObject oldLayerOperatorDescriptor = (InternalEObject)layerOperatorDescriptor;
+			layerOperatorDescriptor = (LayerOperatorDescriptor)eResolveProxy(oldLayerOperatorDescriptor);
 			if (layerOperatorDescriptor != oldLayerOperatorDescriptor) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR, oldLayerOperatorDescriptor, layerOperatorDescriptor));
-				}
 			}
 		}
 		return layerOperatorDescriptor;
@@ -124,7 +117,6 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayerOperatorDescriptor basicGetLayerOperatorDescriptor() {
@@ -134,22 +126,19 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setLayerOperatorDescriptor(LayerOperatorDescriptor newLayerOperatorDescriptor) {
 		LayerOperatorDescriptor oldLayerOperatorDescriptor = layerOperatorDescriptor;
 		layerOperatorDescriptor = newLayerOperatorDescriptor;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR, oldLayerOperatorDescriptor, layerOperatorDescriptor));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -246,19 +235,16 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR:
-			if (resolve) {
-				return getLayerOperatorDescriptor();
-			}
-			return basicGetLayerOperatorDescriptor();
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
-			return getLayerOperatorDescriptorName();
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR:
+				if (resolve) return getLayerOperatorDescriptor();
+				return basicGetLayerOperatorDescriptor();
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
+				return getLayerOperatorDescriptorName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -266,18 +252,17 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR:
-			setLayerOperatorDescriptor((LayerOperatorDescriptor) newValue);
-			return;
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
-			setLayerOperatorDescriptorName((String) newValue);
-			return;
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR:
+				setLayerOperatorDescriptor((LayerOperatorDescriptor)newValue);
+				return;
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
+				setLayerOperatorDescriptorName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -285,18 +270,17 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR:
-			setLayerOperatorDescriptor((LayerOperatorDescriptor) null);
-			return;
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
-			setLayerOperatorDescriptorName(LAYER_OPERATOR_DESCRIPTOR_NAME_EDEFAULT);
-			return;
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR:
+				setLayerOperatorDescriptor((LayerOperatorDescriptor)null);
+				return;
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
+				setLayerOperatorDescriptorName(LAYER_OPERATOR_DESCRIPTOR_NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -304,16 +288,15 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR:
-			return layerOperatorDescriptor != null;
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
-			return LAYER_OPERATOR_DESCRIPTOR_NAME_EDEFAULT == null ? layerOperatorDescriptorName != null : !LAYER_OPERATOR_DESCRIPTOR_NAME_EDEFAULT.equals(layerOperatorDescriptorName);
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR:
+				return layerOperatorDescriptor != null;
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
+				return LAYER_OPERATOR_DESCRIPTOR_NAME_EDEFAULT == null ? layerOperatorDescriptorName != null : !LAYER_OPERATOR_DESCRIPTOR_NAME_EDEFAULT.equals(layerOperatorDescriptorName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -321,17 +304,16 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR___IS_DESCRIPTOR_SET:
-			return isDescriptorSet();
-		case LayersPackage.ABSTRACT_LAYER_OPERATOR___RESET_DESCRIPTOR:
-			resetDescriptor();
-			return null;
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR___IS_DESCRIPTOR_SET:
+				return isDescriptorSet();
+			case LayersPackage.ABSTRACT_LAYER_OPERATOR___RESET_DESCRIPTOR:
+				resetDescriptor();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -339,14 +321,11 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
-			return super.toString();
-		}
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (layerOperatorDescriptorName: ");
@@ -452,8 +431,7 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 		// Return appropriate result
 		if (isCmdFound) {
 			return resCmds;
-		}
-		else {
+		} else {
 			// No command ==> null
 			return null;
 		}
@@ -501,8 +479,7 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 		// Return appropriate result
 		if (isCmdFound) {
 			return resCmds;
-		}
-		else {
+		} else {
 			// No command ==> null
 			return null;
 		}

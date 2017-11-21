@@ -21,15 +21,15 @@ import org.eclipse.emf.ecore.EPackage;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getName <em>Name</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getDescription <em>Description</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getNsuri <em>Nsuri</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getPluginID <em>Plugin ID</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getEPackageInstanceName <em>EPackage Instance Name</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#isTypeValid <em>Is Type Valid</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getNsuri <em>Nsuri</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getPluginID <em>Plugin ID</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getEPackageInstanceName <em>EPackage Instance Name</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#isTypeValid <em>Is Type Valid</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getMetamodel()
  * @model
@@ -43,7 +43,6 @@ public interface Metamodel extends FolderElement {
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getMetamodel_Name()
@@ -56,9 +55,7 @@ public interface Metamodel extends FolderElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -71,7 +68,6 @@ public interface Metamodel extends FolderElement {
 	 * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getMetamodel_Description()
@@ -84,9 +80,7 @@ public interface Metamodel extends FolderElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' attribute.
 	 * @see #getDescription()
 	 * @generated
 	 */
@@ -99,7 +93,6 @@ public interface Metamodel extends FolderElement {
 	 * If the meaning of the '<em>Nsuri</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Nsuri</em>' attribute.
 	 * @see #setNsuri(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getMetamodel_Nsuri()
@@ -112,9 +105,7 @@ public interface Metamodel extends FolderElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getNsuri <em>Nsuri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Nsuri</em>' attribute.
+	 * @param value the new value of the '<em>Nsuri</em>' attribute.
 	 * @see #getNsuri()
 	 * @generated
 	 */
@@ -127,7 +118,6 @@ public interface Metamodel extends FolderElement {
 	 * If the meaning of the '<em>Plugin ID</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Plugin ID</em>' attribute.
 	 * @see #setPluginID(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getMetamodel_PluginID()
@@ -140,9 +130,7 @@ public interface Metamodel extends FolderElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getPluginID <em>Plugin ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Plugin ID</em>' attribute.
+	 * @param value the new value of the '<em>Plugin ID</em>' attribute.
 	 * @see #getPluginID()
 	 * @generated
 	 */
@@ -155,7 +143,6 @@ public interface Metamodel extends FolderElement {
 	 * If the meaning of the '<em>EPackage Instance Name</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>EPackage Instance Name</em>' attribute.
 	 * @see #setEPackageInstanceName(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getMetamodel_EPackageInstanceName()
@@ -168,9 +155,7 @@ public interface Metamodel extends FolderElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#getEPackageInstanceName <em>EPackage Instance Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>EPackage Instance Name</em>' attribute.
+	 * @param value the new value of the '<em>EPackage Instance Name</em>' attribute.
 	 * @see #getEPackageInstanceName()
 	 * @generated
 	 */
@@ -183,7 +168,6 @@ public interface Metamodel extends FolderElement {
 	 * If the meaning of the '<em>Is Type Valid</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Is Type Valid</em>' attribute.
 	 * @see #setIsTypeValid(boolean)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getMetamodel_IsTypeValid()
@@ -196,9 +180,7 @@ public interface Metamodel extends FolderElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.Metamodel#isTypeValid <em>Is Type Valid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Is Type Valid</em>' attribute.
+	 * @param value the new value of the '<em>Is Type Valid</em>' attribute.
 	 * @see #isTypeValid()
 	 * @generated
 	 */
@@ -207,7 +189,6 @@ public interface Metamodel extends FolderElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model kind="operation" dataType="org.eclipse.papyrus.layers.stackmodel.layers.EPackage" required="true" ordered="false"
 	 * @generated
 	 */

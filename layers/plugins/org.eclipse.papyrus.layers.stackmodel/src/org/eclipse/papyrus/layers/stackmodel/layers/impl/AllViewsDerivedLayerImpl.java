@@ -14,8 +14,6 @@ import org.eclipse.papyrus.layers.stackmodel.util.DiagramViewToListSynchronizer;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>All Views Derived Layer</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,6 @@ public class AllViewsDerivedLayerImpl extends AbstractLayerImpl implements AllVi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

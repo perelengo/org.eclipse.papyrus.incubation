@@ -25,10 +25,10 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringInstanceImpl#getValue <em>Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.StringInstanceImpl#getValue <em>Value</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -37,7 +37,6 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
@@ -48,7 +47,6 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
@@ -58,7 +56,6 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected StringInstanceImpl() {
@@ -68,7 +65,6 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -79,7 +75,6 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -90,29 +85,26 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.STRING_INSTANCE__VALUE, oldValue, value));
-		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.STRING_INSTANCE__VALUE:
-			return getValue();
+			case LayersPackage.STRING_INSTANCE__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,15 +112,14 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.STRING_INSTANCE__VALUE:
-			setValue((String) newValue);
-			return;
+			case LayersPackage.STRING_INSTANCE__VALUE:
+				setValue((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -136,15 +127,14 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.STRING_INSTANCE__VALUE:
-			setValue(VALUE_EDEFAULT);
-			return;
+			case LayersPackage.STRING_INSTANCE__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -152,14 +142,13 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.STRING_INSTANCE__VALUE:
-			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case LayersPackage.STRING_INSTANCE__VALUE:
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -201,14 +190,11 @@ public class StringInstanceImpl extends TypeInstanceImpl implements StringInstan
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
-			return super.toString();
-		}
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");

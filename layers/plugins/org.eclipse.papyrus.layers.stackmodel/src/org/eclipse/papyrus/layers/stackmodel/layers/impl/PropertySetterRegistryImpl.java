@@ -43,12 +43,12 @@ import org.eclipse.papyrus.layers.stackmodel.layers.util.PropertyIndexedList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.PropertySetterRegistryImpl#getPropertySetters <em>Property Setters</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.PropertySetterRegistryImpl#getSetterMap <em>Setter Map</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.PropertySetterRegistryImpl#getApplication <em>Application</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.PropertySetterRegistryImpl#getPropertySetters <em>Property Setters</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.PropertySetterRegistryImpl#getSetterMap <em>Setter Map</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.impl.PropertySetterRegistryImpl#getApplication <em>Application</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -57,7 +57,6 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	 * The cached value of the '{@link #getPropertySetters() <em>Property Setters</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getPropertySetters()
 	 * @generated
 	 * @ordered
@@ -68,7 +67,6 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	 * The cached value of the '{@link #getSetterMap() <em>Setter Map</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @see #getSetterMap()
 	 * @generated
 	 * @ordered
@@ -97,12 +95,12 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 		addPropertySetter(LayersFactory.eINSTANCE.createFontPropertySetter());
 		addPropertySetter(LayersFactory.eINSTANCE.createIsVisiblePropertySetter());
 		addPropertySetter(LayersFactory.eINSTANCE.createIsAbstractUmlSetter());
+		addPropertySetter(LayersFactory.eINSTANCE.createCSSPropertySetter());
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -131,13 +129,12 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public EMap<String, PropertySetter> getSetterMap() {
 		if (setterMap == null) {
-			setterMap = new EcoreEMap<String, PropertySetter>(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER, StringToPropertySetterImpl.class, this, LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP);
+			setterMap = new EcoreEMap<String,PropertySetter>(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER, StringToPropertySetterImpl.class, this, LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP);
 		}
 		return setterMap;
 	}
@@ -145,25 +142,21 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public LayersStackApplication getApplication() {
-		if (eContainerFeatureID() != LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION) {
-			return null;
-		}
-		return (LayersStackApplication) eInternalContainer();
+		if (eContainerFeatureID() != LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION) return null;
+		return (LayersStackApplication)eInternalContainer();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public NotificationChain basicSetApplication(LayersStackApplication newApplication, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject) newApplication, LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newApplication, LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION, msgs);
 		return msgs;
 	}
 
@@ -256,17 +249,15 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
-			if (eInternalContainer() != null) {
-				msgs = eBasicRemoveFromContainer(msgs);
-			}
-			return basicSetApplication((LayersStackApplication) otherEnd, msgs);
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetApplication((LayersStackApplication)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -274,16 +265,15 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
-			return ((InternalEList<?>) getSetterMap()).basicRemove(otherEnd, msgs);
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
-			return basicSetApplication(null, msgs);
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
+				return ((InternalEList<?>)getSetterMap()).basicRemove(otherEnd, msgs);
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
+				return basicSetApplication(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -291,14 +281,13 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
-			return eInternalContainer().eInverseRemove(this, LayersPackage.LAYERS_STACK_APPLICATION__PROPERTY_SETTER_REGISTRY, LayersStackApplication.class, msgs);
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
+				return eInternalContainer().eInverseRemove(this, LayersPackage.LAYERS_STACK_APPLICATION__PROPERTY_SETTER_REGISTRY, LayersStackApplication.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -306,22 +295,18 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS:
-			return getPropertySetters();
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
-			if (coreType) {
-				return getSetterMap();
-			} else {
-				return getSetterMap().map();
-			}
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
-			return getApplication();
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS:
+				return getPropertySetters();
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
+				if (coreType) return getSetterMap();
+				else return getSetterMap().map();
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
+				return getApplication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -329,23 +314,22 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS:
-			getPropertySetters().clear();
-			getPropertySetters().addAll((Collection<? extends PropertySetter>) newValue);
-			return;
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
-			((EStructuralFeature.Setting) getSetterMap()).set(newValue);
-			return;
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
-			setApplication((LayersStackApplication) newValue);
-			return;
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS:
+				getPropertySetters().clear();
+				getPropertySetters().addAll((Collection<? extends PropertySetter>)newValue);
+				return;
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
+				((EStructuralFeature.Setting)getSetterMap()).set(newValue);
+				return;
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
+				setApplication((LayersStackApplication)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -353,21 +337,20 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS:
-			getPropertySetters().clear();
-			return;
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
-			getSetterMap().clear();
-			return;
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
-			setApplication((LayersStackApplication) null);
-			return;
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS:
+				getPropertySetters().clear();
+				return;
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
+				getSetterMap().clear();
+				return;
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
+				setApplication((LayersStackApplication)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -375,18 +358,17 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS:
-			return propertySetters != null && !propertySetters.isEmpty();
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
-			return setterMap != null && !setterMap.isEmpty();
-		case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
-			return getApplication() != null;
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__PROPERTY_SETTERS:
+				return propertySetters != null && !propertySetters.isEmpty();
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__SETTER_MAP:
+				return setterMap != null && !setterMap.isEmpty();
+			case LayersPackage.PROPERTY_SETTER_REGISTRY__APPLICATION:
+				return getApplication() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -394,27 +376,28 @@ public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.PROPERTY_SETTER_REGISTRY___GET_PROPERTY_SETTER__PROPERTY:
-			try {
-				return getPropertySetter((Property) arguments.get(0));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.PROPERTY_SETTER_REGISTRY___GET_PROPERTY_SETTER__STRING:
-			try {
-				return getPropertySetter((String) arguments.get(0));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.PROPERTY_SETTER_REGISTRY___ADD_PROPERTY_SETTER__PROPERTYSETTER:
-			addPropertySetter((PropertySetter) arguments.get(0));
-			return null;
+			case LayersPackage.PROPERTY_SETTER_REGISTRY___GET_PROPERTY_SETTER__PROPERTY:
+				try {
+					return getPropertySetter((Property)arguments.get(0));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.PROPERTY_SETTER_REGISTRY___GET_PROPERTY_SETTER__STRING:
+				try {
+					return getPropertySetter((String)arguments.get(0));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.PROPERTY_SETTER_REGISTRY___ADD_PROPERTY_SETTER__PROPERTYSETTER:
+				addPropertySetter((PropertySetter)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

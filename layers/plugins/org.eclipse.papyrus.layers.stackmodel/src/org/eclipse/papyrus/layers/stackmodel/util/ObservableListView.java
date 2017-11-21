@@ -228,8 +228,7 @@ public class ObservableListView<E> extends ForwardingList<E> {
 		public ObservableListEvent(Collection<? extends E> addedElements) {
 			if (addedElements != null) {
 				this.addedElements = addedElements;
-			}
-			else {
+			} else {
 				this.addedElements = Collections.emptyList();
 			}
 
@@ -247,15 +246,13 @@ public class ObservableListView<E> extends ForwardingList<E> {
 		public ObservableListEvent(Collection<? extends E> addedElements, Collection<? extends E> removedElements) {
 			if (addedElements != null) {
 				this.addedElements = addedElements;
-			}
-			else {
+			} else {
 				this.addedElements = Collections.emptyList();
 			}
 
 			if (removedElements != null) {
 				this.removedElements = removedElements;
-			}
-			else {
+			} else {
 				this.removedElements = Collections.emptyList();
 			}
 		}
@@ -273,15 +270,13 @@ public class ObservableListView<E> extends ForwardingList<E> {
 
 			if (addedElement != null) {
 				addedElements = Collections.singletonList(addedElement);
-			}
-			else {
+			} else {
 				addedElements = Collections.emptyList();
 			}
 
 			if (removedElement != null) {
 				removedElements = Collections.singletonList(removedElement);
-			}
-			else {
+			} else {
 				removedElements = Collections.emptyList();
 			}
 		}
@@ -297,8 +292,7 @@ public class ObservableListView<E> extends ForwardingList<E> {
 
 			if (addedElement != null) {
 				addedElements = Collections.singletonList(addedElement);
-			}
-			else {
+			} else {
 				addedElements = Collections.emptyList();
 			}
 			removedElements = Collections.emptyList();

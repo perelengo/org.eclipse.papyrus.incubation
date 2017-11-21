@@ -70,8 +70,7 @@ public class LayersExplorerViewUtils {
 
 		if (part instanceof LayersExplorerView) {
 			return (LayersExplorerView) part;
-		}
-		else {
+		} else {
 			throw new NotFoundException("Can't find LayersExplorerView.");
 		}
 	}
@@ -86,8 +85,7 @@ public class LayersExplorerViewUtils {
 
 		if (part instanceof LayersExplorerView) {
 			return (LayersExplorerView) part;
-		}
-		else {
+		} else {
 			throw new NotFoundException("Can't find LayersExplorerView.");
 		}
 	}

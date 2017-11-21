@@ -20,8 +20,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>And Stacked Layer Operator Descriptor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -29,7 +27,6 @@ public class AndStackedLayerOperatorDescriptorImpl extends StackedLayerOperatorD
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected AndStackedLayerOperatorDescriptorImpl() {
@@ -39,7 +36,6 @@ public class AndStackedLayerOperatorDescriptorImpl extends StackedLayerOperatorD
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

@@ -18,34 +18,21 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.papyrus.layers.stackmodel.layers.FillPropertySetter;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.FillPropertySetter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class FillPropertySetterItemProvider
-		extends PropertySetterItemProvider
-		implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+		extends PropertySetterItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public FillPropertySetterItemProvider(AdapterFactory adapterFactory) {
@@ -56,7 +43,6 @@ public class FillPropertySetterItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -72,7 +58,6 @@ public class FillPropertySetterItemProvider
 	 * This returns FillPropertySetter.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -84,15 +69,14 @@ public class FillPropertySetterItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FillPropertySetter) object).getPropertyName();
+		String label = ((FillPropertySetter)object).getPropertyName();
 		return label == null || label.length() == 0 ?
-				getString("_UI_FillPropertySetter_type") :
-				getString("_UI_FillPropertySetter_type") + " " + label;
+			getString("_UI_FillPropertySetter_type") :
+			getString("_UI_FillPropertySetter_type") + " " + label;
 	}
 
 	/**
@@ -100,7 +84,6 @@ public class FillPropertySetterItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -114,7 +97,6 @@ public class FillPropertySetterItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

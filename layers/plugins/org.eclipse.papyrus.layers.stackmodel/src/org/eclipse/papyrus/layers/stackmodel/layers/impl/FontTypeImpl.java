@@ -23,8 +23,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Font Type</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -43,7 +41,6 @@ public class FontTypeImpl extends TypeImpl implements FontType {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

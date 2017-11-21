@@ -24,16 +24,16 @@ import org.eclipse.papyrus.layers.stackmodel.LayersException;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getExpr <em>Expr</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getLanguage <em>Language</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#isDomainChangedEventDependant <em>Is Domain Changed Event Dependant</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getDomainChangedEventLevel <em>Domain Changed Event Level</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#isDiagramChangedEventDependant <em>Is Diagram Changed Event Dependant</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getDiagramChangedEventLevel <em>Diagram Changed Event Level</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getExpressionContextObjectType <em>Expression Context Object Type</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getExpr <em>Expr</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getLanguage <em>Language</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#isDomainChangedEventDependant <em>Is Domain Changed Event Dependant</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getDomainChangedEventLevel <em>Domain Changed Event Level</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#isDiagramChangedEventDependant <em>Is Diagram Changed Event Dependant</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getDiagramChangedEventLevel <em>Diagram Changed Event Level</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getExpressionContextObjectType <em>Expression Context Object Type</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getRegExpLayer()
  * @model
@@ -48,7 +48,6 @@ public interface RegExpLayer extends AbstractLayer {
 	 * If the meaning of the '<em>Expr</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Expr</em>' attribute.
 	 * @see #setExpr(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getRegExpLayer_Expr()
@@ -61,9 +60,7 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getExpr <em>Expr</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Expr</em>' attribute.
+	 * @param value the new value of the '<em>Expr</em>' attribute.
 	 * @see #getExpr()
 	 * @generated
 	 */
@@ -76,7 +73,6 @@ public interface RegExpLayer extends AbstractLayer {
 	 * If the meaning of the '<em>Language</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Language</em>' attribute.
 	 * @see #setLanguage(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getRegExpLayer_Language()
@@ -89,9 +85,7 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getLanguage <em>Language</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Language</em>' attribute.
+	 * @param value the new value of the '<em>Language</em>' attribute.
 	 * @see #getLanguage()
 	 * @generated
 	 */
@@ -104,7 +98,6 @@ public interface RegExpLayer extends AbstractLayer {
 	 * If the meaning of the '<em>Is Domain Changed Event Dependant</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Is Domain Changed Event Dependant</em>' attribute.
 	 * @see #setIsDomainChangedEventDependant(boolean)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getRegExpLayer_IsDomainChangedEventDependant()
@@ -117,9 +110,7 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#isDomainChangedEventDependant <em>Is Domain Changed Event Dependant</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Is Domain Changed Event Dependant</em>' attribute.
+	 * @param value the new value of the '<em>Is Domain Changed Event Dependant</em>' attribute.
 	 * @see #isDomainChangedEventDependant()
 	 * @generated
 	 */
@@ -133,7 +124,6 @@ public interface RegExpLayer extends AbstractLayer {
 	 * If the meaning of the '<em>Domain Changed Event Level</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Domain Changed Event Level</em>' attribute.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.EventLevel
 	 * @see #setDomainChangedEventLevel(EventLevel)
@@ -147,9 +137,7 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getDomainChangedEventLevel <em>Domain Changed Event Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Domain Changed Event Level</em>' attribute.
+	 * @param value the new value of the '<em>Domain Changed Event Level</em>' attribute.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.EventLevel
 	 * @see #getDomainChangedEventLevel()
 	 * @generated
@@ -163,7 +151,6 @@ public interface RegExpLayer extends AbstractLayer {
 	 * If the meaning of the '<em>Is Diagram Changed Event Dependant</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Is Diagram Changed Event Dependant</em>' attribute.
 	 * @see #setIsDiagramChangedEventDependant(boolean)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getRegExpLayer_IsDiagramChangedEventDependant()
@@ -176,9 +163,7 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#isDiagramChangedEventDependant <em>Is Diagram Changed Event Dependant</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Is Diagram Changed Event Dependant</em>' attribute.
+	 * @param value the new value of the '<em>Is Diagram Changed Event Dependant</em>' attribute.
 	 * @see #isDiagramChangedEventDependant()
 	 * @generated
 	 */
@@ -192,7 +177,6 @@ public interface RegExpLayer extends AbstractLayer {
 	 * If the meaning of the '<em>Diagram Changed Event Level</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Diagram Changed Event Level</em>' attribute.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.EventLevel
 	 * @see #setDiagramChangedEventLevel(EventLevel)
@@ -206,9 +190,7 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getDiagramChangedEventLevel <em>Diagram Changed Event Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Diagram Changed Event Level</em>' attribute.
+	 * @param value the new value of the '<em>Diagram Changed Event Level</em>' attribute.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.EventLevel
 	 * @see #getDiagramChangedEventLevel()
 	 * @generated
@@ -222,7 +204,6 @@ public interface RegExpLayer extends AbstractLayer {
 	 * If the meaning of the '<em>Expression Context Object Type</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Expression Context Object Type</em>' attribute.
 	 * @see #setExpressionContextObjectType(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getRegExpLayer_ExpressionContextObjectType()
@@ -235,9 +216,7 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer#getExpressionContextObjectType <em>Expression Context Object Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Expression Context Object Type</em>' attribute.
+	 * @param value the new value of the '<em>Expression Context Object Type</em>' attribute.
 	 * @see #getExpressionContextObjectType()
 	 * @generated
 	 */
@@ -246,7 +225,6 @@ public interface RegExpLayer extends AbstractLayer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model newParentLayerRequired="true" newParentLayerOrdered="false"
 	 * @generated
 	 */
@@ -255,7 +233,6 @@ public interface RegExpLayer extends AbstractLayer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model oldParentLayerRequired="true" oldParentLayerOrdered="false"
 	 * @generated
 	 */
@@ -264,7 +241,6 @@ public interface RegExpLayer extends AbstractLayer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model dataType="org.eclipse.papyrus.layers.stackmodel.layers.boolean" required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" viewRequired="true" viewOrdered="false"
 	 * @generated
 	 */
@@ -273,7 +249,6 @@ public interface RegExpLayer extends AbstractLayer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" viewRequired="true" viewOrdered="false"
 	 * @generated
 	 */
@@ -282,7 +257,6 @@ public interface RegExpLayer extends AbstractLayer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" viewsMany="true" viewsOrdered="false"
 	 * @generated
 	 */
@@ -291,7 +265,6 @@ public interface RegExpLayer extends AbstractLayer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException"
 	 * @generated
 	 */
@@ -300,7 +273,6 @@ public interface RegExpLayer extends AbstractLayer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" viewsMany="true" viewsOrdered="false"
 	 * @generated
 	 */

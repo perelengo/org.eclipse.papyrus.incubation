@@ -27,14 +27,14 @@ import org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getLayers <em>Layers</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getName <em>Name</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getDescription <em>Description</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getDiagram <em>Diagram</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getState <em>State</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getLayers <em>Layers</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getDiagram <em>Diagram</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getState <em>State</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayersStack()
  * @model
@@ -48,7 +48,6 @@ public interface LayersStack extends LayersContainer {
 	 * If the meaning of the '<em>Layers</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Layers</em>' containment reference.
 	 * @see #setLayers(LayerExpression)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayersStack_Layers()
@@ -61,9 +60,7 @@ public interface LayersStack extends LayersContainer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getLayers <em>Layers</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Layers</em>' containment reference.
+	 * @param value the new value of the '<em>Layers</em>' containment reference.
 	 * @see #getLayers()
 	 * @generated
 	 */
@@ -76,7 +73,6 @@ public interface LayersStack extends LayersContainer {
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayersStack_Name()
@@ -89,9 +85,7 @@ public interface LayersStack extends LayersContainer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -104,7 +98,6 @@ public interface LayersStack extends LayersContainer {
 	 * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayersStack_Description()
@@ -117,9 +110,7 @@ public interface LayersStack extends LayersContainer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' attribute.
 	 * @see #getDescription()
 	 * @generated
 	 */
@@ -132,7 +123,6 @@ public interface LayersStack extends LayersContainer {
 	 * If the meaning of the '<em>Diagram</em>' reference isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Diagram</em>' reference.
 	 * @see #setDiagram(Diagram)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getLayersStack_Diagram()
@@ -145,9 +135,7 @@ public interface LayersStack extends LayersContainer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getDiagram <em>Diagram</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Diagram</em>' reference.
+	 * @param value the new value of the '<em>Diagram</em>' reference.
 	 * @see #getDiagram()
 	 * @generated
 	 */
@@ -162,7 +150,6 @@ public interface LayersStack extends LayersContainer {
 	 * If the meaning of the '<em>State</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>State</em>' attribute.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerState
 	 * @see #setState(LayerState)
@@ -176,9 +163,7 @@ public interface LayersStack extends LayersContainer {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersStack#getState <em>State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>State</em>' attribute.
+	 * @param value the new value of the '<em>State</em>' attribute.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerState
 	 * @see #getState()
 	 * @generated
@@ -188,9 +173,7 @@ public interface LayersStack extends LayersContainer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @model dataType="org.eclipse.papyrus.layers.stackmodel.layers.ComputePropertyValueCommand" required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" viewRequired="true" viewOrdered="false"
-	 *        propertyRequired="true" propertyOrdered="false"
+	 * @model dataType="org.eclipse.papyrus.layers.stackmodel.layers.ComputePropertyValueCommand" required="true" ordered="false" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" viewRequired="true" viewOrdered="false" propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */
 	ComputePropertyValueCommand getComputePropertyValueCommand(View view, Property property) throws LayersException;
@@ -198,7 +181,6 @@ public interface LayersStack extends LayersContainer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model dataType="org.eclipse.papyrus.layers.stackmodel.layers.ComputePropertyValueCommand" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" viewRequired="true" viewOrdered="false" propertyRequired="true" propertyMany="true"
 	 * @generated
 	 */
@@ -207,7 +189,6 @@ public interface LayersStack extends LayersContainer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model dataType="org.eclipse.papyrus.layers.stackmodel.layers.ComputePropertyValueCommand" exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException" viewMany="true" propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */
@@ -216,7 +197,6 @@ public interface LayersStack extends LayersContainer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @model
 	 * @generated
 	 */
@@ -229,7 +209,6 @@ public interface LayersStack extends LayersContainer {
 	 * Start the LayersStack after a reloading by EMF. This method should be explicitly called after a reloading.
 	 * The method usually start the layer behaviors.
 	 * <!-- end-model-doc -->
-	 *
 	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException"
 	 * @generated
 	 */
@@ -243,15 +222,14 @@ public interface LayersStack extends LayersContainer {
 	 * A Layer can be attached if its required attributes are set.
 	 * Required attributes:
 	 * <ul>
-	 * <li>application</li>
-	 * <li>owningLayerStack</li>
-	 * <li>parent container</li>
-	 * <li></li>
+	 *   <li>application</li>
+	 *   <li>owningLayerStack</li>
+	 *   <li>parent container</li>
+	 *   <li></li>
 	 * </ul>
 	 * Just after enterring in "attached" state, the enterAttachedState() method is called.
 	 * If this Layer is successfully attached, then attach subLayers.
 	 * <!-- end-model-doc -->
-	 *
 	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException"
 	 * @generated
 	 */
@@ -264,7 +242,6 @@ public interface LayersStack extends LayersContainer {
 	 * Detach the Layer. The state go to "detached".
 	 * Associated behavior are stopped.
 	 * <!-- end-model-doc -->
-	 *
 	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException"
 	 * @generated
 	 */
@@ -277,7 +254,6 @@ public interface LayersStack extends LayersContainer {
 	 * This method is called by the class immediately after entering in attached state.
 	 * The methodcan be used to start the layer behaviors.
 	 * <!-- end-model-doc -->
-	 *
 	 * @model exceptions="org.eclipse.papyrus.layers.stackmodel.layers.LayersException"
 	 * @generated
 	 */
@@ -288,9 +264,8 @@ public interface LayersStack extends LayersContainer {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * This method is called just before this Layer leave the attached state.
-	 *
+	 * 
 	 * <!-- end-model-doc -->
-	 *
 	 * @model
 	 * @generated
 	 */

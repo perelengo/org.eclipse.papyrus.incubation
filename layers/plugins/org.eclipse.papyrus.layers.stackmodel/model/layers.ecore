@@ -4,24 +4,24 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="Start the LayesStack.&#xD;&#xA;This method should be called after the LayersStack creation. It is not called from the constructor, because &#xD;&#xA;the initialisation can differ if the LayersStack is created by the user or by EMF after a reloading.&#xD;&#xA;"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="LayerNamedStyle" eSuperTypes="../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//NamedStyle">
+  <eClassifiers xsi:type="ecore:EClass" name="LayerNamedStyle" eSuperTypes="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//NamedStyle">
     <eStructuralFeatures xsi:type="ecore:EReference" name="layersStack" ordered="false"
         upperBound="-1" eType="#//LayersStack" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LayersStack" eSuperTypes="#//LayersContainer">
     <eOperations name="getComputePropertyValueCommand" ordered="false" lowerBound="1"
         eType="#//ComputePropertyValueCommand" eExceptions="#//LayersException">
-      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
       <eParameters name="property" ordered="false" lowerBound="1" eType="#//Property"/>
     </eOperations>
     <eOperations name="getPropertiesComputePropertyValueCommand" upperBound="-1" eType="#//ComputePropertyValueCommand"
         eExceptions="#//LayersException">
-      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
       <eParameters name="property" lowerBound="1" upperBound="-1" eType="#//Property"/>
     </eOperations>
     <eOperations name="getViewsComputePropertyValueCommand" upperBound="-1" eType="#//ComputePropertyValueCommand"
         eExceptions="#//LayersException">
-      <eParameters name="view" upperBound="-1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
       <eParameters name="property" ordered="false" lowerBound="1" eType="#//Property"/>
     </eOperations>
     <eOperations name="startAfterCreation" ordered="false" lowerBound="1"/>
@@ -57,24 +57,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
         lowerBound="1" eType="#//String"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" ordered="false"
-        eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" ordered="false"
         unique="false" lowerBound="1" eType="#//LayerState" defaultValueLiteral="detached"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LayerExpression" abstract="true" eSuperTypes="#//ApplicationDependantElement">
     <eOperations name="getComputePropertyValueCommand" ordered="false" lowerBound="1"
         eType="#//ComputePropertyValueCommand" eExceptions="#//LayersException">
-      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
       <eParameters name="property" ordered="false" lowerBound="1" eType="#//Property"/>
     </eOperations>
     <eOperations name="getViewsComputePropertyValueCommand" upperBound="-1" eType="#//ComputePropertyValueCommand"
         eExceptions="#//LayersException">
-      <eParameters name="view" upperBound="-1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
       <eParameters name="property" ordered="false" lowerBound="1" eType="#//Property"/>
     </eOperations>
     <eOperations name="getPropertiesComputePropertyValueCommand" upperBound="-1" eType="#//ComputePropertyValueCommand"
         eExceptions="#//LayersException">
-      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
       <eParameters name="property" lowerBound="1" upperBound="-1" eType="#//Property"/>
     </eOperations>
     <eOperations name="attachToLayersStack" ordered="false" lowerBound="1">
@@ -135,20 +135,20 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LayersStackApplication" eSuperTypes="#//FolderElement">
     <eOperations name="getLayersStackFor" ordered="false" lowerBound="1" eType="#//LayersStack">
-      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
+      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
     </eOperations>
     <eOperations name="removeLayersStackFor" ordered="false" lowerBound="1">
-      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
+      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
     </eOperations>
     <eOperations name="isLayersStackAttachedFor" ordered="false" lowerBound="1" eType="#//boolean">
-      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
+      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
     </eOperations>
     <eOperations name="createLayersStackFor" ordered="false" lowerBound="1" eType="#//LayersStack">
-      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
+      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
     </eOperations>
     <eOperations name="lookupLayersStackFor" ordered="false" lowerBound="1" eType="#//LayersStack"
         eExceptions="#//NotFoundException">
-      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
+      <eParameters name="diagram" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//Diagram"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="layersStacks" ordered="false"
         upperBound="-1" eType="#//LayersStack" containment="true"/>
@@ -300,7 +300,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropertySetter" abstract="true">
     <eOperations name="setValue" ordered="false" lowerBound="1">
-      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
       <eParameters name="value" ordered="false" lowerBound="1" eType="#//TypeInstance"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" ordered="false"
@@ -425,7 +425,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="layerDescriptor" ordered="false"
         lowerBound="1" eType="#//LayerDescriptor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="views" ordered="false"
-        upperBound="-1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+        upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachedProperties" ordered="false"
         upperBound="-1" eType="#//Property" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
@@ -490,18 +490,18 @@
     </eOperations>
     <eOperations name="isDerivedView" ordered="false" lowerBound="1" eType="#//boolean"
         eExceptions="#//LayersException">
-      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
     </eOperations>
     <eOperations name="attachDerivedView" ordered="false" lowerBound="1" eExceptions="#//LayersException">
-      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="view" ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
     </eOperations>
     <eOperations name="attachDerivedViews" ordered="false" lowerBound="1" eExceptions="#//LayersException">
-      <eParameters name="views" ordered="false" upperBound="-1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="views" ordered="false" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
     </eOperations>
     <eOperations name="attachDerivedViews" ordered="false" lowerBound="1" eExceptions="#//LayersException"/>
-    <eOperations name="lookupDerivedViews" ordered="false" upperBound="-1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"
+    <eOperations name="lookupDerivedViews" ordered="false" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"
         eExceptions="#//LayersException">
-      <eParameters name="views" ordered="false" upperBound="-1" eType="ecore:EClass ../../org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
+      <eParameters name="views" ordered="false" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.ecore#//View"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expr" ordered="false" lowerBound="1"
         eType="#//String"/>
@@ -575,4 +575,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="OrStackedLayerOperatorDescriptor" eSuperTypes="#//StackedLayerOperatorDescriptor"/>
   <eClassifiers xsi:type="ecore:EClass" name="IsAbstractUmlSetter" eSuperTypes="#//PropertySetter"/>
   <eClassifiers xsi:type="ecore:EClass" name="AllViewsDerivedLayer" eSuperTypes="#//AbstractLayer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CSSPropertySetter" eSuperTypes="#//PropertySetter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CSSType" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CSSInstance" eSuperTypes="#//TypeInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stylesheet" ordered="false"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.css.model/Model/StyleSheets.ecore#//StyleSheet"
+        containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

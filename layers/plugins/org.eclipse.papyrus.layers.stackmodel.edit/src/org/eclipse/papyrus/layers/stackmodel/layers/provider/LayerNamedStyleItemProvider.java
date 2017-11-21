@@ -20,12 +20,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.gmf.runtime.notation.provider.NamedStyleItemProvider;
 import org.eclipse.papyrus.layers.stackmodel.layers.LayerNamedStyle;
@@ -36,22 +31,14 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.LayerNamedStyle} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class LayerNamedStyleItemProvider
-		extends NamedStyleItemProvider
-		implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+		extends NamedStyleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayerNamedStyleItemProvider(AdapterFactory adapterFactory) {
@@ -62,7 +49,6 @@ public class LayerNamedStyleItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -75,11 +61,11 @@ public class LayerNamedStyleItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -94,7 +80,6 @@ public class LayerNamedStyleItemProvider
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -109,7 +94,6 @@ public class LayerNamedStyleItemProvider
 	 * This returns LayerNamedStyle.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -121,15 +105,14 @@ public class LayerNamedStyleItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LayerNamedStyle) object).getName();
+		String label = ((LayerNamedStyle)object).getName();
 		return label == null || label.length() == 0 ?
-				getString("_UI_LayerNamedStyle_type") :
-				getString("_UI_LayerNamedStyle_type") + " " + label;
+			getString("_UI_LayerNamedStyle_type") :
+			getString("_UI_LayerNamedStyle_type") + " " + label;
 	}
 
 	/**
@@ -137,7 +120,6 @@ public class LayerNamedStyleItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -145,9 +127,9 @@ public class LayerNamedStyleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LayerNamedStyle.class)) {
-		case LayersPackage.LAYER_NAMED_STYLE__LAYERS_STACK:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case LayersPackage.LAYER_NAMED_STYLE__LAYERS_STACK:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -162,20 +144,17 @@ public class LayerNamedStyleItemProvider
 	 *
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection/* <Object> */newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection/* <Object> */ newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-				(createChildParameter
-				(LayersPackage.Literals.LAYER_NAMED_STYLE__LAYERS_STACK,
-						LayersFactory.eINSTANCE.createLayersStack()));
+		newChildDescriptors.add(createChildParameter(LayersPackage.Literals.LAYER_NAMED_STYLE__LAYERS_STACK,
+				LayersFactory.eINSTANCE.createLayersStack()));
 	}
 
 	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

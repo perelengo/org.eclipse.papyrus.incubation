@@ -69,8 +69,7 @@ public class PropertyValueFactory {
 				factoryClass = bundle.loadClass(className);
 			} catch (ClassNotFoundException e1) {
 				throw new ClassNotFoundException("Can't find class " + className
-						+ "in plugin " + declaringID
-						, e1);
+						+ "in plugin " + declaringID, e1);
 			} catch (NullPointerException e1) {
 				throw new ClassNotFoundException("Can't find plugin " + declaringID, e1);
 			}

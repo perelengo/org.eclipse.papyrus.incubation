@@ -20,8 +20,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Custom Layer Operator</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -29,7 +27,6 @@ public class CustomLayerOperatorImpl extends LayerOperatorImpl implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected CustomLayerOperatorImpl() {
@@ -39,7 +36,6 @@ public class CustomLayerOperatorImpl extends LayerOperatorImpl implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

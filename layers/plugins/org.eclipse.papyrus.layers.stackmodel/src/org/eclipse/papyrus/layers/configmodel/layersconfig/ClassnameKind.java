@@ -140,13 +140,12 @@ public enum ClassnameKind implements Enumerator {
 	 *
 	 * @generated
 	 */
-	private static final ClassnameKind[] VALUES_ARRAY =
-			new ClassnameKind[] {
-					UNDEFINED,
-					EMF_CLASSNAME,
-					POJO_CLASSNAME,
-					NOT_FOUND,
-			};
+	private static final ClassnameKind[] VALUES_ARRAY = new ClassnameKind[] {
+			UNDEFINED,
+			EMF_CLASSNAME,
+			POJO_CLASSNAME,
+			NOT_FOUND,
+	};
 
 	/**
 	 * A public read-only list of all the '<em><b>Classname Kind</b></em>' enumerators.

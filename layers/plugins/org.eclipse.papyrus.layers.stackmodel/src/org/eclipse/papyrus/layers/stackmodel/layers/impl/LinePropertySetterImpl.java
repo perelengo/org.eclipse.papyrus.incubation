@@ -26,8 +26,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Line Property Setter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -46,7 +44,6 @@ public class LinePropertySetterImpl extends PropertySetterImpl implements LinePr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -71,8 +68,7 @@ public class LinePropertySetterImpl extends PropertySetterImpl implements LinePr
 		if (view instanceof FontStyle) {
 			// Try directly (case of Shape ...)
 			style = (LineStyle) view;
-		}
-		else {
+		} else {
 			// Try as additionnal style
 			style = (LineStyle) view.getStyle(NotationPackage.eINSTANCE.getLineStyle());
 		}

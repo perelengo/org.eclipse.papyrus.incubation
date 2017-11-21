@@ -122,8 +122,7 @@ public class AttachPropertyFromListToLayer extends AbstractLayersCommand {
 				// Create the unchanged and set list
 				if (initialSelection.contains(o)) {
 					unchangedProperties.add((Property) o);
-				}
-				else {
+				} else {
 					setProperties.add((Property) o);
 				}
 			}

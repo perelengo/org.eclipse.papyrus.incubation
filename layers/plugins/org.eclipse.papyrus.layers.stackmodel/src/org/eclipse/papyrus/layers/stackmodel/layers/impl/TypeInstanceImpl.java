@@ -25,8 +25,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Type Instance</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -34,7 +32,6 @@ public abstract class TypeInstanceImpl extends MinimalEObjectImpl.Container impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected TypeInstanceImpl() {
@@ -44,7 +41,6 @@ public abstract class TypeInstanceImpl extends MinimalEObjectImpl.Container impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -68,7 +64,6 @@ public abstract class TypeInstanceImpl extends MinimalEObjectImpl.Container impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -81,7 +76,6 @@ public abstract class TypeInstanceImpl extends MinimalEObjectImpl.Container impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -94,24 +88,24 @@ public abstract class TypeInstanceImpl extends MinimalEObjectImpl.Container impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.TYPE_INSTANCE___GET_CMD_VALUE:
-			try {
-				return getCmdValue();
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING:
-			setValueFromString((String) arguments.get(0));
-			return null;
-		case LayersPackage.TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE:
-			setValueFromInstance((TypeInstance) arguments.get(0));
-			return null;
+			case LayersPackage.TYPE_INSTANCE___GET_CMD_VALUE:
+				try {
+					return getCmdValue();
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING:
+				setValueFromString((String)arguments.get(0));
+				return null;
+			case LayersPackage.TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE:
+				setValueFromInstance((TypeInstance)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

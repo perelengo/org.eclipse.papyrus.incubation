@@ -28,8 +28,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.StackedLayerOperator;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Stacked Layer Operator</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -52,7 +50,6 @@ public class StackedLayerOperatorImpl extends AbstractLayerOperatorImpl implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -86,8 +83,7 @@ public class StackedLayerOperatorImpl extends AbstractLayerOperatorImpl implemen
 		} catch (NotFoundException e) {
 			// Not found
 			log.error(this.getClass().getName()
-					+ "- Can't get LayerOperatorDescriptor for descriptorName '" + getLayerOperatorDescriptorName() + "'."
-					, e);
+					+ "- Can't get LayerOperatorDescriptor for descriptorName '" + getLayerOperatorDescriptorName() + "'.", e);
 		}
 	}
 

@@ -29,8 +29,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TopLayerOperator;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Top Layer Operator</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -38,7 +36,6 @@ public class TopLayerOperatorImpl extends AbstractLayerOperatorImpl implements T
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected TopLayerOperatorImpl() {
@@ -48,7 +45,6 @@ public class TopLayerOperatorImpl extends AbstractLayerOperatorImpl implements T
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -120,8 +116,7 @@ public class TopLayerOperatorImpl extends AbstractLayerOperatorImpl implements T
 		// Return appropriate result
 		if (isCmdFound) {
 			return resCmds;
-		}
-		else {
+		} else {
 			// No command ==> null
 			return null;
 		}
@@ -164,8 +159,7 @@ public class TopLayerOperatorImpl extends AbstractLayerOperatorImpl implements T
 		// Return appropriate result
 		if (isCmdFound) {
 			return resCmds;
-		}
-		else {
+		} else {
 			// No command ==> null
 			return null;
 		}

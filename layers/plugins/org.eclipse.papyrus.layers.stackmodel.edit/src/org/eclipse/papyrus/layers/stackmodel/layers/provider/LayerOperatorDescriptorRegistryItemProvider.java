@@ -38,7 +38,6 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
  * This is the item provider adapter for a {@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- *
  * @generated
  */
 public class LayerOperatorDescriptorRegistryItemProvider
@@ -53,7 +52,6 @@ public class LayerOperatorDescriptorRegistryItemProvider
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	public LayerOperatorDescriptorRegistryItemProvider(AdapterFactory adapterFactory) {
@@ -64,7 +62,6 @@ public class LayerOperatorDescriptorRegistryItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -82,54 +79,52 @@ public class LayerOperatorDescriptorRegistryItemProvider
 	 * This adds a property descriptor for the Property Collection Size feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addPropertyCollectionSizePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerOperatorDescriptorRegistry_propertyCollectionSize_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerOperatorDescriptorRegistry_propertyCollectionSize_feature", "_UI_LayerOperatorDescriptorRegistry_type"),
-						LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_COLLECTION_SIZE,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerOperatorDescriptorRegistry_propertyCollectionSize_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerOperatorDescriptorRegistry_propertyCollectionSize_feature", "_UI_LayerOperatorDescriptorRegistry_type"),
+				 LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_COLLECTION_SIZE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
 	 * This adds a property descriptor for the Default Operator feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	protected void addDefaultOperatorPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerOperatorDescriptorRegistry_defaultOperator_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerOperatorDescriptorRegistry_defaultOperator_feature", "_UI_LayerOperatorDescriptorRegistry_type"),
-						LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DEFAULT_OPERATOR,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerOperatorDescriptorRegistry_defaultOperator_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerOperatorDescriptorRegistry_defaultOperator_feature", "_UI_LayerOperatorDescriptorRegistry_type"),
+				 LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DEFAULT_OPERATOR,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -145,7 +140,6 @@ public class LayerOperatorDescriptorRegistryItemProvider
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -160,7 +154,6 @@ public class LayerOperatorDescriptorRegistryItemProvider
 	 * This returns LayerOperatorDescriptorRegistry.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -172,12 +165,11 @@ public class LayerOperatorDescriptorRegistryItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		LayerOperatorDescriptorRegistry layerOperatorDescriptorRegistry = (LayerOperatorDescriptorRegistry) object;
+		LayerOperatorDescriptorRegistry layerOperatorDescriptorRegistry = (LayerOperatorDescriptorRegistry)object;
 		return getString("_UI_LayerOperatorDescriptorRegistry_type") + " " + layerOperatorDescriptorRegistry.getPropertyCollectionSize();
 	}
 
@@ -186,7 +178,6 @@ public class LayerOperatorDescriptorRegistryItemProvider
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -194,13 +185,13 @@ public class LayerOperatorDescriptorRegistryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LayerOperatorDescriptorRegistry.class)) {
-		case LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_COLLECTION_SIZE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DESCRIPTORS:
-		case LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_OPERATORS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_COLLECTION_SIZE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DESCRIPTORS:
+			case LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_OPERATORS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -210,7 +201,6 @@ public class LayerOperatorDescriptorRegistryItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override
@@ -218,51 +208,50 @@ public class LayerOperatorDescriptorRegistryItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DESCRIPTORS,
-						LayersFactory.eINSTANCE.createLayerOperatorDescriptor()));
+				 LayersFactory.eINSTANCE.createLayerOperatorDescriptor()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DESCRIPTORS,
-						LayersFactory.eINSTANCE.createTopLayerOperatorDescriptor()));
+				 LayersFactory.eINSTANCE.createTopLayerOperatorDescriptor()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DESCRIPTORS,
-						LayersFactory.eINSTANCE.createStackedLayerOperatorDescriptor()));
+				 LayersFactory.eINSTANCE.createStackedLayerOperatorDescriptor()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DESCRIPTORS,
-						LayersFactory.eINSTANCE.createAndStackedLayerOperatorDescriptor()));
+				 LayersFactory.eINSTANCE.createAndStackedLayerOperatorDescriptor()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DESCRIPTORS,
-						LayersFactory.eINSTANCE.createOrStackedLayerOperatorDescriptor()));
+				 LayersFactory.eINSTANCE.createOrStackedLayerOperatorDescriptor()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_OPERATORS,
-						LayersFactory.eINSTANCE.createPropertyOperator()));
+				 LayersFactory.eINSTANCE.createPropertyOperator()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_OPERATORS,
-						LayersFactory.eINSTANCE.createDefaultPropertyOperator()));
+				 LayersFactory.eINSTANCE.createDefaultPropertyOperator()));
 
 		newChildDescriptors.add
-				(createChildParameter
+			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_OPERATORS,
-						LayersFactory.eINSTANCE.createCustomPropertyOperator()));
+				 LayersFactory.eINSTANCE.createCustomPropertyOperator()));
 	}
 
 	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
 	 * @generated
 	 */
 	@Override

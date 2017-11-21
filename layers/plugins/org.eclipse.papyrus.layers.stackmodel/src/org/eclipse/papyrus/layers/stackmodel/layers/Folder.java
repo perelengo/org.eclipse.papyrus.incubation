@@ -21,11 +21,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Folder#getElements <em>Elements</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Folder#getName <em>Name</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Folder#getElements <em>Elements</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Folder#getName <em>Name</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getFolder()
  * @model
@@ -40,7 +40,6 @@ public interface Folder extends FolderElement {
 	 * If the meaning of the '<em>Elements</em>' containment reference list isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Elements</em>' containment reference list.
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getFolder_Elements()
 	 * @model containment="true" ordered="false"
@@ -55,7 +54,6 @@ public interface Folder extends FolderElement {
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 *
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage#getFolder_Name()
@@ -68,9 +66,7 @@ public interface Folder extends FolderElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.layers.stackmodel.layers.Folder#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */

@@ -82,19 +82,17 @@ public class LayerOperatorMultipleBindingItemProvider
 	 * @generated
 	 */
 	protected void addLayerOperatorConfigPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_LayerOperatorMultipleBinding_layerOperatorConfig_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LayerOperatorMultipleBinding_layerOperatorConfig_feature", "_UI_LayerOperatorMultipleBinding_type"),
-						LayersconfigPackage.Literals.LAYER_OPERATOR_MULTIPLE_BINDING__LAYER_OPERATOR_CONFIG,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_LayerOperatorMultipleBinding_layerOperatorConfig_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_LayerOperatorMultipleBinding_layerOperatorConfig_feature", "_UI_LayerOperatorMultipleBinding_type"),
+				LayersconfigPackage.Literals.LAYER_OPERATOR_MULTIPLE_BINDING__LAYER_OPERATOR_CONFIG,
+				true,
+				false,
+				true,
+				null,
+				null,
+				null));
 	}
 
 	/**
@@ -150,9 +148,7 @@ public class LayerOperatorMultipleBindingItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((LayerOperatorMultipleBinding) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_LayerOperatorMultipleBinding_type") :
-				getString("_UI_LayerOperatorMultipleBinding_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_LayerOperatorMultipleBinding_type") : getString("_UI_LayerOperatorMultipleBinding_type") + " " + label;
 	}
 
 	/**
@@ -187,10 +183,8 @@ public class LayerOperatorMultipleBindingItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-				(createChildParameter
-				(LayersconfigPackage.Literals.LAYER_OPERATOR_MULTIPLE_BINDING__BINDINGS,
-						LayersconfigFactory.eINSTANCE.createOperatorBinding()));
+		newChildDescriptors.add(createChildParameter(LayersconfigPackage.Literals.LAYER_OPERATOR_MULTIPLE_BINDING__BINDINGS,
+				LayersconfigFactory.eINSTANCE.createOperatorBinding()));
 	}
 
 }

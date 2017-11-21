@@ -83,6 +83,9 @@
         <children>
           <emfPageIdentifier href="layers.notation#_j4XzEOT_EeKSDdPH_NXL-g"/>
         </children>
+        <children>
+          <emfPageIdentifier href="notation/notation.notation#_WlS4YLcpEeK8_t7Rpq6ZJA"/>
+        </children>
       </children>
     </windows>
   </sashModel>
