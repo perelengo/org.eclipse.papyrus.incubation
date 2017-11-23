@@ -44,11 +44,11 @@ import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.core.services.ServicesRegistry;
 import org.eclipse.papyrus.infra.core.utils.ServiceUtils;
 import org.eclipse.papyrus.infra.ui.util.ServiceUtilsForWorkbenchPage;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 import org.eclipse.papyrus.layers.runtime.ILayersStackApplicationEventListener;
 import org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier;
 import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -551,7 +551,7 @@ public class LayersExplorerView extends ViewPart implements ITabbedPropertySheet
 		} catch (NotFoundException e) {
 			e.printStackTrace();
 			setEmptyTreeInput();
-		} catch (org.eclipse.papyrus.layers.stackmodel.NotFoundException e) {
+		} catch (org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException e) {
 			setEmptyTreeInput();
 		}
 	}
@@ -660,7 +660,7 @@ public class LayersExplorerView extends ViewPart implements ITabbedPropertySheet
 		viewer.getControl().setMenu(menu);
 		// getSite().registerContextMenu(contextMenu, new UnwrappingSelectionProvider(viewer));
 
-		String menuId = "org.eclipse.papyrus.layers.stackmodel.diagram.ui.contextmenu";
+		String menuId = "org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.diagram.ui.contextmenu";
 		// getSite().registerContextMenu(menuId, contextMenu, new UnwrappingSelectionProvider(viewer));
 		getSite().registerContextMenu(menuId, contextMenu, viewer);
 
@@ -718,7 +718,7 @@ public class LayersExplorerView extends ViewPart implements ITabbedPropertySheet
 			}
 
 			return application.lookupLayersStackFor(currentDiagram);
-		} catch (org.eclipse.papyrus.layers.stackmodel.NotFoundException e) {
+		} catch (org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException e) {
 		}
 		// Not found
 		return null;

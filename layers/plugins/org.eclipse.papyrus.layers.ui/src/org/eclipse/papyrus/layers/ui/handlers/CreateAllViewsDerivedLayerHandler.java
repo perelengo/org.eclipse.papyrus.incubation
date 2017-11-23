@@ -11,9 +11,9 @@
 package org.eclipse.papyrus.layers.ui.handlers;
 
 import org.eclipse.core.commands.IHandler;
-import org.eclipse.papyrus.layers.stackmodel.layers.AllViewsDerivedLayer;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AllViewsDerivedLayer;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
 import org.eclipse.papyrus.layers.ui.commands.AbstractCreateLayerExpressionHandler;
 
 

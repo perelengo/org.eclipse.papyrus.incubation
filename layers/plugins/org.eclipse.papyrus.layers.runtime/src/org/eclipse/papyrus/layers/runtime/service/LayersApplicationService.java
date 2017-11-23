@@ -18,9 +18,9 @@ import org.eclipse.papyrus.infra.core.services.IService;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.core.services.ServicesRegistry;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 import org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer;
 import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 
 /**
  * @author cedric dumoulin

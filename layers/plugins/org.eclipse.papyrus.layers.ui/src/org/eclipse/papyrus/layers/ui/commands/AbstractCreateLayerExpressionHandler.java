@@ -19,12 +19,12 @@ import java.util.List;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.expressions.IEvaluationContext;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
-import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayerOperator;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersContainer;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 
 public abstract class AbstractCreateLayerExpressionHandler extends AbstractLayersCommand {
 

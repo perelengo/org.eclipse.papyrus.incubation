@@ -19,8 +19,8 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 
 
 /**

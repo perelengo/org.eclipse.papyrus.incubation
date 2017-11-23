@@ -32,10 +32,10 @@ import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.core.sasheditor.editor.ISashWindowsContainer;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.ui.util.ServiceUtilsForIEvaluationContext;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 import org.eclipse.papyrus.layers.runtime.NotationDiagramHelper;
 import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
-import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 import org.eclipse.ui.IEditorPart;
 
 /**

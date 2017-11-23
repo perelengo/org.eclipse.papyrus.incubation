@@ -22,8 +22,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 
 
 /**

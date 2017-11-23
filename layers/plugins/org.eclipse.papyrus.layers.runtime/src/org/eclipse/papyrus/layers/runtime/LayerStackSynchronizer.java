@@ -17,18 +17,18 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.papyrus.layers.stackmodel.BadStateException;
-import org.eclipse.papyrus.layers.stackmodel.LayersException;
-import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
-import org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand;
-import org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayer;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
-import org.eclipse.papyrus.layers.stackmodel.layers.Property;
-import org.eclipse.papyrus.layers.stackmodel.layers.PropertySetter;
-import org.eclipse.papyrus.layers.stackmodel.notifier.DiagramViewEventNotifier;
-import org.eclipse.papyrus.layers.stackmodel.notifier.IDiagramViewEventListener;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.DiagramViewEventNotifier;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.IDiagramViewEventListener;
 
 
 /**
@@ -684,7 +684,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 
 	/**
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.notifier.IDiagramViewEventListener#diagramViewAdded(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.IDiagramViewEventListener#diagramViewAdded(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param msg
 	 */
@@ -704,7 +704,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 
 	/**
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.notifier.IDiagramViewEventListener#diagramViewRemoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.IDiagramViewEventListener#diagramViewRemoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param msg
 	 */

@@ -45,8 +45,8 @@ import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.papyrus.layers.stackmodel.layers.presentation.LayersActionBarContributor;
-import org.eclipse.papyrus.layers.stackmodel.layers.presentation.LayersEditorPlugin;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.editor.presentation.LayersActionBarContributor;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.editor.presentation.LayersEditorPlugin;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
@@ -245,7 +245,7 @@ public class DynamicContextMenu implements ISelectionChangedListener {
 	 */
 	public void contributeToMenu(IMenuManager menuManager) {
 
-		IMenuManager submenuManager = new MenuManager(LayersEditorPlugin.INSTANCE.getString("_UI_LayersEditor_menu"), "org.eclipse.papyrus.layers.stackmodel.layersMenuID");
+		IMenuManager submenuManager = new MenuManager(LayersEditorPlugin.INSTANCE.getString("_UI_LayersEditor_menu"), "org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layersMenuID");
 		// menuManager.insertAfter("additions", submenuManager);
 		menuManager.add(submenuManager);
 		submenuManager.add(new Separator("settings"));

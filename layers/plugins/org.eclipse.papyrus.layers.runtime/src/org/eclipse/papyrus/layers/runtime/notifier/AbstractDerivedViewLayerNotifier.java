@@ -17,7 +17,7 @@ package org.eclipse.papyrus.layers.runtime.notifier;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.RegExpLayer;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer;
 
 /**
  * Common ancestor of DerivedViewLayerNotifier.

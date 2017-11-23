@@ -11,11 +11,11 @@
 package org.eclipse.papyrus.layers.runtime;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 import org.eclipse.papyrus.layers.runtime.model.ILayersModelRootEventListener;
 import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.layers.runtime.model.LayersModelEventRootNotifier;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 
 
 /**

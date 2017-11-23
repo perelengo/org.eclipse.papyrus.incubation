@@ -15,7 +15,7 @@
 package org.eclipse.papyrus.layers.runtime.notifier;
 
 import org.eclipse.gmf.runtime.notation.Diagram;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 
 /**
  * Notify listeners when a change occurs on an domain element associated to an element of the LayerStack's diagram.

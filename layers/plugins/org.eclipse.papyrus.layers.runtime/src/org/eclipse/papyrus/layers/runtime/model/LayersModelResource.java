@@ -16,9 +16,9 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.papyrus.infra.core.resource.AbstractModelWithSharedResource;
 import org.eclipse.papyrus.infra.core.resource.IModel;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 import org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
 
 
 /**

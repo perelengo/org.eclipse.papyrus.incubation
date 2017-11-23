@@ -22,7 +22,7 @@ import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.viewers.StructuredViewer;
 import org.eclipse.jface.viewers.TreeViewer;
-import org.eclipse.papyrus.layers.stackmodel.layers.provider.custom.CustomLayersItemProviderAdapterFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit.provider.custom.CustomLayersItemProviderAdapterFactory;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.IWorkbenchPartSite;
@@ -41,7 +41,7 @@ public class LayersTreeViewerFactory {
 	/**
 	 * ID used to register the context menu.
 	 */
-	static final String CONTEXT_MENU_ID = "org.eclipse.papyrus.layers.stackmodel.diagram.ui.contextmenu";
+	static final String CONTEXT_MENU_ID = "org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.diagram.ui.contextmenu";
 
 	/**
 	 * Create a TreeViewer suitable to render Layers as a Tree.

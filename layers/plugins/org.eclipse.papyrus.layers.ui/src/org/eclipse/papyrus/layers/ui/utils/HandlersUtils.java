@@ -19,7 +19,7 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.papyrus.infra.core.sasheditor.editor.ISashWindowsContainer;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.ui.util.ServiceUtilsForWorkbenchPage;
-import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PlatformUI;

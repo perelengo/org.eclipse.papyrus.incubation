@@ -15,7 +15,7 @@ package org.eclipse.papyrus.layers.ui.view;
 
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.expressions.IEvaluationContext;
-import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
 import org.eclipse.ui.ISources;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IWorkbenchWindow;

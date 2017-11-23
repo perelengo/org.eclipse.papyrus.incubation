@@ -23,10 +23,10 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.window.Window;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
-import org.eclipse.papyrus.layers.stackmodel.LayersException;
-import org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayer;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStackApplication;
-import org.eclipse.papyrus.layers.stackmodel.layers.Property;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.dialogs.ListSelectionDialog;
 

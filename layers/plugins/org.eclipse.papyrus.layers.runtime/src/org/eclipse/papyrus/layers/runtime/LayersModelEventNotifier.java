@@ -19,13 +19,13 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EContentAdapter;
-import org.eclipse.papyrus.layers.stackmodel.NotFoundException;
-import org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayer;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersStack;
-import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
-import org.eclipse.papyrus.layers.stackmodel.layers.impl.StringToTypeInstanceMapImpl;
-import org.eclipse.papyrus.layers.stackmodel.layers.util.ECoreUtils;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToTypeInstanceMapImpl;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.util.ECoreUtils;
 
 /**
  * This class listen to a {@link LayersStack} and send event to listeners.
