@@ -290,7 +290,7 @@ public class FillInstanceImpl extends TypeInstanceImpl implements FillInstance {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (transparency: ");
+		result.append(" (transparency: "); //$NON-NLS-1$
 		result.append(transparency);
 		result.append(')');
 		return result.toString();

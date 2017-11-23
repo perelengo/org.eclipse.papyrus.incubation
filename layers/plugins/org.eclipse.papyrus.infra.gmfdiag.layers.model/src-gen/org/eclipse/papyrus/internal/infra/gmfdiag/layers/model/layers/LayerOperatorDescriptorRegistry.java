@@ -1,19 +1,22 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
 
@@ -42,7 +45,8 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * The list contents are of type {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Descriptors</em>' containment reference list isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Descriptors</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Descriptors</em>' containment reference list.
@@ -57,7 +61,8 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * The list contents are of type {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Property Operators</em>' containment reference list isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Property Operators</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property Operators</em>' containment reference list.
@@ -71,7 +76,8 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * Returns the value of the '<em><b>Property Collection Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Property Collection Size</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Property Collection Size</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property Collection Size</em>' attribute.
@@ -96,7 +102,8 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * Returns the value of the '<em><b>Default Operator</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Default Operator</em>' reference isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Default Operator</em>' reference isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Operator</em>' reference.

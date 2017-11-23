@@ -1,20 +1,23 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.gmf.runtime.notation.View;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 
 /**
@@ -43,7 +46,8 @@ public interface AbstractLayer extends LayerExpression {
 	 * The list contents are of type {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Property Values</em>' reference list isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Property Values</em>' reference list isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property Values</em>' reference list.
@@ -59,7 +63,8 @@ public interface AbstractLayer extends LayerExpression {
 	 * and the value is of type {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance},
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Property Value Map</em>' map isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Property Value Map</em>' map isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property Value Map</em>' map.
@@ -73,7 +78,8 @@ public interface AbstractLayer extends LayerExpression {
 	 * Returns the value of the '<em><b>Layer Descriptor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Layer Descriptor</em>' reference isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Layer Descriptor</em>' reference isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Layer Descriptor</em>' reference.
@@ -99,7 +105,8 @@ public interface AbstractLayer extends LayerExpression {
 	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.View}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Views</em>' reference list isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Views</em>' reference list isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Views</em>' reference list.
@@ -114,7 +121,8 @@ public interface AbstractLayer extends LayerExpression {
 	 * The list contents are of type {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Attached Properties</em>' reference list isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Attached Properties</em>' reference list isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attached Properties</em>' reference list.

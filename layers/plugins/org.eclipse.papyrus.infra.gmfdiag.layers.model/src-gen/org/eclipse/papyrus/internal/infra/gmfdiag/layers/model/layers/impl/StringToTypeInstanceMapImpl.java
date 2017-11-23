@@ -297,7 +297,7 @@ public class StringToTypeInstanceMapImpl extends MinimalEObjectImpl.Container im
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (key: ");
+		result.append(" (key: "); //$NON-NLS-1$
 		result.append(key);
 		result.append(')');
 		return result.toString();

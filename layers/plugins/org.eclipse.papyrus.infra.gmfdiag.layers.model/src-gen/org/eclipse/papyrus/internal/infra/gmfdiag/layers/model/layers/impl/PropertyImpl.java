@@ -464,11 +464,11 @@ public class PropertyImpl extends
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
-		result.append(", description: ");
+		result.append(", description: "); //$NON-NLS-1$
 		result.append(description);
-		result.append(", index: ");
+		result.append(", index: "); //$NON-NLS-1$
 		result.append(index);
 		result.append(')');
 		return result.toString();

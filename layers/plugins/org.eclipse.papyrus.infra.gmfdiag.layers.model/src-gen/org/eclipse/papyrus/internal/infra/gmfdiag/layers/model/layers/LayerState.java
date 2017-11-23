@@ -1,4 +1,15 @@
 /**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
@@ -26,7 +37,7 @@ public enum LayerState implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DETACHED(0, "detached", "detached"),
+	DETACHED(0, "detached", "detached"), //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * The '<em><b>Attached</b></em>' literal object.
@@ -36,13 +47,14 @@ public enum LayerState implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ATTACHED(1, "attached", "attached");
+	ATTACHED(1, "attached", "attached"); //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * The '<em><b>Detached</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Detached</b></em>' literal object isn't clear, there really should be more of a description here...
+	 * If the meaning of '<em><b>Detached</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DETACHED
@@ -56,7 +68,8 @@ public enum LayerState implements Enumerator {
 	 * The '<em><b>Attached</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Attached</b></em>' literal object isn't clear, there really should be more of a description here...
+	 * If the meaning of '<em><b>Attached</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ATTACHED
@@ -72,7 +85,8 @@ public enum LayerState implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LayerState[] VALUES_ARRAY = new LayerState[] {
+	private static final LayerState[] VALUES_ARRAY =
+		new LayerState[] {
 			DETACHED,
 			ATTACHED,
 		};
@@ -175,7 +189,6 @@ public enum LayerState implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -185,7 +198,6 @@ public enum LayerState implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 	  return name;
 	}
@@ -195,7 +207,6 @@ public enum LayerState implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLiteral() {
 	  return literal;
 	}
@@ -210,5 +221,5 @@ public enum LayerState implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-
-} // LayerState
+	
+} //LayerState

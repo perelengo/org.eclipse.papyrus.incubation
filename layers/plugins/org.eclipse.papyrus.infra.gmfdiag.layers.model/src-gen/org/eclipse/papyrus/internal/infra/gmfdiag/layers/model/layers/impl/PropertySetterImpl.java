@@ -258,7 +258,7 @@ public abstract class PropertySetterImpl extends MinimalEObjectImpl.Container im
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (propertyName: ");
+		result.append(" (propertyName: "); //$NON-NLS-1$
 		result.append(propertyName);
 		result.append(')');
 		return result.toString();

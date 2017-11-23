@@ -261,9 +261,9 @@ public class LineInstanceImpl extends TypeInstanceImpl implements LineInstance {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (lineColor: ");
+		result.append(" (lineColor: "); //$NON-NLS-1$
 		result.append(lineColor);
-		result.append(", lineWith: ");
+		result.append(", lineWith: "); //$NON-NLS-1$
 		result.append(lineWith);
 		result.append(')');
 		return result.toString();

@@ -1,21 +1,23 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 
+import org.eclipse.gmf.runtime.notation.View;
+
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,12 +42,12 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
  * @generated
  */
 public interface RegExpLayer extends AbstractLayer {
-
 	/**
 	 * Returns the value of the '<em><b>Expr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Expr</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Expr</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expr</em>' attribute.
@@ -70,7 +72,8 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Returns the value of the '<em><b>Language</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Language</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Language</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Language</em>' attribute.
@@ -95,7 +98,8 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Returns the value of the '<em><b>Is Domain Changed Event Dependant</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Is Domain Changed Event Dependant</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Is Domain Changed Event Dependant</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Domain Changed Event Dependant</em>' attribute.
@@ -121,7 +125,8 @@ public interface RegExpLayer extends AbstractLayer {
 	 * The literals are from the enumeration {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.EventLevel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Domain Changed Event Level</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Domain Changed Event Level</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Domain Changed Event Level</em>' attribute.
@@ -148,7 +153,8 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Returns the value of the '<em><b>Is Diagram Changed Event Dependant</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Is Diagram Changed Event Dependant</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Is Diagram Changed Event Dependant</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Diagram Changed Event Dependant</em>' attribute.
@@ -174,7 +180,8 @@ public interface RegExpLayer extends AbstractLayer {
 	 * The literals are from the enumeration {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.EventLevel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Diagram Changed Event Level</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Diagram Changed Event Level</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Diagram Changed Event Level</em>' attribute.
@@ -201,7 +208,8 @@ public interface RegExpLayer extends AbstractLayer {
 	 * Returns the value of the '<em><b>Expression Context Object Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Expression Context Object Type</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Expression Context Object Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expression Context Object Type</em>' attribute.
@@ -277,4 +285,5 @@ public interface RegExpLayer extends AbstractLayer {
 	 * @generated
 	 */
 	EList<View> lookupDerivedViews(EList<View> views) throws LayersException;
+
 } // RegExpLayer

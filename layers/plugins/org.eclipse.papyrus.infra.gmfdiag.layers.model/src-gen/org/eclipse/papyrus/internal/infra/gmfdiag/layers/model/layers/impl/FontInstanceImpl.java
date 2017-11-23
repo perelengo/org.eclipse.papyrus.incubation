@@ -375,13 +375,13 @@ public class FontInstanceImpl extends TypeInstanceImpl implements FontInstance {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (fontColor: ");
+		result.append(" (fontColor: "); //$NON-NLS-1$
 		result.append(fontColor);
-		result.append(", fontName: ");
+		result.append(", fontName: "); //$NON-NLS-1$
 		result.append(fontName);
-		result.append(", fontHeigh: ");
+		result.append(", fontHeigh: "); //$NON-NLS-1$
 		result.append(fontHeigh);
-		result.append(", bold: ");
+		result.append(", bold: "); //$NON-NLS-1$
 		result.append(bold);
 		result.append(')');
 		return result.toString();

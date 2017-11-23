@@ -463,17 +463,17 @@ public class MetamodelImpl extends
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
-		result.append(", description: ");
+		result.append(", description: "); //$NON-NLS-1$
 		result.append(description);
-		result.append(", nsuri: ");
+		result.append(", nsuri: "); //$NON-NLS-1$
 		result.append(nsuri);
-		result.append(", pluginID: ");
+		result.append(", pluginID: "); //$NON-NLS-1$
 		result.append(pluginID);
-		result.append(", ePackageInstanceName: ");
+		result.append(", ePackageInstanceName: "); //$NON-NLS-1$
 		result.append(ePackageInstanceName);
-		result.append(", isTypeValid: ");
+		result.append(", isTypeValid: "); //$NON-NLS-1$
 		result.append(isTypeValid);
 		result.append(')');
 		return result.toString();

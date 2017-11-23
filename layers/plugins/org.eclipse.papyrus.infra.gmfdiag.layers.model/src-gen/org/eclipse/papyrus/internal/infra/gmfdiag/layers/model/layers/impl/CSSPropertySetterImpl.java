@@ -34,7 +34,6 @@ public class CSSPropertySetterImpl extends PropertySetterImpl implements CSSProp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

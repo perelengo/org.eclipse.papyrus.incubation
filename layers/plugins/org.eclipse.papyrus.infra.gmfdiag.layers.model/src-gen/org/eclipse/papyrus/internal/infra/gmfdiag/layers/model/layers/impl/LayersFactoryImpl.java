@@ -133,7 +133,7 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 			case LayersPackage.CSS_TYPE: return createCSSType();
 			case LayersPackage.CSS_INSTANCE: return createCSSInstance();
 			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
 	}
 
@@ -170,7 +170,7 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 			case LayersPackage.CUSTOM_PROPERTY_OPERTOR_INSTANCE:
 				return createCustomPropertyOpertorInstanceFromString(eDataType, initialValue);
 			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
 	}
 
@@ -207,7 +207,7 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 			case LayersPackage.CUSTOM_PROPERTY_OPERTOR_INSTANCE:
 				return convertCustomPropertyOpertorInstanceToString(eDataType, instanceValue);
 			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
 	}
 
@@ -882,7 +882,7 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 */
 	public LayerState createLayerStateFromString(EDataType eDataType, String initialValue) {
 		LayerState result = LayerState.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
@@ -902,7 +902,7 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 */
 	public EventLevel createEventLevelFromString(EDataType eDataType, String initialValue) {
 		EventLevel result = EventLevel.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 

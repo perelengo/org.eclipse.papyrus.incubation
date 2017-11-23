@@ -1545,16 +1545,16 @@ The interface provide one method allowing to add a LayerExpression to the contai
   <Ecore:EReference xmi:id="_CihYINt8EeKwptaAAanMDg" isTransient="true" base_Property="_5rptsNqBEeKQqZMBCFd2Uw"/>
   <Ecore:EReference xmi:id="_GbspINt8EeKwptaAAanMDg" isTransient="true" base_Property="_wRCXENt2EeKQqZMBCFd2Uw"/>
   <Ecore:EReference xmi:id="_cqKPYNt8EeKwptaAAanMDg" isTransient="true" base_Property="_wROkUdt2EeKQqZMBCFd2Uw"/>
-  <Ecore:EDataType xmi:id="_qcE4UNxGEeKwptaAAanMDg" instanceClassName="org.eclipse.papyrus.layers.stackmodel.LayersException" base_PrimitiveType="_iYKFMNxGEeKwptaAAanMDg"/>
-  <Ecore:EDataType xmi:id="_4RuZgNxGEeKwptaAAanMDg" instanceClassName="org.eclipse.papyrus.layers.stackmodel.NotFoundException" base_PrimitiveType="_k-dZENxGEeKwptaAAanMDg"/>
-  <Ecore:EDataType xmi:id="_PWPEsNxMEeKwptaAAanMDg" instanceClassName="org.eclipse.papyrus.layers.stackmodel.BadStateException" base_PrimitiveType="_KG7HMNxMEeKwptaAAanMDg"/>
+  <Ecore:EDataType xmi:id="_qcE4UNxGEeKwptaAAanMDg" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException" base_PrimitiveType="_iYKFMNxGEeKwptaAAanMDg"/>
+  <Ecore:EDataType xmi:id="_4RuZgNxGEeKwptaAAanMDg" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException" base_PrimitiveType="_k-dZENxGEeKwptaAAanMDg"/>
+  <Ecore:EDataType xmi:id="_PWPEsNxMEeKwptaAAanMDg" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException" base_PrimitiveType="_KG7HMNxMEeKwptaAAanMDg"/>
   <Ecore:EClass xmi:id="_cyLGsO5mEeK0p4PkXjd-_Q" instanceClassName="java.util.Map$Entry" base_Class="_JSMf8O5mEeK0p4PkXjd-_Q"/>
-  <Ecore:EDataType xmi:id="_UdUS8O7GEeK0p4PkXjd-_Q" instanceClassName="org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand" base_PrimitiveType="_Qeyn4O7GEeK0p4PkXjd-_Q"/>
+  <Ecore:EDataType xmi:id="_UdUS8O7GEeK0p4PkXjd-_Q" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand" base_PrimitiveType="_Qeyn4O7GEeK0p4PkXjd-_Q"/>
   <Ecore:EReference xmi:id="_Bw8NMO7jEeK0p4PkXjd-_Q" isTransient="true" base_Property="_3F7c4O3uEeKwLp35IbAIig"/>
   <Ecore:EReference xmi:id="_ByAHsO7kEeK0p4PkXjd-_Q" isTransient="true" base_Property="_3GHqIe3uEeKwLp35IbAIig"/>
   <Ecore:EParameter xmi:id="_8ebqYO7lEeK0p4PkXjd-_Q" base_Parameter="_xfz8Ue7HEeK0p4PkXjd-_Q"/>
   <Ecore:EParameter xmi:id="_8I1QAO70EeK0p4PkXjd-_Q" base_Parameter="_8ILIsu70EeK0p4PkXjd-_Q"/>
-  <Ecore:EClass xmi:id="_ZDqPgO8UEeK0p4PkXjd-_Q" instanceClassName="org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand" base_Interface="_XZJOcO8UEeK0p4PkXjd-_Q"/>
+  <Ecore:EClass xmi:id="_ZDqPgO8UEeK0p4PkXjd-_Q" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand" base_Interface="_XZJOcO8UEeK0p4PkXjd-_Q"/>
   <Ecore:EReference xmi:id="_EZ4kIO-NEeK0p4PkXjd-_Q" isTransient="true" base_Property="_rEPKgO-MEeK0p4PkXjd-_Q"/>
   <Ecore:EReference xmi:id="_dF0wYAkeEeOnVqX9VcfeWQ" isTransient="true" base_Property="_5xnb4AkdEeOnVqX9VcfeWQ"/>
   <Ecore:EReference xmi:id="_hXqZAAkeEeOnVqX9VcfeWQ" isTransient="true" base_Property="_31bcAAkdEeOnVqX9VcfeWQ"/>
@@ -1562,7 +1562,7 @@ The interface provide one method allowing to add a LayerExpression to the contai
   <Ecore:EReference xmi:id="_0vze4Aw-EeOjX-JbGFEH7w" isTransient="true" base_Property="_KSjUEAkdEeOnVqX9VcfeWQ"/>
   <Ecore:EReference xmi:id="_i_yH8AxAEeOjX-JbGFEH7w" isTransient="true" base_Property="_FDc3EAxAEeOjX-JbGFEH7w"/>
   <Ecore:EAttribute xmi:id="_B49pUAxGEeOjX-JbGFEH7w" isTransient="true" base_Property="_mCUIAAxEEeOjX-JbGFEH7w"/>
-  <Ecore:EDataType xmi:id="_Fya_cAxMEeOjX-JbGFEH7w" instanceClassName="org.eclipse.papyrus.layers.stackmodel.operators.CustomPropertyOperatorsInstance" base_PrimitiveType="__ADTwAxLEeOjX-JbGFEH7w"/>
+  <Ecore:EDataType xmi:id="_Fya_cAxMEeOjX-JbGFEH7w" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.CustomPropertyOperatorsInstance" base_PrimitiveType="__ADTwAxLEeOjX-JbGFEH7w"/>
   <Ecore:EReference xmi:id="_1yMvsA2hEeOjX-JbGFEH7w" isTransient="true" base_Property="_rTr0UA2fEeOjX-JbGFEH7w"/>
   <Ecore:EAttribute xmi:id="_iczSMA2qEeOjX-JbGFEH7w" isTransient="true" base_Property="_RrX8YA2qEeOjX-JbGFEH7w"/>
   <Ecore:EAttribute xmi:id="_8zffIGQ7EeOlpfB_tZS-QA" isTransient="true" base_Property="_xcbgQGQ7EeOlpfB_tZS-QA"/>

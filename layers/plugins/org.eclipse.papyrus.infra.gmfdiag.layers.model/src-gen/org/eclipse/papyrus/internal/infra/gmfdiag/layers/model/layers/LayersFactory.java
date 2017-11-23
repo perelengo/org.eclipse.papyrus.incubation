@@ -1,14 +1,15 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
@@ -48,6 +49,276 @@ public interface LayersFactory extends EFactory {
 	 * @generated
 	 */
 	LayersStack createLayersStack();
+
+	/**
+	 * Returns a new object of class '<em>Stack Application</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Stack Application</em>'.
+	 * @generated
+	 */
+	LayersStackApplication createLayersStackApplication();
+
+	/**
+	 * Returns a new object of class '<em>Layer Stack Descriptor Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layer Stack Descriptor Registry</em>'.
+	 * @generated
+	 */
+	LayerStackDescriptorRegistry createLayerStackDescriptorRegistry();
+
+	/**
+	 * Returns a new object of class '<em>Property Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property Registry</em>'.
+	 * @generated
+	 */
+	PropertyRegistry createPropertyRegistry();
+
+	/**
+	 * Returns a new object of class '<em>Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property</em>'.
+	 * @generated
+	 */
+	Property createProperty();
+
+	/**
+	 * Returns a new object of class '<em>Metamodel</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Metamodel</em>'.
+	 * @generated
+	 */
+	Metamodel createMetamodel();
+
+	/**
+	 * Returns a new object of class '<em>Type Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type Registry</em>'.
+	 * @generated
+	 */
+	TypeRegistry createTypeRegistry();
+
+	/**
+	 * Returns a new object of class '<em>Layer Descriptor Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layer Descriptor Registry</em>'.
+	 * @generated
+	 */
+	LayerDescriptorRegistry createLayerDescriptorRegistry();
+
+	/**
+	 * Returns a new object of class '<em>Layer Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layer Descriptor</em>'.
+	 * @generated
+	 */
+	LayerDescriptor createLayerDescriptor();
+
+	/**
+	 * Returns a new object of class '<em>Layer Application Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layer Application Factory</em>'.
+	 * @generated
+	 */
+	LayerApplicationFactory createLayerApplicationFactory();
+
+	/**
+	 * Returns a new object of class '<em>Property Setter Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property Setter Registry</em>'.
+	 * @generated
+	 */
+	PropertySetterRegistry createPropertySetterRegistry();
+
+	/**
+	 * Returns a new object of class '<em>Layer Operator Descriptor Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layer Operator Descriptor Registry</em>'.
+	 * @generated
+	 */
+	LayerOperatorDescriptorRegistry createLayerOperatorDescriptorRegistry();
+
+	/**
+	 * Returns a new object of class '<em>Layer Operator Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layer Operator Descriptor</em>'.
+	 * @generated
+	 */
+	LayerOperatorDescriptor createLayerOperatorDescriptor();
+
+	/**
+	 * Returns a new object of class '<em>Property Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property Operator</em>'.
+	 * @generated
+	 */
+	PropertyOperator createPropertyOperator();
+
+	/**
+	 * Returns a new object of class '<em>Default Property Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Default Property Operator</em>'.
+	 * @generated
+	 */
+	DefaultPropertyOperator createDefaultPropertyOperator();
+
+	/**
+	 * Returns a new object of class '<em>Folder</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Folder</em>'.
+	 * @generated
+	 */
+	Folder createFolder();
+
+	/**
+	 * Returns a new object of class '<em>Int Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Int Instance</em>'.
+	 * @generated
+	 */
+	IntInstance createIntInstance();
+
+	/**
+	 * Returns a new object of class '<em>Boolean Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boolean Instance</em>'.
+	 * @generated
+	 */
+	BooleanInstance createBooleanInstance();
+
+	/**
+	 * Returns a new object of class '<em>String Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>String Instance</em>'.
+	 * @generated
+	 */
+	StringInstance createStringInstance();
+
+	/**
+	 * Returns a new object of class '<em>Int Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Int Type</em>'.
+	 * @generated
+	 */
+	IntType createIntType();
+
+	/**
+	 * Returns a new object of class '<em>Boolean Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boolean Type</em>'.
+	 * @generated
+	 */
+	BooleanType createBooleanType();
+
+	/**
+	 * Returns a new object of class '<em>String Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>String Type</em>'.
+	 * @generated
+	 */
+	StringType createStringType();
+
+	/**
+	 * Returns a new object of class '<em>Custom Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Custom Type</em>'.
+	 * @generated
+	 */
+	CustomType createCustomType();
+
+	/**
+	 * Returns a new object of class '<em>Top Layer Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Top Layer Operator</em>'.
+	 * @generated
+	 */
+	TopLayerOperator createTopLayerOperator();
+
+	/**
+	 * Returns a new object of class '<em>Stacked Layer Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Stacked Layer Operator</em>'.
+	 * @generated
+	 */
+	StackedLayerOperator createStackedLayerOperator();
+
+	/**
+	 * Returns a new object of class '<em>Custom Layer Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Custom Layer Operator</em>'.
+	 * @generated
+	 */
+	CustomLayerOperator createCustomLayerOperator();
+
+	/**
+	 * Returns a new object of class '<em>Property Index</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property Index</em>'.
+	 * @generated
+	 */
+	PropertyIndex createPropertyIndex();
+
+	/**
+	 * Returns a new object of class '<em>Simple Layer Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Layer Descriptor</em>'.
+	 * @generated
+	 */
+	SimpleLayerDescriptor createSimpleLayerDescriptor();
+
+	/**
+	 * Returns a new object of class '<em>Reg Exp Layer Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reg Exp Layer Descriptor</em>'.
+	 * @generated
+	 */
+	RegExpLayerDescriptor createRegExpLayerDescriptor();
+
+	/**
+	 * Returns a new object of class '<em>Null Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Null Instance</em>'.
+	 * @generated
+	 */
+	NullInstance createNullInstance();
+
+	/**
+	 * Returns a new object of class '<em>Reg Exp Layer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reg Exp Layer</em>'.
+	 * @generated
+	 */
+	RegExpLayer createRegExpLayer();
 
 	/**
 	 * Returns a new object of class '<em>Layer</em>'.
@@ -185,15 +456,6 @@ public interface LayersFactory extends EFactory {
 	IsVisiblePropertySetter createIsVisiblePropertySetter();
 
 	/**
-	 * Returns a new object of class '<em>Layer Operator Descriptor Registry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layer Operator Descriptor Registry</em>'.
-	 * @generated
-	 */
-	LayerOperatorDescriptorRegistry createLayerOperatorDescriptorRegistry();
-
-	/**
 	 * Returns a new object of class '<em>Top Layer Operator Descriptor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -284,267 +546,6 @@ public interface LayersFactory extends EFactory {
 	CSSInstance createCSSInstance();
 
 	/**
-	 * Returns a new object of class '<em>Layer Descriptor</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layer Descriptor</em>'.
-	 * @generated
-	 */
-	LayerDescriptor createLayerDescriptor();
-
-	/**
-	 * Returns a new object of class '<em>Layer Application Factory</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layer Application Factory</em>'.
-	 * @generated
-	 */
-	LayerApplicationFactory createLayerApplicationFactory();
-
-	/**
-	 * Returns a new object of class '<em>Property Setter Registry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Property Setter Registry</em>'.
-	 * @generated
-	 */
-	PropertySetterRegistry createPropertySetterRegistry();
-
-	/**
-	 * Returns a new object of class '<em>Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Property</em>'.
-	 * @generated
-	 */
-	Property createProperty();
-
-	/**
-	 * Returns a new object of class '<em>Metamodel</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Metamodel</em>'.
-	 * @generated
-	 */
-	Metamodel createMetamodel();
-
-	/**
-	 * Returns a new object of class '<em>Folder</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Folder</em>'.
-	 * @generated
-	 */
-	Folder createFolder();
-
-	/**
-	 * Returns a new object of class '<em>Int Instance</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Int Instance</em>'.
-	 * @generated
-	 */
-	IntInstance createIntInstance();
-
-	/**
-	 * Returns a new object of class '<em>Boolean Instance</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean Instance</em>'.
-	 * @generated
-	 */
-	BooleanInstance createBooleanInstance();
-
-	/**
-	 * Returns a new object of class '<em>String Instance</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>String Instance</em>'.
-	 * @generated
-	 */
-	StringInstance createStringInstance();
-
-	/**
-	 * Returns a new object of class '<em>Int Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Int Type</em>'.
-	 * @generated
-	 */
-	IntType createIntType();
-
-	/**
-	 * Returns a new object of class '<em>Boolean Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean Type</em>'.
-	 * @generated
-	 */
-	BooleanType createBooleanType();
-
-	/**
-	 * Returns a new object of class '<em>String Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>String Type</em>'.
-	 * @generated
-	 */
-	StringType createStringType();
-
-	/**
-	 * Returns a new object of class '<em>Custom Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Custom Type</em>'.
-	 * @generated
-	 */
-	CustomType createCustomType();
-
-	/**
-	 * Returns a new object of class '<em>Layer Operator Descriptor</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layer Operator Descriptor</em>'.
-	 * @generated
-	 */
-	LayerOperatorDescriptor createLayerOperatorDescriptor();
-
-	/**
-	 * Returns a new object of class '<em>Property Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Property Operator</em>'.
-	 * @generated
-	 */
-	PropertyOperator createPropertyOperator();
-
-	/**
-	 * Returns a new object of class '<em>Default Property Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Default Property Operator</em>'.
-	 * @generated
-	 */
-	DefaultPropertyOperator createDefaultPropertyOperator();
-
-	/**
-	 * Returns a new object of class '<em>Stack Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Stack Application</em>'.
-	 * @generated
-	 */
-	LayersStackApplication createLayersStackApplication();
-
-	/**
-	 * Returns a new object of class '<em>Layer Stack Descriptor Registry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layer Stack Descriptor Registry</em>'.
-	 * @generated
-	 */
-	LayerStackDescriptorRegistry createLayerStackDescriptorRegistry();
-
-	/**
-	 * Returns a new object of class '<em>Property Registry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Property Registry</em>'.
-	 * @generated
-	 */
-	PropertyRegistry createPropertyRegistry();
-
-	/**
-	 * Returns a new object of class '<em>Property Index</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Property Index</em>'.
-	 * @generated
-	 */
-	PropertyIndex createPropertyIndex();
-
-	/**
-	 * Returns a new object of class '<em>Simple Layer Descriptor</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Simple Layer Descriptor</em>'.
-	 * @generated
-	 */
-	SimpleLayerDescriptor createSimpleLayerDescriptor();
-
-	/**
-	 * Returns a new object of class '<em>Reg Exp Layer Descriptor</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reg Exp Layer Descriptor</em>'.
-	 * @generated
-	 */
-	RegExpLayerDescriptor createRegExpLayerDescriptor();
-
-	/**
-	 * Returns a new object of class '<em>Null Instance</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Null Instance</em>'.
-	 * @generated
-	 */
-	NullInstance createNullInstance();
-
-	/**
-	 * Returns a new object of class '<em>Reg Exp Layer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reg Exp Layer</em>'.
-	 * @generated
-	 */
-	RegExpLayer createRegExpLayer();
-
-	/**
-	 * Returns a new object of class '<em>Type Registry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Type Registry</em>'.
-	 * @generated
-	 */
-	TypeRegistry createTypeRegistry();
-
-	/**
-	 * Returns a new object of class '<em>Layer Descriptor Registry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layer Descriptor Registry</em>'.
-	 * @generated
-	 */
-	LayerDescriptorRegistry createLayerDescriptorRegistry();
-
-	/**
-	 * Returns a new object of class '<em>Top Layer Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Top Layer Operator</em>'.
-	 * @generated
-	 */
-	TopLayerOperator createTopLayerOperator();
-
-	/**
-	 * Returns a new object of class '<em>Stacked Layer Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Stacked Layer Operator</em>'.
-	 * @generated
-	 */
-	StackedLayerOperator createStackedLayerOperator();
-
-	/**
-	 * Returns a new object of class '<em>Custom Layer Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Custom Layer Operator</em>'.
-	 * @generated
-	 */
-	CustomLayerOperator createCustomLayerOperator();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -553,4 +554,4 @@ public interface LayersFactory extends EFactory {
 	 */
 	LayersPackage getLayersPackage();
 
-} // LayersFactory
+} //LayersFactory

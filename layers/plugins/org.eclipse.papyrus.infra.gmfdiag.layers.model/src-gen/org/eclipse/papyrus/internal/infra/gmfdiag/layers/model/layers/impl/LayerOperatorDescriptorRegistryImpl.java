@@ -476,7 +476,7 @@ public class LayerOperatorDescriptorRegistryImpl extends MinimalEObjectImpl.Cont
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (propertyCollectionSize: ");
+		result.append(" (propertyCollectionSize: "); //$NON-NLS-1$
 		result.append(propertyCollectionSize);
 		result.append(')');
 		return result.toString();

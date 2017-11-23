@@ -1,4 +1,15 @@
 /**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
@@ -26,7 +37,7 @@ public enum EventLevel implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LEVEL1(0, "level1", "level1"),
+	LEVEL1(0, "level1", "level1"), //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * The '<em><b>All Levels</b></em>' literal object.
@@ -36,13 +47,14 @@ public enum EventLevel implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ALL_LEVELS(-1, "allLevels", "allLevels");
+	ALL_LEVELS(-1, "allLevels", "allLevels"); //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * The '<em><b>Level1</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Level1</b></em>' literal object isn't clear, there really should be more of a description here...
+	 * If the meaning of '<em><b>Level1</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LEVEL1
@@ -56,7 +68,8 @@ public enum EventLevel implements Enumerator {
 	 * The '<em><b>All Levels</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>All Levels</b></em>' literal object isn't clear, there really should be more of a description here...
+	 * If the meaning of '<em><b>All Levels</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ALL_LEVELS
@@ -72,7 +85,8 @@ public enum EventLevel implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EventLevel[] VALUES_ARRAY = new EventLevel[] {
+	private static final EventLevel[] VALUES_ARRAY =
+		new EventLevel[] {
 			LEVEL1,
 			ALL_LEVELS,
 		};
@@ -175,7 +189,6 @@ public enum EventLevel implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -185,7 +198,6 @@ public enum EventLevel implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 	  return name;
 	}
@@ -195,7 +207,6 @@ public enum EventLevel implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLiteral() {
 	  return literal;
 	}
@@ -210,5 +221,5 @@ public enum EventLevel implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-
-} // EventLevel
+	
+} //EventLevel

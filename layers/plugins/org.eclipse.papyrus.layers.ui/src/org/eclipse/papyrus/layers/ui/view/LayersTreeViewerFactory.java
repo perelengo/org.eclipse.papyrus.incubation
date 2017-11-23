@@ -22,10 +22,10 @@ import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.viewers.StructuredViewer;
 import org.eclipse.jface.viewers.TreeViewer;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit.provider.custom.CustomLayersItemProviderAdapterFactory;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.IWorkbenchPartSite;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit.provider.custom.*;
 
 
 /**

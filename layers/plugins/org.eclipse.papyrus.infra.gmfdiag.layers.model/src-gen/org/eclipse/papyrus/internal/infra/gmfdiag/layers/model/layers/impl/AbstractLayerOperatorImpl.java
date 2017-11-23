@@ -328,7 +328,7 @@ public abstract class AbstractLayerOperatorImpl extends LayerOperatorImpl implem
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (layerOperatorDescriptorName: ");
+		result.append(" (layerOperatorDescriptorName: "); //$NON-NLS-1$
 		result.append(layerOperatorDescriptorName);
 		result.append(')');
 		return result.toString();

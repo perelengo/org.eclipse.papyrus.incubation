@@ -1019,19 +1019,19 @@ public class RegExpLayerImpl extends AbstractLayerImpl implements RegExpLayer {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (expr: ");
+		result.append(" (expr: "); //$NON-NLS-1$
 		result.append(expr);
-		result.append(", language: ");
+		result.append(", language: "); //$NON-NLS-1$
 		result.append(language);
-		result.append(", isDomainChangedEventDependant: ");
+		result.append(", isDomainChangedEventDependant: "); //$NON-NLS-1$
 		result.append(isDomainChangedEventDependant);
-		result.append(", domainChangedEventLevel: ");
+		result.append(", domainChangedEventLevel: "); //$NON-NLS-1$
 		result.append(domainChangedEventLevel);
-		result.append(", isDiagramChangedEventDependant: ");
+		result.append(", isDiagramChangedEventDependant: "); //$NON-NLS-1$
 		result.append(isDiagramChangedEventDependant);
-		result.append(", diagramChangedEventLevel: ");
+		result.append(", diagramChangedEventLevel: "); //$NON-NLS-1$
 		result.append(diagramChangedEventLevel);
-		result.append(", expressionContextObjectType: ");
+		result.append(", expressionContextObjectType: "); //$NON-NLS-1$
 		result.append(expressionContextObjectType);
 		result.append(')');
 		return result.toString();

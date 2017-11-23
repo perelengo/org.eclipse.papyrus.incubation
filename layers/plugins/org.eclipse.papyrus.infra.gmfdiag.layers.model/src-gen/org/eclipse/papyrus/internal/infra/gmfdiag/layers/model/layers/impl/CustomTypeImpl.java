@@ -162,7 +162,7 @@ public class CustomTypeImpl extends TypeImpl implements CustomType {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (classifier: ");
+		result.append(" (classifier: "); //$NON-NLS-1$
 		result.append(classifier);
 		result.append(')');
 		return result.toString();

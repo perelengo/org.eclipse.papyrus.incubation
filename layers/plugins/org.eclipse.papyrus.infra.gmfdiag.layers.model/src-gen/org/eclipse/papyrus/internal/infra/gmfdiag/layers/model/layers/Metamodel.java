@@ -1,14 +1,15 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
@@ -40,7 +41,8 @@ public interface Metamodel extends FolderElement {
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
@@ -65,7 +67,8 @@ public interface Metamodel extends FolderElement {
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
@@ -90,7 +93,8 @@ public interface Metamodel extends FolderElement {
 	 * Returns the value of the '<em><b>Nsuri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nsuri</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Nsuri</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nsuri</em>' attribute.
@@ -115,7 +119,8 @@ public interface Metamodel extends FolderElement {
 	 * Returns the value of the '<em><b>Plugin ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Plugin ID</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Plugin ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plugin ID</em>' attribute.
@@ -140,7 +145,8 @@ public interface Metamodel extends FolderElement {
 	 * Returns the value of the '<em><b>EPackage Instance Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>EPackage Instance Name</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>EPackage Instance Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>EPackage Instance Name</em>' attribute.
@@ -165,7 +171,8 @@ public interface Metamodel extends FolderElement {
 	 * Returns the value of the '<em><b>Is Type Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Is Type Valid</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Is Type Valid</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Type Valid</em>' attribute.

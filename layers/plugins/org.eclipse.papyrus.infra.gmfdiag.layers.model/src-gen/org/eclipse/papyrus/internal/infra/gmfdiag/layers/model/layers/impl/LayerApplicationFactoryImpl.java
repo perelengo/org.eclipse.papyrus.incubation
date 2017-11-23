@@ -86,7 +86,7 @@ public class LayerApplicationFactoryImpl extends MinimalEObjectImpl.Container im
 	public void setApplication(LayersStackApplication newApplication) {
 		if (newApplication != eInternalContainer() || (eContainerFeatureID() != LayersPackage.LAYER_APPLICATION_FACTORY__APPLICATION && newApplication != null)) {
 			if (EcoreUtil.isAncestor(this, newApplication))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);

@@ -179,7 +179,6 @@ public class CustomPropertyOperatorImpl extends PropertyOperatorImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setOperatorInstance(CustomPropertyOperatorsInstance newOperatorInstance) {
 		CustomPropertyOperatorsInstance oldOperatorInstance = operatorInstance;
 		operatorInstance = newOperatorInstance;
@@ -384,11 +383,11 @@ public class CustomPropertyOperatorImpl extends PropertyOperatorImpl implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (classname: ");
+		result.append(" (classname: "); //$NON-NLS-1$
 		result.append(classname);
-		result.append(", operatorInstance: ");
+		result.append(", operatorInstance: "); //$NON-NLS-1$
 		result.append(operatorInstance);
-		result.append(", classBundleID: ");
+		result.append(", classBundleID: "); //$NON-NLS-1$
 		result.append(classBundleID);
 		result.append(')');
 		return result.toString();

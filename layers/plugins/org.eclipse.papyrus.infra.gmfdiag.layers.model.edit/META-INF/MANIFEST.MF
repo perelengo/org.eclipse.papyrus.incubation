@@ -1,16 +1,21 @@
 Manifest-Version: 1.0
 Export-Package: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit.provider,
  org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit.provider.custom,
+ org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider,
+ org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.provider,
  org.eclipse.papyrus.layers.configmodel.layersconfig.provider
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.papyrus.internal.infra.gmfdiag.layers.model;bundle-version="1.2.0";visibility:=reexport,
+Require-Bundle: org.eclipse.core.runtime;resolution:=optional;x-installation:=greedy,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
  org.eclipse.gmf.runtime.notation;visibility:=reexport,
  org.eclipse.gmf.runtime.notation.edit;visibility:=reexport,
  org.eclipse.uml2.common.edit;visibility:=reexport,
- org.eclipse.papyrus.infra.gmfdiag.css.model
+ org.eclipse.papyrus.infra.gmfdiag.css.model;visibility:=reexport,
+ org.eclipse.papyrus.infra.gmfdiag.css.model.edit;visibility:=reexport,
+ org.eclipse.papyrus.infra.gmfdiag.layers.model
+Import-Package: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers,
+ org.osgi.framework
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
@@ -18,6 +23,6 @@ Bundle-Version: 1.2.0.qualifier
 Bundle-Name: %pluginName
 Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
-Bundle-Activator: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit.provider.LayersEditPlugin$Implementation
-Bundle-SymbolicName: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit;singleton:=true
+Bundle-Activator: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.provider.LayersEditPlugin$Implementation$Activator
+Bundle-SymbolicName: org.eclipse.papyrus.infra.gmfdiag.layers.model.edit;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -240,14 +240,14 @@
       <eParameters name="value" ordered="false" lowerBound="1" eType="#//TypeInstance"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComputePropertyValueCommandItf" instanceClassName="org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand"
+  <eClassifiers xsi:type="ecore:EClass" name="ComputePropertyValueCommandItf" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand"
       abstract="true" interface="true">
     <eOperations name="getCmdValue" ordered="false" lowerBound="1" eType="#//TypeInstance"
         eExceptions="#//LayersException"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="LayersException" instanceClassName="org.eclipse.papyrus.layers.stackmodel.LayersException"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="LayersException" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException"/>
   <eClassifiers xsi:type="ecore:EDataType" name="int" instanceClassName="int"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="BadStateException" instanceClassName="org.eclipse.papyrus.layers.stackmodel.BadStateException">
+  <eClassifiers xsi:type="ecore:EDataType" name="BadStateException" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="baseType" value="LayersException"/>
     </eAnnotations>
@@ -262,7 +262,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" ordered="false" lowerBound="1"
         eType="#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="NotFoundException" instanceClassName="org.eclipse.papyrus.layers.stackmodel.NotFoundException">
+  <eClassifiers xsi:type="ecore:EDataType" name="NotFoundException" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="baseType" value="LayersException"/>
     </eAnnotations>
@@ -375,7 +375,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="ComputePropertyValueCommand" instanceClassName="org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ComputePropertyValueCommand" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractLayerOperator" abstract="true"
       eSuperTypes="#//LayerOperator">
     <eOperations name="isDescriptorSet" ordered="false" lowerBound="1" eType="#//boolean"/>
@@ -570,7 +570,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classBundleID" ordered="false"
         lowerBound="1" eType="#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="CustomPropertyOpertorInstance" instanceClassName="org.eclipse.papyrus.layers.stackmodel.operators.CustomPropertyOperatorsInstance"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="CustomPropertyOpertorInstance" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.CustomPropertyOperatorsInstance"/>
   <eClassifiers xsi:type="ecore:EClass" name="AndStackedLayerOperatorDescriptor" eSuperTypes="#//StackedLayerOperatorDescriptor"/>
   <eClassifiers xsi:type="ecore:EClass" name="OrStackedLayerOperatorDescriptor" eSuperTypes="#//StackedLayerOperatorDescriptor"/>
   <eClassifiers xsi:type="ecore:EClass" name="IsAbstractUmlSetter" eSuperTypes="#//PropertySetter"/>
@@ -579,7 +579,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="CSSType" eSuperTypes="#//Type"/>
   <eClassifiers xsi:type="ecore:EClass" name="CSSInstance" eSuperTypes="#//TypeInstance">
     <eStructuralFeatures xsi:type="ecore:EReference" name="stylesheet" ordered="false"
-        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.css.model/Model/StyleSheets.ecore#//StyleSheet"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.papyrus.infra.gmfdiag.css.model/Model/StyleSheets.ecore#//StyleSheet"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -11,8 +11,9 @@
 package org.eclipse.papyrus.layers.runtime.tests;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.IDiagramViewEventListener;
+import org.eclipse.papyrus.layers.runtime.LayersStackApplicationEventNotifier;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces;
-import org.eclipse.papyrus.layers.stackmodel.notifier.IDiagramViewEventListener;
 
 
 /**

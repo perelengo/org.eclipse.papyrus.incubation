@@ -21,7 +21,7 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
-import org.eclipse.papyrus.layers.stackmodel.notifier.DiagramViewEventNotifier;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.DiagramViewEventNotifier;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;

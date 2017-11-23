@@ -20,7 +20,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstan
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSInstanceImpl#getStylesheet <em>Stylesheet</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSInstanceImpl#getStylesheet <em>Stylesheet</em>}</li>
  * </ul>
  *
  * @generated
@@ -30,7 +30,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	 * The cached value of the '{@link #getStylesheet() <em>Stylesheet</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getStylesheet()
 	 * @generated
 	 * @ordered
@@ -40,7 +39,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected CSSInstanceImpl() {
@@ -50,7 +48,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -61,7 +58,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -72,7 +68,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetStylesheet(StyleSheet newStylesheet, NotificationChain msgs) {
@@ -80,10 +75,7 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 		stylesheet = newStylesheet;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LayersPackage.CSS_INSTANCE__STYLESHEET, oldStylesheet, newStylesheet);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -91,7 +83,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	// @Override
@@ -100,27 +91,26 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 		if (newStylesheet != stylesheet) {
 			NotificationChain msgs = null;
 			if (stylesheet != null)
-				msgs = ((InternalEObject) stylesheet).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.CSS_INSTANCE__STYLESHEET, null, msgs);
+				msgs = ((InternalEObject)stylesheet).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.CSS_INSTANCE__STYLESHEET, null, msgs);
 			if (newStylesheet != null)
-				msgs = ((InternalEObject) newStylesheet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.CSS_INSTANCE__STYLESHEET, null, msgs);
+				msgs = ((InternalEObject)newStylesheet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.CSS_INSTANCE__STYLESHEET, null, msgs);
 			msgs = basicSetStylesheet(newStylesheet, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.CSS_INSTANCE__STYLESHEET, newStylesheet, newStylesheet));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.CSS_INSTANCE__STYLESHEET:
-			return basicSetStylesheet(null, msgs);
+			case LayersPackage.CSS_INSTANCE__STYLESHEET:
+				return basicSetStylesheet(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -128,14 +118,13 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.CSS_INSTANCE__STYLESHEET:
-			return getStylesheet();
+			case LayersPackage.CSS_INSTANCE__STYLESHEET:
+				return getStylesheet();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,15 +132,14 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.CSS_INSTANCE__STYLESHEET:
-			setStylesheet((StyleSheet) newValue);
-			return;
+			case LayersPackage.CSS_INSTANCE__STYLESHEET:
+				setStylesheet((StyleSheet)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -162,15 +150,14 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.CSS_INSTANCE__STYLESHEET:
-			setStylesheet((StyleSheet) null);
-			return;
+			case LayersPackage.CSS_INSTANCE__STYLESHEET:
+				setStylesheet((StyleSheet)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -178,14 +165,13 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.CSS_INSTANCE__STYLESHEET:
-			return stylesheet != null;
+			case LayersPackage.CSS_INSTANCE__STYLESHEET:
+				return stylesheet != null;
 		}
 		return super.eIsSet(featureID);
 	}

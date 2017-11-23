@@ -1,14 +1,15 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
@@ -38,7 +39,8 @@ public interface FontInstance extends TypeInstance {
 	 * The default value is <code>"15053796"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Font Color</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Font Color</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Font Color</em>' attribute.
@@ -64,7 +66,8 @@ public interface FontInstance extends TypeInstance {
 	 * The default value is <code>"Segoe UI"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Font Name</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Font Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Font Name</em>' attribute.
@@ -90,7 +93,8 @@ public interface FontInstance extends TypeInstance {
 	 * The default value is <code>"9"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Font Heigh</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Font Heigh</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Font Heigh</em>' attribute.
@@ -116,7 +120,8 @@ public interface FontInstance extends TypeInstance {
 	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bold</em>' attribute isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Bold</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bold</em>' attribute.
