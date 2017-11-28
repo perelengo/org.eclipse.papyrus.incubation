@@ -22,8 +22,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated layers -->
       <factory
-            uri="org.eclipse.papyrus.layers.0.10"
-            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.LayersItemProviderAdapterFactory"
+            uri="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit.provider.LayersItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

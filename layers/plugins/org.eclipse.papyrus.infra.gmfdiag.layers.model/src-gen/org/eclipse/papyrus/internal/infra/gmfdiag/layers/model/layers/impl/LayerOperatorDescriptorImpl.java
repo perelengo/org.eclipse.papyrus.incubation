@@ -20,7 +20,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator;
@@ -44,7 +44,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOp
  *
  * @generated
  */
-public class LayerOperatorDescriptorImpl extends MinimalEObjectImpl.Container implements LayerOperatorDescriptor {
+public class LayerOperatorDescriptorImpl extends EObjectImpl implements LayerOperatorDescriptor {
 
 	/**
 	 * The cached value of the '{@link #getPropertyOperators() <em>Property Operators</em>}' reference list.

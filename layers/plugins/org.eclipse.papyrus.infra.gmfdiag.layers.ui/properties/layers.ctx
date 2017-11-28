@@ -1,0 +1,1656 @@
+<?xml version="1.0" encoding="ASCII"?>
+<contexts:Context xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constraints="http://www.eclipse.org/papyrus/constraints/0.9" xmlns:contexts="http://www.eclipse.org/papyrus/properties/contexts/0.9" xmi:id="_TMw2ENRgEeektaQg5NTryw" name="layers">
+  <tabs xmi:id="_Ua3n8NRgEeektaQg5NTryw" label="layers" id="layers" priority="100">
+    <sections xmi:id="_UbHfkNRgEeektaQg5NTryw" name="Single LayerNamedStyle" sectionFile="ui/SingleLayerNamedStyle.xwt">
+      <widget href="ui/SingleLayerNamedStyle.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbLxANRgEeektaQg5NTryw" name="Single LayersStack" sectionFile="ui/SingleLayersStack.xwt">
+      <widget href="ui/SingleLayersStack.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbMYENRgEeektaQg5NTryw" name="Single LayerExpression" sectionFile="ui/SingleLayerExpression.xwt">
+      <widget href="ui/SingleLayerExpression.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbMYEdRgEeektaQg5NTryw" name="Single ApplicationDependantElement" sectionFile="ui/SingleApplicationDependantElement.xwt">
+      <widget href="ui/SingleApplicationDependantElement.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbMYEtRgEeektaQg5NTryw" name="Single LayersStackApplication" sectionFile="ui/SingleLayersStackApplication.xwt">
+      <widget href="ui/SingleLayersStackApplication.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbMYE9RgEeektaQg5NTryw" name="Single FolderElement" sectionFile="ui/SingleFolderElement.xwt">
+      <widget href="ui/SingleFolderElement.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbM_INRgEeektaQg5NTryw" name="Single LayerStackDescriptorRegistry" sectionFile="ui/SingleLayerStackDescriptorRegistry.xwt">
+      <widget href="ui/SingleLayerStackDescriptorRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbM_IdRgEeektaQg5NTryw" name="Single PropertyRegistry" sectionFile="ui/SinglePropertyRegistry.xwt">
+      <widget href="ui/SinglePropertyRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbM_ItRgEeektaQg5NTryw" name="Single Property" sectionFile="ui/SingleProperty.xwt">
+      <widget href="ui/SingleProperty.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbM_I9RgEeektaQg5NTryw" name="Single Type" sectionFile="ui/SingleType.xwt">
+      <widget href="ui/SingleType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbNmMNRgEeektaQg5NTryw" name="Single Metamodel" sectionFile="ui/SingleMetamodel.xwt">
+      <widget href="ui/SingleMetamodel.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbNmMdRgEeektaQg5NTryw" name="Single TypeInstance" sectionFile="ui/SingleTypeInstance.xwt">
+      <widget href="ui/SingleTypeInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbNmMtRgEeektaQg5NTryw" name="Single ComputePropertyValueCommandItf" sectionFile="ui/SingleComputePropertyValueCommandItf.xwt">
+      <widget href="ui/SingleComputePropertyValueCommandItf.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbNmM9RgEeektaQg5NTryw" name="Single TypeRegistry" sectionFile="ui/SingleTypeRegistry.xwt">
+      <widget href="ui/SingleTypeRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbNmNNRgEeektaQg5NTryw" name="Single StringToTypeMap" sectionFile="ui/SingleStringToTypeMap.xwt">
+      <widget href="ui/SingleStringToTypeMap.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbONQNRgEeektaQg5NTryw" name="Single LayerDescriptorRegistry" sectionFile="ui/SingleLayerDescriptorRegistry.xwt">
+      <widget href="ui/SingleLayerDescriptorRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbONQdRgEeektaQg5NTryw" name="Single LayerDescriptor" sectionFile="ui/SingleLayerDescriptor.xwt">
+      <widget href="ui/SingleLayerDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbONQtRgEeektaQg5NTryw" name="Single LayerApplicationFactory" sectionFile="ui/SingleLayerApplicationFactory.xwt">
+      <widget href="ui/SingleLayerApplicationFactory.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbONQ9RgEeektaQg5NTryw" name="Single PropertySetterRegistry" sectionFile="ui/SinglePropertySetterRegistry.xwt">
+      <widget href="ui/SinglePropertySetterRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbONRNRgEeektaQg5NTryw" name="Single PropertySetter" sectionFile="ui/SinglePropertySetter.xwt">
+      <widget href="ui/SinglePropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbONRdRgEeektaQg5NTryw" name="Single StringToPropertySetter" sectionFile="ui/SingleStringToPropertySetter.xwt">
+      <widget href="ui/SingleStringToPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbO0UNRgEeektaQg5NTryw" name="Single LayerOperatorDescriptorRegistry" sectionFile="ui/SingleLayerOperatorDescriptorRegistry.xwt">
+      <widget href="ui/SingleLayerOperatorDescriptorRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbO0UdRgEeektaQg5NTryw" name="Single LayerOperatorDescriptor" sectionFile="ui/SingleLayerOperatorDescriptor.xwt">
+      <widget href="ui/SingleLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbPbYNRgEeektaQg5NTryw" name="Single PropertyOperator" sectionFile="ui/SinglePropertyOperator.xwt">
+      <widget href="ui/SinglePropertyOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbPbYdRgEeektaQg5NTryw" name="Single AbstractLayerOperator" sectionFile="ui/SingleAbstractLayerOperator.xwt">
+      <widget href="ui/SingleAbstractLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbPbYtRgEeektaQg5NTryw" name="Single LayerOperator" sectionFile="ui/SingleLayerOperator.xwt">
+      <widget href="ui/SingleLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbQCcNRgEeektaQg5NTryw" name="Single LayersContainer" sectionFile="ui/SingleLayersContainer.xwt">
+      <widget href="ui/SingleLayersContainer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbRQkNRgEeektaQg5NTryw" name="Single DefaultPropertyOperator" sectionFile="ui/SingleDefaultPropertyOperator.xwt">
+      <widget href="ui/SingleDefaultPropertyOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbR3oNRgEeektaQg5NTryw" name="Single AbstractLayer" sectionFile="ui/SingleAbstractLayer.xwt">
+      <widget href="ui/SingleAbstractLayer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbR3odRgEeektaQg5NTryw" name="Single StringToTypeInstanceMap" sectionFile="ui/SingleStringToTypeInstanceMap.xwt">
+      <widget href="ui/SingleStringToTypeInstanceMap.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbR3otRgEeektaQg5NTryw" name="Single Folder" sectionFile="ui/SingleFolder.xwt">
+      <widget href="ui/SingleFolder.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbSesNRgEeektaQg5NTryw" name="Single IntInstance" sectionFile="ui/SingleIntInstance.xwt">
+      <widget href="ui/SingleIntInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbSesdRgEeektaQg5NTryw" name="Single BooleanInstance" sectionFile="ui/SingleBooleanInstance.xwt">
+      <widget href="ui/SingleBooleanInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbSestRgEeektaQg5NTryw" name="Single StringInstance" sectionFile="ui/SingleStringInstance.xwt">
+      <widget href="ui/SingleStringInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbSes9RgEeektaQg5NTryw" name="Single IntType" sectionFile="ui/SingleIntType.xwt">
+      <widget href="ui/SingleIntType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbSetNRgEeektaQg5NTryw" name="Single BooleanType" sectionFile="ui/SingleBooleanType.xwt">
+      <widget href="ui/SingleBooleanType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbTFwNRgEeektaQg5NTryw" name="Single StringType" sectionFile="ui/SingleStringType.xwt">
+      <widget href="ui/SingleStringType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbTFwdRgEeektaQg5NTryw" name="Single CustomType" sectionFile="ui/SingleCustomType.xwt">
+      <widget href="ui/SingleCustomType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbTFwtRgEeektaQg5NTryw" name="Single TopLayerOperator" sectionFile="ui/SingleTopLayerOperator.xwt">
+      <widget href="ui/SingleTopLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbTs0NRgEeektaQg5NTryw" name="Single StackedLayerOperator" sectionFile="ui/SingleStackedLayerOperator.xwt">
+      <widget href="ui/SingleStackedLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbTs0dRgEeektaQg5NTryw" name="Single CustomLayerOperator" sectionFile="ui/SingleCustomLayerOperator.xwt">
+      <widget href="ui/SingleCustomLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbTs0tRgEeektaQg5NTryw" name="Single PropertyIndex" sectionFile="ui/SinglePropertyIndex.xwt">
+      <widget href="ui/SinglePropertyIndex.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbTs09RgEeektaQg5NTryw" name="Single StringToPropertyIndexMap" sectionFile="ui/SingleStringToPropertyIndexMap.xwt">
+      <widget href="ui/SingleStringToPropertyIndexMap.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbTs1NRgEeektaQg5NTryw" name="Single SimpleLayerDescriptor" sectionFile="ui/SingleSimpleLayerDescriptor.xwt">
+      <widget href="ui/SingleSimpleLayerDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbUT4NRgEeektaQg5NTryw" name="Single RegExpLayerDescriptor" sectionFile="ui/SingleRegExpLayerDescriptor.xwt">
+      <widget href="ui/SingleRegExpLayerDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbViANRgEeektaQg5NTryw" name="Single NullInstance" sectionFile="ui/SingleNullInstance.xwt">
+      <widget href="ui/SingleNullInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbWwINRgEeektaQg5NTryw" name="Single RegExpLayer" sectionFile="ui/SingleRegExpLayer.xwt">
+      <widget href="ui/SingleRegExpLayer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbWwIdRgEeektaQg5NTryw" name="Single Layer" sectionFile="ui/SingleLayer.xwt">
+      <widget href="ui/SingleLayer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbXXMNRgEeektaQg5NTryw" name="Single Color" sectionFile="ui/SingleColor.xwt">
+      <widget href="ui/SingleColor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbXXMdRgEeektaQg5NTryw" name="Single ColorInstance" sectionFile="ui/SingleColorInstance.xwt">
+      <widget href="ui/SingleColorInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbXXMtRgEeektaQg5NTryw" name="Single FillInstance" sectionFile="ui/SingleFillInstance.xwt">
+      <widget href="ui/SingleFillInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbXXM9RgEeektaQg5NTryw" name="Single Fill" sectionFile="ui/SingleFill.xwt">
+      <widget href="ui/SingleFill.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbXXNNRgEeektaQg5NTryw" name="Single FillPropertySetter" sectionFile="ui/SingleFillPropertySetter.xwt">
+      <widget href="ui/SingleFillPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbXXNdRgEeektaQg5NTryw" name="Single IsValidPropertySetter" sectionFile="ui/SingleIsValidPropertySetter.xwt">
+      <widget href="ui/SingleIsValidPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbX-QNRgEeektaQg5NTryw" name="Single NullPropertySetter" sectionFile="ui/SingleNullPropertySetter.xwt">
+      <widget href="ui/SingleNullPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbX-QdRgEeektaQg5NTryw" name="Single LineType" sectionFile="ui/SingleLineType.xwt">
+      <widget href="ui/SingleLineType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbX-QtRgEeektaQg5NTryw" name="Single LineInstance" sectionFile="ui/SingleLineInstance.xwt">
+      <widget href="ui/SingleLineInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbX-Q9RgEeektaQg5NTryw" name="Single LinePropertySetter" sectionFile="ui/SingleLinePropertySetter.xwt">
+      <widget href="ui/SingleLinePropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbX-RNRgEeektaQg5NTryw" name="Single FontPropertySetter" sectionFile="ui/SingleFontPropertySetter.xwt">
+      <widget href="ui/SingleFontPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbX-RdRgEeektaQg5NTryw" name="Single FontInstance" sectionFile="ui/SingleFontInstance.xwt">
+      <widget href="ui/SingleFontInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbYlUNRgEeektaQg5NTryw" name="Single FontType" sectionFile="ui/SingleFontType.xwt">
+      <widget href="ui/SingleFontType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbYlUdRgEeektaQg5NTryw" name="Single IsVisiblePropertySetter" sectionFile="ui/SingleIsVisiblePropertySetter.xwt">
+      <widget href="ui/SingleIsVisiblePropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbYlUtRgEeektaQg5NTryw" name="Single TopLayerOperatorDescriptor" sectionFile="ui/SingleTopLayerOperatorDescriptor.xwt">
+      <widget href="ui/SingleTopLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbYlU9RgEeektaQg5NTryw" name="Single StackedLayerOperatorDescriptor" sectionFile="ui/SingleStackedLayerOperatorDescriptor.xwt">
+      <widget href="ui/SingleStackedLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbYlVNRgEeektaQg5NTryw" name="Single CustomPropertyOperator" sectionFile="ui/SingleCustomPropertyOperator.xwt">
+      <widget href="ui/SingleCustomPropertyOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbYlVdRgEeektaQg5NTryw" name="Single AndStackedLayerOperatorDescriptor" sectionFile="ui/SingleAndStackedLayerOperatorDescriptor.xwt">
+      <widget href="ui/SingleAndStackedLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbYlVtRgEeektaQg5NTryw" name="Single OrStackedLayerOperatorDescriptor" sectionFile="ui/SingleOrStackedLayerOperatorDescriptor.xwt">
+      <widget href="ui/SingleOrStackedLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbYlV9RgEeektaQg5NTryw" name="Single IsAbstractUmlSetter" sectionFile="ui/SingleIsAbstractUmlSetter.xwt">
+      <widget href="ui/SingleIsAbstractUmlSetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZMYNRgEeektaQg5NTryw" name="Single AllViewsDerivedLayer" sectionFile="ui/SingleAllViewsDerivedLayer.xwt">
+      <widget href="ui/SingleAllViewsDerivedLayer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZMYdRgEeektaQg5NTryw" name="Single CSSPropertySetter" sectionFile="ui/SingleCSSPropertySetter.xwt">
+      <widget href="ui/SingleCSSPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZMYtRgEeektaQg5NTryw" name="Single CSSType" sectionFile="ui/SingleCSSType.xwt">
+      <widget href="ui/SingleCSSType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZMY9RgEeektaQg5NTryw" name="Single CSSInstance" sectionFile="ui/SingleCSSInstance.xwt">
+      <widget href="ui/SingleCSSInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZMZNRgEeektaQg5NTryw" name="Multiple LayerNamedStyle" sectionFile="ui/MultipleLayerNamedStyle.xwt">
+      <widget href="ui/MultipleLayerNamedStyle.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzcNRgEeektaQg5NTryw" name="Multiple LayersStack" sectionFile="ui/MultipleLayersStack.xwt">
+      <widget href="ui/MultipleLayersStack.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzcdRgEeektaQg5NTryw" name="Multiple LayerExpression" sectionFile="ui/MultipleLayerExpression.xwt">
+      <widget href="ui/MultipleLayerExpression.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzctRgEeektaQg5NTryw" name="Multiple ApplicationDependantElement" sectionFile="ui/MultipleApplicationDependantElement.xwt">
+      <widget href="ui/MultipleApplicationDependantElement.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzc9RgEeektaQg5NTryw" name="Multiple LayersStackApplication" sectionFile="ui/MultipleLayersStackApplication.xwt">
+      <widget href="ui/MultipleLayersStackApplication.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzdNRgEeektaQg5NTryw" name="Multiple FolderElement" sectionFile="ui/MultipleFolderElement.xwt">
+      <widget href="ui/MultipleFolderElement.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzddRgEeektaQg5NTryw" name="Multiple LayerStackDescriptorRegistry" sectionFile="ui/MultipleLayerStackDescriptorRegistry.xwt">
+      <widget href="ui/MultipleLayerStackDescriptorRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzdtRgEeektaQg5NTryw" name="Multiple PropertyRegistry" sectionFile="ui/MultiplePropertyRegistry.xwt">
+      <widget href="ui/MultiplePropertyRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzd9RgEeektaQg5NTryw" name="Multiple Property" sectionFile="ui/MultipleProperty.xwt">
+      <widget href="ui/MultipleProperty.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzeNRgEeektaQg5NTryw" name="Multiple Type" sectionFile="ui/MultipleType.xwt">
+      <widget href="ui/MultipleType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbZzedRgEeektaQg5NTryw" name="Multiple Metamodel" sectionFile="ui/MultipleMetamodel.xwt">
+      <widget href="ui/MultipleMetamodel.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaagNRgEeektaQg5NTryw" name="Multiple TypeInstance" sectionFile="ui/MultipleTypeInstance.xwt">
+      <widget href="ui/MultipleTypeInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaagdRgEeektaQg5NTryw" name="Multiple ComputePropertyValueCommandItf" sectionFile="ui/MultipleComputePropertyValueCommandItf.xwt">
+      <widget href="ui/MultipleComputePropertyValueCommandItf.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaagtRgEeektaQg5NTryw" name="Multiple TypeRegistry" sectionFile="ui/MultipleTypeRegistry.xwt">
+      <widget href="ui/MultipleTypeRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubaag9RgEeektaQg5NTryw" name="Multiple StringToTypeMap" sectionFile="ui/MultipleStringToTypeMap.xwt">
+      <widget href="ui/MultipleStringToTypeMap.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaahNRgEeektaQg5NTryw" name="Multiple LayerDescriptorRegistry" sectionFile="ui/MultipleLayerDescriptorRegistry.xwt">
+      <widget href="ui/MultipleLayerDescriptorRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaahdRgEeektaQg5NTryw" name="Multiple LayerDescriptor" sectionFile="ui/MultipleLayerDescriptor.xwt">
+      <widget href="ui/MultipleLayerDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaahtRgEeektaQg5NTryw" name="Multiple LayerApplicationFactory" sectionFile="ui/MultipleLayerApplicationFactory.xwt">
+      <widget href="ui/MultipleLayerApplicationFactory.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubaah9RgEeektaQg5NTryw" name="Multiple PropertySetterRegistry" sectionFile="ui/MultiplePropertySetterRegistry.xwt">
+      <widget href="ui/MultiplePropertySetterRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaaiNRgEeektaQg5NTryw" name="Multiple PropertySetter" sectionFile="ui/MultiplePropertySetter.xwt">
+      <widget href="ui/MultiplePropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaaidRgEeektaQg5NTryw" name="Multiple StringToPropertySetter" sectionFile="ui/MultipleStringToPropertySetter.xwt">
+      <widget href="ui/MultipleStringToPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbaaitRgEeektaQg5NTryw" name="Multiple LayerOperatorDescriptorRegistry" sectionFile="ui/MultipleLayerOperatorDescriptorRegistry.xwt">
+      <widget href="ui/MultipleLayerOperatorDescriptorRegistry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubaai9RgEeektaQg5NTryw" name="Multiple LayerOperatorDescriptor" sectionFile="ui/MultipleLayerOperatorDescriptor.xwt">
+      <widget href="ui/MultipleLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbBkNRgEeektaQg5NTryw" name="Multiple PropertyOperator" sectionFile="ui/MultiplePropertyOperator.xwt">
+      <widget href="ui/MultiplePropertyOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbBkdRgEeektaQg5NTryw" name="Multiple AbstractLayerOperator" sectionFile="ui/MultipleAbstractLayerOperator.xwt">
+      <widget href="ui/MultipleAbstractLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbBktRgEeektaQg5NTryw" name="Multiple LayerOperator" sectionFile="ui/MultipleLayerOperator.xwt">
+      <widget href="ui/MultipleLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbBk9RgEeektaQg5NTryw" name="Multiple LayersContainer" sectionFile="ui/MultipleLayersContainer.xwt">
+      <widget href="ui/MultipleLayersContainer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbBlNRgEeektaQg5NTryw" name="Multiple DefaultPropertyOperator" sectionFile="ui/MultipleDefaultPropertyOperator.xwt">
+      <widget href="ui/MultipleDefaultPropertyOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbBldRgEeektaQg5NTryw" name="Multiple AbstractLayer" sectionFile="ui/MultipleAbstractLayer.xwt">
+      <widget href="ui/MultipleAbstractLayer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbBltRgEeektaQg5NTryw" name="Multiple StringToTypeInstanceMap" sectionFile="ui/MultipleStringToTypeInstanceMap.xwt">
+      <widget href="ui/MultipleStringToTypeInstanceMap.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbBl9RgEeektaQg5NTryw" name="Multiple Folder" sectionFile="ui/MultipleFolder.xwt">
+      <widget href="ui/MultipleFolder.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbooNRgEeektaQg5NTryw" name="Multiple IntInstance" sectionFile="ui/MultipleIntInstance.xwt">
+      <widget href="ui/MultipleIntInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbboodRgEeektaQg5NTryw" name="Multiple BooleanInstance" sectionFile="ui/MultipleBooleanInstance.xwt">
+      <widget href="ui/MultipleBooleanInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbootRgEeektaQg5NTryw" name="Multiple StringInstance" sectionFile="ui/MultipleStringInstance.xwt">
+      <widget href="ui/MultipleStringInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubboo9RgEeektaQg5NTryw" name="Multiple IntType" sectionFile="ui/MultipleIntType.xwt">
+      <widget href="ui/MultipleIntType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbopNRgEeektaQg5NTryw" name="Multiple BooleanType" sectionFile="ui/MultipleBooleanType.xwt">
+      <widget href="ui/MultipleBooleanType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbbopdRgEeektaQg5NTryw" name="Multiple StringType" sectionFile="ui/MultipleStringType.xwt">
+      <widget href="ui/MultipleStringType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbboptRgEeektaQg5NTryw" name="Multiple CustomType" sectionFile="ui/MultipleCustomType.xwt">
+      <widget href="ui/MultipleCustomType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubbop9RgEeektaQg5NTryw" name="Multiple TopLayerOperator" sectionFile="ui/MultipleTopLayerOperator.xwt">
+      <widget href="ui/MultipleTopLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbcPsNRgEeektaQg5NTryw" name="Multiple StackedLayerOperator" sectionFile="ui/MultipleStackedLayerOperator.xwt">
+      <widget href="ui/MultipleStackedLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbcPsdRgEeektaQg5NTryw" name="Multiple CustomLayerOperator" sectionFile="ui/MultipleCustomLayerOperator.xwt">
+      <widget href="ui/MultipleCustomLayerOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbcPstRgEeektaQg5NTryw" name="Multiple PropertyIndex" sectionFile="ui/MultiplePropertyIndex.xwt">
+      <widget href="ui/MultiplePropertyIndex.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbcPs9RgEeektaQg5NTryw" name="Multiple StringToPropertyIndexMap" sectionFile="ui/MultipleStringToPropertyIndexMap.xwt">
+      <widget href="ui/MultipleStringToPropertyIndexMap.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbcPtNRgEeektaQg5NTryw" name="Multiple SimpleLayerDescriptor" sectionFile="ui/MultipleSimpleLayerDescriptor.xwt">
+      <widget href="ui/MultipleSimpleLayerDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbcPtdRgEeektaQg5NTryw" name="Multiple RegExpLayerDescriptor" sectionFile="ui/MultipleRegExpLayerDescriptor.xwt">
+      <widget href="ui/MultipleRegExpLayerDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubc2wNRgEeektaQg5NTryw" name="Multiple NullInstance" sectionFile="ui/MultipleNullInstance.xwt">
+      <widget href="ui/MultipleNullInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubc2wdRgEeektaQg5NTryw" name="Multiple RegExpLayer" sectionFile="ui/MultipleRegExpLayer.xwt">
+      <widget href="ui/MultipleRegExpLayer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubc2wtRgEeektaQg5NTryw" name="Multiple Layer" sectionFile="ui/MultipleLayer.xwt">
+      <widget href="ui/MultipleLayer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubc2w9RgEeektaQg5NTryw" name="Multiple Color" sectionFile="ui/MultipleColor.xwt">
+      <widget href="ui/MultipleColor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubc2xNRgEeektaQg5NTryw" name="Multiple ColorInstance" sectionFile="ui/MultipleColorInstance.xwt">
+      <widget href="ui/MultipleColorInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubc2xdRgEeektaQg5NTryw" name="Multiple FillInstance" sectionFile="ui/MultipleFillInstance.xwt">
+      <widget href="ui/MultipleFillInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd0NRgEeektaQg5NTryw" name="Multiple Fill" sectionFile="ui/MultipleFill.xwt">
+      <widget href="ui/MultipleFill.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd0dRgEeektaQg5NTryw" name="Multiple FillPropertySetter" sectionFile="ui/MultipleFillPropertySetter.xwt">
+      <widget href="ui/MultipleFillPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd0tRgEeektaQg5NTryw" name="Multiple IsValidPropertySetter" sectionFile="ui/MultipleIsValidPropertySetter.xwt">
+      <widget href="ui/MultipleIsValidPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd09RgEeektaQg5NTryw" name="Multiple NullPropertySetter" sectionFile="ui/MultipleNullPropertySetter.xwt">
+      <widget href="ui/MultipleNullPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd1NRgEeektaQg5NTryw" name="Multiple LineType" sectionFile="ui/MultipleLineType.xwt">
+      <widget href="ui/MultipleLineType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd1dRgEeektaQg5NTryw" name="Multiple LineInstance" sectionFile="ui/MultipleLineInstance.xwt">
+      <widget href="ui/MultipleLineInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd1tRgEeektaQg5NTryw" name="Multiple LinePropertySetter" sectionFile="ui/MultipleLinePropertySetter.xwt">
+      <widget href="ui/MultipleLinePropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd19RgEeektaQg5NTryw" name="Multiple FontPropertySetter" sectionFile="ui/MultipleFontPropertySetter.xwt">
+      <widget href="ui/MultipleFontPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd2NRgEeektaQg5NTryw" name="Multiple FontInstance" sectionFile="ui/MultipleFontInstance.xwt">
+      <widget href="ui/MultipleFontInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ubdd2dRgEeektaQg5NTryw" name="Multiple FontType" sectionFile="ui/MultipleFontType.xwt">
+      <widget href="ui/MultipleFontType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE4NRgEeektaQg5NTryw" name="Multiple IsVisiblePropertySetter" sectionFile="ui/MultipleIsVisiblePropertySetter.xwt">
+      <widget href="ui/MultipleIsVisiblePropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE4dRgEeektaQg5NTryw" name="Multiple TopLayerOperatorDescriptor" sectionFile="ui/MultipleTopLayerOperatorDescriptor.xwt">
+      <widget href="ui/MultipleTopLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE4tRgEeektaQg5NTryw" name="Multiple StackedLayerOperatorDescriptor" sectionFile="ui/MultipleStackedLayerOperatorDescriptor.xwt">
+      <widget href="ui/MultipleStackedLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE49RgEeektaQg5NTryw" name="Multiple CustomPropertyOperator" sectionFile="ui/MultipleCustomPropertyOperator.xwt">
+      <widget href="ui/MultipleCustomPropertyOperator.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE5NRgEeektaQg5NTryw" name="Multiple AndStackedLayerOperatorDescriptor" sectionFile="ui/MultipleAndStackedLayerOperatorDescriptor.xwt">
+      <widget href="ui/MultipleAndStackedLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE5dRgEeektaQg5NTryw" name="Multiple OrStackedLayerOperatorDescriptor" sectionFile="ui/MultipleOrStackedLayerOperatorDescriptor.xwt">
+      <widget href="ui/MultipleOrStackedLayerOperatorDescriptor.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE5tRgEeektaQg5NTryw" name="Multiple IsAbstractUmlSetter" sectionFile="ui/MultipleIsAbstractUmlSetter.xwt">
+      <widget href="ui/MultipleIsAbstractUmlSetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE59RgEeektaQg5NTryw" name="Multiple AllViewsDerivedLayer" sectionFile="ui/MultipleAllViewsDerivedLayer.xwt">
+      <widget href="ui/MultipleAllViewsDerivedLayer.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE6NRgEeektaQg5NTryw" name="Multiple CSSPropertySetter" sectionFile="ui/MultipleCSSPropertySetter.xwt">
+      <widget href="ui/MultipleCSSPropertySetter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_UbeE6dRgEeektaQg5NTryw" name="Multiple CSSType" sectionFile="ui/MultipleCSSType.xwt">
+      <widget href="ui/MultipleCSSType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Uber8NRgEeektaQg5NTryw" name="Multiple CSSInstance" sectionFile="ui/MultipleCSSInstance.xwt">
+      <widget href="ui/MultipleCSSInstance.xwt#/"/>
+    </sections>
+  </tabs>
+  <views xmi:id="_TMw2EdRgEeektaQg5NTryw" name="Single LayerNamedStyle" sections="_UbHfkNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrTtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMw2EtRgEeektaQg5NTryw" name="isSingleLayerNamedStyle">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMw2E9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdINRgEeektaQg5NTryw" name="className" value="LayerNamedStyle"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdIdRgEeektaQg5NTryw" name="Single LayersStack" sections="_UbLxANRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrUNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdItRgEeektaQg5NTryw" name="isSingleLayersStack">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdI9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdJNRgEeektaQg5NTryw" name="className" value="LayersStack"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdJdRgEeektaQg5NTryw" name="Single LayerExpression" sections="_UbMYENRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrVtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdJtRgEeektaQg5NTryw" name="isSingleLayerExpression">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdJ9RgEeektaQg5NTryw" name="className" value="LayerExpression"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdKNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdKdRgEeektaQg5NTryw" name="Single ApplicationDependantElement" sections="_UbMYEdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrXtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdKtRgEeektaQg5NTryw" name="isSingleApplicationDependantElement">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdK9RgEeektaQg5NTryw" name="className" value="ApplicationDependantElement"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdLNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdLdRgEeektaQg5NTryw" name="Single LayersStackApplication" sections="_UbMYEtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrYNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdLtRgEeektaQg5NTryw" name="isSingleLayersStackApplication">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdL9RgEeektaQg5NTryw" name="className" value="LayersStackApplication"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdMNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdMdRgEeektaQg5NTryw" name="Single FolderElement" sections="_UbMYE9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyraNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdMtRgEeektaQg5NTryw" name="isSingleFolderElement">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdM9RgEeektaQg5NTryw" name="className" value="FolderElement"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdNNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdNdRgEeektaQg5NTryw" name="Single LayerStackDescriptorRegistry" sections="_UbM_INRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyradRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdNtRgEeektaQg5NTryw" name="isSingleLayerStackDescriptorRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdN9RgEeektaQg5NTryw" name="className" value="LayerStackDescriptorRegistry"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdONRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdOdRgEeektaQg5NTryw" name="Single PropertyRegistry" sections="_UbM_IdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyratRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdOtRgEeektaQg5NTryw" name="isSinglePropertyRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdO9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdPNRgEeektaQg5NTryw" name="className" value="PropertyRegistry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdPdRgEeektaQg5NTryw" name="Single Property" sections="_UbM_ItRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrbtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdPtRgEeektaQg5NTryw" name="isSingleProperty">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdP9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdQNRgEeektaQg5NTryw" name="className" value="Property"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdQdRgEeektaQg5NTryw" name="Single Type" sections="_UbM_I9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrdNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdQtRgEeektaQg5NTryw" name="isSingleType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdQ9RgEeektaQg5NTryw" name="className" value="Type"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdRNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdRdRgEeektaQg5NTryw" name="Single Metamodel" sections="_UbNmMNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyreNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdRtRgEeektaQg5NTryw" name="isSingleMetamodel">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdR9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdSNRgEeektaQg5NTryw" name="className" value="Metamodel"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdSdRgEeektaQg5NTryw" name="Single TypeInstance" sections="_UbNmMdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrf9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdStRgEeektaQg5NTryw" name="isSingleTypeInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdS9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdTNRgEeektaQg5NTryw" name="className" value="TypeInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdTdRgEeektaQg5NTryw" name="Single ComputePropertyValueCommandItf" sections="_UbNmMtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrgNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdTtRgEeektaQg5NTryw" name="isSingleComputePropertyValueCommandItf">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdT9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdUNRgEeektaQg5NTryw" name="className" value="ComputePropertyValueCommandItf"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdUdRgEeektaQg5NTryw" name="Single TypeRegistry" sections="_UbNmM9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrgdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdUtRgEeektaQg5NTryw" name="isSingleTypeRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdU9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdVNRgEeektaQg5NTryw" name="className" value="TypeRegistry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdVdRgEeektaQg5NTryw" name="Single StringToTypeMap" sections="_UbNmNNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrg9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdVtRgEeektaQg5NTryw" name="isSingleStringToTypeMap">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdV9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdWNRgEeektaQg5NTryw" name="className" value="StringToTypeMap"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdWdRgEeektaQg5NTryw" name="Single LayerDescriptorRegistry" sections="_UbONQNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrhtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdWtRgEeektaQg5NTryw" name="isSingleLayerDescriptorRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdW9RgEeektaQg5NTryw" name="className" value="LayerDescriptorRegistry"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdXNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdXdRgEeektaQg5NTryw" name="Single LayerDescriptor" sections="_UbONQdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyriNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdXtRgEeektaQg5NTryw" name="isSingleLayerDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdX9RgEeektaQg5NTryw" name="className" value="LayerDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdYNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdYdRgEeektaQg5NTryw" name="Single LayerApplicationFactory" sections="_UbONQtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyritRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdYtRgEeektaQg5NTryw" name="isSingleLayerApplicationFactory">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdY9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdZNRgEeektaQg5NTryw" name="className" value="LayerApplicationFactory"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdZdRgEeektaQg5NTryw" name="Single PropertySetterRegistry" sections="_UbONQ9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrjNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdZtRgEeektaQg5NTryw" name="isSinglePropertySetterRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdZ9RgEeektaQg5NTryw" name="className" value="PropertySetterRegistry"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdaNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdadRgEeektaQg5NTryw" name="Single PropertySetter" sections="_UbONRNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrkNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdatRgEeektaQg5NTryw" name="isSinglePropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxda9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdbNRgEeektaQg5NTryw" name="className" value="PropertySetter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdbdRgEeektaQg5NTryw" name="Single StringToPropertySetter" sections="_UbONRdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrk9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdbtRgEeektaQg5NTryw" name="isSingleStringToPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdb9RgEeektaQg5NTryw" name="className" value="StringToPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdcNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdcdRgEeektaQg5NTryw" name="Single LayerOperatorDescriptorRegistry" sections="_UbO0UNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrltRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdctRgEeektaQg5NTryw" name="isSingleLayerOperatorDescriptorRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdc9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxddNRgEeektaQg5NTryw" name="className" value="LayerOperatorDescriptorRegistry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdddRgEeektaQg5NTryw" name="Single LayerOperatorDescriptor" sections="_UbO0UdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrm9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxddtRgEeektaQg5NTryw" name="isSingleLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdd9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdeNRgEeektaQg5NTryw" name="className" value="LayerOperatorDescriptor"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdedRgEeektaQg5NTryw" name="Single PropertyOperator" sections="_UbPbYNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrntRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdetRgEeektaQg5NTryw" name="isSinglePropertyOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxde9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdfNRgEeektaQg5NTryw" name="className" value="PropertyOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdfdRgEeektaQg5NTryw" name="Single AbstractLayerOperator" sections="_UbPbYdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyroNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdftRgEeektaQg5NTryw" name="isSingleAbstractLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdf9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdgNRgEeektaQg5NTryw" name="className" value="AbstractLayerOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdgdRgEeektaQg5NTryw" name="Single LayerOperator" sections="_UbPbYtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyro9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdgtRgEeektaQg5NTryw" name="isSingleLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdg9RgEeektaQg5NTryw" name="className" value="LayerOperator"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdhNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdhdRgEeektaQg5NTryw" name="Single LayersContainer" sections="_UbQCcNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrpdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdhtRgEeektaQg5NTryw" name="isSingleLayersContainer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdh9RgEeektaQg5NTryw" name="className" value="LayersContainer"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdiNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdidRgEeektaQg5NTryw" name="Single DefaultPropertyOperator" sections="_UbRQkNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrptRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxditRgEeektaQg5NTryw" name="isSingleDefaultPropertyOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdi9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdjNRgEeektaQg5NTryw" name="className" value="DefaultPropertyOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdjdRgEeektaQg5NTryw" name="Single AbstractLayer" sections="_UbR3oNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrp9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdjtRgEeektaQg5NTryw" name="isSingleAbstractLayer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdj9RgEeektaQg5NTryw" name="className" value="AbstractLayer"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdkNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdkdRgEeektaQg5NTryw" name="Single StringToTypeInstanceMap" sections="_UbR3odRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrrdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdktRgEeektaQg5NTryw" name="isSingleStringToTypeInstanceMap">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdk9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdlNRgEeektaQg5NTryw" name="className" value="StringToTypeInstanceMap"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMxdldRgEeektaQg5NTryw" name="Single Folder" sections="_UbR3otRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrsNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMxdltRgEeektaQg5NTryw" name="isSingleFolder">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMxdl9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEMNRgEeektaQg5NTryw" name="className" value="Folder"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEMdRgEeektaQg5NTryw" name="Single IntInstance" sections="_UbSesNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrs9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEMtRgEeektaQg5NTryw" name="isSingleIntInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEM9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyENNRgEeektaQg5NTryw" name="className" value="IntInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyENdRgEeektaQg5NTryw" name="Single BooleanInstance" sections="_UbSesdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrtdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyENtRgEeektaQg5NTryw" name="isSingleBooleanInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEN9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEONRgEeektaQg5NTryw" name="className" value="BooleanInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEOdRgEeektaQg5NTryw" name="Single StringInstance" sections="_UbSestRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrt9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEOtRgEeektaQg5NTryw" name="isSingleStringInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEO9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEPNRgEeektaQg5NTryw" name="className" value="StringInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEPdRgEeektaQg5NTryw" name="Single IntType" sections="_UbSes9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrudRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEPtRgEeektaQg5NTryw" name="isSingleIntType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEP9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEQNRgEeektaQg5NTryw" name="className" value="IntType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEQdRgEeektaQg5NTryw" name="Single BooleanType" sections="_UbSetNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrutRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEQtRgEeektaQg5NTryw" name="isSingleBooleanType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEQ9RgEeektaQg5NTryw" name="className" value="BooleanType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyERNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyERdRgEeektaQg5NTryw" name="Single StringType" sections="_UbTFwNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyru9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyERtRgEeektaQg5NTryw" name="isSingleStringType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyER9RgEeektaQg5NTryw" name="className" value="StringType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyESNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyESdRgEeektaQg5NTryw" name="Single CustomType" sections="_UbTFwdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrvNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEStRgEeektaQg5NTryw" name="isSingleCustomType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyES9RgEeektaQg5NTryw" name="className" value="CustomType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyETNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyETdRgEeektaQg5NTryw" name="Single TopLayerOperator" sections="_UbTFwtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrvtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyETtRgEeektaQg5NTryw" name="isSingleTopLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyET9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEUNRgEeektaQg5NTryw" name="className" value="TopLayerOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEUdRgEeektaQg5NTryw" name="Single StackedLayerOperator" sections="_UbTs0NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrv9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEUtRgEeektaQg5NTryw" name="isSingleStackedLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEU9RgEeektaQg5NTryw" name="className" value="StackedLayerOperator"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEVNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEVdRgEeektaQg5NTryw" name="Single CustomLayerOperator" sections="_UbTs0dRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrwNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEVtRgEeektaQg5NTryw" name="isSingleCustomLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEV9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEWNRgEeektaQg5NTryw" name="className" value="CustomLayerOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEWdRgEeektaQg5NTryw" name="Single PropertyIndex" sections="_UbTs0tRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrwdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEWtRgEeektaQg5NTryw" name="isSinglePropertyIndex">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEW9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEXNRgEeektaQg5NTryw" name="className" value="PropertyIndex"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEXdRgEeektaQg5NTryw" name="Single StringToPropertyIndexMap" sections="_UbTs09RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrxNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEXtRgEeektaQg5NTryw" name="isSingleStringToPropertyIndexMap">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEX9RgEeektaQg5NTryw" name="className" value="StringToPropertyIndexMap"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEYNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEYdRgEeektaQg5NTryw" name="Single SimpleLayerDescriptor" sections="_UbTs1NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrx9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEYtRgEeektaQg5NTryw" name="isSingleSimpleLayerDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEY9RgEeektaQg5NTryw" name="className" value="SimpleLayerDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEZNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEZdRgEeektaQg5NTryw" name="Single RegExpLayerDescriptor" sections="_UbUT4NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyryNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEZtRgEeektaQg5NTryw" name="isSingleRegExpLayerDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEZ9RgEeektaQg5NTryw" name="className" value="RegExpLayerDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEaNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEadRgEeektaQg5NTryw" name="Single NullInstance" sections="_UbViANRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrydRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEatRgEeektaQg5NTryw" name="isSingleNullInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEa9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEbNRgEeektaQg5NTryw" name="className" value="NullInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEbdRgEeektaQg5NTryw" name="Single RegExpLayer" sections="_UbWwINRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrytRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEbtRgEeektaQg5NTryw" name="isSingleRegExpLayer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEb9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEcNRgEeektaQg5NTryw" name="className" value="RegExpLayer"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEcdRgEeektaQg5NTryw" name="Single Layer" sections="_UbWwIdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr0tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEctRgEeektaQg5NTryw" name="isSingleLayer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEc9RgEeektaQg5NTryw" name="className" value="Layer"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEdNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEddRgEeektaQg5NTryw" name="Single Color" sections="_UbXXMNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr09RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEdtRgEeektaQg5NTryw" name="isSingleColor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEd9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEeNRgEeektaQg5NTryw" name="className" value="Color"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEedRgEeektaQg5NTryw" name="Single ColorInstance" sections="_UbXXMdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr1NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEetRgEeektaQg5NTryw" name="isSingleColorInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEe9RgEeektaQg5NTryw" name="className" value="ColorInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEfNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEfdRgEeektaQg5NTryw" name="Single FillInstance" sections="_UbXXMtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr1tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEftRgEeektaQg5NTryw" name="isSingleFillInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEf9RgEeektaQg5NTryw" name="className" value="FillInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEgNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEgdRgEeektaQg5NTryw" name="Single Fill" sections="_UbXXM9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr2dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEgtRgEeektaQg5NTryw" name="isSingleFill">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEg9RgEeektaQg5NTryw" name="className" value="Fill"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEhNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEhdRgEeektaQg5NTryw" name="Single FillPropertySetter" sections="_UbXXNNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr2tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEhtRgEeektaQg5NTryw" name="isSingleFillPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEh9RgEeektaQg5NTryw" name="className" value="FillPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEiNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEidRgEeektaQg5NTryw" name="Single IsValidPropertySetter" sections="_UbXXNdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr29RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEitRgEeektaQg5NTryw" name="isSingleIsValidPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEi9RgEeektaQg5NTryw" name="className" value="IsValidPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEjNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEjdRgEeektaQg5NTryw" name="Single NullPropertySetter" sections="_UbX-QNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr3NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEjtRgEeektaQg5NTryw" name="isSingleNullPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEj9RgEeektaQg5NTryw" name="className" value="NullPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEkNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEkdRgEeektaQg5NTryw" name="Single LineType" sections="_UbX-QdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr3dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEktRgEeektaQg5NTryw" name="isSingleLineType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEk9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyElNRgEeektaQg5NTryw" name="className" value="LineType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEldRgEeektaQg5NTryw" name="Single LineInstance" sections="_UbX-QtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr3tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEltRgEeektaQg5NTryw" name="isSingleLineInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEl9RgEeektaQg5NTryw" name="className" value="LineInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEmNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEmdRgEeektaQg5NTryw" name="Single LinePropertySetter" sections="_UbX-Q9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr4dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEmtRgEeektaQg5NTryw" name="isSingleLinePropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEm9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEnNRgEeektaQg5NTryw" name="className" value="LinePropertySetter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEndRgEeektaQg5NTryw" name="Single FontPropertySetter" sections="_UbX-RNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr4tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEntRgEeektaQg5NTryw" name="isSingleFontPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEn9RgEeektaQg5NTryw" name="className" value="FontPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEoNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEodRgEeektaQg5NTryw" name="Single FontInstance" sections="_UbX-RdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr49RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEotRgEeektaQg5NTryw" name="isSingleFontInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEo9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEpNRgEeektaQg5NTryw" name="className" value="FontInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEpdRgEeektaQg5NTryw" name="Single FontType" sections="_UbYlUNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr6NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEptRgEeektaQg5NTryw" name="isSingleFontType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEp9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEqNRgEeektaQg5NTryw" name="className" value="FontType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEqdRgEeektaQg5NTryw" name="Single IsVisiblePropertySetter" sections="_UbYlUdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr6dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEqtRgEeektaQg5NTryw" name="isSingleIsVisiblePropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEq9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyErNRgEeektaQg5NTryw" name="className" value="IsVisiblePropertySetter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyErdRgEeektaQg5NTryw" name="Single TopLayerOperatorDescriptor" sections="_UbYlUtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr6tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyErtRgEeektaQg5NTryw" name="isSingleTopLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEr9RgEeektaQg5NTryw" name="className" value="TopLayerOperatorDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEsNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEsdRgEeektaQg5NTryw" name="Single StackedLayerOperatorDescriptor" sections="_UbYlU9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr69RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEstRgEeektaQg5NTryw" name="isSingleStackedLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEs9RgEeektaQg5NTryw" name="className" value="StackedLayerOperatorDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEtNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEtdRgEeektaQg5NTryw" name="Single CustomPropertyOperator" sections="_UbYlVNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr7NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEttRgEeektaQg5NTryw" name="isSingleCustomPropertyOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEt9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEuNRgEeektaQg5NTryw" name="className" value="CustomPropertyOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEudRgEeektaQg5NTryw" name="Single AndStackedLayerOperatorDescriptor" sections="_UbYlVdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr8NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEutRgEeektaQg5NTryw" name="isSingleAndStackedLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEu9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEvNRgEeektaQg5NTryw" name="className" value="AndStackedLayerOperatorDescriptor"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEvdRgEeektaQg5NTryw" name="Single OrStackedLayerOperatorDescriptor" sections="_UbYlVtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr8dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEvtRgEeektaQg5NTryw" name="isSingleOrStackedLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEv9RgEeektaQg5NTryw" name="className" value="OrStackedLayerOperatorDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEwNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEwdRgEeektaQg5NTryw" name="Single IsAbstractUmlSetter" sections="_UbYlV9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr8tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEwtRgEeektaQg5NTryw" name="isSingleIsAbstractUmlSetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEw9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyExNRgEeektaQg5NTryw" name="className" value="IsAbstractUmlSetter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyExdRgEeektaQg5NTryw" name="Single AllViewsDerivedLayer" sections="_UbZMYNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr89RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyExtRgEeektaQg5NTryw" name="isSingleAllViewsDerivedLayer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEx9RgEeektaQg5NTryw" name="className" value="AllViewsDerivedLayer"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEyNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEydRgEeektaQg5NTryw" name="Single CSSPropertySetter" sections="_UbZMYdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr9NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEytRgEeektaQg5NTryw" name="isSingleCSSPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEy9RgEeektaQg5NTryw" name="className" value="CSSPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEzNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyEzdRgEeektaQg5NTryw" name="Single CSSType" sections="_UbZMYtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr9dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyEztRgEeektaQg5NTryw" name="isSingleCSSType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyEz9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE0NRgEeektaQg5NTryw" name="className" value="CSSType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE0dRgEeektaQg5NTryw" name="Single CSSInstance" sections="_UbZMY9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr9tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE0tRgEeektaQg5NTryw" name="isSingleCSSInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE09RgEeektaQg5NTryw" name="className" value="CSSInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE1NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE1dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerNamedStyle" sections="_UbZMZNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrTtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE1tRgEeektaQg5NTryw" name="isMultipleLayerNamedStyle">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE19RgEeektaQg5NTryw" name="className" value="LayerNamedStyle"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE2NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE2dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayersStack" sections="_UbZzcNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrUNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE2tRgEeektaQg5NTryw" name="isMultipleLayersStack">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE29RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE3NRgEeektaQg5NTryw" name="className" value="LayersStack"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE3dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerExpression" sections="_UbZzcdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrVtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE3tRgEeektaQg5NTryw" name="isMultipleLayerExpression">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE39RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE4NRgEeektaQg5NTryw" name="className" value="LayerExpression"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE4dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple ApplicationDependantElement" sections="_UbZzctRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrXtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE4tRgEeektaQg5NTryw" name="isMultipleApplicationDependantElement">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE49RgEeektaQg5NTryw" name="className" value="ApplicationDependantElement"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE5NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE5dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayersStackApplication" sections="_UbZzc9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrYNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE5tRgEeektaQg5NTryw" name="isMultipleLayersStackApplication">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE59RgEeektaQg5NTryw" name="className" value="LayersStackApplication"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE6NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE6dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple FolderElement" sections="_UbZzdNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyraNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE6tRgEeektaQg5NTryw" name="isMultipleFolderElement">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE69RgEeektaQg5NTryw" name="className" value="FolderElement"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE7NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE7dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerStackDescriptorRegistry" sections="_UbZzddRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyradRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE7tRgEeektaQg5NTryw" name="isMultipleLayerStackDescriptorRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE79RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE8NRgEeektaQg5NTryw" name="className" value="LayerStackDescriptorRegistry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE8dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple PropertyRegistry" sections="_UbZzdtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyratRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE8tRgEeektaQg5NTryw" name="isMultiplePropertyRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE89RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE9NRgEeektaQg5NTryw" name="className" value="PropertyRegistry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE9dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple Property" sections="_UbZzd9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrbtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE9tRgEeektaQg5NTryw" name="isMultipleProperty">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE99RgEeektaQg5NTryw" name="className" value="Property"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE-NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE-dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple Type" sections="_UbZzeNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrdNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE-tRgEeektaQg5NTryw" name="isMultipleType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE-9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE_NRgEeektaQg5NTryw" name="className" value="Type"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyE_dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple Metamodel" sections="_UbZzedRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyreNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyE_tRgEeektaQg5NTryw" name="isMultipleMetamodel">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyE_9RgEeektaQg5NTryw" name="className" value="Metamodel"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFANRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFAdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple TypeInstance" sections="_UbaagNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrf9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFAtRgEeektaQg5NTryw" name="isMultipleTypeInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFA9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFBNRgEeektaQg5NTryw" name="className" value="TypeInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFBdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple ComputePropertyValueCommandItf" sections="_UbaagdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrgNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFBtRgEeektaQg5NTryw" name="isMultipleComputePropertyValueCommandItf">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFB9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFCNRgEeektaQg5NTryw" name="className" value="ComputePropertyValueCommandItf"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFCdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple TypeRegistry" sections="_UbaagtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrgdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFCtRgEeektaQg5NTryw" name="isMultipleTypeRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFC9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFDNRgEeektaQg5NTryw" name="className" value="TypeRegistry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFDdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple StringToTypeMap" sections="_Ubaag9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrg9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFDtRgEeektaQg5NTryw" name="isMultipleStringToTypeMap">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFD9RgEeektaQg5NTryw" name="className" value="StringToTypeMap"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFENRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFEdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerDescriptorRegistry" sections="_UbaahNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrhtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFEtRgEeektaQg5NTryw" name="isMultipleLayerDescriptorRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFE9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFFNRgEeektaQg5NTryw" name="className" value="LayerDescriptorRegistry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFFdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerDescriptor" sections="_UbaahdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyriNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFFtRgEeektaQg5NTryw" name="isMultipleLayerDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFF9RgEeektaQg5NTryw" name="className" value="LayerDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFGNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFGdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerApplicationFactory" sections="_UbaahtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyritRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFGtRgEeektaQg5NTryw" name="isMultipleLayerApplicationFactory">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFG9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFHNRgEeektaQg5NTryw" name="className" value="LayerApplicationFactory"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFHdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple PropertySetterRegistry" sections="_Ubaah9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrjNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFHtRgEeektaQg5NTryw" name="isMultiplePropertySetterRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFH9RgEeektaQg5NTryw" name="className" value="PropertySetterRegistry"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFINRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFIdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple PropertySetter" sections="_UbaaiNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrkNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFItRgEeektaQg5NTryw" name="isMultiplePropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFI9RgEeektaQg5NTryw" name="className" value="PropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFJNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFJdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple StringToPropertySetter" sections="_UbaaidRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrk9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFJtRgEeektaQg5NTryw" name="isMultipleStringToPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFJ9RgEeektaQg5NTryw" name="className" value="StringToPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFKNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFKdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerOperatorDescriptorRegistry" sections="_UbaaitRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrltRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFKtRgEeektaQg5NTryw" name="isMultipleLayerOperatorDescriptorRegistry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFK9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFLNRgEeektaQg5NTryw" name="className" value="LayerOperatorDescriptorRegistry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFLdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerOperatorDescriptor" sections="_Ubaai9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrm9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFLtRgEeektaQg5NTryw" name="isMultipleLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFL9RgEeektaQg5NTryw" name="className" value="LayerOperatorDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFMNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFMdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple PropertyOperator" sections="_UbbBkNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrntRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFMtRgEeektaQg5NTryw" name="isMultiplePropertyOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFM9RgEeektaQg5NTryw" name="className" value="PropertyOperator"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFNNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFNdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple AbstractLayerOperator" sections="_UbbBkdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyroNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFNtRgEeektaQg5NTryw" name="isMultipleAbstractLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFN9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFONRgEeektaQg5NTryw" name="className" value="AbstractLayerOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFOdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayerOperator" sections="_UbbBktRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyro9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFOtRgEeektaQg5NTryw" name="isMultipleLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFO9RgEeektaQg5NTryw" name="className" value="LayerOperator"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFPNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFPdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LayersContainer" sections="_UbbBk9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrpdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFPtRgEeektaQg5NTryw" name="isMultipleLayersContainer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFP9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFQNRgEeektaQg5NTryw" name="className" value="LayersContainer"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFQdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple DefaultPropertyOperator" sections="_UbbBlNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrptRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFQtRgEeektaQg5NTryw" name="isMultipleDefaultPropertyOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFQ9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFRNRgEeektaQg5NTryw" name="className" value="DefaultPropertyOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFRdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple AbstractLayer" sections="_UbbBldRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrp9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFRtRgEeektaQg5NTryw" name="isMultipleAbstractLayer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFR9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFSNRgEeektaQg5NTryw" name="className" value="AbstractLayer"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFSdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple StringToTypeInstanceMap" sections="_UbbBltRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrrdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFStRgEeektaQg5NTryw" name="isMultipleStringToTypeInstanceMap">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFS9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFTNRgEeektaQg5NTryw" name="className" value="StringToTypeInstanceMap"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFTdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple Folder" sections="_UbbBl9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrsNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFTtRgEeektaQg5NTryw" name="isMultipleFolder">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFT9RgEeektaQg5NTryw" name="className" value="Folder"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFUNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFUdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple IntInstance" sections="_UbbooNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrs9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFUtRgEeektaQg5NTryw" name="isMultipleIntInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFU9RgEeektaQg5NTryw" name="className" value="IntInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFVNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFVdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple BooleanInstance" sections="_UbboodRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrtdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFVtRgEeektaQg5NTryw" name="isMultipleBooleanInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFV9RgEeektaQg5NTryw" name="className" value="BooleanInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFWNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFWdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple StringInstance" sections="_UbbootRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrt9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFWtRgEeektaQg5NTryw" name="isMultipleStringInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFW9RgEeektaQg5NTryw" name="className" value="StringInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFXNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFXdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple IntType" sections="_Ubboo9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrudRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFXtRgEeektaQg5NTryw" name="isMultipleIntType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFX9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFYNRgEeektaQg5NTryw" name="className" value="IntType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFYdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple BooleanType" sections="_UbbopNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrutRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFYtRgEeektaQg5NTryw" name="isMultipleBooleanType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFY9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFZNRgEeektaQg5NTryw" name="className" value="BooleanType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFZdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple StringType" sections="_UbbopdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyru9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFZtRgEeektaQg5NTryw" name="isMultipleStringType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFZ9RgEeektaQg5NTryw" name="className" value="StringType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFaNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFadRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple CustomType" sections="_UbboptRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrvNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFatRgEeektaQg5NTryw" name="isMultipleCustomType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFa9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFbNRgEeektaQg5NTryw" name="className" value="CustomType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFbdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple TopLayerOperator" sections="_Ubbop9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrvtRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFbtRgEeektaQg5NTryw" name="isMultipleTopLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFb9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFcNRgEeektaQg5NTryw" name="className" value="TopLayerOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFcdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple StackedLayerOperator" sections="_UbcPsNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrv9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFctRgEeektaQg5NTryw" name="isMultipleStackedLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFc9RgEeektaQg5NTryw" name="className" value="StackedLayerOperator"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFdNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFddRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple CustomLayerOperator" sections="_UbcPsdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrwNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFdtRgEeektaQg5NTryw" name="isMultipleCustomLayerOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFd9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFeNRgEeektaQg5NTryw" name="className" value="CustomLayerOperator"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFedRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple PropertyIndex" sections="_UbcPstRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrwdRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFetRgEeektaQg5NTryw" name="isMultiplePropertyIndex">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFe9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFfNRgEeektaQg5NTryw" name="className" value="PropertyIndex"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFfdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple StringToPropertyIndexMap" sections="_UbcPs9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrxNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFftRgEeektaQg5NTryw" name="isMultipleStringToPropertyIndexMap">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFf9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFgNRgEeektaQg5NTryw" name="className" value="StringToPropertyIndexMap"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFgdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple SimpleLayerDescriptor" sections="_UbcPtNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrx9RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFgtRgEeektaQg5NTryw" name="isMultipleSimpleLayerDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFg9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFhNRgEeektaQg5NTryw" name="className" value="SimpleLayerDescriptor"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFhdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple RegExpLayerDescriptor" sections="_UbcPtdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyryNRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFhtRgEeektaQg5NTryw" name="isMultipleRegExpLayerDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFh9RgEeektaQg5NTryw" name="className" value="RegExpLayerDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFiNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFidRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple NullInstance" sections="_Ubc2wNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrydRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFitRgEeektaQg5NTryw" name="isMultipleNullInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFi9RgEeektaQg5NTryw" name="className" value="NullInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFjNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFjdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple RegExpLayer" sections="_Ubc2wdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyrytRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFjtRgEeektaQg5NTryw" name="isMultipleRegExpLayer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFj9RgEeektaQg5NTryw" name="className" value="RegExpLayer"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFkNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFkdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple Layer" sections="_Ubc2wtRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr0tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFktRgEeektaQg5NTryw" name="isMultipleLayer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFk9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFlNRgEeektaQg5NTryw" name="className" value="Layer"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFldRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple Color" sections="_Ubc2w9RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr09RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFltRgEeektaQg5NTryw" name="isMultipleColor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFl9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFmNRgEeektaQg5NTryw" name="className" value="Color"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFmdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple ColorInstance" sections="_Ubc2xNRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr1NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFmtRgEeektaQg5NTryw" name="isMultipleColorInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFm9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFnNRgEeektaQg5NTryw" name="className" value="ColorInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFndRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple FillInstance" sections="_Ubc2xdRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr1tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFntRgEeektaQg5NTryw" name="isMultipleFillInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFn9RgEeektaQg5NTryw" name="className" value="FillInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFoNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFodRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple Fill" sections="_Ubdd0NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr2dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFotRgEeektaQg5NTryw" name="isMultipleFill">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFo9RgEeektaQg5NTryw" name="className" value="Fill"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFpNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFpdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple FillPropertySetter" sections="_Ubdd0dRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr2tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFptRgEeektaQg5NTryw" name="isMultipleFillPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFp9RgEeektaQg5NTryw" name="className" value="FillPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFqNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFqdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple IsValidPropertySetter" sections="_Ubdd0tRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr29RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFqtRgEeektaQg5NTryw" name="isMultipleIsValidPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFq9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFrNRgEeektaQg5NTryw" name="className" value="IsValidPropertySetter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFrdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple NullPropertySetter" sections="_Ubdd09RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr3NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFrtRgEeektaQg5NTryw" name="isMultipleNullPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFr9RgEeektaQg5NTryw" name="className" value="NullPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFsNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFsdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LineType" sections="_Ubdd1NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr3dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFstRgEeektaQg5NTryw" name="isMultipleLineType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFs9RgEeektaQg5NTryw" name="className" value="LineType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFtNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFtdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LineInstance" sections="_Ubdd1dRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr3tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFttRgEeektaQg5NTryw" name="isMultipleLineInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFt9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFuNRgEeektaQg5NTryw" name="className" value="LineInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFudRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple LinePropertySetter" sections="_Ubdd1tRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr4dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFutRgEeektaQg5NTryw" name="isMultipleLinePropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFu9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFvNRgEeektaQg5NTryw" name="className" value="LinePropertySetter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFvdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple FontPropertySetter" sections="_Ubdd19RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr4tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFvtRgEeektaQg5NTryw" name="isMultipleFontPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFv9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFwNRgEeektaQg5NTryw" name="className" value="FontPropertySetter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFwdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple FontInstance" sections="_Ubdd2NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr49RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFwtRgEeektaQg5NTryw" name="isMultipleFontInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFw9RgEeektaQg5NTryw" name="className" value="FontInstance"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFxNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFxdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple FontType" sections="_Ubdd2dRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr6NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFxtRgEeektaQg5NTryw" name="isMultipleFontType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFx9RgEeektaQg5NTryw" name="className" value="FontType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFyNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFydRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple IsVisiblePropertySetter" sections="_UbeE4NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr6dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFytRgEeektaQg5NTryw" name="isMultipleIsVisiblePropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFy9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFzNRgEeektaQg5NTryw" name="className" value="IsVisiblePropertySetter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyFzdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple TopLayerOperatorDescriptor" sections="_UbeE4dRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr6tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyFztRgEeektaQg5NTryw" name="isMultipleTopLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyFz9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF0NRgEeektaQg5NTryw" name="className" value="TopLayerOperatorDescriptor"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyF0dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple StackedLayerOperatorDescriptor" sections="_UbeE4tRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr69RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyF0tRgEeektaQg5NTryw" name="isMultipleStackedLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF09RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF1NRgEeektaQg5NTryw" name="className" value="StackedLayerOperatorDescriptor"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyF1dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple CustomPropertyOperator" sections="_UbeE49RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr7NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyF1tRgEeektaQg5NTryw" name="isMultipleCustomPropertyOperator">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF19RgEeektaQg5NTryw" name="className" value="CustomPropertyOperator"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF2NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyF2dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple AndStackedLayerOperatorDescriptor" sections="_UbeE5NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr8NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyF2tRgEeektaQg5NTryw" name="isMultipleAndStackedLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF29RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF3NRgEeektaQg5NTryw" name="className" value="AndStackedLayerOperatorDescriptor"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyF3dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple OrStackedLayerOperatorDescriptor" sections="_UbeE5dRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr8dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyF3tRgEeektaQg5NTryw" name="isMultipleOrStackedLayerOperatorDescriptor">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF39RgEeektaQg5NTryw" name="className" value="OrStackedLayerOperatorDescriptor"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF4NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyF4dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple IsAbstractUmlSetter" sections="_UbeE5tRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr8tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyF4tRgEeektaQg5NTryw" name="isMultipleIsAbstractUmlSetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF49RgEeektaQg5NTryw" name="className" value="IsAbstractUmlSetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF5NRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyF5dRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple AllViewsDerivedLayer" sections="_UbeE59RgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr89RgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyF5tRgEeektaQg5NTryw" name="isMultipleAllViewsDerivedLayer">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyF59RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyrQNRgEeektaQg5NTryw" name="className" value="AllViewsDerivedLayer"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyrQdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple CSSPropertySetter" sections="_UbeE6NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr9NRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyrQtRgEeektaQg5NTryw" name="isMultipleCSSPropertySetter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyrQ9RgEeektaQg5NTryw" name="className" value="CSSPropertySetter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyrRNRgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyrRdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple CSSType" sections="_UbeE6dRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr9dRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyrRtRgEeektaQg5NTryw" name="isMultipleCSSType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyrR9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyrSNRgEeektaQg5NTryw" name="className" value="CSSType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TMyrSdRgEeektaQg5NTryw" elementMultiplicity="-1" name="Multiple CSSInstance" sections="_Uber8NRgEeektaQg5NTryw" automaticContext="true" datacontexts="_TMyr9tRgEeektaQg5NTryw">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TMyrStRgEeektaQg5NTryw" name="isMultipleCSSInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyrS9RgEeektaQg5NTryw" name="nsUri" value="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TMyrTNRgEeektaQg5NTryw" name="className" value="CSSInstance"/>
+    </constraints>
+  </views>
+  <dataContexts xmi:id="_TMyrTdRgEeektaQg5NTryw" name="layers" label="layers">
+    <elements xmi:id="_TMyrTtRgEeektaQg5NTryw" name="LayerNamedStyle">
+      <properties xmi:id="_TMyrT9RgEeektaQg5NTryw" name="layersStack" type="Reference" multiplicity="-1"/>
+    </elements>
+    <elements xmi:id="_TMyrUNRgEeektaQg5NTryw" name="LayersStack" supertypes="_TMyrpdRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrUdRgEeektaQg5NTryw" name="layers" type="Reference"/>
+      <properties xmi:id="_TMyrUtRgEeektaQg5NTryw" name="name"/>
+      <properties xmi:id="_TMyrU9RgEeektaQg5NTryw" name="description"/>
+      <properties xmi:id="_TMyrVNRgEeektaQg5NTryw" name="diagram" type="Reference"/>
+      <properties xmi:id="_TMyrVdRgEeektaQg5NTryw" name="state" type="Enumeration"/>
+    </elements>
+    <elements xmi:id="_TMyrVtRgEeektaQg5NTryw" name="LayerExpression" supertypes="_TMyrXtRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrV9RgEeektaQg5NTryw" name="name"/>
+      <properties xmi:id="_TMyrWNRgEeektaQg5NTryw" name="description"/>
+      <properties xmi:id="_TMyrWdRgEeektaQg5NTryw" name="isLayerEnabledInternal" type="Boolean"/>
+      <properties xmi:id="_TMyrWtRgEeektaQg5NTryw" name="isLayerEnabled" type="Boolean"/>
+      <properties xmi:id="_TMyrW9RgEeektaQg5NTryw" name="isBranchEnabled" type="Boolean" description="Is the branch from this node to the root enabled ?&#xD;&#xA;A branch is enabled if all node of the branch are enabled.&#xD;&#xA;In other world, if an ancestor node is disable, the branch is disabled.&#xD;&#xA;Setting the value of this node set the value of the subnodes."/>
+      <properties xmi:id="_TMyrXNRgEeektaQg5NTryw" name="owningLayersStack" type="Reference"/>
+      <properties xmi:id="_TMyrXdRgEeektaQg5NTryw" name="state" type="Enumeration"/>
+    </elements>
+    <elements xmi:id="_TMyrXtRgEeektaQg5NTryw" name="ApplicationDependantElement">
+      <properties xmi:id="_TMyrX9RgEeektaQg5NTryw" name="application" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyrYNRgEeektaQg5NTryw" name="LayersStackApplication" supertypes="_TMyraNRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrYdRgEeektaQg5NTryw" name="layersStacks" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrYtRgEeektaQg5NTryw" name="layerStackRegistry" type="Reference"/>
+      <properties xmi:id="_TMyrY9RgEeektaQg5NTryw" name="propertyRegistry" type="Reference"/>
+      <properties xmi:id="_TMyrZNRgEeektaQg5NTryw" name="layerDescriptorRegistry" type="Reference"/>
+      <properties xmi:id="_TMyrZdRgEeektaQg5NTryw" name="factory" type="Reference"/>
+      <properties xmi:id="_TMyrZtRgEeektaQg5NTryw" name="propertySetterRegistry" type="Reference"/>
+      <properties xmi:id="_TMyrZ9RgEeektaQg5NTryw" name="layerOperatorDescriptorRegistry" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyraNRgEeektaQg5NTryw" name="FolderElement"/>
+    <elements xmi:id="_TMyradRgEeektaQg5NTryw" name="LayerStackDescriptorRegistry"/>
+    <elements xmi:id="_TMyratRgEeektaQg5NTryw" name="PropertyRegistry">
+      <properties xmi:id="_TMyra9RgEeektaQg5NTryw" name="properties" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrbNRgEeektaQg5NTryw" name="typeRegistry" type="Reference"/>
+      <properties xmi:id="_TMyrbdRgEeektaQg5NTryw" name="propertiesCount" type="Integer"/>
+    </elements>
+    <elements xmi:id="_TMyrbtRgEeektaQg5NTryw" name="Property" supertypes="_TMyraNRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrb9RgEeektaQg5NTryw" name="type" type="Reference"/>
+      <properties xmi:id="_TMyrcNRgEeektaQg5NTryw" name="defaultValue" type="Reference"/>
+      <properties xmi:id="_TMyrcdRgEeektaQg5NTryw" name="name"/>
+      <properties xmi:id="_TMyrctRgEeektaQg5NTryw" name="description"/>
+      <properties xmi:id="_TMyrc9RgEeektaQg5NTryw" name="index" type="Integer"/>
+    </elements>
+    <elements xmi:id="_TMyrdNRgEeektaQg5NTryw" name="Type" supertypes="_TMyraNRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrddRgEeektaQg5NTryw" name="metamodel" type="Reference"/>
+      <properties xmi:id="_TMyrdtRgEeektaQg5NTryw" name="name"/>
+      <properties xmi:id="_TMyrd9RgEeektaQg5NTryw" name="description"/>
+    </elements>
+    <elements xmi:id="_TMyreNRgEeektaQg5NTryw" name="Metamodel" supertypes="_TMyraNRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyredRgEeektaQg5NTryw" name="name"/>
+      <properties xmi:id="_TMyretRgEeektaQg5NTryw" name="description"/>
+      <properties xmi:id="_TMyre9RgEeektaQg5NTryw" name="nsuri"/>
+      <properties xmi:id="_TMyrfNRgEeektaQg5NTryw" name="pluginID"/>
+      <properties xmi:id="_TMyrfdRgEeektaQg5NTryw" name="ePackageInstanceName"/>
+      <properties xmi:id="_TMyrftRgEeektaQg5NTryw" name="isTypeValid" type="Boolean"/>
+    </elements>
+    <elements xmi:id="_TMyrf9RgEeektaQg5NTryw" name="TypeInstance" supertypes="_TMyrgNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrgNRgEeektaQg5NTryw" name="ComputePropertyValueCommandItf"/>
+    <elements xmi:id="_TMyrgdRgEeektaQg5NTryw" name="TypeRegistry">
+      <properties xmi:id="_TMyrgtRgEeektaQg5NTryw" name="types" type="Reference" multiplicity="-1"/>
+    </elements>
+    <elements xmi:id="_TMyrg9RgEeektaQg5NTryw" name="StringToTypeMap">
+      <properties xmi:id="_TMyrhNRgEeektaQg5NTryw" name="value" type="Reference"/>
+      <properties xmi:id="_TMyrhdRgEeektaQg5NTryw" name="key"/>
+    </elements>
+    <elements xmi:id="_TMyrhtRgEeektaQg5NTryw" name="LayerDescriptorRegistry">
+      <properties xmi:id="_TMyrh9RgEeektaQg5NTryw" name="layerDescriptors" type="Reference" multiplicity="-1"/>
+    </elements>
+    <elements xmi:id="_TMyriNRgEeektaQg5NTryw" name="LayerDescriptor">
+      <properties xmi:id="_TMyridRgEeektaQg5NTryw" name="propertyRegistry" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyritRgEeektaQg5NTryw" name="LayerApplicationFactory">
+      <properties xmi:id="_TMyri9RgEeektaQg5NTryw" name="application" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyrjNRgEeektaQg5NTryw" name="PropertySetterRegistry">
+      <properties xmi:id="_TMyrjdRgEeektaQg5NTryw" name="propertySetters" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrjtRgEeektaQg5NTryw" name="setterMap" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrj9RgEeektaQg5NTryw" name="application" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyrkNRgEeektaQg5NTryw" name="PropertySetter">
+      <properties xmi:id="_TMyrkdRgEeektaQg5NTryw" name="property" type="Reference"/>
+      <properties xmi:id="_TMyrktRgEeektaQg5NTryw" name="propertyName"/>
+    </elements>
+    <elements xmi:id="_TMyrk9RgEeektaQg5NTryw" name="StringToPropertySetter">
+      <properties xmi:id="_TMyrlNRgEeektaQg5NTryw" name="key"/>
+      <properties xmi:id="_TMyrldRgEeektaQg5NTryw" name="value" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyrltRgEeektaQg5NTryw" name="LayerOperatorDescriptorRegistry">
+      <properties xmi:id="_TMyrl9RgEeektaQg5NTryw" name="descriptors" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrmNRgEeektaQg5NTryw" name="propertyOperators" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrmdRgEeektaQg5NTryw" name="propertyCollectionSize" type="Integer"/>
+      <properties xmi:id="_TMyrmtRgEeektaQg5NTryw" name="defaultOperator" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyrm9RgEeektaQg5NTryw" name="LayerOperatorDescriptor">
+      <properties xmi:id="_TMyrnNRgEeektaQg5NTryw" name="propertyOperators" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrndRgEeektaQg5NTryw" name="name"/>
+    </elements>
+    <elements xmi:id="_TMyrntRgEeektaQg5NTryw" name="PropertyOperator">
+      <properties xmi:id="_TMyrn9RgEeektaQg5NTryw" name="name"/>
+    </elements>
+    <elements xmi:id="_TMyroNRgEeektaQg5NTryw" name="AbstractLayerOperator" supertypes="_TMyro9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrodRgEeektaQg5NTryw" name="layerOperatorDescriptor" type="Reference"/>
+      <properties xmi:id="_TMyrotRgEeektaQg5NTryw" name="layerOperatorDescriptorName"/>
+    </elements>
+    <elements xmi:id="_TMyro9RgEeektaQg5NTryw" name="LayerOperator" supertypes="_TMyrVtRgEeektaQg5NTryw _TMyrpdRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrpNRgEeektaQg5NTryw" name="layers" type="Reference" multiplicity="-1"/>
+    </elements>
+    <elements xmi:id="_TMyrpdRgEeektaQg5NTryw" name="LayersContainer"/>
+    <elements xmi:id="_TMyrptRgEeektaQg5NTryw" name="DefaultPropertyOperator" supertypes="_TMyrntRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrp9RgEeektaQg5NTryw" name="AbstractLayer" supertypes="_TMyrVtRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrqNRgEeektaQg5NTryw" name="propertyValues" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrqdRgEeektaQg5NTryw" name="propertyValueMap" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrqtRgEeektaQg5NTryw" name="layerDescriptor" type="Reference"/>
+      <properties xmi:id="_TMyrq9RgEeektaQg5NTryw" name="views" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrrNRgEeektaQg5NTryw" name="attachedProperties" type="Reference" multiplicity="-1"/>
+    </elements>
+    <elements xmi:id="_TMyrrdRgEeektaQg5NTryw" name="StringToTypeInstanceMap">
+      <properties xmi:id="_TMyrrtRgEeektaQg5NTryw" name="key"/>
+      <properties xmi:id="_TMyrr9RgEeektaQg5NTryw" name="value" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyrsNRgEeektaQg5NTryw" name="Folder" supertypes="_TMyraNRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrsdRgEeektaQg5NTryw" name="elements" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_TMyrstRgEeektaQg5NTryw" name="name"/>
+    </elements>
+    <elements xmi:id="_TMyrs9RgEeektaQg5NTryw" name="IntInstance" supertypes="_TMyrf9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrtNRgEeektaQg5NTryw" name="value" type="Integer"/>
+    </elements>
+    <elements xmi:id="_TMyrtdRgEeektaQg5NTryw" name="BooleanInstance" supertypes="_TMyrf9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrttRgEeektaQg5NTryw" name="value" type="Boolean"/>
+    </elements>
+    <elements xmi:id="_TMyrt9RgEeektaQg5NTryw" name="StringInstance" supertypes="_TMyrf9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyruNRgEeektaQg5NTryw" name="value"/>
+    </elements>
+    <elements xmi:id="_TMyrudRgEeektaQg5NTryw" name="IntType" supertypes="_TMyrdNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrutRgEeektaQg5NTryw" name="BooleanType" supertypes="_TMyrdNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyru9RgEeektaQg5NTryw" name="StringType" supertypes="_TMyrdNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrvNRgEeektaQg5NTryw" name="CustomType" supertypes="_TMyrdNRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyrvdRgEeektaQg5NTryw" name="classifier"/>
+    </elements>
+    <elements xmi:id="_TMyrvtRgEeektaQg5NTryw" name="TopLayerOperator" supertypes="_TMyroNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrv9RgEeektaQg5NTryw" name="StackedLayerOperator" supertypes="_TMyroNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrwNRgEeektaQg5NTryw" name="CustomLayerOperator" supertypes="_TMyro9RgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrwdRgEeektaQg5NTryw" name="PropertyIndex">
+      <properties xmi:id="_TMyrwtRgEeektaQg5NTryw" name="property" type="Reference"/>
+      <properties xmi:id="_TMyrw9RgEeektaQg5NTryw" name="index" type="Integer"/>
+    </elements>
+    <elements xmi:id="_TMyrxNRgEeektaQg5NTryw" name="StringToPropertyIndexMap">
+      <properties xmi:id="_TMyrxdRgEeektaQg5NTryw" name="value" type="Reference"/>
+      <properties xmi:id="_TMyrxtRgEeektaQg5NTryw" name="key"/>
+    </elements>
+    <elements xmi:id="_TMyrx9RgEeektaQg5NTryw" name="SimpleLayerDescriptor" supertypes="_TMyriNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyryNRgEeektaQg5NTryw" name="RegExpLayerDescriptor" supertypes="_TMyriNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrydRgEeektaQg5NTryw" name="NullInstance" supertypes="_TMyrf9RgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyrytRgEeektaQg5NTryw" name="RegExpLayer" supertypes="_TMyrp9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyry9RgEeektaQg5NTryw" name="expr"/>
+      <properties xmi:id="_TMyrzNRgEeektaQg5NTryw" name="language"/>
+      <properties xmi:id="_TMyrzdRgEeektaQg5NTryw" name="isDomainChangedEventDependant" type="Boolean"/>
+      <properties xmi:id="_TMyrztRgEeektaQg5NTryw" name="domainChangedEventLevel" type="Enumeration"/>
+      <properties xmi:id="_TMyrz9RgEeektaQg5NTryw" name="isDiagramChangedEventDependant" type="Boolean"/>
+      <properties xmi:id="_TMyr0NRgEeektaQg5NTryw" name="diagramChangedEventLevel" type="Enumeration"/>
+      <properties xmi:id="_TMyr0dRgEeektaQg5NTryw" name="expressionContextObjectType"/>
+    </elements>
+    <elements xmi:id="_TMyr0tRgEeektaQg5NTryw" name="Layer" supertypes="_TMyrp9RgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr09RgEeektaQg5NTryw" name="Color" supertypes="_TMyrdNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr1NRgEeektaQg5NTryw" name="ColorInstance" supertypes="_TMyrf9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyr1dRgEeektaQg5NTryw" name="value" type="Integer"/>
+    </elements>
+    <elements xmi:id="_TMyr1tRgEeektaQg5NTryw" name="FillInstance" supertypes="_TMyrf9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyr19RgEeektaQg5NTryw" name="transparency" type="Integer"/>
+      <properties xmi:id="_TMyr2NRgEeektaQg5NTryw" name="fillColor" type="Reference"/>
+    </elements>
+    <elements xmi:id="_TMyr2dRgEeektaQg5NTryw" name="Fill" supertypes="_TMyrdNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr2tRgEeektaQg5NTryw" name="FillPropertySetter" supertypes="_TMyrkNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr29RgEeektaQg5NTryw" name="IsValidPropertySetter" supertypes="_TMyrkNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr3NRgEeektaQg5NTryw" name="NullPropertySetter" supertypes="_TMyrkNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr3dRgEeektaQg5NTryw" name="LineType" supertypes="_TMyrdNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr3tRgEeektaQg5NTryw" name="LineInstance" supertypes="_TMyrf9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyr39RgEeektaQg5NTryw" name="lineColor" type="Integer"/>
+      <properties xmi:id="_TMyr4NRgEeektaQg5NTryw" name="lineWith" type="Integer"/>
+    </elements>
+    <elements xmi:id="_TMyr4dRgEeektaQg5NTryw" name="LinePropertySetter" supertypes="_TMyrkNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr4tRgEeektaQg5NTryw" name="FontPropertySetter" supertypes="_TMyrkNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr49RgEeektaQg5NTryw" name="FontInstance" supertypes="_TMyrf9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyr5NRgEeektaQg5NTryw" name="fontColor" type="Integer"/>
+      <properties xmi:id="_TMyr5dRgEeektaQg5NTryw" name="fontName"/>
+      <properties xmi:id="_TMyr5tRgEeektaQg5NTryw" name="fontHeigh" type="Integer"/>
+      <properties xmi:id="_TMyr59RgEeektaQg5NTryw" name="bold" type="Boolean"/>
+    </elements>
+    <elements xmi:id="_TMyr6NRgEeektaQg5NTryw" name="FontType" supertypes="_TMyrdNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr6dRgEeektaQg5NTryw" name="IsVisiblePropertySetter" supertypes="_TMyrkNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr6tRgEeektaQg5NTryw" name="TopLayerOperatorDescriptor" supertypes="_TMyrm9RgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr69RgEeektaQg5NTryw" name="StackedLayerOperatorDescriptor" supertypes="_TMyrm9RgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr7NRgEeektaQg5NTryw" name="CustomPropertyOperator" supertypes="_TMyrntRgEeektaQg5NTryw">
+      <properties xmi:id="_TMyr7dRgEeektaQg5NTryw" name="classname"/>
+      <properties xmi:id="_TMyr7tRgEeektaQg5NTryw" name="operatorInstance"/>
+      <properties xmi:id="_TMyr79RgEeektaQg5NTryw" name="classBundleID"/>
+    </elements>
+    <elements xmi:id="_TMyr8NRgEeektaQg5NTryw" name="AndStackedLayerOperatorDescriptor" supertypes="_TMyr69RgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr8dRgEeektaQg5NTryw" name="OrStackedLayerOperatorDescriptor" supertypes="_TMyr69RgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr8tRgEeektaQg5NTryw" name="IsAbstractUmlSetter" supertypes="_TMyrkNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr89RgEeektaQg5NTryw" name="AllViewsDerivedLayer" supertypes="_TMyrp9RgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr9NRgEeektaQg5NTryw" name="CSSPropertySetter" supertypes="_TMyrkNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr9dRgEeektaQg5NTryw" name="CSSType" supertypes="_TMyrdNRgEeektaQg5NTryw"/>
+    <elements xmi:id="_TMyr9tRgEeektaQg5NTryw" name="CSSInstance" supertypes="_TMyrf9RgEeektaQg5NTryw">
+      <properties xmi:id="_TMyr99RgEeektaQg5NTryw" name="stylesheet" type="Reference"/>
+    </elements>
+    <modelElementFactory href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@modelElementFactories.0"/>
+  </dataContexts>
+</contexts:Context>

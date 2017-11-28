@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated layers -->
       <package
-            uri="org.eclipse.papyrus.layers.0.10"
+            uri="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage"
             genModel="model/layers.genmodel"/>
    </extension>

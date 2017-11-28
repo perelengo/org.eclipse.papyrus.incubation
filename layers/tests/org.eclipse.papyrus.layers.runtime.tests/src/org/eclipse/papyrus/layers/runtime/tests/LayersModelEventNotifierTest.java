@@ -19,6 +19,8 @@ import static org.junit.Assert.fail;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer;
@@ -29,8 +31,6 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPack
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.util.PropertyUtils;
-import org.eclipse.papyrus.layers.runtime.ILayersModelEventListener;
-import org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces;
 import org.junit.After;
 import org.junit.Before;
@@ -59,7 +59,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#LayersModelEventNotifier(org.eclipse.papyrus.layers.stackmodel.layers.LayersStack)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#LayersModelEventNotifier(org.eclipse.papyrus.layers.stackmodel.layers.LayersStack)}.
 	 */
 	@Test
 	public void testLayersModelEventNotifier() {
@@ -77,7 +77,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#activate()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#activate()}.
 	 */
 	@Test
 	@Ignore
@@ -86,7 +86,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#deactivate()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#deactivate()}.
 	 */
 	@Test
 	@Ignore
@@ -95,7 +95,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#dispose()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#dispose()}.
 	 */
 	@Test
 	public void testDispose() {
@@ -119,7 +119,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#addLayersModelEventListener(org.eclipse.papyrus.layers.runtime.ILayersModelEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#addLayersModelEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener)}.
 	 */
 	@Test
 	public void testAddLayersModelEventListener() {
@@ -137,7 +137,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#removeLayersModelEventListener(org.eclipse.papyrus.layers.runtime.ILayersModelEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#removeLayersModelEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener)}.
 	 */
 	@Test
 	public void testRemoveLayersModelEventListener() {
@@ -158,7 +158,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#firePropertyValueAddedEvent(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#firePropertyValueAddedEvent(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -198,7 +198,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#firePropertyValueRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#firePropertyValueRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -243,7 +243,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#firePropertyValueChanged(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#firePropertyValueChanged(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -282,7 +282,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireLayerAdded(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireLayerAdded(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireLayerAdded() {
@@ -316,7 +316,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireLayerRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireLayerRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireLayerRemoved() {
@@ -348,7 +348,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireLayerRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireLayerRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireLayerSetForRootLayer() {
@@ -381,7 +381,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireLayerRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireLayerRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireEventWhenRootLayerIsReplaced() {
@@ -414,7 +414,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireLayerRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireLayerRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireEventWhenLayerIsReplaced() {
@@ -447,7 +447,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireLayerMoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireLayerMoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireLayerMoved() {
@@ -485,7 +485,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireViewAddedToLayer(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireViewAddedToLayer(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireViewAddedToLayer() {
@@ -540,7 +540,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireViewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireViewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireViewRemovedFromLayer() {
@@ -581,7 +581,7 @@ public class LayersModelEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventNotifier#fireViewMovedBetweenLayer(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventNotifier#fireViewMovedBetweenLayer(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	@Ignore

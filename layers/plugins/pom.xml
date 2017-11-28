@@ -14,12 +14,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	
 	<modules>
 		<module>org.eclipse.papyrus.layers.notationmodel.edit</module>
-		<module>org.eclipse.papyrus.layers.runtime</module>
-		<module>org.eclipse.papyrus.layers.stackmodel</module>
-		<module>org.eclipse.papyrus.layers.stackmodel.diagram</module>
-		<module>org.eclipse.papyrus.layers.stackmodel.edit</module>
-		<module>org.eclipse.papyrus.layers.stackmodel.editor</module>
-		<module>org.eclipse.papyrus.layers.ui</module>
+		<module>org.eclipse.papyrus.infra.gmfdiag.layers.runtime</module>
+		<module>org.eclipse.papyrus.infra.gmfdiag.layers.model</module>
+		<module>org.eclipse.papyrus.infra.gmfdiag.layers.model.edit</module>
+		<module>org.eclipse.papyrus.infra.gmfdiag.layers.model.editor</module>
+		<module>org.eclipse.papyrus.infra.gmfdiag.layers.ui</module>
+		<module>org.eclipse.papyrus.infra.gmfdiag.layers.diagram</module>
 		
 		<!-- FIXME present in Papyrus core repo but not in the build 
 		org.eclipse.papyrus.layers.dev.ui

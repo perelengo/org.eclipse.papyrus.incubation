@@ -16,7 +16,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ApplicationDependantElement;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
@@ -34,7 +34,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStac
  *
  * @generated
  */
-public abstract class ApplicationDependantElementImpl extends MinimalEObjectImpl.Container implements ApplicationDependantElement {
+public abstract class ApplicationDependantElementImpl extends EObjectImpl implements ApplicationDependantElement {
 	/**
 	 * The cached value of the '{@link #getApplication() <em>Application</em>}' reference.
 	 * <!-- begin-user-doc -->

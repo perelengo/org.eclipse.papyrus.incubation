@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -52,7 +52,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.util.Prope
  *
  * @generated
  */
-public class PropertySetterRegistryImpl extends MinimalEObjectImpl.Container implements PropertySetterRegistry {
+public class PropertySetterRegistryImpl extends EObjectImpl implements PropertySetterRegistry {
 	/**
 	 * The cached value of the '{@link #getPropertySetters() <em>Property Setters</em>}' reference list.
 	 * <!-- begin-user-doc -->

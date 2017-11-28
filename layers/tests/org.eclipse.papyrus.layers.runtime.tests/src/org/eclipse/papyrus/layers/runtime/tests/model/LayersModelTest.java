@@ -19,8 +19,8 @@ import java.io.IOException;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -52,7 +52,7 @@ public class LayersModelTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.model.LayersModelResource#LayersModel()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource#LayersModel()}.
 	 *
 	 * @throws CoreException
 	 * @throws IOException
@@ -72,7 +72,7 @@ public class LayersModelTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.model.LayersModelResource#lookupLayerStackApplication()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource#lookupLayerStackApplication()}.
 	 */
 	@Test
 	public void testLookupLayerStackApplication() {
@@ -94,7 +94,7 @@ public class LayersModelTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.model.LayersModelResource#getLayerStackApplication()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource#getLayerStackApplication()}.
 	 */
 	@Test
 	public void testGetLayerStackApplication() {

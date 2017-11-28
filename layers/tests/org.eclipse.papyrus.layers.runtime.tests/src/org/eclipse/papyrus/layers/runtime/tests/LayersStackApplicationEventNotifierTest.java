@@ -19,9 +19,9 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
-import org.eclipse.papyrus.layers.runtime.LayersStackApplicationEventNotifier;
-import org.eclipse.papyrus.layers.runtime.NotationDiagramHelper;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackApplicationEventNotifier;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -94,7 +94,7 @@ public class LayersStackApplicationEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackApplicationEventNotifier#LayersStackApplicationEventNotifier(org.eclipse.papyrus.layers.runtime.model.LayersModelResource)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackApplicationEventNotifier#LayersStackApplicationEventNotifier(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource)}.
 	 */
 	@Test
 	public void testLayersStackApplicationEventNotifier() {
@@ -108,7 +108,7 @@ public class LayersStackApplicationEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackApplicationEventNotifier#dispose()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackApplicationEventNotifier#dispose()}.
 	 */
 	@Test
 	public void testDispose() {
@@ -124,7 +124,7 @@ public class LayersStackApplicationEventNotifierTest {
 
 	/**
 	 * Test Layer added event correctly catched
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackApplicationEventNotifier#layerStackAdded(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackApplicationEventNotifier#layerStackAdded(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testLayerStackAdded() {
@@ -152,7 +152,7 @@ public class LayersStackApplicationEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackApplicationEventNotifier#layerStackRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackApplicationEventNotifier#layerStackRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testLayerStackRemoved() {

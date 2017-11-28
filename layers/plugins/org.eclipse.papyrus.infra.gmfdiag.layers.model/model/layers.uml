@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
-  <uml:Model xmi:id="_gAOFQLcqEeK8_t7Rpq6ZJA" name="layers">
+  <uml:Model xmi:id="_gAOFQLcqEeK8_t7Rpq6ZJA" name="Layers" URI="">
     <ownedComment xmi:type="uml:Comment" xmi:id="_7_dC4HbuEeOlpfB_tZS-QA" annotatedElement="_gAOFQLcqEeK8_t7Rpq6ZJA">
       <body>Start the LayesStack.&#xD;
 This method should be called after the LayersStack creation. It is not called from the constructor, because &#xD;
@@ -239,7 +239,7 @@ The index is used by the application to access property in arrays.&#xD;
 Each property has a unique index. This is the application responsability to maintain the index.&#xD;
 Usually, the  index is set by the PropertyRegistry when Properties are registered. Then, all arrays indexed Properties can reorder themself. &#xD;
 This is done immediately after the owner of the array know the application or the PropertyRegistry &#xD;
-(see org.eclipse.papyrus.layers.stackmodel.layers.impl.AbstractLayerImpl.resetAllPropertyValuesFromRegistry() )&#xD;
+(see org.eclipse.papyrus.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl.resetAllPropertyValuesFromRegistry() )&#xD;
 </body>
         </ownedComment>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LG9UgO3qEeKwLp35IbAIig" value="1"/>
@@ -1531,7 +1531,7 @@ The interface provide one method allowing to add a LayerExpression to the contai
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
     </profileApplication>
   </uml:Model>
-  <Ecore:EPackage xmi:id="_ZYU5ULcsEeK8_t7Rpq6ZJA" base_Package="_gAOFQLcqEeK8_t7Rpq6ZJA" nsPrefix="" nsURI="org.eclipse.papyrus.layers.0.10" basePackage="org.eclipse.papyrus.layers.stackmodel"/>
+  <Ecore:EPackage xmi:id="_ZYU5ULcsEeK8_t7Rpq6ZJA" base_Package="_gAOFQLcqEeK8_t7Rpq6ZJA" packageName="layers" nsPrefix="layers" nsURI="http://www.eclipse.org/papyrus/infra/gmfdiag/layers" basePackage="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model" prefix="Layers"/>
   <Ecore:EDataType xmi:id="_Yn8ysL12EeKr1s-73D4BvA" instanceClassName="java.lang.String" base_PrimitiveType="_OyQ5QL1xEeKKJJ5BmR3W3Q"/>
   <Ecore:EDataType xmi:id="_WynUwNa8EeKPiuTfpuvqHA" instanceClassName="int" base_PrimitiveType="_SuHkkNa8EeKPiuTfpuvqHA"/>
   <Ecore:EDataType xmi:id="_ZDhncNa8EeKPiuTfpuvqHA" instanceClassName="boolean" base_PrimitiveType="_TqqsYNa8EeKPiuTfpuvqHA"/>

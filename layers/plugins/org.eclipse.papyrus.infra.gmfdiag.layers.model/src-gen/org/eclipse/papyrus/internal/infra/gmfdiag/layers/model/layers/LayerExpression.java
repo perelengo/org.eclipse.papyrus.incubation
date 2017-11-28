@@ -33,13 +33,13 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePr
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getName <em>Name</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getDescription <em>Description</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isLayerEnabledInternal <em>Is Layer Enabled Internal</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isLayerEnabled <em>Is Layer Enabled</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isBranchEnabled <em>Is Branch Enabled</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getOwningLayersStack <em>Owning Layers Stack</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getState <em>State</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isLayerEnabledInternal <em>Is Layer Enabled Internal</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isLayerEnabled <em>Is Layer Enabled</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isBranchEnabled <em>Is Branch Enabled</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getOwningLayersStack <em>Owning Layers Stack</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getState <em>State</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getLayerExpression()
@@ -55,7 +55,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getLayerExpression_Name()
@@ -68,9 +67,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -84,7 +81,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getLayerExpression_Description()
@@ -97,9 +93,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' attribute.
 	 * @see #getDescription()
 	 * @generated
 	 */
@@ -113,7 +107,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Is Layer Enabled Internal</em>' attribute.
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getLayerExpression_IsLayerEnabledInternal()
 	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.boolean" required="true" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
@@ -130,7 +123,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Is Layer Enabled</em>' attribute.
 	 * @see #setIsLayerEnabled(boolean)
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getLayerExpression_IsLayerEnabled()
@@ -143,9 +135,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isLayerEnabled <em>Is Layer Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Is Layer Enabled</em>' attribute.
+	 * @param value the new value of the '<em>Is Layer Enabled</em>' attribute.
 	 * @see #isLayerEnabled()
 	 * @generated
 	 */
@@ -162,7 +152,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * In other world, if an ancestor node is disable, the branch is disabled.
 	 * Setting the value of this node set the value of the subnodes.
 	 * <!-- end-model-doc -->
-	 * 
 	 * @return the value of the '<em>Is Branch Enabled</em>' attribute.
 	 * @see #setIsBranchEnabled(boolean)
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getLayerExpression_IsBranchEnabled()
@@ -175,9 +164,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isBranchEnabled <em>Is Branch Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Is Branch Enabled</em>' attribute.
+	 * @param value the new value of the '<em>Is Branch Enabled</em>' attribute.
 	 * @see #isBranchEnabled()
 	 * @generated
 	 */
@@ -191,7 +178,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Owning Layers Stack</em>' reference.
 	 * @see #setOwningLayersStack(LayersStack)
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getLayerExpression_OwningLayersStack()
@@ -204,9 +190,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getOwningLayersStack <em>Owning Layers Stack</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Owning Layers Stack</em>' reference.
+	 * @param value the new value of the '<em>Owning Layers Stack</em>' reference.
 	 * @see #getOwningLayersStack()
 	 * @generated
 	 */
@@ -222,7 +206,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>State</em>' attribute.
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState
 	 * @see #setState(LayerState)
@@ -236,9 +219,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * Sets the value of the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getState <em>State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>State</em>' attribute.
+	 * @param value the new value of the '<em>State</em>' attribute.
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState
 	 * @see #getState()
 	 * @generated
@@ -248,9 +229,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" required="true" ordered="false" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" viewRequired="true"
-	 *        viewOrdered="false" propertyRequired="true" propertyOrdered="false"
+	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" required="true" ordered="false" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" viewRequired="true" viewOrdered="false" propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */
 	ComputePropertyValueCommand getComputePropertyValueCommand(View view, Property property) throws LayersException;
@@ -258,9 +237,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" viewMany="true" propertyRequired="true"
-	 *        propertyOrdered="false"
+	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" viewMany="true" propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */
 	EList<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(EList<View> view, Property property) throws LayersException;
@@ -268,9 +245,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" viewRequired="true" viewOrdered="false"
-	 *        propertyRequired="true" propertyMany="true"
+	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" viewRequired="true" viewOrdered="false" propertyRequired="true" propertyMany="true"
 	 * @generated
 	 */
 	EList<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, EList<Property> property) throws LayersException;
@@ -284,7 +259,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * This method is called by the LayersStack when it detect that tha layer is attached to it.
 	 * 
 	 * <!-- end-model-doc -->
-	 * 
 	 * @model owningLayersStackRequired="true" owningLayersStackOrdered="false"
 	 * @generated
 	 */
@@ -297,7 +271,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * A checked version of getOwningLayersStack.
 	 * 
 	 * <!-- end-model-doc -->
-	 * 
 	 * @model kind="operation" required="true" ordered="false" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NotFoundException"
 	 * @generated
 	 */
@@ -310,7 +283,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * This method is called by the class immediately after entering in attached state.
 	 * The methodcan be used to start the layer behaviors.
 	 * <!-- end-model-doc -->
-	 * 
 	 * @model exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException"
 	 * @generated
 	 */
@@ -324,15 +296,14 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * A Layer can be attached if its required attributes are set.
 	 * Required attributes:
 	 * <ul>
-	 * <li>application</li>
-	 * <li>owningLayerStack</li>
-	 * <li>parent container</li>
-	 * <li></li>
+	 *   <li>application</li>
+	 *   <li>owningLayerStack</li>
+	 *   <li>parent container</li>
+	 *   <li></li>
 	 * </ul>
 	 * Just after enterring in "attached" state, the enterAttachedState() method is called.
 	 * If this Layer is successfully attached, then attach subLayers.
 	 * <!-- end-model-doc -->
-	 * 
 	 * @model exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException"
 	 * @generated
 	 */
@@ -345,7 +316,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * Detach the Layer. The state go to "detached".
 	 * Associated behavior are stopped.
 	 * <!-- end-model-doc -->
-	 * 
 	 * @model exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException"
 	 * @generated
 	 */
@@ -358,7 +328,6 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * This method is called just before this Layer leave the attached state.
 	 * 
 	 * <!-- end-model-doc -->
-	 * 
 	 * @model
 	 * @generated
 	 */

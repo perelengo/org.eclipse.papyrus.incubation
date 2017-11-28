@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
@@ -38,7 +38,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegist
  *
  * @generated
  */
-public class TypeRegistryImpl extends MinimalEObjectImpl.Container implements TypeRegistry {
+public class TypeRegistryImpl extends EObjectImpl implements TypeRegistry {
 	/**
 	 * The cached value of the '{@link #getTypes() <em>Types</em>}' map.
 	 * <!-- begin-user-doc -->

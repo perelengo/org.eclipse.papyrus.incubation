@@ -13,7 +13,7 @@
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FolderElement;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 
@@ -24,7 +24,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPack
  *
  * @generated
  */
-public abstract class FolderElementImpl extends MinimalEObjectImpl.Container implements FolderElement {
+public abstract class FolderElementImpl extends EObjectImpl implements FolderElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

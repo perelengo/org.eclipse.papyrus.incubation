@@ -24,6 +24,8 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventUtils;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer;
@@ -36,8 +38,6 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRe
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
-import org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer;
-import org.eclipse.papyrus.layers.runtime.LayersModelEventUtils;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces.TriggeredEvent;
 import org.junit.After;
@@ -95,7 +95,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#LayerStackSynchronizer(org.eclipse.papyrus.layers.stackmodel.layers.LayersStack)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#LayerStackSynchronizer(org.eclipse.papyrus.layers.stackmodel.layers.LayersStack)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -147,7 +147,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#getDiagram()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#getDiagram()}.
 	 */
 	@Test
 	public void testGetDiagram() {
@@ -169,7 +169,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#getLayersStack()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#getLayersStack()}.
 	 */
 	@Test
 	public void testGetLayersStack() {
@@ -191,7 +191,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#dispose()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#dispose()}.
 	 */
 	@Test
 	@Ignore
@@ -200,7 +200,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#isDisposed()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#isDisposed()}.
 	 */
 	@Test
 	@Ignore
@@ -209,7 +209,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#propertyValueAdded(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#propertyValueAdded(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -254,7 +254,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#propertyValueRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#propertyValueRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -298,7 +298,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#propertyValueChanged(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#propertyValueChanged(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -355,7 +355,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#layerAdded(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#layerAdded(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	@Ignore
@@ -364,7 +364,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#layerRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#layerRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	@Ignore
@@ -373,7 +373,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#layerMoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#layerMoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	@Ignore
@@ -382,7 +382,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#layerSet(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#layerSet(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	@Ignore
@@ -391,7 +391,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#viewAddedToLayer(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#viewAddedToLayer(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -437,7 +437,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#viewAddedToLayer(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#viewAddedToLayer(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -495,7 +495,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#viewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#viewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -541,7 +541,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#viewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#viewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)}.
 	 *
 	 * @throws LayersException
 	 */
@@ -599,7 +599,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#viewMovedBetweenLayer(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#viewMovedBetweenLayer(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	@Ignore
@@ -608,7 +608,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#diagramViewAdded(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#diagramViewAdded(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	@Ignore
@@ -617,7 +617,7 @@ public class LayerStackSynchronizerWithApplicationTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#diagramViewRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#diagramViewRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	@Ignore

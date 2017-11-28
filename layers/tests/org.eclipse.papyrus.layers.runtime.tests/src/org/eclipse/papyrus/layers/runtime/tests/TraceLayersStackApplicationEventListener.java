@@ -11,7 +11,7 @@
 package org.eclipse.papyrus.layers.runtime.tests;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.papyrus.layers.runtime.ILayersStackApplicationEventListener;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersStackApplicationEventListener;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces;
 
 
@@ -27,7 +27,7 @@ public class TraceLayersStackApplicationEventListener implements ILayersStackApp
 	public TriggeredEventTraces traces = new TriggeredEventTraces();
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersStackApplicationEventListener#layerStackAdded(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersStackApplicationEventListener#layerStackAdded(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param msg
 	 */
@@ -38,7 +38,7 @@ public class TraceLayersStackApplicationEventListener implements ILayersStackApp
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersStackApplicationEventListener#layerStackRemoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersStackApplicationEventListener#layerStackRemoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param msg
 	 */

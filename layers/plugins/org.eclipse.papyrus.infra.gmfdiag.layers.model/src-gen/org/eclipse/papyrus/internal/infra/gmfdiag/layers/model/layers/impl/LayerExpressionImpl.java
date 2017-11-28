@@ -43,13 +43,13 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getName <em>Name</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getDescription <em>Description</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#isLayerEnabledInternal <em>Is Layer Enabled Internal</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#isLayerEnabled <em>Is Layer Enabled</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#isBranchEnabled <em>Is Branch Enabled</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getOwningLayersStack <em>Owning Layers Stack</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getState <em>State</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#isLayerEnabledInternal <em>Is Layer Enabled Internal</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#isLayerEnabled <em>Is Layer Enabled</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#isBranchEnabled <em>Is Branch Enabled</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getOwningLayersStack <em>Owning Layers Stack</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getState <em>State</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,7 +60,6 @@ public abstract class LayerExpressionImpl extends
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -70,7 +69,6 @@ public abstract class LayerExpressionImpl extends
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -80,7 +78,6 @@ public abstract class LayerExpressionImpl extends
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
@@ -90,7 +87,6 @@ public abstract class LayerExpressionImpl extends
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
@@ -101,7 +97,6 @@ public abstract class LayerExpressionImpl extends
 	 * The default value of the '{@link #isLayerEnabledInternal() <em>Is Layer Enabled Internal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #isLayerEnabledInternal()
 	 * @generated
 	 * @ordered
@@ -111,7 +106,6 @@ public abstract class LayerExpressionImpl extends
 	 * The default value of the '{@link #isLayerEnabled() <em>Is Layer Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #isLayerEnabled()
 	 * @generated
 	 * @ordered
@@ -121,7 +115,6 @@ public abstract class LayerExpressionImpl extends
 	 * The cached value of the '{@link #isLayerEnabled() <em>Is Layer Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #isLayerEnabled()
 	 * @generated
 	 * @ordered
@@ -131,7 +124,6 @@ public abstract class LayerExpressionImpl extends
 	 * The default value of the '{@link #isBranchEnabled() <em>Is Branch Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #isBranchEnabled()
 	 * @generated
 	 * @ordered
@@ -141,7 +133,6 @@ public abstract class LayerExpressionImpl extends
 	 * The cached value of the '{@link #isBranchEnabled() <em>Is Branch Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #isBranchEnabled()
 	 * @generated
 	 * @ordered
@@ -151,7 +142,6 @@ public abstract class LayerExpressionImpl extends
 	 * The cached value of the '{@link #getOwningLayersStack() <em>Owning Layers Stack</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getOwningLayersStack()
 	 * @generated
 	 * @ordered
@@ -162,7 +152,6 @@ public abstract class LayerExpressionImpl extends
 	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getState()
 	 * @generated
 	 * @ordered
@@ -172,7 +161,6 @@ public abstract class LayerExpressionImpl extends
 	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getState()
 	 * @generated
 	 * @ordered
@@ -235,7 +223,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -246,7 +233,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -257,7 +243,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -271,7 +256,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -282,7 +266,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -307,7 +290,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -336,7 +318,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -365,14 +346,13 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public LayersStack getOwningLayersStack() {
 		if (owningLayersStack != null && owningLayersStack.eIsProxy()) {
-			InternalEObject oldOwningLayersStack = (InternalEObject) owningLayersStack;
-			owningLayersStack = (LayersStack) eResolveProxy(oldOwningLayersStack);
+			InternalEObject oldOwningLayersStack = (InternalEObject)owningLayersStack;
+			owningLayersStack = (LayersStack)eResolveProxy(oldOwningLayersStack);
 			if (owningLayersStack != oldOwningLayersStack) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK, oldOwningLayersStack, owningLayersStack));
@@ -384,7 +364,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public LayersStack basicGetOwningLayersStack() {
@@ -394,7 +373,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -408,7 +386,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -419,7 +396,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -531,7 +507,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -544,7 +519,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -557,7 +531,6 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -631,28 +604,26 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.LAYER_EXPRESSION__NAME:
-			return getName();
-		case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
-			return getDescription();
-		case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED_INTERNAL:
-			return isLayerEnabledInternal();
-		case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
-			return isLayerEnabled();
-		case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
-			return isBranchEnabled();
-		case LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK:
-			if (resolve)
-				return getOwningLayersStack();
-			return basicGetOwningLayersStack();
-		case LayersPackage.LAYER_EXPRESSION__STATE:
-			return getState();
+			case LayersPackage.LAYER_EXPRESSION__NAME:
+				return getName();
+			case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
+				return getDescription();
+			case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED_INTERNAL:
+				return isLayerEnabledInternal();
+			case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
+				return isLayerEnabled();
+			case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
+				return isBranchEnabled();
+			case LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK:
+				if (resolve) return getOwningLayersStack();
+				return basicGetOwningLayersStack();
+			case LayersPackage.LAYER_EXPRESSION__STATE:
+				return getState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -660,30 +631,29 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.LAYER_EXPRESSION__NAME:
-			setName((String) newValue);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
-			setDescription((String) newValue);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
-			setIsLayerEnabled((Boolean) newValue);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
-			setIsBranchEnabled((Boolean) newValue);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK:
-			setOwningLayersStack((LayersStack) newValue);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__STATE:
-			setState((LayerState) newValue);
-			return;
+			case LayersPackage.LAYER_EXPRESSION__NAME:
+				setName((String)newValue);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
+				setIsLayerEnabled((Boolean)newValue);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
+				setIsBranchEnabled((Boolean)newValue);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK:
+				setOwningLayersStack((LayersStack)newValue);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__STATE:
+				setState((LayerState)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -691,30 +661,29 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYER_EXPRESSION__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
-			setDescription(DESCRIPTION_EDEFAULT);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
-			setIsLayerEnabled(IS_LAYER_ENABLED_EDEFAULT);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
-			setIsBranchEnabled(IS_BRANCH_ENABLED_EDEFAULT);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK:
-			setOwningLayersStack((LayersStack) null);
-			return;
-		case LayersPackage.LAYER_EXPRESSION__STATE:
-			setState(STATE_EDEFAULT);
-			return;
+			case LayersPackage.LAYER_EXPRESSION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
+				setIsLayerEnabled(IS_LAYER_ENABLED_EDEFAULT);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
+				setIsBranchEnabled(IS_BRANCH_ENABLED_EDEFAULT);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK:
+				setOwningLayersStack((LayersStack)null);
+				return;
+			case LayersPackage.LAYER_EXPRESSION__STATE:
+				setState(STATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -722,26 +691,25 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYER_EXPRESSION__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
-			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED_INTERNAL:
-			return isLayerEnabledInternal() != IS_LAYER_ENABLED_INTERNAL_EDEFAULT;
-		case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
-			return isLayerEnabled != IS_LAYER_ENABLED_EDEFAULT;
-		case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
-			return isBranchEnabled != IS_BRANCH_ENABLED_EDEFAULT;
-		case LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK:
-			return owningLayersStack != null;
-		case LayersPackage.LAYER_EXPRESSION__STATE:
-			return state != STATE_EDEFAULT;
+			case LayersPackage.LAYER_EXPRESSION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case LayersPackage.LAYER_EXPRESSION__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED_INTERNAL:
+				return isLayerEnabledInternal() != IS_LAYER_ENABLED_INTERNAL_EDEFAULT;
+			case LayersPackage.LAYER_EXPRESSION__IS_LAYER_ENABLED:
+				return isLayerEnabled != IS_LAYER_ENABLED_EDEFAULT;
+			case LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED:
+				return isBranchEnabled != IS_BRANCH_ENABLED_EDEFAULT;
+			case LayersPackage.LAYER_EXPRESSION__OWNING_LAYERS_STACK:
+				return owningLayersStack != null;
+			case LayersPackage.LAYER_EXPRESSION__STATE:
+				return state != STATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -749,64 +717,70 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.LAYER_EXPRESSION___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY:
-			try {
-				return getComputePropertyValueCommand((View) arguments.get(0), (Property) arguments.get(1));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY:
-			try {
-				return getViewsComputePropertyValueCommand((EList<View>) arguments.get(0), (Property) arguments.get(1));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST:
-			try {
-				return getPropertiesComputePropertyValueCommand((View) arguments.get(0), (EList<Property>) arguments.get(1));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYER_EXPRESSION___ATTACH_TO_LAYERS_STACK__LAYERSSTACK:
-			attachToLayersStack((LayersStack) arguments.get(0));
-			return null;
-		case LayersPackage.LAYER_EXPRESSION___GET_LAYERS_STACK:
-			try {
-				return getLayersStack();
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYER_EXPRESSION___ENTER_ATTACHED_STATE:
-			try {
-				enterAttachedState();
+			case LayersPackage.LAYER_EXPRESSION___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY:
+				try {
+					return getComputePropertyValueCommand((View)arguments.get(0), (Property)arguments.get(1));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY:
+				try {
+					return getViewsComputePropertyValueCommand((EList<View>)arguments.get(0), (Property)arguments.get(1));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST:
+				try {
+					return getPropertiesComputePropertyValueCommand((View)arguments.get(0), (EList<Property>)arguments.get(1));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYER_EXPRESSION___ATTACH_TO_LAYERS_STACK__LAYERSSTACK:
+				attachToLayersStack((LayersStack)arguments.get(0));
 				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYER_EXPRESSION___ATTACH:
-			try {
-				attach();
+			case LayersPackage.LAYER_EXPRESSION___GET_LAYERS_STACK:
+				try {
+					return getLayersStack();
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYER_EXPRESSION___ENTER_ATTACHED_STATE:
+				try {
+					enterAttachedState();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYER_EXPRESSION___ATTACH:
+				try {
+					attach();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYER_EXPRESSION___DETACH:
+				try {
+					detach();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYER_EXPRESSION___EXIT_ATTACHED_STATE:
+				exitAttachedState();
 				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYER_EXPRESSION___DETACH:
-			try {
-				detach();
-				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYER_EXPRESSION___EXIT_ATTACHED_STATE:
-			exitAttachedState();
-			return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -814,13 +788,11 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$

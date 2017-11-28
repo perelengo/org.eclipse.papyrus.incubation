@@ -17,6 +17,7 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.eclipse.gmf.runtime.notation.NotationEditPlugin;
+import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.provider.StyleSheetsEditPlugin;
 
 /**
  * This is the central singleton for the Layers editor plugin.
@@ -52,6 +53,7 @@ public final class LayersEditorPlugin extends EMFPlugin {
 			(new ResourceLocator [] {
 				EcoreEditPlugin.INSTANCE,
 				NotationEditPlugin.INSTANCE,
+				StyleSheetsEditPlugin.INSTANCE,
 			});
 	}
 

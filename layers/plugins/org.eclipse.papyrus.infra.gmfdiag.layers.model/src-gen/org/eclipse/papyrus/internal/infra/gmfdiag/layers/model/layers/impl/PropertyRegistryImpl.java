@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
@@ -49,7 +49,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegist
  *
  * @generated
  */
-public class PropertyRegistryImpl extends MinimalEObjectImpl.Container implements PropertyRegistry {
+public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistry {
 	/**
 	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

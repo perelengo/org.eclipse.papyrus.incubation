@@ -20,9 +20,9 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
-import org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer;
-import org.eclipse.papyrus.layers.runtime.NotationDiagramHelper;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces;
 import org.junit.After;
 import org.junit.Before;
@@ -97,7 +97,7 @@ public class LayerStackApplicationSynchronizerEventTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#LayerStackApplicationSynchronizer(org.eclipse.papyrus.layers.runtime.model.LayersModelResource, org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#LayerStackApplicationSynchronizer(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource, org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel)}.
 	 */
 	@Test
 	public void testLayerStackApplicationSynchronizer() {
@@ -113,7 +113,7 @@ public class LayerStackApplicationSynchronizerEventTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#LayerStackApplicationSynchronizer(org.eclipse.papyrus.layers.runtime.model.LayersModelResource, org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#LayerStackApplicationSynchronizer(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource, org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel)}.
 	 */
 	@Test
 	public void testDispose() {

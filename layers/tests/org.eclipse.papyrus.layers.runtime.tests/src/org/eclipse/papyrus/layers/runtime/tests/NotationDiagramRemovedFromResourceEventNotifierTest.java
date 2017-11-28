@@ -21,9 +21,9 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
-import org.eclipse.papyrus.layers.runtime.NotationDiagramHelper;
-import org.eclipse.papyrus.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -75,7 +75,7 @@ public class NotationDiagramRemovedFromResourceEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#NotationDiagramRemovedFromResourceEventNotifier(org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#NotationDiagramRemovedFromResourceEventNotifier(org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel)}.
 	 */
 	@Test
 	public void testNotationDiagramRemovedFromResourceEventNotifier() {
@@ -111,7 +111,7 @@ public class NotationDiagramRemovedFromResourceEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#dispose()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#dispose()}.
 	 */
 	@Test
 	public void testDispose() {
@@ -126,7 +126,7 @@ public class NotationDiagramRemovedFromResourceEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#addLayersModelEventListener(org.eclipse.papyrus.layers.runtime.INotationDiagramRemovedEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#addLayersModelEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.INotationDiagramRemovedEventListener)}.
 	 */
 	@Test
 	@Ignore
@@ -135,7 +135,7 @@ public class NotationDiagramRemovedFromResourceEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#removeLayersModelEventListener(org.eclipse.papyrus.layers.runtime.INotationDiagramRemovedEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#removeLayersModelEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.INotationDiagramRemovedEventListener)}.
 	 */
 	@Test
 	@Ignore
@@ -144,7 +144,7 @@ public class NotationDiagramRemovedFromResourceEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#fireDiagramRemovedEvent(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramRemovedFromResourceEventNotifier#fireDiagramRemovedEvent(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testFireDiagramRemovedEvent() {

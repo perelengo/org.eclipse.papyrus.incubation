@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
@@ -51,7 +51,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOp
  *
  * @generated
  */
-public class LayerOperatorDescriptorRegistryImpl extends MinimalEObjectImpl.Container implements LayerOperatorDescriptorRegistry {
+public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements LayerOperatorDescriptorRegistry {
 	/**
 	 * The cached value of the '{@link #getDescriptors() <em>Descriptors</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

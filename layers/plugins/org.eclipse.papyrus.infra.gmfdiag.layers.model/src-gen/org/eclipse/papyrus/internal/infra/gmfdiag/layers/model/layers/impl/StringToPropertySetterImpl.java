@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter;
 
@@ -38,7 +38,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySe
  *
  * @generated
  */
-public class StringToPropertySetterImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,PropertySetter> {
+public class StringToPropertySetterImpl extends EObjectImpl implements BasicEMap.Entry<String,PropertySetter> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->

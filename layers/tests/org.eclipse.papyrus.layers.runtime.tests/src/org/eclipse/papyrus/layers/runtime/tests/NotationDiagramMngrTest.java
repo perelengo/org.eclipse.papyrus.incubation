@@ -20,8 +20,8 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
-import org.eclipse.papyrus.layers.runtime.NotationDiagramHelper;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -70,7 +70,7 @@ public class NotationDiagramMngrTest {
 
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramHelper#NotationDiagramMngr(org.eclipse.gmf.runtime.notation.Diagram)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper#NotationDiagramMngr(org.eclipse.gmf.runtime.notation.Diagram)}.
 	 */
 	@Test
 	public void testNotationDiagramHelper() {
@@ -86,7 +86,7 @@ public class NotationDiagramMngrTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramHelper#dispose()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper#dispose()}.
 	 */
 	@Test
 	public void testDispose() {
@@ -107,7 +107,7 @@ public class NotationDiagramMngrTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramHelper#getDiagram()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper#getDiagram()}.
 	 */
 	@Test
 	public void testGetDiagram() {
@@ -126,7 +126,7 @@ public class NotationDiagramMngrTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramHelper#attachLayerStack()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper#attachLayerStack()}.
 	 */
 	@Test
 	public void testAttachLayerStack() {
@@ -145,7 +145,7 @@ public class NotationDiagramMngrTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramHelper#removeLayerStack()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper#removeLayerStack()}.
 	 */
 	@Test
 	public void testRemoveLayerStack() {
@@ -169,7 +169,7 @@ public class NotationDiagramMngrTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.NotationDiagramHelper#isLayerStackAttached()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper#isLayerStackAttached()}.
 	 */
 	@Test
 	public void testIsLayerStackAttached() {

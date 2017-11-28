@@ -11,7 +11,7 @@
 package org.eclipse.papyrus.layers.runtime.tests;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.papyrus.layers.runtime.INotationDiagramRemovedEventListener;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.INotationDiagramRemovedEventListener;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces;
 
 

@@ -103,7 +103,7 @@ public class DiagramViewEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.stackmodel.notifier.DiagramViewEventNotifier#addEventListener(org.eclipse.papyrus.layers.runtime.IDiagramViewEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.layers.stackmodel.notifier.DiagramViewEventNotifier#addEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.IDiagramViewEventListener)}.
 	 */
 	@Test
 	@Ignore
@@ -112,7 +112,7 @@ public class DiagramViewEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.stackmodel.notifier.DiagramViewEventNotifier#removeEventListener(org.eclipse.papyrus.layers.runtime.IDiagramViewEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.layers.stackmodel.notifier.DiagramViewEventNotifier#removeEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.IDiagramViewEventListener)}.
 	 */
 	@Test
 	@Ignore

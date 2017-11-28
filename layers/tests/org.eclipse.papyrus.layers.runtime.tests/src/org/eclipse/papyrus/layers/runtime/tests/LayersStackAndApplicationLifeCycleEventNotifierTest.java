@@ -20,9 +20,9 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
-import org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier;
-import org.eclipse.papyrus.layers.runtime.NotationDiagramHelper;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -73,7 +73,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#LayersStackAndApplicationLifeCycleEventNotifier(org.eclipse.papyrus.layers.runtime.model.LayersModelResource)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#LayersStackAndApplicationLifeCycleEventNotifier(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource)}.
 	 */
 	@Test
 	public void testLayersStackAndApplicationLifeCycleEventNotifier() {
@@ -87,7 +87,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#dispose()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#dispose()}.
 	 */
 	@Test
 	public void testDispose() {
@@ -102,7 +102,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#isDisposed()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#isDisposed()}.
 	 */
 	@Test
 	public void testIsDisposed() {
@@ -117,7 +117,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#addLayersModelEventListener(org.eclipse.papyrus.layers.runtime.ILayersStackApplicationEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#addLayersModelEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersStackApplicationEventListener)}.
 	 */
 	@Test
 	@Ignore
@@ -126,7 +126,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#removeLayersModelEventListener(org.eclipse.papyrus.layers.runtime.ILayersStackApplicationEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#removeLayersModelEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersStackApplicationEventListener)}.
 	 */
 	@Test
 	@Ignore
@@ -135,7 +135,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#addLayersStackApplicationLifeCycleEventListener(org.eclipse.papyrus.layers.runtime.model.ILayersModelRootEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#addLayersStackApplicationLifeCycleEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.ILayersModelRootEventListener)}.
 	 */
 	@Test
 	@Ignore
@@ -144,7 +144,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#removeLayersStackApplicationLifeCycleEventListener(org.eclipse.papyrus.layers.runtime.model.ILayersModelRootEventListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier#removeLayersStackApplicationLifeCycleEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.ILayersModelRootEventListener)}.
 	 */
 	@Test
 	@Ignore
@@ -176,7 +176,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 
 	/**
 	 * Test Layer added event correctly catched
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackApplicationEventNotifier#layerStackAdded(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackApplicationEventNotifier#layerStackAdded(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testLayerStackAdded() {
@@ -204,7 +204,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersStackApplicationEventNotifier#layerStackRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersStackApplicationEventNotifier#layerStackRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testLayerStackRemoved() {

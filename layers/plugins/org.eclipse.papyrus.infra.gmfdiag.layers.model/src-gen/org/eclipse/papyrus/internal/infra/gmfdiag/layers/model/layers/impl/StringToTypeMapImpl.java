@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type;
 
@@ -38,7 +38,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type;
  *
  * @generated
  */
-public class StringToTypeMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Type> {
+public class StringToTypeMapImpl extends EObjectImpl implements BasicEMap.Entry<String,Type> {
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->

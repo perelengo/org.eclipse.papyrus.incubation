@@ -11,8 +11,8 @@
 package org.eclipse.papyrus.layers.runtime.tests;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
-import org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces;
 
 
@@ -41,7 +41,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#propertyValueAdded(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#propertyValueAdded(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -52,7 +52,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#propertyValueRemoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#propertyValueRemoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -63,7 +63,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#propertyValueChanged(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#propertyValueChanged(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -74,7 +74,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#layerAdded(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#layerAdded(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -85,7 +85,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#layerRemoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#layerRemoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -96,7 +96,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#layerMoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#layerMoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -107,7 +107,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#layerSet(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#layerSet(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -118,7 +118,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#viewAddedToLayer(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#viewAddedToLayer(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -129,7 +129,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#viewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#viewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -140,7 +140,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#viewMovedBetweenLayer(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#viewMovedBetweenLayer(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -151,7 +151,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#diagramViewAdded(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#diagramViewAdded(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param msg
 	 */
@@ -162,7 +162,7 @@ public class LayerStackSynchronizerSubclass extends LayerStackSynchronizer {
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.LayerStackSynchronizer#diagramViewRemoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackSynchronizer#diagramViewRemoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param msg
 	 */

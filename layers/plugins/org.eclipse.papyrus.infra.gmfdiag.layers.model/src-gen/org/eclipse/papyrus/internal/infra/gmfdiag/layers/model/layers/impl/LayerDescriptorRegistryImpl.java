@@ -18,7 +18,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor;
@@ -38,7 +38,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPack
  *
  * @generated
  */
-public class LayerDescriptorRegistryImpl extends MinimalEObjectImpl.Container implements LayerDescriptorRegistry {
+public class LayerDescriptorRegistryImpl extends EObjectImpl implements LayerDescriptorRegistry {
 	/**
 	 * The cached value of the '{@link #getLayerDescriptors() <em>Layer Descriptors</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

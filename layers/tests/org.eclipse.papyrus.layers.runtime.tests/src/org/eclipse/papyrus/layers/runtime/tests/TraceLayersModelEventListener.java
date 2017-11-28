@@ -11,7 +11,7 @@
 package org.eclipse.papyrus.layers.runtime.tests;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.papyrus.layers.runtime.ILayersModelEventListener;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener;
 import org.eclipse.papyrus.layers.runtime.tests.utils.TriggeredEventTraces;
 
 
@@ -27,7 +27,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	public TriggeredEventTraces traces = new TriggeredEventTraces();
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#propertyValueAdded(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#propertyValueAdded(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -38,7 +38,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#propertyValueRemoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#propertyValueRemoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -48,7 +48,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#propertyValueChanged(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#propertyValueChanged(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -59,7 +59,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#layerAdded(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#layerAdded(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -70,7 +70,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#layerAdded(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#layerAdded(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -80,7 +80,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#layerRemoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#layerRemoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -90,7 +90,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#layerMoved(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#layerMoved(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -100,7 +100,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#viewAddedToLayer(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#viewAddedToLayer(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -110,7 +110,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#viewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#viewRemovedFromLayer(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -120,7 +120,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 	}
 
 	/**
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#viewMovedBetweenLayer(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#viewMovedBetweenLayer(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -131,7 +131,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 
 	/**
 	 *
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#multiViewsRemovedFromLayer(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#multiViewsRemovedFromLayer(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */
@@ -142,7 +142,7 @@ public class TraceLayersModelEventListener implements ILayersModelEventListener 
 
 	/**
 	 *
-	 * @see org.eclipse.papyrus.layers.runtime.ILayersModelEventListener#multiViewsAddedToLayer(org.eclipse.emf.common.notify.Notification)
+	 * @see org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventListener#multiViewsAddedToLayer(org.eclipse.emf.common.notify.Notification)
 	 *
 	 * @param notification
 	 */

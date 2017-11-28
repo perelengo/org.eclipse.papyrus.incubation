@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException;
@@ -44,23 +44,22 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.LayersTr
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getLayers <em>Layers</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getName <em>Name</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getDescription <em>Description</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getDiagram <em>Diagram</em>}</li>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getState <em>State</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getLayers <em>Layers</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getDiagram <em>Diagram</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersStackImpl#getState <em>State</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class LayersStackImpl extends
 
-		MinimalEObjectImpl.Container implements LayersStack {
+		EObjectImpl implements LayersStack {
 	/**
 	 * The cached value of the '{@link #getLayers() <em>Layers</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getLayers()
 	 * @generated
 	 * @ordered
@@ -71,7 +70,6 @@ public class LayersStackImpl extends
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -81,7 +79,6 @@ public class LayersStackImpl extends
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -91,7 +88,6 @@ public class LayersStackImpl extends
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
@@ -101,7 +97,6 @@ public class LayersStackImpl extends
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
@@ -112,7 +107,6 @@ public class LayersStackImpl extends
 	 * The cached value of the '{@link #getDiagram() <em>Diagram</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getDiagram()
 	 * @generated
 	 * @ordered
@@ -123,7 +117,6 @@ public class LayersStackImpl extends
 	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getState()
 	 * @generated
 	 * @ordered
@@ -134,7 +127,6 @@ public class LayersStackImpl extends
 	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getState()
 	 * @generated
 	 * @ordered
@@ -198,7 +190,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -209,7 +200,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -220,7 +210,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetLayers(LayerExpression newLayers, NotificationChain msgs) {
@@ -228,10 +217,7 @@ public class LayersStackImpl extends
 		layers = newLayers;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LayersPackage.LAYERS_STACK__LAYERS, oldLayers, newLayers);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -239,7 +225,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -247,20 +232,19 @@ public class LayersStackImpl extends
 		if (newLayers != layers) {
 			NotificationChain msgs = null;
 			if (layers != null)
-				msgs = ((InternalEObject) layers).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.LAYERS_STACK__LAYERS, null, msgs);
+				msgs = ((InternalEObject)layers).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.LAYERS_STACK__LAYERS, null, msgs);
 			if (newLayers != null)
-				msgs = ((InternalEObject) newLayers).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.LAYERS_STACK__LAYERS, null, msgs);
+				msgs = ((InternalEObject)newLayers).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.LAYERS_STACK__LAYERS, null, msgs);
 			msgs = basicSetLayers(newLayers, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.LAYERS_STACK__LAYERS, newLayers, newLayers));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -271,7 +255,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -285,7 +268,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -296,7 +278,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -310,14 +291,13 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Diagram getDiagram() {
 		if (diagram != null && diagram.eIsProxy()) {
-			InternalEObject oldDiagram = (InternalEObject) diagram;
-			diagram = (Diagram) eResolveProxy(oldDiagram);
+			InternalEObject oldDiagram = (InternalEObject)diagram;
+			diagram = (Diagram)eResolveProxy(oldDiagram);
 			if (diagram != oldDiagram) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LayersPackage.LAYERS_STACK__DIAGRAM, oldDiagram, diagram));
@@ -329,7 +309,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Diagram basicGetDiagram() {
@@ -339,7 +318,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -353,7 +331,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -364,7 +341,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -378,7 +354,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -408,7 +383,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -421,7 +395,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -527,7 +500,6 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -575,14 +547,13 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.LAYERS_STACK__LAYERS:
-			return basicSetLayers(null, msgs);
+			case LayersPackage.LAYERS_STACK__LAYERS:
+				return basicSetLayers(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -590,24 +561,22 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.LAYERS_STACK__LAYERS:
-			return getLayers();
-		case LayersPackage.LAYERS_STACK__NAME:
-			return getName();
-		case LayersPackage.LAYERS_STACK__DESCRIPTION:
-			return getDescription();
-		case LayersPackage.LAYERS_STACK__DIAGRAM:
-			if (resolve)
-				return getDiagram();
-			return basicGetDiagram();
-		case LayersPackage.LAYERS_STACK__STATE:
-			return getState();
+			case LayersPackage.LAYERS_STACK__LAYERS:
+				return getLayers();
+			case LayersPackage.LAYERS_STACK__NAME:
+				return getName();
+			case LayersPackage.LAYERS_STACK__DESCRIPTION:
+				return getDescription();
+			case LayersPackage.LAYERS_STACK__DIAGRAM:
+				if (resolve) return getDiagram();
+				return basicGetDiagram();
+			case LayersPackage.LAYERS_STACK__STATE:
+				return getState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -615,27 +584,26 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.LAYERS_STACK__LAYERS:
-			setLayers((LayerExpression) newValue);
-			return;
-		case LayersPackage.LAYERS_STACK__NAME:
-			setName((String) newValue);
-			return;
-		case LayersPackage.LAYERS_STACK__DESCRIPTION:
-			setDescription((String) newValue);
-			return;
-		case LayersPackage.LAYERS_STACK__DIAGRAM:
-			setDiagram((Diagram) newValue);
-			return;
-		case LayersPackage.LAYERS_STACK__STATE:
-			setState((LayerState) newValue);
-			return;
+			case LayersPackage.LAYERS_STACK__LAYERS:
+				setLayers((LayerExpression)newValue);
+				return;
+			case LayersPackage.LAYERS_STACK__NAME:
+				setName((String)newValue);
+				return;
+			case LayersPackage.LAYERS_STACK__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case LayersPackage.LAYERS_STACK__DIAGRAM:
+				setDiagram((Diagram)newValue);
+				return;
+			case LayersPackage.LAYERS_STACK__STATE:
+				setState((LayerState)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -643,27 +611,26 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYERS_STACK__LAYERS:
-			setLayers((LayerExpression) null);
-			return;
-		case LayersPackage.LAYERS_STACK__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case LayersPackage.LAYERS_STACK__DESCRIPTION:
-			setDescription(DESCRIPTION_EDEFAULT);
-			return;
-		case LayersPackage.LAYERS_STACK__DIAGRAM:
-			setDiagram((Diagram) null);
-			return;
-		case LayersPackage.LAYERS_STACK__STATE:
-			setState(STATE_EDEFAULT);
-			return;
+			case LayersPackage.LAYERS_STACK__LAYERS:
+				setLayers((LayerExpression)null);
+				return;
+			case LayersPackage.LAYERS_STACK__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case LayersPackage.LAYERS_STACK__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case LayersPackage.LAYERS_STACK__DIAGRAM:
+				setDiagram((Diagram)null);
+				return;
+			case LayersPackage.LAYERS_STACK__STATE:
+				setState(STATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -671,22 +638,21 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.LAYERS_STACK__LAYERS:
-			return layers != null;
-		case LayersPackage.LAYERS_STACK__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case LayersPackage.LAYERS_STACK__DESCRIPTION:
-			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case LayersPackage.LAYERS_STACK__DIAGRAM:
-			return diagram != null;
-		case LayersPackage.LAYERS_STACK__STATE:
-			return state != STATE_EDEFAULT;
+			case LayersPackage.LAYERS_STACK__LAYERS:
+				return layers != null;
+			case LayersPackage.LAYERS_STACK__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case LayersPackage.LAYERS_STACK__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case LayersPackage.LAYERS_STACK__DIAGRAM:
+				return diagram != null;
+			case LayersPackage.LAYERS_STACK__STATE:
+				return state != STATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -694,68 +660,74 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case LayersPackage.LAYERS_STACK___ADD_LAYER__LAYEREXPRESSION:
-			addLayer((LayerExpression) arguments.get(0));
-			return null;
-		case LayersPackage.LAYERS_STACK___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY:
-			try {
-				return getComputePropertyValueCommand((View) arguments.get(0), (Property) arguments.get(1));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYERS_STACK___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST:
-			try {
-				return getPropertiesComputePropertyValueCommand((View) arguments.get(0), (EList<Property>) arguments.get(1));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYERS_STACK___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY:
-			try {
-				return getViewsComputePropertyValueCommand((EList<View>) arguments.get(0), (Property) arguments.get(1));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYERS_STACK___START_AFTER_CREATION:
-			startAfterCreation();
-			return null;
-		case LayersPackage.LAYERS_STACK___ATTACH_LAYERS:
-			try {
-				attachLayers();
+			case LayersPackage.LAYERS_STACK___ADD_LAYER__LAYEREXPRESSION:
+				addLayer((LayerExpression)arguments.get(0));
 				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYERS_STACK___ATTACH:
-			try {
-				attach();
+			case LayersPackage.LAYERS_STACK___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY:
+				try {
+					return getComputePropertyValueCommand((View)arguments.get(0), (Property)arguments.get(1));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYERS_STACK___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST:
+				try {
+					return getPropertiesComputePropertyValueCommand((View)arguments.get(0), (EList<Property>)arguments.get(1));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYERS_STACK___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY:
+				try {
+					return getViewsComputePropertyValueCommand((EList<View>)arguments.get(0), (Property)arguments.get(1));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYERS_STACK___START_AFTER_CREATION:
+				startAfterCreation();
 				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYERS_STACK___DETACH:
-			try {
-				detach();
+			case LayersPackage.LAYERS_STACK___ATTACH_LAYERS:
+				try {
+					attachLayers();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYERS_STACK___ATTACH:
+				try {
+					attach();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYERS_STACK___DETACH:
+				try {
+					detach();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYERS_STACK___ENTER_ATTACHED_STATE:
+				try {
+					enterAttachedState();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case LayersPackage.LAYERS_STACK___EXIT_ATTACHED_STATE:
+				exitAttachedState();
 				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYERS_STACK___ENTER_ATTACHED_STATE:
-			try {
-				enterAttachedState();
-				return null;
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case LayersPackage.LAYERS_STACK___EXIT_ATTACHED_STATE:
-			exitAttachedState();
-			return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -763,13 +735,11 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$

@@ -21,9 +21,9 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
-import org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer;
-import org.eclipse.papyrus.layers.runtime.NotationDiagramHelper;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -101,7 +101,7 @@ public class LayerStackApplicationSynchronizerTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#LayerStackApplicationSynchronizer(org.eclipse.papyrus.layers.runtime.model.LayersModelResource, org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#LayerStackApplicationSynchronizer(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource, org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel)}.
 	 */
 	@Test
 	public void testLayerStackApplicationSynchronizer() {
@@ -116,7 +116,7 @@ public class LayerStackApplicationSynchronizerTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#getLayersModel()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#getLayersModel()}.
 	 */
 	@Test
 	public void testGetLayersModel() {
@@ -132,7 +132,7 @@ public class LayerStackApplicationSynchronizerTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#getNotationModel()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#getNotationModel()}.
 	 */
 	@Test
 	public void testGetNotationModel() {
@@ -148,7 +148,7 @@ public class LayerStackApplicationSynchronizerTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#dispose()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#dispose()}.
 	 */
 	@Test
 	public void testDispose() {
@@ -165,7 +165,7 @@ public class LayerStackApplicationSynchronizerTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#layerStackAdded(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#layerStackAdded(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testLayerStackAdded() {
@@ -193,7 +193,7 @@ public class LayerStackApplicationSynchronizerTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#layerStackRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#layerStackRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testLayerStackRemoved() {
@@ -226,7 +226,7 @@ public class LayerStackApplicationSynchronizerTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayerStackApplicationSynchronizer#diagramRemoved(org.eclipse.emf.common.notify.Notification)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayerStackApplicationSynchronizer#diagramRemoved(org.eclipse.emf.common.notify.Notification)}.
 	 */
 	@Test
 	public void testDiagramRemoved() {

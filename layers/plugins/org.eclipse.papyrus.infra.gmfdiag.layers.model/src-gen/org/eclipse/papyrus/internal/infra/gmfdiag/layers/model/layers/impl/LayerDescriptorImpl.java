@@ -16,7 +16,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry;
@@ -34,7 +34,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRe
  *
  * @generated
  */
-public class LayerDescriptorImpl extends MinimalEObjectImpl.Container implements LayerDescriptor {
+public class LayerDescriptorImpl extends EObjectImpl implements LayerDescriptor {
 	/**
 	 * The cached value of the '{@link #getPropertyRegistry() <em>Property Registry</em>}' reference.
 	 * <!-- begin-user-doc -->

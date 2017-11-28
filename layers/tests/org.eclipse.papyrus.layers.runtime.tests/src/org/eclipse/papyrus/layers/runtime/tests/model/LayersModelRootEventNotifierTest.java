@@ -20,9 +20,9 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationModel;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelEventRootNotifier;
+import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelEventRootNotifier;
-import org.eclipse.papyrus.layers.runtime.model.LayersModelResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -96,7 +96,7 @@ public class LayersModelRootEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventRootNotifier#LayersModelEventRootNotifier(org.eclipse.gmf.runtime.notation.Diagram)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventRootNotifier#LayersModelEventRootNotifier(org.eclipse.gmf.runtime.notation.Diagram)}.
 	 */
 	@Test
 	public void testLayersModelEventRootNotifier() {
@@ -111,7 +111,7 @@ public class LayersModelRootEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventRootNotifier#dispose()}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventRootNotifier#dispose()}.
 	 */
 	@Test
 	public void testDispose() {
@@ -127,7 +127,7 @@ public class LayersModelRootEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventRootNotifier#addEventListener(org.eclipse.papyrus.layers.runtime.ILayersModelEventRootListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventRootNotifier#addEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventRootListener)}.
 	 */
 	@Test
 	@Ignore
@@ -136,7 +136,7 @@ public class LayersModelRootEventNotifierTest {
 	}
 
 	/**
-	 * Test method for {@link org.eclipse.papyrus.layers.runtime.LayersModelEventRootNotifier#removeEventListener(org.eclipse.papyrus.layers.runtime.ILayersModelEventRootListener)}.
+	 * Test method for {@link org.eclipse.papyrus.infra.gmfdiag.layers.runtime.LayersModelEventRootNotifier#removeEventListener(org.eclipse.papyrus.infra.gmfdiag.layers.runtime.ILayersModelEventRootListener)}.
 	 */
 	@Test
 	@Ignore
