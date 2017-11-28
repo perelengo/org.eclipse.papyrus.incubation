@@ -4,8 +4,8 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
-import org.eclipse.papyrus.layers.stackmodel.layers.NullInstance;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +14,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.NullInstance;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.NullInstance#getInstance() <em>Get Instance</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance#getInstance() <em>Get Instance</em>}</li>
  * </ul>
  * </p>
  *
@@ -80,11 +80,11 @@ public class NullInstanceTest extends TypeInstanceTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.NullInstance#getInstance() <em>Get Instance</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance#getInstance() <em>Get Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.NullInstance#getInstance()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance#getInstance()
 	 * @generated
 	 */
 	public void testGetInstance() {

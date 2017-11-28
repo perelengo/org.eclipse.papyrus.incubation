@@ -41,8 +41,8 @@ import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.editor.presentation.LayersActionBarContributor;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.editor.presentation.LayersEditorPlugin;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersActionBarContributor;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersEditorPlugin;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 

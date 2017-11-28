@@ -4,8 +4,8 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
-import org.eclipse.papyrus.layers.stackmodel.layers.StringType;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringType;
 
 /**
  * <!-- begin-user-doc -->

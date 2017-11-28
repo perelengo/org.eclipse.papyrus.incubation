@@ -2,7 +2,7 @@
  */
 package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,21 +11,21 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#isLayerEnabledInternal() <em>Is Layer Enabled Internal</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isLayerEnabledInternal() <em>Is Layer Enabled Internal</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Get Compute Property Value Command</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Get Views Compute Property Value Command</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList) <em>Get Properties Compute Property Value Command</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#attachToLayersStack(org.eclipse.papyrus.layers.stackmodel.layers.LayersStack) <em>Attach To Layers Stack</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getLayersStack() <em>Get Layers Stack</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#enterAttachedState() <em>Enter Attached State</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#attach() <em>Attach</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#detach() <em>Detach</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#exitAttachedState() <em>Exit Attached State</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Compute Property Value Command</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Views Compute Property Value Command</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList) <em>Get Properties Compute Property Value Command</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#attachToLayersStack(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack) <em>Attach To Layers Stack</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getLayersStack() <em>Get Layers Stack</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#enterAttachedState() <em>Enter Attached State</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#attach() <em>Attach</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#detach() <em>Detach</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#exitAttachedState() <em>Exit Attached State</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,11 +57,11 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#isLayerEnabledInternal() <em>Is Layer Enabled Internal</em>}' feature getter.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isLayerEnabledInternal() <em>Is Layer Enabled Internal</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#isLayerEnabledInternal()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#isLayerEnabledInternal()
 	 * @generated
 	 */
 	public void testIsLayerEnabledInternal() {
@@ -71,12 +71,12 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Get Compute Property Value Command</em>}'
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Compute Property Value Command</em>}'
 	 * operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.papyrus.layers.stackmodel.layers.Property)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
 	 * @generated
 	 */
 	public void testGetComputePropertyValueCommand__View_Property() {
@@ -86,12 +86,12 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.layers.stackmodel.layers.Property)
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
 	 * <em>Get Views Compute Property Value Command</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.layers.stackmodel.layers.Property)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
 	 * @generated
 	 */
 	public void testGetViewsComputePropertyValueCommand__EList_Property() {
@@ -101,12 +101,12 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList) <em>Get Properties Compute Property Value Command</em>}'
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList) <em>Get Properties Compute Property Value Command</em>}'
 	 * operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
 	public void testGetPropertiesComputePropertyValueCommand__View_EList() {
@@ -116,11 +116,11 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#attachToLayersStack(org.eclipse.papyrus.layers.stackmodel.layers.LayersStack) <em>Attach To Layers Stack</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#attachToLayersStack(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack) <em>Attach To Layers Stack</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#attachToLayersStack(org.eclipse.papyrus.layers.stackmodel.layers.LayersStack)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#attachToLayersStack(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack)
 	 * @generated
 	 */
 	public void testAttachToLayersStack__LayersStack() {
@@ -130,11 +130,11 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getLayersStack() <em>Get Layers Stack</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getLayersStack() <em>Get Layers Stack</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#getLayersStack()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getLayersStack()
 	 * @generated
 	 */
 	public void testGetLayersStack() {
@@ -144,11 +144,11 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#enterAttachedState() <em>Enter Attached State</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#enterAttachedState() <em>Enter Attached State</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#enterAttachedState()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#enterAttachedState()
 	 * @generated
 	 */
 	public void testEnterAttachedState() {
@@ -158,11 +158,11 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#attach() <em>Attach</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#attach() <em>Attach</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#attach()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#attach()
 	 * @generated
 	 */
 	public void testAttach() {
@@ -172,11 +172,11 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#detach() <em>Detach</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#detach() <em>Detach</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#detach()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#detach()
 	 * @generated
 	 */
 	public void testDetach() {
@@ -186,11 +186,11 @@ public abstract class LayerExpressionTest extends ApplicationDependantElementTes
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#exitAttachedState() <em>Exit Attached State</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#exitAttachedState() <em>Exit Attached State</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression#exitAttachedState()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#exitAttachedState()
 	 * @generated
 	 */
 	public void testExitAttachedState() {

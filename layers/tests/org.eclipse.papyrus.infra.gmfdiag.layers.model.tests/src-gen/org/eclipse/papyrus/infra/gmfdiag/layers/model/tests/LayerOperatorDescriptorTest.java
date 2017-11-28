@@ -5,8 +5,8 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,10 +15,10 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#getPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Get Property Operator</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#setPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.Property, org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator) <em>Set Property Operator</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#createLayerOperator() <em>Create Layer Operator</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.layers.stackmodel.layers.DefaultPropertyOperator) <em>Set Property Collection Size</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#getPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Property Operator</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator) <em>Set Property Operator</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#createLayerOperator() <em>Create Layer Operator</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator) <em>Set Property Collection Size</em>}</li>
  * </ul>
  * </p>
  *
@@ -103,11 +103,11 @@ public class LayerOperatorDescriptorTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#getPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Get Property Operator</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#getPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Property Operator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#getPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.Property)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#getPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
 	 * @generated
 	 */
 	public void testGetPropertyOperator__Property() {
@@ -117,12 +117,12 @@ public class LayerOperatorDescriptorTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#setPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.Property, org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator)
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator)
 	 * <em>Set Property Operator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#setPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.Property, org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator)
 	 * @generated
 	 */
 	public void testSetPropertyOperator__Property_PropertyOperator() {
@@ -132,11 +132,11 @@ public class LayerOperatorDescriptorTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#createLayerOperator() <em>Create Layer Operator</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#createLayerOperator() <em>Create Layer Operator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#createLayerOperator()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#createLayerOperator()
 	 * @generated
 	 */
 	public void testCreateLayerOperator() {
@@ -146,11 +146,11 @@ public class LayerOperatorDescriptorTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.layers.stackmodel.layers.DefaultPropertyOperator) <em>Set Property Collection Size</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator) <em>Set Property Collection Size</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.layers.stackmodel.layers.DefaultPropertyOperator)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator)
 	 * @generated
 	 */
 	public void testSetPropertyCollectionSize__int_DefaultPropertyOperator() {

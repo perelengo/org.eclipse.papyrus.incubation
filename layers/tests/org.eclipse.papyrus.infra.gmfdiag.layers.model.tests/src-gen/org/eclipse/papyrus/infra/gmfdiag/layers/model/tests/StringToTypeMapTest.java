@@ -7,9 +7,9 @@ import java.util.Map;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersPackage;
-import org.eclipse.papyrus.layers.stackmodel.layers.Type;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type;
 
 /**
  * <!-- begin-user-doc -->

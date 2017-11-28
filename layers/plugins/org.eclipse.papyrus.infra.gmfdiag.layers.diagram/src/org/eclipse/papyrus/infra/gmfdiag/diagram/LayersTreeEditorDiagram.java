@@ -30,7 +30,7 @@ import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.papyrus.infra.core.editor.BackboneException;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.core.services.ServicesRegistry;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.editor.presentation.LayersEditor;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersEditor;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;

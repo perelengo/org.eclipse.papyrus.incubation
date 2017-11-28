@@ -2,7 +2,7 @@
  */
 package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,8 +11,8 @@ import org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#isDescriptorSet() <em>Is Descriptor Set</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#resetDescriptor() <em>Reset Descriptor</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#isDescriptorSet() <em>Is Descriptor Set</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#resetDescriptor() <em>Reset Descriptor</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,11 +44,11 @@ public abstract class AbstractLayerOperatorTest extends LayerOperatorTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#isDescriptorSet() <em>Is Descriptor Set</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#isDescriptorSet() <em>Is Descriptor Set</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#isDescriptorSet()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#isDescriptorSet()
 	 * @generated
 	 */
 	public void testIsDescriptorSet() {
@@ -58,11 +58,11 @@ public abstract class AbstractLayerOperatorTest extends LayerOperatorTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#resetDescriptor() <em>Reset Descriptor</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#resetDescriptor() <em>Reset Descriptor</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.AbstractLayerOperator#resetDescriptor()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#resetDescriptor()
 	 * @generated
 	 */
 	public void testResetDescriptor() {

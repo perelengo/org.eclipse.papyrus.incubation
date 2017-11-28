@@ -19,7 +19,7 @@
          <toolbar
                id="org.eclipse.papyrus.diagram.ui.toolbar">
             <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.selectAssociatedElement"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.selectAssociatedElement"
                   label="Select Associated Elements"
                   style="push"
                   tooltip="Select all elements associated to the current layer">
@@ -30,11 +30,11 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.delete"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.delete"
             name="Delete">
       </command>
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.createlayer"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createlayer"
             name="Create Basic Layer">
       </command>
       <!--command
@@ -42,11 +42,11 @@
             name="Create RegExp Layer">
       </command-->
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.createtoplayeroperator"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createtoplayeroperator"
             name="Create Top Layer Operator">
       </command>
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.createstackedLayerOperator"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createstackedLayerOperator"
             name="Create Stacked Layer Operator">
       </command>
       <!--command
@@ -54,11 +54,11 @@
             name="Attach a Property to a Layer">
       </command-->
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.attachPropertiesToLayer"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachPropertiesToLayer"
             name="Attach Properties to a Layer">
       </command>
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.attachDiagramViewsToLayer"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachDiagramViewsToLayer"
             name="Attach Multiple Diagram Views to a Layer">
       </command>
       <!--command
@@ -73,19 +73,19 @@
          </commandParameter>
       </command-->
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.openlayersexplorerview"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview"
             name="Open Layers Explorer">
       </command>
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.attachitemselectedindiagramtocurrentlayer"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachitemselectedindiagramtocurrentlayer"
             name="Attach Views to Current Layer">
       </command>
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer"
             name="Remove Views from Current Layer">
       </command>
       <command
-            id="org.eclipse.papyrus.layers.ui.commands.createallviewsderivedlayer"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createallviewsderivedlayer"
             name="Create All View Derived Layer">
       </command>
    </extension>
@@ -94,15 +94,15 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.AttachLayerStackCommand"
-            commandId="org.eclipse.papyrus.layers.ui.commands.attachLayerStack">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachLayerStack">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.DetachLayerStackCommand"
-            commandId="org.eclipse.papyrus.layers.ui.commands.detachLayerStack">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.detachLayerStack">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.CreateLayerHandler"
-            commandId="org.eclipse.papyrus.layers.ui.commands.createlayer">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createlayer">
       </handler>
       <!--handler
             class="org.eclipse.papyrus.layers.ui.commands.CreateRegExpLayerHandler"
@@ -110,11 +110,11 @@
       </handler-->
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.CreateTopLayerOperatorHandler"
-            commandId="org.eclipse.papyrus.layers.ui.commands.createtoplayeroperator">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createtoplayeroperator">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.CreateStackedLayerOperatorHandler"
-            commandId="org.eclipse.papyrus.layers.ui.commands.createstackedLayerOperator">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createstackedLayerOperator">
       </handler>
       <!--handler
             class="org.eclipse.papyrus.layers.ui.commands.AttachPropertyToLayer"
@@ -122,31 +122,31 @@
       </handler-->
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.AttachPropertyFromListToLayer"
-            commandId="org.eclipse.papyrus.layers.ui.commands.attachPropertiesToLayer">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachPropertiesToLayer">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.AttachDiagramViewsToLayer"
-            commandId="org.eclipse.papyrus.layers.ui.commands.attachDiagramViewsToLayer">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachDiagramViewsToLayer">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.DeleteItemHandler"
-            commandId="org.eclipse.papyrus.layers.ui.commands.delete">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.delete">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.handlers.OpenLayerExplorerHandler"
-            commandId="org.eclipse.papyrus.layers.ui.commands.openlayersexplorerview">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.handlers.AttachDiagramSelectedItemsToCurrentLayer"
-            commandId="org.eclipse.papyrus.layers.ui.commands.attachitemselectedindiagramtocurrentlayer">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachitemselectedindiagramtocurrentlayer">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.handlers.RemoveDiagramSelectedItemsFromCurrentLayer"
-            commandId="org.eclipse.papyrus.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer">
       </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.handlers.CreateAllViewsDerivedLayerHandler"
-            commandId="org.eclipse.papyrus.layers.ui.commands.createallviewsderivedlayer">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createallviewsderivedlayer">
       </handler>
    </extension>
    <extension
@@ -156,19 +156,19 @@
          <menu
                label="Layers">
             <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.attachLayerStack"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachLayerStack"
                   label="Attach Layer Stack"
                   style="push"
                   tooltip="Attach a Layer Stack to the diagram">
             </command>
             <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.detachLayerStack"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.detachLayerStack"
                   label="Detach Layer Stack"
                   style="push"
                   tooltip="Detach a Layer Stack to the diagram">
             </command>
             <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.openlayersexplorerview"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview"
                   label="Open Layers Explorer"
                   style="push"
                   tooltip="Open the Layers Explorer View">
@@ -183,7 +183,7 @@
                label="Create Layers ..."
                tooltip="Create a new leaf layers">
             <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.createlayer"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createlayer"
                   label="Create Basic Layer"
                   style="push"
                   tooltip="Create a new Layer in selected parent">
@@ -254,19 +254,19 @@
             </command>
          </menu-->
          <command
-               commandId="org.eclipse.papyrus.layers.ui.commands.attachPropertiesToLayer"
+               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachPropertiesToLayer"
                label="Attach Properties"
                style="push"
                tooltip="Attach Properties to a Layer">
          </command>
          <command
-               commandId="org.eclipse.papyrus.layers.ui.commands.attachDiagramViewsToLayer"
+               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachDiagramViewsToLayer"
                label="Attach Views"
                style="push"
                tooltip="Attach Multiple Diagram Views to a Layer">
          </command>
          <command
-               commandId="org.eclipse.papyrus.layers.ui.commands.delete"
+               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.delete"
                icon="IMG_TOOL_DELETE"
                label="Delete"
                style="push"
@@ -310,19 +310,19 @@
          <menu
                label="Layers">
             <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.attachLayerStack"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachLayerStack"
                   label="Attach Layer Stack"
                   style="push"
                   tooltip="Attach a Layer Stack to the diagram">
             </command>
             <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.detachLayerStack"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.detachLayerStack"
                   label="Detach Layer Stack"
                   style="push"
                   tooltip="Detach a Layer Stack to the diagram">
             </command>
             <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.openlayersexplorerview"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview"
                   label="Open Layers Explorer"
                   style="push"
                   tooltip="Open the Layers Explorer View">

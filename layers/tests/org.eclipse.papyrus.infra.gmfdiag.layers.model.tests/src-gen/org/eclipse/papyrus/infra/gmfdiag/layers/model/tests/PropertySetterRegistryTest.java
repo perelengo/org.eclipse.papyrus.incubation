@@ -5,8 +5,8 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
-import org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,9 +15,9 @@ import org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getPropertySetter(org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Get Property Setter</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getPropertySetter(java.lang.String) <em>Get Property Setter</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#addPropertySetter(org.eclipse.papyrus.layers.stackmodel.layers.PropertySetter) <em>Add Property Setter</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#getPropertySetter(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Property Setter</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#getPropertySetter(java.lang.String) <em>Get Property Setter</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#addPropertySetter(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter) <em>Add Property Setter</em>}</li>
  * </ul>
  * </p>
  *
@@ -102,11 +102,11 @@ public class PropertySetterRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getPropertySetter(org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Get Property Setter</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#getPropertySetter(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Property Setter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getPropertySetter(org.eclipse.papyrus.layers.stackmodel.layers.Property)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#getPropertySetter(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
 	 * @generated
 	 */
 	public void testGetPropertySetter__Property() {
@@ -116,11 +116,11 @@ public class PropertySetterRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getPropertySetter(java.lang.String) <em>Get Property Setter</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#getPropertySetter(java.lang.String) <em>Get Property Setter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#getPropertySetter(java.lang.String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#getPropertySetter(java.lang.String)
 	 * @generated
 	 */
 	public void testGetPropertySetter__String() {
@@ -130,11 +130,11 @@ public class PropertySetterRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#addPropertySetter(org.eclipse.papyrus.layers.stackmodel.layers.PropertySetter) <em>Add Property Setter</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#addPropertySetter(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter) <em>Add Property Setter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertySetterRegistry#addPropertySetter(org.eclipse.papyrus.layers.stackmodel.layers.PropertySetter)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry#addPropertySetter(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter)
 	 * @generated
 	 */
 	public void testAddPropertySetter__PropertySetter() {

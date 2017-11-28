@@ -4,8 +4,8 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
-import org.eclipse.papyrus.layers.stackmodel.layers.Property;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +14,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.Property;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.Property#createInstance() <em>Create Instance</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property#createInstance() <em>Create Instance</em>}</li>
  * </ul>
  * </p>
  *
@@ -80,11 +80,11 @@ public class PropertyTest extends FolderElementTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.Property#createInstance() <em>Create Instance</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property#createInstance() <em>Create Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.Property#createInstance()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property#createInstance()
 	 * @generated
 	 */
 	public void testCreateInstance() {

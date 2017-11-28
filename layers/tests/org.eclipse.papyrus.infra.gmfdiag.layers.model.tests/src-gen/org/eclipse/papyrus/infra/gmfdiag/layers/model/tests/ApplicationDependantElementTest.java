@@ -4,7 +4,7 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
 import junit.framework.TestCase;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.ApplicationDependantElement;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ApplicationDependantElement;
 
 /**
  * <!-- begin-user-doc -->

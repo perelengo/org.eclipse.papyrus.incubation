@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="layersconfig" nsURI="org.eclipse.papyrus.layersconfig.0.10"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="layersconfig" nsURI="http://www.eclipse.org/papyrus/infra/gmfdiag/layersconfig"
     nsPrefix="layersconfig">
   <eClassifiers xsi:type="ecore:EClass" name="Folder" eSuperTypes="#//FolderElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="folderElements" ordered="false"
@@ -34,13 +34,13 @@
     <eLiterals name="POJO_CLASSNAME" value="2"/>
     <eLiterals name="NOT_FOUND" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="InstanciationException" instanceClassName="org.eclipse.papyrus.layers.stackmodel.InstanciationException"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="LayerOperatorDescriptor" instanceClassName="org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="InstanciationException" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.InstanciationException"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="LayerOperatorDescriptor" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor"/>
   <eClassifiers xsi:type="ecore:EClass" name="OperatorConfig" eSuperTypes="#//InstanciableElement">
     <eOperations name="createOperatorDescriptor" ordered="false" lowerBound="1" eType="#//PropertyOperator"
         eExceptions="#//InstanciationException"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="PropertyOperator" instanceClassName="org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="PropertyOperator" instanceClassName="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator"/>
   <eClassifiers xsi:type="ecore:EClass" name="PropertyId" eSuperTypes="#//FolderElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false" lowerBound="1"
         eType="#//TypeConfig"/>

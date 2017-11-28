@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Export-Package: org.eclipse.papyrus.infra.gmfdiag.layers.model.tests
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.papyrus.layers.stackmodel;bundle-version="1.2.0";visibility:=reexport,
+ org.eclipse.papyrus.infra.gmfdiag.layers.model;bundle-version="1.2.0";visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.gmf.runtime.notation;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

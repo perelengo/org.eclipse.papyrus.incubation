@@ -4,7 +4,7 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
 import junit.framework.TestCase;
 
-import org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +13,7 @@ import org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand#getCmdValue() <em>Get Cmd Value</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand#getCmdValue() <em>Get Cmd Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,11 +64,11 @@ public abstract class ComputePropertyValueCommandItfTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand#getCmdValue() <em>Get Cmd Value</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand#getCmdValue() <em>Get Cmd Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand#getCmdValue()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand#getCmdValue()
 	 * @generated
 	 */
 	public void testGetCmdValue() {

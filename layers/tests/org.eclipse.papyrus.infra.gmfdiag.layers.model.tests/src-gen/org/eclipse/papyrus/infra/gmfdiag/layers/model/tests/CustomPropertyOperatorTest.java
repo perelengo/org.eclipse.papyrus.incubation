@@ -4,8 +4,8 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +14,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#resetOperatorInstance() <em>Reset Operator Instance</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#resetOperatorInstance() <em>Reset Operator Instance</em>}</li>
  * </ul>
  * </p>
  *
@@ -80,11 +80,11 @@ public class CustomPropertyOperatorTest extends PropertyOperatorTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#resetOperatorInstance() <em>Reset Operator Instance</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#resetOperatorInstance() <em>Reset Operator Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.CustomPropertyOperator#resetOperatorInstance()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#resetOperatorInstance()
 	 * @generated
 	 */
 	public void testResetOperatorInstance() {

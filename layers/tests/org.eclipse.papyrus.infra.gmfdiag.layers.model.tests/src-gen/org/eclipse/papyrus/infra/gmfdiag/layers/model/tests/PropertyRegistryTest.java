@@ -5,8 +5,8 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
-import org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,15 +15,15 @@ import org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry;
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getPropertiesCount() <em>Properties Count</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getPropertiesCount() <em>Properties Count</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getPropertyIndex(java.lang.String) <em>Get Property Index</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getProperty(java.lang.String) <em>Get Property</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#addProperty(org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Add Property</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getPropertyIndex(java.lang.String) <em>Get Property Index</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getProperty(java.lang.String) <em>Get Property</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#addProperty(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Add Property</em>}</li>
  * </ul>
  * </p>
  *
@@ -108,11 +108,11 @@ public class PropertyRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getPropertiesCount() <em>Properties Count</em>}' feature getter.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getPropertiesCount() <em>Properties Count</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getPropertiesCount()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getPropertiesCount()
 	 * @generated
 	 */
 	public void testGetPropertiesCount() {
@@ -122,11 +122,11 @@ public class PropertyRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getPropertyIndex(java.lang.String) <em>Get Property Index</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getPropertyIndex(java.lang.String) <em>Get Property Index</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getPropertyIndex(java.lang.String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getPropertyIndex(java.lang.String)
 	 * @generated
 	 */
 	public void testGetPropertyIndex__String() {
@@ -136,11 +136,11 @@ public class PropertyRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getProperty(java.lang.String) <em>Get Property</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getProperty(java.lang.String) <em>Get Property</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#getProperty(java.lang.String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#getProperty(java.lang.String)
 	 * @generated
 	 */
 	public void testGetProperty__String() {
@@ -150,11 +150,11 @@ public class PropertyRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#addProperty(org.eclipse.papyrus.layers.stackmodel.layers.Property) <em>Add Property</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#addProperty(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Add Property</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.PropertyRegistry#addProperty(org.eclipse.papyrus.layers.stackmodel.layers.Property)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry#addProperty(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
 	 * @generated
 	 */
 	public void testAddProperty__Property() {

@@ -4,7 +4,7 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
 import junit.framework.TestCase;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersContainer;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +13,7 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersContainer;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersContainer#addLayer(org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression) <em>Add Layer</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer#addLayer(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression) <em>Add Layer</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,11 +64,11 @@ public abstract class LayersContainerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayersContainer#addLayer(org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression) <em>Add Layer</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer#addLayer(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression) <em>Add Layer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayersContainer#addLayer(org.eclipse.papyrus.layers.stackmodel.layers.LayerExpression)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer#addLayer(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression)
 	 * @generated
 	 */
 	public void testAddLayer__LayerExpression() {

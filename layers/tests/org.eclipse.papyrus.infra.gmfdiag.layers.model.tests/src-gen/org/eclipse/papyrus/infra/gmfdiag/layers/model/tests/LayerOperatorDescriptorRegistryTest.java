@@ -5,8 +5,8 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry;
-import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,12 +15,12 @@ import org.eclipse.papyrus.layers.stackmodel.layers.LayersFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#addLayerOperatorDescriptor(org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor) <em>Add Layer Operator Descriptor</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getLayerOperatorDescriptor(java.lang.String) <em>Get Layer Operator Descriptor</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#addPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator) <em>Add Property Operator</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getPropertyOperator(java.lang.String) <em>Get Property Operator</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#attachOperatorToDescriptor(org.eclipse.papyrus.layers.stackmodel.layers.Property, java.lang.String, java.lang.String) <em>Attach Operator To Descriptor</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#createLayerOperator(java.lang.String) <em>Create Layer Operator</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#addLayerOperatorDescriptor(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor) <em>Add Layer Operator Descriptor</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#getLayerOperatorDescriptor(java.lang.String) <em>Get Layer Operator Descriptor</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#addPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator) <em>Add Property Operator</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#getPropertyOperator(java.lang.String) <em>Get Property Operator</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#attachOperatorToDescriptor(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property, java.lang.String, java.lang.String) <em>Attach Operator To Descriptor</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#createLayerOperator(java.lang.String) <em>Create Layer Operator</em>}</li>
  * </ul>
  * </p>
  *
@@ -105,11 +105,11 @@ public class LayerOperatorDescriptorRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#addLayerOperatorDescriptor(org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor) <em>Add Layer Operator Descriptor</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#addLayerOperatorDescriptor(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor) <em>Add Layer Operator Descriptor</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#addLayerOperatorDescriptor(org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptor)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#addLayerOperatorDescriptor(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor)
 	 * @generated
 	 */
 	public void testAddLayerOperatorDescriptor__LayerOperatorDescriptor() {
@@ -119,11 +119,11 @@ public class LayerOperatorDescriptorRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getLayerOperatorDescriptor(java.lang.String) <em>Get Layer Operator Descriptor</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#getLayerOperatorDescriptor(java.lang.String) <em>Get Layer Operator Descriptor</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getLayerOperatorDescriptor(java.lang.String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#getLayerOperatorDescriptor(java.lang.String)
 	 * @generated
 	 */
 	public void testGetLayerOperatorDescriptor__String() {
@@ -133,11 +133,11 @@ public class LayerOperatorDescriptorRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#addPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator) <em>Add Property Operator</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#addPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator) <em>Add Property Operator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#addPropertyOperator(org.eclipse.papyrus.layers.stackmodel.layers.PropertyOperator)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#addPropertyOperator(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator)
 	 * @generated
 	 */
 	public void testAddPropertyOperator__PropertyOperator() {
@@ -147,11 +147,11 @@ public class LayerOperatorDescriptorRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getPropertyOperator(java.lang.String) <em>Get Property Operator</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#getPropertyOperator(java.lang.String) <em>Get Property Operator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#getPropertyOperator(java.lang.String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#getPropertyOperator(java.lang.String)
 	 * @generated
 	 */
 	public void testGetPropertyOperator__String() {
@@ -161,12 +161,12 @@ public class LayerOperatorDescriptorRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#attachOperatorToDescriptor(org.eclipse.papyrus.layers.stackmodel.layers.Property, java.lang.String, java.lang.String) <em>Attach Operator To Descriptor</em>}'
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#attachOperatorToDescriptor(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property, java.lang.String, java.lang.String) <em>Attach Operator To Descriptor</em>}'
 	 * operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#attachOperatorToDescriptor(org.eclipse.papyrus.layers.stackmodel.layers.Property, java.lang.String, java.lang.String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#attachOperatorToDescriptor(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	public void testAttachOperatorToDescriptor__Property_String_String() {
@@ -176,11 +176,11 @@ public class LayerOperatorDescriptorRegistryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#createLayerOperator(java.lang.String) <em>Create Layer Operator</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#createLayerOperator(java.lang.String) <em>Create Layer Operator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.LayerOperatorDescriptorRegistry#createLayerOperator(java.lang.String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry#createLayerOperator(java.lang.String)
 	 * @generated
 	 */
 	public void testCreateLayerOperator__String() {

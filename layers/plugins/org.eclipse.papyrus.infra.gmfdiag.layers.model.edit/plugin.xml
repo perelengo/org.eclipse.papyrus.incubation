@@ -23,7 +23,7 @@
       <!-- @generated layers -->
       <factory
             uri="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"
-            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.edit.provider.LayersItemProviderAdapterFactory"
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.LayersItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

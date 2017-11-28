@@ -4,7 +4,7 @@ package org.eclipse.papyrus.infra.gmfdiag.layers.model.tests;
 
 import junit.framework.TestCase;
 
-import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,9 +13,9 @@ import org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand#getCmdValue() <em>Get Cmd Value</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance#setValueFromString(java.lang.String) <em>Set Value From String</em>}</li>
- * <li>{@link org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance#setValueFromInstance(org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance) <em>Set Value From Instance</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand#getCmdValue() <em>Get Cmd Value</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance#setValueFromString(java.lang.String) <em>Set Value From String</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance#setValueFromInstance(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance) <em>Set Value From Instance</em>}</li>
  * </ul>
  * </p>
  *
@@ -66,11 +66,11 @@ public abstract class TypeInstanceTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand#getCmdValue() <em>Get Cmd Value</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand#getCmdValue() <em>Get Cmd Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.command.ComputePropertyValueCommand#getCmdValue()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand#getCmdValue()
 	 * @generated
 	 */
 	public void testGetCmdValue() {
@@ -80,11 +80,11 @@ public abstract class TypeInstanceTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance#setValueFromString(java.lang.String) <em>Set Value From String</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance#setValueFromString(java.lang.String) <em>Set Value From String</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance#setValueFromString(java.lang.String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance#setValueFromString(java.lang.String)
 	 * @generated
 	 */
 	public void testSetValueFromString__String() {
@@ -94,11 +94,11 @@ public abstract class TypeInstanceTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance#setValueFromInstance(org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance) <em>Set Value From Instance</em>}' operation.
+	 * Tests the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance#setValueFromInstance(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance) <em>Set Value From Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @see org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance#setValueFromInstance(org.eclipse.papyrus.layers.stackmodel.layers.TypeInstance)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance#setValueFromInstance(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance)
 	 * @generated
 	 */
 	public void testSetValueFromInstance__TypeInstance() {
