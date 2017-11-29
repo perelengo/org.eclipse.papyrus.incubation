@@ -18,8 +18,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated layersconfig -->
       <package
-            uri="org.eclipse.papyrus.layersconfig.0.10"
-            class="org.eclipse.papyrus.layers.configmodel.layersconfig.LayersconfigPackage"
+            uri="http://www.eclipse.org/papyrus/infra/gmfdiag/layersconfig"
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayersConfigPackage"
             genModel="model/layersconfig.genmodel"/>
    </extension>
 

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Export-Package: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider,
- org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.custom,
- org.eclipse.papyrus.layers.configmodel.layersconfig.provider
+Export-Package: org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.provider,
+ org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider,
+ org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.custom
 Require-Bundle: org.eclipse.core.runtime;resolution:=optional;x-installation:=greedy,
  org.eclipse.papyrus.infra.gmfdiag.layers.model;visibility:=reexport,
  org.eclipse.papyrus.infra.gmfdiag.layers.model;visibility:=reexport,
@@ -22,6 +22,6 @@ Bundle-Version: 1.2.0.qualifier
 Bundle-Name: %pluginName
 Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
-Bundle-Activator: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.LayersEditPlugin$Implementation$Activator
+Bundle-Activator: org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.provider.LayersconfigEditPlugin$Implementation$Activator
 Bundle-SymbolicName: org.eclipse.papyrus.infra.gmfdiag.layers.model.edit;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

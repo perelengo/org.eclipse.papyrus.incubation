@@ -6,18 +6,6 @@
 
 <plugin>
 
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated layersconfig -->
-      <editor
-            id="org.eclipse.papyrus.layers.configmodel.layersconfig.presentation.LayersconfigEditorID"
-            name="%_UI_LayersconfigEditor_label"
-            icon="icons/full/obj16/LayersconfigModelFile.gif"
-            extensions="layersconfig"
-            class="org.eclipse.papyrus.layers.configmodel.layersconfig.presentation.LayersconfigEditor"
-            contributorClass="org.eclipse.papyrus.layers.configmodel.layersconfig.presentation.LayersconfigActionBarContributor">
-      </editor>
-   </extension>
-
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated layers -->
       <category
@@ -43,6 +31,33 @@
             extensions="layers"
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersEditor"
             contributorClass="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated layersconfig -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.presentation.LayersConfigModelWizardID"
+            name="%_UI_LayersConfigModelWizard_label"
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.presentation.LayersConfigModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/LayersConfigModelFile.gif">
+         <description>%_UI_LayersConfigModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated layersconfig -->
+      <editor
+            id="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.presentation.LayersConfigEditorID"
+            name="%_UI_LayersConfigEditor_label"
+            icon="icons/full/obj16/LayersConfigModelFile.gif"
+            extensions="layersconfig"
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.presentation.LayersConfigEditor"
+            contributorClass="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.presentation.LayersConfigActionBarContributor">
       </editor>
    </extension>
 </plugin>

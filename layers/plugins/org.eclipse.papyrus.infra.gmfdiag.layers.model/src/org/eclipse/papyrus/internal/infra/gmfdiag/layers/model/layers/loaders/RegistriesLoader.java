@@ -12,6 +12,9 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.loaders;
 
 import static org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.Activator.log;
 
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayerOperatorConfig;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.OperatorBinding;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.OperatorConfig;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.InstanciationException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor;
@@ -19,9 +22,6 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOpera
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.LayerOperatorConfig;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.OperatorBinding;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.OperatorConfig;
 
 
 /**

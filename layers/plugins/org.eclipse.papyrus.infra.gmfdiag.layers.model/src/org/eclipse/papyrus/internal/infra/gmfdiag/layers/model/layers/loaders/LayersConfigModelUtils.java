@@ -10,14 +10,14 @@
  ******************************************************************************/
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.loaders;
 
-import org.eclipse.papyrus.layers.configmodel.layersconfig.Folder;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.LayerOperatorConfig;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.LayerOperatorMultipleBinding;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.LayersconfigFactory;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.OperatorBinding;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.OperatorConfig;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.PropertyId;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.TypeConfig;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.Folder;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayerOperatorConfig;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayerOperatorMultipleBinding;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayersConfigFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.OperatorBinding;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.OperatorConfig;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.PropertyId;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.TypeConfig;
 
 
 /**
@@ -36,7 +36,7 @@ public class LayersConfigModelUtils {
 	 * @return
 	 */
 	static public Folder createFolder(Folder parent, String name) {
-		Folder folder = LayersconfigFactory.eINSTANCE.createFolder();
+		Folder folder = LayersConfigFactory.eINSTANCE.createFolder();
 		folder.setName(name);
 		parent.getFolderElements().add(folder);
 		return folder;
@@ -51,7 +51,7 @@ public class LayersConfigModelUtils {
 	 * @return
 	 */
 	static public LayerOperatorConfig createLayerOperatorConfig(Folder parent, String ID, String classname) {
-		LayerOperatorConfig config = LayersconfigFactory.eINSTANCE.createLayerOperatorConfig();
+		LayerOperatorConfig config = LayersConfigFactory.eINSTANCE.createLayerOperatorConfig();
 		config.setName(ID);
 		config.setClassname(classname);
 		parent.getFolderElements().add(config);
@@ -67,7 +67,7 @@ public class LayersConfigModelUtils {
 	 * @return
 	 */
 	static public OperatorConfig createPropertyOperatorConfig(Folder parent, String ID, String classname) {
-		OperatorConfig config = LayersconfigFactory.eINSTANCE.createOperatorConfig();
+		OperatorConfig config = LayersConfigFactory.eINSTANCE.createOperatorConfig();
 		config.setName(ID);
 		config.setClassname(classname);
 		parent.getFolderElements().add(config);
@@ -81,14 +81,14 @@ public class LayersConfigModelUtils {
 	 * @return
 	 */
 	static public LayerOperatorMultipleBinding createLayerOperatorsMultipleBinding(Folder owner, LayerOperatorConfig layerOperator) {
-		LayerOperatorMultipleBinding config = LayersconfigFactory.eINSTANCE.createLayerOperatorMultipleBinding();
+		LayerOperatorMultipleBinding config = LayersConfigFactory.eINSTANCE.createLayerOperatorMultipleBinding();
 		config.setLayerOperatorConfig(layerOperator);
 		owner.getFolderElements().add(config);
 		return config;
 	}
 
 	static public OperatorBinding createOperatorBinding(LayerOperatorMultipleBinding owner, PropertyId propertyId, OperatorConfig operatorConfig) {
-		OperatorBinding binding = LayersconfigFactory.eINSTANCE.createOperatorBinding();
+		OperatorBinding binding = LayersConfigFactory.eINSTANCE.createOperatorBinding();
 		binding.setPropertyId(propertyId);
 		binding.setOperator(operatorConfig);
 		binding.setOwner(owner);
@@ -96,7 +96,7 @@ public class LayersConfigModelUtils {
 	}
 
 	static public PropertyId createPropertyId(Folder parent, String ID, TypeConfig type) {
-		PropertyId propertyId = LayersconfigFactory.eINSTANCE.createPropertyId();
+		PropertyId propertyId = LayersConfigFactory.eINSTANCE.createPropertyId();
 		propertyId.setName(ID);
 		propertyId.setType(type);
 		parent.getFolderElements().add(propertyId);
@@ -104,7 +104,7 @@ public class LayersConfigModelUtils {
 	}
 
 	static public TypeConfig createTypeConfig(Folder parent, String ID) {
-		TypeConfig config = LayersconfigFactory.eINSTANCE.createTypeConfig();
+		TypeConfig config = LayersConfigFactory.eINSTANCE.createTypeConfig();
 		config.setName(ID);
 		parent.getFolderElements().add(config);
 		return config;

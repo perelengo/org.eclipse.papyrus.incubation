@@ -28,18 +28,18 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.Folder;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayerOperatorConfig;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayerOperatorMultipleBinding;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayersConfigFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.OperatorBinding;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.OperatorConfig;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.PropertyId;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.TypeConfig;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.BooleanAndOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.BooleanOrOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.FillAverageOperator;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.Folder;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.LayerOperatorConfig;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.LayerOperatorMultipleBinding;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.LayersconfigFactory;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.OperatorBinding;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.OperatorConfig;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.PropertyId;
-import org.eclipse.papyrus.layers.configmodel.layersconfig.TypeConfig;
 
 
 /**
@@ -163,7 +163,7 @@ public class LayersConfigModel {
 
 		// Create a resource for this file.
 		resource = resourceSet.createResource(fileURI);
-		Folder parent = LayersconfigFactory.eINSTANCE.createFolder();
+		Folder parent = LayersConfigFactory.eINSTANCE.createFolder();
 		resource.getContents().add(parent);
 		return parent;
 	}

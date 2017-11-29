@@ -36,7 +36,7 @@
     <details key="UNTYPED_PROPERTIES" value="REPORT"/>
   </genAnnotations>
   <foreignModel>layersconfig.uml</foreignModel>
-  <genPackages xsi:type="genmodel:GenPackage" prefix="layersconfig" basePackage="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel"
+  <genPackages xsi:type="genmodel:GenPackage" prefix="LayersConfig" basePackage="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel"
       disposableProviderFactory="true" ecorePackage="layersconfig.ecore#/">
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="layersconfig.ecore#//ClassnameKind">
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="layersconfig.ecore#//ClassnameKind/UNDEFINED"/>

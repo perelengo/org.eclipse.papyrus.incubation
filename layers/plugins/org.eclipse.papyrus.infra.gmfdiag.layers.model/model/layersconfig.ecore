@@ -2,6 +2,9 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="layersconfig" nsURI="http://www.eclipse.org/papyrus/infra/gmfdiag/layersconfig"
     nsPrefix="layersconfig">
+  <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <details key="originalName" value="LayersConfig"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Folder" eSuperTypes="#//FolderElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="folderElements" ordered="false"
         upperBound="-1" eType="#//FolderElement" containment="true"/>
