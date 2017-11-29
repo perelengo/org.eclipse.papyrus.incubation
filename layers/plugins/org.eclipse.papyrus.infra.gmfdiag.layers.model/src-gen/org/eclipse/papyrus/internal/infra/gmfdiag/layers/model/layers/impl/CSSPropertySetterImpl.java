@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSPropertySetter;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
@@ -34,6 +35,7 @@ public class CSSPropertySetterImpl extends PropertySetterImpl implements CSSProp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -50,12 +52,15 @@ public class CSSPropertySetterImpl extends PropertySetterImpl implements CSSProp
 	@Override
 	public void setValue(View view, TypeInstance value) {
 		Diagram d = view.getDiagram();
-		// d.getES
 		EObject feview;
 		EList<EStructuralFeature> features = view.eClass().getEStructuralFeatures();
-		// TODO set the css path
-		int i = 0;
-		i++;
+
+		CSSInstance associatedCSS = (CSSInstance) value;
+		associatedCSS.getStylesheet();
+
+		System.err.println(view);
+		System.err.println(value);
+
 	}
 
 } // CSSPropertySetterImpl

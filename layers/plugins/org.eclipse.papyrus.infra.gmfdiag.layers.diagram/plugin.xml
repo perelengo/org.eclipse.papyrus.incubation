@@ -70,8 +70,8 @@
                   tooltip="Create a new Layers Tree">
             </command>
          </toolbar>
-      </menuContribution>
-      <menuContribution
+      </menuContribution-->
+      <!--menuContribution
             locationURI="popup:org.eclipse.papyrus.infra.gmfdiag.layers.diagram.ui.contextmenu">
          <menu
                id="org.eclipse.papyrus.infra.gmfdiag.layers.diagram"
@@ -85,14 +85,14 @@
             </command>
          </menu>
       </menuContribution-->
-      <!--menuContribution
+      <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.infra.gmfdiag.layers.diagram.ui.contextmenu">
+            locationURI="popup:org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.diagram.ui.contextmenu">
          <menu
                id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.popupmenu"
                label="Layers">
          </menu>
-      </menuContribution-->
+      </menuContribution>
    </extension>
 
 </plugin>

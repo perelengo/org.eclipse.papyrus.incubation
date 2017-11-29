@@ -5,7 +5,7 @@
          point="org.eclipse.papyrus.infra.core.model">
       <model
             classname="org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource"
-            description="Model used by layers."
+            description="Model to serialize the layers"
             fileExtension="layers">
       </model>
    </extension>

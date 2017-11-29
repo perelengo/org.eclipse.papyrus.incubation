@@ -541,7 +541,7 @@ public class LayersConfigEditor
 					}
 				}
 				catch (CoreException exception) {
-					LayersconfigEditorPlugin.INSTANCE.log(exception);
+					LayersConfigEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -657,7 +657,7 @@ public class LayersConfigEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					LayersconfigEditorPlugin.INSTANCE.log(exception);
+					LayersConfigEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -666,7 +666,7 @@ public class LayersConfigEditor
 					markerHelper.updateMarkers(diagnostic);
 				}
 				catch (CoreException exception) {
-					LayersconfigEditorPlugin.INSTANCE.log(exception);
+					LayersConfigEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -1535,7 +1535,7 @@ public class LayersConfigEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			LayersconfigEditorPlugin.INSTANCE.log(exception);
+			LayersConfigEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1739,7 +1739,7 @@ public class LayersConfigEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return LayersconfigEditorPlugin.INSTANCE.getString(key);
+		return LayersConfigEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1749,7 +1749,7 @@ public class LayersConfigEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return LayersconfigEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return LayersConfigEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

@@ -82,7 +82,7 @@ public class LayersConfigActionBarContributor
 	 * @generated
 	 */
 	protected IAction showPropertiesViewAction =
-		new Action(LayersconfigEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) //$NON-NLS-1$
+		new Action(LayersConfigEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) //$NON-NLS-1$
 		{
 			@Override
 			public void run() {
@@ -90,7 +90,7 @@ public class LayersConfigActionBarContributor
 					getPage().showView("org.eclipse.ui.views.PropertySheet"); //$NON-NLS-1$
 				}
 				catch (PartInitException exception) {
-					LayersconfigEditorPlugin.INSTANCE.log(exception);
+					LayersConfigEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -103,7 +103,7 @@ public class LayersConfigActionBarContributor
 	 * @generated
 	 */
 	protected IAction refreshViewerAction =
-		new Action(LayersconfigEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) //$NON-NLS-1$
+		new Action(LayersConfigEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) //$NON-NLS-1$
 		{
 			@Override
 			public boolean isEnabled() {
@@ -191,7 +191,7 @@ public class LayersConfigActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditor_menu"), "org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfigMenuID"); //$NON-NLS-1$ //$NON-NLS-2$
+		IMenuManager submenuManager = new MenuManager(LayersConfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditor_menu"), "org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfigMenuID"); //$NON-NLS-1$ //$NON-NLS-2$
 		menuManager.insertAfter("additions", submenuManager); //$NON-NLS-1$
 		submenuManager.add(new Separator("settings")); //$NON-NLS-1$
 		submenuManager.add(new Separator("actions")); //$NON-NLS-1$
@@ -200,12 +200,12 @@ public class LayersConfigActionBarContributor
 
 		// Prepare for CreateChild item addition or removal.
 		//
-		createChildMenuManager = new MenuManager(LayersconfigEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item")); //$NON-NLS-1$
+		createChildMenuManager = new MenuManager(LayersConfigEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item")); //$NON-NLS-1$
 		submenuManager.insertBefore("additions", createChildMenuManager); //$NON-NLS-1$
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(LayersconfigEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item")); //$NON-NLS-1$
+		createSiblingMenuManager = new MenuManager(LayersConfigEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item")); //$NON-NLS-1$
 		submenuManager.insertBefore("additions", createSiblingMenuManager); //$NON-NLS-1$
 
 		// Force an update because Eclipse hides empty menus now.
@@ -396,11 +396,11 @@ public class LayersConfigActionBarContributor
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
-		submenuManager = new MenuManager(LayersconfigEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item")); //$NON-NLS-1$
+		submenuManager = new MenuManager(LayersConfigEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item")); //$NON-NLS-1$
 		populateManager(submenuManager, createChildActions, null);
 		menuManager.insertBefore("edit", submenuManager); //$NON-NLS-1$
 
-		submenuManager = new MenuManager(LayersconfigEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item")); //$NON-NLS-1$
+		submenuManager = new MenuManager(LayersConfigEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item")); //$NON-NLS-1$
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager); //$NON-NLS-1$
 	}

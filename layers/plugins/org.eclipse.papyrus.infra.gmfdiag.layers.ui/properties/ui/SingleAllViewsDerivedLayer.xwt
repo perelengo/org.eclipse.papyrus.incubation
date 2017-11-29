@@ -34,11 +34,11 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="layers:LayerExpression:owningLayersStack"></ppe:ReferenceDialog>
-		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:AbstractLayer:layerDescriptor"></ppe:ReferenceDialog>
 		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:ApplicationDependantElement:application"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:LayerExpression:owningLayersStack"></ppe:ReferenceDialog>
 	</Composite>
 	<Composite>
 		<Composite.layout>

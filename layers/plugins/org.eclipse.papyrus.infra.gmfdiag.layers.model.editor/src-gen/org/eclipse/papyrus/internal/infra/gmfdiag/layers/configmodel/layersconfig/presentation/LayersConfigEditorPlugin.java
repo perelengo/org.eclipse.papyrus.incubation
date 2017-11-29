@@ -25,14 +25,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
  * <!-- end-user-doc -->
  * @generated
  */
-public final class LayersconfigEditorPlugin extends EMFPlugin {
+public final class LayersConfigEditorPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final LayersconfigEditorPlugin INSTANCE = new LayersconfigEditorPlugin();
+	public static final LayersConfigEditorPlugin INSTANCE = new LayersConfigEditorPlugin();
 	
 	/**
 	 * Keep track of the singleton.
@@ -48,7 +48,7 @@ public final class LayersconfigEditorPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LayersconfigEditorPlugin() {
+	public LayersConfigEditorPlugin() {
 		super
 			(new ResourceLocator [] {
 			});

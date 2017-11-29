@@ -31,7 +31,7 @@ import org.eclipse.ui.views.properties.IPropertySheetPage;
 public class LayerExplorerPageBookView extends MultiViewPageBookView {
 
 	/** ID of the view, as given in the plugin.xml file */
-	public static final String VIEW_ID = "org.eclipse.papyrus.views.layers.layersexplorer"; //$NON-NLS-1$
+	public static final String VIEW_ID = "org.eclipse.papyrus.infra.gmfdiag.layers.ui.view.layersexplorer"; //$NON-NLS-1$
 
 	/**
 	 * {@inheritDoc}

@@ -19,7 +19,7 @@ public class CSSTypeImpl extends TypeImpl implements CSSType {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * 
-	 * @generated Not
+	 * @generated NOT
 	 */
 	protected CSSTypeImpl() {
 		super();
@@ -29,6 +29,7 @@ public class CSSTypeImpl extends TypeImpl implements CSSType {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override

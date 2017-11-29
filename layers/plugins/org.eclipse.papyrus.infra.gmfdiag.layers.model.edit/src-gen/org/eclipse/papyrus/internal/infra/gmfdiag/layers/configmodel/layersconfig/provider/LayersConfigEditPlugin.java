@@ -25,14 +25,14 @@ import org.osgi.framework.BundleActivator;
  * <!-- end-user-doc -->
  * @generated
  */
-public final class LayersconfigEditPlugin extends EMFPlugin {
+public final class LayersConfigEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final LayersconfigEditPlugin INSTANCE = new LayersconfigEditPlugin();
+	public static final LayersConfigEditPlugin INSTANCE = new LayersConfigEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -48,7 +48,7 @@ public final class LayersconfigEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LayersconfigEditPlugin() {
+	public LayersConfigEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

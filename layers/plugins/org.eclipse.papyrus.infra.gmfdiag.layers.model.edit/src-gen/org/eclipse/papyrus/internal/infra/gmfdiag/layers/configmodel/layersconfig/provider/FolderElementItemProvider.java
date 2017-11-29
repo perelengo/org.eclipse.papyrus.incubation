@@ -148,7 +148,7 @@ public class FolderElementItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return LayersconfigEditPlugin.INSTANCE;
+		return LayersConfigEditPlugin.INSTANCE;
 	}
 
 }

@@ -82,7 +82,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayersConfigFactory;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayersConfigPackage;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.provider.LayersconfigEditPlugin;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.provider.LayersConfigEditPlugin;
 
 
 import org.eclipse.core.runtime.Path;
@@ -110,7 +110,7 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditorFilenameExtensions").split("\\s*,\\s*"))); //$NON-NLS-1$ //$NON-NLS-2$
+		Collections.unmodifiableList(Arrays.asList(LayersConfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditorFilenameExtensions").split("\\s*,\\s*"))); //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -119,7 +119,7 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", "); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		LayersConfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", "); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
 	/**
 	 * This caches an instance of the model package.
@@ -186,8 +186,8 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
-		setWindowTitle(LayersconfigEditorPlugin.INSTANCE.getString("_UI_Wizard_label")); //$NON-NLS-1$
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(LayersconfigEditorPlugin.INSTANCE.getImage("full/wizban/NewLayersConfig"))); //$NON-NLS-1$
+		setWindowTitle(LayersConfigEditorPlugin.INSTANCE.getString("_UI_Wizard_label")); //$NON-NLS-1$
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(LayersConfigEditorPlugin.INSTANCE.getImage("full/wizban/NewLayersConfig"))); //$NON-NLS-1$
 	}
 
 	/**
@@ -270,7 +270,7 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 							resource.save(options);
 						}
 						catch (Exception exception) {
-							LayersconfigEditorPlugin.INSTANCE.log(exception);
+							LayersConfigEditorPlugin.INSTANCE.log(exception);
 						}
 						finally {
 							progressMonitor.done();
@@ -303,14 +303,14 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
 			}
 			catch (PartInitException exception) {
-				MessageDialog.openError(workbenchWindow.getShell(), LayersconfigEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage()); //$NON-NLS-1$
+				MessageDialog.openError(workbenchWindow.getShell(), LayersConfigEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage()); //$NON-NLS-1$
 				return false;
 			}
 
 			return true;
 		}
 		catch (Exception exception) {
-			LayersconfigEditorPlugin.INSTANCE.log(exception);
+			LayersConfigEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
 	}
@@ -344,7 +344,7 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension"; //$NON-NLS-1$ //$NON-NLS-2$
-					setErrorMessage(LayersconfigEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(LayersConfigEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -421,7 +421,7 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 
 			Label containerLabel = new Label(composite, SWT.LEFT);
 			{
-				containerLabel.setText(LayersconfigEditorPlugin.INSTANCE.getString("_UI_ModelObject")); //$NON-NLS-1$
+				containerLabel.setText(LayersConfigEditorPlugin.INSTANCE.getString("_UI_ModelObject")); //$NON-NLS-1$
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -447,7 +447,7 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
 			{
-				encodingLabel.setText(LayersconfigEditorPlugin.INSTANCE.getString("_UI_XMLEncoding")); //$NON-NLS-1$
+				encodingLabel.setText(LayersConfigEditorPlugin.INSTANCE.getString("_UI_XMLEncoding")); //$NON-NLS-1$
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -546,10 +546,10 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 		 */
 		protected String getLabel(String typeName) {
 			try {
-				return LayersconfigEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type"); //$NON-NLS-1$ //$NON-NLS-2$
+				return LayersConfigEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type"); //$NON-NLS-1$ //$NON-NLS-2$
 			}
 			catch(MissingResourceException mre) {
-				LayersconfigEditorPlugin.INSTANCE.log(mre);
+				LayersConfigEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
 		}
@@ -562,7 +562,7 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(LayersconfigEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) //$NON-NLS-1$
+				for (StringTokenizer stringTokenizer = new StringTokenizer(LayersConfigEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) //$NON-NLS-1$
 				{
 					encodings.add(stringTokenizer.nextToken());
 				}
@@ -582,9 +582,9 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 		// Create a page, set the title, and the initial model file name.
 		//
 		newFileCreationPage = new LayersConfigModelWizardNewFileCreationPage("Whatever", selection); //$NON-NLS-1$
-		newFileCreationPage.setTitle(LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigModelWizard_label")); //$NON-NLS-1$
-		newFileCreationPage.setDescription(LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigModelWizard_description")); //$NON-NLS-1$
-		newFileCreationPage.setFileName(LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0)); //$NON-NLS-1$ //$NON-NLS-2$
+		newFileCreationPage.setTitle(LayersConfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigModelWizard_label")); //$NON-NLS-1$
+		newFileCreationPage.setDescription(LayersConfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigModelWizard_description")); //$NON-NLS-1$
+		newFileCreationPage.setFileName(LayersConfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0)); //$NON-NLS-1$ //$NON-NLS-2$
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -610,7 +610,7 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditorFilenameDefaultBase"); //$NON-NLS-1$
+					String defaultModelBaseFilename = LayersConfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigEditorFilenameDefaultBase"); //$NON-NLS-1$
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension; //$NON-NLS-1$
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -621,8 +621,8 @@ public class LayersConfigModelWizard extends Wizard implements INewWizard {
 			}
 		}
 		initialObjectCreationPage = new LayersConfigModelWizardInitialObjectCreationPage("Whatever2"); //$NON-NLS-1$
-		initialObjectCreationPage.setTitle(LayersconfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigModelWizard_label")); //$NON-NLS-1$
-		initialObjectCreationPage.setDescription(LayersconfigEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description")); //$NON-NLS-1$
+		initialObjectCreationPage.setTitle(LayersConfigEditorPlugin.INSTANCE.getString("_UI_LayersConfigModelWizard_label")); //$NON-NLS-1$
+		initialObjectCreationPage.setDescription(LayersConfigEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description")); //$NON-NLS-1$
 		addPage(initialObjectCreationPage);
 	}
 

@@ -42,9 +42,9 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegist
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyRegistryImpl#getProperties <em>Properties</em>}</li>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyRegistryImpl#getTypeRegistry <em>Type Registry</em>}</li>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyRegistryImpl#getPropertiesCount <em>Properties Count</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyRegistryImpl#getProperties <em>Properties</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyRegistryImpl#getTypeRegistry <em>Type Registry</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyRegistryImpl#getPropertiesCount <em>Properties Count</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,6 +54,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #getProperties()
 	 * @generated
 	 * @ordered
@@ -64,6 +65,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	 * The cached value of the '{@link #getTypeRegistry() <em>Type Registry</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #getTypeRegistry()
 	 * @generated
 	 * @ordered
@@ -74,6 +76,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	 * The default value of the '{@link #getPropertiesCount() <em>Properties Count</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #getPropertiesCount()
 	 * @generated
 	 * @ordered
@@ -84,7 +87,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @generated NOt
+	 * @generated NOT
 	 */
 	protected PropertyRegistryImpl() {
 		super();
@@ -115,9 +118,9 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 				// "fgcolor", "Color",
 
 				"css", "CSSType", "",
-				"isVisible", "boolean", "true",
-				"isAbstract", "boolean", "false",
-				"fill", "Fill", "0, 15053796", // "transparency, fillColor"
+				// "isVisible", "boolean", "true",
+				// "isAbstract", "boolean", "false",
+				// "fill", "Fill", "0, 15053796", // "transparency, fillColor"
 				// "line", "LineType", "0, -1", // "lineColor, lineWith"
 				// "font", "FontType", "Segoe UI, 9, 0, false", // "FontName, FontHeight, FontColor, Bold"
 		};
@@ -145,6 +148,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -155,6 +159,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -168,6 +173,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -178,6 +184,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetTypeRegistry(TypeRegistry newTypeRegistry, NotificationChain msgs) {
@@ -185,7 +192,10 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 		typeRegistry = newTypeRegistry;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY, oldTypeRegistry, newTypeRegistry);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -193,6 +203,7 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -200,13 +211,13 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 		if (newTypeRegistry != typeRegistry) {
 			NotificationChain msgs = null;
 			if (typeRegistry != null)
-				msgs = ((InternalEObject)typeRegistry).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY, null, msgs);
+				msgs = ((InternalEObject) typeRegistry).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY, null, msgs);
 			if (newTypeRegistry != null)
-				msgs = ((InternalEObject)newTypeRegistry).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY, null, msgs);
+				msgs = ((InternalEObject) newTypeRegistry).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY, null, msgs);
 			msgs = basicSetTypeRegistry(newTypeRegistry, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY, newTypeRegistry, newTypeRegistry));
 	}
 
@@ -284,15 +295,16 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
-				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
-			case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
-				return basicSetTypeRegistry(null, msgs);
+		case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
+			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
+		case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
+			return basicSetTypeRegistry(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -300,17 +312,18 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
-				return getProperties();
-			case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
-				return getTypeRegistry();
-			case LayersPackage.PROPERTY_REGISTRY__PROPERTIES_COUNT:
-				return getPropertiesCount();
+		case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
+			return getProperties();
+		case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
+			return getTypeRegistry();
+		case LayersPackage.PROPERTY_REGISTRY__PROPERTIES_COUNT:
+			return getPropertiesCount();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -318,19 +331,20 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
-				getProperties().clear();
-				getProperties().addAll((Collection<? extends Property>)newValue);
-				return;
-			case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
-				setTypeRegistry((TypeRegistry)newValue);
-				return;
+		case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
+			getProperties().clear();
+			getProperties().addAll((Collection<? extends Property>) newValue);
+			return;
+		case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
+			setTypeRegistry((TypeRegistry) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -338,17 +352,18 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
-				getProperties().clear();
-				return;
-			case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
-				setTypeRegistry((TypeRegistry)null);
-				return;
+		case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
+			getProperties().clear();
+			return;
+		case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
+			setTypeRegistry((TypeRegistry) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -356,17 +371,18 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
-				return properties != null && !properties.isEmpty();
-			case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
-				return typeRegistry != null;
-			case LayersPackage.PROPERTY_REGISTRY__PROPERTIES_COUNT:
-				return getPropertiesCount() != PROPERTIES_COUNT_EDEFAULT;
+		case LayersPackage.PROPERTY_REGISTRY__PROPERTIES:
+			return properties != null && !properties.isEmpty();
+		case LayersPackage.PROPERTY_REGISTRY__TYPE_REGISTRY:
+			return typeRegistry != null;
+		case LayersPackage.PROPERTY_REGISTRY__PROPERTIES_COUNT:
+			return getPropertiesCount() != PROPERTIES_COUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -374,28 +390,27 @@ public class PropertyRegistryImpl extends EObjectImpl implements PropertyRegistr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case LayersPackage.PROPERTY_REGISTRY___GET_PROPERTY_INDEX__STRING:
-				try {
-					return getPropertyIndex((String)arguments.get(0));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
-			case LayersPackage.PROPERTY_REGISTRY___GET_PROPERTY__STRING:
-				try {
-					return getProperty((String)arguments.get(0));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
-			case LayersPackage.PROPERTY_REGISTRY___ADD_PROPERTY__PROPERTY:
-				addProperty((Property)arguments.get(0));
-				return null;
+		case LayersPackage.PROPERTY_REGISTRY___GET_PROPERTY_INDEX__STRING:
+			try {
+				return getPropertyIndex((String) arguments.get(0));
+			} catch (Throwable throwable) {
+				throw new InvocationTargetException(throwable);
+			}
+		case LayersPackage.PROPERTY_REGISTRY___GET_PROPERTY__STRING:
+			try {
+				return getProperty((String) arguments.get(0));
+			} catch (Throwable throwable) {
+				throw new InvocationTargetException(throwable);
+			}
+		case LayersPackage.PROPERTY_REGISTRY___ADD_PROPERTY__PROPERTY:
+			addProperty((Property) arguments.get(0));
+			return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

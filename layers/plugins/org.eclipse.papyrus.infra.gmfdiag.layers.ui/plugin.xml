@@ -7,12 +7,12 @@
             category="org.eclipse.papyrus.views.category"
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.view.LayersExplorerView"
             icon="icons/LayersStackApplication.gif"
-            id="org.eclipse.papyrus.layers.ui.view.layersexplorer"
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.view.layersexplorer"
             name="LayersExplorer"
             restorable="true">
       </view>
    </extension>
-   <extension
+   <!--extension
          point="org.eclipse.ui.menus">
       <menuContribution
             locationURI="toolbar:org.eclipse.ui.main.toolbar">
@@ -26,9 +26,17 @@
             </command>
          </toolbar>
       </menuContribution>
-   </extension>
+   </extension-->
    <extension
          point="org.eclipse.ui.commands">
+      <command
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachLayerStack"
+            name="Attach LayerStack">
+      </command>
+      <command
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.detachLayerStack"
+            name="Detach LayerStack">
+      </command>
       <command
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.delete"
             name="Delete">
@@ -40,7 +48,7 @@
       <!--command
             id="org.eclipse.papyrus.layers.ui.commands.createregexplayer"
             name="Create RegExp Layer">
-      </command-->
+      </command>
       <command
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createtoplayeroperator"
             name="Create Top Layer Operator">
@@ -49,7 +57,7 @@
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createstackedLayerOperator"
             name="Create Stacked Layer Operator">
       </command>
-      <!--command
+      <command
             id="org.eclipse.papyrus.layers.ui.commands.attachPropertyToLayer"
             name="Attach a Property to a Layer">
       </command-->
@@ -84,10 +92,10 @@
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer"
             name="Remove Views from Current Layer">
       </command>
-      <command
+      <!--command
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createallviewsderivedlayer"
             name="Create All View Derived Layer">
-      </command>
+      </command-->
    </extension>
    <extension
          name="Layers"
@@ -107,7 +115,7 @@
       <!--handler
             class="org.eclipse.papyrus.layers.ui.commands.CreateRegExpLayerHandler"
             commandId="org.eclipse.papyrus.layers.ui.commands.createregexplayer">
-      </handler-->
+      </handler>
       <handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.CreateTopLayerOperatorHandler"
             commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createtoplayeroperator">
@@ -116,7 +124,7 @@
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.CreateStackedLayerOperatorHandler"
             commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createstackedLayerOperator">
       </handler>
-      <!--handler
+      <handler
             class="org.eclipse.papyrus.layers.ui.commands.AttachPropertyToLayer"
             commandId="org.eclipse.papyrus.layers.ui.commands.attachPropertyToLayer">
       </handler-->
@@ -144,10 +152,10 @@
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.handlers.RemoveDiagramSelectedItemsFromCurrentLayer"
             commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer">
       </handler>
-      <handler
+      <!--handler
             class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.handlers.CreateAllViewsDerivedLayerHandler"
             commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createallviewsderivedlayer">
-      </handler>
+      </handler-->
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -177,8 +185,8 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.infra.gmfdiag.layers.diagram.ui.contextmenu">
-            <!--locationURI="popup:org.eclipse.papyrus.infra.gmfdiag.layers.ui.popupmenu"-->
+            locationURI="popup:org.eclipse.papyrus.infra.gmfdiag.layers.ui.popupmenu">
+            <!--locationURI="popup:org.eclipse.papyrus.infra.gmfdiag.layers.diagram.ui.contextmenu"-->
          <menu
                label="Create Layers ..."
                tooltip="Create a new leaf layers">
