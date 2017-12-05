@@ -115,9 +115,9 @@ public class LayersConfigModel {
 
 		// Create properties
 		Folder propertiesFolder = createFolder(getRootFolder(), "properties");
-		// PropertyId propertyIsVisible = createPropertyId(propertiesFolder, "isVisible", typeBoolean);
-		// PropertyId propertyIsAbstract = createPropertyId(propertiesFolder, "isAbstract", typeBoolean);
-		// PropertyId propertyFill = createPropertyId(propertiesFolder, "fill", typeFill);
+		PropertyId propertyIsVisible = createPropertyId(propertiesFolder, "isVisible", typeBoolean);
+		PropertyId propertyIsAbstract = createPropertyId(propertiesFolder, "isAbstract", typeBoolean);
+		PropertyId propertyFill = createPropertyId(propertiesFolder, "fill", typeFill);
 		PropertyId propertyLine = createPropertyId(propertiesFolder, "line", typeLine);
 		PropertyId propertyFont = createPropertyId(propertiesFolder, "font", typeFont);
 		PropertyId propertyBgcolor = createPropertyId(propertiesFolder, "bgcolor", typeColor);

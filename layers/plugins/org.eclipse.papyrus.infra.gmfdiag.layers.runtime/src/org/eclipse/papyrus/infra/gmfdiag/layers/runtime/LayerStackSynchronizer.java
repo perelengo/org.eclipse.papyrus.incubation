@@ -200,7 +200,17 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 			setter = application.getPropertySetterRegistry().getPropertySetter(property);
 
 			// Walk each view and set the property
-			for (int i = 0; i < views.size(); i++) {
+			// for (int i = 0; i < views.size(); i++) {
+			//
+			// // set the value from the provided cmds.
+			// // Do it if the cmd is not null
+			// if (commands != null && commands.get(i) != null) {
+			// setter.setValue(views.get(i), commands.get(i).getCmdValue());
+			// } else {
+			// log.info(this.getClass().getSimpleName() + "ERROR - a cmd is null " + commands);
+			// }
+			// }
+			for (int i = 0; i < 1; i++) {
 
 				// set the value from the provided cmds.
 				// Do it if the cmd is not null
@@ -210,6 +220,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 					log.info(this.getClass().getSimpleName() + "ERROR - a cmd is null " + commands);
 				}
 			}
+
 		} catch (NotFoundException e) {
 			log.error(e);
 		} catch (LayersException e) {
@@ -303,7 +314,13 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 			PropertySetter setter = application.getPropertySetterRegistry().getPropertySetter(property);
 
 			// Walk each view and set the property
-			for (int i = 0; i < views.size(); i++) {
+			// for (int i = 0; i < views.size(); i++) {
+			// ComputePropertyValueCommand getValueCmd = commands.get(i);
+			// if (getValueCmd != null) {
+			// setter.setValue(views.get(i), getValueCmd.getCmdValue());
+			// }
+			// }
+			for (int i = 0; i < 1; i++) {
 				ComputePropertyValueCommand getValueCmd = commands.get(i);
 				if (getValueCmd != null) {
 					setter.setValue(views.get(i), getValueCmd.getCmdValue());

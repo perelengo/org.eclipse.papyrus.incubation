@@ -8,8 +8,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.papyrus.infra.core.log;bundle-version="1.2.0"
 Export-Package: org.eclipse.papyrus.infra.gmfdiag.layers.runtime,
  org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model,
- org.eclipse.papyrus.infra.gmfdiag.layers.runtime.service,
- org.eclipse.papyrus.infra.gmfdiag.layers.runtime.utils
+ org.eclipse.papyrus.infra.gmfdiag.layers.runtime.service
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.2.0.qualifier
