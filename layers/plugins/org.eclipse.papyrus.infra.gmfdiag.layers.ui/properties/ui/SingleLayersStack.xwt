@@ -25,6 +25,8 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:LayersStack:layers"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:LayersStack:diagram"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

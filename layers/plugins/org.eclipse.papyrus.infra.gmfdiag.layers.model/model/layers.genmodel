@@ -473,6 +473,7 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSInstance">
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference layers.ecore#//CSSInstance/stylesheet"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CSSInstance/style"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

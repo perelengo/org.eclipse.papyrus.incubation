@@ -19,6 +19,8 @@
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:BooleanRadio input="{Binding}"
+			property="layers:LayerExpression:isLayerEnabledInternal"></ppe:BooleanRadio>
+		<ppe:BooleanRadio input="{Binding}"
 			property="layers:LayerExpression:isLayerEnabled"></ppe:BooleanRadio>
 		<ppe:BooleanRadio input="{Binding}"
 			property="layers:LayerExpression:isBranchEnabled"></ppe:BooleanRadio>
@@ -34,11 +36,11 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="layers:AbstractLayer:layerDescriptor"></ppe:ReferenceDialog>
-		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:ApplicationDependantElement:application"></ppe:ReferenceDialog>
 		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:LayerExpression:owningLayersStack"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:AbstractLayer:layerDescriptor"></ppe:ReferenceDialog>
 	</Composite>
 	<Composite>
 		<Composite.layout>
@@ -47,6 +49,10 @@
 		<ppe:MultiReference input="{Binding}"
 			property="layers:AbstractLayer:propertyValues"></ppe:MultiReference>
 		<ppe:MultiReference input="{Binding}"
+			property="layers:AbstractLayer:propertyValueMap"></ppe:MultiReference>
+		<ppe:MultiReference input="{Binding}"
 			property="layers:AbstractLayer:views"></ppe:MultiReference>
+		<ppe:MultiReference input="{Binding}"
+			property="layers:AbstractLayer:attachedProperties"></ppe:MultiReference>
 	</Composite>
 </Composite>

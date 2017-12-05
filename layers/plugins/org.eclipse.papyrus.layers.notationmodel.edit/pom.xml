@@ -9,7 +9,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<version>1.2.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>org.eclipse.papyrus.layers.notationmodel.edit</artifactId>
+	<artifactId>org.eclipse.papyrus.infra.gmfdiag.layers.notationmodel.edit</artifactId>
 	<packaging>eclipse-plugin</packaging>
 	
 </project>

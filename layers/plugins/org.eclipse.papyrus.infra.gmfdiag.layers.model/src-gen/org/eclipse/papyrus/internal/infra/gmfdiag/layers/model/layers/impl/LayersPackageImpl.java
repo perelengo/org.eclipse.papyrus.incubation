@@ -3096,6 +3096,15 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCSSInstance_Style() {
+		return (EAttribute)cssInstanceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public EEnum getLayerState() {
 		return layerStateEEnum;
@@ -3544,6 +3553,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 
 		cssInstanceEClass = createEClass(CSS_INSTANCE);
 		createEReference(cssInstanceEClass, CSS_INSTANCE__STYLESHEET);
+		createEAttribute(cssInstanceEClass, CSS_INSTANCE__STYLE);
 
 		// Create enums
 		layerStateEEnum = createEEnum(LAYER_STATE);
@@ -4105,6 +4115,7 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 
 		initEClass(cssInstanceEClass, CSSInstance.class, "CSSInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEReference(getCSSInstance_Stylesheet(), theStylesheetsPackage.getStyleSheet(), null, "stylesheet", null, 1, 1, CSSInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED); //$NON-NLS-1$
+		initEAttribute(getCSSInstance_Style(), this.getString(), "style", null, 0, 1, CSSInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED); //$NON-NLS-1$
 
 		// Initialize enums and add enum literals
 		initEEnum(layerStateEEnum, LayerState.class, "LayerState"); //$NON-NLS-1$

@@ -11,12 +11,12 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:StringEditor input="{Binding}"
+			property="layers:PropertyOperator:name"></ppe:StringEditor>
+		<ppe:StringEditor input="{Binding}"
 			property="layers:CustomPropertyOperator:classname"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
 			property="layers:CustomPropertyOperator:operatorInstance"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
 			property="layers:CustomPropertyOperator:classBundleID"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="layers:PropertyOperator:name"></ppe:StringEditor>
 	</Composite>
 </Composite>

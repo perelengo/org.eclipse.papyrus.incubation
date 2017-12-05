@@ -19,6 +19,8 @@
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:BooleanRadio input="{Binding}"
+			property="layers:LayerExpression:isLayerEnabledInternal"></ppe:BooleanRadio>
+		<ppe:BooleanRadio input="{Binding}"
 			property="layers:LayerExpression:isLayerEnabled"></ppe:BooleanRadio>
 		<ppe:BooleanRadio input="{Binding}"
 			property="layers:LayerExpression:isBranchEnabled"></ppe:BooleanRadio>

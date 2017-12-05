@@ -10,7 +10,16 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:PropertySetterRegistry:application"></ppe:ReferenceDialog>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
 		<ppe:MultiReference input="{Binding}"
 			property="layers:PropertySetterRegistry:propertySetters"></ppe:MultiReference>
+		<ppe:MultiReference input="{Binding}"
+			property="layers:PropertySetterRegistry:setterMap"></ppe:MultiReference>
 	</Composite>
 </Composite>

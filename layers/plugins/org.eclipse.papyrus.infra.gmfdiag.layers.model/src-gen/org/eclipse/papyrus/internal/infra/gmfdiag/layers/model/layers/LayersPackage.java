@@ -6363,13 +6363,22 @@ public interface LayersPackage extends EPackage {
 	int CSS_INSTANCE__STYLESHEET = TYPE_INSTANCE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_INSTANCE__STYLE = TYPE_INSTANCE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>CSS Instance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CSS_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 1;
+	int CSS_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Cmd Value</em>' operation.
@@ -8966,6 +8975,17 @@ public interface LayersPackage extends EPackage {
 	EReference getCSSInstance_Stylesheet();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance#getStyle <em>Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Style</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance#getStyle()
+	 * @see #getCSSInstance()
+	 * @generated
+	 */
+	EAttribute getCSSInstance_Style();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState <em>Layer State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11125,6 +11145,14 @@ public interface LayersPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CSS_INSTANCE__STYLESHEET = eINSTANCE.getCSSInstance_Stylesheet();
+
+		/**
+		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CSS_INSTANCE__STYLE = eINSTANCE.getCSSInstance_Style();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState <em>Layer State</em>}' enum.

@@ -12,4 +12,11 @@
 		</Composite.layout>
 		<ppe:StringEditor input="{Binding}" property="layers:StringToTypeMap:key"></ppe:StringEditor>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:StringToTypeMap:value"></ppe:ReferenceDialog>
+	</Composite>
 </Composite>

@@ -11,7 +11,7 @@
 package org.eclipse.papyrus.infra.gmfdiag.diagram.ui.handlers;
 
 import org.eclipse.core.commands.IHandler;
-import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
 
 
 /**

@@ -13,4 +13,11 @@
 		<ppe:StringEditor input="{Binding}"
 			property="layers:StringToTypeInstanceMap:key"></ppe:StringEditor>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:StringToTypeInstanceMap:value"></ppe:ReferenceDialog>
+	</Composite>
 </Composite>

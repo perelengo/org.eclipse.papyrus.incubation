@@ -26,10 +26,10 @@ import org.eclipse.gmf.runtime.diagram.ui.resources.editor.parts.DiagramDocument
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.papyrus.infra.core.sasheditor.editor.ISashWindowsContainer;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
-import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
-import org.eclipse.papyrus.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.eclipse.papyrus.infra.ui.util.ServiceUtilsForIEvaluationContext;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.NotationDiagramHelper;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.model.LayersModelResource;
 import org.eclipse.ui.IEditorPart;
 
 /**

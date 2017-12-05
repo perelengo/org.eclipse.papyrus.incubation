@@ -25,6 +25,7 @@ import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.StyleSheet;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance#getStylesheet <em>Stylesheet</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance#getStyle <em>Style</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getCSSInstance()
@@ -57,5 +58,31 @@ public interface CSSInstance extends TypeInstance {
 	 * @generated
 	 */
 	void setStylesheet(StyleSheet value);
+
+	/**
+	 * Returns the value of the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Style</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Style</em>' attribute.
+	 * @see #setStyle(String)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getCSSInstance_Style()
+	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.String" ordered="false"
+	 * @generated
+	 */
+	String getStyle();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance#getStyle <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Style</em>' attribute.
+	 * @see #getStyle()
+	 * @generated
+	 */
+	void setStyle(String value);
 
 } // CSSInstance

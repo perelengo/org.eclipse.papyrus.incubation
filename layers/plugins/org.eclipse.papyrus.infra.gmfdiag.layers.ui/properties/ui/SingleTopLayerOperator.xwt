@@ -10,16 +10,18 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="layers:AbstractLayerOperator:layerOperatorDescriptorName"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}" property="layers:LayerExpression:name"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
 			property="layers:LayerExpression:description"></ppe:StringEditor>
+		<ppe:StringEditor input="{Binding}"
+			property="layers:AbstractLayerOperator:layerOperatorDescriptorName"></ppe:StringEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
+		<ppe:BooleanRadio input="{Binding}"
+			property="layers:LayerExpression:isLayerEnabledInternal"></ppe:BooleanRadio>
 		<ppe:BooleanRadio input="{Binding}"
 			property="layers:LayerExpression:isLayerEnabled"></ppe:BooleanRadio>
 		<ppe:BooleanRadio input="{Binding}"
@@ -38,8 +40,15 @@
 		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:ApplicationDependantElement:application"></ppe:ReferenceDialog>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="layers:AbstractLayerOperator:layerOperatorDescriptor"></ppe:ReferenceDialog>
-		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:LayerExpression:owningLayersStack"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:AbstractLayerOperator:layerOperatorDescriptor"></ppe:ReferenceDialog>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:MultiReference input="{Binding}"
+			property="layers:LayerOperator:layers"></ppe:MultiReference>
 	</Composite>
 </Composite>

@@ -21,6 +21,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstan
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSInstanceImpl#getStylesheet <em>Stylesheet</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSInstanceImpl#getStyle <em>Style</em>}</li>
  * </ul>
  *
  * @generated
@@ -35,6 +36,25 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	 * @ordered
 	 */
 	protected StyleSheet stylesheet;
+
+	/**
+	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STYLE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String style = STYLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,6 +126,27 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getStyle() {
+		return style;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStyle(String newStyle) {
+		String oldStyle = style;
+		style = newStyle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.CSS_INSTANCE__STYLE, oldStyle, style));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -125,6 +166,8 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 		switch (featureID) {
 			case LayersPackage.CSS_INSTANCE__STYLESHEET:
 				return getStylesheet();
+			case LayersPackage.CSS_INSTANCE__STYLE:
+				return getStyle();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -139,6 +182,9 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 		switch (featureID) {
 			case LayersPackage.CSS_INSTANCE__STYLESHEET:
 				setStylesheet((StyleSheet)newValue);
+				return;
+			case LayersPackage.CSS_INSTANCE__STYLE:
+				setStyle((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,6 +204,9 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 			case LayersPackage.CSS_INSTANCE__STYLESHEET:
 				setStylesheet((StyleSheet)null);
 				return;
+			case LayersPackage.CSS_INSTANCE__STYLE:
+				setStyle(STYLE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -172,8 +221,26 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 		switch (featureID) {
 			case LayersPackage.CSS_INSTANCE__STYLESHEET:
 				return stylesheet != null;
+			case LayersPackage.CSS_INSTANCE__STYLE:
+				return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (style: "); //$NON-NLS-1$
+		result.append(style);
+		result.append(')');
+		return result.toString();
 	}
 
 	/**

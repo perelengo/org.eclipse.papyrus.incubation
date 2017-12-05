@@ -12,4 +12,10 @@
 		</Composite.layout>
 		<ppe:StringEditor input="{Binding}" property="layers:Folder:name"></ppe:StringEditor>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:MultiReference input="{Binding}" property="layers:Folder:elements"></ppe:MultiReference>
+	</Composite>
 </Composite>

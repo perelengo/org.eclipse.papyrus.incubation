@@ -2781,7 +2781,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_LS3Ec65qEeeUVoYywick3g" y="5"/>
       </children>
       <element xmi:type="uml:Class" href="layers.uml#_6RrIENhhEeKgkM6XJF9t4A"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6SDikdhhEeKgkM6XJF9t4A" x="280" y="720" width="121" height="81"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6SDikdhhEeKgkM6XJF9t4A" x="280" y="720" width="121" height="101"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_-zGr4NhhEeKgkM6XJF9t4A" type="Class_Shape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-zGr4thhEeKgkM6XJF9t4A" source="ShadowFigure">
@@ -2820,7 +2820,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_LS3Eda5qEeeUVoYywick3g" y="5"/>
       </children>
       <element xmi:type="uml:Class" href="layers.uml#_-yuRYNhhEeKgkM6XJF9t4A"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-zGr4dhhEeKgkM6XJF9t4A" x="440" y="720" width="141" height="81"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-zGr4dhhEeKgkM6XJF9t4A" x="440" y="720" width="141" height="101"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_CxJOwNhiEeKgkM6XJF9t4A" type="Class_Shape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CxJOwthiEeKgkM6XJF9t4A" source="ShadowFigure">
@@ -2859,7 +2859,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_LS3Ed65qEeeUVoYywick3g" y="5"/>
       </children>
       <element xmi:type="uml:Class" href="layers.uml#_Cww0QNhiEeKgkM6XJF9t4A"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CxJOwdhiEeKgkM6XJF9t4A" x="620" y="720" width="141" height="81"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CxJOwdhiEeKgkM6XJF9t4A" x="620" y="720" width="141" height="101"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_6xipANhjEeKgkM6XJF9t4A" type="Class_Shape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6xipAthjEeKgkM6XJF9t4A" source="ShadowFigure">
@@ -3042,7 +3042,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_LS3Ega5qEeeUVoYywick3g" y="5"/>
       </children>
       <element xmi:type="uml:Class" href="layers.uml#_agAC4NxWEeKwptaAAanMDg"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_agYdYdxWEeKwptaAAanMDg" x="40" y="720" width="201" height="81"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_agYdYdxWEeKwptaAAanMDg" x="40" y="720" width="201" height="101"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_JrmksM-FEeep-sEmK3jrig" type="Class_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_JrnLwM-FEeep-sEmK3jrig" type="Class_NameLabel"/>
@@ -3080,6 +3080,10 @@
           <element xmi:type="uml:Property" href="layers.uml#_jnqeEM-FEeep-sEmK3jrig"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_joPF0c-FEeep-sEmK3jrig"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_cwtf0Nm2Eeev9v2e6pD5eA" type="Property_ClassAttributeLabel">
+          <element xmi:type="uml:Property" href="layers.uml#_cvND8Nm2Eeev9v2e6pD5eA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_cwtf0dm2Eeev9v2e6pD5eA"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_dyOUtM-FEeep-sEmK3jrig"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_dyOUtc-FEeep-sEmK3jrig"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_dyOUts-FEeep-sEmK3jrig"/>
@@ -3098,7 +3102,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dyOUwc-FEeep-sEmK3jrig"/>
       </children>
       <element xmi:type="uml:Class" href="layers.uml#_dxmCkM-FEeep-sEmK3jrig"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dyNtoc-FEeep-sEmK3jrig" x="800" y="720" width="181" height="81"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dyNtoc-FEeep-sEmK3jrig" x="800" y="720" width="181" height="101"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_9I7T8NBYEee6_PI6xaXFIg" type="Interface_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_9I9wMNBYEee6_PI6xaXFIg" type="Interface_NameLabel"/>

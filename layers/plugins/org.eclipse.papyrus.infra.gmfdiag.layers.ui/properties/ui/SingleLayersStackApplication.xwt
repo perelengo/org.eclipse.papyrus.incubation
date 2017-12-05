@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Composite xmlns="http://www.eclipse.org/xwt/presentation"
-	xmlns:j="clr-namespace:java.lang"
+	xmlns:j="clr-namespace:java.lang" xmlns:ppe="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets"
 	xmlns:ppel="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets.layout"
 	xmlns:x="http://www.eclipse.org/xwt">
 	<Composite.layout>
 		<ppel:PropertiesLayout></ppel:PropertiesLayout>
 	</Composite.layout>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:LayersStackApplication:layerStackRegistry"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:LayersStackApplication:propertyRegistry"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:LayersStackApplication:layerDescriptorRegistry"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:LayersStackApplication:factory"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:LayersStackApplication:propertySetterRegistry"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="layers:LayersStackApplication:layerOperatorDescriptorRegistry"></ppe:ReferenceDialog>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:MultiReference input="{Binding}"
+			property="layers:LayersStackApplication:layersStacks"></ppe:MultiReference>
+	</Composite>
 </Composite>
