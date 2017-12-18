@@ -7,7 +7,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.papyrus.infra.gmfdiag.common;bundle-version="[3.0.0,4.0.0)",
  org.eclipse.papyrus.infra.core.log;bundle-version="1.2.0",
  org.eclipse.papyrus.infra.emf,
- org.eclipse.emf.ecore.xmi
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.papyrus.infra.gmfdiag.css,
+ org.eclipse.papyrus.infra.gmfdiag.css.properties
 Export-Package: org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime,
  org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.model,
  org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.service

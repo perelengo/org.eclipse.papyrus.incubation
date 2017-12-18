@@ -22,6 +22,11 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.emf.utils.ServiceUtilsForResource;
+import org.eclipse.papyrus.infra.gmfdiag.css.engine.ExtendedCSSEngine;
+import org.eclipse.papyrus.infra.gmfdiag.css.notation.CSSDiagram;
+import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.AddCssClassStyleCommand;
+import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.RemoveCssClassStyleCommand;
+import org.eclipse.papyrus.infra.gmfdiag.css.provider.CSSClassContentProvider;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
@@ -396,7 +401,13 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 			// AbstractLayer layer = LayersModelEventUtils.PropertyEvents.getAbstractLayer(notification);
 			AbstractLayer layer = (AbstractLayer) notification.getNotifier();
 
-			recomputePropertiesForAllViewsOf(layer);
+			// This needs to be updated if the layer's elements are visible
+			if (layer.isLayerEnabled()) {
+				recomputePropertiesForAllViewsOf(layer);
+			}
+
+			setVisibility(layer);
+
 		} catch (NotFoundException e) {
 			log.error(e);
 		} catch (LayersException e) {
@@ -405,6 +416,44 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 	}
 
 
+	private void setVisibility(final AbstractLayer layer) {
+		if (layer.getViews().isEmpty()) {
+			return;
+		}
+		View view = layer.getViews().get(0);
+		Diagram diagram = view.getDiagram();
+		try {
+			final TransactionalEditingDomain ted = ServiceUtilsForResource.getInstance().getTransactionalEditingDomain(view.eResource());
+			if (ted == null) {
+				return;
+			}
+
+			ExtendedCSSEngine cssEngine = diagram instanceof CSSDiagram ? ((CSSDiagram) diagram).getEngine() : null;
+			CSSClassContentProvider cssccp = new CSSClassContentProvider("*", cssEngine);
+			cssccp.getAvailableClasses();
+
+			RecordingCommand rc = new RecordingCommand(ted, "HideLayerElementsCommand") { ////$NON-NLS-1$
+
+				@Override
+				protected void doExecute() {
+					if (!layer.isLayerEnabled()) {
+						AddCssClassStyleCommand addStyle = new AddCssClassStyleCommand(ted, layer.getViews(), "isDisabled");
+						addStyle.execute();
+					}
+					if (layer.isLayerEnabled()) {
+						RemoveCssClassStyleCommand removeStyle = new RemoveCssClassStyleCommand(ted, layer.getViews(), "isDisabled");
+						removeStyle.execute();
+					}
+				}
+			};
+
+			rc.execute();
+		} catch (ServiceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	/**
 	 * Recompute the specified properties for the specified views.

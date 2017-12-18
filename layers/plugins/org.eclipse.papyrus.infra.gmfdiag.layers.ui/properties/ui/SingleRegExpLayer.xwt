@@ -10,10 +10,6 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}" property="layers:RegExpLayer:expr"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}" property="layers:RegExpLayer:language"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="layers:RegExpLayer:expressionContextObjectType"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}" property="layers:LayerExpression:name"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
 			property="layers:LayerExpression:description"></ppe:StringEditor>
@@ -23,24 +19,12 @@
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:BooleanRadio input="{Binding}"
-			property="layers:RegExpLayer:isDomainChangedEventDependant"></ppe:BooleanRadio>
-		<ppe:BooleanRadio input="{Binding}"
-			property="layers:RegExpLayer:isDiagramChangedEventDependant"></ppe:BooleanRadio>
-		<ppe:BooleanRadio input="{Binding}"
-			property="layers:LayerExpression:isLayerEnabledInternal"></ppe:BooleanRadio>
-		<ppe:BooleanRadio input="{Binding}"
 			property="layers:LayerExpression:isLayerEnabled"></ppe:BooleanRadio>
-		<ppe:BooleanRadio input="{Binding}"
-			property="layers:LayerExpression:isBranchEnabled"></ppe:BooleanRadio>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:EnumCombo input="{Binding}"
-			property="layers:RegExpLayer:domainChangedEventLevel"></ppe:EnumCombo>
-		<ppe:EnumCombo input="{Binding}"
-			property="layers:RegExpLayer:diagramChangedEventLevel"></ppe:EnumCombo>
 		<ppe:EnumCombo input="{Binding}" property="layers:LayerExpression:state"></ppe:EnumCombo>
 	</Composite>
 	<Composite>
@@ -48,20 +32,12 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="layers:ApplicationDependantElement:application"></ppe:ReferenceDialog>
-		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:LayerExpression:owningLayersStack"></ppe:ReferenceDialog>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="layers:AbstractLayer:layerDescriptor"></ppe:ReferenceDialog>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:MultiReference input="{Binding}"
-			property="layers:AbstractLayer:propertyValues"></ppe:MultiReference>
-		<ppe:MultiReference input="{Binding}"
-			property="layers:AbstractLayer:propertyValueMap"></ppe:MultiReference>
 		<ppe:MultiReference input="{Binding}"
 			property="layers:AbstractLayer:views"></ppe:MultiReference>
 		<ppe:MultiReference input="{Binding}"

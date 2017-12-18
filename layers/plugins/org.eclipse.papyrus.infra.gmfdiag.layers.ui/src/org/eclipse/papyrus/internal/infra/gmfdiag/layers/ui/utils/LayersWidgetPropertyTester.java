@@ -14,7 +14,6 @@
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.utils;
 
 import org.eclipse.core.expressions.PropertyTester;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator;
@@ -46,6 +45,7 @@ public class LayersWidgetPropertyTester extends PropertyTester {
 	@Override
 	public boolean test(Object receiver, String property, Object[] args, Object expectedValue) {
 
+		// TODO these cases should be handled better, e.g. directly through the plugin.xml filters
 		if (CAN_ATTACH_PROPERTIES.equals(property)) {
 			return layerMenu(receiver);
 		} else if (CAN_ATTACH_VIEWS.equals(property)) {

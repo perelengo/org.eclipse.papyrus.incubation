@@ -112,11 +112,14 @@ public class CSSPropertySetterImpl extends PropertySetterImpl implements CSSProp
 			// System.out.println("done!");
 			// }
 
-			URI sheetURI = sheet.eResource().getURI();
+			String sheetPath = ((StyleSheetReference) sheet).getPath();
 			boolean sheetIsApplied = false;
 			for (StyleSheet ss : cssD.getStyleSheets()) {
-				if (ss.eResource() != null && sheetURI.equals(ss.eResource().getURI()))
+				String ssPath = ((StyleSheetReference) ss).getPath();
+				if (sheetPath.equals(ssPath)) {
 					sheetIsApplied = true;
+					break;
+				}
 			}
 
 			if (!sheetIsApplied) {
@@ -150,6 +153,8 @@ public class CSSPropertySetterImpl extends PropertySetterImpl implements CSSProp
 					appliedStyles.add((String) slvs.getStringListValue().get(0));
 				}
 			}
+			// There is a refresh problem on the style display in the property view,
+			// undo/redo multiply the style without applying it multiple times
 			if (appliedStyles.isEmpty() || !appliedStyles.contains(style)) {
 				AddCssClassStyleCommand accsc = new AddCssClassStyleCommand(ted, view, style);
 				accsc.execute();

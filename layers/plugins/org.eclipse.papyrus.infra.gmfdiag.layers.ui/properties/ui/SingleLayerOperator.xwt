@@ -19,11 +19,7 @@
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:BooleanRadio input="{Binding}"
-			property="layers:LayerExpression:isLayerEnabledInternal"></ppe:BooleanRadio>
-		<ppe:BooleanRadio input="{Binding}"
 			property="layers:LayerExpression:isLayerEnabled"></ppe:BooleanRadio>
-		<ppe:BooleanRadio input="{Binding}"
-			property="layers:LayerExpression:isBranchEnabled"></ppe:BooleanRadio>
 	</Composite>
 	<Composite>
 		<Composite.layout>
@@ -36,15 +32,6 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="layers:ApplicationDependantElement:application"></ppe:ReferenceDialog>
-		<ppe:ReferenceDialog input="{Binding}"
 			property="layers:LayerExpression:owningLayersStack"></ppe:ReferenceDialog>
-	</Composite>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:MultiReference input="{Binding}"
-			property="layers:LayerOperator:layers"></ppe:MultiReference>
 	</Composite>
 </Composite>
