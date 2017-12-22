@@ -22,6 +22,9 @@ location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBu
  org.eclipse.papyrus.infra.emf.diagram.common lazy
  org.eclipse.papyrus.views.modelexplorer lazy
  org.eclipse.papyrus.infra.gmfdiag.hyperlink lazy
- org.eclipse.papyrus.integrationtests.editor lazy
+ org.eclipse.papyrus.infra.gmfdiag.css lazy
+ org.eclipse.papyrus.infra.gmfdiag.css.properties lazy
+ org.eclipse.papyrus.infra.gmfdiag.css.model lazy
+ org.eclipse.papyrus.infra.gmfdiag.css.model.edit lazy
  
 }

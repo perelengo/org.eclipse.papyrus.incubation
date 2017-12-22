@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-  <feature url="features/org.eclipse.papyrus.layers.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.layers.feature" version="1.2.0.qualifier">
+  <feature url="features/org.eclipse.papyrus.infra.gmfdiag.layers.feature_0.7.0.qualifier.jar" id="org.eclipse.papyrus.infra.gmfdiag.layers.feature" version="0.7.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
-   <feature url="features/org.eclipse.papyrus.layers.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.layers.feature.source" version="1.2.0.qualifier">
+   <feature url="features/org.eclipse.papyrus.infra.gmfdiag.layers.feature.source_0.7.0.qualifier.jar" id="org.eclipse.papyrus.infra.gmfdiag.layers.feature.source" version="0.7.0.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
   

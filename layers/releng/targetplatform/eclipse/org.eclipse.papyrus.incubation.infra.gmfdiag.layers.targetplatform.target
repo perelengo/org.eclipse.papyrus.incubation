@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Layers - Oxygen" sequenceNumber="1504350732">
+<target name="Layers - Oxygen" sequenceNumber="1513937936">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.ui" version="0.0.0"/>
@@ -23,6 +23,10 @@
       <unit id="org.eclipse.papyrus.infra.emf.diagram.common" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.views.modelexplorer" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.infra.gmfdiag.hyperlink" version="0.0.0"/>
+      <unit id="org.eclipse.papyrus.infra.gmfdiag.css" version="0.0.0"/>
+      <unit id="org.eclipse.papyrus.infra.gmfdiag.css.properties" version="0.0.0"/>
+      <unit id="org.eclipse.papyrus.infra.gmfdiag.css.model" version="0.0.0"/>
+      <unit id="org.eclipse.papyrus.infra.gmfdiag.css.model.edit" version="0.0.0"/>
       <repository id="Papyrus-Oxygen" location="https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/"/>
     </location>
   </locations>
