@@ -13,7 +13,7 @@
 	
 	<modules>
 		<module>targetplatform</module>
-		<module>org.eclipse.papyrus.incubation.infra.gmfdiag.layers.p2</module>
+		<module>org.eclipse.papyrus.incubation.layers.p2</module>
 	</modules>	
 	
 </project>

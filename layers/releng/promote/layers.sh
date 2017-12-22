@@ -39,7 +39,7 @@ echo "targetResults: $targetResults"
 #if [ $# -eq 6 -o $# -eq 7  ];
 #then
 #	jobName=$1
-jobName="Papyrus-Incubation-DsmlValidation"
+jobName="Papyrus-Incubation-Layers"
 	echo "jobName: $jobName"
 #	buildNumber=$2
 buildNumber="4"
@@ -164,7 +164,7 @@ if [ "$override" == "y" ];
 then
 	if [ -d $destination ];
 	then
-		echo "Overriding the RCP by cleaning the $destination folder"
+		echo "Overriding by cleaning the $destination folder"
 		rm -rf ${destination}/*
 	fi
 fi

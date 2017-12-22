@@ -9,7 +9,7 @@
 		<version>0.7.0-SNAPSHOT</version>
 	</parent>
 	
-	<artifactId>org.eclipse.papyrus.incubation.infra.gmfdiag.layers.p2</artifactId>
+	<artifactId>org.eclipse.papyrus.incubation.layers.p2</artifactId>
 	<packaging>eclipse-repository</packaging>
 	
 	<build>
