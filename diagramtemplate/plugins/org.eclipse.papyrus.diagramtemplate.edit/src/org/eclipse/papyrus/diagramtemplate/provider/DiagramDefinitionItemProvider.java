@@ -1,9 +1,15 @@
-/**
- * <copyright>
- * </copyright>
+/*****************************************************************************
+ * Copyright (c) 2010, 2018 CEA LIST
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Florian Noyrit florian.noyrit@cea.fr - Initial API and implementation
  *
- * $Id$
- */
+ *****************************************************************************/
 package org.eclipse.papyrus.diagramtemplate.provider;
 
 
@@ -84,19 +90,17 @@ public class DiagramDefinitionItemProvider
 	 * @generated
 	 */
 	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_DiagramDefinition_description_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_description_feature", "_UI_DiagramDefinition_type"),
-						DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__DESCRIPTION,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_DiagramDefinition_description_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_description_feature", "_UI_DiagramDefinition_type"),
+				DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__DESCRIPTION,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -107,19 +111,17 @@ public class DiagramDefinitionItemProvider
 	 * @generated
 	 */
 	protected void addFromRootPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_DiagramDefinition_fromRoot_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_fromRoot_feature", "_UI_DiagramDefinition_type"),
-						DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__FROM_ROOT,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_DiagramDefinition_fromRoot_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_fromRoot_feature", "_UI_DiagramDefinition_type"),
+				DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__FROM_ROOT,
+				true,
+				false,
+				true,
+				null,
+				null,
+				null));
 	}
 
 	/**
@@ -130,19 +132,17 @@ public class DiagramDefinitionItemProvider
 	 * @generated
 	 */
 	protected void addDiagramKindPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_DiagramDefinition_diagramKind_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_diagramKind_feature", "_UI_DiagramDefinition_type"),
-						DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__DIAGRAM_KIND,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_DiagramDefinition_diagramKind_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_diagramKind_feature", "_UI_DiagramDefinition_type"),
+				DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__DIAGRAM_KIND,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -153,19 +153,17 @@ public class DiagramDefinitionItemProvider
 	 * @generated
 	 */
 	protected void addLayoutToApplyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_DiagramDefinition_layoutToApply_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_layoutToApply_feature", "_UI_DiagramDefinition_type"),
-						DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__LAYOUT_TO_APPLY,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_DiagramDefinition_layoutToApply_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_layoutToApply_feature", "_UI_DiagramDefinition_type"),
+				DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__LAYOUT_TO_APPLY,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -176,19 +174,17 @@ public class DiagramDefinitionItemProvider
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_DiagramDefinition_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_name_feature", "_UI_DiagramDefinition_type"),
-						DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__NAME,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_DiagramDefinition_name_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_name_feature", "_UI_DiagramDefinition_type"),
+				DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__NAME,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -199,19 +195,17 @@ public class DiagramDefinitionItemProvider
 	 * @generated
 	 */
 	protected void addPrefixPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_DiagramDefinition_prefix_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_prefix_feature", "_UI_DiagramDefinition_type"),
-						DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__PREFIX,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_DiagramDefinition_prefix_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DiagramDefinition_prefix_feature", "_UI_DiagramDefinition_type"),
+				DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__PREFIX,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -267,9 +261,7 @@ public class DiagramDefinitionItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((DiagramDefinition) object).getName();
-		return label == null || label.length() == 0 ?
-				getString("_UI_DiagramDefinition_type") :
-				getString("_UI_DiagramDefinition_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_DiagramDefinition_type") : getString("_UI_DiagramDefinition_type") + " " + label;
 	}
 
 	/**
@@ -311,10 +303,8 @@ public class DiagramDefinitionItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-				(createChildParameter
-				(DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__SELECTION,
-						DiagramTemplateFactory.eINSTANCE.createSelection()));
+		newChildDescriptors.add(createChildParameter(DiagramTemplatePackage.Literals.DIAGRAM_DEFINITION__SELECTION,
+				DiagramTemplateFactory.eINSTANCE.createSelection()));
 	}
 
 	/**

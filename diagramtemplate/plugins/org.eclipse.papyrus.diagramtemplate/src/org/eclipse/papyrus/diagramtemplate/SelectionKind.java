@@ -1,9 +1,15 @@
-/**
- * <copyright>
- * </copyright>
+/*****************************************************************************
+ * Copyright (c) 2010, 2018 CEA LIST
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Florian Noyrit florian.noyrit@cea.fr - Initial API and implementation
  *
- * $Id$
- */
+ *****************************************************************************/
 package org.eclipse.papyrus.diagramtemplate;
 
 import java.util.Arrays;
@@ -108,12 +114,11 @@ public enum SelectionKind implements Enumerator {
 	 *
 	 * @generated
 	 */
-	private static final SelectionKind[] VALUES_ARRAY =
-			new SelectionKind[] {
-					FOR_ALL,
-					SPECIFIC,
-					QUERY,
-			};
+	private static final SelectionKind[] VALUES_ARRAY = new SelectionKind[] {
+			FOR_ALL,
+			SPECIFIC,
+			QUERY,
+	};
 
 	/**
 	 * A public read-only list of all the '<em><b>Selection Kind</b></em>' enumerators.
@@ -129,6 +134,9 @@ public enum SelectionKind implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
+	 * @param literal
+	 *            the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static SelectionKind get(String literal) {
@@ -146,6 +154,9 @@ public enum SelectionKind implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
+	 * @param name
+	 *            the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static SelectionKind getByName(String name) {
@@ -163,6 +174,9 @@ public enum SelectionKind implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
+	 * @param value
+	 *            the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static SelectionKind get(int value) {

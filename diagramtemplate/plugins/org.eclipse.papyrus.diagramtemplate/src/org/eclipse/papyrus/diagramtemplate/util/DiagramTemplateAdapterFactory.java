@@ -1,9 +1,15 @@
-/**
- * <copyright>
- * </copyright>
+/*****************************************************************************
+ * Copyright (c) 2010, 2018 CEA LIST
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Florian Noyrit florian.noyrit@cea.fr - Initial API and implementation
  *
- * $Id$
- */
+ *****************************************************************************/
 package org.eclipse.papyrus.diagramtemplate.util;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -76,38 +82,37 @@ public class DiagramTemplateAdapterFactory extends AdapterFactoryImpl {
 	 *
 	 * @generated
 	 */
-	protected DiagramTemplateSwitch<Adapter> modelSwitch =
-			new DiagramTemplateSwitch<Adapter>() {
-				@Override
-				public Adapter caseDiagramDefinition(DiagramDefinition object) {
-					return createDiagramDefinitionAdapter();
-				}
+	protected DiagramTemplateSwitch<Adapter> modelSwitch = new DiagramTemplateSwitch<Adapter>() {
+		@Override
+		public Adapter caseDiagramDefinition(DiagramDefinition object) {
+			return createDiagramDefinitionAdapter();
+		}
 
-				@Override
-				public Adapter caseSelection(Selection object) {
-					return createSelectionAdapter();
-				}
+		@Override
+		public Adapter caseSelection(Selection object) {
+			return createSelectionAdapter();
+		}
 
-				@Override
-				public Adapter caseSelectionRef(SelectionRef object) {
-					return createSelectionRefAdapter();
-				}
+		@Override
+		public Adapter caseSelectionRef(SelectionRef object) {
+			return createSelectionRefAdapter();
+		}
 
-				@Override
-				public Adapter caseTemplate(Template object) {
-					return createTemplateAdapter();
-				}
+		@Override
+		public Adapter caseTemplate(Template object) {
+			return createTemplateAdapter();
+		}
 
-				@Override
-				public Adapter caseAbstractSelection(AbstractSelection object) {
-					return createAbstractSelectionAdapter();
-				}
+		@Override
+		public Adapter caseAbstractSelection(AbstractSelection object) {
+			return createAbstractSelectionAdapter();
+		}
 
-				@Override
-				public Adapter defaultCase(EObject object) {
-					return createEObjectAdapter();
-				}
-			};
+		@Override
+		public Adapter defaultCase(EObject object) {
+			return createEObjectAdapter();
+		}
+	};
 
 	/**
 	 * Creates an adapter for the <code>target</code>.

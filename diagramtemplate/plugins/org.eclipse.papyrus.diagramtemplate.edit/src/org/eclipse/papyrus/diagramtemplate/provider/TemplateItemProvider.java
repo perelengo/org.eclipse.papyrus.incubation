@@ -1,9 +1,15 @@
-/**
- * <copyright>
- * </copyright>
+/*****************************************************************************
+ * Copyright (c) 2010, 2018 CEA LIST
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Florian Noyrit florian.noyrit@cea.fr - Initial API and implementation
  *
- * $Id$
- */
+ *****************************************************************************/
 package org.eclipse.papyrus.diagramtemplate.provider;
 
 
@@ -78,19 +84,17 @@ public class TemplateItemProvider
 	 * @generated
 	 */
 	protected void addTargetRootPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Template_targetRoot_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Template_targetRoot_feature", "_UI_Template_type"),
-						DiagramTemplatePackage.Literals.TEMPLATE__TARGET_ROOT,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Template_targetRoot_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Template_targetRoot_feature", "_UI_Template_type"),
+				DiagramTemplatePackage.Literals.TEMPLATE__TARGET_ROOT,
+				true,
+				false,
+				true,
+				null,
+				null,
+				null));
 	}
 
 	/**
@@ -180,10 +184,8 @@ public class TemplateItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-				(createChildParameter
-				(DiagramTemplatePackage.Literals.TEMPLATE__DIAGRAM_DEFINITIONS,
-						DiagramTemplateFactory.eINSTANCE.createDiagramDefinition()));
+		newChildDescriptors.add(createChildParameter(DiagramTemplatePackage.Literals.TEMPLATE__DIAGRAM_DEFINITIONS,
+				DiagramTemplateFactory.eINSTANCE.createDiagramDefinition()));
 	}
 
 	/**

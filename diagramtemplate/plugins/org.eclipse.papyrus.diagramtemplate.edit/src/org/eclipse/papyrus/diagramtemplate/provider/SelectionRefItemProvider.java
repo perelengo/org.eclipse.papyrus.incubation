@@ -1,9 +1,15 @@
-/**
- * <copyright>
- * </copyright>
+/*****************************************************************************
+ * Copyright (c) 2010, 2018 CEA LIST
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Florian Noyrit florian.noyrit@cea.fr - Initial API and implementation
  *
- * $Id$
- */
+ *****************************************************************************/
 package org.eclipse.papyrus.diagramtemplate.provider;
 
 
@@ -74,19 +80,17 @@ public class SelectionRefItemProvider
 	 * @generated
 	 */
 	protected void addEReferencePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_SelectionRef_eReference_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_SelectionRef_eReference_feature", "_UI_SelectionRef_type"),
-						DiagramTemplatePackage.Literals.SELECTION_REF__EREFERENCE,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_SelectionRef_eReference_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_SelectionRef_eReference_feature", "_UI_SelectionRef_type"),
+				DiagramTemplatePackage.Literals.SELECTION_REF__EREFERENCE,
+				true,
+				false,
+				true,
+				null,
+				null,
+				null));
 	}
 
 	/**
@@ -112,9 +116,7 @@ public class SelectionRefItemProvider
 	public String getText(Object object) {
 		SelectionKind labelValue = ((SelectionRef) object).getKind();
 		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-				getString("_UI_SelectionRef_type") :
-				getString("_UI_SelectionRef_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_SelectionRef_type") : getString("_UI_SelectionRef_type") + " " + label;
 	}
 
 	/**

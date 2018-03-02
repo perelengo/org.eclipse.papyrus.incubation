@@ -1,9 +1,15 @@
-/**
- * <copyright>
- * </copyright>
+/*****************************************************************************
+ * Copyright (c) 2010, 2018 CEA LIST
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Florian Noyrit florian.noyrit@cea.fr - Initial API and implementation
  *
- * $Id$
- */
+ *****************************************************************************/
 package org.eclipse.papyrus.diagramtemplate.provider;
 
 
@@ -82,19 +88,17 @@ public class AbstractSelectionItemProvider
 	 * @generated
 	 */
 	protected void addElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_AbstractSelection_element_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_AbstractSelection_element_feature", "_UI_AbstractSelection_type"),
-						DiagramTemplatePackage.Literals.ABSTRACT_SELECTION__ELEMENT,
-						true,
-						false,
-						true,
-						null,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_AbstractSelection_element_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_AbstractSelection_element_feature", "_UI_AbstractSelection_type"),
+				DiagramTemplatePackage.Literals.ABSTRACT_SELECTION__ELEMENT,
+				true,
+				false,
+				true,
+				null,
+				null,
+				null));
 	}
 
 	/**
@@ -105,19 +109,17 @@ public class AbstractSelectionItemProvider
 	 * @generated
 	 */
 	protected void addKindPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_AbstractSelection_kind_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_AbstractSelection_kind_feature", "_UI_AbstractSelection_type"),
-						DiagramTemplatePackage.Literals.ABSTRACT_SELECTION__KIND,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_AbstractSelection_kind_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_AbstractSelection_kind_feature", "_UI_AbstractSelection_type"),
+				DiagramTemplatePackage.Literals.ABSTRACT_SELECTION__KIND,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -128,19 +130,17 @@ public class AbstractSelectionItemProvider
 	 * @generated
 	 */
 	protected void addSubTypesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-				(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_AbstractSelection_subTypes_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_AbstractSelection_subTypes_feature", "_UI_AbstractSelection_type"),
-						DiagramTemplatePackage.Literals.ABSTRACT_SELECTION__SUB_TYPES,
-						true,
-						false,
-						false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-						null,
-						null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_AbstractSelection_subTypes_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_AbstractSelection_subTypes_feature", "_UI_AbstractSelection_type"),
+				DiagramTemplatePackage.Literals.ABSTRACT_SELECTION__SUB_TYPES,
+				true,
+				false,
+				false,
+				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				null,
+				null));
 	}
 
 	/**
@@ -185,9 +185,7 @@ public class AbstractSelectionItemProvider
 	public String getText(Object object) {
 		SelectionKind labelValue = ((AbstractSelection) object).getKind();
 		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-				getString("_UI_AbstractSelection_type") :
-				getString("_UI_AbstractSelection_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_AbstractSelection_type") : getString("_UI_AbstractSelection_type") + " " + label;
 	}
 
 	/**
@@ -226,10 +224,8 @@ public class AbstractSelectionItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-				(createChildParameter
-				(DiagramTemplatePackage.Literals.ABSTRACT_SELECTION__SELECTION_REF,
-						DiagramTemplateFactory.eINSTANCE.createSelectionRef()));
+		newChildDescriptors.add(createChildParameter(DiagramTemplatePackage.Literals.ABSTRACT_SELECTION__SELECTION_REF,
+				DiagramTemplateFactory.eINSTANCE.createSelectionRef()));
 	}
 
 	/**

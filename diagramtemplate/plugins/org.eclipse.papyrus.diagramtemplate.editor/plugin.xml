@@ -23,6 +23,22 @@
       </wizard>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated diagramTemplate -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.papyrus.diagramtemplate.presentation.DiagramTemplateModelWizardID"
+            name="%_UI_DiagramTemplateModelWizard_label"
+            class="org.eclipse.papyrus.diagramtemplate.presentation.DiagramTemplateModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DiagramTemplateModelFile.gif">
+         <description>%_UI_DiagramTemplateModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
    <extension point="org.eclipse.ui.editors">
       <editor
             id="org.eclipse.papyrus.diagramtemplate.presentation.DiagramTemplateEditorID"
