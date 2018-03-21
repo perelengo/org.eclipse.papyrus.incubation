@@ -18,7 +18,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.papyrus.infra.gmfdiag.common;bundle-version="[3.0.0,4.0.0)",
  org.eclipse.papyrus.infra.ui;bundle-version="1.2.0",
  org.eclipse.papyrus.infra.core.sashwindows.di;bundle-version="1.2.0"
-Export-Package: org.eclipse.papyrus.diagramtemplate.editor,
+Export-Package: org.eclipse.papyrus.diagramtemplate.presentation,
  org.eclipse.papyrus.diagramtemplate.launcher,
  org.eclipse.papyrus.diagramtemplate.presentation
 Bundle-Vendor: %providerName

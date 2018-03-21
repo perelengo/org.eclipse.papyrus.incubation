@@ -83,7 +83,6 @@ import org.eclipse.papyrus.diagramtemplate.Selection;
 import org.eclipse.papyrus.diagramtemplate.SelectionKind;
 import org.eclipse.papyrus.diagramtemplate.SelectionRef;
 import org.eclipse.papyrus.diagramtemplate.Template;
-import org.eclipse.papyrus.diagramtemplate.editor.DiagramTemplateEditorPlugin;
 import org.eclipse.papyrus.diagramtemplate.editor.provider.DiagramDefinitionContentProvider;
 import org.eclipse.papyrus.diagramtemplate.editor.provider.DiagramDefinitionLabelProvider;
 import org.eclipse.papyrus.diagramtemplate.editor.provider.DiagramKindContentProvider;
