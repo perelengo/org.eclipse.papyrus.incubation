@@ -1,0 +1,70 @@
+= Using Derived Layer (OCL Expression) =
+
+This tutorial show how to use a Derived Layer.
+
+A derived layer is a leaf Layer where the views are automatically attached to 
+the layer, according to an expression. Actually, the expression is expressed in OCL.
+
+== Tutorial Video ==
+
+A tutorial is available here:
+[http://youtu.be/x6lnWwD47ZI] 
+
+== Creating a derived Layer ==
+Derived Layer are actually called 'RegExp Layer'.
+
+To create a derived layer:
+
+* Click on the Layer stack
+* Click Layer->Create Layers ...->Create RegExp Layer
+
+
+[[Image:derivedLayerTutorial/createRegExpLayer.png]]
+
+The new Layer appears under the Layer Stack. You can add Properties to the layer.
+
+== Writing an expression == 
+A derived layer is a Layer where views are automatically attached to 
+the layer. The expression is used for this purpose.
+
+Actually, the expression can only be written in OCL.
+
+The expression is a boolean expression returning true or false. The expression is applied on each '''''view''''' (ie Shapes and Links) in the diagram. If the expression return true, the corresponding element is attached to the layer. If the expression return false, the element is not attached to the layer.
+
+The OCL expression has a predefined variable called 'self'. It is the 'view' that must be checked.
+This variable is of type '''''notation::View''''' . It can be subclassed in '''''notation::Shape'''''  and '''''notation::Link''''' .
+
+A view in a uml diagram is always associated to a UML element. This element can be accessed with the expression '''''self.element''''' .
+
+The expression is written in the Layer property->Expr
+[[Image:derivedLayerTutorial/writeExpression.png]]
+
+
+== Expressions Examples == 
+
+=== All Shapes  ===
+* self.oclIsKindOf(Shape)
+
+=== All Classes/Interface/ ...  ===
+* self.element.oclIsKindOf(uml::NamedElement)
+* self.element.oclIsKindOf(uml::Class)
+* self.element.oclIsKindOf(uml::Package)
+
+=== All Classes/NamedElement/... starting with a particular string ===
+* self.element.oclAsType(uml::NamedElement).name.startsWith('D') = true
+* self.element.oclAsType(uml::Class).name.startsWith('Cl') = true
+* self.element.oclAsType(uml::Interface).name.startsWith('I') = true
+
+=== and / or ===
+* self.oclIsKindOf(Shape) '''and'''  self.oclAsType(Shape).visible = true 
+
+* self.element.oclIsKindOf(uml::Class) '''or'''  self.element.oclIsKindOf(uml::Package) 
+=== All classes that are abstract ===
+* self.element.oclAsType(uml::Class).isAbstract
+
+=== All classes containing an operation named 'op1' ===
+* self.element.oclAsType(uml::Class).ownedOperation->exists( op | op.name = 'op1')
+
+Also:
+* self.element.oclAsType(uml::Class).ownedAttribute->exists( attr | attr.name = 'name')
+

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc label="Layers Tutorials" >
+	<topic label="Layers Tutorials">
+        <link toc="target/generated-eclipse-help/guides/tutorials/simpleTutorial-toc.xml"/>
+        <link toc="target/generated-eclipse-help/guides/tutorials/derivedLayerTutorial-toc.xml"/>
+        <anchor id="layers.guides.tutorials"/>
+	</topic>
+</toc>

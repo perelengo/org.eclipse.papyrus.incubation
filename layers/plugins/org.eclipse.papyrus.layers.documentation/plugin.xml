@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="target/generated-eclipse-help/guides/users/index-toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="target/generated-eclipse-help/guides/tutorials/layers-toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="target/generated-eclipse-help/guides/tutorials/simpleTutorial-toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="target/generated-eclipse-help/guides/tutorials/derivedLayerTutorial-toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="target/generated-eclipse-help/guides/developpers/layers-toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="target/generated-eclipse-help/guides/developpers/layersDevs-toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="target/generated-eclipse-help/guides/index-toc.xml"
+            primary="false">
+      </toc>
+   </extension>
+
+</plugin>

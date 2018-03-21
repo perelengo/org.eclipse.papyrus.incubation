@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.help;bundle-version="[3.7.0,4.0.0)",
+ org.eclipse.papyrus.infra.doc;bundle-version="[1.2.0,2.0.0)"
+Bundle-Vendor: %providerName
+Bundle-Version: 1.2.0.qualifier
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.papyrus.layers.documentation;singleton:=true
