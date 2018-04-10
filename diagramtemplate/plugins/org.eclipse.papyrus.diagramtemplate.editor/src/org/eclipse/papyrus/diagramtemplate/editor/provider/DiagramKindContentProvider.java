@@ -13,6 +13,7 @@
 package org.eclipse.papyrus.diagramtemplate.editor.provider;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.eclipse.jface.viewers.IStructuredContentProvider;
@@ -29,10 +30,14 @@ import org.eclipse.papyrus.infra.viewpoints.policy.ViewPrototype;
  */
 public class DiagramKindContentProvider implements IStructuredContentProvider {
 
+	private static List<String> allowedDiagrams = Arrays.asList("org.eclipse.papyrus.uml.diagram.clazz.CreateClassDiagramCommand");
+
+
 	/**
 	 * @see org.eclipse.jface.viewers.IContentProvider#dispose()
 	 *
 	 */
+	@Override
 	public void dispose() {
 	}
 
@@ -43,6 +48,7 @@ public class DiagramKindContentProvider implements IStructuredContentProvider {
 	 * @param oldInput
 	 * @param newInput
 	 */
+	@Override
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 	}
 
@@ -51,12 +57,19 @@ public class DiagramKindContentProvider implements IStructuredContentProvider {
 	 *
 	 * @param inputElement
 	 */
+	@Override
 	public Object[] getElements(Object inputElement) {
 		if (inputElement instanceof List) {
 			List<ViewPrototype> categories = (List<ViewPrototype>) inputElement;
 
-			List<ViewPrototype> result = new ArrayList<ViewPrototype>();
+			List<ViewPrototype> result = new ArrayList<>();
 			for (CreationCommandDescriptor desc : getCreationCommandRegistry().getCommandDescriptors()) {
+				// FIXME This is used to filter out problematic diagrams
+				// This will of course need to be remedied when all the available diagrams are working again
+				if (!allowedDiagrams.contains(desc.getCommandId())) {
+					continue;
+				}
+
 				for (ViewPrototype category : categories) {
 					if (category.getLabel().equalsIgnoreCase(desc.getLabel())) {
 						result.add(category);

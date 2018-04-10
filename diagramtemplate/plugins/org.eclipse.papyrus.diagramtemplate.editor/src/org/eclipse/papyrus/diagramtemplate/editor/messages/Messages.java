@@ -10,13 +10,13 @@
  *   Florian Noyrit florian.noyrit@cea.fr - Initial API and implementation
  *
  *****************************************************************************/
-package org.eclipse.papyrus.diagramtemplate.utils;
+package org.eclipse.papyrus.diagramtemplate.editor.messages;
 
 import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
 
-	private static final String BUNDLE_NAME = "org.eclipse.papyrus.diagramtemplate.utils.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.papyrus.diagramtemplate.editor.messages.messages"; //$NON-NLS-1$
 
 	public static String DiagramTemplateEditor_0;
 

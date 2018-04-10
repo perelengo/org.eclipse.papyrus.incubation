@@ -12,4 +12,4 @@ Bundle-Name: %pluginName
 Bundle-Activator: org.eclipse.papyrus.diagramtemplate.provider.DiagramTemplateEditPlugin$Implementation
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.papyrus.diagramtemplate.edit;singleton:=true
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

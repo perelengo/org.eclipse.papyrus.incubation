@@ -17,7 +17,14 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.papyrus.infra.gmfdiag.commands;bundle-version="1.2.0",
  org.eclipse.papyrus.infra.gmfdiag.common;bundle-version="[3.0.0,4.0.0)",
  org.eclipse.papyrus.infra.ui;bundle-version="1.2.0",
- org.eclipse.papyrus.infra.core.sashwindows.di;bundle-version="1.2.0"
+ org.eclipse.papyrus.infra.core.sashwindows.di;bundle-version="1.2.0",
+ org.eclipse.papyrus.uml.tools;bundle-version="4.0.0",
+ org.eclipse.papyrus.uml.diagram.menu,
+ org.eclipse.papyrus.uml.diagram.clazz,
+ org.eclipse.papyrus.infra.architecture,
+ org.eclipse.papyrus.infra.viewpoints.policy,
+ org.eclipse.papyrus.infra.architecture.representation,
+ org.eclipse.emf.common
 Export-Package: org.eclipse.papyrus.diagramtemplate.presentation,
  org.eclipse.papyrus.diagramtemplate.launcher,
  org.eclipse.papyrus.diagramtemplate.presentation
@@ -30,4 +37,4 @@ Bundle-Name: %pluginName
 Bundle-Activator: org.eclipse.papyrus.diagramtemplate.presentation.DiagramTemplateEditorPlugin$Implementation
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.papyrus.diagramtemplate.editor;singleton:=true
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

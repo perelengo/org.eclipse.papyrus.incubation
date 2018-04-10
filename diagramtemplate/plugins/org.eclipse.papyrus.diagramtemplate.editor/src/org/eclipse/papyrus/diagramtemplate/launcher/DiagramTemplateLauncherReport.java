@@ -18,9 +18,11 @@ import java.util.Map.Entry;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ILabelProviderListener;
-import org.eclipse.papyrus.diagramtemplate.launcher.DiagramTemplateLauncher.CreationReportKind;
-import org.eclipse.papyrus.diagramtemplate.utils.Messages;
+import org.eclipse.papyrus.diagramtemplate.editor.messages.Messages;
+import org.eclipse.papyrus.diagramtemplate.utils.CreationReport.CreationReportKind;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 import org.eclipse.uml2.uml.NamedElement;
@@ -108,7 +110,7 @@ public class DiagramTemplateLauncherReport {
 		// ListSelectionDialog dlg = new ListSelectionDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor().getSite().getShell(), report, new DiagramTemplateLauncherReportContentProvider(), new
 		// DiagramTemplateLauncherReportLabelProvider(), "Report");
 		// dlg.open();
-		ElementListSelectionDialog dlg = new ElementListSelectionDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor().getSite().getShell(), new DiagramTemplateLauncherReportLabelProvider());
+		ElementListSelectionDialog dlg = new ElementListSelectionDialog(Display.getCurrent().getActiveShell(), new DiagramTemplateLauncherReportLabelProvider());
 		dlg.setElements(report.entrySet().toArray());
 		dlg.setTitle(Messages.DiagramTemplateLauncherReport_6);
 		dlg.open();

@@ -28,6 +28,7 @@ import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.util.BasicDiagnostic;
@@ -83,6 +84,7 @@ import org.eclipse.papyrus.diagramtemplate.Selection;
 import org.eclipse.papyrus.diagramtemplate.SelectionKind;
 import org.eclipse.papyrus.diagramtemplate.SelectionRef;
 import org.eclipse.papyrus.diagramtemplate.Template;
+import org.eclipse.papyrus.diagramtemplate.editor.messages.Messages;
 import org.eclipse.papyrus.diagramtemplate.editor.provider.DiagramDefinitionContentProvider;
 import org.eclipse.papyrus.diagramtemplate.editor.provider.DiagramDefinitionLabelProvider;
 import org.eclipse.papyrus.diagramtemplate.editor.provider.DiagramKindContentProvider;
@@ -94,12 +96,12 @@ import org.eclipse.papyrus.diagramtemplate.editor.provider.TypesContentProvider;
 import org.eclipse.papyrus.diagramtemplate.editor.provider.WhatContentProvider;
 import org.eclipse.papyrus.diagramtemplate.launcher.DiagramTemplateLauncher;
 import org.eclipse.papyrus.diagramtemplate.provider.DiagramTemplateItemProviderAdapterFactory;
-import org.eclipse.papyrus.diagramtemplate.utils.Messages;
 import org.eclipse.papyrus.infra.architecture.ArchitectureDomainManager;
 import org.eclipse.papyrus.infra.architecture.representation.PapyrusRepresentationKind;
 import org.eclipse.papyrus.infra.core.architecture.RepresentationKind;
 import org.eclipse.papyrus.infra.core.architecture.merged.MergedArchitectureContext;
 import org.eclipse.papyrus.infra.core.architecture.merged.MergedArchitectureViewpoint;
+import org.eclipse.papyrus.infra.gmfdiag.common.helper.DiagramPrototype;
 import org.eclipse.papyrus.infra.viewpoints.policy.ViewPrototype;
 import org.eclipse.papyrus.uml.diagram.wizards.kind.DiagramKindLabelProvider;
 import org.eclipse.swt.SWT;
@@ -249,7 +251,7 @@ public class DiagramTemplateEditor extends EditorPart {
 	/**
 	 * List of diagram categories to consider
 	 */
-	Collection<ViewPrototype> representationsKinds = new ArrayList<ViewPrototype>();
+	Collection<ViewPrototype> representationsKinds = new ArrayList<>();
 
 	/**
 	 * The IFile object corresponding to the model to process
@@ -283,7 +285,7 @@ public class DiagramTemplateEditor extends EditorPart {
 	 *
 	 * @generated
 	 */
-	protected Map<Resource, Diagnostic> resourceToDiagnosticMap = new LinkedHashMap<Resource, Diagnostic>();
+	protected Map<Resource, Diagnostic> resourceToDiagnosticMap = new LinkedHashMap<>();
 
 	/**
 	 * The diagram definition under edition
@@ -405,6 +407,8 @@ public class DiagramTemplateEditor extends EditorPart {
 	 */
 	protected void updateUI() {
 		diagramDefinitionTableViewer.refresh();
+		// String diagramKind = ((DiagramDefinition) currentDiagramDefinition.getSelection().get(0).eContainer()).getDiagramKind();
+		// ViewPrototype diagramKind = ViewPrototype.get()
 		forTreeViewer.setInput(currentDiagramDefinition.getSelection());
 		forTreeViewer.refresh();
 		whatTableViewer.refresh();
@@ -423,6 +427,7 @@ public class DiagramTemplateEditor extends EditorPart {
 	/**
 	 * Helper method to initialize the diagram categories (kinds)
 	 */
+	// FIXME This should be handled better so as to restrict the creation to available diagrams in the current context
 	protected void initializeDiagramCategories() {
 		ArchitectureDomainManager manager = ArchitectureDomainManager.getInstance();
 		Collection<MergedArchitectureContext> contexts = manager.getVisibleArchitectureContexts();
@@ -463,7 +468,7 @@ public class DiagramTemplateEditor extends EditorPart {
 	}
 
 	/**
-	 * Helper method to clear the template of specific information
+	 * Helper method to clear the template of model specific information
 	 */
 	protected void clearTemplate() {
 		TreeIterator<EObject> it = template.eAllContents();
@@ -471,7 +476,9 @@ public class DiagramTemplateEditor extends EditorPart {
 			EObject eObject = it.next();
 			if (eObject instanceof DiagramDefinition) {
 				((DiagramDefinition) eObject).setFromRoot(null);
-			} else if (eObject instanceof Selection) {
+			}
+			// This will remove all the model-specific references in the template (i.e. specific rules on an elment)
+			else if (eObject instanceof Selection) {
 				if (((AbstractSelection) eObject).getKind() != SelectionKind.FOR_ALL) {
 					RemoveCommand command = new RemoveCommand(editingDomain, ((Selection) eObject).eContainer(), ((Selection) eObject).eContainer().eClass().getEStructuralFeature("selection"), eObject); //$NON-NLS-1$
 					editingDomain.getCommandStack().execute(command);
@@ -568,6 +575,7 @@ public class DiagramTemplateEditor extends EditorPart {
 			/**
 			 * {@inheritDoc}
 			 */
+			@Override
 			public void commandStackChanged(EventObject event) {
 				updateUI();
 				firePropertyChange(IEditorPart.PROP_DIRTY);
@@ -602,7 +610,7 @@ public class DiagramTemplateEditor extends EditorPart {
 	public void doSave(IProgressMonitor monitor) {
 		// Save only resources that have actually changed.
 		//
-		final Map<Object, Object> saveOptions = new HashMap<Object, Object>();
+		final Map<Object, Object> saveOptions = new HashMap<>();
 		saveOptions.put(Resource.OPTION_SAVE_ONLY_IF_CHANGED, Resource.OPTION_SAVE_ONLY_IF_CHANGED_MEMORY_BUFFER);
 
 		// Do the work within an operation because this is a long running activity that modifies the workbench.
@@ -902,6 +910,7 @@ public class DiagramTemplateEditor extends EditorPart {
 			/**
 			 * {@inheritDoc}
 			 */
+			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
 				if (event.getSelection() instanceof IStructuredSelection && !event.getSelection().isEmpty()) {
 
@@ -1021,6 +1030,7 @@ public class DiagramTemplateEditor extends EditorPart {
 		diagramTable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 5, 1));
 		diagramCheckboxTableViewer.addCheckStateListener(new ICheckStateListener() {
 
+			@Override
 			public void checkStateChanged(CheckStateChangedEvent event) {
 				Object element = event.getElement();
 				if (element instanceof CreationCommandDescriptor) {
@@ -1030,6 +1040,16 @@ public class DiagramTemplateEditor extends EditorPart {
 
 				diagramCheckboxTableViewer.setCheckedElements(new Object[0]);
 				diagramCheckboxTableViewer.setChecked(element, true);
+
+				// FIXME test to see if providing the diagram type manually fixes the creation problem.
+				// There is a problem during definition creation that erases all set kinds on existing definitions
+				if (!(element instanceof DiagramPrototype)) {
+					return;
+				}
+				currentDiagramDefinition.setDiagramKind(((DiagramPrototype) element).getRepresentationKind().getCreationCommandClass());
+				// this hack is used to fix the type of diagram created
+				doSave(new NullProgressMonitor());
+
 			}
 		});
 		diagramCheckboxTableViewer.setContentProvider(new DiagramKindContentProvider());
@@ -1038,10 +1058,12 @@ public class DiagramTemplateEditor extends EditorPart {
 
 		diagramCheckboxTableViewer.setCheckStateProvider(new ICheckStateProvider() {
 
+			@Override
 			public boolean isGrayed(Object element) {
 				return false;
 			}
 
+			@Override
 			public boolean isChecked(Object element) {
 				if (currentDiagramDefinition != null) {
 					if (element instanceof CreationCommandDescriptor && currentDiagramDefinition.getDiagramKind() != null) {
@@ -1079,7 +1101,7 @@ public class DiagramTemplateEditor extends EditorPart {
 			@Override
 			public void mouseUp(MouseEvent e) {
 
-				List<EObject> listOfTypes = new ArrayList<EObject>();
+				List<EObject> listOfTypes = new ArrayList<>();
 				UMLPackage umlPackage = UMLPackage.eINSTANCE;
 				TreeIterator<EObject> it = umlPackage.eAllContents();
 				while (it.hasNext()) {
@@ -1388,6 +1410,7 @@ public class DiagramTemplateEditor extends EditorPart {
 		forTreeViewer.setLabelProvider(new ForLabelProvider());
 		forTreeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 
+			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
 				ISelection selection = event.getSelection();
 				if (selection != null && !selection.isEmpty()) {
@@ -1505,7 +1528,7 @@ public class DiagramTemplateEditor extends EditorPart {
 
 									Object value = selectionItem.getElement().eGet(eReference);
 
-									List<EObject> valueToShow = new ArrayList<EObject>();
+									List<EObject> valueToShow = new ArrayList<>();
 									if (value instanceof List) {
 										valueToShow.addAll((Collection<? extends EObject>) value);
 									} else if (value instanceof EObject) {
