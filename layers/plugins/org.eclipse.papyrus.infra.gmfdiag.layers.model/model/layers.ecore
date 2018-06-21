@@ -588,4 +588,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="style" ordered="false"
         eType="#//String"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CSSHidePropertySetter" eSuperTypes="#//PropertySetter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CSSHideType" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CSSHideInstance" eSuperTypes="#//TypeInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stylesheet" ordered="false"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.css.model/Model/StyleSheets.ecore#//StyleSheet"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="style" ordered="false"
+        eType="#//String"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -367,6 +367,18 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 				return createCSSInstanceAdapter();
 			}
 			@Override
+			public Adapter caseCSSHidePropertySetter(CSSHidePropertySetter object) {
+				return createCSSHidePropertySetterAdapter();
+			}
+			@Override
+			public Adapter caseCSSHideType(CSSHideType object) {
+				return createCSSHideTypeAdapter();
+			}
+			@Override
+			public Adapter caseCSSHideInstance(CSSHideInstance object) {
+				return createCSSHideInstanceAdapter();
+			}
+			@Override
 			public Adapter caseStyle(Style object) {
 				return createStyleAdapter();
 			}
@@ -783,6 +795,48 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCSSInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHidePropertySetter <em>CSS Hide Property Setter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHidePropertySetter
+	 * @generated
+	 */
+	public Adapter createCSSHidePropertySetterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideType <em>CSS Hide Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideType
+	 * @generated
+	 */
+	public Adapter createCSSHideTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance <em>CSS Hide Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance
+	 * @generated
+	 */
+	public Adapter createCSSHideInstanceAdapter() {
 		return null;
 	}
 

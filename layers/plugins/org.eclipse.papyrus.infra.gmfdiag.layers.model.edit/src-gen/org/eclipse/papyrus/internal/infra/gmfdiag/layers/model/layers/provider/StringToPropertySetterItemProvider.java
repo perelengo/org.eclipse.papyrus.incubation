@@ -227,6 +227,11 @@ public class StringToPropertySetterItemProvider
 			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
 				 LayersFactory.eINSTANCE.createCSSPropertySetter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LayersPackage.Literals.STRING_TO_PROPERTY_SETTER__VALUE,
+				 LayersFactory.eINSTANCE.createCSSHidePropertySetter()));
 	}
 
 	/**

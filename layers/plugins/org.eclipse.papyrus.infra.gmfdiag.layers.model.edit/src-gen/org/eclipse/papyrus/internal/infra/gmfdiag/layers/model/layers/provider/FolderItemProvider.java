@@ -239,6 +239,11 @@ public class FolderItemProvider extends FolderElementItemProvider {
 			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
 				 LayersFactory.eINSTANCE.createCSSType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LayersPackage.Literals.FOLDER__ELEMENTS,
+				 LayersFactory.eINSTANCE.createCSSHideType()));
 	}
 
 }

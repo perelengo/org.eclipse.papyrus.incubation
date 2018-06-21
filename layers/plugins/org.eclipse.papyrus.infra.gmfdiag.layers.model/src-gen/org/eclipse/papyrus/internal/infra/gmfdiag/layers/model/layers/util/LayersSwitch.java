@@ -606,6 +606,29 @@ public class LayersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case LayersPackage.CSS_HIDE_PROPERTY_SETTER: {
+				CSSHidePropertySetter cssHidePropertySetter = (CSSHidePropertySetter)theEObject;
+				T result = caseCSSHidePropertySetter(cssHidePropertySetter);
+				if (result == null) result = casePropertySetter(cssHidePropertySetter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LayersPackage.CSS_HIDE_TYPE: {
+				CSSHideType cssHideType = (CSSHideType)theEObject;
+				T result = caseCSSHideType(cssHideType);
+				if (result == null) result = caseType(cssHideType);
+				if (result == null) result = caseFolderElement(cssHideType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LayersPackage.CSS_HIDE_INSTANCE: {
+				CSSHideInstance cssHideInstance = (CSSHideInstance)theEObject;
+				T result = caseCSSHideInstance(cssHideInstance);
+				if (result == null) result = caseTypeInstance(cssHideInstance);
+				if (result == null) result = caseComputePropertyValueCommandItf(cssHideInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -1027,6 +1050,51 @@ public class LayersSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCSSInstance(CSSInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CSS Hide Property Setter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CSS Hide Property Setter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCSSHidePropertySetter(CSSHidePropertySetter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CSS Hide Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CSS Hide Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCSSHideType(CSSHideType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CSS Hide Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CSS Hide Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCSSHideInstance(CSSHideInstance object) {
 		return null;
 	}
 

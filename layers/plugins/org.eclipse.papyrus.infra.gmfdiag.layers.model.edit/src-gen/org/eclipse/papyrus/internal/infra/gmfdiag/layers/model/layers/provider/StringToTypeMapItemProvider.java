@@ -232,6 +232,11 @@ public class StringToTypeMapItemProvider
 			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
 				 LayersFactory.eINSTANCE.createCSSType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
+				 LayersFactory.eINSTANCE.createCSSHideType()));
 	}
 
 	/**

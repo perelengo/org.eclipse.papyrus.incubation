@@ -39,6 +39,9 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.DiagramViewEventNotifier;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.IDiagramViewEventListener;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.commands.ApplyLayerCSSChangedCommand;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.commands.ApplyLayerCSSCommand;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.commands.HideLayerElementsCommand;
 
 
 /**
@@ -183,6 +186,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 	 *
 	 * @param notification
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void propertyValueAdded(Notification notification) {
 
@@ -196,49 +200,24 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 
 			// Need to recompute the associated views
 			AbstractLayer layer = LayersModelEventUtils.PropertyEvents.getAbstractLayer(notification);
-			final List<View> views = layer.getViews();
+			List<View> views = layer.getViews();
+			// The views are not supposed to be always defined (in the case of filters for example)
 			if (views.size() == 0) {
+				views = layer.getLayersStack().getDiagram().getChildren();
 				return;
 			}
 
 			checkApplication();
-			Property property = application.getPropertyRegistry().getProperty(propertyName);
-
-			final List<ComputePropertyValueCommand> commands = layersStack.getViewsComputePropertyValueCommand(views, property);
-
-			final PropertySetter setter = application.getPropertySetterRegistry().getPropertySetter(property);
-
 			try {
 				TransactionalEditingDomain ted = ServiceUtilsForResource.getInstance().getTransactionalEditingDomain(views.get(0).eResource());
 
-				Command applyLayers = new RecordingCommand(ted, "RecordingCommand aggregating the CSS and style applications from a single layer") {
+				RecordingCommand applyLayerCSSCommand = new ApplyLayerCSSCommand(ted, views, propertyName, application, layersStack, "RecordingCommand aggregating the CSS and style applications from a single layer");
 
-					@Override
-					protected void doExecute() {
-						// Walk each view and set the property
-						for (int i = 0; i < views.size(); i++) {
-
-							// set the value from the provided cmds.
-							// Do it if the cmd is not null
-							if (commands != null && commands.get(i) != null) {
-								try {
-									setter.setValue(views.get(i), commands.get(i).getCmdValue());
-								} catch (LayersException e) {
-									// TODO Auto-generated catch block
-									e.printStackTrace();
-								}
-							} else {
-								log.info(this.getClass().getSimpleName() + "ERROR - a cmd is null " + commands);
-							}
-						}
-					}
-				};
-
-				ted.getCommandStack().execute(applyLayers);
+				// ted.getCommandStack().execute(applyLayerCSSCommand);
+				applyLayerCSSCommand.execute();
 
 			} catch (ServiceException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				Activator.log.error("PropertyValueAdded applyLayerCSSCommand has failed", e); //$NON-NLS-1$
 			}
 
 		} catch (NotFoundException e) {
@@ -254,6 +233,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 
 
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void propertyValueRemoved(Notification notification) {
 		if (log.isDebugEnabled()) {
@@ -267,8 +247,10 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 			// Need to recompute the associated views
 			AbstractLayer layer = LayersModelEventUtils.PropertyEvents.getAbstractLayer(notification);
 			List<View> views = layer.getViews();
+			// The views may not be set yet, if any will be
 			if (views.size() == 0) {
-				return;
+				views = layer.getLayersStack().getDiagram().getChildren();
+				// return;
 			}
 
 			checkApplication();
@@ -300,6 +282,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 
 
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void propertyValueChanged(Notification notification) {
 		if (log.isDebugEnabled()) {
@@ -319,58 +302,25 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 
 			// Need to recompute the associated views
 			AbstractLayer layer = LayersModelEventUtils.PropertyEvents.getAbstractLayer(notification);
-			final List<View> views = layer.getViews();
+			List<View> views = layer.getViews();
 			if (views.size() == 0) {
-				return;
+				// The views may not be set yet, if any will be
+				views = layer.getLayersStack().getDiagram().getChildren();
+				// return;
 			}
 
 			checkApplication();
-			final Property property = application.getPropertyRegistry().getProperty(propertyName);
-
-			final List<ComputePropertyValueCommand> commands = layersStack.getViewsComputePropertyValueCommand(views, property);
-			if (commands == null) {
-				return;
-			}
 
 			try {
-				TransactionalEditingDomain ted = ServiceUtilsForResource.getInstance().getTransactionalEditingDomain(views.get(0).eResource());
+				TransactionalEditingDomain ted = ServiceUtilsForResource.getInstance().getTransactionalEditingDomain(layer.getLayersStack().getDiagram().eResource());
 
-				Command applyLayers = new RecordingCommand(ted, "RecordingCommand aggregating the CSS and style applications from a single layer") {
+				RecordingCommand applyLayerCSSChangedCommand = new ApplyLayerCSSChangedCommand(ted, views, propertyName, layer, application, layersStack, "RecordingCommand aggregating the CSS and style applications from a single layer");
 
-					@Override
-					protected void doExecute() {
-						PropertySetter setter;
-						try {
-							setter = application.getPropertySetterRegistry().getPropertySetter(property);
-
-							// Walk each view and set the property
-							for (int i = 0; i < views.size(); i++) {
-
-								// set the value from the provided cmds.
-								// Do it if the cmd is not null
-								if (commands != null && commands.get(i) != null) {
-									try {
-										setter.setValue(views.get(i), commands.get(i).getCmdValue());
-									} catch (LayersException e) {
-										// TODO Auto-generated catch block
-										e.printStackTrace();
-									}
-								} else {
-									log.info(this.getClass().getSimpleName() + "ERROR - a cmd is null " + commands);
-								}
-							}
-						} catch (NotFoundException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-					}
-				};
-
-				ted.getCommandStack().execute(applyLayers);
+				// ted.getCommandStack().execute(applyLayerCSSChangedCommand);
+				applyLayerCSSChangedCommand.execute();
 
 			} catch (ServiceException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				Activator.log.error("PropertyValueChanged applyLayerCSSChangedCommand has failed", e); //$NON-NLS-1$
 			}
 
 		} catch (LayersException e) {
@@ -417,13 +367,18 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 
 
 	private void setVisibility(final AbstractLayer layer) {
-		if (layer.getViews().isEmpty()) {
-			return;
-		}
-		View view = layer.getViews().get(0);
-		Diagram diagram = view.getDiagram();
+		// This used a style in order to apply a specific strategy for 'hiding' elements
+		// Using a dedicated stylesheet removes the need to retreive the views
+		// List<View> views = new ArrayList<View>();
+		// if (layer.getViews().isEmpty()) {
+		// views = diagram.getChildren();
+		// // return;
+		// } else {
+		// views = layer.getViews();
+		// }
+
 		try {
-			final TransactionalEditingDomain ted = ServiceUtilsForResource.getInstance().getTransactionalEditingDomain(view.eResource());
+			final TransactionalEditingDomain ted = ServiceUtilsForResource.getInstance().getTransactionalEditingDomain(diagram.eResource());
 			if (ted == null) {
 				return;
 			}
@@ -432,25 +387,12 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 			CSSClassContentProvider cssccp = new CSSClassContentProvider("*", cssEngine);
 			cssccp.getAvailableClasses();
 
-			RecordingCommand rc = new RecordingCommand(ted, "HideLayerElementsCommand") { ////$NON-NLS-1$
-
-				@Override
-				protected void doExecute() {
-					if (!layer.isLayerEnabled()) {
-						AddCssClassStyleCommand addStyle = new AddCssClassStyleCommand(ted, layer.getViews(), "isDisabled");
-						addStyle.execute();
-					}
-					if (layer.isLayerEnabled()) {
-						RemoveCssClassStyleCommand removeStyle = new RemoveCssClassStyleCommand(ted, layer.getViews(), "isDisabled");
-						removeStyle.execute();
-					}
-				}
-			};
+			RecordingCommand rc = new HideLayerElementsCommand(ted, layer, "HideLayerElementsCommand"); //$NON-NLS-1$
 
 			rc.execute();
+
 		} catch (ServiceException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Activator.log.error("setVisibility hideLayerElementsCommand has failed", e); //$NON-NLS-1$
 		}
 
 	}
@@ -526,6 +468,8 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 
 		// Extract the affected layer
 		AbstractLayer layer = (AbstractLayer) notification.getNewValue();
+		// FIXME The layerStack is not properly set during creation phase. THis should be set elsewhere.
+		layer.setOwningLayersStack(layersStack);
 
 		try {
 			checkApplication();
@@ -569,6 +513,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 	 * @param layer
 	 * @throws LayersException
 	 */
+	@SuppressWarnings("unchecked")
 	private void recomputePropertiesForAllViewsOf(AbstractLayer layer) throws LayersException {
 		// We need the list of affected properties
 		List<Property> properties = layer.getAttachedProperties();
@@ -576,6 +521,8 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 		// We need the list of affected Views.
 		List<View> views = layer.getViews();
 		if (views.size() == 0) {
+			// If no views have been selected it is deemed by default that all should be
+			recompute(this.diagram.getChildren(), properties);
 			return;
 		}
 
@@ -742,8 +689,7 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 				}
 			}
 		} catch (LayersException e) {
-			// TODO Auto-generated catch block
-			log.error(e);
+			Activator.log.error("LayersException upon removind the view from the Layer", e); //$NON-NLS-1$
 		}
 	}
 

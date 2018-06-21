@@ -290,6 +290,11 @@ public class PropertyItemProvider extends FolderElementItemProvider {
 			(createChildParameter
 				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
 				 LayersFactory.eINSTANCE.createCSSInstance()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
+				 LayersFactory.eINSTANCE.createCSSHideInstance()));
 	}
 
 }

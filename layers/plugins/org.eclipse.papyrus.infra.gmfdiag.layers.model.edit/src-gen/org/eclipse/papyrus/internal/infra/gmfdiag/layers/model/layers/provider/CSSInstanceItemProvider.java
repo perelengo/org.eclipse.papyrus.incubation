@@ -22,7 +22,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.StylesheetsFactory;
@@ -58,8 +60,31 @@ public class CSSInstanceItemProvider extends TypeInstanceItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addStylePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Style feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStylePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CSSInstance_style_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_CSSInstance_style_feature", "_UI_CSSInstance_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 LayersPackage.Literals.CSS_INSTANCE__STYLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -111,7 +136,10 @@ public class CSSInstanceItemProvider extends TypeInstanceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CSSInstance_type"); //$NON-NLS-1$
+		String label = ((CSSInstance)object).getStyle();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CSSInstance_type") : //$NON-NLS-1$
+			getString("_UI_CSSInstance_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
 	}
 	
 
@@ -127,6 +155,9 @@ public class CSSInstanceItemProvider extends TypeInstanceItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CSSInstance.class)) {
+			case LayersPackage.CSS_INSTANCE__STYLE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case LayersPackage.CSS_INSTANCE__STYLESHEET:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

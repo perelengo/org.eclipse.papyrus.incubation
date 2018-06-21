@@ -1486,6 +1486,75 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHidePropertySetter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CSSHidePropertySetterItemProvider cssHidePropertySetterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHidePropertySetter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCSSHidePropertySetterAdapter() {
+		if (cssHidePropertySetterItemProvider == null) {
+			cssHidePropertySetterItemProvider = new CSSHidePropertySetterItemProvider(this);
+		}
+
+		return cssHidePropertySetterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CSSHideTypeItemProvider cssHideTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCSSHideTypeAdapter() {
+		if (cssHideTypeItemProvider == null) {
+			cssHideTypeItemProvider = new CSSHideTypeItemProvider(this);
+		}
+
+		return cssHideTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CSSHideInstanceItemProvider cssHideInstanceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCSSHideInstanceAdapter() {
+		if (cssHideInstanceItemProvider == null) {
+			cssHideInstanceItemProvider = new CSSHideInstanceItemProvider(this);
+		}
+
+		return cssHideInstanceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1645,6 +1714,9 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		if (cssPropertySetterItemProvider != null) cssPropertySetterItemProvider.dispose();
 		if (cssTypeItemProvider != null) cssTypeItemProvider.dispose();
 		if (cssInstanceItemProvider != null) cssInstanceItemProvider.dispose();
+		if (cssHidePropertySetterItemProvider != null) cssHidePropertySetterItemProvider.dispose();
+		if (cssHideTypeItemProvider != null) cssHideTypeItemProvider.dispose();
+		if (cssHideInstanceItemProvider != null) cssHideInstanceItemProvider.dispose();
 	}
 
 }

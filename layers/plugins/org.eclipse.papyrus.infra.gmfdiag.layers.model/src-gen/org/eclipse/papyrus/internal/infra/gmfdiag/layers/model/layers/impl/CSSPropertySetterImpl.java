@@ -4,10 +4,7 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
-
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -17,16 +14,11 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.StringListValueStyle;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
-import org.eclipse.papyrus.infra.emf.utils.EMFHelper;
 import org.eclipse.papyrus.infra.emf.utils.ServiceUtilsForResource;
 import org.eclipse.papyrus.infra.gmfdiag.css.notation.CSSDiagram;
 import org.eclipse.papyrus.infra.gmfdiag.css.notation.CSSStyles;
-import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.AddAllCSSStyleSheetCommand;
-import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.AddAllModelStyleSheetCommand;
 import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.AddCSSStyleSheetCommand;
 import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.AddCssClassStyleCommand;
-import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.RemoveAllCSSStyleSheetValueCommand;
-import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.RemoveCSSStyleSheetCommand;
 import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.EmbeddedStyleSheet;
 import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.StyleSheet;
 import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.StyleSheetReference;
@@ -118,6 +110,9 @@ public class CSSPropertySetterImpl extends PropertySetterImpl implements CSSProp
 				String ssPath = ((StyleSheetReference) ss).getPath();
 				if (sheetPath.equals(ssPath)) {
 					sheetIsApplied = true;
+					// There may be discrepancies in the memory addresses between the layer's CSS and the model's
+					// Always revert to the model's CSS as it is the one being used
+					sheet = ss;
 					break;
 				}
 			}

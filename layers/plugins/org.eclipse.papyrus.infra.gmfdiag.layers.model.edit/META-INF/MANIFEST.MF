@@ -22,6 +22,6 @@ Bundle-Version: 0.7.0.qualifier
 Bundle-Name: %pluginName
 Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
-Bundle-Activator: org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.provider.LayersConfigEditPlugin$Implementation$Activator
+Bundle-Activator: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.LayersEditPlugin$Implementation$Activator
 Bundle-SymbolicName: org.eclipse.papyrus.infra.gmfdiag.layers.model.edit;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

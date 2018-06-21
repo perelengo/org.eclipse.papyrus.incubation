@@ -546,6 +546,33 @@ public interface LayersFactory extends EFactory {
 	CSSInstance createCSSInstance();
 
 	/**
+	 * Returns a new object of class '<em>CSS Hide Property Setter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>CSS Hide Property Setter</em>'.
+	 * @generated
+	 */
+	CSSHidePropertySetter createCSSHidePropertySetter();
+
+	/**
+	 * Returns a new object of class '<em>CSS Hide Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>CSS Hide Type</em>'.
+	 * @generated
+	 */
+	CSSHideType createCSSHideType();
+
+	/**
+	 * Returns a new object of class '<em>CSS Hide Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>CSS Hide Instance</em>'.
+	 * @generated
+	 */
+	CSSHideInstance createCSSHideInstance();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -30,6 +30,10 @@ public class LayersWidgetPropertyTester extends PropertyTester {
 
 	private static final String CAN_ATTACH_PROPERTIES = "canAttachProperties"; //$NON-NLS-1$
 
+	private static final String CAN_ATTACH_CSS = "canAttachCSS"; //$NON-NLS-1$
+
+	private static final String CAN_ATTACH_CSS_HIDE = "canAttachCSSHide"; //$NON-NLS-1$
+
 	private static final String CAN_ATTACH_VIEWS = "canAttachViews"; //$NON-NLS-1$
 
 
@@ -47,6 +51,10 @@ public class LayersWidgetPropertyTester extends PropertyTester {
 
 		// TODO these cases should be handled better, e.g. directly through the plugin.xml filters
 		if (CAN_ATTACH_PROPERTIES.equals(property)) {
+			return layerMenu(receiver);
+		} else if (CAN_ATTACH_CSS.equals(property)) {
+			return layerMenu(receiver);
+		} else if (CAN_ATTACH_CSS_HIDE.equals(property)) {
 			return layerMenu(receiver);
 		} else if (CAN_ATTACH_VIEWS.equals(property)) {
 			return layerMenu(receiver);

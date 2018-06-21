@@ -12,21 +12,6 @@
             restorable="true">
       </view>
    </extension>
-   <!--extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            locationURI="toolbar:org.eclipse.ui.main.toolbar">
-         <toolbar
-               id="org.eclipse.papyrus.diagram.ui.toolbar">
-            <command
-                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.selectAssociatedElement"
-                  label="Select Associated Elements"
-                  style="push"
-                  tooltip="Select all elements associated to the current layer">
-            </command>
-         </toolbar>
-      </menuContribution>
-   </extension-->
    <extension
          point="org.eclipse.ui.commands">
       <command
@@ -45,41 +30,18 @@
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createlayer"
             name="Create Basic Layer">
       </command>
-      <!--command
-            id="org.eclipse.papyrus.layers.ui.commands.createregexplayer"
-            name="Create RegExp Layer">
+      <command
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachCSSToLayer"
+            name="Attach a StyleSheet to a Layer">
       </command>
       <command
-            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createtoplayeroperator"
-            name="Create Top Layer Operator">
-      </command>
-      <command
-            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createstackedLayerOperator"
-            name="Create Stacked Layer Operator">
-      </command>
-      <command
-            id="org.eclipse.papyrus.layers.ui.commands.attachPropertyToLayer"
-            name="Attach a Property to a Layer">
-      </command-->
-      <command
-            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachPropertiesToLayer"
-            name="Attach Properties to a Layer">
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachCSSHideToLayer"
+            name="Attach a Disable StyleSheet to a Layer">
       </command>
       <command
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachDiagramViewsToLayer"
             name="Attach Multiple Diagram Views to a Layer">
       </command>
-      <!--command
-            defaultHandler="org.eclipse.papyrus.layers.ui.commands.CreateLayerOperatorsFromParameter"
-            id="org.eclipse.papyrus.layers.ui.commands.createLayerOperator"
-            name="Create LayerOperators">
-         <commandParameter
-               id="org.eclipse.papyrus.layers.ui.createLayerOperator.parameters"
-               name="name"
-               optional="true"
-               values="org.eclipse.papyrus.layers.ui.commands.LayerOperatorsParameterValues">
-         </commandParameter>
-      </command-->
       <command
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview"
             name="Open Layers Explorer">
@@ -96,10 +58,6 @@
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.showmenus"
             name="Show Menus">
       </command>
-      <!--command
-            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createallviewsderivedlayer"
-            name="Create All View Derived Layer">
-      </command-->
    </extension>
    <extension
          name="Layers"
@@ -116,25 +74,13 @@
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.handlers.CreateLayerHandler"
             commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createlayer">
       </handler>
-      <!--handler
-            class="org.eclipse.papyrus.layers.ui.commands.CreateRegExpLayerHandler"
-            commandId="org.eclipse.papyrus.layers.ui.commands.createregexplayer">
+      <handler
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.commands.AttachCSSToLayer"
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachCSSToLayer">
       </handler>
       <handler
-            class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.CreateTopLayerOperatorHandler"
-            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createtoplayeroperator">
-      </handler>
-      <handler
-            class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.CreateStackedLayerOperatorHandler"
-            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createstackedLayerOperator">
-      </handler>
-      <handler
-            class="org.eclipse.papyrus.layers.ui.commands.AttachPropertyToLayer"
-            commandId="org.eclipse.papyrus.layers.ui.commands.attachPropertyToLayer">
-      </handler-->
-      <handler
-            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.commands.AttachPropertyFromListToLayer"
-            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachPropertiesToLayer">
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.commands.AttachCSSHideToLayer"
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachCSSHideToLayer">
       </handler>
       <handler
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.commands.AttachDiagramViewsToLayer"
@@ -160,10 +106,6 @@
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.handlers.ShowItemHandler"
             commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.showmenus">
       </handler>
-      <!--handler
-            class="org.eclipse.papyrus.infra.gmfdiag.layers.ui.handlers.CreateAllViewsDerivedLayerHandler"
-            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createallviewsderivedlayer">
-      </handler-->
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -194,10 +136,6 @@
       <menuContribution
             allPopups="false"
             locationURI="popup:org.eclipse.papyrus.infra.gmfdiag.layers.ui.popupmenu">
-            <!--locationURI="popup:org.eclipse.papyrus.infra.gmfdiag.layers.diagram.ui.contextmenu"-->
-         <!--menu
-               label="Create Layers ..."
-               tooltip="Create a new leaf layers"-->
             <command
                   commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createlayer"
                   label="Create Layer"
@@ -217,76 +155,11 @@
 	              </and>
 	           </visibleWhen>
             </command>
-            <!--command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.createregexplayer"
-                  label="Create RegExp  Layer"
-                  style="push"
-                  tooltip="Create a RegExp  Layer">
-            </command>
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.createallviewsderivedlayer"
-                  label="Create AllViews Layer"
-                  style="push"
-                  tooltip="Create a All Views Derived Layer">
-            </command-->
-         <!--/menu-->
-         <!--menu
-               commandId="org.eclipse.papyrus.layers.ui.commands.createLayerOperator"
-               id="org.eclipse.papyrus.layers.explorer.contextmenu.operators"
-               label="Create Operators ..."
-               tooltip="Create a new layer operators">
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.createLayerOperator"
-                  label="Create Stacked Layers"
-                  style="push"
-                  tooltip="Create a new Stacked Layers Operator">
-               <parameter
-                     name="org.eclipse.papyrus.layers.ui.createLayerOperator.parameters"
-                     value="stackedLayersOperator">
-               </parameter>
-            </command>
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.createtoplayeroperator"
-                  label="Create Top Layers"
-                  style="push"
-                  tooltip="Create a new Top Layers Operator">
-            </command>
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.createLayerOperator"
-                  label="Create Minimum Stacked Layers"
-                  style="push"
-                  tooltip="Create a new Stacked Layers with Operators of type &apos;Minimum&apos; ">
-               <parameter
-                     name="org.eclipse.papyrus.layers.ui.createLayerOperator.parameters"
-                     value="stackedLayersOperatorMinimum">
-               </parameter>
-            </command>
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.createLayerOperator"
-                  label="Create Maximum Stacked Layers"
-                  style="push"
-                  tooltip="Create a new Stacked Layers with Operators of type &apos;Maximum&apos; ">
-               <parameter
-                     name="org.eclipse.papyrus.layers.ui.createLayerOperator.parameters"
-                     value="stackedLayersOperatorMaximum">
-               </parameter>
-            </command>
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.createLayerOperator"
-                  label="Create Average Stacked Layers"
-                  style="push"
-                  tooltip="Create a new Stacked Layers with Operators of type &apos;Average&apos; ">
-               <parameter
-                     name="org.eclipse.papyrus.layers.ui.createLayerOperator.parameters"
-                     value="stackedLayersOperatorAverage">
-               </parameter>
-            </command>
-         </menu-->
          <command
-               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachPropertiesToLayer"
-               label="Attach Properties"
+               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachCSSToLayer"
+               label="Attach StyleSheet"
                style="push"
-               tooltip="Attach Properties to a Layer">
+               tooltip="Attach a StyleSheet to a Layer">
             <visibleWhen
                   checkEnabled="false">
                <and>
@@ -294,7 +167,26 @@
                         variable="selection">
                      <test
                            forcePluginActivation="true"
-                           property="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester.canAttachProperties"
+                           property="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester.canAttachCSS"
+                           value="true">
+                     </test>
+                  </with>
+               </and>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachCSSHideToLayer"
+               label="Attach Disable StyleSheet"
+               style="push"
+               tooltip="Attach a Disable StyleSheet to a Layer">
+            <visibleWhen
+                  checkEnabled="false">
+               <and>
+                  <with
+                        variable="selection">
+                     <test
+                           forcePluginActivation="true"
+                           property="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester.canAttachCSSHide"
                            value="true">
                      </test>
                   </with>
@@ -340,43 +232,10 @@
                </and>
             </visibleWhen>
          </command>
-         <!--command
-               commandId="org.eclipse.papyrus.layers.ui.commands.attachitemselectedindiagramtocurrentlayer"
-               label="Attach Selected Views to Layer"
-               style="push"
-               tooltip="Attach selected views to the layer selected in the LayersExplorer">
-         </command>
-         <command
-               commandId="org.eclipse.papyrus.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer"
-               label="Remove Selected Views from Layer"
-               style="push"
-               tooltip="Remove selected views from the layer selected in the LayersExplorer">
-         </command-->
-         <!--separator
-               name="endseparator"
-               visible="true">
-         </separator>
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.attachLayerStack"
-                  label="Attach Layer Stack"
-                  style="push"
-                  tooltip="Attach a Layer Stack to the diagram">
-            </command>
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.detachLayerStack"
-                  label="Detach Layer Stack"
-                  style="push"
-                  tooltip="Detach a Layer Stack to the diagram">
-            </command-->
          <separator
                name="endseparator"
                visible="false">
          </separator>
-         <!--command
-               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.showmenus"
-               label="Show Selected Item"
-               style="push">
-         </command-->
       </menuContribution>
       <menuContribution
             locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
@@ -400,18 +259,6 @@
                   style="push"
                   tooltip="Open the Layers Explorer View">
             </command>
-            <!--command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.attachitemselectedindiagramtocurrentlayer"
-                  label="Attach Views to Current Layer"
-                  style="push"
-                  tooltip="Attach selected views to the layer currently selected in the LayersExplorer">
-            </command>
-            <command
-                  commandId="org.eclipse.papyrus.layers.ui.commands.removeitemselectedindiagramfromcurrentlayer"
-                  label="Remove Views from Current Layer"
-                  style="push"
-                  tooltip="Remove selected views from the layer currently selected in the LayersExplorer">
-            </command-->
          </menu>
       </menuContribution>
    </extension>
@@ -428,7 +275,7 @@
           class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.utils.LayersWidgetPropertyTester"
           id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester"
           namespace="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester"
-          properties="canCreateLayer, canAttachProperties, canAttachViews, canDeleteLayer"
+          properties="canCreateLayer, canAttachProperties, canAttachCSS, canAttachCSSHide, canAttachViews, canDeleteLayer"
           type="org.eclipse.jface.viewers.IStructuredSelection">
     </propertyTester>
     </extension>

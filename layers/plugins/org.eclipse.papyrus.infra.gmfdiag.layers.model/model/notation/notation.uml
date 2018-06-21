@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
   <uml:Model xmi:id="_AziHILcnEeKeLJDBCBPhPw" name="notation" URI="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
     <packagedElement xmi:type="uml:Class" xmi:id="_AziHIbcnEeKeLJDBCBPhPw" name="Edge">
       <generalization xmi:id="_AziHIrcnEeKeLJDBCBPhPw" general="_AziHOrcnEeKeLJDBCBPhPw"/>
@@ -153,7 +153,7 @@
     <packagedElement xmi:type="uml:Association" xmi:id="_AziHeLcnEeKeLJDBCBPhPw" memberEnd="_AziHcLcnEeKeLJDBCBPhPw _AziHebcnEeKeLJDBCBPhPw">
       <ownedEnd xmi:id="_AziHebcnEeKeLJDBCBPhPw" type="_AziHbrcnEeKeLJDBCBPhPw" association="_AziHeLcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziHercnEeKeLJDBCBPhPw" clientDependency="_AziHfbcnEeKeLJDBCBPhPw" name="NamedStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziHercnEeKeLJDBCBPhPw" name="NamedStyle">
       <ownedAttribute xmi:id="_AziHe7cnEeKeLJDBCBPhPw" name="name" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziHfLcnEeKeLJDBCBPhPw"/>
@@ -229,7 +229,7 @@
     <packagedElement xmi:type="uml:Association" xmi:id="_AziHqrcnEeKeLJDBCBPhPw" memberEnd="_AziHKbcnEeKeLJDBCBPhPw _AziHq7cnEeKeLJDBCBPhPw">
       <ownedEnd xmi:id="_AziHq7cnEeKeLJDBCBPhPw" type="_AziHIbcnEeKeLJDBCBPhPw" association="_AziHqrcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziHrLcnEeKeLJDBCBPhPw" clientDependency="_AziHtbcnEeKeLJDBCBPhPw" name="FillStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziHrLcnEeKeLJDBCBPhPw" name="FillStyle">
       <ownedAttribute xmi:id="_AziHrbcnEeKeLJDBCBPhPw" name="fillColor" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziHrrcnEeKeLJDBCBPhPw"/>
@@ -250,7 +250,7 @@
       <interfaceRealization xmi:id="_AziHtbcnEeKeLJDBCBPhPw" client="_AziHrLcnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_AziHtrcnEeKeLJDBCBPhPw" name="GradientData"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziHt7cnEeKeLJDBCBPhPw" clientDependency="_AziHvrcnEeKeLJDBCBPhPw" name="LineStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziHt7cnEeKeLJDBCBPhPw" name="LineStyle">
       <ownedAttribute xmi:id="_AziHuLcnEeKeLJDBCBPhPw" name="lineColor" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziHubcnEeKeLJDBCBPhPw"/>
@@ -267,7 +267,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_AziHvrcnEeKeLJDBCBPhPw" client="_AziHt7cnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziHv7cnEeKeLJDBCBPhPw" clientDependency="_AziH1bcnEeKeLJDBCBPhPw" name="FontStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziHv7cnEeKeLJDBCBPhPw" name="FontStyle">
       <ownedAttribute xmi:id="_AziHwLcnEeKeLJDBCBPhPw" name="fontColor" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziHwbcnEeKeLJDBCBPhPw"/>
@@ -319,7 +319,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_AziH1bcnEeKeLJDBCBPhPw" client="_AziHv7cnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziH1rcnEeKeLJDBCBPhPw" clientDependency="_AziH2rcnEeKeLJDBCBPhPw" name="TitleStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziH1rcnEeKeLJDBCBPhPw" name="TitleStyle">
       <ownedAttribute xmi:id="_AziH17cnEeKeLJDBCBPhPw" name="showTitle" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziH2LcnEeKeLJDBCBPhPw"/>
@@ -329,7 +329,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_AziH2rcnEeKeLJDBCBPhPw" client="_AziH1rcnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziH27cnEeKeLJDBCBPhPw" clientDependency="_AziH5LcnEeKeLJDBCBPhPw" name="SortingStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziH27cnEeKeLJDBCBPhPw" name="SortingStyle">
       <ownedAttribute xmi:id="_AziH3LcnEeKeLJDBCBPhPw" name="sorting" visibility="public" type="_AziH5bcnEeKeLJDBCBPhPw" isOrdered="true">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziH3bcnEeKeLJDBCBPhPw"/>
         <defaultValue xmi:type="uml:InstanceValue" xmi:id="_AziH3rcnEeKeLJDBCBPhPw" type="_AziH5bcnEeKeLJDBCBPhPw" instance="_AziH5rcnEeKeLJDBCBPhPw"/>
@@ -353,7 +353,7 @@
     <packagedElement xmi:type="uml:Association" xmi:id="_AziH6rcnEeKeLJDBCBPhPw" memberEnd="_AziH4bcnEeKeLJDBCBPhPw _AziH67cnEeKeLJDBCBPhPw">
       <ownedEnd xmi:id="_AziH67cnEeKeLJDBCBPhPw" type="_AziH27cnEeKeLJDBCBPhPw" association="_AziH6rcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziH7LcnEeKeLJDBCBPhPw" clientDependency="_AziH8LcnEeKeLJDBCBPhPw" name="DescriptionStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziH7LcnEeKeLJDBCBPhPw" name="DescriptionStyle">
       <ownedAttribute xmi:id="_AziH7bcnEeKeLJDBCBPhPw" name="description" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziH7rcnEeKeLJDBCBPhPw"/>
@@ -363,7 +363,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_AziH8LcnEeKeLJDBCBPhPw" client="_AziH7LcnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziH8bcnEeKeLJDBCBPhPw" clientDependency="_AziH-LcnEeKeLJDBCBPhPw" name="Size">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziH8bcnEeKeLJDBCBPhPw" name="Size">
       <ownedAttribute xmi:id="_AziH8rcnEeKeLJDBCBPhPw" name="width" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziH87cnEeKeLJDBCBPhPw"/>
@@ -380,7 +380,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_AziH-LcnEeKeLJDBCBPhPw" client="_AziH8bcnEeKeLJDBCBPhPw" supplier="_AziHd7cnEeKeLJDBCBPhPw" contract="_AziHd7cnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziH-bcnEeKeLJDBCBPhPw" clientDependency="_AziIALcnEeKeLJDBCBPhPw" name="Location">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziH-bcnEeKeLJDBCBPhPw" name="Location">
       <ownedAttribute xmi:id="_AziH-rcnEeKeLJDBCBPhPw" name="x" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziH-7cnEeKeLJDBCBPhPw"/>
@@ -401,7 +401,7 @@
       <generalization xmi:id="_AziIArcnEeKeLJDBCBPhPw" general="_AziH-bcnEeKeLJDBCBPhPw"/>
       <generalization xmi:id="_AziIA7cnEeKeLJDBCBPhPw" general="_AziH8bcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIBLcnEeKeLJDBCBPhPw" clientDependency="_AziICLcnEeKeLJDBCBPhPw" name="Ratio">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIBLcnEeKeLJDBCBPhPw" name="Ratio">
       <ownedAttribute xmi:id="_AziIBbcnEeKeLJDBCBPhPw" name="value" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIBrcnEeKeLJDBCBPhPw"/>
@@ -416,7 +416,7 @@
       <ownedLiteral xmi:id="_AziIC7cnEeKeLJDBCBPhPw" name="Manual"/>
       <ownedLiteral xmi:id="_AziIDLcnEeKeLJDBCBPhPw" name="Automatic"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIDbcnEeKeLJDBCBPhPw" clientDependency="_AziIEbcnEeKeLJDBCBPhPw" name="IdentityAnchor">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIDbcnEeKeLJDBCBPhPw" name="IdentityAnchor">
       <ownedAttribute xmi:id="_AziIDrcnEeKeLJDBCBPhPw" name="id" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziID7cnEeKeLJDBCBPhPw"/>
@@ -488,7 +488,7 @@
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIO7cnEeKeLJDBCBPhPw" clientDependency="_AziIP7cnEeKeLJDBCBPhPw" name="RoundedCornersStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIO7cnEeKeLJDBCBPhPw" name="RoundedCornersStyle">
       <ownedAttribute xmi:id="_AziIPLcnEeKeLJDBCBPhPw" name="roundedBendpointsRadius" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIPbcnEeKeLJDBCBPhPw"/>
@@ -498,7 +498,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_AziIP7cnEeKeLJDBCBPhPw" client="_AziIO7cnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIQLcnEeKeLJDBCBPhPw" clientDependency="_AziIQ7cnEeKeLJDBCBPhPw" name="RelativeBendpoints">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIQLcnEeKeLJDBCBPhPw" name="RelativeBendpoints">
       <ownedAttribute xmi:id="_AziIQbcnEeKeLJDBCBPhPw" name="points" visibility="public" type="_AziIRLcnEeKeLJDBCBPhPw" isOrdered="true">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIQrcnEeKeLJDBCBPhPw"/>
       </ownedAttribute>
@@ -511,7 +511,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIR7cnEeKeLJDBCBPhPw"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziISLcnEeKeLJDBCBPhPw" clientDependency="_AziITLcnEeKeLJDBCBPhPw" name="CanonicalStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziISLcnEeKeLJDBCBPhPw" name="CanonicalStyle">
       <ownedAttribute xmi:id="_AziISbcnEeKeLJDBCBPhPw" name="canonical" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziISrcnEeKeLJDBCBPhPw"/>
@@ -532,7 +532,7 @@
       <generalization xmi:id="_AziIVLcnEeKeLJDBCBPhPw" general="_AziIJLcnEeKeLJDBCBPhPw"/>
       <generalization xmi:id="_AziIVbcnEeKeLJDBCBPhPw" general="_AziHt7cnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIVrcnEeKeLJDBCBPhPw" clientDependency="_AziIY7cnEeKeLJDBCBPhPw" name="PageStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIVrcnEeKeLJDBCBPhPw" name="PageStyle">
       <ownedAttribute xmi:id="_AziIV7cnEeKeLJDBCBPhPw" name="pageX" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIWLcnEeKeLJDBCBPhPw"/>
@@ -563,7 +563,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_AziIY7cnEeKeLJDBCBPhPw" client="_AziIVrcnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIZLcnEeKeLJDBCBPhPw" clientDependency="_AziIaLcnEeKeLJDBCBPhPw" name="DrawerStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIZLcnEeKeLJDBCBPhPw" name="DrawerStyle">
       <ownedAttribute xmi:id="_AziIZbcnEeKeLJDBCBPhPw" name="collapsed" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIZrcnEeKeLJDBCBPhPw"/>
@@ -573,7 +573,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_AziIaLcnEeKeLJDBCBPhPw" client="_AziIZLcnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIabcnEeKeLJDBCBPhPw" clientDependency="_AziIcLcnEeKeLJDBCBPhPw" name="GuideStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIabcnEeKeLJDBCBPhPw" name="GuideStyle">
       <ownedAttribute xmi:id="_AziIarcnEeKeLJDBCBPhPw" name="horizontalGuides" type="_AziIcbcnEeKeLJDBCBPhPw" isOrdered="true" aggregation="composite" association="_AziIh7cnEeKeLJDBCBPhPw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIa7cnEeKeLJDBCBPhPw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AziIbLcnEeKeLJDBCBPhPw" value="*"/>
@@ -623,7 +623,7 @@
     <packagedElement xmi:type="uml:Association" xmi:id="_AziIibcnEeKeLJDBCBPhPw" memberEnd="_AziIbbcnEeKeLJDBCBPhPw _AziIircnEeKeLJDBCBPhPw">
       <ownedEnd xmi:id="_AziIircnEeKeLJDBCBPhPw" type="_AziIabcnEeKeLJDBCBPhPw" association="_AziIibcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIi7cnEeKeLJDBCBPhPw" clientDependency="_AziIlLcnEeKeLJDBCBPhPw" name="FilteringStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIi7cnEeKeLJDBCBPhPw" name="FilteringStyle">
       <ownedAttribute xmi:id="_AziIjLcnEeKeLJDBCBPhPw" name="filtering" visibility="public" type="_AziICbcnEeKeLJDBCBPhPw" isOrdered="true">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIjbcnEeKeLJDBCBPhPw"/>
         <defaultValue xmi:type="uml:InstanceValue" xmi:id="_AziIjrcnEeKeLJDBCBPhPw" type="_AziICbcnEeKeLJDBCBPhPw" instance="_AziICrcnEeKeLJDBCBPhPw"/>
@@ -651,7 +651,7 @@
       <generalization xmi:id="_AziInbcnEeKeLJDBCBPhPw" general="_AziIabcnEeKeLJDBCBPhPw"/>
       <generalization xmi:id="_AziInrcnEeKeLJDBCBPhPw" general="_AziH7LcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziIn7cnEeKeLJDBCBPhPw" clientDependency="_AziIp7cnEeKeLJDBCBPhPw" name="ImageStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziIn7cnEeKeLJDBCBPhPw" name="ImageStyle">
       <ownedAttribute xmi:id="_AziIoLcnEeKeLJDBCBPhPw" name="antiAlias" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBooleanObject"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziIobcnEeKeLJDBCBPhPw"/>
@@ -771,7 +771,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziI3rcnEeKeLJDBCBPhPw"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AziI37cnEeKeLJDBCBPhPw" clientDependency="_AziI5LcnEeKeLJDBCBPhPw" name="PropertyValue">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AziI37cnEeKeLJDBCBPhPw" name="PropertyValue">
       <ownedAttribute xmi:id="_AziI4LcnEeKeLJDBCBPhPw" name="rawValue" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AziI4bcnEeKeLJDBCBPhPw"/>
@@ -850,7 +850,7 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4KLcnEeKeLJDBCBPhPw" clientDependency="_Azr4LLcnEeKeLJDBCBPhPw" name="DataTypeStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4KLcnEeKeLJDBCBPhPw" name="DataTypeStyle">
       <generalization xmi:id="_Azr4KbcnEeKeLJDBCBPhPw" general="_AziHercnEeKeLJDBCBPhPw"/>
       <ownedAttribute xmi:id="_Azr4KrcnEeKeLJDBCBPhPw" name="instanceType" isOrdered="true" association="_Azr4LbcnEeKeLJDBCBPhPw">
         <type xmi:type="uml:Class" href="ecore.uml#_A45J37cnEeKeLJDBCBPhPw"/>
@@ -957,7 +957,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Azr4aLcnEeKeLJDBCBPhPw" value="*"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4abcnEeKeLJDBCBPhPw" clientDependency="_Azr4bbcnEeKeLJDBCBPhPw" name="HintedDiagramLinkStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4abcnEeKeLJDBCBPhPw" name="HintedDiagramLinkStyle">
       <generalization xmi:id="_Azr4arcnEeKeLJDBCBPhPw" general="_Azr4brcnEeKeLJDBCBPhPw"/>
       <ownedAttribute xmi:id="_Azr4a7cnEeKeLJDBCBPhPw" name="hint" visibility="public" isOrdered="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
@@ -965,7 +965,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_Azr4bbcnEeKeLJDBCBPhPw" client="_Azr4abcnEeKeLJDBCBPhPw" supplier="_AziHbbcnEeKeLJDBCBPhPw" contract="_AziHbbcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4brcnEeKeLJDBCBPhPw" clientDependency="_Azr4cbcnEeKeLJDBCBPhPw" name="DiagramLinkStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4brcnEeKeLJDBCBPhPw" name="DiagramLinkStyle">
       <ownedAttribute xmi:id="_Azr4b7cnEeKeLJDBCBPhPw" name="diagramLink" type="_AziHhrcnEeKeLJDBCBPhPw" isOrdered="true" association="_Azr4crcnEeKeLJDBCBPhPw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Azr4cLcnEeKeLJDBCBPhPw"/>
       </ownedAttribute>
@@ -974,7 +974,7 @@
     <packagedElement xmi:type="uml:Association" xmi:id="_Azr4crcnEeKeLJDBCBPhPw" memberEnd="_Azr4b7cnEeKeLJDBCBPhPw _Azr4c7cnEeKeLJDBCBPhPw">
       <ownedEnd xmi:id="_Azr4c7cnEeKeLJDBCBPhPw" type="_Azr4brcnEeKeLJDBCBPhPw" association="_Azr4crcnEeKeLJDBCBPhPw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4dLcnEeKeLJDBCBPhPw" clientDependency="_Azr4eLcnEeKeLJDBCBPhPw" name="MultiDiagramLinkStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4dLcnEeKeLJDBCBPhPw" name="MultiDiagramLinkStyle">
       <ownedAttribute xmi:id="_Azr4dbcnEeKeLJDBCBPhPw" name="diagramLinks" type="_AziHhrcnEeKeLJDBCBPhPw" isOrdered="true" association="_Azr4ebcnEeKeLJDBCBPhPw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Azr4drcnEeKeLJDBCBPhPw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Azr4d7cnEeKeLJDBCBPhPw" value="*"/>
@@ -989,7 +989,7 @@
       <ownedLiteral xmi:id="_Azr4fbcnEeKeLJDBCBPhPw" name="Right"/>
       <ownedLiteral xmi:id="_Azr4frcnEeKeLJDBCBPhPw" name="Center"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4f7cnEeKeLJDBCBPhPw" clientDependency="_Azr4g7cnEeKeLJDBCBPhPw" name="TextStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4f7cnEeKeLJDBCBPhPw" name="TextStyle">
       <ownedAttribute xmi:id="_Azr4gLcnEeKeLJDBCBPhPw" name="textAlignment" visibility="public" type="_Azr4e7cnEeKeLJDBCBPhPw" isOrdered="true">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Azr4gbcnEeKeLJDBCBPhPw"/>
         <defaultValue xmi:type="uml:InstanceValue" xmi:id="_Azr4grcnEeKeLJDBCBPhPw" type="_Azr4e7cnEeKeLJDBCBPhPw" instance="_Azr4fLcnEeKeLJDBCBPhPw"/>
@@ -1004,7 +1004,7 @@
       <ownedLiteral xmi:id="_Azr4ibcnEeKeLJDBCBPhPw" name="DashDotDot"/>
       <ownedLiteral xmi:id="_Azr4ircnEeKeLJDBCBPhPw" name="Double"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4i7cnEeKeLJDBCBPhPw" clientDependency="_Azr4j7cnEeKeLJDBCBPhPw" name="LineTypeStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4i7cnEeKeLJDBCBPhPw" name="LineTypeStyle">
       <ownedAttribute xmi:id="_Azr4jLcnEeKeLJDBCBPhPw" name="lineType" visibility="public" type="_Azr4hLcnEeKeLJDBCBPhPw" isOrdered="true">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Azr4jbcnEeKeLJDBCBPhPw"/>
         <defaultValue xmi:type="uml:InstanceValue" xmi:id="_Azr4jrcnEeKeLJDBCBPhPw" type="_Azr4hLcnEeKeLJDBCBPhPw" instance="_Azr4hbcnEeKeLJDBCBPhPw"/>
@@ -1016,7 +1016,7 @@
       <ownedLiteral xmi:id="_Azr4krcnEeKeLJDBCBPhPw" name="OpenArrow"/>
       <ownedLiteral xmi:id="_Azr4k7cnEeKeLJDBCBPhPw" name="SolidArrow"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4lLcnEeKeLJDBCBPhPw" clientDependency="_Azr4m7cnEeKeLJDBCBPhPw" name="ArrowStyle">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Azr4lLcnEeKeLJDBCBPhPw" name="ArrowStyle">
       <ownedAttribute xmi:id="_Azr4lbcnEeKeLJDBCBPhPw" name="arrowSource" visibility="public" type="_Azr4kLcnEeKeLJDBCBPhPw" isOrdered="true">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Azr4lrcnEeKeLJDBCBPhPw"/>
         <defaultValue xmi:type="uml:InstanceValue" xmi:id="_Azr4l7cnEeKeLJDBCBPhPw" type="_Azr4kLcnEeKeLJDBCBPhPw" instance="_Azr4kbcnEeKeLJDBCBPhPw"/>

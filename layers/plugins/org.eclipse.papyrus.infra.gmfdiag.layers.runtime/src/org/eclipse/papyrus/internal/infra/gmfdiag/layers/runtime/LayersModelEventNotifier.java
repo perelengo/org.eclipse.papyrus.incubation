@@ -167,6 +167,38 @@ public class LayersModelEventNotifier {
 				}
 
 			}
+			// Check CSS addition/deletion
+			else if (notification.getFeature() == LayersPackage.eINSTANCE.getCSSInstance_Stylesheet()) {
+				firePropertyValueChanged(notification);
+				// switch (notification.getEventType()) {
+				// case Notification.ADD: {
+				// firePropertyValueAddedEvent(notification);
+				// break;
+				// }
+				// case Notification.REMOVE: {
+				// firePropertyValueRemoved(notification);
+				// break;
+				// }
+				// default:
+				// break;
+				// }
+			}
+			// Check CSSHide addition/deletion
+			else if (notification.getFeature() == LayersPackage.eINSTANCE.getCSSHideInstance_Stylesheet()) {
+				firePropertyValueChanged(notification);
+				// switch (notification.getEventType()) {
+				// case Notification.ADD: {
+				// firePropertyValueAddedEvent(notification);
+				// break;
+				// }
+				// case Notification.REMOVE: {
+				// firePropertyValueRemoved(notification);
+				// break;
+				// }
+				// default:
+				// break;
+				// }
+			}
 			// Check if the isLayerEnabled is modified
 			// sources: LayerExpression::IsLayerEnabled
 			else if (notification.getFeature() == LayersPackage.eINSTANCE.getLayerExpression_IsLayerEnabled()) {
@@ -200,6 +232,8 @@ public class LayersModelEventNotifier {
 					case Notification.REMOVE:
 						// An instance value is set
 						firePropertyValueChanged(notification);
+						break;
+					default:
 						break;
 					}
 				} catch (NotFoundException e) {

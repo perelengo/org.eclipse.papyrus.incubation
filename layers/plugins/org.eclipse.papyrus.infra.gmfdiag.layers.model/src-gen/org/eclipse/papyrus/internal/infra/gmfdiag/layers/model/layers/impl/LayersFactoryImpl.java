@@ -132,6 +132,9 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 			case LayersPackage.CSS_PROPERTY_SETTER: return createCSSPropertySetter();
 			case LayersPackage.CSS_TYPE: return createCSSType();
 			case LayersPackage.CSS_INSTANCE: return createCSSInstance();
+			case LayersPackage.CSS_HIDE_PROPERTY_SETTER: return createCSSHidePropertySetter();
+			case LayersPackage.CSS_HIDE_TYPE: return createCSSHideType();
+			case LayersPackage.CSS_HIDE_INSTANCE: return createCSSHideInstance();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -873,6 +876,36 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	public CSSInstance createCSSInstance() {
 		CSSInstanceImpl cssInstance = new CSSInstanceImpl();
 		return cssInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CSSHidePropertySetter createCSSHidePropertySetter() {
+		CSSHidePropertySetterImpl cssHidePropertySetter = new CSSHidePropertySetterImpl();
+		return cssHidePropertySetter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CSSHideType createCSSHideType() {
+		CSSHideTypeImpl cssHideType = new CSSHideTypeImpl();
+		return cssHideType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CSSHideInstance createCSSHideInstance() {
+		CSSHideInstanceImpl cssHideInstance = new CSSHideInstanceImpl();
+		return cssHideInstance;
 	}
 
 	/**

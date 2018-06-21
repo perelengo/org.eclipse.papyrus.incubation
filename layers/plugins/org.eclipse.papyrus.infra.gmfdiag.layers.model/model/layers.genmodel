@@ -475,5 +475,12 @@
           createChild="true" ecoreFeature="ecore:EReference layers.ecore#//CSSInstance/stylesheet"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CSSInstance/style"/>
     </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSHidePropertySetter"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSHideType"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSHideInstance">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference layers.ecore#//CSSHideInstance/stylesheet"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CSSHideInstance/style"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

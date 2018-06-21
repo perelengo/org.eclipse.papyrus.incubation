@@ -6417,6 +6417,198 @@ public interface LayersPackage extends EPackage {
 	int CSS_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHidePropertySetterImpl <em>CSS Hide Property Setter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHidePropertySetterImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHidePropertySetter()
+	 * @generated
+	 */
+	int CSS_HIDE_PROPERTY_SETTER = 72;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_PROPERTY_SETTER__PROPERTY = PROPERTY_SETTER__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Property Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_PROPERTY_SETTER__PROPERTY_NAME = PROPERTY_SETTER__PROPERTY_NAME;
+
+	/**
+	 * The number of structural features of the '<em>CSS Hide Property Setter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_PROPERTY_SETTER_FEATURE_COUNT = PROPERTY_SETTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE = PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE;
+
+	/**
+	 * The number of operations of the '<em>CSS Hide Property Setter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideTypeImpl <em>CSS Hide Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideTypeImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHideType()
+	 * @generated
+	 */
+	int CSS_HIDE_TYPE = 73;
+
+	/**
+	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_TYPE__METAMODEL = TYPE__METAMODEL;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_TYPE__DESCRIPTION = TYPE__DESCRIPTION;
+
+	/**
+	 * The number of structural features of the '<em>CSS Hide Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Create Instance</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_TYPE___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
+
+	/**
+	 * The number of operations of the '<em>CSS Hide Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideInstanceImpl <em>CSS Hide Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideInstanceImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHideInstance()
+	 * @generated
+	 */
+	int CSS_HIDE_INSTANCE = 74;
+
+	/**
+	 * The feature id for the '<em><b>Stylesheet</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_INSTANCE__STYLESHEET = TYPE_INSTANCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_INSTANCE__STYLE = TYPE_INSTANCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>CSS Hide Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Cmd Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_INSTANCE___GET_CMD_VALUE = TYPE_INSTANCE___GET_CMD_VALUE;
+
+	/**
+	 * The operation id for the '<em>Set Value From String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_INSTANCE___SET_VALUE_FROM_STRING__STRING = TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING;
+
+	/**
+	 * The operation id for the '<em>Set Value From Instance</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE = TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE;
+
+	/**
+	 * The number of operations of the '<em>CSS Hide Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CSS_HIDE_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState <em>Layer State</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6424,7 +6616,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerState()
 	 * @generated
 	 */
-	int LAYER_STATE = 72;
+	int LAYER_STATE = 75;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.EventLevel <em>Event Level</em>}' enum.
@@ -6434,7 +6626,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getEventLevel()
 	 * @generated
 	 */
-	int EVENT_LEVEL = 73;
+	int EVENT_LEVEL = 76;
 
 	/**
 	 * The meta object id for the '<em>String</em>' data type.
@@ -6444,7 +6636,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getString()
 	 * @generated
 	 */
-	int STRING = 74;
+	int STRING = 77;
 
 	/**
 	 * The meta object id for the '<em>boolean</em>' data type.
@@ -6453,7 +6645,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getboolean()
 	 * @generated
 	 */
-	int BOOLEAN = 75;
+	int BOOLEAN = 78;
 
 	/**
 	 * The meta object id for the '<em>EPackage</em>' data type.
@@ -6463,7 +6655,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getEPackage()
 	 * @generated
 	 */
-	int EPACKAGE = 76;
+	int EPACKAGE = 79;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -6473,7 +6665,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayersException()
 	 * @generated
 	 */
-	int LAYERS_EXCEPTION = 77;
+	int LAYERS_EXCEPTION = 80;
 
 	/**
 	 * The meta object id for the '<em>int</em>' data type.
@@ -6482,7 +6674,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getint()
 	 * @generated
 	 */
-	int INT = 78;
+	int INT = 81;
 
 	/**
 	 * The meta object id for the '<em>Bad State Exception</em>' data type.
@@ -6492,7 +6684,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getBadStateException()
 	 * @generated
 	 */
-	int BAD_STATE_EXCEPTION = 79;
+	int BAD_STATE_EXCEPTION = 82;
 
 	/**
 	 * The meta object id for the '<em>Not Found Exception</em>' data type.
@@ -6502,7 +6694,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getNotFoundException()
 	 * @generated
 	 */
-	int NOT_FOUND_EXCEPTION = 80;
+	int NOT_FOUND_EXCEPTION = 83;
 
 	/**
 	 * The meta object id for the '<em>Compute Property Value Command</em>' data type.
@@ -6512,7 +6704,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getComputePropertyValueCommand()
 	 * @generated
 	 */
-	int COMPUTE_PROPERTY_VALUE_COMMAND = 81;
+	int COMPUTE_PROPERTY_VALUE_COMMAND = 84;
 
 	/**
 	 * The meta object id for the '<em>Object</em>' data type.
@@ -6522,7 +6714,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getObject()
 	 * @generated
 	 */
-	int OBJECT = 82;
+	int OBJECT = 85;
 
 	/**
 	 * The meta object id for the '<em>Custom Property Opertor Instance</em>' data type.
@@ -6532,7 +6724,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomPropertyOpertorInstance()
 	 * @generated
 	 */
-	int CUSTOM_PROPERTY_OPERTOR_INSTANCE = 83;
+	int CUSTOM_PROPERTY_OPERTOR_INSTANCE = 86;
 
 
 	/**
@@ -8986,6 +9178,58 @@ public interface LayersPackage extends EPackage {
 	EAttribute getCSSInstance_Style();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHidePropertySetter <em>CSS Hide Property Setter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>CSS Hide Property Setter</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHidePropertySetter
+	 * @generated
+	 */
+	EClass getCSSHidePropertySetter();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideType <em>CSS Hide Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>CSS Hide Type</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideType
+	 * @generated
+	 */
+	EClass getCSSHideType();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance <em>CSS Hide Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>CSS Hide Instance</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance
+	 * @generated
+	 */
+	EClass getCSSHideInstance();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance#getStylesheet <em>Stylesheet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Stylesheet</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance#getStylesheet()
+	 * @see #getCSSHideInstance()
+	 * @generated
+	 */
+	EReference getCSSHideInstance_Stylesheet();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance#getStyle <em>Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Style</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance#getStyle()
+	 * @see #getCSSHideInstance()
+	 * @generated
+	 */
+	EAttribute getCSSHideInstance_Style();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState <em>Layer State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11153,6 +11397,52 @@ public interface LayersPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CSS_INSTANCE__STYLE = eINSTANCE.getCSSInstance_Style();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHidePropertySetterImpl <em>CSS Hide Property Setter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHidePropertySetterImpl
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHidePropertySetter()
+		 * @generated
+		 */
+		EClass CSS_HIDE_PROPERTY_SETTER = eINSTANCE.getCSSHidePropertySetter();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideTypeImpl <em>CSS Hide Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideTypeImpl
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHideType()
+		 * @generated
+		 */
+		EClass CSS_HIDE_TYPE = eINSTANCE.getCSSHideType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideInstanceImpl <em>CSS Hide Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideInstanceImpl
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHideInstance()
+		 * @generated
+		 */
+		EClass CSS_HIDE_INSTANCE = eINSTANCE.getCSSHideInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Stylesheet</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CSS_HIDE_INSTANCE__STYLESHEET = eINSTANCE.getCSSHideInstance_Stylesheet();
+
+		/**
+		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CSS_HIDE_INSTANCE__STYLE = eINSTANCE.getCSSHideInstance_Style();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState <em>Layer State</em>}' enum.

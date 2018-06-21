@@ -237,6 +237,11 @@ public class StringToTypeInstanceMapItemProvider
 			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
 				 LayersFactory.eINSTANCE.createCSSInstance()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
+				 LayersFactory.eINSTANCE.createCSSHideInstance()));
 	}
 
 	/**

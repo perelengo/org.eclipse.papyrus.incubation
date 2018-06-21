@@ -36,6 +36,9 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AndStacked
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ApplicationDependantElement;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanType;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideInstance;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHidePropertySetter;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideType;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSPropertySetter;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSType;
@@ -612,6 +615,27 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	 * @generated
 	 */
 	private EClass cssInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cssHidePropertySetterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cssHideTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cssHideInstanceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3105,6 +3129,51 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCSSHidePropertySetter() {
+		return cssHidePropertySetterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCSSHideType() {
+		return cssHideTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCSSHideInstance() {
+		return cssHideInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCSSHideInstance_Stylesheet() {
+		return (EReference)cssHideInstanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCSSHideInstance_Style() {
+		return (EAttribute)cssHideInstanceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public EEnum getLayerState() {
 		return layerStateEEnum;
@@ -3555,6 +3624,14 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		createEReference(cssInstanceEClass, CSS_INSTANCE__STYLESHEET);
 		createEAttribute(cssInstanceEClass, CSS_INSTANCE__STYLE);
 
+		cssHidePropertySetterEClass = createEClass(CSS_HIDE_PROPERTY_SETTER);
+
+		cssHideTypeEClass = createEClass(CSS_HIDE_TYPE);
+
+		cssHideInstanceEClass = createEClass(CSS_HIDE_INSTANCE);
+		createEReference(cssHideInstanceEClass, CSS_HIDE_INSTANCE__STYLESHEET);
+		createEAttribute(cssHideInstanceEClass, CSS_HIDE_INSTANCE__STYLE);
+
 		// Create enums
 		layerStateEEnum = createEEnum(LAYER_STATE);
 		eventLevelEEnum = createEEnum(EVENT_LEVEL);
@@ -3657,6 +3734,9 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		cssPropertySetterEClass.getESuperTypes().add(this.getPropertySetter());
 		cssTypeEClass.getESuperTypes().add(this.getType());
 		cssInstanceEClass.getESuperTypes().add(this.getTypeInstance());
+		cssHidePropertySetterEClass.getESuperTypes().add(this.getPropertySetter());
+		cssHideTypeEClass.getESuperTypes().add(this.getType());
+		cssHideInstanceEClass.getESuperTypes().add(this.getTypeInstance());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(layerNamedStyleEClass, LayerNamedStyle.class, "LayerNamedStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
@@ -4116,6 +4196,14 @@ public class LayersPackageImpl extends EPackageImpl implements LayersPackage {
 		initEClass(cssInstanceEClass, CSSInstance.class, "CSSInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEReference(getCSSInstance_Stylesheet(), theStylesheetsPackage.getStyleSheet(), null, "stylesheet", null, 1, 1, CSSInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED); //$NON-NLS-1$
 		initEAttribute(getCSSInstance_Style(), this.getString(), "style", null, 0, 1, CSSInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED); //$NON-NLS-1$
+
+		initEClass(cssHidePropertySetterEClass, CSSHidePropertySetter.class, "CSSHidePropertySetter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(cssHideTypeEClass, CSSHideType.class, "CSSHideType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(cssHideInstanceEClass, CSSHideInstance.class, "CSSHideInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEReference(getCSSHideInstance_Stylesheet(), theStylesheetsPackage.getStyleSheet(), null, "stylesheet", null, 1, 1, CSSHideInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED); //$NON-NLS-1$
+		initEAttribute(getCSSHideInstance_Style(), this.getString(), "style", null, 0, 1, CSSHideInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED); //$NON-NLS-1$
 
 		// Initialize enums and add enum literals
 		initEEnum(layerStateEEnum, LayerState.class, "LayerState"); //$NON-NLS-1$
