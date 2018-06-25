@@ -306,4 +306,10 @@
           type="org.eclipse.jface.viewers.IStructuredSelection">
     </propertyTester>
     </extension>
+ <extension
+       point="org.eclipse.papyrus.emf.facet.util.emf.core.modeldeclaration">
+    <modeldeclaration
+          file="resources/PapyrusDiagramLayer.custom">
+    </modeldeclaration>
+ </extension>
 </plugin>
