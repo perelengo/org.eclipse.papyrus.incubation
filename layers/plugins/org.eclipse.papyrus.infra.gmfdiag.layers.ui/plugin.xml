@@ -23,8 +23,12 @@
             name="Detach LayerStack">
       </command>
       <command
-            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.delete"
-            name="Delete">
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.deleteLayer"
+            name="Delete Layer">
+      </command>
+      <command
+            id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.deleteProperty"
+            name="Delete Property">
       </command>
       <command
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.createlayer"
@@ -60,7 +64,6 @@
       </command>
    </extension>
    <extension
-         name="Layers"
          point="org.eclipse.ui.handlers">
       <handler
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.commands.AttachLayerStackCommand"
@@ -88,7 +91,11 @@
       </handler>
       <handler
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.handlers.DeleteItemHandler"
-            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.delete">
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.deleteLayer">
+      </handler>
+      <handler
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.handlers.DeleteItemHandler"
+            commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.deleteProperty">
       </handler>
       <handler
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.handlers.OpenLayerExplorerHandler"
@@ -114,10 +121,10 @@
          <menu
                label="Layers">
             <command
-                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachLayerStack"
-                  label="Attach Layer Stack"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview"
+                  label="Open Layers Explorer"
                   style="push"
-                  tooltip="Attach a Layer Stack to the diagram">
+                  tooltip="Open the Layers Explorer View">
             </command>
             <command
                   commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.detachLayerStack"
@@ -126,10 +133,10 @@
                   tooltip="Detach a Layer Stack to the diagram">
             </command>
             <command
-                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview"
-                  label="Open Layers Explorer"
+                  commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.attachLayerStack"
+                  label="Attach Layer Stack"
                   style="push"
-                  tooltip="Open the Layers Explorer View">
+                  tooltip="Attach a Layer Stack to the diagram">
             </command>
          </menu>
       </menuContribution>
@@ -213,11 +220,11 @@
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.delete"
+               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.deleteLayer"
                icon="IMG_TOOL_DELETE"
-               label="Delete"
+               label="Delete Layer"
                style="push"
-               tooltip="Delete Selected Item from the Layer Explorer">
+               tooltip="Delete Selected Layer from the Layer Explorer">
             <visibleWhen
                   checkEnabled="false">
                <and>
@@ -226,6 +233,26 @@
                      <test
                            forcePluginActivation="true"
                            property="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester.canDeleteLayer"
+                           value="true">
+                     </test>
+                  </with>
+               </and>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.deleteProperty"
+               icon="IMG_TOOL_DELETE"
+               label="Delete Property"
+               style="push"
+               tooltip="Delete Selected Property from the Layer Explorer">
+            <visibleWhen
+                  checkEnabled="false">
+               <and>
+                  <with
+                        variable="selection">
+                     <test
+                           forcePluginActivation="true"
+                           property="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester.canDeleteProperty"
                            value="true">
                      </test>
                   </with>
@@ -275,7 +302,7 @@
           class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.utils.LayersWidgetPropertyTester"
           id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester"
           namespace="org.eclipse.papyrus.infra.gmfdiag.layers.ui.tester"
-          properties="canCreateLayer, canAttachProperties, canAttachCSS, canAttachCSSHide, canAttachViews, canDeleteLayer"
+          properties="canCreateLayer, canAttachProperties, canAttachCSS, canAttachCSSHide, canAttachViews, canDeleteLayer, canDeleteProperty"
           type="org.eclipse.jface.viewers.IStructuredSelection">
     </propertyTester>
     </extension>

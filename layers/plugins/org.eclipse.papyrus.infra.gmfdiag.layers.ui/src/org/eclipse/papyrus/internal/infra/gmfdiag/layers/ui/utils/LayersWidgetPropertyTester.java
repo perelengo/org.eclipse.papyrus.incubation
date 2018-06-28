@@ -17,6 +17,7 @@ import org.eclipse.core.expressions.PropertyTester;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
 
 /**
  * @author Quentin Le Menez
@@ -29,6 +30,8 @@ public class LayersWidgetPropertyTester extends PropertyTester {
 	private static final String CAN_DELETE_LAYER = "canDeleteLayer"; //$NON-NLS-1$
 
 	private static final String CAN_ATTACH_PROPERTIES = "canAttachProperties"; //$NON-NLS-1$
+
+	private static final String CAN_DELETE_PROPERTY = "canDeleteProperty"; //$NON-NLS-1$
 
 	private static final String CAN_ATTACH_CSS = "canAttachCSS"; //$NON-NLS-1$
 
@@ -50,7 +53,10 @@ public class LayersWidgetPropertyTester extends PropertyTester {
 	public boolean test(Object receiver, String property, Object[] args, Object expectedValue) {
 
 		// TODO these cases should be handled better, e.g. directly through the plugin.xml filters
-		if (CAN_ATTACH_PROPERTIES.equals(property)) {
+		if (CAN_CREATE_LAYER.equals(property)) {
+			return stackMenu(receiver);
+		} 
+		else if (CAN_ATTACH_PROPERTIES.equals(property)) {
 			return layerMenu(receiver);
 		} else if (CAN_ATTACH_CSS.equals(property)) {
 			return layerMenu(receiver);
@@ -58,10 +64,11 @@ public class LayersWidgetPropertyTester extends PropertyTester {
 			return layerMenu(receiver);
 		} else if (CAN_ATTACH_VIEWS.equals(property)) {
 			return layerMenu(receiver);
-		} else if (CAN_CREATE_LAYER.equals(property)) {
-			return stackMenu(receiver);
-		} else if (CAN_DELETE_LAYER.equals(property)) {
+		} else  if (CAN_DELETE_LAYER.equals(property)) {
 			return layerMenu(receiver);
+		} 
+		else if (CAN_DELETE_PROPERTY.equals(property)) {
+			return propertyMenu(receiver);
 		}
 
 		// the menu is not one of the above and should be added to the list if necessary
@@ -73,6 +80,16 @@ public class LayersWidgetPropertyTester extends PropertyTester {
 		if (receiver instanceof TreeSelection) {
 			TreeSelection ts = (TreeSelection) receiver;
 			if (ts.getFirstElement() instanceof Layer) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean propertyMenu(Object receiver) {
+		if (receiver instanceof TreeSelection) {
+			TreeSelection ts = (TreeSelection) receiver;
+			if (ts.getFirstElement() instanceof TypeInstance) {
 				return true;
 			}
 		}
