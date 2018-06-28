@@ -55,11 +55,11 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstan
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getPropertyValues <em>Property Values</em>}</li>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getPropertyValueMap <em>Property Value Map</em>}</li>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getLayerDescriptor <em>Layer Descriptor</em>}</li>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getViews <em>Views</em>}</li>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getAttachedProperties <em>Attached Properties</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getPropertyValues <em>Property Values</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getPropertyValueMap <em>Property Value Map</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getLayerDescriptor <em>Layer Descriptor</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getViews <em>Views</em>}</li>
+ * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl#getAttachedProperties <em>Attached Properties</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +69,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * The cached value of the '{@link #getPropertyValues() <em>Property Values</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #getPropertyValues()
 	 * @generated
 	 * @ordered
@@ -79,6 +80,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * The cached value of the '{@link #getPropertyValueMap() <em>Property Value Map</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #getPropertyValueMap()
 	 * @generated
 	 * @ordered
@@ -89,6 +91,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * The cached value of the '{@link #getLayerDescriptor() <em>Layer Descriptor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #getLayerDescriptor()
 	 * @generated
 	 * @ordered
@@ -99,6 +102,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * The cached value of the '{@link #getViews() <em>Views</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #getViews()
 	 * @generated
 	 * @ordered
@@ -133,6 +137,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -165,12 +170,13 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public EMap<String, TypeInstance> getPropertyValueMap() {
 		if (propertyValueMap == null) {
-			propertyValueMap = new EcoreEMap<String,TypeInstance>(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP, StringToTypeInstanceMapImpl.class, this, LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP);
+			propertyValueMap = new EcoreEMap<String, TypeInstance>(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP, StringToTypeInstanceMapImpl.class, this, LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP);
 		}
 		return propertyValueMap;
 	}
@@ -178,13 +184,14 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public LayerDescriptor getLayerDescriptor() {
 		if (layerDescriptor != null && layerDescriptor.eIsProxy()) {
-			InternalEObject oldLayerDescriptor = (InternalEObject)layerDescriptor;
-			layerDescriptor = (LayerDescriptor)eResolveProxy(oldLayerDescriptor);
+			InternalEObject oldLayerDescriptor = (InternalEObject) layerDescriptor;
+			layerDescriptor = (LayerDescriptor) eResolveProxy(oldLayerDescriptor);
 			if (layerDescriptor != oldLayerDescriptor) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR, oldLayerDescriptor, layerDescriptor));
@@ -196,6 +203,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public LayerDescriptor basicGetLayerDescriptor() {
@@ -205,6 +213,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -218,6 +227,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -328,13 +338,14 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
-				return ((InternalEList<?>)getPropertyValueMap()).basicRemove(otherEnd, msgs);
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
+			return ((InternalEList<?>) getPropertyValueMap()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -342,23 +353,27 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES:
-				return getPropertyValues();
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
-				if (coreType) return getPropertyValueMap();
-				else return getPropertyValueMap().map();
-			case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
-				if (resolve) return getLayerDescriptor();
-				return basicGetLayerDescriptor();
-			case LayersPackage.ABSTRACT_LAYER__VIEWS:
-				return getViews();
-			case LayersPackage.ABSTRACT_LAYER__ATTACHED_PROPERTIES:
-				return getAttachedProperties();
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES:
+			return getPropertyValues();
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
+			if (coreType)
+				return getPropertyValueMap();
+			else
+				return getPropertyValueMap().map();
+		case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
+			if (resolve)
+				return getLayerDescriptor();
+			return basicGetLayerDescriptor();
+		case LayersPackage.ABSTRACT_LAYER__VIEWS:
+			return getViews();
+		case LayersPackage.ABSTRACT_LAYER__ATTACHED_PROPERTIES:
+			return getAttachedProperties();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -366,30 +381,31 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES:
-				getPropertyValues().clear();
-				getPropertyValues().addAll((Collection<? extends TypeInstance>)newValue);
-				return;
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
-				((EStructuralFeature.Setting)getPropertyValueMap()).set(newValue);
-				return;
-			case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
-				setLayerDescriptor((LayerDescriptor)newValue);
-				return;
-			case LayersPackage.ABSTRACT_LAYER__VIEWS:
-				getViews().clear();
-				getViews().addAll((Collection<? extends View>)newValue);
-				return;
-			case LayersPackage.ABSTRACT_LAYER__ATTACHED_PROPERTIES:
-				getAttachedProperties().clear();
-				getAttachedProperties().addAll((Collection<? extends Property>)newValue);
-				return;
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES:
+			getPropertyValues().clear();
+			getPropertyValues().addAll((Collection<? extends TypeInstance>) newValue);
+			return;
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
+			((EStructuralFeature.Setting) getPropertyValueMap()).set(newValue);
+			return;
+		case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
+			setLayerDescriptor((LayerDescriptor) newValue);
+			return;
+		case LayersPackage.ABSTRACT_LAYER__VIEWS:
+			getViews().clear();
+			getViews().addAll((Collection<? extends View>) newValue);
+			return;
+		case LayersPackage.ABSTRACT_LAYER__ATTACHED_PROPERTIES:
+			getAttachedProperties().clear();
+			getAttachedProperties().addAll((Collection<? extends Property>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -397,26 +413,27 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES:
-				getPropertyValues().clear();
-				return;
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
-				getPropertyValueMap().clear();
-				return;
-			case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
-				setLayerDescriptor((LayerDescriptor)null);
-				return;
-			case LayersPackage.ABSTRACT_LAYER__VIEWS:
-				getViews().clear();
-				return;
-			case LayersPackage.ABSTRACT_LAYER__ATTACHED_PROPERTIES:
-				getAttachedProperties().clear();
-				return;
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES:
+			getPropertyValues().clear();
+			return;
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
+			getPropertyValueMap().clear();
+			return;
+		case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
+			setLayerDescriptor((LayerDescriptor) null);
+			return;
+		case LayersPackage.ABSTRACT_LAYER__VIEWS:
+			getViews().clear();
+			return;
+		case LayersPackage.ABSTRACT_LAYER__ATTACHED_PROPERTIES:
+			getAttachedProperties().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -424,21 +441,22 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES:
-				return propertyValues != null && !propertyValues.isEmpty();
-			case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
-				return propertyValueMap != null && !propertyValueMap.isEmpty();
-			case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
-				return layerDescriptor != null;
-			case LayersPackage.ABSTRACT_LAYER__VIEWS:
-				return views != null && !views.isEmpty();
-			case LayersPackage.ABSTRACT_LAYER__ATTACHED_PROPERTIES:
-				return !getAttachedProperties().isEmpty();
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES:
+			return propertyValues != null && !propertyValues.isEmpty();
+		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
+			return propertyValueMap != null && !propertyValueMap.isEmpty();
+		case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
+			return layerDescriptor != null;
+		case LayersPackage.ABSTRACT_LAYER__VIEWS:
+			return views != null && !views.isEmpty();
+		case LayersPackage.ABSTRACT_LAYER__ATTACHED_PROPERTIES:
+			return !getAttachedProperties().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -446,35 +464,33 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case LayersPackage.ABSTRACT_LAYER___ADD_PROPERTY_INSTANCE__PROPERTY:
-				try {
-					return addPropertyInstance((Property)arguments.get(0));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
-			case LayersPackage.ABSTRACT_LAYER___REMOVE_PROPERTY_INSTANCE__PROPERTY:
-				removePropertyInstance((Property)arguments.get(0));
-				return null;
-			case LayersPackage.ABSTRACT_LAYER___GET_PROPERTY_INSTANCE__PROPERTY:
-				try {
-					return getPropertyInstance((Property)arguments.get(0));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
-			case LayersPackage.ABSTRACT_LAYER___GET_PROPERTY_INSTANCE__STRING:
-				try {
-					return getPropertyInstance((String)arguments.get(0));
-				}
-				catch (Throwable throwable) {
-					throw new InvocationTargetException(throwable);
-				}
+		case LayersPackage.ABSTRACT_LAYER___ADD_PROPERTY_INSTANCE__PROPERTY:
+			try {
+				return addPropertyInstance((Property) arguments.get(0));
+			} catch (Throwable throwable) {
+				throw new InvocationTargetException(throwable);
+			}
+		case LayersPackage.ABSTRACT_LAYER___REMOVE_PROPERTY_INSTANCE__PROPERTY:
+			removePropertyInstance((Property) arguments.get(0));
+			return null;
+		case LayersPackage.ABSTRACT_LAYER___GET_PROPERTY_INSTANCE__PROPERTY:
+			try {
+				return getPropertyInstance((Property) arguments.get(0));
+			} catch (Throwable throwable) {
+				throw new InvocationTargetException(throwable);
+			}
+		case LayersPackage.ABSTRACT_LAYER___GET_PROPERTY_INSTANCE__STRING:
+			try {
+				return getPropertyInstance((String) arguments.get(0));
+			} catch (Throwable throwable) {
+				throw new InvocationTargetException(throwable);
+			}
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -540,7 +556,9 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 
 		try {
 			int propertyIndex = application.getPropertyRegistry().getPropertyIndex(propertyName);
-			getPropertyValues().set(propertyIndex, value);
+			if (value != null) {
+				getPropertyValues().set(propertyIndex, value);
+			}
 		} catch (NullPointerException e) {
 			throw new BadStateException("application should be set first.");
 		}

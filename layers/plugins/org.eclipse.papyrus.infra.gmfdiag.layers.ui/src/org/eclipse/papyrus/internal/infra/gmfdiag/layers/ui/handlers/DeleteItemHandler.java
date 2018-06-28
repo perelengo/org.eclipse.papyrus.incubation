@@ -24,14 +24,13 @@ import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
-import org.eclipse.papyrus.infra.gmfdiag.css.properties.databinding.RemoveCssClassStyleCommand;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.commands.AbstractLayersCommand;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.commands.DeleteLayersCommand;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.commands.DeletePropertyCommand;
 
 
 /**
@@ -96,12 +95,15 @@ public class DeleteItemHandler extends AbstractLayersCommand {
 			return;
 		}
 
-		final CompoundCommand compoundCmd = new CompoundCommand("DeleteSelectedLayersCommand");
+		final CompoundCommand compoundCmd = new CompoundCommand("DeleteSelectedItemCommand");
 		// TODO support multiple deletion
 		Object selection = selections.get(0);
 		// for (Object selection : selections) {
 		if (selection instanceof Layer) {
 			compoundCmd.append(new DeleteLayersCommand(domain, (Layer) selection));
+		}
+		if (selection instanceof TypeInstance) {
+			compoundCmd.append(new DeletePropertyCommand(domain, context, (TypeInstance) selection));
 		}
 		// }
 
@@ -129,7 +131,8 @@ public class DeleteItemHandler extends AbstractLayersCommand {
 			return false;
 		}
 		Object first = selections.get(0);
-		boolean res = (first instanceof LayerExpression && !(((EObject) first).eContainer() instanceof LayersStack));
+		boolean res = ((first instanceof LayerExpression && !(((EObject) first).eContainer() instanceof LayersStack))
+				|| first instanceof TypeInstance);
 		return res;
 	}
 
@@ -141,7 +144,7 @@ public class DeleteItemHandler extends AbstractLayersCommand {
 	 */
 	@Override
 	public String getCommandName() {
-		return "Create Layer Operator";
+		return "DeleteItemHandler";
 	}
 
 }
