@@ -1,26 +1,33 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptorRegistry;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
@@ -73,8 +80,7 @@ public class LayerDescriptorRegistryImpl extends EObjectImpl implements LayerDes
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<LayerDescriptor> getLayerDescriptors() {
+	public List<LayerDescriptor> getLayerDescriptors() {
 		if (layerDescriptors == null) {
 			layerDescriptors = new EObjectContainmentEList<LayerDescriptor>(LayerDescriptor.class, this, LayersPackage.LAYER_DESCRIPTOR_REGISTRY__LAYER_DESCRIPTORS);
 		}
@@ -155,4 +161,4 @@ public class LayerDescriptorRegistryImpl extends EObjectImpl implements LayerDes
 		return super.eIsSet(featureID);
 	}
 
-} // LayerDescriptorRegistryImpl
+} //LayerDescriptorRegistryImpl

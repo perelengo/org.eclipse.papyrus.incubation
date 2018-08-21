@@ -10,13 +10,20 @@
       <!-- @generated layers -->
       <factory
             uri="http://www.eclipse.org/papyrus/infra/gmfdiag/layers"
-            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.LayersItemProviderAdapterFactory"
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.custom.CustomLayersItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated layers -->
+      <extender
+            uri="http://www.eclipse.org/gmf/runtime/1.0.2/notation"
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.LayersItemProviderAdapterFactory$NotationChildCreationExtender"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">

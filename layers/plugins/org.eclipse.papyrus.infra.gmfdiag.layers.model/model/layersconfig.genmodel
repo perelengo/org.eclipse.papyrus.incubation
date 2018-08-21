@@ -6,7 +6,7 @@
     editorDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model.editor/src-gen"
     modelPluginID="org.eclipse.papyrus.infra.gmfdiag.layers.model" modelName="LayersConfig"
     editorPluginClass="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.presentation.LayersconfigEditorPlugin"
-    nonNLSMarkers="true" testsDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model.tests/src-gen"
+    nonNLSMarkers="true" suppressEMFTypes="true" testsDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model.tests/src-gen"
     testSuiteClass="org.eclipse.papyrus.infra.gmfdiag.layers.configmodel.layersconfig.tests.LayersconfigAllTests"
     importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="6.0" copyrightFields="false"
     editorPluginID="org.eclipse.papyrus.infra.gmfdiag.layers.model.editor" operationReflection="true"

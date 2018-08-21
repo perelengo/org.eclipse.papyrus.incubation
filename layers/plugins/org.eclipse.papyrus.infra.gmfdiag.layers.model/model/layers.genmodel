@@ -2,12 +2,12 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
     copyrightText="Copyright (c) 2013, 2017 CEA LIST &amp; LIFL &#xD;&#xA;&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;  Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation&#xD;&#xA;  Quentin Le Menez quentin.lemenez@cea.fr&#xD;&#xA;"
-    modelDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model/src-gen" editDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model.edit/src-gen"
-    editorDirectory="org.eclipse.papyrus.infra.gmfdiag.layers.model.editor/src-gen"
+    modelDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model/src-gen" creationIcons="false"
+    editDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model.edit/src-gen" editorDirectory="org.eclipse.papyrus.infra.gmfdiag.layers.model.editor/src-gen"
     modelPluginID="org.eclipse.papyrus.infra.gmfdiag.layers.model" modelName="Layers"
     editPluginClass="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.LayersEditPlugin"
     editorPluginClass="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersEditorPlugin"
-    nonNLSMarkers="true" testsDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model.tests/src-gen"
+    nonNLSMarkers="true" suppressEMFTypes="true" testsDirectory="/org.eclipse.papyrus.infra.gmfdiag.layers.model.tests/src-gen"
     testSuiteClass="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.tests.LayersAllTests"
     importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="6.0" copyrightFields="false"
     providerRootExtendsClass="" editPluginID="org.eclipse.papyrus.infra.gmfdiag.layers.model.edit"
@@ -39,7 +39,9 @@
   </genAnnotations>
   <foreignModel>layers.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Layers" basePackage="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model"
-      disposableProviderFactory="true" ecorePackage="layers.ecore#/">
+      disposableProviderFactory="true" generateExampleClass="false" multipleEditorPages="false"
+      generateModelWizard="false" extensibleProviderFactory="true" childCreationExtenders="true"
+      ecorePackage="layers.ecore#/">
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="layers.ecore#//LayerState">
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="layers.ecore#//LayerState/detached"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="layers.ecore#//LayerState/attached"/>
@@ -49,15 +51,14 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="layers.ecore#//EventLevel/allLevels"/>
     </genEnums>
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//String"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//boolean"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//EPackage"/>
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//LayersException"/>
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//int"/>
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//BadStateException"/>
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//NotFoundException"/>
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//ComputePropertyValueCommand"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//boolean"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//EPackage"/>
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//Object"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="layers.ecore#//CustomPropertyOpertorInstance"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//LayerNamedStyle">
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference layers.ecore#//LayerNamedStyle/layersStack"/>
@@ -185,20 +186,9 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//Property/createInstance"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//Type">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//Type/metamodel"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Type/name"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Type/description"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//Type/createInstance"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//Metamodel">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/name"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/description"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/nsuri"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/pluginID"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/ePackageInstanceName"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/isTypeValid"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//Metamodel/getEPackage"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//TypeInstance">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//TypeInstance/setValueFromString">
@@ -311,27 +301,28 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//PropertyOperator">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//PropertyOperator/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//PropertyOperator/classname"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EReference layers.ecore#//PropertyOperator/operatorInstance"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//PropertyOperator/classBundleID"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//PropertyOperator/getComputePropertyValueCommand">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//PropertyOperator/getComputePropertyValueCommand/property"/>
       </genOperations>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//AbstractLayerOperator">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//AbstractLayerOperator/layerOperatorDescriptor"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//AbstractLayerOperator/layerOperatorDescriptorName"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//AbstractLayerOperator/isDescriptorSet"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//AbstractLayerOperator/resetDescriptor"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//PropertyOperator/resetOperatorInstance"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//LayerOperator">
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference layers.ecore#//LayerOperator/layers"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//LayerOperator/layerOperatorDescriptorName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//LayerOperator/layerOperatorDescriptor"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//LayerOperator/isDescriptorSet"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//LayerOperator/resetDescriptor"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//LayersContainer">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//LayersContainer/addLayer">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//LayersContainer/addLayer/layer"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//DefaultPropertyOperator"/>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="layers.ecore#//AbstractLayer">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//AbstractLayer/propertyValues"/>
@@ -366,24 +357,17 @@
           createChild="true" ecoreFeature="ecore:EReference layers.ecore#//Folder/elements"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Folder/name"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//IntInstance">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//IntInstance/value"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//BooleanInstance">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//BooleanInstance/value"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//StringInstance">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//StringInstance/value"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//IntType"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//BooleanType"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//StringType"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CustomType">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CustomType/classifier"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//Metamodel">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/description"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/nsuri"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/pluginID"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/ePackageInstanceName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//Metamodel/isTypeValid"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//Metamodel/getEPackage"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//TopLayerOperator"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//StackedLayerOperator"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CustomLayerOperator"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//PropertyIndex">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference layers.ecore#//PropertyIndex/property"/>
@@ -395,78 +379,13 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//StringToPropertyIndexMap/key"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//SimpleLayerDescriptor"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//RegExpLayerDescriptor"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//NullInstance">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//NullInstance/getInstance"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//RegExpLayer">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//RegExpLayer/expr"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//RegExpLayer/language"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//RegExpLayer/isDomainChangedEventDependant"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//RegExpLayer/domainChangedEventLevel"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//RegExpLayer/isDiagramChangedEventDependant"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//RegExpLayer/diagramChangedEventLevel"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//RegExpLayer/expressionContextObjectType"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//RegExpLayer/activate">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//RegExpLayer/activate/newParentLayer"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//RegExpLayer/deactivate">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//RegExpLayer/deactivate/oldParentLayer"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//RegExpLayer/isDerivedView">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//RegExpLayer/isDerivedView/view"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//RegExpLayer/attachDerivedView">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//RegExpLayer/attachDerivedView/view"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//RegExpLayer/attachDerivedViews">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//RegExpLayer/attachDerivedViews/views"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//RegExpLayer/attachDerivedViews.1"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//RegExpLayer/lookupDerivedViews">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="layers.ecore#//RegExpLayer/lookupDerivedViews/views"/>
-      </genOperations>
-    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//Layer"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//Color"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//ColorInstance">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//ColorInstance/value"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//FillInstance">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//FillInstance/transparency"/>
-      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
-          createChild="true" ecoreFeature="ecore:EReference layers.ecore#//FillInstance/fillColor"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//Fill"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//FillPropertySetter"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//IsValidPropertySetter"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//NullPropertySetter"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//LineType"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//LineInstance">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//LineInstance/lineColor"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//LineInstance/lineWith"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//LinePropertySetter"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//FontPropertySetter"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//FontInstance">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//FontInstance/fontColor"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//FontInstance/fontName"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//FontInstance/fontHeigh"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//FontInstance/bold"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//FontType"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//IsVisiblePropertySetter"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//TopLayerOperatorDescriptor"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//StackedLayerOperatorDescriptor"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CustomPropertyOperator">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CustomPropertyOperator/classname"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CustomPropertyOperator/operatorInstance"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute layers.ecore#//CustomPropertyOperator/classBundleID"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="layers.ecore#//CustomPropertyOperator/resetOperatorInstance"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//AndStackedLayerOperatorDescriptor"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//OrStackedLayerOperatorDescriptor"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//IsAbstractUmlSetter"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//AllViewsDerivedLayer"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSPropertySetter"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="layers.ecore#//CSSType"/>

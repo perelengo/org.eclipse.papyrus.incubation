@@ -20,7 +20,6 @@ import org.eclipse.core.expressions.IEvaluationContext;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
@@ -113,7 +112,7 @@ public class CreateLayerOperatorsFromParameter extends AbstractLayersCommand {
 		}
 
 		// Create a layer !
-		AbstractLayerOperator layerOperator;
+		LayerOperator layerOperator;
 		try {
 			layerOperator = application.getLayerOperatorDescriptorRegistry().createLayerOperator(newLayerID);
 			layerOperator.setName("layer" + creationCount++);

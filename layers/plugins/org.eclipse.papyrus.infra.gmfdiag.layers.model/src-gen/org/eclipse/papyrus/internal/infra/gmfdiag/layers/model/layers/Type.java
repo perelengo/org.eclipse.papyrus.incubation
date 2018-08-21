@@ -23,7 +23,6 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type#getMetamodel <em>Metamodel</em>}</li>
  *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type#getDescription <em>Description</em>}</li>
  * </ul>
@@ -33,32 +32,6 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
  * @generated
  */
 public interface Type extends FolderElement {
-	/**
-	 * Returns the value of the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Metamodel</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Metamodel</em>' reference.
-	 * @see #setMetamodel(Metamodel)
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage#getType_Metamodel()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	Metamodel getMetamodel();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type#getMetamodel <em>Metamodel</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Metamodel</em>' reference.
-	 * @see #getMetamodel()
-	 * @generated
-	 */
-	void setMetamodel(Metamodel value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

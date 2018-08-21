@@ -1,18 +1,19 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +37,8 @@ public interface LayerOperatorMultipleBinding extends FolderElement {
 	 * Returns the value of the '<em><b>Layer Operator Config</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Layer Operator Config</em>' reference isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Layer Operator Config</em>' reference isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Layer Operator Config</em>' reference.
@@ -63,7 +65,8 @@ public interface LayerOperatorMultipleBinding extends FolderElement {
 	 * It is bidirectional and its opposite is '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.OperatorBinding#getOwner <em>Owner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bindings</em>' containment reference list isn't clear, there really should be more of a description here...
+	 * If the meaning of the '<em>Bindings</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bindings</em>' containment reference list.
@@ -72,6 +75,6 @@ public interface LayerOperatorMultipleBinding extends FolderElement {
 	 * @model opposite="owner" containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<OperatorBinding> getBindings();
+	List<OperatorBinding> getBindings();
 
 } // LayerOperatorMultipleBinding

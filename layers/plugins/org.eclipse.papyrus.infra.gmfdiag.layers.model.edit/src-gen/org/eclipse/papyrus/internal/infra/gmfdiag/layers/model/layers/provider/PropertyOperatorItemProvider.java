@@ -23,6 +23,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -72,6 +73,9 @@ public class PropertyOperatorItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addClassnamePropertyDescriptor(object);
+			addOperatorInstancePropertyDescriptor(object);
+			addClassBundleIDPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -99,6 +103,72 @@ public class PropertyOperatorItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Classname feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassnamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyOperator_classname_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyOperator_classname_feature", "_UI_PropertyOperator_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 LayersPackage.Literals.PROPERTY_OPERATOR__CLASSNAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Operator Instance feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOperatorInstancePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyOperator_operatorInstance_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyOperator_operatorInstance_feature", "_UI_PropertyOperator_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 LayersPackage.Literals.PROPERTY_OPERATOR__OPERATOR_INSTANCE,
+				 true,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Bundle ID feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassBundleIDPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyOperator_classBundleID_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyOperator_classBundleID_feature", "_UI_PropertyOperator_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 LayersPackage.Literals.PROPERTY_OPERATOR__CLASS_BUNDLE_ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns PropertyOperator.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -107,6 +177,16 @@ public class PropertyOperatorItemProvider
 	@Override
 	public Object getImage(Object object) {
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/PropertyOperator")); //$NON-NLS-1$
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
 	}
 
 	/**
@@ -137,6 +217,9 @@ public class PropertyOperatorItemProvider
 
 		switch (notification.getFeatureID(PropertyOperator.class)) {
 			case LayersPackage.PROPERTY_OPERATOR__NAME:
+			case LayersPackage.PROPERTY_OPERATOR__CLASSNAME:
+			case LayersPackage.PROPERTY_OPERATOR__OPERATOR_INSTANCE:
+			case LayersPackage.PROPERTY_OPERATOR__CLASS_BUNDLE_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -163,7 +246,7 @@ public class PropertyOperatorItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return LayersEditPlugin.INSTANCE;
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

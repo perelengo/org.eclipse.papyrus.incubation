@@ -1,26 +1,31 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyIndex;
 
@@ -243,7 +248,7 @@ public class StringToPropertyIndexMapImpl extends EObjectImpl implements BasicEM
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (key: "); //$NON-NLS-1$
 		result.append(key);
 		result.append(')');
@@ -262,7 +267,6 @@ public class StringToPropertyIndexMapImpl extends EObjectImpl implements BasicEM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getHash() {
 		if (hash == -1) {
 			Object theKey = getKey();
@@ -276,7 +280,6 @@ public class StringToPropertyIndexMapImpl extends EObjectImpl implements BasicEM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setHash(int hash) {
 		this.hash = hash;
 	}
@@ -286,7 +289,6 @@ public class StringToPropertyIndexMapImpl extends EObjectImpl implements BasicEM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getKey() {
 		return getTypedKey();
 	}
@@ -296,7 +298,6 @@ public class StringToPropertyIndexMapImpl extends EObjectImpl implements BasicEM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setKey(String key) {
 		setTypedKey(key);
 	}
@@ -306,7 +307,6 @@ public class StringToPropertyIndexMapImpl extends EObjectImpl implements BasicEM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PropertyIndex getValue() {
 		return getTypedValue();
 	}
@@ -316,7 +316,6 @@ public class StringToPropertyIndexMapImpl extends EObjectImpl implements BasicEM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PropertyIndex setValue(PropertyIndex value) {
 		PropertyIndex oldValue = getValue();
 		setTypedValue(value);
@@ -334,4 +333,4 @@ public class StringToPropertyIndexMapImpl extends EObjectImpl implements BasicEM
 		return container == null ? null : (EMap<String, PropertyIndex>)container.eGet(eContainmentFeature());
 	}
 
-} // StringToPropertyIndexMapImpl
+} //StringToPropertyIndexMapImpl

@@ -16,7 +16,6 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHideType;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 
 /**
@@ -30,18 +29,15 @@ public class CSSHideTypeImpl extends TypeImpl implements CSSHideType {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
+	 * @generated
 	 */
 	protected CSSHideTypeImpl() {
 		super();
-		setName("CSSHideType");
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -49,9 +45,4 @@ public class CSSHideTypeImpl extends TypeImpl implements CSSHideType {
 		return LayersPackage.Literals.CSS_HIDE_TYPE;
 	}
 
-	@Override
-	public org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance createInstance() {
-		return LayersFactory.eINSTANCE.createCSSHideInstance();
-	};
-
-} // CSSHideTypeImpl
+} //CSSHideTypeImpl

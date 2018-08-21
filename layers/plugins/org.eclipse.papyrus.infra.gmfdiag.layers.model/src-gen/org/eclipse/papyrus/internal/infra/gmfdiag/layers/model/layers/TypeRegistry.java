@@ -13,7 +13,7 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EMap;
+import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -49,6 +49,6 @@ public interface TypeRegistry extends EObject {
 	 * @model mapType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringToTypeMap&lt;org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.String, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type&gt;" ordered="false"
 	 * @generated
 	 */
-	EMap<String, Type> getTypes();
+	Map<String, Type> getTypes();
 
 } // TypeRegistry

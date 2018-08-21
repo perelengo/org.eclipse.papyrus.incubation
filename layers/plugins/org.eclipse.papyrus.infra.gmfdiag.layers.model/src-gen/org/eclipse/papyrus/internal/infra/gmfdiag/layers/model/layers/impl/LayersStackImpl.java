@@ -1,40 +1,45 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.ILayersTreeEventListener;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.LayersTreeEventNotifier;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.LayersTreeEventNotifierFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,9 +58,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.notifier.LayersTr
  *
  * @generated
  */
-public class LayersStackImpl extends
-
-		EObjectImpl implements LayersStack {
+public class LayersStackImpl extends EObjectImpl implements LayersStack {
 	/**
 	 * The cached value of the '{@link #getLayers() <em>Layers</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -75,6 +78,7 @@ public class LayersStackImpl extends
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -84,6 +88,7 @@ public class LayersStackImpl extends
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -93,6 +98,7 @@ public class LayersStackImpl extends
 	 * @ordered
 	 */
 	protected static final String DESCRIPTION_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -134,57 +140,12 @@ public class LayersStackImpl extends
 	protected LayerState state = STATE_EDEFAULT;
 
 	/**
-	 * Listener on layers tree events.
-	 * This listener take in charge the initialization of added layers.
-	 */
-	private ILayersTreeEventListener layersTreeEventListener = new ILayersTreeEventListener() {
-
-		@Override
-		public void layerSet(Notification notification) {
-			LayersStackImpl.this.layerAdded((LayerExpression) notification.getNewValue());
-		}
-
-		@Override
-		public void layerRemoved(Notification notification) {
-			// nothing to do
-
-		}
-
-		@Override
-		public void layerMoved(Notification notification) {
-			// nothing to do
-
-		}
-
-		@Override
-		public void layerAdded(Notification notification) {
-			LayersStackImpl.this.layerAdded((LayerExpression) notification.getNewValue());
-		}
-
-	};
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	protected LayersStackImpl() {
 		super();
-
-		// Now, init should be called explicitly after creation.
-		// init();
-	}
-
-	/**
-	 * Init this object.
-	 * Create a listener on tree events.
-	 */
-	private void init() {
-
-		LayersTreeEventNotifier layersTreeEventnotifier = LayersTreeEventNotifierFactory.instance.adapt(this);
-
-		layersTreeEventnotifier.addLayersModelEventListener(layersTreeEventListener);
 	}
 
 	/**
@@ -202,7 +163,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerExpression getLayers() {
 		return layers;
 	}
@@ -227,7 +187,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setLayers(LayerExpression newLayers) {
 		if (newLayers != layers) {
 			NotificationChain msgs = null;
@@ -247,7 +206,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -257,7 +215,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -270,7 +227,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -280,7 +236,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -293,7 +248,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Diagram getDiagram() {
 		if (diagram != null && diagram.eIsProxy()) {
 			InternalEObject oldDiagram = (InternalEObject)diagram;
@@ -320,7 +274,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDiagram(Diagram newDiagram) {
 		Diagram oldDiagram = diagram;
 		diagram = newDiagram;
@@ -333,7 +286,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerState getState() {
 		return state;
 	}
@@ -343,7 +295,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setState(LayerState newState) {
 		LayerState oldState = state;
 		state = newState == null ? STATE_EDEFAULT : newState;
@@ -356,7 +307,6 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void addLayer(LayerExpression layer) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -366,27 +316,9 @@ public class LayersStackImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @throws LayersException
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
 	public ComputePropertyValueCommand getComputePropertyValueCommand(View view, Property property) throws LayersException {
-		LayerExpression layers = getLayers();
-		if (layers == null) {
-			throw new BadStateException("Layers should be set first.");
-		}
-
-		return layers.getComputePropertyValueCommand(view, property);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, EList<Property> property) throws LayersException {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -397,8 +329,7 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(EList<View> view, Property property) throws LayersException {
+	public List<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, List<Property> property) throws LayersException {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -406,95 +337,24 @@ public class LayersStackImpl extends
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Start this LayersStack after its creation. This method should be explicitly called by
-	 * user after the creation of a LayersStack.
 	 * <!-- end-user-doc -->
-	 *
-	 * @deprecated Not used anymore
-	 * @generated NOT
+	 * @generated
 	 */
-	@Deprecated
-	@Override
+	public List<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(List<View> view, Property property) throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void startAfterCreation() {
-		// Ensure child is initialized, if any
-		if (getLayers() != null) {
-			getLayers().attachToLayersStack(this);
-		}
-
-		// Start local behaviors
-		init();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * Attach recursively the tree of layers.
-	 * <!-- end-user-doc -->
-	 *
-	 * @throws LayersException
-	 * @generated NOT
-	 */
-	@Override
-	public void attachLayers() throws LayersException {
-		// Ensure child is started, if any
-		if (getLayers() != null) {
-			getLayers().attach();
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public void attach() throws LayersException {
-		// Stop if already in ATTACHED state.
-		if (getState() == LayerState.ATTACHED) {
-			return;
-		}
-
-		// Check required attributes
-		if (getDiagram() == null) {
-			throw new BadStateException("A required attribute is not set. The Layer can't be attached."
-					+ "[layerName=" + getName()
-					+ ", diagram=" + (getDiagram() == null ? "null" : "ok")
-					+ "]");
-		}
-
-		// Can go in attached mode
-		setState(LayerState.ATTACHED);
-		enterAttachedState();
-		attachLayers();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public void detach() throws LayersException {
-		// Change the state
-		exitAttachedState();
-		setState(LayerState.DETACHED);
-		// Ensure child is started, if any
-		if (getLayers() != null) {
-			getLayers().detach();
-		}
-
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public void enterAttachedState() throws LayersException {
-		init();
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -502,46 +362,54 @@ public class LayersStackImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
+	public void attachLayers() throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void attach() throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void detach() throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void enterAttachedState() throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void exitAttachedState() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @throws LayersException
-	 * @generated NOT
-	 */
-	@Override
-	public EList<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, List<Property> property) throws LayersException {
-		LayerExpression layers = getLayers();
-		if (layers == null) {
-			throw new BadStateException("Layers should be set first.");
-		}
-
-		return layers.getPropertiesComputePropertyValueCommand(view, property);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @throws BadStateException
-	 * @generated NOT
-	 */
-	@Override
-	public EList<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(List<View> view, Property property) throws LayersException {
-
-		LayerExpression layers = getLayers();
-		if (layers == null) {
-			throw new BadStateException("Layers should be set first.");
-		}
-
-		return layers.getViewsComputePropertyValueCommand(view, property);
 	}
 
 	/**
@@ -676,16 +544,16 @@ public class LayersStackImpl extends
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case LayersPackage.LAYERS_STACK___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST:
+			case LayersPackage.LAYERS_STACK___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST:
 				try {
-					return getPropertiesComputePropertyValueCommand((View)arguments.get(0), (EList<Property>)arguments.get(1));
+					return getPropertiesComputePropertyValueCommand((View)arguments.get(0), (List<Property>)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case LayersPackage.LAYERS_STACK___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY:
+			case LayersPackage.LAYERS_STACK___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY:
 				try {
-					return getViewsComputePropertyValueCommand((EList<View>)arguments.get(0), (Property)arguments.get(1));
+					return getViewsComputePropertyValueCommand((List<View>)arguments.get(0), (Property)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
@@ -741,7 +609,7 @@ public class LayersStackImpl extends
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
 		result.append(", description: "); //$NON-NLS-1$
@@ -752,22 +620,4 @@ public class LayersStackImpl extends
 		return result.toString();
 	}
 
-	/**
-	 * A layer has been added to the layerTree.
-	 * Init this layer.
-	 * This method is called by the listener on layerTree events.
-	 *
-	 * @param addedLayer
-	 *            The added layer.
-	 */
-	protected void layerAdded(LayerExpression addedLayer) {
-		// Stop if there is no layer
-		if (addedLayer == null) {
-			return;
-		}
-		// init the layer
-		addedLayer.attachToLayersStack(this);
-
-	}
-
-} // LayersStackImpl
+} //LayersStackImpl

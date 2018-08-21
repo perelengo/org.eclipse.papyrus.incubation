@@ -25,6 +25,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -45,9 +46,9 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStac
  * <!-- end-user-doc -->
  * @generated
  */
-public class LayersStackItemProvider
-		extends ItemProviderAdapter
-		implements
+public class LayersStackItemProvider 
+	extends ItemProviderAdapter
+	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
 		ITreeItemContentProvider,
@@ -212,28 +213,29 @@ public class LayersStackItemProvider
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		LayersStack stack = (LayersStack) object;
-		String label = ((LayersStack) object).getName();
-
-		if (label == null || label.length() == 0) {
-			try {
-				label = stack.getDiagram().getName();
-			} catch (NullPointerException e) {
-				return getString("_UI_LayersStack_type");
-			}
-		}
-
-		return "Stack " + label;
+		String label = ((LayersStack)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_LayersStack_type") : //$NON-NLS-1$
+			getString("_UI_LayersStack_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
 	}
-
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -283,16 +285,6 @@ public class LayersStackItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
-				 LayersFactory.eINSTANCE.createCustomLayerOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
-				 LayersFactory.eINSTANCE.createRegExpLayer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.LAYERS_STACK__LAYERS,
 				 LayersFactory.eINSTANCE.createLayer()));
 
 		newChildDescriptors.add
@@ -309,7 +301,7 @@ public class LayersStackItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return LayersEditPlugin.INSTANCE;
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

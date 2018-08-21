@@ -1,14 +1,15 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
@@ -19,15 +20,20 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState;
@@ -54,8 +60,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
  *
  * @generated
  */
-public abstract class LayerExpressionImpl extends
-		ApplicationDependantElementImpl implements LayerExpression {
+public abstract class LayerExpressionImpl extends ApplicationDependantElementImpl implements LayerExpression {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,6 +70,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,6 +80,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,6 +90,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected static final String DESCRIPTION_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -102,6 +110,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected static final boolean IS_LAYER_ENABLED_INTERNAL_EDEFAULT = false;
+
 	/**
 	 * The default value of the '{@link #isLayerEnabled() <em>Is Layer Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -111,6 +120,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected static final boolean IS_LAYER_ENABLED_EDEFAULT = true;
+
 	/**
 	 * The cached value of the '{@link #isLayerEnabled() <em>Is Layer Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -120,6 +130,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected boolean isLayerEnabled = IS_LAYER_ENABLED_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #isBranchEnabled() <em>Is Branch Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -129,6 +140,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected static final boolean IS_BRANCH_ENABLED_EDEFAULT = true;
+
 	/**
 	 * The cached value of the '{@link #isBranchEnabled() <em>Is Branch Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -138,6 +150,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected boolean isBranchEnabled = IS_BRANCH_ENABLED_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getOwningLayersStack() <em>Owning Layers Stack</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -157,6 +170,7 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected static final LayerState STATE_EDEFAULT = LayerState.DETACHED;
+
 	/**
 	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -166,8 +180,11 @@ public abstract class LayerExpressionImpl extends
 	 * @ordered
 	 */
 	protected LayerState state = STATE_EDEFAULT;
+
 	/**
 	 * Listener on this object container (i.e owner) attached/detached events
+	 * 
+	 * @generated NOT
 	 */
 	protected Adapter containerListener = new AdapterImpl() {
 		@Override
@@ -195,7 +212,6 @@ public abstract class LayerExpressionImpl extends
 
 	};
 
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,9 +228,12 @@ public abstract class LayerExpressionImpl extends
 
 	}
 
+
 	/**
 	 * Start the behaviors associated to this layer.
 	 * This method is called by one of the methods: {@link #startAfterReloading()} or {@link #attachToLayersStack(LayersStack)}.
+	 * 
+	 * @generated NOT
 	 */
 	protected void startBehaviors() {
 
@@ -300,7 +319,7 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated NOT
 	 */
 	@Override
@@ -328,19 +347,14 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public void setIsBranchEnabled(boolean newIsBranchEnabled) {
 		boolean oldIsBranchEnabled = isBranchEnabled;
 		isBranchEnabled = newIsBranchEnabled;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.LAYER_EXPRESSION__IS_BRANCH_ENABLED, oldIsBranchEnabled, isBranchEnabled));
-		}
-
-		// Propagate to children.
-		// This is done in LayerOperation.
 	}
 
 	/**
@@ -409,6 +423,58 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ComputePropertyValueCommand getComputePropertyValueCommand(View view, Property property) throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public List<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(List<View> view, Property property) throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public List<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, List<Property> property) throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	@Override
+	public void attachToLayersStack(LayersStack owningLayersStack) {
+
+		// the owning stack
+		setOwningLayersStack(owningLayersStack);
+
+		// Start associated behavior
+		startBehaviors();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 *
 	 * @generated NOT
 	 */
@@ -426,7 +492,7 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated NOT
 	 */
 	@Override
@@ -437,7 +503,7 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated NOT
 	 */
 	@Override
@@ -465,9 +531,8 @@ public abstract class LayerExpressionImpl extends
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Subclass can overload in order to stop some behaviors.
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated NOT
 	 */
 	@Override
@@ -482,123 +547,12 @@ public abstract class LayerExpressionImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated NOT
 	 */
 	@Override
 	public void exitAttachedState() {
 		// do nothing.
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * Start this element after its reloading by EMF
-	 * This method is called recursively by the parent of this element. <br>
-	 * This default implementation start the associated behaviors.
-	 *
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	public void startAfterReloading() {
-		startBehaviors();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ComputePropertyValueCommand getComputePropertyValueCommand(View view, Property property) throws LayersException {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(EList<View> view, Property property) throws LayersException {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, EList<Property> property) throws LayersException {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * This default implementation set the layerStack, and start behaviors.
-	 * This method can be overriden by subclasses. In this case, subclass must ensure that
-	 * the {@link #owningLayersStack} is set and the behaviors are started.
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public void attachToLayersStack(LayersStack owningLayersStack) {
-
-		// the owning stack
-		setOwningLayersStack(owningLayersStack);
-
-		// Start associated behavior
-		startBehaviors();
-	}
-
-	/**
-	 * Init this Layer.
-	 * Called by the LayerStack as soon as the layer is added in the tree of layers.
-	 * This method can be subclassed to init a particular layer.
-	 *
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	public void initLayer(LayersStack owningLayersStack) {
-
-		// the owning stack
-		setOwningLayersStack(owningLayersStack);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public EList<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(List<View> view, Property property) throws LayersException {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public EList<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, List<Property> property) throws LayersException {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -730,16 +684,16 @@ public abstract class LayerExpressionImpl extends
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case LayersPackage.LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY:
+			case LayersPackage.LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY:
 				try {
-					return getViewsComputePropertyValueCommand((EList<View>)arguments.get(0), (Property)arguments.get(1));
+					return getViewsComputePropertyValueCommand((List<View>)arguments.get(0), (Property)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case LayersPackage.LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST:
+			case LayersPackage.LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST:
 				try {
-					return getPropertiesComputePropertyValueCommand((View)arguments.get(0), (EList<Property>)arguments.get(1));
+					return getPropertiesComputePropertyValueCommand((View)arguments.get(0), (List<Property>)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
@@ -794,7 +748,7 @@ public abstract class LayerExpressionImpl extends
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
 		result.append(", description: "); //$NON-NLS-1$
@@ -807,6 +761,38 @@ public abstract class LayerExpressionImpl extends
 		result.append(state);
 		result.append(')');
 		return result.toString();
+	}
+
+
+	/** Below is Custom code added to the class after generation, This MUST be removed during the next iteration of the model */
+	/**
+	 * <!-- begin-user-doc -->
+	 * Start this element after its reloading by EMF
+	 * This method is called recursively by the parent of this element. <br>
+	 * This default implementation start the associated behaviors.
+	 *
+	 * <!-- end-user-doc -->
+	 *
+	 * @generated NOT
+	 */
+	public void startAfterReloading() {
+		startBehaviors();
+	}
+
+	/**
+	 * Init this Layer.
+	 * Called by the LayerStack as soon as the layer is added in the tree of layers.
+	 * This method can be subclassed to init a particular layer.
+	 *
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 *
+	 * @generated NOT
+	 */
+	public void initLayer(LayersStack owningLayersStack) {
+
+		// the owning stack
+		setOwningLayersStack(owningLayersStack);
 	}
 
 	/**
@@ -822,6 +808,8 @@ public abstract class LayerExpressionImpl extends
 			setOwningLayersStack(newParent.getOwningLayersStack());
 			setIsBranchEnabled(newParent.isBranchEnabled());
 		}
-	};
+	}
+
+
 
 } // LayerExpressionImpl

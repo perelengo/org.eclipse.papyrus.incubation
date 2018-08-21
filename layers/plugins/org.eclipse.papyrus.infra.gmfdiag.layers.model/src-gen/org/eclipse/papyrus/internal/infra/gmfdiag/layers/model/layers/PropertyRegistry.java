@@ -13,7 +13,7 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -52,7 +52,7 @@ public interface PropertyRegistry extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Property> getProperties();
+	List<Property> getProperties();
 
 	/**
 	 * Returns the value of the '<em><b>Type Registry</b></em>' containment reference.

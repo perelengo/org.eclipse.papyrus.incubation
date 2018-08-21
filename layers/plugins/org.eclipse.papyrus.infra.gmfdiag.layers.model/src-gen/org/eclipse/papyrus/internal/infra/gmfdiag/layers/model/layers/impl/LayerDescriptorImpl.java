@@ -1,22 +1,26 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry;
@@ -69,7 +73,6 @@ public class LayerDescriptorImpl extends EObjectImpl implements LayerDescriptor 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PropertyRegistry getPropertyRegistry() {
 		if (propertyRegistry != null && propertyRegistry.eIsProxy()) {
 			InternalEObject oldPropertyRegistry = (InternalEObject)propertyRegistry;
@@ -96,7 +99,6 @@ public class LayerDescriptorImpl extends EObjectImpl implements LayerDescriptor 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPropertyRegistry(PropertyRegistry newPropertyRegistry) {
 		PropertyRegistry oldPropertyRegistry = propertyRegistry;
 		propertyRegistry = newPropertyRegistry;
@@ -163,4 +165,4 @@ public class LayerDescriptorImpl extends EObjectImpl implements LayerDescriptor 
 		return super.eIsSet(featureID);
 	}
 
-} // LayerDescriptorImpl
+} //LayerDescriptorImpl

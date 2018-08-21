@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -45,9 +46,9 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPack
  * <!-- end-user-doc -->
  * @generated
  */
-public class StringToTypeInstanceMapItemProvider
-		extends ItemProviderAdapter
-		implements
+public class StringToTypeInstanceMapItemProvider 
+	extends ItemProviderAdapter
+	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
 		ITreeItemContentProvider,
@@ -143,22 +144,27 @@ public class StringToTypeInstanceMapItemProvider
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		Map.Entry<?, ?> stringToTypeInstanceMap = (Map.Entry<?, ?>) object;
-		// return "" + stringToTypeInstanceMap.getKey() + " -> " + stringToTypeInstanceMap.getValue();
-
-		// TypeInstance instance = (TypeInstance)stringToTypeInstanceMap.getValue();
-
-		return "Property '" + stringToTypeInstanceMap.getKey() + "'";
+		Map.Entry<?, ?> stringToTypeInstanceMap = (Map.Entry<?, ?>)object;
+		return "" + stringToTypeInstanceMap.getKey() + " -> " + stringToTypeInstanceMap.getValue(); //$NON-NLS-1$ //$NON-NLS-2$
 	}
-
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -196,42 +202,7 @@ public class StringToTypeInstanceMapItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createIntInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createBooleanInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createStringInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
 				 LayersFactory.eINSTANCE.createNullInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createColorInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createFillInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createLineInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createFontInstance()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -252,7 +223,7 @@ public class StringToTypeInstanceMapItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return LayersEditPlugin.INSTANCE;
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

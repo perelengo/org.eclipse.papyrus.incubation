@@ -1,14 +1,15 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
@@ -16,11 +17,16 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type;
@@ -43,8 +49,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstan
  *
  * @generated
  */
-public class PropertyImpl extends
-		FolderElementImpl implements Property {
+public class PropertyImpl extends FolderElementImpl implements Property {
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -149,7 +154,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Type getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
@@ -176,7 +180,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setType(Type newType) {
 		Type oldType = type;
 		type = newType;
@@ -189,7 +192,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public TypeInstance getDefaultValue() {
 		return defaultValue;
 	}
@@ -214,7 +216,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDefaultValue(TypeInstance newDefaultValue) {
 		if (newDefaultValue != defaultValue) {
 			NotificationChain msgs = null;
@@ -234,7 +235,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -244,7 +244,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -257,7 +256,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -267,7 +265,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -280,7 +277,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getIndex() {
 		return index;
 	}
@@ -290,7 +286,6 @@ public class PropertyImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setIndex(int newIndex) {
 		int oldIndex = index;
 		index = newIndex;
@@ -301,25 +296,12 @@ public class PropertyImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @throws BadStateException
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
 	public TypeInstance createInstance() throws BadStateException {
-
-		if (type == null) {
-			throw new BadStateException("Property '" + getName() + "', type must be set to create an instance");
-		}
-
-		// Create an instance
-		TypeInstance instance = type.createInstance();
-		// Set the default value if needed
-		if (getDefaultValue() != null) {
-			instance.setValueFromInstance(getDefaultValue());
-		}
-
-		return instance;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -463,7 +445,7 @@ public class PropertyImpl extends
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
 		result.append(", description: "); //$NON-NLS-1$
@@ -474,4 +456,4 @@ public class PropertyImpl extends
 		return result.toString();
 	}
 
-} // PropertyImpl
+} //PropertyImpl

@@ -197,6 +197,16 @@ public class PropertyItemProvider extends FolderElementItemProvider {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -249,42 +259,7 @@ public class PropertyItemProvider extends FolderElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
-				 LayersFactory.eINSTANCE.createIntInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
-				 LayersFactory.eINSTANCE.createBooleanInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
-				 LayersFactory.eINSTANCE.createStringInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
 				 LayersFactory.eINSTANCE.createNullInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
-				 LayersFactory.eINSTANCE.createColorInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
-				 LayersFactory.eINSTANCE.createFillInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
-				 LayersFactory.eINSTANCE.createLineInstance()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.PROPERTY__DEFAULT_VALUE,
-				 LayersFactory.eINSTANCE.createFontInstance()));
 
 		newChildDescriptors.add
 			(createChildParameter

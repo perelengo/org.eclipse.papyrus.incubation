@@ -27,16 +27,7 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="layers:LayerExpression:owningLayersStack"></ppe:ReferenceDialog>
-	</Composite>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
-		</Composite.layout>
 		<ppe:MultiReference input="{Binding}"
 			property="layers:AbstractLayer:views"></ppe:MultiReference>
-		<ppe:MultiReference input="{Binding}"
-			property="layers:AbstractLayer:attachedProperties"></ppe:MultiReference>
 	</Composite>
 </Composite>

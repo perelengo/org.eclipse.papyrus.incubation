@@ -128,6 +128,16 @@ public class FolderItemProvider extends FolderElementItemProvider {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -188,52 +198,12 @@ public class FolderItemProvider extends FolderElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createMetamodel()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.FOLDER__ELEMENTS,
 				 LayersFactory.eINSTANCE.createFolder()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createIntType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createBooleanType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createStringType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createCustomType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createColor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createFill()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createLineType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.FOLDER__ELEMENTS,
-				 LayersFactory.eINSTANCE.createFontType()));
+				 LayersFactory.eINSTANCE.createMetamodel()));
 
 		newChildDescriptors.add
 			(createChildParameter

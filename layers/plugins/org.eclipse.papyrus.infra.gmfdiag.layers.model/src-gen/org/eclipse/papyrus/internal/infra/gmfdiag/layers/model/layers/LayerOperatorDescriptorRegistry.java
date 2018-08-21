@@ -13,7 +13,7 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -54,7 +54,7 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * @model containment="true" transient="true" ordered="false"
 	 * @generated
 	 */
-	EList<LayerOperatorDescriptor> getDescriptors();
+	List<LayerOperatorDescriptor> getDescriptors();
 
 	/**
 	 * Returns the value of the '<em><b>Property Operators</b></em>' containment reference list.
@@ -70,7 +70,7 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * @model containment="true" transient="true"
 	 * @generated
 	 */
-	EList<PropertyOperator> getPropertyOperators();
+	List<PropertyOperator> getPropertyOperators();
 
 	/**
 	 * Returns the value of the '<em><b>Property Collection Size</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * @model required="true" transient="true" changeable="false" ordered="false"
 	 * @generated
 	 */
-	DefaultPropertyOperator getDefaultOperator();
+	PropertyOperator getDefaultOperator();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,6 +159,6 @@ public interface LayerOperatorDescriptorRegistry extends EObject {
 	 * @model required="true" ordered="false" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" layerOperatorIDDataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.String" layerOperatorIDRequired="true" layerOperatorIDOrdered="false"
 	 * @generated
 	 */
-	AbstractLayerOperator createLayerOperator(String layerOperatorID) throws LayersException;
+	LayerOperator createLayerOperator(String layerOperatorID) throws LayersException;
 
 } // LayerOperatorDescriptorRegistry

@@ -24,5 +24,5 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
  * @model
  * @generated
  */
-public interface TopLayerOperator extends AbstractLayerOperator {
+public interface TopLayerOperator extends LayerOperator {
 } // TopLayerOperator

@@ -1,14 +1,15 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.util;
 
@@ -16,11 +17,16 @@ import java.util.Map;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.gmf.runtime.notation.NamedStyle;
 import org.eclipse.gmf.runtime.notation.Style;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.*;
 
 /**
@@ -77,7 +83,8 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LayersSwitch<Adapter> modelSwitch = new LayersSwitch<Adapter>() {
+	protected LayersSwitch<Adapter> modelSwitch =
+		new LayersSwitch<Adapter>() {
 			@Override
 			public Adapter caseLayerNamedStyle(LayerNamedStyle object) {
 				return createLayerNamedStyleAdapter();
@@ -117,10 +124,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseType(Type object) {
 				return createTypeAdapter();
-			}
-			@Override
-			public Adapter caseMetamodel(Metamodel object) {
-				return createMetamodelAdapter();
 			}
 			@Override
 			public Adapter caseTypeInstance(TypeInstance object) {
@@ -175,20 +178,12 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 				return createPropertyOperatorAdapter();
 			}
 			@Override
-			public Adapter caseAbstractLayerOperator(AbstractLayerOperator object) {
-				return createAbstractLayerOperatorAdapter();
-			}
-			@Override
 			public Adapter caseLayerOperator(LayerOperator object) {
 				return createLayerOperatorAdapter();
 			}
 			@Override
 			public Adapter caseLayersContainer(LayersContainer object) {
 				return createLayersContainerAdapter();
-			}
-			@Override
-			public Adapter caseDefaultPropertyOperator(DefaultPropertyOperator object) {
-				return createDefaultPropertyOperatorAdapter();
 			}
 			@Override
 			public Adapter caseAbstractLayer(AbstractLayer object) {
@@ -203,32 +198,8 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 				return createFolderAdapter();
 			}
 			@Override
-			public Adapter caseIntInstance(IntInstance object) {
-				return createIntInstanceAdapter();
-			}
-			@Override
-			public Adapter caseBooleanInstance(BooleanInstance object) {
-				return createBooleanInstanceAdapter();
-			}
-			@Override
-			public Adapter caseStringInstance(StringInstance object) {
-				return createStringInstanceAdapter();
-			}
-			@Override
-			public Adapter caseIntType(IntType object) {
-				return createIntTypeAdapter();
-			}
-			@Override
-			public Adapter caseBooleanType(BooleanType object) {
-				return createBooleanTypeAdapter();
-			}
-			@Override
-			public Adapter caseStringType(StringType object) {
-				return createStringTypeAdapter();
-			}
-			@Override
-			public Adapter caseCustomType(CustomType object) {
-				return createCustomTypeAdapter();
+			public Adapter caseMetamodel(Metamodel object) {
+				return createMetamodelAdapter();
 			}
 			@Override
 			public Adapter caseTopLayerOperator(TopLayerOperator object) {
@@ -237,10 +208,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseStackedLayerOperator(StackedLayerOperator object) {
 				return createStackedLayerOperatorAdapter();
-			}
-			@Override
-			public Adapter caseCustomLayerOperator(CustomLayerOperator object) {
-				return createCustomLayerOperatorAdapter();
 			}
 			@Override
 			public Adapter casePropertyIndex(PropertyIndex object) {
@@ -255,76 +222,16 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 				return createSimpleLayerDescriptorAdapter();
 			}
 			@Override
-			public Adapter caseRegExpLayerDescriptor(RegExpLayerDescriptor object) {
-				return createRegExpLayerDescriptorAdapter();
-			}
-			@Override
 			public Adapter caseNullInstance(NullInstance object) {
 				return createNullInstanceAdapter();
-			}
-			@Override
-			public Adapter caseRegExpLayer(RegExpLayer object) {
-				return createRegExpLayerAdapter();
 			}
 			@Override
 			public Adapter caseLayer(Layer object) {
 				return createLayerAdapter();
 			}
 			@Override
-			public Adapter caseColor(Color object) {
-				return createColorAdapter();
-			}
-			@Override
-			public Adapter caseColorInstance(ColorInstance object) {
-				return createColorInstanceAdapter();
-			}
-			@Override
-			public Adapter caseFillInstance(FillInstance object) {
-				return createFillInstanceAdapter();
-			}
-			@Override
-			public Adapter caseFill(Fill object) {
-				return createFillAdapter();
-			}
-			@Override
-			public Adapter caseFillPropertySetter(FillPropertySetter object) {
-				return createFillPropertySetterAdapter();
-			}
-			@Override
-			public Adapter caseIsValidPropertySetter(IsValidPropertySetter object) {
-				return createIsValidPropertySetterAdapter();
-			}
-			@Override
 			public Adapter caseNullPropertySetter(NullPropertySetter object) {
 				return createNullPropertySetterAdapter();
-			}
-			@Override
-			public Adapter caseLineType(LineType object) {
-				return createLineTypeAdapter();
-			}
-			@Override
-			public Adapter caseLineInstance(LineInstance object) {
-				return createLineInstanceAdapter();
-			}
-			@Override
-			public Adapter caseLinePropertySetter(LinePropertySetter object) {
-				return createLinePropertySetterAdapter();
-			}
-			@Override
-			public Adapter caseFontPropertySetter(FontPropertySetter object) {
-				return createFontPropertySetterAdapter();
-			}
-			@Override
-			public Adapter caseFontInstance(FontInstance object) {
-				return createFontInstanceAdapter();
-			}
-			@Override
-			public Adapter caseFontType(FontType object) {
-				return createFontTypeAdapter();
-			}
-			@Override
-			public Adapter caseIsVisiblePropertySetter(IsVisiblePropertySetter object) {
-				return createIsVisiblePropertySetterAdapter();
 			}
 			@Override
 			public Adapter caseTopLayerOperatorDescriptor(TopLayerOperatorDescriptor object) {
@@ -333,22 +240,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseStackedLayerOperatorDescriptor(StackedLayerOperatorDescriptor object) {
 				return createStackedLayerOperatorDescriptorAdapter();
-			}
-			@Override
-			public Adapter caseCustomPropertyOperator(CustomPropertyOperator object) {
-				return createCustomPropertyOperatorAdapter();
-			}
-			@Override
-			public Adapter caseAndStackedLayerOperatorDescriptor(AndStackedLayerOperatorDescriptor object) {
-				return createAndStackedLayerOperatorDescriptorAdapter();
-			}
-			@Override
-			public Adapter caseOrStackedLayerOperatorDescriptor(OrStackedLayerOperatorDescriptor object) {
-				return createOrStackedLayerOperatorDescriptorAdapter();
-			}
-			@Override
-			public Adapter caseIsAbstractUmlSetter(IsAbstractUmlSetter object) {
-				return createIsAbstractUmlSetterAdapter();
 			}
 			@Override
 			public Adapter caseAllViewsDerivedLayer(AllViewsDerivedLayer object) {
@@ -435,212 +326,254 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer <em>Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression <em>Layer Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression
 	 * @generated
 	 */
-	public Adapter createLayerAdapter() {
+	public Adapter createLayerExpressionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Color <em>Color</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ApplicationDependantElement <em>Application Dependant Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Color
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ApplicationDependantElement
 	 * @generated
 	 */
-	public Adapter createColorAdapter() {
+	public Adapter createApplicationDependantElementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ColorInstance <em>Color Instance</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication <em>Stack Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ColorInstance
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication
 	 * @generated
 	 */
-	public Adapter createColorInstanceAdapter() {
+	public Adapter createLayersStackApplicationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance <em>Fill Instance</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FolderElement <em>Folder Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FolderElement
 	 * @generated
 	 */
-	public Adapter createFillInstanceAdapter() {
+	public Adapter createFolderElementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Fill <em>Fill</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerStackDescriptorRegistry <em>Layer Stack Descriptor Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Fill
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerStackDescriptorRegistry
 	 * @generated
 	 */
-	public Adapter createFillAdapter() {
+	public Adapter createLayerStackDescriptorRegistryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillPropertySetter <em>Fill Property Setter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry <em>Property Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillPropertySetter
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry
 	 * @generated
 	 */
-	public Adapter createFillPropertySetterAdapter() {
+	public Adapter createPropertyRegistryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsValidPropertySetter <em>Is Valid Property Setter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsValidPropertySetter
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property
 	 * @generated
 	 */
-	public Adapter createIsValidPropertySetterAdapter() {
+	public Adapter createPropertyAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullPropertySetter <em>Null Property Setter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullPropertySetter
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type
 	 * @generated
 	 */
-	public Adapter createNullPropertySetterAdapter() {
+	public Adapter createTypeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineType <em>Line Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance <em>Type Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineType
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance
 	 * @generated
 	 */
-	public Adapter createLineTypeAdapter() {
+	public Adapter createTypeInstanceAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance <em>Line Instance</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand <em>Compute Property Value Command Itf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand
 	 * @generated
 	 */
-	public Adapter createLineInstanceAdapter() {
+	public Adapter createComputePropertyValueCommandItfAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LinePropertySetter <em>Line Property Setter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegistry <em>Type Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LinePropertySetter
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegistry
 	 * @generated
 	 */
-	public Adapter createLinePropertySetterAdapter() {
+	public Adapter createTypeRegistryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontPropertySetter <em>Font Property Setter</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Type Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontPropertySetter
+	 * @see java.util.Map.Entry
 	 * @generated
 	 */
-	public Adapter createFontPropertySetterAdapter() {
+	public Adapter createStringToTypeMapAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance <em>Font Instance</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptorRegistry <em>Layer Descriptor Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptorRegistry
 	 * @generated
 	 */
-	public Adapter createFontInstanceAdapter() {
+	public Adapter createLayerDescriptorRegistryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontType <em>Font Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor <em>Layer Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontType
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor
 	 * @generated
 	 */
-	public Adapter createFontTypeAdapter() {
+	public Adapter createLayerDescriptorAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsVisiblePropertySetter <em>Is Visible Property Setter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerApplicationFactory <em>Layer Application Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsVisiblePropertySetter
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerApplicationFactory
 	 * @generated
 	 */
-	public Adapter createIsVisiblePropertySetterAdapter() {
+	public Adapter createLayerApplicationFactoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry <em>Property Setter Registry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry
+	 * @generated
+	 */
+	public Adapter createPropertySetterRegistryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter <em>Property Setter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter
+	 * @generated
+	 */
+	public Adapter createPropertySetterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Property Setter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToPropertySetterAdapter() {
 		return null;
 	}
 
@@ -655,6 +588,230 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLayerOperatorDescriptorRegistryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor <em>Layer Operator Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor
+	 * @generated
+	 */
+	public Adapter createLayerOperatorDescriptorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator <em>Property Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator
+	 * @generated
+	 */
+	public Adapter createPropertyOperatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator <em>Layer Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator
+	 * @generated
+	 */
+	public Adapter createLayerOperatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer <em>Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer
+	 * @generated
+	 */
+	public Adapter createLayersContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer <em>Abstract Layer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer
+	 * @generated
+	 */
+	public Adapter createAbstractLayerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Type Instance Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToTypeInstanceMapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Folder <em>Folder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Folder
+	 * @generated
+	 */
+	public Adapter createFolderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel <em>Metamodel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel
+	 * @generated
+	 */
+	public Adapter createMetamodelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator <em>Top Layer Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator
+	 * @generated
+	 */
+	public Adapter createTopLayerOperatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLayerOperator <em>Stacked Layer Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLayerOperator
+	 * @generated
+	 */
+	public Adapter createStackedLayerOperatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyIndex <em>Property Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyIndex
+	 * @generated
+	 */
+	public Adapter createPropertyIndexAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Property Index Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToPropertyIndexMapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.SimpleLayerDescriptor <em>Simple Layer Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.SimpleLayerDescriptor
+	 * @generated
+	 */
+	public Adapter createSimpleLayerDescriptorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance <em>Null Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance
+	 * @generated
+	 */
+	public Adapter createNullInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer <em>Layer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer
+	 * @generated
+	 */
+	public Adapter createLayerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullPropertySetter <em>Null Property Setter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullPropertySetter
+	 * @generated
+	 */
+	public Adapter createNullPropertySetterAdapter() {
 		return null;
 	}
 
@@ -683,62 +840,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStackedLayerOperatorDescriptorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator <em>Custom Property Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator
-	 * @generated
-	 */
-	public Adapter createCustomPropertyOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AndStackedLayerOperatorDescriptor <em>And Stacked Layer Operator Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AndStackedLayerOperatorDescriptor
-	 * @generated
-	 */
-	public Adapter createAndStackedLayerOperatorDescriptorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.OrStackedLayerOperatorDescriptor <em>Or Stacked Layer Operator Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.OrStackedLayerOperatorDescriptor
-	 * @generated
-	 */
-	public Adapter createOrStackedLayerOperatorDescriptorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsAbstractUmlSetter <em>Is Abstract Uml Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsAbstractUmlSetter
-	 * @generated
-	 */
-	public Adapter createIsAbstractUmlSetterAdapter() {
 		return null;
 	}
 
@@ -841,622 +942,6 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance <em>Type Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance
-	 * @generated
-	 */
-	public Adapter createTypeInstanceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand <em>Compute Property Value Command Itf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand
-	 * @generated
-	 */
-	public Adapter createComputePropertyValueCommandItfAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Type Instance Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see java.util.Map.Entry
-	 * @generated
-	 */
-	public Adapter createStringToTypeInstanceMapAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor <em>Layer Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor
-	 * @generated
-	 */
-	public Adapter createLayerDescriptorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerApplicationFactory <em>Layer Application Factory</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerApplicationFactory
-	 * @generated
-	 */
-	public Adapter createLayerApplicationFactoryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry <em>Property Setter Registry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry
-	 * @generated
-	 */
-	public Adapter createPropertySetterRegistryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter <em>Property Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter
-	 * @generated
-	 */
-	public Adapter createPropertySetterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Property Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see java.util.Map.Entry
-	 * @generated
-	 */
-	public Adapter createStringToPropertySetterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer <em>Abstract Layer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer
-	 * @generated
-	 */
-	public Adapter createAbstractLayerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property <em>Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property
-	 * @generated
-	 */
-	public Adapter createPropertyAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FolderElement <em>Folder Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FolderElement
-	 * @generated
-	 */
-	public Adapter createFolderElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression <em>Layer Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression
-	 * @generated
-	 */
-	public Adapter createLayerExpressionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ApplicationDependantElement <em>Application Dependant Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ApplicationDependantElement
-	 * @generated
-	 */
-	public Adapter createApplicationDependantElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type
-	 * @generated
-	 */
-	public Adapter createTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel <em>Metamodel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel
-	 * @generated
-	 */
-	public Adapter createMetamodelAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Folder <em>Folder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Folder
-	 * @generated
-	 */
-	public Adapter createFolderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntInstance <em>Int Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntInstance
-	 * @generated
-	 */
-	public Adapter createIntInstanceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance <em>Boolean Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance
-	 * @generated
-	 */
-	public Adapter createBooleanInstanceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance <em>String Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance
-	 * @generated
-	 */
-	public Adapter createStringInstanceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntType <em>Int Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntType
-	 * @generated
-	 */
-	public Adapter createIntTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanType <em>Boolean Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanType
-	 * @generated
-	 */
-	public Adapter createBooleanTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringType <em>String Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringType
-	 * @generated
-	 */
-	public Adapter createStringTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomType <em>Custom Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomType
-	 * @generated
-	 */
-	public Adapter createCustomTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication <em>Stack Application</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication
-	 * @generated
-	 */
-	public Adapter createLayersStackApplicationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerStackDescriptorRegistry <em>Layer Stack Descriptor Registry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerStackDescriptorRegistry
-	 * @generated
-	 */
-	public Adapter createLayerStackDescriptorRegistryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry <em>Property Registry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry
-	 * @generated
-	 */
-	public Adapter createPropertyRegistryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Property Index Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see java.util.Map.Entry
-	 * @generated
-	 */
-	public Adapter createStringToPropertyIndexMapAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.SimpleLayerDescriptor <em>Simple Layer Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.SimpleLayerDescriptor
-	 * @generated
-	 */
-	public Adapter createSimpleLayerDescriptorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayerDescriptor <em>Reg Exp Layer Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayerDescriptor
-	 * @generated
-	 */
-	public Adapter createRegExpLayerDescriptorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance <em>Null Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance
-	 * @generated
-	 */
-	public Adapter createNullInstanceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer <em>Reg Exp Layer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer
-	 * @generated
-	 */
-	public Adapter createRegExpLayerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyIndex <em>Property Index</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyIndex
-	 * @generated
-	 */
-	public Adapter createPropertyIndexAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegistry <em>Type Registry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegistry
-	 * @generated
-	 */
-	public Adapter createTypeRegistryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Type Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see java.util.Map.Entry
-	 * @generated
-	 */
-	public Adapter createStringToTypeMapAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptorRegistry <em>Layer Descriptor Registry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptorRegistry
-	 * @generated
-	 */
-	public Adapter createLayerDescriptorRegistryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator <em>Layer Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator
-	 * @generated
-	 */
-	public Adapter createLayerOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer <em>Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer
-	 * @generated
-	 */
-	public Adapter createLayersContainerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator <em>Abstract Layer Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator
-	 * @generated
-	 */
-	public Adapter createAbstractLayerOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor <em>Layer Operator Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor
-	 * @generated
-	 */
-	public Adapter createLayerOperatorDescriptorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator <em>Property Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator
-	 * @generated
-	 */
-	public Adapter createPropertyOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator <em>Default Property Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator
-	 * @generated
-	 */
-	public Adapter createDefaultPropertyOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator <em>Top Layer Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator
-	 * @generated
-	 */
-	public Adapter createTopLayerOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLayerOperator <em>Stacked Layer Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLayerOperator
-	 * @generated
-	 */
-	public Adapter createStackedLayerOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomLayerOperator <em>Custom Layer Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomLayerOperator
-	 * @generated
-	 */
-	public Adapter createCustomLayerOperatorAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Style <em>Style</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1496,4 +981,4 @@ public class LayersAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} // LayersAdapterFactory
+} //LayersAdapterFactory

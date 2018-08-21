@@ -26,11 +26,10 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
  */
 public interface NullInstance extends TypeInstance {
 
-	public static NullInstance NULLINSTANCE = LayersFactory.eINSTANCE.createNullInstance();
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @model kind="operation" required="true" ordered="false"
 	 * @generated
 	 */

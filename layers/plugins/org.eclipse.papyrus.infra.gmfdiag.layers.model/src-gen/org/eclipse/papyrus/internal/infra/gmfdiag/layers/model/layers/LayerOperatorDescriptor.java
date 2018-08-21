@@ -13,7 +13,7 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -51,7 +51,7 @@ public interface LayerOperatorDescriptor extends EObject {
 	 * @model transient="true"
 	 * @generated
 	 */
-	EList<PropertyOperator> getPropertyOperators();
+	List<PropertyOperator> getPropertyOperators();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -101,7 +101,7 @@ public interface LayerOperatorDescriptor extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	AbstractLayerOperator createLayerOperator();
+	LayerOperator createLayerOperator();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,6 +109,6 @@ public interface LayerOperatorDescriptor extends EObject {
 	 * @model sizeDataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.int" sizeRequired="true" sizeOrdered="false" defaultPropertyOperatorRequired="true" defaultPropertyOperatorOrdered="false"
 	 * @generated
 	 */
-	void setPropertyCollectionSize(int size, DefaultPropertyOperator defaultPropertyOperator);
+	void setPropertyCollectionSize(int size, PropertyOperator defaultPropertyOperator);
 
 } // LayerOperatorDescriptor

@@ -1,36 +1,43 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator;
+
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator;
@@ -100,18 +107,15 @@ public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected DefaultPropertyOperator defaultOperator;
+	protected PropertyOperator defaultOperator;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	protected LayerOperatorDescriptorRegistryImpl() {
 		super();
-		// Set the defaultOperator
-		defaultOperator = LayersFactory.eINSTANCE.createDefaultPropertyOperator();
 	}
 
 	/**
@@ -129,8 +133,7 @@ public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<LayerOperatorDescriptor> getDescriptors() {
+	public List<LayerOperatorDescriptor> getDescriptors() {
 		if (descriptors == null) {
 			descriptors = new EObjectContainmentEList<LayerOperatorDescriptor>(LayerOperatorDescriptor.class, this, LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DESCRIPTORS);
 		}
@@ -142,8 +145,7 @@ public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<PropertyOperator> getPropertyOperators() {
+	public List<PropertyOperator> getPropertyOperators() {
 		if (propertyOperators == null) {
 			propertyOperators = new EObjectContainmentEList<PropertyOperator>(PropertyOperator.class, this, LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_OPERATORS);
 		}
@@ -155,7 +157,6 @@ public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getPropertyCollectionSize() {
 		return propertyCollectionSize;
 	}
@@ -163,23 +164,13 @@ public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
 	public void setPropertyCollectionSize(int newPropertyCollectionSize) {
 		int oldPropertyCollectionSize = propertyCollectionSize;
 		propertyCollectionSize = newPropertyCollectionSize;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__PROPERTY_COLLECTION_SIZE, oldPropertyCollectionSize, propertyCollectionSize));
-		}
-
-		// Propagate the size to registered LayerOperator
-		if (newPropertyCollectionSize > oldPropertyCollectionSize) {
-			for (LayerOperatorDescriptor descriptor : getDescriptors()) {
-				descriptor.setPropertyCollectionSize(newPropertyCollectionSize, getDefaultOperator());
-			}
-		}
 	}
 
 	/**
@@ -187,11 +178,10 @@ public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public DefaultPropertyOperator getDefaultOperator() {
+	public PropertyOperator getDefaultOperator() {
 		if (defaultOperator != null && defaultOperator.eIsProxy()) {
 			InternalEObject oldDefaultOperator = (InternalEObject)defaultOperator;
-			defaultOperator = (DefaultPropertyOperator)eResolveProxy(oldDefaultOperator);
+			defaultOperator = (PropertyOperator)eResolveProxy(oldDefaultOperator);
 			if (defaultOperator != oldDefaultOperator) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY__DEFAULT_OPERATOR, oldDefaultOperator, defaultOperator));
@@ -205,116 +195,74 @@ public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DefaultPropertyOperator basicGetDefaultOperator() {
+	public PropertyOperator basicGetDefaultOperator() {
 		return defaultOperator;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
 	public void addLayerOperatorDescriptor(LayerOperatorDescriptor descriptor) {
-
-		// Ensure descriptor size
-		descriptor.setPropertyCollectionSize(getPropertyCollectionSize(), getDefaultOperator());
-		// Add descriptor
-		getDescriptors().add(descriptor);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
 	public LayerOperatorDescriptor getLayerOperatorDescriptor(String name) throws NotFoundException {
-		if (name == null) {
-			throw new NotFoundException("Can't find LayerOperatorDescriptor for name 'null'.");
-		}
-		for (LayerOperatorDescriptor descriptor : getDescriptors()) {
-			if (name.equals(descriptor.getName())) {
-				return descriptor;
-			}
-		}
-		// Not found
-		throw new NotFoundException("Can't find LayerOperatorDescriptor for name '" + name + "'.");
-
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
 	public void addPropertyOperator(PropertyOperator operator) {
-		getPropertyOperators().add(operator);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
 	public PropertyOperator getPropertyOperator(String name) throws NotFoundException {
-
-		if (name == null) {
-			throw new NotFoundException("Can't find PropertyOperator for name 'null'.");
-		}
-		for (PropertyOperator op : getPropertyOperators()) {
-			if (name.equals(op.getName())) {
-				return op;
-			}
-		}
-		// Not found
-		throw new NotFoundException("Can't find PropertyOperator for name '" + name + "'.");
-
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @throws NotFoundException
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
 	public void attachOperatorToDescriptor(Property property, String operatorName, String layerDescriptorName) throws NotFoundException {
-
-		// Ensure that PropertiesCollectionSize can contain the property index.
-		if (getPropertyCollectionSize() <= property.getIndex()) {
-			setPropertyCollectionSize(property.getIndex());
-		}
-
-		// Attach the operator to the LayerOperator
-		PropertyOperator op = getPropertyOperator(operatorName);
-		LayerOperatorDescriptor layerOp = getLayerOperatorDescriptor(layerDescriptorName);
-
-		layerOp.setPropertyOperator(property, op);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
-	public AbstractLayerOperator createLayerOperator(String layerOperatorID) throws LayersException {
-
-		LayerOperatorDescriptor desc = getLayerOperatorDescriptor(layerOperatorID);
-
-		AbstractLayerOperator newLayerOperator = desc.createLayerOperator();
-
-		// newLayerOperator.setApplication();
-		return newLayerOperator;
+	public LayerOperator createLayerOperator(String layerOperatorID) throws LayersException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -475,11 +423,11 @@ public class LayerOperatorDescriptorRegistryImpl extends EObjectImpl implements 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (propertyCollectionSize: "); //$NON-NLS-1$
 		result.append(propertyCollectionSize);
 		result.append(')');
 		return result.toString();
 	}
 
-} // LayerOperatorDescriptorRegistryImpl
+} //LayerOperatorDescriptorRegistryImpl

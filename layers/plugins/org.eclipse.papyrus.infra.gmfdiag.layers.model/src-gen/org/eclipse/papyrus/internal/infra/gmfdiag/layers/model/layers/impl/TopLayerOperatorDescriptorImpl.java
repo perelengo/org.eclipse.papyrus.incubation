@@ -1,23 +1,21 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLayerOperator;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperatorDescriptor;
 
 /**
@@ -31,43 +29,10 @@ public class TopLayerOperatorDescriptorImpl extends LayerOperatorDescriptorImpl 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	protected TopLayerOperatorDescriptorImpl() {
 		super();
-		init();
-	}
-
-	/**
-	 * Init the descriptor.
-	 */
-	private void init() {
-		setName("TopLayerOperator");
-
-	}
-
-	/**
-	 * New instance creation counter.
-	 */
-	static int count = 0;
-
-	/**
-	 * Create the requested {@link StackedLayerOperator} and init it.
-	 *
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerOperatorDescriptorImpl#createLayerOperator()
-	 *
-	 * @return
-	 */
-	@Override
-	public AbstractLayerOperator createLayerOperator() {
-
-
-		TopLayerOperator layerOperator = LayersFactory.eINSTANCE.createTopLayerOperator();
-		layerOperator.setLayerOperatorDescriptor(this);
-		layerOperator.setName(getName() + count++);
-
-		return layerOperator;
 	}
 
 	/**
@@ -80,4 +45,4 @@ public class TopLayerOperatorDescriptorImpl extends LayerOperatorDescriptorImpl 
 		return LayersPackage.Literals.TOP_LAYER_OPERATOR_DESCRIPTOR;
 	}
 
-} // TopLayerOperatorDescriptorImpl
+} //TopLayerOperatorDescriptorImpl

@@ -1,24 +1,29 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel;
 
@@ -40,8 +45,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel;
  *
  * @generated
  */
-public class MetamodelImpl extends
-		FolderElementImpl implements Metamodel {
+public class MetamodelImpl extends FolderElementImpl implements Metamodel {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -186,7 +190,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -196,7 +199,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -209,7 +211,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -219,7 +220,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -232,7 +232,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getNsuri() {
 		return nsuri;
 	}
@@ -242,7 +241,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setNsuri(String newNsuri) {
 		String oldNsuri = nsuri;
 		nsuri = newNsuri;
@@ -255,7 +253,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getPluginID() {
 		return pluginID;
 	}
@@ -265,7 +262,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPluginID(String newPluginID) {
 		String oldPluginID = pluginID;
 		pluginID = newPluginID;
@@ -278,7 +274,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getEPackageInstanceName() {
 		return ePackageInstanceName;
 	}
@@ -288,7 +283,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setEPackageInstanceName(String newEPackageInstanceName) {
 		String oldEPackageInstanceName = ePackageInstanceName;
 		ePackageInstanceName = newEPackageInstanceName;
@@ -301,7 +295,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean isTypeValid() {
 		return isTypeValid;
 	}
@@ -311,7 +304,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setIsTypeValid(boolean newIsTypeValid) {
 		boolean oldIsTypeValid = isTypeValid;
 		isTypeValid = newIsTypeValid;
@@ -324,7 +316,6 @@ public class MetamodelImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EPackage getEPackage() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -462,7 +453,7 @@ public class MetamodelImpl extends
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
 		result.append(", description: "); //$NON-NLS-1$
@@ -479,4 +470,4 @@ public class MetamodelImpl extends
 		return result.toString();
 	}
 
-} // MetamodelImpl
+} //MetamodelImpl

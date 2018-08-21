@@ -20,7 +20,7 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Layersconfig editor plugin.
+ * This is the central singleton for the LayersConfig editor plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

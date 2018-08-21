@@ -40,7 +40,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifier {
 	 * States used in the state machine.
 	 */
 	protected enum State {
-		NoApplication, ApplicationCreated, disposed
+	NoApplication, ApplicationCreated, disposed
 	};
 
 	protected State state;
@@ -72,6 +72,7 @@ public class LayersStackAndApplicationLifeCycleEventNotifier {
 		@Override
 		public void layersModelRootAdded(Notification msg) {
 			if (state == State.NoApplication) {
+				layersModel.shouldSave(true);
 				transitionNoApplicationToApplicationCreatedState();
 			}
 		}

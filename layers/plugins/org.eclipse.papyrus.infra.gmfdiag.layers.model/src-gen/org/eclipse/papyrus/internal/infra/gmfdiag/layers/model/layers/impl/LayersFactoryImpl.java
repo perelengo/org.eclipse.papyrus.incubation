@@ -1,14 +1,15 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
@@ -18,14 +19,18 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.*;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.CustomPropertyOperatorsInstance;
 
 /**
  * <!-- begin-user-doc -->
@@ -77,7 +82,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 			case LayersPackage.LAYER_STACK_DESCRIPTOR_REGISTRY: return createLayerStackDescriptorRegistry();
 			case LayersPackage.PROPERTY_REGISTRY: return createPropertyRegistry();
 			case LayersPackage.PROPERTY: return createProperty();
-			case LayersPackage.METAMODEL: return createMetamodel();
 			case LayersPackage.TYPE_REGISTRY: return createTypeRegistry();
 			case LayersPackage.STRING_TO_TYPE_MAP: return (EObject)createStringToTypeMap();
 			case LayersPackage.LAYER_DESCRIPTOR_REGISTRY: return createLayerDescriptorRegistry();
@@ -88,46 +92,19 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 			case LayersPackage.LAYER_OPERATOR_DESCRIPTOR_REGISTRY: return createLayerOperatorDescriptorRegistry();
 			case LayersPackage.LAYER_OPERATOR_DESCRIPTOR: return createLayerOperatorDescriptor();
 			case LayersPackage.PROPERTY_OPERATOR: return createPropertyOperator();
-			case LayersPackage.DEFAULT_PROPERTY_OPERATOR: return createDefaultPropertyOperator();
 			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP: return (EObject)createStringToTypeInstanceMap();
 			case LayersPackage.FOLDER: return createFolder();
-			case LayersPackage.INT_INSTANCE: return createIntInstance();
-			case LayersPackage.BOOLEAN_INSTANCE: return createBooleanInstance();
-			case LayersPackage.STRING_INSTANCE: return createStringInstance();
-			case LayersPackage.INT_TYPE: return createIntType();
-			case LayersPackage.BOOLEAN_TYPE: return createBooleanType();
-			case LayersPackage.STRING_TYPE: return createStringType();
-			case LayersPackage.CUSTOM_TYPE: return createCustomType();
+			case LayersPackage.METAMODEL: return createMetamodel();
 			case LayersPackage.TOP_LAYER_OPERATOR: return createTopLayerOperator();
 			case LayersPackage.STACKED_LAYER_OPERATOR: return createStackedLayerOperator();
-			case LayersPackage.CUSTOM_LAYER_OPERATOR: return createCustomLayerOperator();
 			case LayersPackage.PROPERTY_INDEX: return createPropertyIndex();
 			case LayersPackage.STRING_TO_PROPERTY_INDEX_MAP: return (EObject)createStringToPropertyIndexMap();
 			case LayersPackage.SIMPLE_LAYER_DESCRIPTOR: return createSimpleLayerDescriptor();
-			case LayersPackage.REG_EXP_LAYER_DESCRIPTOR: return createRegExpLayerDescriptor();
 			case LayersPackage.NULL_INSTANCE: return createNullInstance();
-			case LayersPackage.REG_EXP_LAYER: return createRegExpLayer();
 			case LayersPackage.LAYER: return createLayer();
-			case LayersPackage.COLOR: return createColor();
-			case LayersPackage.COLOR_INSTANCE: return createColorInstance();
-			case LayersPackage.FILL_INSTANCE: return createFillInstance();
-			case LayersPackage.FILL: return createFill();
-			case LayersPackage.FILL_PROPERTY_SETTER: return createFillPropertySetter();
-			case LayersPackage.IS_VALID_PROPERTY_SETTER: return createIsValidPropertySetter();
 			case LayersPackage.NULL_PROPERTY_SETTER: return createNullPropertySetter();
-			case LayersPackage.LINE_TYPE: return createLineType();
-			case LayersPackage.LINE_INSTANCE: return createLineInstance();
-			case LayersPackage.LINE_PROPERTY_SETTER: return createLinePropertySetter();
-			case LayersPackage.FONT_PROPERTY_SETTER: return createFontPropertySetter();
-			case LayersPackage.FONT_INSTANCE: return createFontInstance();
-			case LayersPackage.FONT_TYPE: return createFontType();
-			case LayersPackage.IS_VISIBLE_PROPERTY_SETTER: return createIsVisiblePropertySetter();
 			case LayersPackage.TOP_LAYER_OPERATOR_DESCRIPTOR: return createTopLayerOperatorDescriptor();
 			case LayersPackage.STACKED_LAYER_OPERATOR_DESCRIPTOR: return createStackedLayerOperatorDescriptor();
-			case LayersPackage.CUSTOM_PROPERTY_OPERATOR: return createCustomPropertyOperator();
-			case LayersPackage.AND_STACKED_LAYER_OPERATOR_DESCRIPTOR: return createAndStackedLayerOperatorDescriptor();
-			case LayersPackage.OR_STACKED_LAYER_OPERATOR_DESCRIPTOR: return createOrStackedLayerOperatorDescriptor();
-			case LayersPackage.IS_ABSTRACT_UML_SETTER: return createIsAbstractUmlSetter();
 			case LayersPackage.ALL_VIEWS_DERIVED_LAYER: return createAllViewsDerivedLayer();
 			case LayersPackage.CSS_PROPERTY_SETTER: return createCSSPropertySetter();
 			case LayersPackage.CSS_TYPE: return createCSSType();
@@ -154,10 +131,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 				return createEventLevelFromString(eDataType, initialValue);
 			case LayersPackage.STRING:
 				return createStringFromString(eDataType, initialValue);
-			case LayersPackage.BOOLEAN:
-				return createbooleanFromString(eDataType, initialValue);
-			case LayersPackage.EPACKAGE:
-				return createEPackageFromString(eDataType, initialValue);
 			case LayersPackage.LAYERS_EXCEPTION:
 				return createLayersExceptionFromString(eDataType, initialValue);
 			case LayersPackage.INT:
@@ -168,10 +141,12 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 				return createNotFoundExceptionFromString(eDataType, initialValue);
 			case LayersPackage.COMPUTE_PROPERTY_VALUE_COMMAND:
 				return createComputePropertyValueCommandFromString(eDataType, initialValue);
+			case LayersPackage.BOOLEAN:
+				return createbooleanFromString(eDataType, initialValue);
+			case LayersPackage.EPACKAGE:
+				return createEPackageFromString(eDataType, initialValue);
 			case LayersPackage.OBJECT:
 				return createObjectFromString(eDataType, initialValue);
-			case LayersPackage.CUSTOM_PROPERTY_OPERTOR_INSTANCE:
-				return createCustomPropertyOpertorInstanceFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -191,10 +166,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 				return convertEventLevelToString(eDataType, instanceValue);
 			case LayersPackage.STRING:
 				return convertStringToString(eDataType, instanceValue);
-			case LayersPackage.BOOLEAN:
-				return convertbooleanToString(eDataType, instanceValue);
-			case LayersPackage.EPACKAGE:
-				return convertEPackageToString(eDataType, instanceValue);
 			case LayersPackage.LAYERS_EXCEPTION:
 				return convertLayersExceptionToString(eDataType, instanceValue);
 			case LayersPackage.INT:
@@ -205,10 +176,12 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 				return convertNotFoundExceptionToString(eDataType, instanceValue);
 			case LayersPackage.COMPUTE_PROPERTY_VALUE_COMMAND:
 				return convertComputePropertyValueCommandToString(eDataType, instanceValue);
+			case LayersPackage.BOOLEAN:
+				return convertbooleanToString(eDataType, instanceValue);
+			case LayersPackage.EPACKAGE:
+				return convertEPackageToString(eDataType, instanceValue);
 			case LayersPackage.OBJECT:
 				return convertObjectToString(eDataType, instanceValue);
-			case LayersPackage.CUSTOM_PROPERTY_OPERTOR_INSTANCE:
-				return convertCustomPropertyOpertorInstanceToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -219,7 +192,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerNamedStyle createLayerNamedStyle() {
 		LayerNamedStyleImpl layerNamedStyle = new LayerNamedStyleImpl();
 		return layerNamedStyle;
@@ -230,7 +202,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayersStack createLayersStack() {
 		LayersStackImpl layersStack = new LayersStackImpl();
 		return layersStack;
@@ -241,7 +212,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayersStackApplication createLayersStackApplication() {
 		LayersStackApplicationImpl layersStackApplication = new LayersStackApplicationImpl();
 		return layersStackApplication;
@@ -252,7 +222,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerStackDescriptorRegistry createLayerStackDescriptorRegistry() {
 		LayerStackDescriptorRegistryImpl layerStackDescriptorRegistry = new LayerStackDescriptorRegistryImpl();
 		return layerStackDescriptorRegistry;
@@ -263,7 +232,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PropertyRegistry createPropertyRegistry() {
 		PropertyRegistryImpl propertyRegistry = new PropertyRegistryImpl();
 		return propertyRegistry;
@@ -274,7 +242,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Property createProperty() {
 		PropertyImpl property = new PropertyImpl();
 		return property;
@@ -285,18 +252,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Metamodel createMetamodel() {
-		MetamodelImpl metamodel = new MetamodelImpl();
-		return metamodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public TypeRegistry createTypeRegistry() {
 		TypeRegistryImpl typeRegistry = new TypeRegistryImpl();
 		return typeRegistry;
@@ -317,7 +272,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerDescriptorRegistry createLayerDescriptorRegistry() {
 		LayerDescriptorRegistryImpl layerDescriptorRegistry = new LayerDescriptorRegistryImpl();
 		return layerDescriptorRegistry;
@@ -328,7 +282,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerDescriptor createLayerDescriptor() {
 		LayerDescriptorImpl layerDescriptor = new LayerDescriptorImpl();
 		return layerDescriptor;
@@ -339,7 +292,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerApplicationFactory createLayerApplicationFactory() {
 		LayerApplicationFactoryImpl layerApplicationFactory = new LayerApplicationFactoryImpl();
 		return layerApplicationFactory;
@@ -350,7 +302,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PropertySetterRegistry createPropertySetterRegistry() {
 		PropertySetterRegistryImpl propertySetterRegistry = new PropertySetterRegistryImpl();
 		return propertySetterRegistry;
@@ -371,9 +322,9 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, TypeInstance> createStringToTypeInstanceMap() {
-		StringToTypeInstanceMapImpl stringToTypeInstanceMap = new StringToTypeInstanceMapImpl();
-		return stringToTypeInstanceMap;
+	public LayerOperatorDescriptorRegistry createLayerOperatorDescriptorRegistry() {
+		LayerOperatorDescriptorRegistryImpl layerOperatorDescriptorRegistry = new LayerOperatorDescriptorRegistryImpl();
+		return layerOperatorDescriptorRegistry;
 	}
 
 	/**
@@ -381,95 +332,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Folder createFolder() {
-		FolderImpl folder = new FolderImpl();
-		return folder;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IntInstance createIntInstance() {
-		IntInstanceImpl intInstance = new IntInstanceImpl();
-		return intInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public BooleanInstance createBooleanInstance() {
-		BooleanInstanceImpl booleanInstance = new BooleanInstanceImpl();
-		return booleanInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public StringInstance createStringInstance() {
-		StringInstanceImpl stringInstance = new StringInstanceImpl();
-		return stringInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IntType createIntType() {
-		IntTypeImpl intType = new IntTypeImpl();
-		return intType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public BooleanType createBooleanType() {
-		BooleanTypeImpl booleanType = new BooleanTypeImpl();
-		return booleanType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public StringType createStringType() {
-		StringTypeImpl stringType = new StringTypeImpl();
-		return stringType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CustomType createCustomType() {
-		CustomTypeImpl customType = new CustomTypeImpl();
-		return customType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public LayerOperatorDescriptor createLayerOperatorDescriptor() {
 		LayerOperatorDescriptorImpl layerOperatorDescriptor = new LayerOperatorDescriptorImpl();
 		return layerOperatorDescriptor;
@@ -480,7 +342,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PropertyOperator createPropertyOperator() {
 		PropertyOperatorImpl propertyOperator = new PropertyOperatorImpl();
 		return propertyOperator;
@@ -491,10 +352,9 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public DefaultPropertyOperator createDefaultPropertyOperator() {
-		DefaultPropertyOperatorImpl defaultPropertyOperator = new DefaultPropertyOperatorImpl();
-		return defaultPropertyOperator;
+	public Map.Entry<String, TypeInstance> createStringToTypeInstanceMap() {
+		StringToTypeInstanceMapImpl stringToTypeInstanceMap = new StringToTypeInstanceMapImpl();
+		return stringToTypeInstanceMap;
 	}
 
 	/**
@@ -502,7 +362,26 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
+	public Folder createFolder() {
+		FolderImpl folder = new FolderImpl();
+		return folder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Metamodel createMetamodel() {
+		MetamodelImpl metamodel = new MetamodelImpl();
+		return metamodel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TopLayerOperator createTopLayerOperator() {
 		TopLayerOperatorImpl topLayerOperator = new TopLayerOperatorImpl();
 		return topLayerOperator;
@@ -513,7 +392,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public StackedLayerOperator createStackedLayerOperator() {
 		StackedLayerOperatorImpl stackedLayerOperator = new StackedLayerOperatorImpl();
 		return stackedLayerOperator;
@@ -524,18 +402,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public CustomLayerOperator createCustomLayerOperator() {
-		CustomLayerOperatorImpl customLayerOperator = new CustomLayerOperatorImpl();
-		return customLayerOperator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public PropertyIndex createPropertyIndex() {
 		PropertyIndexImpl propertyIndex = new PropertyIndexImpl();
 		return propertyIndex;
@@ -556,7 +422,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public SimpleLayerDescriptor createSimpleLayerDescriptor() {
 		SimpleLayerDescriptorImpl simpleLayerDescriptor = new SimpleLayerDescriptorImpl();
 		return simpleLayerDescriptor;
@@ -567,18 +432,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public RegExpLayerDescriptor createRegExpLayerDescriptor() {
-		RegExpLayerDescriptorImpl regExpLayerDescriptor = new RegExpLayerDescriptorImpl();
-		return regExpLayerDescriptor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NullInstance createNullInstance() {
 		NullInstanceImpl nullInstance = new NullInstanceImpl();
 		return nullInstance;
@@ -589,18 +442,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public RegExpLayer createRegExpLayer() {
-		RegExpLayerImpl regExpLayer = new RegExpLayerImpl();
-		return regExpLayer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Layer createLayer() {
 		LayerImpl layer = new LayerImpl();
 		return layer;
@@ -611,73 +452,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Color createColor() {
-		ColorImpl color = new ColorImpl();
-		return color;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ColorInstance createColorInstance() {
-		ColorInstanceImpl colorInstance = new ColorInstanceImpl();
-		return colorInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FillInstance createFillInstance() {
-		FillInstanceImpl fillInstance = new FillInstanceImpl();
-		return fillInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Fill createFill() {
-		FillImpl fill = new FillImpl();
-		return fill;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FillPropertySetter createFillPropertySetter() {
-		FillPropertySetterImpl fillPropertySetter = new FillPropertySetterImpl();
-		return fillPropertySetter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IsValidPropertySetter createIsValidPropertySetter() {
-		IsValidPropertySetterImpl isValidPropertySetter = new IsValidPropertySetterImpl();
-		return isValidPropertySetter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NullPropertySetter createNullPropertySetter() {
 		NullPropertySetterImpl nullPropertySetter = new NullPropertySetterImpl();
 		return nullPropertySetter;
@@ -688,95 +462,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public LineType createLineType() {
-		LineTypeImpl lineType = new LineTypeImpl();
-		return lineType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public LineInstance createLineInstance() {
-		LineInstanceImpl lineInstance = new LineInstanceImpl();
-		return lineInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public LinePropertySetter createLinePropertySetter() {
-		LinePropertySetterImpl linePropertySetter = new LinePropertySetterImpl();
-		return linePropertySetter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FontPropertySetter createFontPropertySetter() {
-		FontPropertySetterImpl fontPropertySetter = new FontPropertySetterImpl();
-		return fontPropertySetter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FontInstance createFontInstance() {
-		FontInstanceImpl fontInstance = new FontInstanceImpl();
-		return fontInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FontType createFontType() {
-		FontTypeImpl fontType = new FontTypeImpl();
-		return fontType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IsVisiblePropertySetter createIsVisiblePropertySetter() {
-		IsVisiblePropertySetterImpl isVisiblePropertySetter = new IsVisiblePropertySetterImpl();
-		return isVisiblePropertySetter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public LayerOperatorDescriptorRegistry createLayerOperatorDescriptorRegistry() {
-		LayerOperatorDescriptorRegistryImpl layerOperatorDescriptorRegistry = new LayerOperatorDescriptorRegistryImpl();
-		return layerOperatorDescriptorRegistry;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public TopLayerOperatorDescriptor createTopLayerOperatorDescriptor() {
 		TopLayerOperatorDescriptorImpl topLayerOperatorDescriptor = new TopLayerOperatorDescriptorImpl();
 		return topLayerOperatorDescriptor;
@@ -787,7 +472,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public StackedLayerOperatorDescriptor createStackedLayerOperatorDescriptor() {
 		StackedLayerOperatorDescriptorImpl stackedLayerOperatorDescriptor = new StackedLayerOperatorDescriptorImpl();
 		return stackedLayerOperatorDescriptor;
@@ -798,51 +482,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public CustomPropertyOperator createCustomPropertyOperator() {
-		CustomPropertyOperatorImpl customPropertyOperator = new CustomPropertyOperatorImpl();
-		return customPropertyOperator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public AndStackedLayerOperatorDescriptor createAndStackedLayerOperatorDescriptor() {
-		AndStackedLayerOperatorDescriptorImpl andStackedLayerOperatorDescriptor = new AndStackedLayerOperatorDescriptorImpl();
-		return andStackedLayerOperatorDescriptor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public OrStackedLayerOperatorDescriptor createOrStackedLayerOperatorDescriptor() {
-		OrStackedLayerOperatorDescriptorImpl orStackedLayerOperatorDescriptor = new OrStackedLayerOperatorDescriptorImpl();
-		return orStackedLayerOperatorDescriptor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IsAbstractUmlSetter createIsAbstractUmlSetter() {
-		IsAbstractUmlSetterImpl isAbstractUmlSetter = new IsAbstractUmlSetterImpl();
-		return isAbstractUmlSetter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public AllViewsDerivedLayer createAllViewsDerivedLayer() {
 		AllViewsDerivedLayerImpl allViewsDerivedLayer = new AllViewsDerivedLayerImpl();
 		return allViewsDerivedLayer;
@@ -971,8 +610,8 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Boolean createbooleanFromString(EDataType eDataType, String initialValue) {
-		return (Boolean)super.createFromString(eDataType, initialValue);
+	public LayersException createLayersExceptionFromString(EDataType eDataType, String initialValue) {
+		return (LayersException)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
@@ -980,7 +619,7 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertbooleanToString(EDataType eDataType, Object instanceValue) {
+	public String convertLayersExceptionToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -989,8 +628,8 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EPackage createEPackageFromString(EDataType eDataType, String initialValue) {
-		return (EPackage)super.createFromString(eDataType, initialValue);
+	public Integer createintFromString(EDataType eDataType, String initialValue) {
+		return (Integer)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
@@ -998,7 +637,7 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEPackageToString(EDataType eDataType, Object instanceValue) {
+	public String convertintToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -1018,24 +657,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 */
 	public String convertBadStateExceptionToString(EDataType eDataType, Object instanceValue) {
 		return convertLayersExceptionToString(LayersPackage.Literals.LAYERS_EXCEPTION, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LayersException createLayersExceptionFromString(EDataType eDataType, String initialValue) {
-		return (LayersException)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertLayersExceptionToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
@@ -1079,8 +700,8 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer createintFromString(EDataType eDataType, String initialValue) {
-		return (Integer)super.createFromString(eDataType, initialValue);
+	public Boolean createbooleanFromString(EDataType eDataType, String initialValue) {
+		return (Boolean)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
@@ -1088,7 +709,25 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertintToString(EDataType eDataType, Object instanceValue) {
+	public String convertbooleanToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EPackage createEPackageFromString(EDataType eDataType, String initialValue) {
+		return (EPackage)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEPackageToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -1115,25 +754,6 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CustomPropertyOperatorsInstance createCustomPropertyOpertorInstanceFromString(EDataType eDataType, String initialValue) {
-		return (CustomPropertyOperatorsInstance)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertCustomPropertyOpertorInstanceToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public LayersPackage getLayersPackage() {
 		return (LayersPackage)getEPackage();
 	}
@@ -1149,4 +769,4 @@ public class LayersFactoryImpl extends EFactoryImpl implements LayersFactory {
 		return LayersPackage.eINSTANCE;
 	}
 
-} // LayersFactoryImpl
+} //LayersFactoryImpl

@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.osgi.framework.BundleActivator;
 
 /**
- * This is the central singleton for the Layersconfig edit plugin.
+ * This is the central singleton for the LayersConfig edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

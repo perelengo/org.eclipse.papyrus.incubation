@@ -13,8 +13,8 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.EMap;
+import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -53,7 +53,7 @@ public interface PropertySetterRegistry extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<PropertySetter> getPropertySetters();
+	List<PropertySetter> getPropertySetters();
 
 	/**
 	 * Returns the value of the '<em><b>Setter Map</b></em>' map.
@@ -70,7 +70,7 @@ public interface PropertySetterRegistry extends EObject {
 	 * @model mapType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringToPropertySetter&lt;org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.String, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetter&gt;" ordered="false"
 	 * @generated
 	 */
-	EMap<String, PropertySetter> getSetterMap();
+	Map<String, PropertySetter> getSetterMap();
 
 	/**
 	 * Returns the value of the '<em><b>Application</b></em>' container reference.

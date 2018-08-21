@@ -1,26 +1,29 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
 
@@ -32,25 +35,13 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstan
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TypeImpl#getMetamodel <em>Metamodel</em>}</li>
  *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TypeImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class TypeImpl extends
-		FolderElementImpl implements Type {
-	/**
-	 * The cached value of the '{@link #getMetamodel() <em>Metamodel</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMetamodel()
-	 * @generated
-	 * @ordered
-	 */
-	protected Metamodel metamodel;
-
+public abstract class TypeImpl extends FolderElementImpl implements Type {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,47 +106,6 @@ public abstract class TypeImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Metamodel getMetamodel() {
-		if (metamodel != null && metamodel.eIsProxy()) {
-			InternalEObject oldMetamodel = (InternalEObject)metamodel;
-			metamodel = (Metamodel)eResolveProxy(oldMetamodel);
-			if (metamodel != oldMetamodel) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LayersPackage.TYPE__METAMODEL, oldMetamodel, metamodel));
-			}
-		}
-		return metamodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Metamodel basicGetMetamodel() {
-		return metamodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMetamodel(Metamodel newMetamodel) {
-		Metamodel oldMetamodel = metamodel;
-		metamodel = newMetamodel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LayersPackage.TYPE__METAMODEL, oldMetamodel, metamodel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -165,7 +115,6 @@ public abstract class TypeImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -178,7 +127,6 @@ public abstract class TypeImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -188,7 +136,6 @@ public abstract class TypeImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -201,7 +148,6 @@ public abstract class TypeImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public TypeInstance createInstance() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -216,9 +162,6 @@ public abstract class TypeImpl extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LayersPackage.TYPE__METAMODEL:
-				if (resolve) return getMetamodel();
-				return basicGetMetamodel();
 			case LayersPackage.TYPE__NAME:
 				return getName();
 			case LayersPackage.TYPE__DESCRIPTION:
@@ -235,9 +178,6 @@ public abstract class TypeImpl extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LayersPackage.TYPE__METAMODEL:
-				setMetamodel((Metamodel)newValue);
-				return;
 			case LayersPackage.TYPE__NAME:
 				setName((String)newValue);
 				return;
@@ -256,9 +196,6 @@ public abstract class TypeImpl extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LayersPackage.TYPE__METAMODEL:
-				setMetamodel((Metamodel)null);
-				return;
 			case LayersPackage.TYPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -277,8 +214,6 @@ public abstract class TypeImpl extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LayersPackage.TYPE__METAMODEL:
-				return metamodel != null;
 			case LayersPackage.TYPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LayersPackage.TYPE__DESCRIPTION:
@@ -310,7 +245,7 @@ public abstract class TypeImpl extends
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
 		result.append(", description: "); //$NON-NLS-1$
@@ -319,4 +254,4 @@ public abstract class TypeImpl extends
 		return result.toString();
 	}
 
-} // TypeImpl
+} //TypeImpl

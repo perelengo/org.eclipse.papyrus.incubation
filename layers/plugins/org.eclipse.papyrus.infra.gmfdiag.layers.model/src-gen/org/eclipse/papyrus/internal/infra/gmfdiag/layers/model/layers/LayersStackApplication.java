@@ -13,7 +13,7 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 import org.eclipse.gmf.runtime.notation.Diagram;
 
@@ -56,7 +56,7 @@ public interface LayersStackApplication extends FolderElement {
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<LayersStack> getLayersStacks();
+	List<LayersStack> getLayersStacks();
 
 	/**
 	 * Returns the value of the '<em><b>Layer Stack Registry</b></em>' containment reference.

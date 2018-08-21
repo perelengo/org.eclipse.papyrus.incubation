@@ -1,26 +1,31 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
 
@@ -172,59 +177,6 @@ public class StringToTypeInstanceMapImpl extends EObjectImpl implements BasicEMa
 	 * @generated
 	 */
 	@Override
-	public String getKey() {
-		return getTypedKey();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setKey(String key) {
-		setTypedKey(key);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TypeInstance getValue() {
-		return getTypedValue();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TypeInstance setValue(TypeInstance value) {
-		TypeInstance oldValue = getValue();
-		setTypedValue(value);
-		return oldValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EMap<String, TypeInstance> getEMap() {
-		EObject container = eContainer();
-		return container == null ? null : (EMap<String, TypeInstance>)container.eGet(eContainmentFeature());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case LayersPackage.STRING_TO_TYPE_INSTANCE_MAP__KEY:
@@ -296,7 +248,7 @@ public class StringToTypeInstanceMapImpl extends EObjectImpl implements BasicEMa
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (key: "); //$NON-NLS-1$
 		result.append(key);
 		result.append(')');
@@ -315,7 +267,6 @@ public class StringToTypeInstanceMapImpl extends EObjectImpl implements BasicEMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getHash() {
 		if (hash == -1) {
 			Object theKey = getKey();
@@ -329,9 +280,57 @@ public class StringToTypeInstanceMapImpl extends EObjectImpl implements BasicEMa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setHash(int hash) {
 		this.hash = hash;
 	}
 
-} // StringToTypeInstanceMapImpl
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getKey() {
+		return getTypedKey();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setKey(String key) {
+		setTypedKey(key);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypeInstance getValue() {
+		return getTypedValue();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypeInstance setValue(TypeInstance value) {
+		TypeInstance oldValue = getValue();
+		setTypedValue(value);
+		return oldValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EMap<String, TypeInstance> getEMap() {
+		EObject container = eContainer();
+		return container == null ? null : (EMap<String, TypeInstance>)container.eGet(eContainmentFeature());
+	}
+
+} //StringToTypeInstanceMapImpl

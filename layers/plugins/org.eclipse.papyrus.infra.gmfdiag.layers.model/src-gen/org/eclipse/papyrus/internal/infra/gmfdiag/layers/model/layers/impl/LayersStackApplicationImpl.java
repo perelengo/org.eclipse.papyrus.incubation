@@ -1,43 +1,49 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.gmf.runtime.notation.Diagram;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerApplicationFactory;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptorRegistry;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptorRegistry;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerStackDescriptorRegistry;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyRegistry;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertySetterRegistry;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.loaders.LayersConfigModel;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.loaders.RegistriesLoader;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,8 +64,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.loaders.Re
  *
  * @generated
  */
-public class LayersStackApplicationImpl extends
-		FolderElementImpl implements LayersStackApplication {
+public class LayersStackApplicationImpl extends FolderElementImpl implements LayersStackApplication {
 	/**
 	 * The cached value of the '{@link #getLayersStacks() <em>Layers Stacks</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -79,6 +84,7 @@ public class LayersStackApplicationImpl extends
 	 * @ordered
 	 */
 	protected LayerStackDescriptorRegistry layerStackRegistry;
+
 	/**
 	 * The cached value of the '{@link #getPropertyRegistry() <em>Property Registry</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -132,53 +138,11 @@ public class LayersStackApplicationImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	protected LayersStackApplicationImpl() {
 		super();
-		init();
 	}
-
-	/**
-	 * Init the class
-	 * Create the internal objects : {@link PropertyRegistry}, {@link LayerStackDescriptorRegistry}.
-	 */
-	protected void init() {
-		// Create the PropertyRegistry
-		PropertyRegistry propertyRegistry = LayersFactory.eINSTANCE.createPropertyRegistry();
-		setPropertyRegistry(propertyRegistry);
-
-		// Create the LayerStackDescriptorRegistry
-		LayerStackDescriptorRegistry layerStackDescriptorRegistry = LayersFactory.eINSTANCE.createLayerStackDescriptorRegistry();
-		setLayerStackRegistry(layerStackDescriptorRegistry);
-
-		// Create the LayerDescriptorRegistry
-		LayerDescriptorRegistry layerDescriptorRegistry = LayersFactory.eINSTANCE.createLayerDescriptorRegistry();
-		setLayerDescriptorRegistry(layerDescriptorRegistry);
-
-		// Create the config model and the registries loader
-		LayersConfigModel configModel = LayersConfigModel.getInstance();
-		RegistriesLoader registriesLoader = new RegistriesLoader(configModel);
-
-		// Create the LayerOperatorDescriptorRegistry
-		LayerOperatorDescriptorRegistry layerOperatorDescriptorRegistry = LayersFactory.eINSTANCE.createLayerOperatorDescriptorRegistry();
-		layerOperatorDescriptorRegistry.setPropertyCollectionSize(propertyRegistry.getPropertiesCount());
-
-		registriesLoader.loadLayerOperatorDescriptorRegistry(layerOperatorDescriptorRegistry, propertyRegistry);
-		setLayerOperatorDescriptorRegistry(layerOperatorDescriptorRegistry);
-
-		// Create the LayerApplicationFactory
-		LayerApplicationFactory layerApplicationFactory = LayersFactory.eINSTANCE.createLayerApplicationFactory();
-		setFactory(layerApplicationFactory);
-
-		// Create the PropertySetterRegistry
-		PropertySetterRegistry propertySetterRegistry = LayersFactory.eINSTANCE.createPropertySetterRegistry();
-		propertySetterRegistry.setApplication(this);
-		setPropertySetterRegistry(propertySetterRegistry);
-
-	}
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,8 +159,7 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<LayersStack> getLayersStacks() {
+	public List<LayersStack> getLayersStacks() {
 		if (layersStacks == null) {
 			layersStacks = new EObjectContainmentEList<LayersStack>(LayersStack.class, this, LayersPackage.LAYERS_STACK_APPLICATION__LAYERS_STACKS);
 		}
@@ -208,7 +171,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerStackDescriptorRegistry getLayerStackRegistry() {
 		return layerStackRegistry;
 	}
@@ -233,7 +195,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setLayerStackRegistry(LayerStackDescriptorRegistry newLayerStackRegistry) {
 		if (newLayerStackRegistry != layerStackRegistry) {
 			NotificationChain msgs = null;
@@ -253,7 +214,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PropertyRegistry getPropertyRegistry() {
 		return propertyRegistry;
 	}
@@ -278,7 +238,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPropertyRegistry(PropertyRegistry newPropertyRegistry) {
 		if (newPropertyRegistry != propertyRegistry) {
 			NotificationChain msgs = null;
@@ -298,7 +257,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerDescriptorRegistry getLayerDescriptorRegistry() {
 		return layerDescriptorRegistry;
 	}
@@ -323,7 +281,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setLayerDescriptorRegistry(LayerDescriptorRegistry newLayerDescriptorRegistry) {
 		if (newLayerDescriptorRegistry != layerDescriptorRegistry) {
 			NotificationChain msgs = null;
@@ -343,7 +300,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerApplicationFactory getFactory() {
 		return factory;
 	}
@@ -368,7 +324,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setFactory(LayerApplicationFactory newFactory) {
 		if (newFactory != factory) {
 			NotificationChain msgs = null;
@@ -388,7 +343,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public PropertySetterRegistry getPropertySetterRegistry() {
 		return propertySetterRegistry;
 	}
@@ -413,7 +367,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPropertySetterRegistry(PropertySetterRegistry newPropertySetterRegistry) {
 		if (newPropertySetterRegistry != propertySetterRegistry) {
 			NotificationChain msgs = null;
@@ -433,7 +386,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public LayerOperatorDescriptorRegistry getLayerOperatorDescriptorRegistry() {
 		return layerOperatorDescriptorRegistry;
 	}
@@ -458,7 +410,6 @@ public class LayersStackApplicationImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setLayerOperatorDescriptorRegistry(LayerOperatorDescriptorRegistry newLayerOperatorDescriptorRegistry) {
 		if (newLayerOperatorDescriptorRegistry != layerOperatorDescriptorRegistry) {
 			NotificationChain msgs = null;
@@ -476,99 +427,56 @@ public class LayersStackApplicationImpl extends
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
-	public void removeLayersStackFor(Diagram diagram) {
-
-		try {
-			LayersStack stack = lookupLayersStackFor(diagram);
-			getLayersStacks().remove(stack);
-		} catch (NotFoundException e) {
-			// silently fails
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public boolean isLayersStackAttachedFor(Diagram diagram) {
-		try {
-			lookupLayersStackFor(diagram);
-			return true;
-		} catch (NotFoundException e) {
-			// not found
-			return false;
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public LayersStack lookupLayersStackFor(Diagram diagram) throws NotFoundException {
-		for (LayersStack stack : getLayersStacks()) {
-			if (stack.getDiagram() == diagram) {
-				return stack;
-			}
-		}
-
-		// Not found
-		throw new NotFoundException("No LayersStack attached for diagram: " + diagram);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * Get the {@link LayersStack} for the specified diagram. Create it if
-	 * necessary.
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
 	public LayersStack getLayersStackFor(Diagram diagram) {
-		try {
-			return lookupLayersStackFor(diagram);
-		} catch (NotFoundException e) {
-			// Create a new one
-			return createLayersStackFor(diagram);
-		}
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Create a new LayersStack for the specified diagram.
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
-	@Override
+	public void removeLayersStackFor(Diagram diagram) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isLayersStackAttachedFor(Diagram diagram) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public LayersStack createLayersStackFor(Diagram diagram) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
-		// Create a new LayerStack and add it to application (this)
-		LayersStack layer = LayersFactory.eINSTANCE.createLayersStack();
-		layer.startAfterCreation();
-		layer.setDiagram(diagram);
-
-		// Create first layer in stack
-		TopLayerOperator rootLayer = LayersFactory.eINSTANCE.createTopLayerOperator();
-		rootLayer.setName("Top Layer");
-		rootLayer.setApplication(this);
-		layer.setLayers(rootLayer);
-
-		// attach stack to application
-		getLayersStacks().add(layer);
-
-
-		return layer;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LayersStack lookupLayersStackFor(Diagram diagram) throws NotFoundException {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -765,4 +673,4 @@ public class LayersStackApplicationImpl extends
 		return super.eInvoke(operationID, arguments);
 	}
 
-} // LayersStackApplicationImpl
+} //LayersStackApplicationImpl

@@ -82,7 +82,7 @@ public class LayerExplorerPageBookView extends MultiViewPageBookView {
 			URI uri = URI.createURI(uriAttribute);
 			IViewPart viewPart = getActiveView();
 			if (viewPart instanceof ModelExplorerView) {
-				LayersExplorerView modelExplorerView = (LayersExplorerView) viewPart;
+				// LayersExplorerView modelExplorerView = (LayersExplorerView) viewPart;
 				// EditingDomain domain = modelExplorerView.getEditingDomain();
 				// EObject eObject = domain.getResourceSet().getEObject(uri, false);
 				// if(eObject != null) {

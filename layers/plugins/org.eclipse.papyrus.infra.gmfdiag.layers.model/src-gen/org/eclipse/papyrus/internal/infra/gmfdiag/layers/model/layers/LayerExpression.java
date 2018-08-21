@@ -15,8 +15,6 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.gmf.runtime.notation.View;
 
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
@@ -240,7 +238,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" viewMany="true" propertyRequired="true" propertyOrdered="false"
 	 * @generated
 	 */
-	EList<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(EList<View> view, Property property) throws LayersException;
+	List<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(List<View> view, Property property) throws LayersException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -248,7 +246,7 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" exceptions="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersException" viewRequired="true" viewOrdered="false" propertyRequired="true" propertyMany="true"
 	 * @generated
 	 */
-	EList<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, EList<Property> property) throws LayersException;
+	List<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, List<Property> property) throws LayersException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -333,23 +331,4 @@ public interface LayerExpression extends ApplicationDependantElement {
 	 */
 	void exitAttachedState();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @throws LayersException
-	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" viewMany="true" propertyRequired="true" propertyOrdered="false"
-	 * @generated NOT
-	 */
-	EList<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(List<View> view, Property property) throws LayersException;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @throws LayersException
-	 * @model dataType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ComputePropertyValueCommand" viewRequired="true" viewOrdered="false" propertyRequired="true" propertyMany="true"
-	 * @generated NOT
-	 */
-	EList<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, List<Property> property) throws LayersException;
 } // LayerExpression

@@ -1,22 +1,26 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyIndex;
@@ -90,7 +94,6 @@ public class PropertyIndexImpl extends EObjectImpl implements PropertyIndex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Property getProperty() {
 		if (property != null && property.eIsProxy()) {
 			InternalEObject oldProperty = (InternalEObject)property;
@@ -117,7 +120,6 @@ public class PropertyIndexImpl extends EObjectImpl implements PropertyIndex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setProperty(Property newProperty) {
 		Property oldProperty = property;
 		property = newProperty;
@@ -130,7 +132,6 @@ public class PropertyIndexImpl extends EObjectImpl implements PropertyIndex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getIndex() {
 		return index;
 	}
@@ -140,7 +141,6 @@ public class PropertyIndexImpl extends EObjectImpl implements PropertyIndex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setIndex(int newIndex) {
 		int oldIndex = index;
 		index = newIndex;
@@ -226,11 +226,11 @@ public class PropertyIndexImpl extends EObjectImpl implements PropertyIndex {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (index: "); //$NON-NLS-1$
 		result.append(index);
 		result.append(')');
 		return result.toString();
 	}
 
-} // PropertyIndexImpl
+} //PropertyIndexImpl

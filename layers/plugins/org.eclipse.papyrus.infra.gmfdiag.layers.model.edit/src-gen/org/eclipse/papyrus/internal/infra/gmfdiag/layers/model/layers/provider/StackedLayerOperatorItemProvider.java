@@ -21,7 +21,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator;
+
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLayerOperator;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLayerOperator} object.
@@ -29,7 +30,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLa
  * <!-- end-user-doc -->
  * @generated
  */
-public class StackedLayerOperatorItemProvider extends AbstractLayerOperatorItemProvider {
+public class StackedLayerOperatorItemProvider extends LayerOperatorItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -67,34 +68,29 @@ public class StackedLayerOperatorItemProvider extends AbstractLayerOperatorItemP
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		// String label = ((StackedLayerOperator)object).getName();
-		// return label == null || label.length() == 0 ?
-		// getString("_UI_StackedLayerOperator_type") :
-		// getString("_UI_StackedLayerOperator_type") + " " + label;
-
-		// Actually, we use an StackedLayerOperator as a concrete class for every type of layer operator
-		// (to be changed))
-		AbstractLayerOperator layer = ((AbstractLayerOperator) object);
-		if (!layer.isDescriptorSet()) {
-			// Original behavior
-			String label = ((AbstractLayerOperator) object).getName();
-			return label == null || label.length() == 0 ? getString("_UI_AbstractLayerOperator_type") : getString("_UI_AbstractLayerOperator_type") + " " + label;
-		}
-
-		// Custom behavior
-		String label = layer.getName();
-		return label == null || label.length() == 0 ? getString("_UI_AbstractLayerOperator_type") : getString("_UI_AbstractLayerOperator_type") + " (" + layer.getLayerOperatorDescriptor().getName() + ") " + label;
-
+		String label = ((StackedLayerOperator)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_StackedLayerOperator_type") : //$NON-NLS-1$
+			getString("_UI_StackedLayerOperator_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
 	}
-
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -1,29 +1,29 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayerOperatorConfig;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayersConfigPackage;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.InstanciationException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,22 +59,13 @@ public class LayerOperatorConfigImpl extends InstanciableElementImpl implements 
 	 *
 	 * @return
 	 * @throws NotFoundException
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public LayerOperatorDescriptor createLayersOperatorDescriptor() throws InstanciationException {
-
-		// Create instance of layer
-		EClassifier classifier = LayersPackage.eINSTANCE.getEClassifier(getClassname());
-		if (classifier == null) {
-			throw new InstanciationException("Can't create LayerOperatorDescriptor for name '" + getClassname() + "'");
-		}
-		LayerOperatorDescriptor res = (LayerOperatorDescriptor) LayersFactory.eINSTANCE.create((EClass) classifier);
-
-		// Set values
-		res.setName(getName());
-
-		return res;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -95,4 +86,5 @@ public class LayerOperatorConfigImpl extends InstanciableElementImpl implements 
 		}
 		return super.eInvoke(operationID, arguments);
 	}
+
 } // LayerOperatorConfigImpl

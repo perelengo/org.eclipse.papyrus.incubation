@@ -1,26 +1,20 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
-import static org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.Activator.log;
-
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLayerOperator;
 
@@ -31,20 +25,14 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StackedLay
  *
  * @generated
  */
-public class StackedLayerOperatorImpl extends AbstractLayerOperatorImpl implements StackedLayerOperator {
-
+public class StackedLayerOperatorImpl extends LayerOperatorImpl implements StackedLayerOperator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	protected StackedLayerOperatorImpl() {
 		super();
-
-		// Add an observer
-		Adapter adapter = new LayerDescriptorSynchronizer();
-		this.eAdapters().add(adapter);
 	}
 
 	/**
@@ -57,97 +45,4 @@ public class StackedLayerOperatorImpl extends AbstractLayerOperatorImpl implemen
 		return LayersPackage.Literals.STACKED_LAYER_OPERATOR;
 	}
 
-	/**
-	 * Reset the descriptor accordingly to the descriptor name.
-	 * The descriptor is resseted only if the ::application and ::layerOperatorDescriptorName are set.
-	 * Nothing is done if one of the attribute is not set.
-	 * Nothing is done if the descriptor can not be found (maybe a log is issue).
-	 * <!-- begin-user-doc -->
-	 * Not used ?
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public void resetDescriptor() {
-
-		if (getApplication() == null || getLayerOperatorDescriptorName() == null) {
-			// A property is not yet set.
-			// do nothing
-			return;
-		}
-
-		try {
-			LayerOperatorDescriptor descriptor = getApplication().getLayerOperatorDescriptorRegistry().getLayerOperatorDescriptor(getLayerOperatorDescriptorName());
-			setLayerOperatorDescriptor(descriptor);
-		} catch (NotFoundException e) {
-			// Not found
-			log.error(this.getClass().getName()
-					+ "- Can't get LayerOperatorDescriptor for descriptorName '" + getLayerOperatorDescriptorName() + "'.", e);
-		}
-	}
-
-	/**
-	 * This class listen to #propertyValueMap, and synchronize propertyValues accordingly.
-	 *
-	 *
-	 */
-	public class LayerDescriptorSynchronizer extends AdapterImpl {
-
-		@Override
-		public void notifyChanged(Notification msg) {
-			// System.err.println("event " + msg.getEventType());
-
-			switch (msg.getFeatureID(AbstractLayer.class)) {
-			case LayersPackage.STACKED_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
-				notifyDescriptorNameChanged(msg);
-				break;
-
-			case LayersPackage.STACKED_LAYER_OPERATOR__APPLICATION:
-				notifyLayerApplicationFeatureChanged(msg);
-				break;
-
-			default:
-				break;
-			}
-		}
-
-		/**
-		 * The {@link LayerImpl#propertyValueMap} has changed. Synchronize the {@link LayerImpl#propertyValues} list.
-		 *
-		 * @param msg
-		 */
-		protected void notifyDescriptorNameChanged(Notification msg) {
-			// System.err.println("descriptor name changed " + msg.getEventType());
-			switch (msg.getEventType()) {
-			case Notification.SET: {
-				// Name is set
-				resetDescriptor();
-				break;
-			}
-			default:
-				break;
-			}
-
-		}
-
-		/**
-		 * The {@link LayerImpl#propertyValueMap} has changed. Synchronize the {@link LayerImpl#propertyValues} list.
-		 *
-		 * @param msg
-		 */
-		protected void notifyLayerApplicationFeatureChanged(Notification msg) {
-			// System.err.println("application changed " + msg.getEventType());
-			switch (msg.getEventType()) {
-			case Notification.SET: {
-				// Application is set
-				resetDescriptor();
-				break;
-			}
-			}
-		}
-
-	}
-
-
-} // StackedLayerOperatorImpl
+} //StackedLayerOperatorImpl

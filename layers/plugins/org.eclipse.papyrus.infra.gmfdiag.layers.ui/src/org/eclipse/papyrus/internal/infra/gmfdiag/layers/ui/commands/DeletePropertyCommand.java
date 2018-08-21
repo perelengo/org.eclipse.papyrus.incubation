@@ -75,8 +75,14 @@ public class DeletePropertyCommand extends RecordingCommand implements Command {
 		try {
 			LayersStackApplication layerStackApplication = lookupLayersStackApplicationChecked(context);
 			List<LayersStack> layerStacks = layerStackApplication.getLayersStacks();
-			LayerExpression topLayerExpression = (layerStacks.get(0).getLayers());
-			TopLayerOperator topLayerOperator = topLayerExpression instanceof TopLayerOperator ? (TopLayerOperator) topLayerExpression : null;
+			TopLayerOperator topLayerOperator = null;
+			for (LayersStack layerStack : layerStacks) {
+				topLayerOperator = layerStack.getLayers() instanceof TopLayerOperator ? (TopLayerOperator) layerStack.getLayers() : null;
+				if (null == topLayerOperator || topLayerOperator.getLayers().isEmpty()) {
+					continue;
+				}
+			}
+
 			if (null == topLayerOperator) {
 				return;
 			}

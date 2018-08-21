@@ -23,11 +23,4 @@
 		<ppe:BooleanRadio input="{Binding}"
 			property="layers:LayerExpression:isLayerEnabled"></ppe:BooleanRadio>
 	</Composite>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="layers:LayerExpression:owningLayersStack"></ppe:ReferenceDialog>
-	</Composite>
 </Composite>

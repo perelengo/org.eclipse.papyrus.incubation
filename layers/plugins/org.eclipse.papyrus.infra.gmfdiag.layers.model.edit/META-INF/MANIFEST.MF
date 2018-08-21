@@ -2,19 +2,19 @@ Manifest-Version: 1.0
 Export-Package: org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.provider,
  org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider,
  org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.custom
-Require-Bundle: org.eclipse.core.runtime;resolution:=optional;x-installation:=greedy,
- org.eclipse.papyrus.infra.gmfdiag.layers.model;visibility:=reexport,
- org.eclipse.papyrus.infra.gmfdiag.layers.model;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport,
- org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.edit;visibility:=reexport,
- org.eclipse.gmf.runtime.notation;visibility:=reexport,
- org.eclipse.gmf.runtime.notation.edit;visibility:=reexport,
- org.eclipse.uml2.common.edit;visibility:=reexport,
- org.eclipse.papyrus.infra.gmfdiag.css.model;visibility:=reexport,
- org.eclipse.papyrus.infra.gmfdiag.css.model.edit;visibility:=reexport
+Require-Bundle: org.eclipse.core.runtime;resolution:=optional;x-installation:=greedy;bundle-version="[3.15.0,4.0.0)",
+ org.eclipse.papyrus.infra.gmfdiag.layers.model;bundle-version="[0.8.0,1.0.0)",
+ org.eclipse.papyrus.infra.gmfdiag.layers.model;bundle-version="[0.8.0,1.0.0)",
+ org.eclipse.emf.edit;bundle-version="[2.14.0,3.0.0)",
+ org.eclipse.emf.ecore;bundle-version="[2.15.0,3.0.0)",
+ org.eclipse.emf.ecore.edit;bundle-version="[2.11.0,3.0.0)",
+ org.eclipse.gmf.runtime.notation;bundle-version="[1.9.0,2.0.0)",
+ org.eclipse.gmf.runtime.notation.edit;bundle-version="[1.7.0,2.0.0)",
+ org.eclipse.uml2.common.edit;bundle-version="[2.4.0,3.0.0)",
+ org.eclipse.papyrus.infra.gmfdiag.css.model;bundle-version="[1.3.0,2.0.0)",
+ org.eclipse.papyrus.infra.gmfdiag.css.model.edit;bundle-version="[1.3.0,2.0.0)"
 Import-Package: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers,
- org.osgi.framework
+ org.osgi.framework;version="[1.9.0,2.0.0)"
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
@@ -24,4 +24,5 @@ Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
 Bundle-Activator: org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider.LayersEditPlugin$Implementation$Activator
 Bundle-SymbolicName: org.eclipse.papyrus.infra.gmfdiag.layers.model.edit;singleton:=true
+Automatic-Module-Name: org.eclipse.papyrus.infra.gmfdiag.layers.model.edit
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

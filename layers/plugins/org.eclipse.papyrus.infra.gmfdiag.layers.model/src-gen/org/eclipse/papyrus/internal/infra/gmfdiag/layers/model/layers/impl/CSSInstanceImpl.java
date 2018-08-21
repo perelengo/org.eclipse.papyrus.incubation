@@ -1,16 +1,30 @@
 /**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.papyrus.infra.gmfdiag.css.stylesheets.StyleSheet;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,6 +60,7 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	 * @ordered
 	 */
 	protected static final String STYLE_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,7 +95,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public StyleSheet getStylesheet() {
 		return stylesheet;
 	}
@@ -105,8 +119,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	// @Override
-	@Override
 	public void setStylesheet(StyleSheet newStylesheet) {
 		if (newStylesheet != stylesheet) {
 			NotificationChain msgs = null;
@@ -190,9 +202,6 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 		super.eSet(featureID, newValue);
 	}
 
-
-
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,65 +245,11 @@ public class CSSInstanceImpl extends TypeInstanceImpl implements CSSInstance {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (style: "); //$NON-NLS-1$
 		result.append(style);
 		result.append(')');
 		return result.toString();
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public void setValueFromString(String value) {
-		int i = 0;
-		i++;
-		// TODO
-		// if (value == null || value.length() == 0) {
-		// return;
-		// }
-		//
-		// // The value should contains the values, separated by comma
-		// // "FontName, FontHeight, FontColor, Bold"
-		// String[] values = value.split(",");
-		// int i = 0;
-		// try {
-		// setFontName(values[i++].trim());
-		// setFontHeigh(Integer.parseInt(values[i++].trim()));
-		// setFontColor(Integer.parseInt(values[i++].trim()));
-		// setBold(Boolean.parseBoolean(values[i++].trim()));
-		// } catch (NumberFormatException e) {
-		// // fail silently
-		// e.printStackTrace();
-		// }
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
-	 */
-	@Override
-	public void setValueFromInstance(TypeInstance value) {
-		int i = 0;
-		i++;
-		// TODO
-		// Check if the value is of the right instance
-		// if (!getClass().isInstance(value)) {
-		// return;
-		// }
-		//
-		// FontInstance instance = (FontInstance) value;
-		// setFontName(instance.getFontName());
-		// setFontHeigh(instance.getFontHeigh());
-		// setFontColor(instance.getFontColor());
-		// setBold(instance.isBold());
-	}
-
-
-} // CSSInstanceImpl
+} //CSSInstanceImpl

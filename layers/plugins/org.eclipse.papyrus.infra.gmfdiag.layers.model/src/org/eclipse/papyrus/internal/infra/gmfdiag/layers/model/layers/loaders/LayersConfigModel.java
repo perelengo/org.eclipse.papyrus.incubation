@@ -37,9 +37,6 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfi
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.PropertyId;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.TypeConfig;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.BooleanAndOperator;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.BooleanOrOperator;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.FillAverageOperator;
 
 
 /**
@@ -98,9 +95,9 @@ public class LayersConfigModel {
 
 		// Create Operators
 		Folder operatorFolder = createFolder(getRootFolder(), "operatorDesc");
-		OperatorConfig operatorBooleanAnd = createPropertyOperatorConfig(operatorFolder, "operatorBooleanAnd", BooleanAndOperator.class.getName());
-		OperatorConfig operatorBooleanOr = createPropertyOperatorConfig(operatorFolder, "operatorBooleanOr", BooleanOrOperator.class.getName());
-		OperatorConfig operatorFillAverage = createPropertyOperatorConfig(operatorFolder, "operatorFillAverage", FillAverageOperator.class.getName());
+		// OperatorConfig operatorBooleanAnd = createPropertyOperatorConfig(operatorFolder, "operatorBooleanAnd", BooleanAndOperator.class.getName());
+		// OperatorConfig operatorBooleanOr = createPropertyOperatorConfig(operatorFolder, "operatorBooleanOr", BooleanOrOperator.class.getName());
+		// OperatorConfig operatorFillAverage = createPropertyOperatorConfig(operatorFolder, "operatorFillAverage", FillAverageOperator.class.getName());
 
 
 		// Create basic types

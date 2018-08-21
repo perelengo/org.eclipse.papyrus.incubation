@@ -1,22 +1,25 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import static org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.Activator.log;
 
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -26,13 +29,17 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
@@ -40,6 +47,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerDescriptor;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
@@ -128,6 +136,8 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * Start the behaviors associated to this layer.
 	 * This method is called by one of the methods: {@link #startAfterReloading()} or {@link #attachToLayersStack(LayersStack)}.
+	 * 
+	 * @generated NOT
 	 */
 	@Override
 	protected void startBehaviors() {
@@ -152,8 +162,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * @generated NOT
 	 */
 	@Override
-	@SuppressWarnings("serial")
-	public EList<TypeInstance> getPropertyValues() {
+	public List<TypeInstance> getPropertyValues() {
 		if (propertyValues == null) {
 			propertyValues = new EObjectResolvingEList<TypeInstance>(TypeInstance.class, this, LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUES) {
 
@@ -174,11 +183,11 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * @generated
 	 */
 	@Override
-	public EMap<String, TypeInstance> getPropertyValueMap() {
+	public Map<String, TypeInstance> getPropertyValueMap() {
 		if (propertyValueMap == null) {
 			propertyValueMap = new EcoreEMap<String, TypeInstance>(LayersPackage.Literals.STRING_TO_TYPE_INSTANCE_MAP, StringToTypeInstanceMapImpl.class, this, LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP);
 		}
-		return propertyValueMap;
+		return propertyValueMap.map();
 	}
 
 	/**
@@ -231,7 +240,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * @generated
 	 */
 	@Override
-	public EList<View> getViews() {
+	public List<View> getViews() {
 		if (views == null) {
 			views = new EObjectResolvingEList<View>(View.class, this, LayersPackage.ABSTRACT_LAYER__VIEWS);
 		}
@@ -245,7 +254,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * @generated NOT
 	 */
 	@Override
-	public EList<Property> getAttachedProperties() {
+	public List<Property> getAttachedProperties() {
 
 		// Silly implementation:
 		// walk existing instance keys, and get there descriptor
@@ -253,9 +262,9 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 		// TODO: improve this method: have a list updated when an instance is
 		// added or removed.
 
-		EList<Property> res = new BasicEList<Property>();
+		List<Property> res = new BasicEList<Property>();
 
-		for (Entry<String, TypeInstance> entry : getPropertyValueMap()) {
+		for (Entry<String, TypeInstance> entry : getPropertyValueMap().entrySet()) {
 			String propertyName = entry.getKey();
 
 			try {
@@ -345,7 +354,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
-			return ((InternalEList<?>) getPropertyValueMap()).basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) ((EMap.InternalMapView<String, TypeInstance>) getPropertyValueMap()).eMap()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -363,9 +372,9 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 			return getPropertyValues();
 		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
 			if (coreType)
-				return getPropertyValueMap();
+				return ((EMap.InternalMapView<String, TypeInstance>) getPropertyValueMap()).eMap();
 			else
-				return getPropertyValueMap().map();
+				return getPropertyValueMap();
 		case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
 			if (resolve)
 				return getLayerDescriptor();
@@ -393,7 +402,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 			getPropertyValues().addAll((Collection<? extends TypeInstance>) newValue);
 			return;
 		case LayersPackage.ABSTRACT_LAYER__PROPERTY_VALUE_MAP:
-			((EStructuralFeature.Setting) getPropertyValueMap()).set(newValue);
+			((EStructuralFeature.Setting) ((EMap.InternalMapView<String, TypeInstance>) getPropertyValueMap()).eMap()).set(newValue);
 			return;
 		case LayersPackage.ABSTRACT_LAYER__LAYER_DESCRIPTOR:
 			setLayerDescriptor((LayerDescriptor) newValue);
@@ -502,6 +511,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * Synchronize the values with instances found in {@link #propertyValueMap}.
 	 *
 	 * @throws BadStateException
+	 * @generated NOT
 	 */
 	protected void resetAllPropertyValuesFromRegistry() throws BadStateException {
 
@@ -534,7 +544,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 			// That the list will have the correct size.
 			TypeInstance instance = getPropertyValueMap().get(propertyName);
 			if (instance == null) {
-				instance = NullInstance.NULLINSTANCE;
+				instance = LayersFactory.eINSTANCE.createNullInstance();
 			}
 			getPropertyValues().add(instance);
 		}
@@ -546,6 +556,8 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * @param propertyName
 	 * @param value
 	 * @throws NotFoundException
+	 * 
+	 * @generated NOT
 	 */
 	protected void synchronizePropertyValue(String propertyName, TypeInstance value) throws BadStateException, NotFoundException {
 
@@ -567,7 +579,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	/**
 	 * This class listen to #propertyValueMap, and synchronize propertyValues accordingly.
 	 *
-	 *
+	 * @generated NOT
 	 */
 	public class PropertyValuesSynchronizer extends AdapterImpl {
 
@@ -664,7 +676,7 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 
 				// Add the corresponding instance to propertyValues
 				try {
-					synchronizePropertyValue(entry.getKey(), NullInstance.NULLINSTANCE);
+					synchronizePropertyValue(entry.getKey(), LayersFactory.eINSTANCE.createNullInstance());
 				} catch (LayersException e) {
 					// should not happen
 					e.printStackTrace();
@@ -718,6 +730,8 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * @param property
 	 * @return
 	 * @throws LayersException
+	 * 
+	 * @generated NOT
 	 */
 	@Override
 	public ComputePropertyValueCommand getComputePropertyValueCommand(View view, Property property) throws LayersException {
@@ -744,6 +758,8 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * @param property
 	 * @return
 	 * @throws LayersException
+	 * 
+	 * @generated NOT
 	 */
 	@Override
 	public EList<ComputePropertyValueCommand> getPropertiesComputePropertyValueCommand(View view, List<Property> properties) throws LayersException {
@@ -789,6 +805,8 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 	 * @param property
 	 * @return
 	 * @throws LayersException
+	 * 
+	 * @generated NOT
 	 */
 	@Override
 	public EList<ComputePropertyValueCommand> getViewsComputePropertyValueCommand(List<View> views, Property property) throws LayersException {
@@ -829,24 +847,5 @@ public abstract class AbstractLayerImpl extends LayerExpressionImpl implements A
 			return null;
 		}
 	}
-
-	/**
-	 * Get the LayersStack that own directly or indirectly this Layer.
-	 * Throw an exception if no {@link LayersStack} can be found. <br>
-	 * Lookup is done recursively in parent containers.
-	 *
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#getLayersStack()
-	 *
-	 * @return
-	 * @throws NotFoundException
-	 */
-	// @Override
-	// public LayersStack getLayersStack() throws NotFoundException {
-	// // TODO: performance improvment. It is possible to avoid the lookup
-	// // by caching the LayersStack, or by setting a corresponding property
-	// // in the model
-	// return (LayersStack)ECoreUtils.lookupAncestorOfType(this, LayersPackage.eINSTANCE.getLayersStack());
-	// }
-
 
 } // AbstractLayerImpl

@@ -15,15 +15,26 @@ package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.emf.edit.command.CommandParameter;
+
+import org.eclipse.emf.edit.domain.EditingDomain;
+
 import org.eclipse.emf.edit.provider.ChangeNotifier;
+import org.eclipse.emf.edit.provider.ChildCreationExtenderManager;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IDisposable;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -31,6 +42,14 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+
+import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.eclipse.gmf.runtime.notation.View;
+
+import org.eclipse.gmf.runtime.notation.util.NotationSwitch;
+
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.util.LayersAdapterFactory;
 
@@ -43,7 +62,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.util.Layer
  * <!-- end-user-doc -->
  * @generated
  */
-public class LayersItemProviderAdapterFactory extends LayersAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class LayersItemProviderAdapterFactory extends LayersAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -59,6 +78,14 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	 * @generated
 	 */
 	protected IChangeNotifier changeNotifier = new ChangeNotifier();
+
+	/**
+	 * This helps manage the child creation extenders.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(LayersEditPlugin.INSTANCE, LayersPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -218,29 +245,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		}
 
 		return propertyItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MetamodelItemProvider metamodelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMetamodelAdapter() {
-		if (metamodelItemProvider == null) {
-			metamodelItemProvider = new MetamodelItemProvider(this);
-		}
-
-		return metamodelItemProvider;
 	}
 
 	/**
@@ -474,29 +478,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DefaultPropertyOperatorItemProvider defaultPropertyOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDefaultPropertyOperatorAdapter() {
-		if (defaultPropertyOperatorItemProvider == null) {
-			defaultPropertyOperatorItemProvider = new DefaultPropertyOperatorItemProvider(this);
-		}
-
-		return defaultPropertyOperatorItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,164 +524,26 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntInstance} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntInstanceItemProvider intInstanceItemProvider;
+	protected MetamodelItemProvider metamodelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntInstance}.
+	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIntInstanceAdapter() {
-		if (intInstanceItemProvider == null) {
-			intInstanceItemProvider = new IntInstanceItemProvider(this);
+	public Adapter createMetamodelAdapter() {
+		if (metamodelItemProvider == null) {
+			metamodelItemProvider = new MetamodelItemProvider(this);
 		}
 
-		return intInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BooleanInstanceItemProvider booleanInstanceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBooleanInstanceAdapter() {
-		if (booleanInstanceItemProvider == null) {
-			booleanInstanceItemProvider = new BooleanInstanceItemProvider(this);
-		}
-
-		return booleanInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StringInstanceItemProvider stringInstanceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createStringInstanceAdapter() {
-		if (stringInstanceItemProvider == null) {
-			stringInstanceItemProvider = new StringInstanceItemProvider(this);
-		}
-
-		return stringInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IntTypeItemProvider intTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIntTypeAdapter() {
-		if (intTypeItemProvider == null) {
-			intTypeItemProvider = new IntTypeItemProvider(this);
-		}
-
-		return intTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BooleanTypeItemProvider booleanTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBooleanTypeAdapter() {
-		if (booleanTypeItemProvider == null) {
-			booleanTypeItemProvider = new BooleanTypeItemProvider(this);
-		}
-
-		return booleanTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StringTypeItemProvider stringTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createStringTypeAdapter() {
-		if (stringTypeItemProvider == null) {
-			stringTypeItemProvider = new StringTypeItemProvider(this);
-		}
-
-		return stringTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CustomTypeItemProvider customTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCustomTypeAdapter() {
-		if (customTypeItemProvider == null) {
-			customTypeItemProvider = new CustomTypeItemProvider(this);
-		}
-
-		return customTypeItemProvider;
+		return metamodelItemProvider;
 	}
 
 	/**
@@ -747,29 +590,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		}
 
 		return stackedLayerOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomLayerOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CustomLayerOperatorItemProvider customLayerOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomLayerOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCustomLayerOperatorAdapter() {
-		if (customLayerOperatorItemProvider == null) {
-			customLayerOperatorItemProvider = new CustomLayerOperatorItemProvider(this);
-		}
-
-		return customLayerOperatorItemProvider;
 	}
 
 	/**
@@ -842,29 +662,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayerDescriptor} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RegExpLayerDescriptorItemProvider regExpLayerDescriptorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayerDescriptor}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRegExpLayerDescriptorAdapter() {
-		if (regExpLayerDescriptorItemProvider == null) {
-			regExpLayerDescriptorItemProvider = new RegExpLayerDescriptorItemProvider(this);
-		}
-
-		return regExpLayerDescriptorItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -885,29 +682,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		}
 
 		return nullInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RegExpLayerItemProvider regExpLayerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRegExpLayerAdapter() {
-		if (regExpLayerItemProvider == null) {
-			regExpLayerItemProvider = new RegExpLayerItemProvider(this);
-		}
-
-		return regExpLayerItemProvider;
 	}
 
 	/**
@@ -934,144 +708,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Color} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ColorItemProvider colorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Color}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createColorAdapter() {
-		if (colorItemProvider == null) {
-			colorItemProvider = new ColorItemProvider(this);
-		}
-
-		return colorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ColorInstance} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ColorInstanceItemProvider colorInstanceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ColorInstance}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createColorInstanceAdapter() {
-		if (colorInstanceItemProvider == null) {
-			colorInstanceItemProvider = new ColorInstanceItemProvider(this);
-		}
-
-		return colorInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FillInstanceItemProvider fillInstanceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFillInstanceAdapter() {
-		if (fillInstanceItemProvider == null) {
-			fillInstanceItemProvider = new FillInstanceItemProvider(this);
-		}
-
-		return fillInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Fill} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FillItemProvider fillItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Fill}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFillAdapter() {
-		if (fillItemProvider == null) {
-			fillItemProvider = new FillItemProvider(this);
-		}
-
-		return fillItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillPropertySetter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FillPropertySetterItemProvider fillPropertySetterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillPropertySetter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFillPropertySetterAdapter() {
-		if (fillPropertySetterItemProvider == null) {
-			fillPropertySetterItemProvider = new FillPropertySetterItemProvider(this);
-		}
-
-		return fillPropertySetterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsValidPropertySetter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IsValidPropertySetterItemProvider isValidPropertySetterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsValidPropertySetter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIsValidPropertySetterAdapter() {
-		if (isValidPropertySetterItemProvider == null) {
-			isValidPropertySetterItemProvider = new IsValidPropertySetterItemProvider(this);
-		}
-
-		return isValidPropertySetterItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullPropertySetter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1092,167 +728,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		}
 
 		return nullPropertySetterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LineTypeItemProvider lineTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLineTypeAdapter() {
-		if (lineTypeItemProvider == null) {
-			lineTypeItemProvider = new LineTypeItemProvider(this);
-		}
-
-		return lineTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LineInstanceItemProvider lineInstanceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLineInstanceAdapter() {
-		if (lineInstanceItemProvider == null) {
-			lineInstanceItemProvider = new LineInstanceItemProvider(this);
-		}
-
-		return lineInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LinePropertySetter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LinePropertySetterItemProvider linePropertySetterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LinePropertySetter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLinePropertySetterAdapter() {
-		if (linePropertySetterItemProvider == null) {
-			linePropertySetterItemProvider = new LinePropertySetterItemProvider(this);
-		}
-
-		return linePropertySetterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontPropertySetter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FontPropertySetterItemProvider fontPropertySetterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontPropertySetter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFontPropertySetterAdapter() {
-		if (fontPropertySetterItemProvider == null) {
-			fontPropertySetterItemProvider = new FontPropertySetterItemProvider(this);
-		}
-
-		return fontPropertySetterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FontInstanceItemProvider fontInstanceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFontInstanceAdapter() {
-		if (fontInstanceItemProvider == null) {
-			fontInstanceItemProvider = new FontInstanceItemProvider(this);
-		}
-
-		return fontInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FontTypeItemProvider fontTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFontTypeAdapter() {
-		if (fontTypeItemProvider == null) {
-			fontTypeItemProvider = new FontTypeItemProvider(this);
-		}
-
-		return fontTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsVisiblePropertySetter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IsVisiblePropertySetterItemProvider isVisiblePropertySetterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsVisiblePropertySetter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIsVisiblePropertySetterAdapter() {
-		if (isVisiblePropertySetterItemProvider == null) {
-			isVisiblePropertySetterItemProvider = new IsVisiblePropertySetterItemProvider(this);
-		}
-
-		return isVisiblePropertySetterItemProvider;
 	}
 
 	/**
@@ -1299,98 +774,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		}
 
 		return stackedLayerOperatorDescriptorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CustomPropertyOperatorItemProvider customPropertyOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCustomPropertyOperatorAdapter() {
-		if (customPropertyOperatorItemProvider == null) {
-			customPropertyOperatorItemProvider = new CustomPropertyOperatorItemProvider(this);
-		}
-
-		return customPropertyOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AndStackedLayerOperatorDescriptor} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AndStackedLayerOperatorDescriptorItemProvider andStackedLayerOperatorDescriptorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AndStackedLayerOperatorDescriptor}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAndStackedLayerOperatorDescriptorAdapter() {
-		if (andStackedLayerOperatorDescriptorItemProvider == null) {
-			andStackedLayerOperatorDescriptorItemProvider = new AndStackedLayerOperatorDescriptorItemProvider(this);
-		}
-
-		return andStackedLayerOperatorDescriptorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.OrStackedLayerOperatorDescriptor} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrStackedLayerOperatorDescriptorItemProvider orStackedLayerOperatorDescriptorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.OrStackedLayerOperatorDescriptor}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrStackedLayerOperatorDescriptorAdapter() {
-		if (orStackedLayerOperatorDescriptorItemProvider == null) {
-			orStackedLayerOperatorDescriptorItemProvider = new OrStackedLayerOperatorDescriptorItemProvider(this);
-		}
-
-		return orStackedLayerOperatorDescriptorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsAbstractUmlSetter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IsAbstractUmlSetterItemProvider isAbstractUmlSetterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsAbstractUmlSetter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIsAbstractUmlSetterAdapter() {
-		if (isAbstractUmlSetterItemProvider == null) {
-			isAbstractUmlSetterItemProvider = new IsAbstractUmlSetterItemProvider(this);
-		}
-
-		return isAbstractUmlSetterItemProvider;
 	}
 
 	/**
@@ -1560,6 +943,7 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComposeableAdapterFactory getRootAdapterFactory() {
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
@@ -1570,6 +954,7 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
@@ -1613,11 +998,41 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<IChildCreationExtender> getChildCreationExtenders() {
+		return childCreationExtenderManager.getChildCreationExtenders();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<?> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+		return childCreationExtenderManager.getNewChildDescriptors(object, editingDomain);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return childCreationExtenderManager;
+	}
+
+	/**
 	 * This adds a listener.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void addListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.addListener(notifyChangedListener);
 	}
@@ -1628,6 +1043,7 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.removeListener(notifyChangedListener);
 	}
@@ -1638,6 +1054,7 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void fireNotifyChanged(Notification notification) {
 		changeNotifier.fireNotifyChanged(notification);
 
@@ -1652,6 +1069,7 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void dispose() {
 		if (layerNamedStyleItemProvider != null) layerNamedStyleItemProvider.dispose();
 		if (layersStackItemProvider != null) layersStackItemProvider.dispose();
@@ -1659,7 +1077,6 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		if (layerStackDescriptorRegistryItemProvider != null) layerStackDescriptorRegistryItemProvider.dispose();
 		if (propertyRegistryItemProvider != null) propertyRegistryItemProvider.dispose();
 		if (propertyItemProvider != null) propertyItemProvider.dispose();
-		if (metamodelItemProvider != null) metamodelItemProvider.dispose();
 		if (typeRegistryItemProvider != null) typeRegistryItemProvider.dispose();
 		if (stringToTypeMapItemProvider != null) stringToTypeMapItemProvider.dispose();
 		if (layerDescriptorRegistryItemProvider != null) layerDescriptorRegistryItemProvider.dispose();
@@ -1670,46 +1087,19 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		if (layerOperatorDescriptorRegistryItemProvider != null) layerOperatorDescriptorRegistryItemProvider.dispose();
 		if (layerOperatorDescriptorItemProvider != null) layerOperatorDescriptorItemProvider.dispose();
 		if (propertyOperatorItemProvider != null) propertyOperatorItemProvider.dispose();
-		if (defaultPropertyOperatorItemProvider != null) defaultPropertyOperatorItemProvider.dispose();
 		if (stringToTypeInstanceMapItemProvider != null) stringToTypeInstanceMapItemProvider.dispose();
 		if (folderItemProvider != null) folderItemProvider.dispose();
-		if (intInstanceItemProvider != null) intInstanceItemProvider.dispose();
-		if (booleanInstanceItemProvider != null) booleanInstanceItemProvider.dispose();
-		if (stringInstanceItemProvider != null) stringInstanceItemProvider.dispose();
-		if (intTypeItemProvider != null) intTypeItemProvider.dispose();
-		if (booleanTypeItemProvider != null) booleanTypeItemProvider.dispose();
-		if (stringTypeItemProvider != null) stringTypeItemProvider.dispose();
-		if (customTypeItemProvider != null) customTypeItemProvider.dispose();
+		if (metamodelItemProvider != null) metamodelItemProvider.dispose();
 		if (topLayerOperatorItemProvider != null) topLayerOperatorItemProvider.dispose();
 		if (stackedLayerOperatorItemProvider != null) stackedLayerOperatorItemProvider.dispose();
-		if (customLayerOperatorItemProvider != null) customLayerOperatorItemProvider.dispose();
 		if (propertyIndexItemProvider != null) propertyIndexItemProvider.dispose();
 		if (stringToPropertyIndexMapItemProvider != null) stringToPropertyIndexMapItemProvider.dispose();
 		if (simpleLayerDescriptorItemProvider != null) simpleLayerDescriptorItemProvider.dispose();
-		if (regExpLayerDescriptorItemProvider != null) regExpLayerDescriptorItemProvider.dispose();
 		if (nullInstanceItemProvider != null) nullInstanceItemProvider.dispose();
-		if (regExpLayerItemProvider != null) regExpLayerItemProvider.dispose();
 		if (layerItemProvider != null) layerItemProvider.dispose();
-		if (colorItemProvider != null) colorItemProvider.dispose();
-		if (colorInstanceItemProvider != null) colorInstanceItemProvider.dispose();
-		if (fillInstanceItemProvider != null) fillInstanceItemProvider.dispose();
-		if (fillItemProvider != null) fillItemProvider.dispose();
-		if (fillPropertySetterItemProvider != null) fillPropertySetterItemProvider.dispose();
-		if (isValidPropertySetterItemProvider != null) isValidPropertySetterItemProvider.dispose();
 		if (nullPropertySetterItemProvider != null) nullPropertySetterItemProvider.dispose();
-		if (lineTypeItemProvider != null) lineTypeItemProvider.dispose();
-		if (lineInstanceItemProvider != null) lineInstanceItemProvider.dispose();
-		if (linePropertySetterItemProvider != null) linePropertySetterItemProvider.dispose();
-		if (fontPropertySetterItemProvider != null) fontPropertySetterItemProvider.dispose();
-		if (fontInstanceItemProvider != null) fontInstanceItemProvider.dispose();
-		if (fontTypeItemProvider != null) fontTypeItemProvider.dispose();
-		if (isVisiblePropertySetterItemProvider != null) isVisiblePropertySetterItemProvider.dispose();
 		if (topLayerOperatorDescriptorItemProvider != null) topLayerOperatorDescriptorItemProvider.dispose();
 		if (stackedLayerOperatorDescriptorItemProvider != null) stackedLayerOperatorDescriptorItemProvider.dispose();
-		if (customPropertyOperatorItemProvider != null) customPropertyOperatorItemProvider.dispose();
-		if (andStackedLayerOperatorDescriptorItemProvider != null) andStackedLayerOperatorDescriptorItemProvider.dispose();
-		if (orStackedLayerOperatorDescriptorItemProvider != null) orStackedLayerOperatorDescriptorItemProvider.dispose();
-		if (isAbstractUmlSetterItemProvider != null) isAbstractUmlSetterItemProvider.dispose();
 		if (allViewsDerivedLayerItemProvider != null) allViewsDerivedLayerItemProvider.dispose();
 		if (cssPropertySetterItemProvider != null) cssPropertySetterItemProvider.dispose();
 		if (cssTypeItemProvider != null) cssTypeItemProvider.dispose();
@@ -1717,6 +1107,97 @@ public class LayersItemProviderAdapterFactory extends LayersAdapterFactory imple
 		if (cssHidePropertySetterItemProvider != null) cssHidePropertySetterItemProvider.dispose();
 		if (cssHideTypeItemProvider != null) cssHideTypeItemProvider.dispose();
 		if (cssHideInstanceItemProvider != null) cssHideInstanceItemProvider.dispose();
+	}
+
+	/**
+	 * A child creation extender for the {@link NotationPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class NotationChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * 
+		 * @generated NOT
+		 */
+		protected static class CreationSwitch extends NotationSwitch {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseView(View object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(NotationPackage.Literals.VIEW__STYLES,
+						 LayersFactory.eINSTANCE.createLayerNamedStyle()));
+
+				return null;
+			}
+
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		@Override
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		@Override
+		public ResourceLocator getResourceLocator() {
+			return LayersEditPlugin.INSTANCE;
+		}
 	}
 
 }

@@ -118,7 +118,7 @@ public class HideLayerElementsCommand extends RecordingCommand {
 		// This used to call upon a style but the possibility of a style being present in multiple applied CSS broke the functionality
 		// The style strategy can be reintroduced if there is a way to only call upon one applied CSS instead of All of them
 
-		if (layer.isLayerEnabled() && !isAppliedCSS && null != cssToHide) {
+		if (!layer.isLayerEnabled() && !isAppliedCSS && null != cssToHide) {
 			AddCSSStyleSheetCommand acssc = new AddCSSStyleSheetCommand(ted, cssDiagram,
 					CSSStyles.CSS_DIAGRAM_STYLESHEETS_KEY,
 					NotationPackage.eINSTANCE.getEObjectListValueStyle(),
@@ -126,7 +126,7 @@ public class HideLayerElementsCommand extends RecordingCommand {
 					cssToHide);
 			acssc.execute();
 		}
-		if (!layer.isLayerEnabled() && isAppliedCSS && null != cssToHide) {
+		if (layer.isLayerEnabled() && isAppliedCSS && null != cssToHide) {
 			RemoveCSSStyleSheetCommand rcssc = new RemoveCSSStyleSheetCommand(ted, cssDiagram,
 					CSSStyles.CSS_DIAGRAM_STYLESHEETS_KEY,
 					NotationPackage.eINSTANCE.getEObjectListValueStyle(),

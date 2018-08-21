@@ -1,14 +1,15 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig;
 
@@ -36,7 +37,7 @@ public enum ClassnameKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UNDEFINED(0, "UNDEFINED", "UNDEFINED"),
+	UNDEFINED(0, "UNDEFINED", "UNDEFINED"), //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * The '<em><b>EMF CLASSNAME</b></em>' literal object.
@@ -46,7 +47,7 @@ public enum ClassnameKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EMF_CLASSNAME(1, "EMF_CLASSNAME", "EMF_CLASSNAME"),
+	EMF_CLASSNAME(1, "EMF_CLASSNAME", "EMF_CLASSNAME"), //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * The '<em><b>POJO CLASSNAME</b></em>' literal object.
@@ -56,7 +57,7 @@ public enum ClassnameKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	POJO_CLASSNAME(2, "POJO_CLASSNAME", "POJO_CLASSNAME"),
+	POJO_CLASSNAME(2, "POJO_CLASSNAME", "POJO_CLASSNAME"), //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * The '<em><b>NOT FOUND</b></em>' literal object.
@@ -66,13 +67,14 @@ public enum ClassnameKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NOT_FOUND(3, "NOT_FOUND", "NOT_FOUND");
+	NOT_FOUND(3, "NOT_FOUND", "NOT_FOUND"); //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
 	 * The '<em><b>UNDEFINED</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>UNDEFINED</b></em>' literal object isn't clear, there really should be more of a description here...
+	 * If the meaning of '<em><b>UNDEFINED</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #UNDEFINED
@@ -86,7 +88,8 @@ public enum ClassnameKind implements Enumerator {
 	 * The '<em><b>EMF CLASSNAME</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>EMF CLASSNAME</b></em>' literal object isn't clear, there really should be more of a description here...
+	 * If the meaning of '<em><b>EMF CLASSNAME</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #EMF_CLASSNAME
@@ -100,7 +103,8 @@ public enum ClassnameKind implements Enumerator {
 	 * The '<em><b>POJO CLASSNAME</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>POJO CLASSNAME</b></em>' literal object isn't clear, there really should be more of a description here...
+	 * If the meaning of '<em><b>POJO CLASSNAME</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #POJO_CLASSNAME
@@ -114,7 +118,8 @@ public enum ClassnameKind implements Enumerator {
 	 * The '<em><b>NOT FOUND</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>NOT FOUND</b></em>' literal object isn't clear, there really should be more of a description here...
+	 * If the meaning of '<em><b>NOT FOUND</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #NOT_FOUND
@@ -130,7 +135,8 @@ public enum ClassnameKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ClassnameKind[] VALUES_ARRAY = new ClassnameKind[] {
+	private static final ClassnameKind[] VALUES_ARRAY =
+		new ClassnameKind[] {
 			UNDEFINED,
 			EMF_CLASSNAME,
 			POJO_CLASSNAME,
@@ -237,7 +243,6 @@ public enum ClassnameKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -247,7 +252,6 @@ public enum ClassnameKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 	  return name;
 	}
@@ -257,7 +261,6 @@ public enum ClassnameKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLiteral() {
 	  return literal;
 	}
@@ -272,5 +275,5 @@ public enum ClassnameKind implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-
-} // ClassnameKind
+	
+} //ClassnameKind

@@ -1,26 +1,33 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
+import java.util.Map;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFactory;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegistry;
@@ -33,7 +40,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeRegist
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TypeRegistryImpl#getTypes <em>Types</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TypeRegistryImpl#getTypes <em>Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,7 +50,6 @@ public class TypeRegistryImpl extends EObjectImpl implements TypeRegistry {
 	 * The cached value of the '{@link #getTypes() <em>Types</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getTypes()
 	 * @generated
 	 * @ordered
@@ -53,52 +59,15 @@ public class TypeRegistryImpl extends EObjectImpl implements TypeRegistry {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * @generated
 	 */
 	protected TypeRegistryImpl() {
 		super();
-		init();
-	}
-
-	/**
-	 * Init the Registry.
-	 * Register standard types.
-	 */
-	protected void init() {
-
-		Type type = LayersFactory.eINSTANCE.createBooleanType();
-		getTypes().put(type.getName(), type);
-
-		type = LayersFactory.eINSTANCE.createIntType();
-		getTypes().put(type.getName(), type);
-
-		type = LayersFactory.eINSTANCE.createStringType();
-		getTypes().put(type.getName(), type);
-
-		// addType(LayersFactory.eINSTANCE.createColor());
-		// addType(LayersFactory.eINSTANCE.createFill());
-		// addType(LayersFactory.eINSTANCE.createLineType());
-		// addType(LayersFactory.eINSTANCE.createFontType());
-		addType(LayersFactory.eINSTANCE.createCSSType());
-		addType(LayersFactory.eINSTANCE.createCSSHideType());
-	}
-
-	/**
-	 * Add the type in the registry
-	 *
-	 * @param type
-	 */
-	public void addType(Type type) {
-		String typeName = type.getName();
-
-		getTypes().put(typeName, type);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -109,28 +78,25 @@ public class TypeRegistryImpl extends EObjectImpl implements TypeRegistry {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
-	@Override
-	public EMap<String, Type> getTypes() {
+	public Map<String, Type> getTypes() {
 		if (types == null) {
-			types = new EcoreEMap<String, Type>(LayersPackage.Literals.STRING_TO_TYPE_MAP, StringToTypeMapImpl.class, this, LayersPackage.TYPE_REGISTRY__TYPES);
+			types = new EcoreEMap<String,Type>(LayersPackage.Literals.STRING_TO_TYPE_MAP, StringToTypeMapImpl.class, this, LayersPackage.TYPE_REGISTRY__TYPES);
 		}
-		return types;
+		return types.map();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case LayersPackage.TYPE_REGISTRY__TYPES:
-			return ((InternalEList<?>) getTypes()).basicRemove(otherEnd, msgs);
+			case LayersPackage.TYPE_REGISTRY__TYPES:
+				return ((InternalEList<?>)((EMap.InternalMapView<String, Type>)getTypes()).eMap()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -138,17 +104,14 @@ public class TypeRegistryImpl extends EObjectImpl implements TypeRegistry {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case LayersPackage.TYPE_REGISTRY__TYPES:
-			if (coreType)
-				return getTypes();
-			else
-				return getTypes().map();
+			case LayersPackage.TYPE_REGISTRY__TYPES:
+				if (coreType) return ((EMap.InternalMapView<String, Type>)getTypes()).eMap();
+				else return getTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,15 +119,14 @@ public class TypeRegistryImpl extends EObjectImpl implements TypeRegistry {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case LayersPackage.TYPE_REGISTRY__TYPES:
-			((EStructuralFeature.Setting) getTypes()).set(newValue);
-			return;
+			case LayersPackage.TYPE_REGISTRY__TYPES:
+				((EStructuralFeature.Setting)((EMap.InternalMapView<String, Type>)getTypes()).eMap()).set(newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -172,15 +134,14 @@ public class TypeRegistryImpl extends EObjectImpl implements TypeRegistry {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case LayersPackage.TYPE_REGISTRY__TYPES:
-			getTypes().clear();
-			return;
+			case LayersPackage.TYPE_REGISTRY__TYPES:
+				getTypes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -188,16 +149,15 @@ public class TypeRegistryImpl extends EObjectImpl implements TypeRegistry {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case LayersPackage.TYPE_REGISTRY__TYPES:
-			return types != null && !types.isEmpty();
+			case LayersPackage.TYPE_REGISTRY__TYPES:
+				return types != null && !types.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} // TypeRegistryImpl
+} //TypeRegistryImpl

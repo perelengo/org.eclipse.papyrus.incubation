@@ -1,27 +1,34 @@
-/*******************************************************************************
- * Copyright (c) 2013 CEA LIST.
+/**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *     Cedric Dumoulin - cedric.dumoulin@lifl.fr
- ******************************************************************************/
-/**
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Folder;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FolderElement;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
@@ -60,6 +67,7 @@ public class FolderImpl extends FolderElementImpl implements Folder {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -94,8 +102,7 @@ public class FolderImpl extends FolderElementImpl implements Folder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<FolderElement> getElements() {
+	public List<FolderElement> getElements() {
 		if (elements == null) {
 			elements = new EObjectContainmentEList<FolderElement>(FolderElement.class, this, LayersPackage.FOLDER__ELEMENTS);
 		}
@@ -107,7 +114,6 @@ public class FolderImpl extends FolderElementImpl implements Folder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -117,7 +123,6 @@ public class FolderImpl extends FolderElementImpl implements Folder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -218,11 +223,11 @@ public class FolderImpl extends FolderElementImpl implements Folder {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
 
-} // FolderImpl
+} //FolderImpl

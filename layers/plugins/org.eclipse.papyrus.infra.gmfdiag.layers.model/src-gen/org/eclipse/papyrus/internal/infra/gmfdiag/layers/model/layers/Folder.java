@@ -13,7 +13,7 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ public interface Folder extends FolderElement {
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<FolderElement> getElements();
+	List<FolderElement> getElements();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

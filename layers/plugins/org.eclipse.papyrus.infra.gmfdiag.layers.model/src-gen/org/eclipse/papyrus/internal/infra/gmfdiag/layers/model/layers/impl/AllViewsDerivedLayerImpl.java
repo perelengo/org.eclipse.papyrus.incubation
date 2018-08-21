@@ -1,13 +1,22 @@
 /**
+ * Copyright (c) 2013, 2017 CEA LIST & LIFL 
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *   Cedric Dumoulin  Cedric.dumoulin@lifl.fr - Initial API and implementation
+ *   Quentin Le Menez quentin.lemenez@cea.fr
+ * 
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
-import static org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.Activator.log;
-
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AllViewsDerivedLayer;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.util.DiagramViewToListSynchronizer;
 
 /**
@@ -19,27 +28,21 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.util.DiagramViewT
  */
 public class AllViewsDerivedLayerImpl extends AbstractLayerImpl implements AllViewsDerivedLayer {
 
-	/**
-	 * Object used to synchronize a list with the diagram's views.
-	 *
-	 */
-	protected DiagramViewToListSynchronizer viewsListSynchronizer;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
-	 * @generated NOT
+	 * 
+	 * @generated
 	 */
 	protected AllViewsDerivedLayerImpl() {
 		super();
-		// init the synchronizer
-		viewsListSynchronizer = new DiagramViewToListSynchronizer(getViews());
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -47,24 +50,4 @@ public class AllViewsDerivedLayerImpl extends AbstractLayerImpl implements AllVi
 		return LayersPackage.Literals.ALL_VIEWS_DERIVED_LAYER;
 	}
 
-	/**
-	 * This layer has just been added to a LayerStack.
-	 * Set the root of the expression.
-	 * Set the views to match the result of the expression.
-	 *
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#initLayer(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack)
-	 *
-	 * @param owningLayersStack
-	 */
-	@Override
-	public void initLayer(LayersStack owningLayersStack) {
-		super.initLayer(owningLayersStack);
-
-		if (log.isDebugEnabled()) {
-			log.debug(this.getClass().getSimpleName() + ".initLayer(" + owningLayersStack + ")");
-		}
-
-		// Set the diagram associated to this tree of layers
-		viewsListSynchronizer.setDiagram(owningLayersStack.getDiagram());
-	}
 } // AllViewsDerivedLayerImpl

@@ -25,7 +25,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPack
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToTypeInstanceMapImpl;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.util.ECoreUtils;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.util.ECoreUtils;
 
 /**
  * This class listen to a {@link LayersStack} and send event to listeners.

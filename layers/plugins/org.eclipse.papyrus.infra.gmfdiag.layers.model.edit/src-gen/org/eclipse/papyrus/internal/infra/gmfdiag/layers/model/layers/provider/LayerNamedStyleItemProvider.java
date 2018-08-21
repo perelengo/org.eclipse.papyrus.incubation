@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -107,6 +108,16 @@ public class LayerNamedStyleItemProvider extends NamedStyleItemProvider {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -145,9 +156,8 @@ public class LayerNamedStyleItemProvider extends NamedStyleItemProvider {
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *
+	 * 
 	 * @generated NOT
-	 *
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection/* <Object> */ newChildDescriptors, Object object) {
@@ -165,7 +175,7 @@ public class LayerNamedStyleItemProvider extends NamedStyleItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return LayersEditPlugin.INSTANCE;
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

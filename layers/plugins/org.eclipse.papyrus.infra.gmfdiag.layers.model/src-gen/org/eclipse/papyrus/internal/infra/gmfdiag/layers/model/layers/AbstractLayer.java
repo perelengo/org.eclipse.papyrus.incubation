@@ -13,8 +13,8 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.EMap;
+import java.util.List;
+import java.util.Map;
 
 import org.eclipse.gmf.runtime.notation.View;
 
@@ -55,7 +55,7 @@ public interface AbstractLayer extends LayerExpression {
 	 * @model
 	 * @generated
 	 */
-	EList<TypeInstance> getPropertyValues();
+	List<TypeInstance> getPropertyValues();
 
 	/**
 	 * Returns the value of the '<em><b>Property Value Map</b></em>' map.
@@ -72,7 +72,7 @@ public interface AbstractLayer extends LayerExpression {
 	 * @model mapType="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringToTypeInstanceMap&lt;org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.String, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance&gt;" ordered="false"
 	 * @generated
 	 */
-	EMap<String, TypeInstance> getPropertyValueMap();
+	Map<String, TypeInstance> getPropertyValueMap();
 
 	/**
 	 * Returns the value of the '<em><b>Layer Descriptor</b></em>' reference.
@@ -114,7 +114,7 @@ public interface AbstractLayer extends LayerExpression {
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<View> getViews();
+	List<View> getViews();
 
 	/**
 	 * Returns the value of the '<em><b>Attached Properties</b></em>' reference list.
@@ -130,7 +130,7 @@ public interface AbstractLayer extends LayerExpression {
 	 * @model transient="true" volatile="true" derived="true" ordered="false"
 	 * @generated
 	 */
-	EList<Property> getAttachedProperties();
+	List<Property> getAttachedProperties();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -30,7 +30,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOp
  * <!-- end-user-doc -->
  * @generated
  */
-public class TopLayerOperatorItemProvider extends AbstractLayerOperatorItemProvider {
+public class TopLayerOperatorItemProvider extends LayerOperatorItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -65,6 +65,16 @@ public class TopLayerOperatorItemProvider extends AbstractLayerOperatorItemProvi
 	@Override
 	public Object getImage(Object object) {
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/TopLayerOperator")); //$NON-NLS-1$
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
 	}
 
 	/**

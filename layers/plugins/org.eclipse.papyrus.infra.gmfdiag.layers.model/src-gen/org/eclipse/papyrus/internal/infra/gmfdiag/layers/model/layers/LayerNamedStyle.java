@@ -13,7 +13,7 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 import org.eclipse.gmf.runtime.notation.NamedStyle;
 
@@ -48,6 +48,6 @@ public interface LayerNamedStyle extends NamedStyle {
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<LayersStack> getLayersStack();
+	List<LayersStack> getLayersStack();
 
 } // LayerNamedStyle

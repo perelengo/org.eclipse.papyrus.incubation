@@ -13,7 +13,7 @@
  */
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -48,6 +48,6 @@ public interface LayerDescriptorRegistry extends EObject {
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<LayerDescriptor> getLayerDescriptors();
+	List<LayerDescriptor> getLayerDescriptors();
 
 } // LayerDescriptorRegistry

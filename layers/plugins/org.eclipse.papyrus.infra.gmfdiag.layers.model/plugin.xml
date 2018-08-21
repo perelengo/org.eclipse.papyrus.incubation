@@ -22,5 +22,26 @@
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.LayersConfigPackage"
             genModel="model/layersconfig.genmodel"/>
    </extension>
+   <extension
+         point="org.eclipse.emf.ecore.factory_override">
+      <factory
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.custom.CustomLayersFactory"
+            uri="http://www.eclipse.org/papyrus/infra/gmfdiag/layers">
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.factory_override">
+      <factory
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.configmodel.layersconfig.impl.custom.CustomLayersConfigFactory"
+            uri="http://www.eclipse.org/papyrus/infra/gmfdiag/layersconfig">
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.resource.LayersModelResourceFactory"
+            type="layers">
+      </parser>
+   </extension>
 
 </plugin>

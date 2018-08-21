@@ -6,22 +6,6 @@
 
 <plugin>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated layers -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersModelWizardID"
-            name="%_UI_LayersModelWizard_label"
-            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/LayersModelFile.gif">
-         <description>%_UI_LayersModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
    <extension point="org.eclipse.ui.editors">
       <!-- @generated layers -->
       <editor
@@ -29,7 +13,7 @@
             name="%_UI_LayersEditor_label"
             icon="icons/full/obj16/LayersModelFile.gif"
             extensions="layers"
-            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersEditor"
+            class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.custom.CustomLayersEditor"
             contributorClass="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.presentation.LayersActionBarContributor">
       </editor>
    </extension>

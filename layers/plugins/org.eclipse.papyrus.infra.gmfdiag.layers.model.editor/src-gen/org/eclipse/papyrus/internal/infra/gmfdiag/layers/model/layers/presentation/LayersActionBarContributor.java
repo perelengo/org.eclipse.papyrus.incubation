@@ -176,6 +176,7 @@ public class LayersActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("layers-settings")); //$NON-NLS-1$
 		toolBarManager.add(new Separator("layers-additions")); //$NON-NLS-1$
 	}

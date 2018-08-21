@@ -22,7 +22,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator;
@@ -57,8 +59,54 @@ public class LayerOperatorItemProvider extends LayerExpressionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addLayerOperatorDescriptorNamePropertyDescriptor(object);
+			addLayerOperatorDescriptorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Layer Operator Descriptor Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLayerOperatorDescriptorNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerOperator_layerOperatorDescriptorName_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerOperator_layerOperatorDescriptorName_feature", "_UI_LayerOperator_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 LayersPackage.Literals.LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Layer Operator Descriptor feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLayerOperatorDescriptorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerOperator_layerOperatorDescriptor_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerOperator_layerOperatorDescriptor_feature", "_UI_LayerOperator_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 LayersPackage.Literals.LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -92,6 +140,16 @@ public class LayerOperatorItemProvider extends LayerExpressionItemProvider {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,6 +176,9 @@ public class LayerOperatorItemProvider extends LayerExpressionItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LayerOperator.class)) {
+			case LayersPackage.LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case LayersPackage.LAYER_OPERATOR__LAYERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -145,16 +206,6 @@ public class LayerOperatorItemProvider extends LayerExpressionItemProvider {
 			(createChildParameter
 				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
 				 LayersFactory.eINSTANCE.createStackedLayerOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
-				 LayersFactory.eINSTANCE.createCustomLayerOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.LAYER_OPERATOR__LAYERS,
-				 LayersFactory.eINSTANCE.createRegExpLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter

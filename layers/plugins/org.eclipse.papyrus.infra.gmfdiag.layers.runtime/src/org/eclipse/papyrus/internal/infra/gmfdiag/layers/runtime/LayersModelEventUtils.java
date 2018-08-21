@@ -19,7 +19,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToTypeInstanceMapImpl;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.util.ECoreUtils;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.util.ECoreUtils;
 
 
 /**

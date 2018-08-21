@@ -14,10 +14,9 @@
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.gmf.runtime.notation.View;
+
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CSSHidePropertySetter;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersPackage;
-import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,18 +29,15 @@ public class CSSHidePropertySetterImpl extends PropertySetterImpl implements CSS
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
+	 * @generated
 	 */
 	protected CSSHidePropertySetterImpl() {
 		super();
-		setPropertyName("cssHide");
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -49,16 +45,4 @@ public class CSSHidePropertySetterImpl extends PropertySetterImpl implements CSS
 		return LayersPackage.Literals.CSS_HIDE_PROPERTY_SETTER;
 	}
 
-	/**
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertySetterImpl#setValue(org.eclipse.gmf.runtime.notation.View, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance)
-	 *
-	 * @param view
-	 * @param value
-	 */
-	@Override
-	public void setValue(View view, TypeInstance value) {
-
-
-	}
-
-} // CSSHidePropertySetterImpl
+} //CSSHidePropertySetterImpl

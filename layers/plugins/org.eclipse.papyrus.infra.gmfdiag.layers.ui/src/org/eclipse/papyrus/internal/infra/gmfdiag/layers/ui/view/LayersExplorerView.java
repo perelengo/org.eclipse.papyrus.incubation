@@ -10,8 +10,7 @@
  ******************************************************************************/
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.view;
 
-import static org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.Activator.log;
-
+import static org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.Activator.log;
 import javax.imageio.spi.ServiceRegistry;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -43,7 +42,6 @@ import org.eclipse.papyrus.infra.core.sashwindows.di.PageRef;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.core.services.ServicesRegistry;
 import org.eclipse.papyrus.infra.core.utils.ServiceUtils;
-import org.eclipse.papyrus.infra.ui.util.ServiceUtilsForWorkbenchPage;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.ILayersStackApplicationEventListener;
@@ -149,8 +147,9 @@ public class LayersExplorerView extends ViewPart implements ITabbedPropertySheet
 
 		@Override
 		public void widgetDisposed(DisposeEvent e) {
-			log.info(this.getClass().getName() + " is disposed !!!" + e.widget);
-
+			if (log.isDebugEnabled()) {
+				log.info(this.getClass().getName() + " is disposed !!!" + e.widget);
+			}
 		}
 	};
 
@@ -520,7 +519,9 @@ public class LayersExplorerView extends ViewPart implements ITabbedPropertySheet
 
 		ServicesRegistry registry = editor.getAdapter(ServicesRegistry.class);
 		if (registry == null) {
-			log.info("New editor has no ServiceRegistry");
+			if (log.isDebugEnabled()) {
+				log.info("New editor has no ServiceRegistry");
+			}
 			setEmptyTreeInput();
 			return;
 		}
@@ -649,7 +650,6 @@ public class LayersExplorerView extends ViewPart implements ITabbedPropertySheet
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
-	 * @generated NOT
 	 */
 	protected void createContextMenuFor(StructuredViewer viewer) {
 		MenuManager contextMenu = new MenuManager("#PopUp");
@@ -702,7 +702,9 @@ public class LayersExplorerView extends ViewPart implements ITabbedPropertySheet
 
 			// Bad state
 			// FIXME Log error ?
-			log.info("Error - " + getClass().getSimpleName() + " - currentLayersModel and currentServicesRegistry should not be null.");
+			if (log.isDebugEnabled()) {
+				log.info("Error - " + getClass().getSimpleName() + " - currentLayersModel and currentServicesRegistry should not be null.");
+			}
 			return null;
 		}
 

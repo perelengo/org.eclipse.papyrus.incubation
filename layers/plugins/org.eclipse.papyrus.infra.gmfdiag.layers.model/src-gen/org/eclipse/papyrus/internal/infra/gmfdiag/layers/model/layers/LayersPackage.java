@@ -124,7 +124,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated NOT
 	 * @ordered
 	 */
-	int LAYER_NAMED_STYLE_OPERATION_COUNT = /* NotationPackage.NAMED_STYLE_OPERATION_COUNT + */0;
+	int LAYER_NAMED_STYLE_OPERATION_COUNT = /* NotationPackage.NAMED_STYLE_OPERATION_COUNT + */ 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer <em>Container</em>}' class.
@@ -134,7 +134,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayersContainer()
 	 * @generated
 	 */
-	int LAYERS_CONTAINER = 26;
+	int LAYERS_CONTAINER = 24;
 
 	/**
 	 * The number of structural features of the '<em>Container</em>' class.
@@ -252,7 +252,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYERS_STACK___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = LAYERS_CONTAINER_OPERATION_COUNT + 1;
+	int LAYERS_STACK___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = LAYERS_CONTAINER_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Views Compute Property Value Command</em>' operation.
@@ -261,7 +261,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYERS_STACK___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = LAYERS_CONTAINER_OPERATION_COUNT + 2;
+	int LAYERS_STACK___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = LAYERS_CONTAINER_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Start After Creation</em>' operation.
@@ -470,7 +470,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = APPLICATION_DEPENDANT_ELEMENT_OPERATION_COUNT + 1;
+	int LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = APPLICATION_DEPENDANT_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
@@ -479,7 +479,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = APPLICATION_DEPENDANT_ELEMENT_OPERATION_COUNT + 2;
+	int LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = APPLICATION_DEPENDANT_ELEMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
@@ -911,22 +911,13 @@ public interface LayersPackage extends EPackage {
 	int TYPE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE__METAMODEL = FOLDER_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__NAME = FOLDER_ELEMENT_FEATURE_COUNT + 1;
+	int TYPE__NAME = FOLDER_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -935,7 +926,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__DESCRIPTION = FOLDER_ELEMENT_FEATURE_COUNT + 2;
+	int TYPE__DESCRIPTION = FOLDER_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -944,7 +935,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_FEATURE_COUNT = FOLDER_ELEMENT_FEATURE_COUNT + 3;
+	int TYPE_FEATURE_COUNT = FOLDER_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Create Instance</em>' operation.
@@ -965,97 +956,6 @@ public interface LayersPackage extends EPackage {
 	int TYPE_OPERATION_COUNT = FOLDER_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.MetamodelImpl <em>Metamodel</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.MetamodelImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getMetamodel()
-	 * @generated
-	 */
-	int METAMODEL = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL__NAME = FOLDER_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL__DESCRIPTION = FOLDER_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Nsuri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL__NSURI = FOLDER_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Plugin ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL__PLUGIN_ID = FOLDER_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>EPackage Instance Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL__EPACKAGE_INSTANCE_NAME = FOLDER_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Is Type Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL__IS_TYPE_VALID = FOLDER_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of structural features of the '<em>Metamodel</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL_FEATURE_COUNT = FOLDER_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>Get EPackage</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL___GET_EPACKAGE = FOLDER_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Metamodel</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METAMODEL_OPERATION_COUNT = FOLDER_ELEMENT_OPERATION_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand <em>Compute Property Value Command Itf</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1063,7 +963,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getComputePropertyValueCommandItf()
 	 * @generated
 	 */
-	int COMPUTE_PROPERTY_VALUE_COMMAND_ITF = 12;
+	int COMPUTE_PROPERTY_VALUE_COMMAND_ITF = 11;
 
 	/**
 	 * The number of structural features of the '<em>Compute Property Value Command Itf</em>' class.
@@ -1100,7 +1000,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getTypeInstance()
 	 * @generated
 	 */
-	int TYPE_INSTANCE = 11;
+	int TYPE_INSTANCE = 10;
 
 	/**
 	 * The number of structural features of the '<em>Type Instance</em>' class.
@@ -1155,7 +1055,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getTypeRegistry()
 	 * @generated
 	 */
-	int TYPE_REGISTRY = 13;
+	int TYPE_REGISTRY = 12;
 
 	/**
 	 * The feature id for the '<em><b>Types</b></em>' map.
@@ -1192,7 +1092,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringToTypeMap()
 	 * @generated
 	 */
-	int STRING_TO_TYPE_MAP = 14;
+	int STRING_TO_TYPE_MAP = 13;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1238,7 +1138,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerDescriptorRegistry()
 	 * @generated
 	 */
-	int LAYER_DESCRIPTOR_REGISTRY = 15;
+	int LAYER_DESCRIPTOR_REGISTRY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Layer Descriptors</b></em>' containment reference list.
@@ -1275,7 +1175,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerDescriptor()
 	 * @generated
 	 */
-	int LAYER_DESCRIPTOR = 16;
+	int LAYER_DESCRIPTOR = 15;
 
 	/**
 	 * The feature id for the '<em><b>Property Registry</b></em>' reference.
@@ -1312,7 +1212,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerApplicationFactory()
 	 * @generated
 	 */
-	int LAYER_APPLICATION_FACTORY = 17;
+	int LAYER_APPLICATION_FACTORY = 16;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -1349,7 +1249,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getPropertySetterRegistry()
 	 * @generated
 	 */
-	int PROPERTY_SETTER_REGISTRY = 18;
+	int PROPERTY_SETTER_REGISTRY = 17;
 
 	/**
 	 * The feature id for the '<em><b>Property Setters</b></em>' reference list.
@@ -1431,7 +1331,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getPropertySetter()
 	 * @generated
 	 */
-	int PROPERTY_SETTER = 19;
+	int PROPERTY_SETTER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' reference.
@@ -1486,7 +1386,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringToPropertySetter()
 	 * @generated
 	 */
-	int STRING_TO_PROPERTY_SETTER = 20;
+	int STRING_TO_PROPERTY_SETTER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1532,7 +1432,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerOperatorDescriptorRegistry()
 	 * @generated
 	 */
-	int LAYER_OPERATOR_DESCRIPTOR_REGISTRY = 21;
+	int LAYER_OPERATOR_DESCRIPTOR_REGISTRY = 20;
 
 	/**
 	 * The feature id for the '<em><b>Descriptors</b></em>' containment reference list.
@@ -1650,7 +1550,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerOperatorDescriptor()
 	 * @generated
 	 */
-	int LAYER_OPERATOR_DESCRIPTOR = 22;
+	int LAYER_OPERATOR_DESCRIPTOR = 21;
 
 	/**
 	 * The feature id for the '<em><b>Property Operators</b></em>' reference list.
@@ -1713,7 +1613,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR = 3;
+	int LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_PROPERTYOPERATOR = 3;
 
 	/**
 	 * The number of operations of the '<em>Layer Operator Descriptor</em>' class.
@@ -1732,7 +1632,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getPropertyOperator()
 	 * @generated
 	 */
-	int PROPERTY_OPERATOR = 23;
+	int PROPERTY_OPERATOR = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1744,13 +1644,40 @@ public interface LayersPackage extends EPackage {
 	int PROPERTY_OPERATOR__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Classname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_OPERATOR__CLASSNAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Operator Instance</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_OPERATOR__OPERATOR_INSTANCE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Class Bundle ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_OPERATOR__CLASS_BUNDLE_ID = 3;
+
+	/**
 	 * The number of structural features of the '<em>Property Operator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_OPERATOR_FEATURE_COUNT = 1;
+	int PROPERTY_OPERATOR_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
@@ -1759,7 +1686,16 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST = 0;
+	int PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__LIST = 0;
+
+	/**
+	 * The operation id for the '<em>Reset Operator Instance</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_OPERATOR___RESET_OPERATOR_INSTANCE = 1;
 
 	/**
 	 * The number of operations of the '<em>Property Operator</em>' class.
@@ -1768,7 +1704,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_OPERATOR_OPERATION_COUNT = 1;
+	int PROPERTY_OPERATOR_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerOperatorImpl <em>Layer Operator</em>}' class.
@@ -1778,7 +1714,286 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerOperator()
 	 * @generated
 	 */
-	int LAYER_OPERATOR = 25;
+	int LAYER_OPERATOR = 23;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl <em>Abstract Layer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getAbstractLayer()
+	 * @generated
+	 */
+	int ABSTRACT_LAYER = 25;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToTypeInstanceMapImpl <em>String To Type Instance Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToTypeInstanceMapImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringToTypeInstanceMap()
+	 * @generated
+	 */
+	int STRING_TO_TYPE_INSTANCE_MAP = 26;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FolderImpl <em>Folder</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FolderImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFolder()
+	 * @generated
+	 */
+	int FOLDER = 27;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.MetamodelImpl <em>Metamodel</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.MetamodelImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getMetamodel()
+	 * @generated
+	 */
+	int METAMODEL = 28;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorImpl <em>Top Layer Operator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getTopLayerOperator()
+	 * @generated
+	 */
+	int TOP_LAYER_OPERATOR = 29;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StackedLayerOperatorImpl <em>Stacked Layer Operator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StackedLayerOperatorImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStackedLayerOperator()
+	 * @generated
+	 */
+	int STACKED_LAYER_OPERATOR = 30;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyIndexImpl <em>Property Index</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyIndexImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getPropertyIndex()
+	 * @generated
+	 */
+	int PROPERTY_INDEX = 31;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToPropertyIndexMapImpl <em>String To Property Index Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToPropertyIndexMapImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringToPropertyIndexMap()
+	 * @generated
+	 */
+	int STRING_TO_PROPERTY_INDEX_MAP = 32;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.SimpleLayerDescriptorImpl <em>Simple Layer Descriptor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.SimpleLayerDescriptorImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getSimpleLayerDescriptor()
+	 * @generated
+	 */
+	int SIMPLE_LAYER_DESCRIPTOR = 33;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullInstanceImpl <em>Null Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullInstanceImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getNullInstance()
+	 * @generated
+	 */
+	int NULL_INSTANCE = 34;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerImpl <em>Layer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayer()
+	 * @generated
+	 */
+	int LAYER = 35;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullPropertySetterImpl <em>Null Property Setter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullPropertySetterImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getNullPropertySetter()
+	 * @generated
+	 */
+	int NULL_PROPERTY_SETTER = 36;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorDescriptorImpl <em>Top Layer Operator Descriptor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorDescriptorImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getTopLayerOperatorDescriptor()
+	 * @generated
+	 */
+	int TOP_LAYER_OPERATOR_DESCRIPTOR = 37;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StackedLayerOperatorDescriptorImpl <em>Stacked Layer Operator Descriptor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StackedLayerOperatorDescriptorImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStackedLayerOperatorDescriptor()
+	 * @generated
+	 */
+	int STACKED_LAYER_OPERATOR_DESCRIPTOR = 38;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AllViewsDerivedLayerImpl <em>All Views Derived Layer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AllViewsDerivedLayerImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getAllViewsDerivedLayer()
+	 * @generated
+	 */
+	int ALL_VIEWS_DERIVED_LAYER = 39;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSPropertySetterImpl <em>CSS Property Setter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSPropertySetterImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSPropertySetter()
+	 * @generated
+	 */
+	int CSS_PROPERTY_SETTER = 40;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSTypeImpl <em>CSS Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSTypeImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSType()
+	 * @generated
+	 */
+	int CSS_TYPE = 41;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSInstanceImpl <em>CSS Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSInstanceImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSInstance()
+	 * @generated
+	 */
+	int CSS_INSTANCE = 42;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHidePropertySetterImpl <em>CSS Hide Property Setter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHidePropertySetterImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHidePropertySetter()
+	 * @generated
+	 */
+	int CSS_HIDE_PROPERTY_SETTER = 43;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideTypeImpl <em>CSS Hide Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideTypeImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHideType()
+	 * @generated
+	 */
+	int CSS_HIDE_TYPE = 44;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideInstanceImpl <em>CSS Hide Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideInstanceImpl
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHideInstance()
+	 * @generated
+	 */
+	int CSS_HIDE_INSTANCE = 45;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState <em>Layer State</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerState()
+	 * @generated
+	 */
+	int LAYER_STATE = 46;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.EventLevel <em>Event Level</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.EventLevel
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getEventLevel()
+	 * @generated
+	 */
+	int EVENT_LEVEL = 47;
+
+	/**
+	 * The meta object id for the '<em>String</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getString()
+	 * @generated
+	 */
+	int STRING = 48;
+
+	/**
+	 * The meta object id for the '<em>Exception</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayersException()
+	 * @generated
+	 */
+	int LAYERS_EXCEPTION = 49;
+
+	/**
+	 * The meta object id for the '<em>int</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getint()
+	 * @generated
+	 */
+	int INT = 50;
+
+	/**
+	 * The meta object id for the '<em>Bad State Exception</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getBadStateException()
+	 * @generated
+	 */
+	int BAD_STATE_EXCEPTION = 51;
+
+	/**
+	 * The meta object id for the '<em>Not Found Exception</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getNotFoundException()
+	 * @generated
+	 */
+	int NOT_FOUND_EXCEPTION = 52;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' reference.
@@ -1862,13 +2077,31 @@ public interface LayersPackage extends EPackage {
 	int LAYER_OPERATOR__LAYERS = LAYER_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Layer Operator Descriptor Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME = LAYER_EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Layer Operator Descriptor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR = LAYER_EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Layer Operator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_OPERATOR_FEATURE_COUNT = LAYER_EXPRESSION_FEATURE_COUNT + 1;
+	int LAYER_OPERATOR_FEATURE_COUNT = LAYER_EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
@@ -1886,7 +2119,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
+	int LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY;
 
 	/**
 	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
@@ -1895,7 +2128,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
+	int LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST;
 
 	/**
 	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
@@ -1961,230 +2194,13 @@ public interface LayersPackage extends EPackage {
 	int LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION = LAYER_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Layer Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_OPERATOR_OPERATION_COUNT = LAYER_EXPRESSION_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerOperatorImpl <em>Abstract Layer Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerOperatorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getAbstractLayerOperator()
-	 * @generated
-	 */
-	int ABSTRACT_LAYER_OPERATOR = 24;
-
-	/**
-	 * The feature id for the '<em><b>Application</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__APPLICATION = LAYER_OPERATOR__APPLICATION;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__NAME = LAYER_OPERATOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__DESCRIPTION = LAYER_OPERATOR__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Is Layer Enabled Internal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL = LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL;
-
-	/**
-	 * The feature id for the '<em><b>Is Layer Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__IS_LAYER_ENABLED = LAYER_OPERATOR__IS_LAYER_ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Is Branch Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__IS_BRANCH_ENABLED = LAYER_OPERATOR__IS_BRANCH_ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Owning Layers Stack</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__OWNING_LAYERS_STACK = LAYER_OPERATOR__OWNING_LAYERS_STACK;
-
-	/**
-	 * The feature id for the '<em><b>State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__STATE = LAYER_OPERATOR__STATE;
-
-	/**
-	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__LAYERS = LAYER_OPERATOR__LAYERS;
-
-	/**
-	 * The feature id for the '<em><b>Layer Operator Descriptor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR = LAYER_OPERATOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Layer Operator Descriptor Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME = LAYER_OPERATOR_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Layer Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR_FEATURE_COUNT = LAYER_OPERATOR_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY = LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Get Views Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
-
-	/**
-	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK = LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK;
-
-	/**
-	 * The operation id for the '<em>Get Layers Stack</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___GET_LAYERS_STACK = LAYER_OPERATOR___GET_LAYERS_STACK;
-
-	/**
-	 * The operation id for the '<em>Enter Attached State</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___ENTER_ATTACHED_STATE = LAYER_OPERATOR___ENTER_ATTACHED_STATE;
-
-	/**
-	 * The operation id for the '<em>Attach</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___ATTACH = LAYER_OPERATOR___ATTACH;
-
-	/**
-	 * The operation id for the '<em>Detach</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___DETACH = LAYER_OPERATOR___DETACH;
-
-	/**
-	 * The operation id for the '<em>Exit Attached State</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___EXIT_ATTACHED_STATE = LAYER_OPERATOR___EXIT_ATTACHED_STATE;
-
-	/**
-	 * The operation id for the '<em>Add Layer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION = LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION;
-
-	/**
 	 * The operation id for the '<em>Is Descriptor Set</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_LAYER_OPERATOR___IS_DESCRIPTOR_SET = LAYER_OPERATOR_OPERATION_COUNT + 0;
+	int LAYER_OPERATOR___IS_DESCRIPTOR_SET = LAYER_EXPRESSION_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Reset Descriptor</em>' operation.
@@ -2193,72 +2209,16 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_LAYER_OPERATOR___RESET_DESCRIPTOR = LAYER_OPERATOR_OPERATION_COUNT + 1;
+	int LAYER_OPERATOR___RESET_DESCRIPTOR = LAYER_EXPRESSION_OPERATION_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Abstract Layer Operator</em>' class.
+	 * The number of operations of the '<em>Layer Operator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_LAYER_OPERATOR_OPERATION_COUNT = LAYER_OPERATOR_OPERATION_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.DefaultPropertyOperatorImpl <em>Default Property Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.DefaultPropertyOperatorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getDefaultPropertyOperator()
-	 * @generated
-	 */
-	int DEFAULT_PROPERTY_OPERATOR = 27;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_PROPERTY_OPERATOR__NAME = PROPERTY_OPERATOR__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Default Property Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_PROPERTY_OPERATOR_FEATURE_COUNT = PROPERTY_OPERATOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST = PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST;
-
-	/**
-	 * The number of operations of the '<em>Default Property Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_PROPERTY_OPERATOR_OPERATION_COUNT = PROPERTY_OPERATOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl <em>Abstract Layer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getAbstractLayer()
-	 * @generated
-	 */
-	int ABSTRACT_LAYER = 28;
+	int LAYER_OPERATOR_OPERATION_COUNT = LAYER_EXPRESSION_OPERATION_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' reference.
@@ -2402,7 +2362,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
+	int ABSTRACT_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY;
 
 	/**
 	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
@@ -2411,7 +2371,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
+	int ABSTRACT_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST;
 
 	/**
 	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
@@ -2513,16 +2473,6 @@ public interface LayersPackage extends EPackage {
 	int ABSTRACT_LAYER_OPERATION_COUNT = LAYER_EXPRESSION_OPERATION_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToTypeInstanceMapImpl <em>String To Type Instance Map</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToTypeInstanceMapImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringToTypeInstanceMap()
-	 * @generated
-	 */
-	int STRING_TO_TYPE_INSTANCE_MAP = 29;
-
-	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2557,16 +2507,6 @@ public interface LayersPackage extends EPackage {
 	 * @ordered
 	 */
 	int STRING_TO_TYPE_INSTANCE_MAP_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FolderImpl <em>Folder</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FolderImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFolder()
-	 * @generated
-	 */
-	int FOLDER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -2605,224 +2545,13 @@ public interface LayersPackage extends EPackage {
 	int FOLDER_OPERATION_COUNT = FOLDER_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IntInstanceImpl <em>Int Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IntInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIntInstance()
-	 * @generated
-	 */
-	int INT_INSTANCE = 31;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_INSTANCE__VALUE = TYPE_INSTANCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Int Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Cmd Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_INSTANCE___GET_CMD_VALUE = TYPE_INSTANCE___GET_CMD_VALUE;
-
-	/**
-	 * The operation id for the '<em>Set Value From String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_INSTANCE___SET_VALUE_FROM_STRING__STRING = TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING;
-
-	/**
-	 * The operation id for the '<em>Set Value From Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE = TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Int Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.BooleanInstanceImpl <em>Boolean Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.BooleanInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getBooleanInstance()
-	 * @generated
-	 */
-	int BOOLEAN_INSTANCE = 32;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_INSTANCE__VALUE = TYPE_INSTANCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Boolean Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Cmd Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_INSTANCE___GET_CMD_VALUE = TYPE_INSTANCE___GET_CMD_VALUE;
-
-	/**
-	 * The operation id for the '<em>Set Value From String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_INSTANCE___SET_VALUE_FROM_STRING__STRING = TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING;
-
-	/**
-	 * The operation id for the '<em>Set Value From Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE = TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Boolean Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringInstanceImpl <em>String Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringInstance()
-	 * @generated
-	 */
-	int STRING_INSTANCE = 33;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_INSTANCE__VALUE = TYPE_INSTANCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>String Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Cmd Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_INSTANCE___GET_CMD_VALUE = TYPE_INSTANCE___GET_CMD_VALUE;
-
-	/**
-	 * The operation id for the '<em>Set Value From String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_INSTANCE___SET_VALUE_FROM_STRING__STRING = TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING;
-
-	/**
-	 * The operation id for the '<em>Set Value From Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE = TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>String Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IntTypeImpl <em>Int Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IntTypeImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIntType()
-	 * @generated
-	 */
-	int INT_TYPE = 34;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE__METAMODEL = TYPE__METAMODEL;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INT_TYPE__NAME = TYPE__NAME;
+	int METAMODEL__NAME = FOLDER_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2831,245 +2560,70 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INT_TYPE__DESCRIPTION = TYPE__DESCRIPTION;
+	int METAMODEL__DESCRIPTION = FOLDER_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Int Type</em>' class.
+	 * The feature id for the '<em><b>Nsuri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INT_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
+	int METAMODEL__NSURI = FOLDER_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Create Instance</em>' operation.
+	 * The feature id for the '<em><b>Plugin ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INT_TYPE___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
+	int METAMODEL__PLUGIN_ID = FOLDER_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Int Type</em>' class.
+	 * The feature id for the '<em><b>EPackage Instance Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INT_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+	int METAMODEL__EPACKAGE_INSTANCE_NAME = FOLDER_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.BooleanTypeImpl <em>Boolean Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.BooleanTypeImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getBooleanType()
-	 * @generated
-	 */
-	int BOOLEAN_TYPE = 35;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
+	 * The feature id for the '<em><b>Is Type Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_TYPE__METAMODEL = TYPE__METAMODEL;
+	int METAMODEL__IS_TYPE_VALID = FOLDER_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The number of structural features of the '<em>Metamodel</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_TYPE__NAME = TYPE__NAME;
+	int METAMODEL_FEATURE_COUNT = FOLDER_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The operation id for the '<em>Get EPackage</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_TYPE__DESCRIPTION = TYPE__DESCRIPTION;
+	int METAMODEL___GET_EPACKAGE = FOLDER_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Boolean Type</em>' class.
+	 * The number of operations of the '<em>Metamodel</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_TYPE___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Boolean Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringTypeImpl <em>String Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringTypeImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringType()
-	 * @generated
-	 */
-	int STRING_TYPE = 36;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE__METAMODEL = TYPE__METAMODEL;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE__DESCRIPTION = TYPE__DESCRIPTION;
-
-	/**
-	 * The number of structural features of the '<em>String Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
-
-	/**
-	 * The number of operations of the '<em>String Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomTypeImpl <em>Custom Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomTypeImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomType()
-	 * @generated
-	 */
-	int CUSTOM_TYPE = 37;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_TYPE__METAMODEL = TYPE__METAMODEL;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_TYPE__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_TYPE__DESCRIPTION = TYPE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Classifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_TYPE__CLASSIFIER = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Custom Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Create Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_TYPE___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Custom Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorImpl <em>Top Layer Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getTopLayerOperator()
-	 * @generated
-	 */
-	int TOP_LAYER_OPERATOR = 38;
+	int METAMODEL_OPERATION_COUNT = FOLDER_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' reference.
@@ -3078,7 +2632,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__APPLICATION = ABSTRACT_LAYER_OPERATOR__APPLICATION;
+	int TOP_LAYER_OPERATOR__APPLICATION = LAYER_OPERATOR__APPLICATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3087,7 +2641,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__NAME = ABSTRACT_LAYER_OPERATOR__NAME;
+	int TOP_LAYER_OPERATOR__NAME = LAYER_OPERATOR__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3096,7 +2650,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__DESCRIPTION = ABSTRACT_LAYER_OPERATOR__DESCRIPTION;
+	int TOP_LAYER_OPERATOR__DESCRIPTION = LAYER_OPERATOR__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Is Layer Enabled Internal</b></em>' attribute.
@@ -3105,7 +2659,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL = ABSTRACT_LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL;
+	int TOP_LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL = LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL;
 
 	/**
 	 * The feature id for the '<em><b>Is Layer Enabled</b></em>' attribute.
@@ -3114,7 +2668,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__IS_LAYER_ENABLED = ABSTRACT_LAYER_OPERATOR__IS_LAYER_ENABLED;
+	int TOP_LAYER_OPERATOR__IS_LAYER_ENABLED = LAYER_OPERATOR__IS_LAYER_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Is Branch Enabled</b></em>' attribute.
@@ -3123,7 +2677,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__IS_BRANCH_ENABLED = ABSTRACT_LAYER_OPERATOR__IS_BRANCH_ENABLED;
+	int TOP_LAYER_OPERATOR__IS_BRANCH_ENABLED = LAYER_OPERATOR__IS_BRANCH_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Owning Layers Stack</b></em>' reference.
@@ -3132,7 +2686,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__OWNING_LAYERS_STACK = ABSTRACT_LAYER_OPERATOR__OWNING_LAYERS_STACK;
+	int TOP_LAYER_OPERATOR__OWNING_LAYERS_STACK = LAYER_OPERATOR__OWNING_LAYERS_STACK;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -3141,7 +2695,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__STATE = ABSTRACT_LAYER_OPERATOR__STATE;
+	int TOP_LAYER_OPERATOR__STATE = LAYER_OPERATOR__STATE;
 
 	/**
 	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
@@ -3150,16 +2704,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__LAYERS = ABSTRACT_LAYER_OPERATOR__LAYERS;
-
-	/**
-	 * The feature id for the '<em><b>Layer Operator Descriptor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOP_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR = ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR;
+	int TOP_LAYER_OPERATOR__LAYERS = LAYER_OPERATOR__LAYERS;
 
 	/**
 	 * The feature id for the '<em><b>Layer Operator Descriptor Name</b></em>' attribute.
@@ -3168,7 +2713,16 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME = ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME;
+	int TOP_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME = LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layer Operator Descriptor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOP_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR = LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR;
 
 	/**
 	 * The number of structural features of the '<em>Top Layer Operator</em>' class.
@@ -3177,7 +2731,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR_FEATURE_COUNT = ABSTRACT_LAYER_OPERATOR_FEATURE_COUNT + 0;
+	int TOP_LAYER_OPERATOR_FEATURE_COUNT = LAYER_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
@@ -3186,7 +2740,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY = ABSTRACT_LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY;
+	int TOP_LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY = LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY;
 
 	/**
 	 * The operation id for the '<em>Get Views Compute Property Value Command</em>' operation.
@@ -3195,7 +2749,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = ABSTRACT_LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
+	int TOP_LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY;
 
 	/**
 	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
@@ -3204,7 +2758,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = ABSTRACT_LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
+	int TOP_LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST;
 
 	/**
 	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
@@ -3213,7 +2767,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK = ABSTRACT_LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK;
+	int TOP_LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK = LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK;
 
 	/**
 	 * The operation id for the '<em>Get Layers Stack</em>' operation.
@@ -3222,7 +2776,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___GET_LAYERS_STACK = ABSTRACT_LAYER_OPERATOR___GET_LAYERS_STACK;
+	int TOP_LAYER_OPERATOR___GET_LAYERS_STACK = LAYER_OPERATOR___GET_LAYERS_STACK;
 
 	/**
 	 * The operation id for the '<em>Enter Attached State</em>' operation.
@@ -3231,7 +2785,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___ENTER_ATTACHED_STATE = ABSTRACT_LAYER_OPERATOR___ENTER_ATTACHED_STATE;
+	int TOP_LAYER_OPERATOR___ENTER_ATTACHED_STATE = LAYER_OPERATOR___ENTER_ATTACHED_STATE;
 
 	/**
 	 * The operation id for the '<em>Attach</em>' operation.
@@ -3240,7 +2794,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___ATTACH = ABSTRACT_LAYER_OPERATOR___ATTACH;
+	int TOP_LAYER_OPERATOR___ATTACH = LAYER_OPERATOR___ATTACH;
 
 	/**
 	 * The operation id for the '<em>Detach</em>' operation.
@@ -3249,7 +2803,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___DETACH = ABSTRACT_LAYER_OPERATOR___DETACH;
+	int TOP_LAYER_OPERATOR___DETACH = LAYER_OPERATOR___DETACH;
 
 	/**
 	 * The operation id for the '<em>Exit Attached State</em>' operation.
@@ -3258,7 +2812,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___EXIT_ATTACHED_STATE = ABSTRACT_LAYER_OPERATOR___EXIT_ATTACHED_STATE;
+	int TOP_LAYER_OPERATOR___EXIT_ATTACHED_STATE = LAYER_OPERATOR___EXIT_ATTACHED_STATE;
 
 	/**
 	 * The operation id for the '<em>Add Layer</em>' operation.
@@ -3267,7 +2821,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION = ABSTRACT_LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION;
+	int TOP_LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION = LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION;
 
 	/**
 	 * The operation id for the '<em>Is Descriptor Set</em>' operation.
@@ -3276,7 +2830,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___IS_DESCRIPTOR_SET = ABSTRACT_LAYER_OPERATOR___IS_DESCRIPTOR_SET;
+	int TOP_LAYER_OPERATOR___IS_DESCRIPTOR_SET = LAYER_OPERATOR___IS_DESCRIPTOR_SET;
 
 	/**
 	 * The operation id for the '<em>Reset Descriptor</em>' operation.
@@ -3285,7 +2839,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR___RESET_DESCRIPTOR = ABSTRACT_LAYER_OPERATOR___RESET_DESCRIPTOR;
+	int TOP_LAYER_OPERATOR___RESET_DESCRIPTOR = LAYER_OPERATOR___RESET_DESCRIPTOR;
 
 	/**
 	 * The number of operations of the '<em>Top Layer Operator</em>' class.
@@ -3294,17 +2848,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR_OPERATION_COUNT = ABSTRACT_LAYER_OPERATOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StackedLayerOperatorImpl <em>Stacked Layer Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StackedLayerOperatorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStackedLayerOperator()
-	 * @generated
-	 */
-	int STACKED_LAYER_OPERATOR = 39;
+	int TOP_LAYER_OPERATOR_OPERATION_COUNT = LAYER_OPERATOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' reference.
@@ -3313,7 +2857,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__APPLICATION = ABSTRACT_LAYER_OPERATOR__APPLICATION;
+	int STACKED_LAYER_OPERATOR__APPLICATION = LAYER_OPERATOR__APPLICATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3322,7 +2866,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__NAME = ABSTRACT_LAYER_OPERATOR__NAME;
+	int STACKED_LAYER_OPERATOR__NAME = LAYER_OPERATOR__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3331,7 +2875,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__DESCRIPTION = ABSTRACT_LAYER_OPERATOR__DESCRIPTION;
+	int STACKED_LAYER_OPERATOR__DESCRIPTION = LAYER_OPERATOR__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Is Layer Enabled Internal</b></em>' attribute.
@@ -3340,7 +2884,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL = ABSTRACT_LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL;
+	int STACKED_LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL = LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL;
 
 	/**
 	 * The feature id for the '<em><b>Is Layer Enabled</b></em>' attribute.
@@ -3349,7 +2893,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__IS_LAYER_ENABLED = ABSTRACT_LAYER_OPERATOR__IS_LAYER_ENABLED;
+	int STACKED_LAYER_OPERATOR__IS_LAYER_ENABLED = LAYER_OPERATOR__IS_LAYER_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Is Branch Enabled</b></em>' attribute.
@@ -3358,7 +2902,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__IS_BRANCH_ENABLED = ABSTRACT_LAYER_OPERATOR__IS_BRANCH_ENABLED;
+	int STACKED_LAYER_OPERATOR__IS_BRANCH_ENABLED = LAYER_OPERATOR__IS_BRANCH_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Owning Layers Stack</b></em>' reference.
@@ -3367,7 +2911,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__OWNING_LAYERS_STACK = ABSTRACT_LAYER_OPERATOR__OWNING_LAYERS_STACK;
+	int STACKED_LAYER_OPERATOR__OWNING_LAYERS_STACK = LAYER_OPERATOR__OWNING_LAYERS_STACK;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -3376,7 +2920,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__STATE = ABSTRACT_LAYER_OPERATOR__STATE;
+	int STACKED_LAYER_OPERATOR__STATE = LAYER_OPERATOR__STATE;
 
 	/**
 	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
@@ -3385,16 +2929,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__LAYERS = ABSTRACT_LAYER_OPERATOR__LAYERS;
-
-	/**
-	 * The feature id for the '<em><b>Layer Operator Descriptor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STACKED_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR = ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR;
+	int STACKED_LAYER_OPERATOR__LAYERS = LAYER_OPERATOR__LAYERS;
 
 	/**
 	 * The feature id for the '<em><b>Layer Operator Descriptor Name</b></em>' attribute.
@@ -3403,7 +2938,16 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME = ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME;
+	int STACKED_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME = LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layer Operator Descriptor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STACKED_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR = LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR;
 
 	/**
 	 * The number of structural features of the '<em>Stacked Layer Operator</em>' class.
@@ -3412,7 +2956,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR_FEATURE_COUNT = ABSTRACT_LAYER_OPERATOR_FEATURE_COUNT + 0;
+	int STACKED_LAYER_OPERATOR_FEATURE_COUNT = LAYER_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
@@ -3421,7 +2965,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY = ABSTRACT_LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY;
+	int STACKED_LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY = LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY;
 
 	/**
 	 * The operation id for the '<em>Get Views Compute Property Value Command</em>' operation.
@@ -3430,7 +2974,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = ABSTRACT_LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
+	int STACKED_LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY;
 
 	/**
 	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
@@ -3439,7 +2983,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = ABSTRACT_LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
+	int STACKED_LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST;
 
 	/**
 	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
@@ -3448,7 +2992,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK = ABSTRACT_LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK;
+	int STACKED_LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK = LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK;
 
 	/**
 	 * The operation id for the '<em>Get Layers Stack</em>' operation.
@@ -3457,7 +3001,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___GET_LAYERS_STACK = ABSTRACT_LAYER_OPERATOR___GET_LAYERS_STACK;
+	int STACKED_LAYER_OPERATOR___GET_LAYERS_STACK = LAYER_OPERATOR___GET_LAYERS_STACK;
 
 	/**
 	 * The operation id for the '<em>Enter Attached State</em>' operation.
@@ -3466,7 +3010,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___ENTER_ATTACHED_STATE = ABSTRACT_LAYER_OPERATOR___ENTER_ATTACHED_STATE;
+	int STACKED_LAYER_OPERATOR___ENTER_ATTACHED_STATE = LAYER_OPERATOR___ENTER_ATTACHED_STATE;
 
 	/**
 	 * The operation id for the '<em>Attach</em>' operation.
@@ -3475,7 +3019,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___ATTACH = ABSTRACT_LAYER_OPERATOR___ATTACH;
+	int STACKED_LAYER_OPERATOR___ATTACH = LAYER_OPERATOR___ATTACH;
 
 	/**
 	 * The operation id for the '<em>Detach</em>' operation.
@@ -3484,7 +3028,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___DETACH = ABSTRACT_LAYER_OPERATOR___DETACH;
+	int STACKED_LAYER_OPERATOR___DETACH = LAYER_OPERATOR___DETACH;
 
 	/**
 	 * The operation id for the '<em>Exit Attached State</em>' operation.
@@ -3493,7 +3037,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___EXIT_ATTACHED_STATE = ABSTRACT_LAYER_OPERATOR___EXIT_ATTACHED_STATE;
+	int STACKED_LAYER_OPERATOR___EXIT_ATTACHED_STATE = LAYER_OPERATOR___EXIT_ATTACHED_STATE;
 
 	/**
 	 * The operation id for the '<em>Add Layer</em>' operation.
@@ -3502,7 +3046,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION = ABSTRACT_LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION;
+	int STACKED_LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION = LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION;
 
 	/**
 	 * The operation id for the '<em>Is Descriptor Set</em>' operation.
@@ -3511,7 +3055,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___IS_DESCRIPTOR_SET = ABSTRACT_LAYER_OPERATOR___IS_DESCRIPTOR_SET;
+	int STACKED_LAYER_OPERATOR___IS_DESCRIPTOR_SET = LAYER_OPERATOR___IS_DESCRIPTOR_SET;
 
 	/**
 	 * The operation id for the '<em>Reset Descriptor</em>' operation.
@@ -3520,7 +3064,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR___RESET_DESCRIPTOR = ABSTRACT_LAYER_OPERATOR___RESET_DESCRIPTOR;
+	int STACKED_LAYER_OPERATOR___RESET_DESCRIPTOR = LAYER_OPERATOR___RESET_DESCRIPTOR;
 
 	/**
 	 * The number of operations of the '<em>Stacked Layer Operator</em>' class.
@@ -3529,216 +3073,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR_OPERATION_COUNT = ABSTRACT_LAYER_OPERATOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomLayerOperatorImpl <em>Custom Layer Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomLayerOperatorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomLayerOperator()
-	 * @generated
-	 */
-	int CUSTOM_LAYER_OPERATOR = 40;
-
-	/**
-	 * The feature id for the '<em><b>Application</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__APPLICATION = LAYER_OPERATOR__APPLICATION;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__NAME = LAYER_OPERATOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__DESCRIPTION = LAYER_OPERATOR__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Is Layer Enabled Internal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL = LAYER_OPERATOR__IS_LAYER_ENABLED_INTERNAL;
-
-	/**
-	 * The feature id for the '<em><b>Is Layer Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__IS_LAYER_ENABLED = LAYER_OPERATOR__IS_LAYER_ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Is Branch Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__IS_BRANCH_ENABLED = LAYER_OPERATOR__IS_BRANCH_ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Owning Layers Stack</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__OWNING_LAYERS_STACK = LAYER_OPERATOR__OWNING_LAYERS_STACK;
-
-	/**
-	 * The feature id for the '<em><b>State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__STATE = LAYER_OPERATOR__STATE;
-
-	/**
-	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR__LAYERS = LAYER_OPERATOR__LAYERS;
-
-	/**
-	 * The number of structural features of the '<em>Custom Layer Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR_FEATURE_COUNT = LAYER_OPERATOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY = LAYER_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Get Views Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = LAYER_OPERATOR___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = LAYER_OPERATOR___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
-
-	/**
-	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK = LAYER_OPERATOR___ATTACH_TO_LAYERS_STACK__LAYERSSTACK;
-
-	/**
-	 * The operation id for the '<em>Get Layers Stack</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___GET_LAYERS_STACK = LAYER_OPERATOR___GET_LAYERS_STACK;
-
-	/**
-	 * The operation id for the '<em>Enter Attached State</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___ENTER_ATTACHED_STATE = LAYER_OPERATOR___ENTER_ATTACHED_STATE;
-
-	/**
-	 * The operation id for the '<em>Attach</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___ATTACH = LAYER_OPERATOR___ATTACH;
-
-	/**
-	 * The operation id for the '<em>Detach</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___DETACH = LAYER_OPERATOR___DETACH;
-
-	/**
-	 * The operation id for the '<em>Exit Attached State</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___EXIT_ATTACHED_STATE = LAYER_OPERATOR___EXIT_ATTACHED_STATE;
-
-	/**
-	 * The operation id for the '<em>Add Layer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION = LAYER_OPERATOR___ADD_LAYER__LAYEREXPRESSION;
-
-	/**
-	 * The number of operations of the '<em>Custom Layer Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_LAYER_OPERATOR_OPERATION_COUNT = LAYER_OPERATOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyIndexImpl <em>Property Index</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyIndexImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getPropertyIndex()
-	 * @generated
-	 */
-	int PROPERTY_INDEX = 41;
+	int STACKED_LAYER_OPERATOR_OPERATION_COUNT = LAYER_OPERATOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' reference.
@@ -3777,16 +3112,6 @@ public interface LayersPackage extends EPackage {
 	int PROPERTY_INDEX_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToPropertyIndexMapImpl <em>String To Property Index Map</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringToPropertyIndexMapImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringToPropertyIndexMap()
-	 * @generated
-	 */
-	int STRING_TO_PROPERTY_INDEX_MAP = 42;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3823,16 +3148,6 @@ public interface LayersPackage extends EPackage {
 	int STRING_TO_PROPERTY_INDEX_MAP_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.SimpleLayerDescriptorImpl <em>Simple Layer Descriptor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.SimpleLayerDescriptorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getSimpleLayerDescriptor()
-	 * @generated
-	 */
-	int SIMPLE_LAYER_DESCRIPTOR = 43;
-
-	/**
 	 * The feature id for the '<em><b>Property Registry</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3858,53 +3173,6 @@ public interface LayersPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_LAYER_DESCRIPTOR_OPERATION_COUNT = LAYER_DESCRIPTOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.RegExpLayerDescriptorImpl <em>Reg Exp Layer Descriptor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.RegExpLayerDescriptorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getRegExpLayerDescriptor()
-	 * @generated
-	 */
-	int REG_EXP_LAYER_DESCRIPTOR = 44;
-
-	/**
-	 * The feature id for the '<em><b>Property Registry</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER_DESCRIPTOR__PROPERTY_REGISTRY = LAYER_DESCRIPTOR__PROPERTY_REGISTRY;
-
-	/**
-	 * The number of structural features of the '<em>Reg Exp Layer Descriptor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER_DESCRIPTOR_FEATURE_COUNT = LAYER_DESCRIPTOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Reg Exp Layer Descriptor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER_DESCRIPTOR_OPERATION_COUNT = LAYER_DESCRIPTOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullInstanceImpl <em>Null Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getNullInstance()
-	 * @generated
-	 */
-	int NULL_INSTANCE = 45;
 
 	/**
 	 * The number of structural features of the '<em>Null Instance</em>' class.
@@ -3959,404 +3227,6 @@ public interface LayersPackage extends EPackage {
 	 * @ordered
 	 */
 	int NULL_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.RegExpLayerImpl <em>Reg Exp Layer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.RegExpLayerImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getRegExpLayer()
-	 * @generated
-	 */
-	int REG_EXP_LAYER = 46;
-
-	/**
-	 * The feature id for the '<em><b>Application</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__APPLICATION = ABSTRACT_LAYER__APPLICATION;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__NAME = ABSTRACT_LAYER__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__DESCRIPTION = ABSTRACT_LAYER__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Is Layer Enabled Internal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__IS_LAYER_ENABLED_INTERNAL = ABSTRACT_LAYER__IS_LAYER_ENABLED_INTERNAL;
-
-	/**
-	 * The feature id for the '<em><b>Is Layer Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__IS_LAYER_ENABLED = ABSTRACT_LAYER__IS_LAYER_ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Is Branch Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__IS_BRANCH_ENABLED = ABSTRACT_LAYER__IS_BRANCH_ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Owning Layers Stack</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__OWNING_LAYERS_STACK = ABSTRACT_LAYER__OWNING_LAYERS_STACK;
-
-	/**
-	 * The feature id for the '<em><b>State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__STATE = ABSTRACT_LAYER__STATE;
-
-	/**
-	 * The feature id for the '<em><b>Property Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__PROPERTY_VALUES = ABSTRACT_LAYER__PROPERTY_VALUES;
-
-	/**
-	 * The feature id for the '<em><b>Property Value Map</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__PROPERTY_VALUE_MAP = ABSTRACT_LAYER__PROPERTY_VALUE_MAP;
-
-	/**
-	 * The feature id for the '<em><b>Layer Descriptor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__LAYER_DESCRIPTOR = ABSTRACT_LAYER__LAYER_DESCRIPTOR;
-
-	/**
-	 * The feature id for the '<em><b>Views</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__VIEWS = ABSTRACT_LAYER__VIEWS;
-
-	/**
-	 * The feature id for the '<em><b>Attached Properties</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__ATTACHED_PROPERTIES = ABSTRACT_LAYER__ATTACHED_PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Expr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__EXPR = ABSTRACT_LAYER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Language</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__LANGUAGE = ABSTRACT_LAYER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Is Domain Changed Event Dependant</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__IS_DOMAIN_CHANGED_EVENT_DEPENDANT = ABSTRACT_LAYER_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Domain Changed Event Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__DOMAIN_CHANGED_EVENT_LEVEL = ABSTRACT_LAYER_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Is Diagram Changed Event Dependant</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__IS_DIAGRAM_CHANGED_EVENT_DEPENDANT = ABSTRACT_LAYER_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Changed Event Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__DIAGRAM_CHANGED_EVENT_LEVEL = ABSTRACT_LAYER_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Expression Context Object Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER__EXPRESSION_CONTEXT_OBJECT_TYPE = ABSTRACT_LAYER_FEATURE_COUNT + 6;
-
-	/**
-	 * The number of structural features of the '<em>Reg Exp Layer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER_FEATURE_COUNT = ABSTRACT_LAYER_FEATURE_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY = ABSTRACT_LAYER___GET_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Get Views Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = ABSTRACT_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = ABSTRACT_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
-
-	/**
-	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___ATTACH_TO_LAYERS_STACK__LAYERSSTACK = ABSTRACT_LAYER___ATTACH_TO_LAYERS_STACK__LAYERSSTACK;
-
-	/**
-	 * The operation id for the '<em>Get Layers Stack</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___GET_LAYERS_STACK = ABSTRACT_LAYER___GET_LAYERS_STACK;
-
-	/**
-	 * The operation id for the '<em>Enter Attached State</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___ENTER_ATTACHED_STATE = ABSTRACT_LAYER___ENTER_ATTACHED_STATE;
-
-	/**
-	 * The operation id for the '<em>Attach</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___ATTACH = ABSTRACT_LAYER___ATTACH;
-
-	/**
-	 * The operation id for the '<em>Detach</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___DETACH = ABSTRACT_LAYER___DETACH;
-
-	/**
-	 * The operation id for the '<em>Exit Attached State</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___EXIT_ATTACHED_STATE = ABSTRACT_LAYER___EXIT_ATTACHED_STATE;
-
-	/**
-	 * The operation id for the '<em>Add Property Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___ADD_PROPERTY_INSTANCE__PROPERTY = ABSTRACT_LAYER___ADD_PROPERTY_INSTANCE__PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Remove Property Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___REMOVE_PROPERTY_INSTANCE__PROPERTY = ABSTRACT_LAYER___REMOVE_PROPERTY_INSTANCE__PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Get Property Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___GET_PROPERTY_INSTANCE__PROPERTY = ABSTRACT_LAYER___GET_PROPERTY_INSTANCE__PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Get Property Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___GET_PROPERTY_INSTANCE__STRING = ABSTRACT_LAYER___GET_PROPERTY_INSTANCE__STRING;
-
-	/**
-	 * The operation id for the '<em>Activate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___ACTIVATE__ABSTRACTLAYEROPERATOR = ABSTRACT_LAYER_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Deactivate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___DEACTIVATE__ABSTRACTLAYEROPERATOR = ABSTRACT_LAYER_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Is Derived View</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___IS_DERIVED_VIEW__VIEW = ABSTRACT_LAYER_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Attach Derived View</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___ATTACH_DERIVED_VIEW__VIEW = ABSTRACT_LAYER_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Attach Derived Views</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___ATTACH_DERIVED_VIEWS__ELIST = ABSTRACT_LAYER_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Attach Derived Views</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___ATTACH_DERIVED_VIEWS = ABSTRACT_LAYER_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Lookup Derived Views</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER___LOOKUP_DERIVED_VIEWS__ELIST = ABSTRACT_LAYER_OPERATION_COUNT + 6;
-
-	/**
-	 * The number of operations of the '<em>Reg Exp Layer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REG_EXP_LAYER_OPERATION_COUNT = ABSTRACT_LAYER_OPERATION_COUNT + 7;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerImpl <em>Layer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayer()
-	 * @generated
-	 */
-	int LAYER = 47;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' reference.
@@ -4500,7 +3370,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = ABSTRACT_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
+	int LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = ABSTRACT_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY;
 
 	/**
 	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
@@ -4509,7 +3379,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = ABSTRACT_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
+	int LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = ABSTRACT_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST;
 
 	/**
 	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
@@ -4611,391 +3481,6 @@ public interface LayersPackage extends EPackage {
 	int LAYER_OPERATION_COUNT = ABSTRACT_LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.ColorImpl <em>Color</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.ColorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getColor()
-	 * @generated
-	 */
-	int COLOR = 48;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR__METAMODEL = TYPE__METAMODEL;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR__DESCRIPTION = TYPE__DESCRIPTION;
-
-	/**
-	 * The number of structural features of the '<em>Color</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Color</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.ColorInstanceImpl <em>Color Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.ColorInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getColorInstance()
-	 * @generated
-	 */
-	int COLOR_INSTANCE = 49;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_INSTANCE__VALUE = TYPE_INSTANCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Color Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Cmd Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_INSTANCE___GET_CMD_VALUE = TYPE_INSTANCE___GET_CMD_VALUE;
-
-	/**
-	 * The operation id for the '<em>Set Value From String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_INSTANCE___SET_VALUE_FROM_STRING__STRING = TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING;
-
-	/**
-	 * The operation id for the '<em>Set Value From Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE = TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Color Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillInstanceImpl <em>Fill Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFillInstance()
-	 * @generated
-	 */
-	int FILL_INSTANCE = 50;
-
-	/**
-	 * The feature id for the '<em><b>Transparency</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_INSTANCE__TRANSPARENCY = TYPE_INSTANCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Fill Color</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_INSTANCE__FILL_COLOR = TYPE_INSTANCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Fill Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Get Cmd Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_INSTANCE___GET_CMD_VALUE = TYPE_INSTANCE___GET_CMD_VALUE;
-
-	/**
-	 * The operation id for the '<em>Set Value From String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_INSTANCE___SET_VALUE_FROM_STRING__STRING = TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING;
-
-	/**
-	 * The operation id for the '<em>Set Value From Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE = TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Fill Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillImpl <em>Fill</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFill()
-	 * @generated
-	 */
-	int FILL = 51;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL__METAMODEL = TYPE__METAMODEL;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL__DESCRIPTION = TYPE__DESCRIPTION;
-
-	/**
-	 * The number of structural features of the '<em>Fill</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Fill</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillPropertySetterImpl <em>Fill Property Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillPropertySetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFillPropertySetter()
-	 * @generated
-	 */
-	int FILL_PROPERTY_SETTER = 52;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_PROPERTY_SETTER__PROPERTY = PROPERTY_SETTER__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Property Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_PROPERTY_SETTER__PROPERTY_NAME = PROPERTY_SETTER__PROPERTY_NAME;
-
-	/**
-	 * The number of structural features of the '<em>Fill Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_PROPERTY_SETTER_FEATURE_COUNT = PROPERTY_SETTER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE = PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Fill Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILL_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsValidPropertySetterImpl <em>Is Valid Property Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsValidPropertySetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIsValidPropertySetter()
-	 * @generated
-	 */
-	int IS_VALID_PROPERTY_SETTER = 53;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VALID_PROPERTY_SETTER__PROPERTY = PROPERTY_SETTER__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Property Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VALID_PROPERTY_SETTER__PROPERTY_NAME = PROPERTY_SETTER__PROPERTY_NAME;
-
-	/**
-	 * The number of structural features of the '<em>Is Valid Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VALID_PROPERTY_SETTER_FEATURE_COUNT = PROPERTY_SETTER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VALID_PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE = PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Is Valid Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VALID_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullPropertySetterImpl <em>Null Property Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullPropertySetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getNullPropertySetter()
-	 * @generated
-	 */
-	int NULL_PROPERTY_SETTER = 54;
-
-	/**
 	 * The feature id for the '<em><b>Property</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5039,473 +3524,6 @@ public interface LayersPackage extends EPackage {
 	 * @ordered
 	 */
 	int NULL_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LineTypeImpl <em>Line Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LineTypeImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLineType()
-	 * @generated
-	 */
-	int LINE_TYPE = 55;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_TYPE__METAMODEL = TYPE__METAMODEL;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_TYPE__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_TYPE__DESCRIPTION = TYPE__DESCRIPTION;
-
-	/**
-	 * The number of structural features of the '<em>Line Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_TYPE___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Line Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LineInstanceImpl <em>Line Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LineInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLineInstance()
-	 * @generated
-	 */
-	int LINE_INSTANCE = 56;
-
-	/**
-	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_INSTANCE__LINE_COLOR = TYPE_INSTANCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Line With</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_INSTANCE__LINE_WITH = TYPE_INSTANCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Line Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Get Cmd Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_INSTANCE___GET_CMD_VALUE = TYPE_INSTANCE___GET_CMD_VALUE;
-
-	/**
-	 * The operation id for the '<em>Set Value From String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_INSTANCE___SET_VALUE_FROM_STRING__STRING = TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING;
-
-	/**
-	 * The operation id for the '<em>Set Value From Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE = TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Line Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LinePropertySetterImpl <em>Line Property Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LinePropertySetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLinePropertySetter()
-	 * @generated
-	 */
-	int LINE_PROPERTY_SETTER = 57;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_PROPERTY_SETTER__PROPERTY = PROPERTY_SETTER__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Property Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_PROPERTY_SETTER__PROPERTY_NAME = PROPERTY_SETTER__PROPERTY_NAME;
-
-	/**
-	 * The number of structural features of the '<em>Line Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_PROPERTY_SETTER_FEATURE_COUNT = PROPERTY_SETTER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE = PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Line Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontPropertySetterImpl <em>Font Property Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontPropertySetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFontPropertySetter()
-	 * @generated
-	 */
-	int FONT_PROPERTY_SETTER = 58;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_PROPERTY_SETTER__PROPERTY = PROPERTY_SETTER__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Property Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_PROPERTY_SETTER__PROPERTY_NAME = PROPERTY_SETTER__PROPERTY_NAME;
-
-	/**
-	 * The number of structural features of the '<em>Font Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_PROPERTY_SETTER_FEATURE_COUNT = PROPERTY_SETTER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE = PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Font Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontInstanceImpl <em>Font Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFontInstance()
-	 * @generated
-	 */
-	int FONT_INSTANCE = 59;
-
-	/**
-	 * The feature id for the '<em><b>Font Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE__FONT_COLOR = TYPE_INSTANCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Font Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE__FONT_NAME = TYPE_INSTANCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Font Heigh</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE__FONT_HEIGH = TYPE_INSTANCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Bold</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE__BOLD = TYPE_INSTANCE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Font Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE_FEATURE_COUNT = TYPE_INSTANCE_FEATURE_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Get Cmd Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE___GET_CMD_VALUE = TYPE_INSTANCE___GET_CMD_VALUE;
-
-	/**
-	 * The operation id for the '<em>Set Value From String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE___SET_VALUE_FROM_STRING__STRING = TYPE_INSTANCE___SET_VALUE_FROM_STRING__STRING;
-
-	/**
-	 * The operation id for the '<em>Set Value From Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE = TYPE_INSTANCE___SET_VALUE_FROM_INSTANCE__TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Font Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontTypeImpl <em>Font Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontTypeImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFontType()
-	 * @generated
-	 */
-	int FONT_TYPE = 60;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_TYPE__METAMODEL = TYPE__METAMODEL;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_TYPE__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_TYPE__DESCRIPTION = TYPE__DESCRIPTION;
-
-	/**
-	 * The number of structural features of the '<em>Font Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_TYPE___CREATE_INSTANCE = TYPE___CREATE_INSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Font Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FONT_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsVisiblePropertySetterImpl <em>Is Visible Property Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsVisiblePropertySetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIsVisiblePropertySetter()
-	 * @generated
-	 */
-	int IS_VISIBLE_PROPERTY_SETTER = 61;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VISIBLE_PROPERTY_SETTER__PROPERTY = PROPERTY_SETTER__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Property Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VISIBLE_PROPERTY_SETTER__PROPERTY_NAME = PROPERTY_SETTER__PROPERTY_NAME;
-
-	/**
-	 * The number of structural features of the '<em>Is Visible Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VISIBLE_PROPERTY_SETTER_FEATURE_COUNT = PROPERTY_SETTER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VISIBLE_PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE = PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Is Visible Property Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_VISIBLE_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorDescriptorImpl <em>Top Layer Operator Descriptor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorDescriptorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getTopLayerOperatorDescriptor()
-	 * @generated
-	 */
-	int TOP_LAYER_OPERATOR_DESCRIPTOR = 62;
 
 	/**
 	 * The feature id for the '<em><b>Property Operators</b></em>' reference list.
@@ -5568,7 +3586,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR = LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR;
+	int TOP_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_PROPERTYOPERATOR = LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_PROPERTYOPERATOR;
 
 	/**
 	 * The number of operations of the '<em>Top Layer Operator Descriptor</em>' class.
@@ -5578,16 +3596,6 @@ public interface LayersPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOP_LAYER_OPERATOR_DESCRIPTOR_OPERATION_COUNT = LAYER_OPERATOR_DESCRIPTOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StackedLayerOperatorDescriptorImpl <em>Stacked Layer Operator Descriptor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StackedLayerOperatorDescriptorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStackedLayerOperatorDescriptor()
-	 * @generated
-	 */
-	int STACKED_LAYER_OPERATOR_DESCRIPTOR = 63;
 
 	/**
 	 * The feature id for the '<em><b>Property Operators</b></em>' reference list.
@@ -5650,7 +3658,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR = LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR;
+	int STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_PROPERTYOPERATOR = LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_PROPERTYOPERATOR;
 
 	/**
 	 * The number of operations of the '<em>Stacked Layer Operator Descriptor</em>' class.
@@ -5660,317 +3668,6 @@ public interface LayersPackage extends EPackage {
 	 * @ordered
 	 */
 	int STACKED_LAYER_OPERATOR_DESCRIPTOR_OPERATION_COUNT = LAYER_OPERATOR_DESCRIPTOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomPropertyOperatorImpl <em>Custom Property Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomPropertyOperatorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomPropertyOperator()
-	 * @generated
-	 */
-	int CUSTOM_PROPERTY_OPERATOR = 64;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_PROPERTY_OPERATOR__NAME = PROPERTY_OPERATOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Classname</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_PROPERTY_OPERATOR__CLASSNAME = PROPERTY_OPERATOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Operator Instance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_PROPERTY_OPERATOR__OPERATOR_INSTANCE = PROPERTY_OPERATOR_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Class Bundle ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_PROPERTY_OPERATOR__CLASS_BUNDLE_ID = PROPERTY_OPERATOR_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Custom Property Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_PROPERTY_OPERATOR_FEATURE_COUNT = PROPERTY_OPERATOR_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get Compute Property Value Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST = PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST;
-
-	/**
-	 * The operation id for the '<em>Reset Operator Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_PROPERTY_OPERATOR___RESET_OPERATOR_INSTANCE = PROPERTY_OPERATOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Custom Property Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_PROPERTY_OPERATOR_OPERATION_COUNT = PROPERTY_OPERATOR_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AndStackedLayerOperatorDescriptorImpl <em>And Stacked Layer Operator Descriptor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AndStackedLayerOperatorDescriptorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getAndStackedLayerOperatorDescriptor()
-	 * @generated
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR = 65;
-
-	/**
-	 * The feature id for the '<em><b>Property Operators</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR__PROPERTY_OPERATORS = STACKED_LAYER_OPERATOR_DESCRIPTOR__PROPERTY_OPERATORS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR__NAME = STACKED_LAYER_OPERATOR_DESCRIPTOR__NAME;
-
-	/**
-	 * The number of structural features of the '<em>And Stacked Layer Operator Descriptor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR_FEATURE_COUNT = STACKED_LAYER_OPERATOR_DESCRIPTOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Property Operator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR___GET_PROPERTY_OPERATOR__PROPERTY = STACKED_LAYER_OPERATOR_DESCRIPTOR___GET_PROPERTY_OPERATOR__PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Set Property Operator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_OPERATOR__PROPERTY_PROPERTYOPERATOR = STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_OPERATOR__PROPERTY_PROPERTYOPERATOR;
-
-	/**
-	 * The operation id for the '<em>Create Layer Operator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR___CREATE_LAYER_OPERATOR = STACKED_LAYER_OPERATOR_DESCRIPTOR___CREATE_LAYER_OPERATOR;
-
-	/**
-	 * The operation id for the '<em>Set Property Collection Size</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR = STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR;
-
-	/**
-	 * The number of operations of the '<em>And Stacked Layer Operator Descriptor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AND_STACKED_LAYER_OPERATOR_DESCRIPTOR_OPERATION_COUNT = STACKED_LAYER_OPERATOR_DESCRIPTOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.OrStackedLayerOperatorDescriptorImpl <em>Or Stacked Layer Operator Descriptor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.OrStackedLayerOperatorDescriptorImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getOrStackedLayerOperatorDescriptor()
-	 * @generated
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR = 66;
-
-	/**
-	 * The feature id for the '<em><b>Property Operators</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR__PROPERTY_OPERATORS = STACKED_LAYER_OPERATOR_DESCRIPTOR__PROPERTY_OPERATORS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR__NAME = STACKED_LAYER_OPERATOR_DESCRIPTOR__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Or Stacked Layer Operator Descriptor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR_FEATURE_COUNT = STACKED_LAYER_OPERATOR_DESCRIPTOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Property Operator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR___GET_PROPERTY_OPERATOR__PROPERTY = STACKED_LAYER_OPERATOR_DESCRIPTOR___GET_PROPERTY_OPERATOR__PROPERTY;
-
-	/**
-	 * The operation id for the '<em>Set Property Operator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_OPERATOR__PROPERTY_PROPERTYOPERATOR = STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_OPERATOR__PROPERTY_PROPERTYOPERATOR;
-
-	/**
-	 * The operation id for the '<em>Create Layer Operator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR___CREATE_LAYER_OPERATOR = STACKED_LAYER_OPERATOR_DESCRIPTOR___CREATE_LAYER_OPERATOR;
-
-	/**
-	 * The operation id for the '<em>Set Property Collection Size</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR = STACKED_LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR;
-
-	/**
-	 * The number of operations of the '<em>Or Stacked Layer Operator Descriptor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OR_STACKED_LAYER_OPERATOR_DESCRIPTOR_OPERATION_COUNT = STACKED_LAYER_OPERATOR_DESCRIPTOR_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsAbstractUmlSetterImpl <em>Is Abstract Uml Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsAbstractUmlSetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIsAbstractUmlSetter()
-	 * @generated
-	 */
-	int IS_ABSTRACT_UML_SETTER = 67;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_ABSTRACT_UML_SETTER__PROPERTY = PROPERTY_SETTER__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Property Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_ABSTRACT_UML_SETTER__PROPERTY_NAME = PROPERTY_SETTER__PROPERTY_NAME;
-
-	/**
-	 * The number of structural features of the '<em>Is Abstract Uml Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_ABSTRACT_UML_SETTER_FEATURE_COUNT = PROPERTY_SETTER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_ABSTRACT_UML_SETTER___SET_VALUE__VIEW_TYPEINSTANCE = PROPERTY_SETTER___SET_VALUE__VIEW_TYPEINSTANCE;
-
-	/**
-	 * The number of operations of the '<em>Is Abstract Uml Setter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_ABSTRACT_UML_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AllViewsDerivedLayerImpl <em>All Views Derived Layer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AllViewsDerivedLayerImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getAllViewsDerivedLayer()
-	 * @generated
-	 */
-	int ALL_VIEWS_DERIVED_LAYER = 68;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' reference.
@@ -6114,7 +3811,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALL_VIEWS_DERIVED_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = ABSTRACT_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY;
+	int ALL_VIEWS_DERIVED_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = ABSTRACT_LAYER___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY;
 
 	/**
 	 * The operation id for the '<em>Get Properties Compute Property Value Command</em>' operation.
@@ -6123,7 +3820,7 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALL_VIEWS_DERIVED_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = ABSTRACT_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST;
+	int ALL_VIEWS_DERIVED_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = ABSTRACT_LAYER___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST;
 
 	/**
 	 * The operation id for the '<em>Attach To Layers Stack</em>' operation.
@@ -6225,16 +3922,6 @@ public interface LayersPackage extends EPackage {
 	int ALL_VIEWS_DERIVED_LAYER_OPERATION_COUNT = ABSTRACT_LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSPropertySetterImpl <em>CSS Property Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSPropertySetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSPropertySetter()
-	 * @generated
-	 */
-	int CSS_PROPERTY_SETTER = 69;
-
-	/**
 	 * The feature id for the '<em><b>Property</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6280,25 +3967,6 @@ public interface LayersPackage extends EPackage {
 	int CSS_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSTypeImpl <em>CSS Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSTypeImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSType()
-	 * @generated
-	 */
-	int CSS_TYPE = 70;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CSS_TYPE__METAMODEL = TYPE__METAMODEL;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6342,16 +4010,6 @@ public interface LayersPackage extends EPackage {
 	 * @ordered
 	 */
 	int CSS_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSInstanceImpl <em>CSS Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSInstance()
-	 * @generated
-	 */
-	int CSS_INSTANCE = 71;
 
 	/**
 	 * The feature id for the '<em><b>Stylesheet</b></em>' containment reference.
@@ -6417,16 +4075,6 @@ public interface LayersPackage extends EPackage {
 	int CSS_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHidePropertySetterImpl <em>CSS Hide Property Setter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHidePropertySetterImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHidePropertySetter()
-	 * @generated
-	 */
-	int CSS_HIDE_PROPERTY_SETTER = 72;
-
-	/**
 	 * The feature id for the '<em><b>Property</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6472,25 +4120,6 @@ public interface LayersPackage extends EPackage {
 	int CSS_HIDE_PROPERTY_SETTER_OPERATION_COUNT = PROPERTY_SETTER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideTypeImpl <em>CSS Hide Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideTypeImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHideType()
-	 * @generated
-	 */
-	int CSS_HIDE_TYPE = 73;
-
-	/**
-	 * The feature id for the '<em><b>Metamodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CSS_HIDE_TYPE__METAMODEL = TYPE__METAMODEL;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6534,16 +4163,6 @@ public interface LayersPackage extends EPackage {
 	 * @ordered
 	 */
 	int CSS_HIDE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideInstanceImpl <em>CSS Hide Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CSSHideInstanceImpl
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCSSHideInstance()
-	 * @generated
-	 */
-	int CSS_HIDE_INSTANCE = 74;
 
 	/**
 	 * The feature id for the '<em><b>Stylesheet</b></em>' containment reference.
@@ -6609,34 +4228,14 @@ public interface LayersPackage extends EPackage {
 	int CSS_HIDE_INSTANCE_OPERATION_COUNT = TYPE_INSTANCE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState <em>Layer State</em>}' enum.
+	 * The meta object id for the '<em>Compute Property Value Command</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerState
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayerState()
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getComputePropertyValueCommand()
 	 * @generated
 	 */
-	int LAYER_STATE = 75;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.EventLevel <em>Event Level</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.EventLevel
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getEventLevel()
-	 * @generated
-	 */
-	int EVENT_LEVEL = 76;
-
-	/**
-	 * The meta object id for the '<em>String</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.lang.String
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getString()
-	 * @generated
-	 */
-	int STRING = 77;
+	int COMPUTE_PROPERTY_VALUE_COMMAND = 53;
 
 	/**
 	 * The meta object id for the '<em>boolean</em>' data type.
@@ -6645,7 +4244,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getboolean()
 	 * @generated
 	 */
-	int BOOLEAN = 78;
+	int BOOLEAN = 54;
 
 	/**
 	 * The meta object id for the '<em>EPackage</em>' data type.
@@ -6655,56 +4254,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getEPackage()
 	 * @generated
 	 */
-	int EPACKAGE = 79;
-
-	/**
-	 * The meta object id for the '<em>Exception</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLayersException()
-	 * @generated
-	 */
-	int LAYERS_EXCEPTION = 80;
-
-	/**
-	 * The meta object id for the '<em>int</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getint()
-	 * @generated
-	 */
-	int INT = 81;
-
-	/**
-	 * The meta object id for the '<em>Bad State Exception</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.BadStateException
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getBadStateException()
-	 * @generated
-	 */
-	int BAD_STATE_EXCEPTION = 82;
-
-	/**
-	 * The meta object id for the '<em>Not Found Exception</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getNotFoundException()
-	 * @generated
-	 */
-	int NOT_FOUND_EXCEPTION = 83;
-
-	/**
-	 * The meta object id for the '<em>Compute Property Value Command</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getComputePropertyValueCommand()
-	 * @generated
-	 */
-	int COMPUTE_PROPERTY_VALUE_COMMAND = 84;
+	int EPACKAGE = 55;
 
 	/**
 	 * The meta object id for the '<em>Object</em>' data type.
@@ -6714,17 +4264,7 @@ public interface LayersPackage extends EPackage {
 	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getObject()
 	 * @generated
 	 */
-	int OBJECT = 85;
-
-	/**
-	 * The meta object id for the '<em>Custom Property Opertor Instance</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.CustomPropertyOperatorsInstance
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomPropertyOpertorInstance()
-	 * @generated
-	 */
-	int CUSTOM_PROPERTY_OPERTOR_INSTANCE = 86;
+	int OBJECT = 56;
 
 
 	/**
@@ -6824,24 +4364,24 @@ public interface LayersPackage extends EPackage {
 	EOperation getLayersStack__GetComputePropertyValueCommand__View_Property();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList) <em>Get Properties Compute Property Value Command</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, java.util.List) <em>Get Properties Compute Property Value Command</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Properties Compute Property Value Command</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, java.util.List)
 	 * @generated
 	 */
-	EOperation getLayersStack__GetPropertiesComputePropertyValueCommand__View_EList();
+	EOperation getLayersStack__GetPropertiesComputePropertyValueCommand__View_List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Views Compute Property Value Command</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#getViewsComputePropertyValueCommand(java.util.List, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Views Compute Property Value Command</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Views Compute Property Value Command</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#getViewsComputePropertyValueCommand(java.util.List, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
 	 * @generated
 	 */
-	EOperation getLayersStack__GetViewsComputePropertyValueCommand__EList_Property();
+	EOperation getLayersStack__GetViewsComputePropertyValueCommand__List_Property();
 
 	/**
 	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack#startAfterCreation() <em>Start After Creation</em>}' operation.
@@ -7001,24 +4541,24 @@ public interface LayersPackage extends EPackage {
 	EOperation getLayerExpression__GetComputePropertyValueCommand__View_Property();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Views Compute Property Value Command</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getViewsComputePropertyValueCommand(java.util.List, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property) <em>Get Views Compute Property Value Command</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Views Compute Property Value Command</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getViewsComputePropertyValueCommand(org.eclipse.emf.common.util.EList, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getViewsComputePropertyValueCommand(java.util.List, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property)
 	 * @generated
 	 */
-	EOperation getLayerExpression__GetViewsComputePropertyValueCommand__EList_Property();
+	EOperation getLayerExpression__GetViewsComputePropertyValueCommand__List_Property();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList) <em>Get Properties Compute Property Value Command</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, java.util.List) <em>Get Properties Compute Property Value Command</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Properties Compute Property Value Command</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, org.eclipse.emf.common.util.EList)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#getPropertiesComputePropertyValueCommand(org.eclipse.gmf.runtime.notation.View, java.util.List)
 	 * @generated
 	 */
-	EOperation getLayerExpression__GetPropertiesComputePropertyValueCommand__View_EList();
+	EOperation getLayerExpression__GetPropertiesComputePropertyValueCommand__View_List();
 
 	/**
 	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression#attachToLayersStack(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack) <em>Attach To Layers Stack</em>}' operation.
@@ -7417,17 +4957,6 @@ public interface LayersPackage extends EPackage {
 	EClass getType();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type#getMetamodel <em>Metamodel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Metamodel</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type#getMetamodel()
-	 * @see #getType()
-	 * @generated
-	 */
-	EReference getType_Metamodel();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Type#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7458,92 +4987,6 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getType__CreateInstance();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel <em>Metamodel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Metamodel</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel
-	 * @generated
-	 */
-	EClass getMetamodel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getName()
-	 * @see #getMetamodel()
-	 * @generated
-	 */
-	EAttribute getMetamodel_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getDescription()
-	 * @see #getMetamodel()
-	 * @generated
-	 */
-	EAttribute getMetamodel_Description();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getNsuri <em>Nsuri</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nsuri</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getNsuri()
-	 * @see #getMetamodel()
-	 * @generated
-	 */
-	EAttribute getMetamodel_Nsuri();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getPluginID <em>Plugin ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Plugin ID</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getPluginID()
-	 * @see #getMetamodel()
-	 * @generated
-	 */
-	EAttribute getMetamodel_PluginID();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getEPackageInstanceName <em>EPackage Instance Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>EPackage Instance Name</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getEPackageInstanceName()
-	 * @see #getMetamodel()
-	 * @generated
-	 */
-	EAttribute getMetamodel_EPackageInstanceName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#isTypeValid <em>Is Type Valid</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Type Valid</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#isTypeValid()
-	 * @see #getMetamodel()
-	 * @generated
-	 */
-	EAttribute getMetamodel_IsTypeValid();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getEPackage() <em>Get EPackage</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get EPackage</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getEPackage()
-	 * @generated
-	 */
-	EOperation getMetamodel__GetEPackage();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TypeInstance <em>Type Instance</em>}'.
@@ -8041,14 +5484,14 @@ public interface LayersPackage extends EPackage {
 	EOperation getLayerOperatorDescriptor__CreateLayerOperator();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator) <em>Set Property Collection Size</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator) <em>Set Property Collection Size</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Property Collection Size</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor#setPropertyCollectionSize(int, org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator)
 	 * @generated
 	 */
-	EOperation getLayerOperatorDescriptor__SetPropertyCollectionSize__int_DefaultPropertyOperator();
+	EOperation getLayerOperatorDescriptor__SetPropertyCollectionSize__int_PropertyOperator();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator <em>Property Operator</em>}'.
@@ -8072,66 +5515,57 @@ public interface LayersPackage extends EPackage {
 	EAttribute getPropertyOperator_Name();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getComputePropertyValueCommand(org.eclipse.emf.common.util.EList) <em>Get Compute Property Value Command</em>}' operation.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getClassname <em>Classname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Classname</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getClassname()
+	 * @see #getPropertyOperator()
+	 * @generated
+	 */
+	EAttribute getPropertyOperator_Classname();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getOperatorInstance <em>Operator Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Operator Instance</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getOperatorInstance()
+	 * @see #getPropertyOperator()
+	 * @generated
+	 */
+	EReference getPropertyOperator_OperatorInstance();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getClassBundleID <em>Class Bundle ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Bundle ID</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getClassBundleID()
+	 * @see #getPropertyOperator()
+	 * @generated
+	 */
+	EAttribute getPropertyOperator_ClassBundleID();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getComputePropertyValueCommand(java.util.List) <em>Get Compute Property Value Command</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Compute Property Value Command</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getComputePropertyValueCommand(org.eclipse.emf.common.util.EList)
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#getComputePropertyValueCommand(java.util.List)
 	 * @generated
 	 */
-	EOperation getPropertyOperator__GetComputePropertyValueCommand__EList();
+	EOperation getPropertyOperator__GetComputePropertyValueCommand__List();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator <em>Abstract Layer Operator</em>}'.
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#resetOperatorInstance() <em>Reset Operator Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Abstract Layer Operator</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator
+	 * @return the meta object for the '<em>Reset Operator Instance</em>' operation.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyOperator#resetOperatorInstance()
 	 * @generated
 	 */
-	EClass getAbstractLayerOperator();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#getLayerOperatorDescriptor <em>Layer Operator Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Layer Operator Descriptor</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#getLayerOperatorDescriptor()
-	 * @see #getAbstractLayerOperator()
-	 * @generated
-	 */
-	EReference getAbstractLayerOperator_LayerOperatorDescriptor();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#getLayerOperatorDescriptorName <em>Layer Operator Descriptor Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Layer Operator Descriptor Name</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#getLayerOperatorDescriptorName()
-	 * @see #getAbstractLayerOperator()
-	 * @generated
-	 */
-	EAttribute getAbstractLayerOperator_LayerOperatorDescriptorName();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#isDescriptorSet() <em>Is Descriptor Set</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Descriptor Set</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#isDescriptorSet()
-	 * @generated
-	 */
-	EOperation getAbstractLayerOperator__IsDescriptorSet();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#resetDescriptor() <em>Reset Descriptor</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Reset Descriptor</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator#resetDescriptor()
-	 * @generated
-	 */
-	EOperation getAbstractLayerOperator__ResetDescriptor();
+	EOperation getPropertyOperator__ResetOperatorInstance();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator <em>Layer Operator</em>}'.
@@ -8155,6 +5589,48 @@ public interface LayersPackage extends EPackage {
 	EReference getLayerOperator_Layers();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator#getLayerOperatorDescriptorName <em>Layer Operator Descriptor Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Layer Operator Descriptor Name</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator#getLayerOperatorDescriptorName()
+	 * @see #getLayerOperator()
+	 * @generated
+	 */
+	EAttribute getLayerOperator_LayerOperatorDescriptorName();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator#getLayerOperatorDescriptor <em>Layer Operator Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Layer Operator Descriptor</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator#getLayerOperatorDescriptor()
+	 * @see #getLayerOperator()
+	 * @generated
+	 */
+	EReference getLayerOperator_LayerOperatorDescriptor();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator#isDescriptorSet() <em>Is Descriptor Set</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Descriptor Set</em>' operation.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator#isDescriptorSet()
+	 * @generated
+	 */
+	EOperation getLayerOperator__IsDescriptorSet();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator#resetDescriptor() <em>Reset Descriptor</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Reset Descriptor</em>' operation.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperator#resetDescriptor()
+	 * @generated
+	 */
+	EOperation getLayerOperator__ResetDescriptor();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer <em>Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8173,16 +5649,6 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getLayersContainer__AddLayer__LayerExpression();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator <em>Default Property Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Default Property Operator</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.DefaultPropertyOperator
-	 * @generated
-	 */
-	EClass getDefaultPropertyOperator();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayer <em>Abstract Layer</em>}'.
@@ -8356,118 +5822,90 @@ public interface LayersPackage extends EPackage {
 	EAttribute getFolder_Name();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntInstance <em>Int Instance</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel <em>Metamodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Int Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntInstance
+	 * @return the meta object for class '<em>Metamodel</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel
 	 * @generated
 	 */
-	EClass getIntInstance();
+	EClass getMetamodel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntInstance#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntInstance#getValue()
-	 * @see #getIntInstance()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getName()
+	 * @see #getMetamodel()
 	 * @generated
 	 */
-	EAttribute getIntInstance_Value();
+	EAttribute getMetamodel_Name();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance <em>Boolean Instance</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Boolean Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getDescription()
+	 * @see #getMetamodel()
 	 * @generated
 	 */
-	EClass getBooleanInstance();
+	EAttribute getMetamodel_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getNsuri <em>Nsuri</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanInstance#isValue()
-	 * @see #getBooleanInstance()
+	 * @return the meta object for the attribute '<em>Nsuri</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getNsuri()
+	 * @see #getMetamodel()
 	 * @generated
 	 */
-	EAttribute getBooleanInstance_Value();
+	EAttribute getMetamodel_Nsuri();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance <em>String Instance</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getPluginID <em>Plugin ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>String Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance
+	 * @return the meta object for the attribute '<em>Plugin ID</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getPluginID()
+	 * @see #getMetamodel()
 	 * @generated
 	 */
-	EClass getStringInstance();
+	EAttribute getMetamodel_PluginID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getEPackageInstanceName <em>EPackage Instance Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringInstance#getValue()
-	 * @see #getStringInstance()
+	 * @return the meta object for the attribute '<em>EPackage Instance Name</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getEPackageInstanceName()
+	 * @see #getMetamodel()
 	 * @generated
 	 */
-	EAttribute getStringInstance_Value();
+	EAttribute getMetamodel_EPackageInstanceName();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntType <em>Int Type</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#isTypeValid <em>Is Type Valid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Int Type</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IntType
+	 * @return the meta object for the attribute '<em>Is Type Valid</em>'.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#isTypeValid()
+	 * @see #getMetamodel()
 	 * @generated
 	 */
-	EClass getIntType();
+	EAttribute getMetamodel_IsTypeValid();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanType <em>Boolean Type</em>}'.
+	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getEPackage() <em>Get EPackage</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Boolean Type</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.BooleanType
+	 * @return the meta object for the '<em>Get EPackage</em>' operation.
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Metamodel#getEPackage()
 	 * @generated
 	 */
-	EClass getBooleanType();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringType <em>String Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>String Type</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.StringType
-	 * @generated
-	 */
-	EClass getStringType();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomType <em>Custom Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Custom Type</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomType
-	 * @generated
-	 */
-	EClass getCustomType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomType#getClassifier <em>Classifier</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Classifier</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomType#getClassifier()
-	 * @see #getCustomType()
-	 * @generated
-	 */
-	EAttribute getCustomType_Classifier();
+	EOperation getMetamodel__GetEPackage();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperator <em>Top Layer Operator</em>}'.
@@ -8488,16 +5926,6 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getStackedLayerOperator();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomLayerOperator <em>Custom Layer Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Custom Layer Operator</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomLayerOperator
-	 * @generated
-	 */
-	EClass getCustomLayerOperator();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.PropertyIndex <em>Property Index</em>}'.
@@ -8577,16 +6005,6 @@ public interface LayersPackage extends EPackage {
 	EClass getSimpleLayerDescriptor();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayerDescriptor <em>Reg Exp Layer Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reg Exp Layer Descriptor</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayerDescriptor
-	 * @generated
-	 */
-	EClass getRegExpLayerDescriptor();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullInstance <em>Null Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8607,163 +6025,6 @@ public interface LayersPackage extends EPackage {
 	EOperation getNullInstance__GetInstance();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer <em>Reg Exp Layer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reg Exp Layer</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer
-	 * @generated
-	 */
-	EClass getRegExpLayer();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getExpr <em>Expr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Expr</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getExpr()
-	 * @see #getRegExpLayer()
-	 * @generated
-	 */
-	EAttribute getRegExpLayer_Expr();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getLanguage <em>Language</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Language</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getLanguage()
-	 * @see #getRegExpLayer()
-	 * @generated
-	 */
-	EAttribute getRegExpLayer_Language();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#isDomainChangedEventDependant <em>Is Domain Changed Event Dependant</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Domain Changed Event Dependant</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#isDomainChangedEventDependant()
-	 * @see #getRegExpLayer()
-	 * @generated
-	 */
-	EAttribute getRegExpLayer_IsDomainChangedEventDependant();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getDomainChangedEventLevel <em>Domain Changed Event Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Domain Changed Event Level</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getDomainChangedEventLevel()
-	 * @see #getRegExpLayer()
-	 * @generated
-	 */
-	EAttribute getRegExpLayer_DomainChangedEventLevel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#isDiagramChangedEventDependant <em>Is Diagram Changed Event Dependant</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Diagram Changed Event Dependant</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#isDiagramChangedEventDependant()
-	 * @see #getRegExpLayer()
-	 * @generated
-	 */
-	EAttribute getRegExpLayer_IsDiagramChangedEventDependant();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getDiagramChangedEventLevel <em>Diagram Changed Event Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Diagram Changed Event Level</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getDiagramChangedEventLevel()
-	 * @see #getRegExpLayer()
-	 * @generated
-	 */
-	EAttribute getRegExpLayer_DiagramChangedEventLevel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getExpressionContextObjectType <em>Expression Context Object Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Expression Context Object Type</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#getExpressionContextObjectType()
-	 * @see #getRegExpLayer()
-	 * @generated
-	 */
-	EAttribute getRegExpLayer_ExpressionContextObjectType();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#activate(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator) <em>Activate</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Activate</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#activate(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator)
-	 * @generated
-	 */
-	EOperation getRegExpLayer__Activate__AbstractLayerOperator();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#deactivate(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator) <em>Deactivate</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Deactivate</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#deactivate(org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AbstractLayerOperator)
-	 * @generated
-	 */
-	EOperation getRegExpLayer__Deactivate__AbstractLayerOperator();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#isDerivedView(org.eclipse.gmf.runtime.notation.View) <em>Is Derived View</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Derived View</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#isDerivedView(org.eclipse.gmf.runtime.notation.View)
-	 * @generated
-	 */
-	EOperation getRegExpLayer__IsDerivedView__View();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#attachDerivedView(org.eclipse.gmf.runtime.notation.View) <em>Attach Derived View</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attach Derived View</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#attachDerivedView(org.eclipse.gmf.runtime.notation.View)
-	 * @generated
-	 */
-	EOperation getRegExpLayer__AttachDerivedView__View();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#attachDerivedViews(org.eclipse.emf.common.util.EList) <em>Attach Derived Views</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attach Derived Views</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#attachDerivedViews(org.eclipse.emf.common.util.EList)
-	 * @generated
-	 */
-	EOperation getRegExpLayer__AttachDerivedViews__EList();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#attachDerivedViews() <em>Attach Derived Views</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attach Derived Views</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#attachDerivedViews()
-	 * @generated
-	 */
-	EOperation getRegExpLayer__AttachDerivedViews();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#lookupDerivedViews(org.eclipse.emf.common.util.EList) <em>Lookup Derived Views</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Lookup Derived Views</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.RegExpLayer#lookupDerivedViews(org.eclipse.emf.common.util.EList)
-	 * @generated
-	 */
-	EOperation getRegExpLayer__LookupDerivedViews__EList();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Layer <em>Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8774,99 +6035,6 @@ public interface LayersPackage extends EPackage {
 	EClass getLayer();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Color <em>Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Color</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Color
-	 * @generated
-	 */
-	EClass getColor();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ColorInstance <em>Color Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Color Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ColorInstance
-	 * @generated
-	 */
-	EClass getColorInstance();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ColorInstance#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.ColorInstance#getValue()
-	 * @see #getColorInstance()
-	 * @generated
-	 */
-	EAttribute getColorInstance_Value();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance <em>Fill Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fill Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance
-	 * @generated
-	 */
-	EClass getFillInstance();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance#getTransparency <em>Transparency</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Transparency</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance#getTransparency()
-	 * @see #getFillInstance()
-	 * @generated
-	 */
-	EAttribute getFillInstance_Transparency();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance#getFillColor <em>Fill Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Fill Color</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillInstance#getFillColor()
-	 * @see #getFillInstance()
-	 * @generated
-	 */
-	EReference getFillInstance_FillColor();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Fill <em>Fill</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fill</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Fill
-	 * @generated
-	 */
-	EClass getFill();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillPropertySetter <em>Fill Property Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fill Property Setter</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FillPropertySetter
-	 * @generated
-	 */
-	EClass getFillPropertySetter();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsValidPropertySetter <em>Is Valid Property Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Is Valid Property Setter</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsValidPropertySetter
-	 * @generated
-	 */
-	EClass getIsValidPropertySetter();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.NullPropertySetter <em>Null Property Setter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8875,142 +6043,6 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getNullPropertySetter();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineType <em>Line Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Line Type</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineType
-	 * @generated
-	 */
-	EClass getLineType();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance <em>Line Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Line Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance
-	 * @generated
-	 */
-	EClass getLineInstance();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance#getLineColor <em>Line Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Line Color</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance#getLineColor()
-	 * @see #getLineInstance()
-	 * @generated
-	 */
-	EAttribute getLineInstance_LineColor();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance#getLineWith <em>Line With</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Line With</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LineInstance#getLineWith()
-	 * @see #getLineInstance()
-	 * @generated
-	 */
-	EAttribute getLineInstance_LineWith();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LinePropertySetter <em>Line Property Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Line Property Setter</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LinePropertySetter
-	 * @generated
-	 */
-	EClass getLinePropertySetter();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontPropertySetter <em>Font Property Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Font Property Setter</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontPropertySetter
-	 * @generated
-	 */
-	EClass getFontPropertySetter();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance <em>Font Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Font Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance
-	 * @generated
-	 */
-	EClass getFontInstance();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance#getFontColor <em>Font Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Font Color</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance#getFontColor()
-	 * @see #getFontInstance()
-	 * @generated
-	 */
-	EAttribute getFontInstance_FontColor();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance#getFontName <em>Font Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Font Name</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance#getFontName()
-	 * @see #getFontInstance()
-	 * @generated
-	 */
-	EAttribute getFontInstance_FontName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance#getFontHeigh <em>Font Heigh</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Font Heigh</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance#getFontHeigh()
-	 * @see #getFontInstance()
-	 * @generated
-	 */
-	EAttribute getFontInstance_FontHeigh();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance#isBold <em>Bold</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bold</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontInstance#isBold()
-	 * @see #getFontInstance()
-	 * @generated
-	 */
-	EAttribute getFontInstance_Bold();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontType <em>Font Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Font Type</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.FontType
-	 * @generated
-	 */
-	EClass getFontType();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsVisiblePropertySetter <em>Is Visible Property Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Is Visible Property Setter</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsVisiblePropertySetter
-	 * @generated
-	 */
-	EClass getIsVisiblePropertySetter();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.TopLayerOperatorDescriptor <em>Top Layer Operator Descriptor</em>}'.
@@ -9031,89 +6063,6 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getStackedLayerOperatorDescriptor();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator <em>Custom Property Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Custom Property Operator</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator
-	 * @generated
-	 */
-	EClass getCustomPropertyOperator();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#getClassname <em>Classname</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Classname</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#getClassname()
-	 * @see #getCustomPropertyOperator()
-	 * @generated
-	 */
-	EAttribute getCustomPropertyOperator_Classname();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#getOperatorInstance <em>Operator Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Operator Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#getOperatorInstance()
-	 * @see #getCustomPropertyOperator()
-	 * @generated
-	 */
-	EAttribute getCustomPropertyOperator_OperatorInstance();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#getClassBundleID <em>Class Bundle ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Class Bundle ID</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#getClassBundleID()
-	 * @see #getCustomPropertyOperator()
-	 * @generated
-	 */
-	EAttribute getCustomPropertyOperator_ClassBundleID();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#resetOperatorInstance() <em>Reset Operator Instance</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Reset Operator Instance</em>' operation.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.CustomPropertyOperator#resetOperatorInstance()
-	 * @generated
-	 */
-	EOperation getCustomPropertyOperator__ResetOperatorInstance();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AndStackedLayerOperatorDescriptor <em>And Stacked Layer Operator Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>And Stacked Layer Operator Descriptor</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AndStackedLayerOperatorDescriptor
-	 * @generated
-	 */
-	EClass getAndStackedLayerOperatorDescriptor();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.OrStackedLayerOperatorDescriptor <em>Or Stacked Layer Operator Descriptor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Or Stacked Layer Operator Descriptor</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.OrStackedLayerOperatorDescriptor
-	 * @generated
-	 */
-	EClass getOrStackedLayerOperatorDescriptor();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsAbstractUmlSetter <em>Is Abstract Uml Setter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Is Abstract Uml Setter</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.IsAbstractUmlSetter
-	 * @generated
-	 */
-	EClass getIsAbstractUmlSetter();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.AllViewsDerivedLayer <em>All Views Derived Layer</em>}'.
@@ -9261,27 +6210,6 @@ public interface LayersPackage extends EPackage {
 	EDataType getString();
 
 	/**
-	 * Returns the meta object for data type '<em>boolean</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>boolean</em>'.
-	 * @model instanceClass="boolean"
-	 * @generated
-	 */
-	EDataType getboolean();
-
-	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.ecore.EPackage <em>EPackage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>EPackage</em>'.
-	 * @see org.eclipse.emf.ecore.EPackage
-	 * @model instanceClass="org.eclipse.emf.ecore.EPackage"
-	 * @generated
-	 */
-	EDataType getEPackage();
-
-	/**
 	 * Returns the meta object for data type '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9338,6 +6266,27 @@ public interface LayersPackage extends EPackage {
 	EDataType getComputePropertyValueCommand();
 
 	/**
+	 * Returns the meta object for data type '<em>boolean</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>boolean</em>'.
+	 * @model instanceClass="boolean"
+	 * @generated
+	 */
+	EDataType getboolean();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.ecore.EPackage <em>EPackage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>EPackage</em>'.
+	 * @see org.eclipse.emf.ecore.EPackage
+	 * @model instanceClass="org.eclipse.emf.ecore.EPackage"
+	 * @generated
+	 */
+	EDataType getEPackage();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.Object <em>Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9347,17 +6296,6 @@ public interface LayersPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getObject();
-
-	/**
-	 * Returns the meta object for data type '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.CustomPropertyOperatorsInstance <em>Custom Property Opertor Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Custom Property Opertor Instance</em>'.
-	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.CustomPropertyOperatorsInstance
-	 * @model instanceClass="org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.CustomPropertyOperatorsInstance"
-	 * @generated
-	 */
-	EDataType getCustomPropertyOpertorInstance();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -9464,7 +6402,7 @@ public interface LayersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LAYERS_STACK___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = eINSTANCE.getLayersStack__GetPropertiesComputePropertyValueCommand__View_EList();
+		EOperation LAYERS_STACK___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = eINSTANCE.getLayersStack__GetPropertiesComputePropertyValueCommand__View_List();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Views Compute Property Value Command</b></em>' operation.
@@ -9472,7 +6410,7 @@ public interface LayersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LAYERS_STACK___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = eINSTANCE.getLayersStack__GetViewsComputePropertyValueCommand__EList_Property();
+		EOperation LAYERS_STACK___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = eINSTANCE.getLayersStack__GetViewsComputePropertyValueCommand__List_Property();
 
 		/**
 		 * The meta object literal for the '<em><b>Start After Creation</b></em>' operation.
@@ -9602,7 +6540,7 @@ public interface LayersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST_PROPERTY = eINSTANCE.getLayerExpression__GetViewsComputePropertyValueCommand__EList_Property();
+		EOperation LAYER_EXPRESSION___GET_VIEWS_COMPUTE_PROPERTY_VALUE_COMMAND__LIST_PROPERTY = eINSTANCE.getLayerExpression__GetViewsComputePropertyValueCommand__List_Property();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Properties Compute Property Value Command</b></em>' operation.
@@ -9610,7 +6548,7 @@ public interface LayersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_ELIST = eINSTANCE.getLayerExpression__GetPropertiesComputePropertyValueCommand__View_EList();
+		EOperation LAYER_EXPRESSION___GET_PROPERTIES_COMPUTE_PROPERTY_VALUE_COMMAND__VIEW_LIST = eINSTANCE.getLayerExpression__GetPropertiesComputePropertyValueCommand__View_List();
 
 		/**
 		 * The meta object literal for the '<em><b>Attach To Layers Stack</b></em>' operation.
@@ -9931,14 +6869,6 @@ public interface LayersPackage extends EPackage {
 		EClass TYPE = eINSTANCE.getType();
 
 		/**
-		 * The meta object literal for the '<em><b>Metamodel</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TYPE__METAMODEL = eINSTANCE.getType_Metamodel();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9961,72 +6891,6 @@ public interface LayersPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation TYPE___CREATE_INSTANCE = eINSTANCE.getType__CreateInstance();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.MetamodelImpl <em>Metamodel</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.MetamodelImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getMetamodel()
-		 * @generated
-		 */
-		EClass METAMODEL = eINSTANCE.getMetamodel();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METAMODEL__NAME = eINSTANCE.getMetamodel_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METAMODEL__DESCRIPTION = eINSTANCE.getMetamodel_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Nsuri</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METAMODEL__NSURI = eINSTANCE.getMetamodel_Nsuri();
-
-		/**
-		 * The meta object literal for the '<em><b>Plugin ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METAMODEL__PLUGIN_ID = eINSTANCE.getMetamodel_PluginID();
-
-		/**
-		 * The meta object literal for the '<em><b>EPackage Instance Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METAMODEL__EPACKAGE_INSTANCE_NAME = eINSTANCE.getMetamodel_EPackageInstanceName();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Type Valid</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METAMODEL__IS_TYPE_VALID = eINSTANCE.getMetamodel_IsTypeValid();
-
-		/**
-		 * The meta object literal for the '<em><b>Get EPackage</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation METAMODEL___GET_EPACKAGE = eINSTANCE.getMetamodel__GetEPackage();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TypeInstanceImpl <em>Type Instance</em>}' class.
@@ -10434,7 +7298,7 @@ public interface LayersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_DEFAULTPROPERTYOPERATOR = eINSTANCE.getLayerOperatorDescriptor__SetPropertyCollectionSize__int_DefaultPropertyOperator();
+		EOperation LAYER_OPERATOR_DESCRIPTOR___SET_PROPERTY_COLLECTION_SIZE__INT_PROPERTYOPERATOR = eINSTANCE.getLayerOperatorDescriptor__SetPropertyCollectionSize__int_PropertyOperator();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyOperatorImpl <em>Property Operator</em>}' class.
@@ -10455,54 +7319,44 @@ public interface LayersPackage extends EPackage {
 		EAttribute PROPERTY_OPERATOR__NAME = eINSTANCE.getPropertyOperator_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Classname</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY_OPERATOR__CLASSNAME = eINSTANCE.getPropertyOperator_Classname();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator Instance</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROPERTY_OPERATOR__OPERATOR_INSTANCE = eINSTANCE.getPropertyOperator_OperatorInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Bundle ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY_OPERATOR__CLASS_BUNDLE_ID = eINSTANCE.getPropertyOperator_ClassBundleID();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Compute Property Value Command</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__ELIST = eINSTANCE.getPropertyOperator__GetComputePropertyValueCommand__EList();
+		EOperation PROPERTY_OPERATOR___GET_COMPUTE_PROPERTY_VALUE_COMMAND__LIST = eINSTANCE.getPropertyOperator__GetComputePropertyValueCommand__List();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerOperatorImpl <em>Abstract Layer Operator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerOperatorImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getAbstractLayerOperator()
-		 * @generated
-		 */
-		EClass ABSTRACT_LAYER_OPERATOR = eINSTANCE.getAbstractLayerOperator();
-
-		/**
-		 * The meta object literal for the '<em><b>Layer Operator Descriptor</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Reset Operator Instance</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR = eINSTANCE.getAbstractLayerOperator_LayerOperatorDescriptor();
-
-		/**
-		 * The meta object literal for the '<em><b>Layer Operator Descriptor Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ABSTRACT_LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME = eINSTANCE.getAbstractLayerOperator_LayerOperatorDescriptorName();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Descriptor Set</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ABSTRACT_LAYER_OPERATOR___IS_DESCRIPTOR_SET = eINSTANCE.getAbstractLayerOperator__IsDescriptorSet();
-
-		/**
-		 * The meta object literal for the '<em><b>Reset Descriptor</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ABSTRACT_LAYER_OPERATOR___RESET_DESCRIPTOR = eINSTANCE.getAbstractLayerOperator__ResetDescriptor();
+		EOperation PROPERTY_OPERATOR___RESET_OPERATOR_INSTANCE = eINSTANCE.getPropertyOperator__ResetOperatorInstance();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerOperatorImpl <em>Layer Operator</em>}' class.
@@ -10523,6 +7377,38 @@ public interface LayersPackage extends EPackage {
 		EReference LAYER_OPERATOR__LAYERS = eINSTANCE.getLayerOperator_Layers();
 
 		/**
+		 * The meta object literal for the '<em><b>Layer Operator Descriptor Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR_NAME = eINSTANCE.getLayerOperator_LayerOperatorDescriptorName();
+
+		/**
+		 * The meta object literal for the '<em><b>Layer Operator Descriptor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LAYER_OPERATOR__LAYER_OPERATOR_DESCRIPTOR = eINSTANCE.getLayerOperator_LayerOperatorDescriptor();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Descriptor Set</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LAYER_OPERATOR___IS_DESCRIPTOR_SET = eINSTANCE.getLayerOperator__IsDescriptorSet();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset Descriptor</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LAYER_OPERATOR___RESET_DESCRIPTOR = eINSTANCE.getLayerOperator__ResetDescriptor();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersContainer <em>Container</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10539,16 +7425,6 @@ public interface LayersPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation LAYERS_CONTAINER___ADD_LAYER__LAYEREXPRESSION = eINSTANCE.getLayersContainer__AddLayer__LayerExpression();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.DefaultPropertyOperatorImpl <em>Default Property Operator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.DefaultPropertyOperatorImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getDefaultPropertyOperator()
-		 * @generated
-		 */
-		EClass DEFAULT_PROPERTY_OPERATOR = eINSTANCE.getDefaultPropertyOperator();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AbstractLayerImpl <em>Abstract Layer</em>}' class.
@@ -10685,106 +7561,70 @@ public interface LayersPackage extends EPackage {
 		EAttribute FOLDER__NAME = eINSTANCE.getFolder_Name();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IntInstanceImpl <em>Int Instance</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.MetamodelImpl <em>Metamodel</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IntInstanceImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIntInstance()
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.MetamodelImpl
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getMetamodel()
 		 * @generated
 		 */
-		EClass INT_INSTANCE = eINSTANCE.getIntInstance();
+		EClass METAMODEL = eINSTANCE.getMetamodel();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INT_INSTANCE__VALUE = eINSTANCE.getIntInstance_Value();
+		EAttribute METAMODEL__NAME = eINSTANCE.getMetamodel_Name();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.BooleanInstanceImpl <em>Boolean Instance</em>}' class.
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.BooleanInstanceImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getBooleanInstance()
 		 * @generated
 		 */
-		EClass BOOLEAN_INSTANCE = eINSTANCE.getBooleanInstance();
+		EAttribute METAMODEL__DESCRIPTION = eINSTANCE.getMetamodel_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Nsuri</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOOLEAN_INSTANCE__VALUE = eINSTANCE.getBooleanInstance_Value();
+		EAttribute METAMODEL__NSURI = eINSTANCE.getMetamodel_Nsuri();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringInstanceImpl <em>String Instance</em>}' class.
+		 * The meta object literal for the '<em><b>Plugin ID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringInstanceImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringInstance()
 		 * @generated
 		 */
-		EClass STRING_INSTANCE = eINSTANCE.getStringInstance();
+		EAttribute METAMODEL__PLUGIN_ID = eINSTANCE.getMetamodel_PluginID();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>EPackage Instance Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STRING_INSTANCE__VALUE = eINSTANCE.getStringInstance_Value();
+		EAttribute METAMODEL__EPACKAGE_INSTANCE_NAME = eINSTANCE.getMetamodel_EPackageInstanceName();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IntTypeImpl <em>Int Type</em>}' class.
+		 * The meta object literal for the '<em><b>Is Type Valid</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IntTypeImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIntType()
 		 * @generated
 		 */
-		EClass INT_TYPE = eINSTANCE.getIntType();
+		EAttribute METAMODEL__IS_TYPE_VALID = eINSTANCE.getMetamodel_IsTypeValid();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.BooleanTypeImpl <em>Boolean Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.BooleanTypeImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getBooleanType()
-		 * @generated
-		 */
-		EClass BOOLEAN_TYPE = eINSTANCE.getBooleanType();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringTypeImpl <em>String Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.StringTypeImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getStringType()
-		 * @generated
-		 */
-		EClass STRING_TYPE = eINSTANCE.getStringType();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomTypeImpl <em>Custom Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomTypeImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomType()
-		 * @generated
-		 */
-		EClass CUSTOM_TYPE = eINSTANCE.getCustomType();
-
-		/**
-		 * The meta object literal for the '<em><b>Classifier</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Get EPackage</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CUSTOM_TYPE__CLASSIFIER = eINSTANCE.getCustomType_Classifier();
+		EOperation METAMODEL___GET_EPACKAGE = eINSTANCE.getMetamodel__GetEPackage();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorImpl <em>Top Layer Operator</em>}' class.
@@ -10805,16 +7645,6 @@ public interface LayersPackage extends EPackage {
 		 * @generated
 		 */
 		EClass STACKED_LAYER_OPERATOR = eINSTANCE.getStackedLayerOperator();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomLayerOperatorImpl <em>Custom Layer Operator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomLayerOperatorImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomLayerOperator()
-		 * @generated
-		 */
-		EClass CUSTOM_LAYER_OPERATOR = eINSTANCE.getCustomLayerOperator();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.PropertyIndexImpl <em>Property Index</em>}' class.
@@ -10879,16 +7709,6 @@ public interface LayersPackage extends EPackage {
 		EClass SIMPLE_LAYER_DESCRIPTOR = eINSTANCE.getSimpleLayerDescriptor();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.RegExpLayerDescriptorImpl <em>Reg Exp Layer Descriptor</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.RegExpLayerDescriptorImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getRegExpLayerDescriptor()
-		 * @generated
-		 */
-		EClass REG_EXP_LAYER_DESCRIPTOR = eINSTANCE.getRegExpLayerDescriptor();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullInstanceImpl <em>Null Instance</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10907,128 +7727,6 @@ public interface LayersPackage extends EPackage {
 		EOperation NULL_INSTANCE___GET_INSTANCE = eINSTANCE.getNullInstance__GetInstance();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.RegExpLayerImpl <em>Reg Exp Layer</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.RegExpLayerImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getRegExpLayer()
-		 * @generated
-		 */
-		EClass REG_EXP_LAYER = eINSTANCE.getRegExpLayer();
-
-		/**
-		 * The meta object literal for the '<em><b>Expr</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REG_EXP_LAYER__EXPR = eINSTANCE.getRegExpLayer_Expr();
-
-		/**
-		 * The meta object literal for the '<em><b>Language</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REG_EXP_LAYER__LANGUAGE = eINSTANCE.getRegExpLayer_Language();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Domain Changed Event Dependant</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REG_EXP_LAYER__IS_DOMAIN_CHANGED_EVENT_DEPENDANT = eINSTANCE.getRegExpLayer_IsDomainChangedEventDependant();
-
-		/**
-		 * The meta object literal for the '<em><b>Domain Changed Event Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REG_EXP_LAYER__DOMAIN_CHANGED_EVENT_LEVEL = eINSTANCE.getRegExpLayer_DomainChangedEventLevel();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Diagram Changed Event Dependant</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REG_EXP_LAYER__IS_DIAGRAM_CHANGED_EVENT_DEPENDANT = eINSTANCE.getRegExpLayer_IsDiagramChangedEventDependant();
-
-		/**
-		 * The meta object literal for the '<em><b>Diagram Changed Event Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REG_EXP_LAYER__DIAGRAM_CHANGED_EVENT_LEVEL = eINSTANCE.getRegExpLayer_DiagramChangedEventLevel();
-
-		/**
-		 * The meta object literal for the '<em><b>Expression Context Object Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REG_EXP_LAYER__EXPRESSION_CONTEXT_OBJECT_TYPE = eINSTANCE.getRegExpLayer_ExpressionContextObjectType();
-
-		/**
-		 * The meta object literal for the '<em><b>Activate</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REG_EXP_LAYER___ACTIVATE__ABSTRACTLAYEROPERATOR = eINSTANCE.getRegExpLayer__Activate__AbstractLayerOperator();
-
-		/**
-		 * The meta object literal for the '<em><b>Deactivate</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REG_EXP_LAYER___DEACTIVATE__ABSTRACTLAYEROPERATOR = eINSTANCE.getRegExpLayer__Deactivate__AbstractLayerOperator();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Derived View</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REG_EXP_LAYER___IS_DERIVED_VIEW__VIEW = eINSTANCE.getRegExpLayer__IsDerivedView__View();
-
-		/**
-		 * The meta object literal for the '<em><b>Attach Derived View</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REG_EXP_LAYER___ATTACH_DERIVED_VIEW__VIEW = eINSTANCE.getRegExpLayer__AttachDerivedView__View();
-
-		/**
-		 * The meta object literal for the '<em><b>Attach Derived Views</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REG_EXP_LAYER___ATTACH_DERIVED_VIEWS__ELIST = eINSTANCE.getRegExpLayer__AttachDerivedViews__EList();
-
-		/**
-		 * The meta object literal for the '<em><b>Attach Derived Views</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REG_EXP_LAYER___ATTACH_DERIVED_VIEWS = eINSTANCE.getRegExpLayer__AttachDerivedViews();
-
-		/**
-		 * The meta object literal for the '<em><b>Lookup Derived Views</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REG_EXP_LAYER___LOOKUP_DERIVED_VIEWS__ELIST = eINSTANCE.getRegExpLayer__LookupDerivedViews__EList();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerImpl <em>Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11039,90 +7737,6 @@ public interface LayersPackage extends EPackage {
 		EClass LAYER = eINSTANCE.getLayer();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.ColorImpl <em>Color</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.ColorImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getColor()
-		 * @generated
-		 */
-		EClass COLOR = eINSTANCE.getColor();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.ColorInstanceImpl <em>Color Instance</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.ColorInstanceImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getColorInstance()
-		 * @generated
-		 */
-		EClass COLOR_INSTANCE = eINSTANCE.getColorInstance();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLOR_INSTANCE__VALUE = eINSTANCE.getColorInstance_Value();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillInstanceImpl <em>Fill Instance</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillInstanceImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFillInstance()
-		 * @generated
-		 */
-		EClass FILL_INSTANCE = eINSTANCE.getFillInstance();
-
-		/**
-		 * The meta object literal for the '<em><b>Transparency</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FILL_INSTANCE__TRANSPARENCY = eINSTANCE.getFillInstance_Transparency();
-
-		/**
-		 * The meta object literal for the '<em><b>Fill Color</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FILL_INSTANCE__FILL_COLOR = eINSTANCE.getFillInstance_FillColor();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillImpl <em>Fill</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFill()
-		 * @generated
-		 */
-		EClass FILL = eINSTANCE.getFill();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillPropertySetterImpl <em>Fill Property Setter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FillPropertySetterImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFillPropertySetter()
-		 * @generated
-		 */
-		EClass FILL_PROPERTY_SETTER = eINSTANCE.getFillPropertySetter();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsValidPropertySetterImpl <em>Is Valid Property Setter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsValidPropertySetterImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIsValidPropertySetter()
-		 * @generated
-		 */
-		EClass IS_VALID_PROPERTY_SETTER = eINSTANCE.getIsValidPropertySetter();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.NullPropertySetterImpl <em>Null Property Setter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11131,124 +7745,6 @@ public interface LayersPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NULL_PROPERTY_SETTER = eINSTANCE.getNullPropertySetter();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LineTypeImpl <em>Line Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LineTypeImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLineType()
-		 * @generated
-		 */
-		EClass LINE_TYPE = eINSTANCE.getLineType();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LineInstanceImpl <em>Line Instance</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LineInstanceImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLineInstance()
-		 * @generated
-		 */
-		EClass LINE_INSTANCE = eINSTANCE.getLineInstance();
-
-		/**
-		 * The meta object literal for the '<em><b>Line Color</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINE_INSTANCE__LINE_COLOR = eINSTANCE.getLineInstance_LineColor();
-
-		/**
-		 * The meta object literal for the '<em><b>Line With</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINE_INSTANCE__LINE_WITH = eINSTANCE.getLineInstance_LineWith();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LinePropertySetterImpl <em>Line Property Setter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LinePropertySetterImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getLinePropertySetter()
-		 * @generated
-		 */
-		EClass LINE_PROPERTY_SETTER = eINSTANCE.getLinePropertySetter();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontPropertySetterImpl <em>Font Property Setter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontPropertySetterImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFontPropertySetter()
-		 * @generated
-		 */
-		EClass FONT_PROPERTY_SETTER = eINSTANCE.getFontPropertySetter();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontInstanceImpl <em>Font Instance</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontInstanceImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFontInstance()
-		 * @generated
-		 */
-		EClass FONT_INSTANCE = eINSTANCE.getFontInstance();
-
-		/**
-		 * The meta object literal for the '<em><b>Font Color</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FONT_INSTANCE__FONT_COLOR = eINSTANCE.getFontInstance_FontColor();
-
-		/**
-		 * The meta object literal for the '<em><b>Font Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FONT_INSTANCE__FONT_NAME = eINSTANCE.getFontInstance_FontName();
-
-		/**
-		 * The meta object literal for the '<em><b>Font Heigh</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FONT_INSTANCE__FONT_HEIGH = eINSTANCE.getFontInstance_FontHeigh();
-
-		/**
-		 * The meta object literal for the '<em><b>Bold</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FONT_INSTANCE__BOLD = eINSTANCE.getFontInstance_Bold();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontTypeImpl <em>Font Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.FontTypeImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getFontType()
-		 * @generated
-		 */
-		EClass FONT_TYPE = eINSTANCE.getFontType();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsVisiblePropertySetterImpl <em>Is Visible Property Setter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsVisiblePropertySetterImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIsVisiblePropertySetter()
-		 * @generated
-		 */
-		EClass IS_VISIBLE_PROPERTY_SETTER = eINSTANCE.getIsVisiblePropertySetter();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorDescriptorImpl <em>Top Layer Operator Descriptor</em>}' class.
@@ -11269,78 +7765,6 @@ public interface LayersPackage extends EPackage {
 		 * @generated
 		 */
 		EClass STACKED_LAYER_OPERATOR_DESCRIPTOR = eINSTANCE.getStackedLayerOperatorDescriptor();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomPropertyOperatorImpl <em>Custom Property Operator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.CustomPropertyOperatorImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomPropertyOperator()
-		 * @generated
-		 */
-		EClass CUSTOM_PROPERTY_OPERATOR = eINSTANCE.getCustomPropertyOperator();
-
-		/**
-		 * The meta object literal for the '<em><b>Classname</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOM_PROPERTY_OPERATOR__CLASSNAME = eINSTANCE.getCustomPropertyOperator_Classname();
-
-		/**
-		 * The meta object literal for the '<em><b>Operator Instance</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOM_PROPERTY_OPERATOR__OPERATOR_INSTANCE = eINSTANCE.getCustomPropertyOperator_OperatorInstance();
-
-		/**
-		 * The meta object literal for the '<em><b>Class Bundle ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOM_PROPERTY_OPERATOR__CLASS_BUNDLE_ID = eINSTANCE.getCustomPropertyOperator_ClassBundleID();
-
-		/**
-		 * The meta object literal for the '<em><b>Reset Operator Instance</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOM_PROPERTY_OPERATOR___RESET_OPERATOR_INSTANCE = eINSTANCE.getCustomPropertyOperator__ResetOperatorInstance();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AndStackedLayerOperatorDescriptorImpl <em>And Stacked Layer Operator Descriptor</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AndStackedLayerOperatorDescriptorImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getAndStackedLayerOperatorDescriptor()
-		 * @generated
-		 */
-		EClass AND_STACKED_LAYER_OPERATOR_DESCRIPTOR = eINSTANCE.getAndStackedLayerOperatorDescriptor();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.OrStackedLayerOperatorDescriptorImpl <em>Or Stacked Layer Operator Descriptor</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.OrStackedLayerOperatorDescriptorImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getOrStackedLayerOperatorDescriptor()
-		 * @generated
-		 */
-		EClass OR_STACKED_LAYER_OPERATOR_DESCRIPTOR = eINSTANCE.getOrStackedLayerOperatorDescriptor();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsAbstractUmlSetterImpl <em>Is Abstract Uml Setter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.IsAbstractUmlSetterImpl
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getIsAbstractUmlSetter()
-		 * @generated
-		 */
-		EClass IS_ABSTRACT_UML_SETTER = eINSTANCE.getIsAbstractUmlSetter();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.AllViewsDerivedLayerImpl <em>All Views Derived Layer</em>}' class.
@@ -11475,25 +7899,6 @@ public interface LayersPackage extends EPackage {
 		EDataType STRING = eINSTANCE.getString();
 
 		/**
-		 * The meta object literal for the '<em>boolean</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getboolean()
-		 * @generated
-		 */
-		EDataType BOOLEAN = eINSTANCE.getboolean();
-
-		/**
-		 * The meta object literal for the '<em>EPackage</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.emf.ecore.EPackage
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getEPackage()
-		 * @generated
-		 */
-		EDataType EPACKAGE = eINSTANCE.getEPackage();
-
-		/**
 		 * The meta object literal for the '<em>Exception</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11543,6 +7948,25 @@ public interface LayersPackage extends EPackage {
 		EDataType COMPUTE_PROPERTY_VALUE_COMMAND = eINSTANCE.getComputePropertyValueCommand();
 
 		/**
+		 * The meta object literal for the '<em>boolean</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getboolean()
+		 * @generated
+		 */
+		EDataType BOOLEAN = eINSTANCE.getboolean();
+
+		/**
+		 * The meta object literal for the '<em>EPackage</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecore.EPackage
+		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getEPackage()
+		 * @generated
+		 */
+		EDataType EPACKAGE = eINSTANCE.getEPackage();
+
+		/**
 		 * The meta object literal for the '<em>Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11551,16 +7975,6 @@ public interface LayersPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType OBJECT = eINSTANCE.getObject();
-
-		/**
-		 * The meta object literal for the '<em>Custom Property Opertor Instance</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.operators.CustomPropertyOperatorsInstance
-		 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayersPackageImpl#getCustomPropertyOpertorInstance()
-		 * @generated
-		 */
-		EDataType CUSTOM_PROPERTY_OPERTOR_INSTANCE = eINSTANCE.getCustomPropertyOpertorInstance();
 
 	}
 

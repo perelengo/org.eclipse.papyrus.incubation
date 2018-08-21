@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -143,6 +144,16 @@ public class StringToTypeMapItemProvider
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -191,46 +202,6 @@ public class StringToTypeMapItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createIntType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createBooleanType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createStringType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createCustomType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createColor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createFill()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createLineType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
-				 LayersFactory.eINSTANCE.createFontType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LayersPackage.Literals.STRING_TO_TYPE_MAP__VALUE,
 				 LayersFactory.eINSTANCE.createCSSType()));
 
 		newChildDescriptors.add
@@ -247,7 +218,7 @@ public class StringToTypeMapItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return LayersEditPlugin.INSTANCE;
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

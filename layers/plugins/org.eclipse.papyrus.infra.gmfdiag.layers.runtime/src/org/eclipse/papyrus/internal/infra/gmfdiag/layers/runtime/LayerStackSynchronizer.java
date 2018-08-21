@@ -564,8 +564,9 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 	 */
 	@Override
 	public void layerSet(Notification notification) {
-		log.info(this.getClass().getSimpleName() + " layerSet(not implemented) " + notification.getNewValue());
-
+		if (log.isDebugEnabled()) {
+			log.info(this.getClass().getSimpleName() + " layerSet(not implemented) " + notification.getNewValue());
+		}
 	}
 
 
@@ -728,8 +729,9 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 	 */
 	@Override
 	public void viewMovedBetweenLayer(Notification notification) {
-		log.info(this.getClass().getSimpleName() + " viewMovedBetweenLayer(not implemented) " + notification.getNewValue());
-
+		if (log.isDebugEnabled()) {
+			log.info(this.getClass().getSimpleName() + " viewMovedBetweenLayer(not implemented) " + notification.getNewValue());
+		}
 	}
 
 
@@ -742,7 +744,9 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 	 */
 	@Override
 	public void diagramViewAdded(Notification msg) {
-		log.info(this.getClass().getSimpleName() + " diagramViewAdded(not implemented) " + msg.getNewValue());
+		if (log.isDebugEnabled()) {
+			log.info(this.getClass().getSimpleName() + " diagramViewAdded(not implemented) " + msg.getNewValue());
+		}
 
 		// WARNING !!!
 		// Some filtering should be done on the event.
@@ -762,7 +766,9 @@ public class LayerStackSynchronizer implements IDiagramViewEventListener, ILayer
 	 */
 	@Override
 	public void diagramViewRemoved(Notification msg) {
-		log.info(this.getClass().getSimpleName() + " diagramViewRemoved(not implemented) " + msg.getOldValue());
+		if (log.isDebugEnabled()) {
+			log.info(this.getClass().getSimpleName() + " diagramViewRemoved(not implemented) " + msg.getOldValue());
+		}
 
 		// WARNING !!!
 		// Some filtering should be done on the event.
