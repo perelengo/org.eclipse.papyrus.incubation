@@ -1,6 +1,6 @@
 target "Layers - Oxygen" with source requirements
 
-location "http://download.eclipse.org/releases/oxygen/" {
+location "http://download.eclipse.org/releases/photon/" {
  org.eclipse.ui lazy
  org.eclipse.gmf.runtime.notation lazy
  org.eclipse.gmf.runtime.notation.edit lazy
@@ -13,10 +13,6 @@ location "http://download.eclipse.org/releases/oxygen/" {
  org.eclipse.emf.databinding.edit lazy
  org.eclipse.emf.query.ocl lazy
  
-}
-
-//manualUpdate
-location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBuild/artifact/repository/" Papyrus-Oxygen {
  org.eclipse.papyrus.infra.core lazy
  org.eclipse.papyrus.infra.gmfdiag.common lazy
  org.eclipse.papyrus.infra.emf.diagram.common lazy
@@ -26,5 +22,4 @@ location "https://hudson.eclipse.org/papyrus/job/Papyrus-Oxygen/lastSuccessfulBu
  org.eclipse.papyrus.infra.gmfdiag.css.properties lazy
  org.eclipse.papyrus.infra.gmfdiag.css.model lazy
  org.eclipse.papyrus.infra.gmfdiag.css.model.edit lazy
- 
 }

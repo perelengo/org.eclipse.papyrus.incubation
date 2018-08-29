@@ -13,7 +13,8 @@
 		<module>refactoring</module>
 		<module>diagramtemplate</module>
 		<module>alf</module>
-		<module>layers</module>
+        <!-- deactivate layers from the root build as long as it is built on a different platform
+        <-module>layers</module> -->
 		<module>elk</module>
 		<module>dsml.validation</module>
 	</modules>
