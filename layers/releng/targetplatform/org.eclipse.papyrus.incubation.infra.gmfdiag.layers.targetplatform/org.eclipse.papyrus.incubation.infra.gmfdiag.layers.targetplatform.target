@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Layers - Oxygen" sequenceNumber="1535530115">
+<target name="Layers - Oxygen" sequenceNumber="1538383129">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.ui" version="0.0.0"/>
@@ -15,6 +15,9 @@
       <unit id="org.eclipse.uml2.uml.edit" version="0.0.0"/>
       <unit id="org.eclipse.emf.databinding.edit" version="0.0.0"/>
       <unit id="org.eclipse.emf.query.ocl" version="0.0.0"/>
+      <repository location="http://download.eclipse.org/releases/2018-09/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.papyrus.infra.core" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.infra.gmfdiag.common" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.infra.emf.diagram.common" version="0.0.0"/>
@@ -24,7 +27,7 @@
       <unit id="org.eclipse.papyrus.infra.gmfdiag.css.properties" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.infra.gmfdiag.css.model" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.infra.gmfdiag.css.model.edit" version="0.0.0"/>
-      <repository location="http://download.eclipse.org/releases/photon/"/>
+      <repository id="Papyrus-2018-09" location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2018-09/4.1.0/"/>
     </location>
   </locations>
 </target>

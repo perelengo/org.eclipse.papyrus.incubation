@@ -11,7 +11,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 
 	<groupId>org.eclipse.papyrus.incubation.infra.gmfdiag.layers</groupId>
 	<artifactId>org.eclipse.papyrus.incubation.infra.gmfdiag.layers.parent</artifactId>
-	<version>0.7.0-SNAPSHOT</version>
+	<version>0.8.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<modules>
@@ -27,7 +27,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		  <properties>
 			<targetplatform.groupId>org.eclipse.papyrus.incubation.infra.gmfdiag.layers</targetplatform.groupId>
 			<targetplatform.artifactId>org.eclipse.papyrus.incubation.infra.gmfdiag.layers.targetplatform</targetplatform.artifactId>
-			<targetplatform.version>0.7.0-SNAPSHOT</targetplatform.version>
+			<targetplatform.version>0.8.0-SNAPSHOT</targetplatform.version>
 		  </properties>
 	            
 	      <modules>

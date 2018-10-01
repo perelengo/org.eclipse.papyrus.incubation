@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<feature id="org.eclipse.papyrus.infra.gmfdiag.layers.feature" 
-      label="%featureName" 
-      provider-name="%providerName" 
-      version="0.7.0.qualifier">
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.papyrus.infra.gmfdiag.layers.feature"
+      label="%featureName"
+      version="0.8.0.qualifier"
+      provider-name="%providerName">
 
    <description url="http://www.eclipse.com/papyrus">
       This plugins add Layers capapbilities to Papyrus diagrams.
@@ -19,52 +20,54 @@
    <license url="%licenseURL">
       %license
    </license>
-   
-   <requires>
-      <!-- need to update this as soon as the tool has been cleansed -->
-   </requires>
 
-   <plugin download-size="0" 
-      id="org.eclipse.papyrus.infra.gmfdiag.layers.model" 
-      install-size="0" 
-      unpack="false" 
-      version="0.0.0"/>
+   <plugin
+         id="org.eclipse.papyrus.infra.gmfdiag.layers.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" 
-      id="org.eclipse.papyrus.infra.gmfdiag.layers.model.edit" 
-      install-size="0" 
-      unpack="false" 
-      version="0.0.0"/>
+   <plugin
+         id="org.eclipse.papyrus.infra.gmfdiag.layers.model.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" 
-      id="org.eclipse.papyrus.infra.gmfdiag.layers.model.editor" 
-      install-size="0" 
-      unpack="false" 
-      version="0.0.0"/>
-   
-   <plugin download-size="0" 
-      id="org.eclipse.papyrus.infra.gmfdiag.layers.diagram" 
-      install-size="0" 
-      unpack="false" 
-      version="0.0.0"/>
+   <plugin
+         id="org.eclipse.papyrus.infra.gmfdiag.layers.model.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" 
-      id="org.eclipse.papyrus.infra.gmfdiag.layers.ui" 
-      install-size="0" 
-      unpack="false" 
-      version="0.0.0"/>
+   <plugin
+         id="org.eclipse.papyrus.infra.gmfdiag.layers.diagram"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" 
-      id="org.eclipse.papyrus.infra.gmfdiag.layers.runtime" 
-      install-size="0" 
-      unpack="false" 
-      version="0.0.0"/>
-   
-   <plugin download-size="0" 
-      id="org.eclipse.papyrus.infra.gmfdiag.layers.notationmodel.edit" 
-      install-size="0" 
-      unpack="false" 
-      version="0.0.0"/>
+   <plugin
+         id="org.eclipse.papyrus.infra.gmfdiag.layers.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   
+   <plugin
+         id="org.eclipse.papyrus.infra.gmfdiag.layers.runtime"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.papyrus.infra.gmfdiag.layers.notationmodel.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>

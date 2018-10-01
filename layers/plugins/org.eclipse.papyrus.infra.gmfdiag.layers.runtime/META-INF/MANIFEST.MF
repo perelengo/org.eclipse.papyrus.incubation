@@ -15,7 +15,7 @@ Export-Package: org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime,
  org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.service
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
-Bundle-Version: 0.7.0.qualifier
+Bundle-Version: 0.8.0.qualifier
 Bundle-Name: %pluginName
 Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
