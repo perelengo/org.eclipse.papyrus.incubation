@@ -13,13 +13,17 @@
 
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.custom;
 
+import static org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.Activator.log;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.LayersException;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.NotFoundException;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.command.ComputePropertyValueCommand;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerExpression;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayerOperatorDescriptor;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStack;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.Property;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.TopLayerOperatorImpl;
@@ -74,7 +78,7 @@ public class CustomTopLayerOperatorImpl extends TopLayerOperatorImpl {
 		// TODO Check if we can optimize
 
 		// the result list
-		List<ComputePropertyValueCommand> resCmds = new ArrayList<ComputePropertyValueCommand>(properties.size());
+		List<ComputePropertyValueCommand> resCmds = new ArrayList<>(properties.size());
 		boolean isCmdFound = false;
 
 		for (Property property : properties) {
@@ -118,7 +122,7 @@ public class CustomTopLayerOperatorImpl extends TopLayerOperatorImpl {
 		// TODO Check if we can optimize
 
 		// the result list
-		List<ComputePropertyValueCommand> resCmds = new ArrayList<ComputePropertyValueCommand>(views.size());
+		List<ComputePropertyValueCommand> resCmds = new ArrayList<>(views.size());
 		boolean isCmdFound = false;
 
 		for (View view : views) {
@@ -232,6 +236,56 @@ public class CustomTopLayerOperatorImpl extends TopLayerOperatorImpl {
 			l.detach();
 		}
 	}
+
+	/**
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerOperatorImpl#isDescriptorSet()
+	 *
+	 * @return
+	 */
+	@Override
+	public boolean isDescriptorSet() {
+		return getLayerOperatorDescriptor() != null;
+	}
+
+	/**
+	 * Reset the descriptor accordingly to the descriptor name.
+	 * The descriptor is resseted only if the ::application and ::layerOperatorDescriptorName are set.
+	 * Nothing is done if one of the attribute is not set.
+	 * Nothing is done if the descriptor can not be found (maybe a log is issue).
+	 * <!-- begin-user-doc -->
+	 * Not used ?
+	 * <!-- end-user-doc -->
+	 *
+	 */
+	@Override
+	public void resetDescriptor() {
+
+		if (getApplication() == null || getLayerOperatorDescriptorName() == null) {
+			// A property is not yet set.
+			// do nothing
+			return;
+		}
+
+		try {
+			LayerOperatorDescriptor descriptor = getApplication().getLayerOperatorDescriptorRegistry().getLayerOperatorDescriptor(getLayerOperatorDescriptorName());
+			setLayerOperatorDescriptor(descriptor);
+		} catch (NotFoundException e) {
+			// Not found
+			log.error(this.getClass().getName()
+					+ "- Can't get LayerOperatorDescriptor for descriptorName '" + getLayerOperatorDescriptorName() + "'.", e);
+		}
+	}
+
+	/**
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#isLayerEnabledInternal()
+	 *
+	 * @return
+	 */
+	@Override
+	public boolean isLayerEnabledInternal() {
+		return isLayerEnabled && isDescriptorSet();
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -228,6 +228,26 @@ public class CustomStackedLayerOperatorImpl extends StackedLayerOperatorImpl {
 	}
 
 	/**
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerOperatorImpl#isDescriptorSet()
+	 *
+	 * @return
+	 */
+	@Override
+	public boolean isDescriptorSet() {
+		return getLayerOperatorDescriptor() != null;
+	}
+
+	/**
+	 * @see org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.impl.LayerExpressionImpl#isLayerEnabledInternal()
+	 *
+	 * @return
+	 */
+	@Override
+	public boolean isLayerEnabledInternal() {
+		return isLayerEnabled && isDescriptorSet();
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 *
