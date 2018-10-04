@@ -6,7 +6,7 @@
       <view
             category="org.eclipse.papyrus.views.category"
             class="org.eclipse.papyrus.internal.infra.gmfdiag.layers.ui.view.LayersExplorerView"
-            icon="icons/LayersStackApplication.gif"
+            icon="platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.layers.ui/icons/LayersStackApplication.gif"
             id="org.eclipse.papyrus.infra.gmfdiag.layers.ui.view.layersexplorer"
             name="LayersExplorer"
             restorable="true">
