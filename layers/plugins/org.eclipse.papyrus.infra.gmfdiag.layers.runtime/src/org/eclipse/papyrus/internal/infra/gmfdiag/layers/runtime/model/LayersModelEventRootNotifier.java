@@ -37,7 +37,7 @@ public class LayersModelEventRootNotifier {
 	/**
 	 * List of listener to notify.
 	 */
-	protected List<ILayersModelRootEventListener> listeners = new ArrayList<ILayersModelRootEventListener>();
+	protected List<ILayersModelRootEventListener> listeners = new ArrayList<>();
 
 	protected Adapter modelListener = new AdapterImpl() {
 
@@ -59,6 +59,7 @@ public class LayersModelEventRootNotifier {
 				// LayerOperator::layers || LayersStack::layers
 				// check the event type.
 				switch (notification.getEventType()) {
+
 				case Notification.SET:
 
 					break;

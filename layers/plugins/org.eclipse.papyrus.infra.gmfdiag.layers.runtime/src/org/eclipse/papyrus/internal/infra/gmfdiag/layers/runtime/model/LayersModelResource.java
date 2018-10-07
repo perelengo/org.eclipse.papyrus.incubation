@@ -11,10 +11,20 @@
 package org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.model;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Map;
 
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.impl.BasicEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.edit.command.RemoveCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.osgi.util.NLS;
 import org.eclipse.papyrus.infra.core.resource.AbstractModelWithSharedResource;
 import org.eclipse.papyrus.infra.core.resource.IModel;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
@@ -22,6 +32,7 @@ import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersFact
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.model.layers.LayersStackApplication;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.Activator;
 import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.LayersStackAndApplicationLifeCycleEventNotifier;
+import org.eclipse.papyrus.internal.infra.gmfdiag.layers.runtime.resource.utils.DanglingCrossReferencer;
 
 
 /**
@@ -44,9 +55,10 @@ public class LayersModelResource extends AbstractModelWithSharedResource<LayersS
 	 */
 	public static final String MODEL_ID = "org.eclipse.papyrus.layers.resource.LayersModel"; //$NON-NLS-1$
 
+	/**
+	 * The LifeCycleEventNotifier of this model
+	 */
 	private LayersStackAndApplicationLifeCycleEventNotifier layersStackAndApplicationLifeCycleEventNotifier = null;
-
-	boolean isDirty = false;
 
 
 	/**
@@ -127,8 +139,8 @@ public class LayersModelResource extends AbstractModelWithSharedResource<LayersS
 	 * 
 	 * @param isDirty
 	 */
-	public void shouldSave(boolean isDirty) {
-		this.isDirty = isDirty;
+	public boolean shouldSave() {
+		return this.resource.isModified();
 	}
 
 	/**
@@ -139,12 +151,34 @@ public class LayersModelResource extends AbstractModelWithSharedResource<LayersS
 	@Override
 	public void saveModel() throws IOException {
 
-		if (isDirty) {
+		if (shouldSave()) {
 			final ModelSet set = getModelManager();
 
 			for (Resource resource : getResources()) {
 				if (set.shouldSave(resource)) {
 					try {
+						DanglingCrossReferencer danglingReferencer = new DanglingCrossReferencer(resource);
+
+						Map<EObject, Collection<EStructuralFeature.Setting>> danglingReferences = danglingReferencer.findDanglingCrossReferences();
+
+						if (danglingReferences.size() > 0) {
+							for (Map.Entry<EObject, Collection<EStructuralFeature.Setting>> danglingReferenceEntry : danglingReferences
+									.entrySet()) {
+								BasicEObjectImpl danglingReference = (BasicEObjectImpl) danglingReferenceEntry.getKey();
+								for (EStructuralFeature.Setting setting : danglingReferenceEntry.getValue()) {
+									EObject objectWithDanglingRefs = setting.getEObject();
+
+									// CheckDanglingReferences
+									EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(objectWithDanglingRefs);
+									Command addThePart = RemoveCommand.create(domain, objectWithDanglingRefs,
+											setting.getEStructuralFeature(), Collections.singleton(danglingReference));
+									domain.getCommandStack().execute(addThePart);
+
+									// Activator.log.warn("There are dangling references in your model,you should think about cleaning it");//$NON-NLS-1$
+								}
+							}
+						}
+
 						resource.save(null);
 					} catch (IOException ex) {
 						// If an exception occurs, we should not prevent other resources from being saved.
