@@ -120,12 +120,12 @@
             locationURI="menu:org.eclipse.papyrus.ui.menu">
          <menu
                label="Layers">
-            <command
+            <!--command
                   commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview"
                   label="Open Layers Explorer"
                   style="push"
                   tooltip="Open the Layers Explorer View">
-            </command>
+            </command-->
             <command
                   commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.detachLayerStack"
                   label="Detach Layer Stack"
@@ -280,12 +280,12 @@
                   style="push"
                   tooltip="Detach a Layer Stack to the diagram">
             </command>
-            <command
+            <!--command
                   commandId="org.eclipse.papyrus.infra.gmfdiag.layers.ui.commands.openlayersexplorerview"
                   label="Open Layers Explorer"
                   style="push"
                   tooltip="Open the Layers Explorer View">
-            </command>
+            </command-->
          </menu>
       </menuContribution>
    </extension>
