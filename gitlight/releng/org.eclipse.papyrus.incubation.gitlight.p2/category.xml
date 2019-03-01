@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.papyrus.gitlight.feature_0.7.0.qualifier.jar" id="org.eclipse.papyrus.gitlight.feature" version="0.7.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+   <feature url="features/org.eclipse.papyrus.gitlight.feature.source_0.7.0.qualifier.jar" id="org.eclipse.papyrus.gitlight.feature.source" version="0.7.0.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+   <category-def name="org.eclipse.papyrus.incubation.category" label="Papyrus Incubation">
+      <description>
+         Papyrus Incubation features
+      </description>
+   </category-def>
+</site>

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.papyrus.gitlight.review.profile;singleton:=true
+Automatic-Module-Name: org.eclipse.papyrus.gitlight.review.profile
+Bundle-Version: 0.7.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: org.eclipse.papyrus.gitlight.review.profile.Activator$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.eclipse.papyrus.gitlight.review.profile,
+ org.eclipse.papyrus.gitlight.review.profile.utils,
+ org.eclipse.papyrus.gitlight.reviewprofile,
+ org.eclipse.papyrus.gitlight.reviewprofile.impl,
+ org.eclipse.papyrus.gitlight.reviewprofile.util
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.osgi,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.eclipse.uml2.types,
+ org.eclipse.papyrus.infra.core.log,
+ org.eclipse.uml2.uml
+

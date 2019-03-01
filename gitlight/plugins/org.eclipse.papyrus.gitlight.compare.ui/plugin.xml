@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+ Copyright (c) 2019 CEA LIST, and others.
+
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License 2.0
+ which accompanies this distribution, and is available at
+ https://www.eclipse.org/legal/epl-2.0/
+
+ SPDX-License-Identifier: EPL-2.0
+
+ Contributors:
+   CEA LIST - Initial API and implementation
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <file-association
+            content-type="org.eclipse.emf.compare.content.type"
+            file-extensions="di,notation"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.ide.resourceSetHook">
+      <resourceSetHook
+            class="org.eclipse.papyrus.gitlight.compare.ui.CssInstallationHook">
+      </resourceSetHook>
+      <resourceSetHook
+            class="org.eclipse.papyrus.gitlight.compare.ui.SaveParameterHook">
+      </resourceSetHook>
+      <resourceSetHook
+            class="org.eclipse.papyrus.gitlight.compare.ui.ElementTypeSetConfigurationRegistryInitializingHook">
+      </resourceSetHook>
+      <resourceSetHook
+            class="org.eclipse.papyrus.gitlight.compare.ui.ServicesRegistryInitializingHook">
+      </resourceSetHook>
+      <resourceSetHook
+            class="org.eclipse.papyrus.gitlight.compare.ui.DiagramMigrationHook">
+      </resourceSetHook>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.ide.ui.logicalModelViewHandlers">
+      <handler
+            class="org.eclipse.papyrus.gitlight.compare.ui.internal.logical.view.PapyrusLMVHandler"
+            ranking="20">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.ide.ui.modelDependencyProvider">
+      <dependency
+            class="org.eclipse.papyrus.gitlight.compare.ui.dependency.PapyrusDependencyProvider">
+      </dependency>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.papyrus.infra.onefile.model.IPapyrusFile"
+            class="org.eclipse.papyrus.gitlight.compare.ui.comparesource.EMFCompareSourceAdapterFactory">
+         <adapter
+               type="org.eclipse.emf.compare.ide.ui.source.IEMFComparisonSource">
+         </adapter>
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.compare.contentMergeViewers">
+      <viewer
+            class="org.eclipse.papyrus.gitlight.compare.ui.contentmergeviewer.PapyrusTreeContentMergeViewerCreator"
+            id="org.eclipse.papyrus.gitlight.compare.ui.PapyrusTreeContentMergeViewer"
+            label="Papyrus"
+            extensions= 
+              "papyrus-org.eclipse.emf.compare.rcp.ui.eTreeDiff,
+              papyrus-org.eclipse.emf.compare.rcp.ui.eMatch,
+              papyrus-org.eclipse.emf.compare.rcp.ui.eResourceDiff,
+              papyrus-NODE_TYPE__EMF_EOBJECT,
+              papyrus-NODE_TYPE__EMF_RESOURCE,
+              papyrus-NODE_TYPE__EMF_RESOURCESET,
+              papyrus-NODE_TYPE__EMF_COMPARISON">
+      </viewer>
+      <viewer
+            class="org.eclipse.emf.compare.ide.ui.internal.contentmergeviewer.TextFallbackCompareViewerCreator"
+            extensions=
+            "papyrus-org.eclipse.emf.compare.rcp.ui.eTreeDiff,
+              papyrus-org.eclipse.emf.compare.rcp.ui.eMatch,
+              papyrus-org.eclipse.emf.compare.rcp.ui.eResourceDiff,
+              papyrus-NODE_TYPE__EMF_EOBJECT,
+              papyrus-NODE_TYPE__EMF_RESOURCE,
+              papyrus-NODE_TYPE__EMF_RESOURCESET,
+              papyrus-NODE_TYPE__EMF_COMPARISON"
+            id="org.eclipse.emf.compare.ide.ui.internal.contentmergeviewer.TextFallbackCompareViewer"
+            label="%emf.compare.fallback.textcompare">
+      </viewer>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.ui.accessorFactory">
+      <factory
+            class="org.eclipse.papyrus.gitlight.compare.ui.internal.accessorfactory.PapyrusAccessorFactoryWrapper"
+            ranking="1000">
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.ui.contentMergeViewerCustomization">
+      <treeContentCustomization
+            contentProvider="org.eclipse.papyrus.gitlight.compare.ui.contentmergeviewer.provider.PapyrusMergeViewerItemContentProvider"
+            context="org.eclipse.papyrus.gitlight.compare.ui.contentmergeviewer.provider.PapyrusContextTester"
+            ranking="20">
+      </treeContentCustomization>
+      <contentCustomization
+            context="org.eclipse.papyrus.gitlight.compare.ui.contentmergeviewer.provider.PapyrusContextTester"
+            mergeViewerItemProvider="org.eclipse.papyrus.gitlight.compare.ui.contentmergeviewer.provider.PapyrusCompareAccessorMergeViewerItemProvider"
+            ranking="10">
+      </contentCustomization>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.ui.filters">
+      <filter
+            activeByDefault="true"
+            class="org.eclipse.papyrus.gitlight.compare.ui.internal.structuremergeviewer.filters.PapyrusDiagramTechnicalElementsFilter"
+            description="Technical elements of Papyrus diagrams such as hidden applied stereotype comments shapes and links."
+            label="Papyrus diagram technical elements">
+      </filter>
+      <filter
+            activeByDefault="true"
+            class="org.eclipse.papyrus.gitlight.compare.ui.internal.structuremergeviewer.filters.ManagedDiffsFilter"
+            description="Hide the already managed differences."
+            label="Hide managed differences">
+      </filter>
+      <filter
+            activeByDefault="true"
+            class="org.eclipse.papyrus.gitlight.compare.ui.internal.structuremergeviewer.filters.AnnotationDiffsFilter"
+            description="Hide the Papyrus Annotations differences."
+            label="Hide Papyrus Annotations differences">
+      </filter>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.viewpoints.policy.viewType">
+      <helper
+            class="org.eclipse.papyrus.gitlight.compare.ui.internal.helper.CompareDiagramViewTypeHelper"
+            priority="50">
+      </helper>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.ui.groups">
+     <group
+           class="org.eclipse.papyrus.gitlight.compare.ui.internal.structuremergeviewer.groups.PapyrusGroupProvider"
+           label="Default (Papyrus)"
+           rank="140">
+      </group>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.ide.modelInclusionTester">
+      <fileExtensionModelInclusionTester
+            fileExtension="di">
+      </fileExtensionModelInclusionTester>
+      <fileExtensionModelInclusionTester
+            fileExtension="sash">
+      </fileExtensionModelInclusionTester>
+      <dynamicModelInclusionTester
+            dynamicTester="org.eclipse.papyrus.gitlight.compare.ui.internal.logical.InternationalizationFileInclusionTester">
+      </dynamicModelInclusionTester>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            description="The papyrus category for commands"
+            id="org.eclipse.papyrus.gitlight.compare.ui.compare.category"
+            name="Papyrus">
+      </category>
+      <command
+            categoryId="org.eclipse.papyrus.gitlight.compare.ui.compare.category"
+            description="This allows to accept a modification"
+            id="org.eclipse.papyrus.gitlight.compare.ui.accept"
+            name="Accept">
+      </command>
+      <command
+            categoryId="org.eclipse.papyrus.gitlight.compare.ui.compare.category"
+            description="This allows to reject a modification"
+            id="org.eclipse.papyrus.gitlight.compare.ui.reject"
+            name="Reject">
+      </command>
+      <command
+            categoryId="org.eclipse.papyrus.gitlight.compare.ui.compare.category"
+            description="This allows to go to the previous difference"
+            id="org.eclipse.papyrus.gitlight.compare.ui.previous"
+            name="Previous">
+      </command>
+      <command
+            categoryId="org.eclipse.papyrus.gitlight.compare.ui.compare.category"
+            description="This allows to go to the next difference"
+            id="org.eclipse.papyrus.gitlight.compare.ui.next"
+            name="Next">
+      </command>
+   </extension>
+</plugin>

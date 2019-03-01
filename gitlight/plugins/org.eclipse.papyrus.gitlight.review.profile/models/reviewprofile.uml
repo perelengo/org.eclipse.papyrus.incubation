@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+  <uml:Profile xmi:id="ReviewProfile" name="ReviewProfile" URI="http://www.eclipse.org/papyrus/reviewprofile/0.1.0" metaclassReference="_J9ZD0BQwEemy-MyDPgTDag">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_s-LtERQwEemy-MyDPgTDag" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w5MBADUUEemud6WLE6ZbNQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w5MoEDUUEemud6WLE6ZbNQ" key="Version" value="0.0.0"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w5MoETUUEemud6WLE6ZbNQ" key="Comment" value="&lt;undefined>"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w5MoEjUUEemud6WLE6ZbNQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w5MoEzUUEemud6WLE6ZbNQ" key="Date" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w5MoFDUUEemud6WLE6ZbNQ" key="Author" value="&lt;undefined>"/>
+      </eAnnotations>
+      <contents xmi:type="ecore:EPackage" xmi:id="_s-LtEhQwEemy-MyDPgTDag" name="reviewprofile" nsURI="http://www.eclipse.org/papyrus/reviewprofile/0.1.0" nsPrefix="reviewprofile">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_s-LtHxQwEemy-MyDPgTDag" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s-LtIBQwEemy-MyDPgTDag" key="Version" value="0.0.1"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s-LtIRQwEemy-MyDPgTDag" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s-LtIhQwEemy-MyDPgTDag" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s-LtIxQwEemy-MyDPgTDag" key="Date" value="2019-01-09"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s-LtJBQwEemy-MyDPgTDag" key="Author" value=""/>
+        </eAnnotations>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_s-LtExQwEemy-MyDPgTDag" name="ReviewComment">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_s-LtFBQwEemy-MyDPgTDag" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_LjllkBQwEemy-MyDPgTDag"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_s-LtFRQwEemy-MyDPgTDag" name="base_Comment" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Comment"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_s-LtFxQwEemy-MyDPgTDag" name="severity" ordered="false" lowerBound="1" eType="_s-LtGRQwEemy-MyDPgTDag" defaultValueLiteral="INFO"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_s-LtGRQwEemy-MyDPgTDag" name="ReviewSeverity">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_s-LtGhQwEemy-MyDPgTDag" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_U4EBoBQwEemy-MyDPgTDag"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_s-LtGxQwEemy-MyDPgTDag" name="INFO"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_s-LtHBQwEemy-MyDPgTDag" name="WARNING" value="1"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_s-LtHRQwEemy-MyDPgTDag" name="ERROR" value="2"/>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_J9ZD0BQwEemy-MyDPgTDag" alias="Comment">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+    </elementImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_FtQrYBQwEemy-MyDPgTDag">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_FtQrYRQwEemy-MyDPgTDag">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_LjllkBQwEemy-MyDPgTDag" name="ReviewComment">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OHE2ABQwEemy-MyDPgTDag" name="base_Comment" association="_OG7sEBQwEemy-MyDPgTDag">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OnEksBQwEemy-MyDPgTDag" name="severity" type="_U4EBoBQwEemy-MyDPgTDag">
+        <defaultValue xmi:type="uml:InstanceValue" xmi:id="_qVsA0BQwEemy-MyDPgTDag" name="INFO" instance="_X4POEBQwEemy-MyDPgTDag">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#EnumerationLiteral"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_OG7sEBQwEemy-MyDPgTDag" name="E_ReviewComment_Comment5" memberEnd="_OG7sERQwEemy-MyDPgTDag _OHE2ABQwEemy-MyDPgTDag">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_OG7sERQwEemy-MyDPgTDag" name="extension_ReviewComment" type="_LjllkBQwEemy-MyDPgTDag" aggregation="composite" association="_OG7sEBQwEemy-MyDPgTDag"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_U4EBoBQwEemy-MyDPgTDag" name="ReviewSeverity">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_X4POEBQwEemy-MyDPgTDag" name="INFO"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YHGwgBQwEemy-MyDPgTDag" name="WARNING"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YZfhABQwEemy-MyDPgTDag" name="ERROR"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_74xboBS1Eemy-MyDPgTDag">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_74zQ0BS1Eemy-MyDPgTDag" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Profile>
+  <Ecore:EPackage xmi:id="_8WvKABS1Eemy-MyDPgTDag" base_Package="ReviewProfile" packageName="reviewprofile" nsPrefix="reviewprofile" nsURI="http://www.eclipse.org/papyrus/reviewprofile/0.1.0" basePackage="org.eclipse.papyrus.gitlight" prefix="ReviewProfile"/>
+</xmi:XMI>

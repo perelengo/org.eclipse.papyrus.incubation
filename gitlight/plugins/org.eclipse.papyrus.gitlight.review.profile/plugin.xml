@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+ Copyright (c) 2019 CEA LIST, and others.
+
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License 2.0
+ which accompanies this distribution, and is available at
+ https://www.eclipse.org/legal/epl-2.0/
+
+ SPDX-License-Identifier: EPL-2.0
+
+ Contributors:
+   CEA LIST - Initial API and implementation
+-->
+
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated reviewprofile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/reviewprofile/0.1.0"
+            class="org.eclipse.papyrus.gitlight.reviewprofile.ReviewProfilePackage"
+            genModel="models/reviewprofile.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://REVIEWPROFILE/"
+            target="platform:/plugin/org.eclipse.papyrus.gitlight.review.profile/models/">
+      </mapping>
+   </extension>
+   
+   <extension point="org.eclipse.uml2.uml.generated_package">
+     <profile uri="http://www.eclipse.org/papyrus/reviewprofile/0.1.0"
+           location="pathmap://REVIEWPROFILE/reviewprofile.uml#ReviewProfile"/>
+  </extension>  
+
+</plugin>

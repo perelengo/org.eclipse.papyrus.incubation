@@ -45,6 +45,14 @@
 		</pluginRepository>
 	</pluginRepositories>	
 	
+	<repositories>
+		<repository>
+			<id>license-feature</id>
+			<url>http://download.eclipse.org/cbi/updates/license/</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+	
 	<build>
 		<pluginManagement>
 			<plugins>

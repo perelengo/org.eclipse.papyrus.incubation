@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+ Copyright (c) 2019 CEA LIST, and others.
+
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License 2.0
+ which accompanies this distribution, and is available at
+ https://www.eclipse.org/legal/epl-2.0/
+
+ SPDX-License-Identifier: EPL-2.0
+
+ Contributors:
+   CEA LIST - Initial API and implementation
+-->
+
+<plugin>
+    <extension
+         point="org.eclipse.emf.compare.edit.adapterFactory">
+      <factory
+            class="org.eclipse.papyrus.gitlight.compare.uml2.edit.internal.decorator.PapyrusItemProviderAdapterFactoryDecorator"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               org.eclipse.emf.compare.provider.IItemStyledLabelProvider
+               org.eclipse.emf.compare.provider.IItemDescriptionProvider"
+            context="org.eclipse.papyrus.gitlight.compare.uml2.edit.internal.decorator.PapyrusItemProviderContextTester"
+            description="This provider displays Papyrus elements like they are a new kind of UML element. It uses the icons and labels provided through the Papyrus label provider service."
+            label="Papyrus element item provider"
+            optional="true"
+            ranking="80"
+            uri="http://www.eclipse.org/uml2/5.0.0/UML">
+      </factory>
+      <factory
+            class="org.eclipse.papyrus.gitlight.compare.uml2.edit.internal.decorator.PapyrusCompareItemProviderAdapterFactoryDecorator"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               org.eclipse.emf.compare.provider.ISemanticObjectLabelProvider
+               org.eclipse.emf.compare.provider.IItemStyledLabelProvider
+               org.eclipse.emf.compare.provider.IItemDescriptionProvider"
+            context="org.eclipse.papyrus.gitlight.compare.uml2.edit.internal.decorator.PapyrusItemProviderContextTester"
+            description="Presents Papyrus-specific semantics of certain changes in a comparison."
+            label="Papyrus diff item provider"
+            optional="false"
+            ranking="80"
+            uri="http://www.eclipse.org/emf/compare">
+      </factory>
+   </extension>
+
+</plugin>

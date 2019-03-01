@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<contexts:Context xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constraints="http://www.eclipse.org/papyrus/constraints/0.9" xmlns:contexts="http://www.eclipse.org/papyrus/properties/contexts/0.9" xmi:id="_V9BbIBTLEem2w6RpAUIUuA" name="Reviewprofile">
+  <dependencies href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_69QJkKDJEeSZxfCXzZz3-w"/>
+  <tabs xmi:id="_W97egBTLEem2w6RpAUIUuA" label="Review" id="Reviewprofile" priority="4">
+    <sections xmi:id="_W-CMMBTLEem2w6RpAUIUuA" name="Single ReviewComment" sectionFile="ui/SingleReviewComment.xwt">
+      <widget href="ui/SingleReviewComment.xwt#/"/>
+    </sections>
+    <sections xmi:id="_W-CMMRTLEem2w6RpAUIUuA" name="Multiple ReviewComment" sectionFile="ui/MultipleReviewComment.xwt">
+      <widget href="ui/MultipleReviewComment.xwt#/"/>
+    </sections>
+  </tabs>
+  <views xmi:id="_V9BbIRTLEem2w6RpAUIUuA" name="Single ReviewComment" sections="_W-CMMBTLEem2w6RpAUIUuA" automaticContext="true" datacontexts="_V9BbKhTLEem2w6RpAUIUuA">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_V9BbIhTLEem2w6RpAUIUuA" name="isSingleReviewComment">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_V9BbJBTLEem2w6RpAUIUuA" name="stereotypeName" value="ReviewProfile::ReviewComment"/>
+    </constraints>
+  </views>
+  <views xmi:id="_V9BbJRTLEem2w6RpAUIUuA" elementMultiplicity="-1" name="Multiple ReviewComment" sections="_W-CMMRTLEem2w6RpAUIUuA" automaticContext="true" datacontexts="_V9BbKhTLEem2w6RpAUIUuA">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_V9BbJhTLEem2w6RpAUIUuA" name="isMultipleReviewComment">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_V9BbJxTLEem2w6RpAUIUuA" name="stereotypeName" value="ReviewProfile::ReviewComment"/>
+    </constraints>
+  </views>
+  <dataContexts xmi:id="_V9BbKRTLEem2w6RpAUIUuA" name="ReviewProfile">
+    <elements xmi:id="_V9BbKhTLEem2w6RpAUIUuA" name="ReviewComment">
+      <properties xmi:id="_V9BbKxTLEem2w6RpAUIUuA" name="base_Comment" type="Reference"/>
+      <properties xmi:id="_V9BbLBTLEem2w6RpAUIUuA" name="severity" type="Enumeration"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690xgqDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <modelElementFactory href="ppe:/environment/org.eclipse.papyrus.gitlight.review.ui/resources/Environment.xmi#//@modelElementFactories.0"/>
+  </dataContexts>
+</contexts:Context>

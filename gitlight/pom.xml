@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.eclipse.papyrus.incubation</groupId>
+		<artifactId>org.eclipse.papyrus.incubation.all</artifactId>
+		<version>3.1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>org.eclipse.papyrus.incubation.gitlight</groupId>
+	<artifactId>org.eclipse.papyrus.incubation.gitlight.parent</artifactId>
+	<version>0.7.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>features</module>
+		<module>plugins</module>
+	</modules>
+
+	<profiles>
+		<profile>
+			<id>gitlight</id>
+			<properties>
+				<targetplatform.groupId>org.eclipse.papyrus.incubation.gitlight</targetplatform.groupId>
+				<targetplatform.artifactId>org.eclipse.papyrus.incubation.gitlight.targetplatform.${target.suffix}</targetplatform.artifactId>
+				<targetplatform.version>0.7.0-SNAPSHOT</targetplatform.version>
+			</properties>
+
+			<modules>
+				<module>releng</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>eclipsehippIntegration</id>
+			<activation>
+				<property>
+					<name>JENKINS_URL</name>
+				</property>
+			</activation>
+			<properties>
+				<target.suffix>eclipse</target.suffix> <!-- set to 'eclipse' when building on HIPP, to improve performances -->
+			</properties>
+		</profile>
+		<profile>
+			<id>localIntegration</id>
+			<activation>
+				<property>
+					<name>!JENKINS_URL</name>
+				</property>
+			</activation>
+			<properties>
+				<target.suffix>portable</target.suffix>
+			</properties>
+		</profile>
+	</profiles>
+
+</project>

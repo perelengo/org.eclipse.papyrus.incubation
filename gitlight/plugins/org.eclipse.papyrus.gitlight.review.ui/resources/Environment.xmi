@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<environment:Environment
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:environment="http://www.eclipse.org/papyrus/properties/environment/0.9">
+  <modelElementFactories
+      name="Review Stereotype Factory"
+      factoryClass="org.eclipse.papyrus.gitlight.review.ui.databinding.ReviewModelElementFactory"/>
+  <namespaces
+      name="review"
+      value="org.eclipse.papyrus.gitlight.review.ui.widgets"/>
+</environment:Environment>
