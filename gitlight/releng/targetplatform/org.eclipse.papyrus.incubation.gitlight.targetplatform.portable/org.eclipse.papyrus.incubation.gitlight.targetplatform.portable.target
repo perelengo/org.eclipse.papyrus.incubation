@@ -1,25 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><?pde?><!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform --><target name="GitLight - 2018-12" sequenceNumber="1504259019">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform --><target name="GitLight - 2018-12" sequenceNumber="1504259019">
   <locations>
-	  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-		  <unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="4.2.0.201812120922"/>
-		  <repository location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2018-12"/>
-	  </location>
-	  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-		  <unit id="org.eclipse.uml2.sdk.feature.group" version="5.5.0.v20181203-1331"/>
-		  <repository location="http://download.eclipse.org/releases/2018-12/201812191000"/>
-	  </location>
 	  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 		  <unit id="org.eclipse.papyrus.compare.feature.feature.group" version="0.7.0.201901250021"/>
 		  <repository location="http://download.eclipse.org/modeling/mdt/papyrus/components/compare/updates/integration/"/>
-	  </location>
-	  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-		  <unit id="org.eclipse.emf.compare.diagram.gmf.feature.group" version="3.3.3.201805161152"/>
-		  <unit id="org.eclipse.emf.compare.egit.feature.group" version="1.2.3.201805161152"/>
-		  <unit id="org.eclipse.emf.compare.feature.group" version="3.3.3.201805161152"/>
-		  <unit id="org.eclipse.emf.compare.ide.ui.feature.group" version="3.3.3.201805161152"/>
-		  <unit id="org.eclipse.emf.compare.rcp.ui.feature.group" version="3.3.3.201805161152"/>
-		  <unit id="org.eclipse.emf.compare.uml2.feature.group" version="3.3.3.201805161152"/>
-		  <repository location="http://download.eclipse.org/modeling/emf/compare/updates/releases/3.3/R201805161152/"/>
 	  </location>
 	  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 		  <unit id="org.eclipse.egit.feature.group" version="5.0.0.201806131550-r"/>
@@ -36,6 +21,19 @@
 		  <unit id="org.apache.commons.lang3" version="3.1.0.v201403281430"/>
 		  <unit id="org.apache.commons.lang3.source" version="3.1.0.v201403281430"/>
 		  <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20180606145124/repository"/>
+	  </location>
+	  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+		  <repository location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2019-06"/>
+		  <unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="4.4.0.201906121718"/>
+		  <unit id="org.eclipse.papyrus.sdk.feature.source.feature.group" version="4.4.0.201906121718"/>
+	  </location>
+	  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+		  <repository location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/"/>
+		  <unit id="org.eclipse.gmf.runtime.sdk.feature.group" version="1.11.0.201706061437"/>
+	  </location>
+	  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+		  <repository location="http://download.eclipse.org/releases/2019-06/"/>
+		  <unit id="org.eclipse.emf.sdk.feature.group" version="2.18.0.v20190528-0845"/>
 	  </location>
   </locations>
 </target>
