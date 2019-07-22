@@ -24,6 +24,8 @@
       <import plugin="org.eclipse.emf.compare.rcp.ui"/>
       <import plugin="org.eclipse.emf.compare.uml2"/>
       <import plugin="org.eclipse.papyrus.compare.uml2"/>
+      <import feature="org.eclipse.papyrus.compare.feature"
+      		version="0.0.0" match="compatible"/>
    </requires>
 
    <plugin
