@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-  <feature url="features/org.eclipse.papyrus.diagramtemplate.feature_1.2.0.qualifier.jar" id="org.eclipse.papyrus.diagramtemplate.feature" version="1.2.0.qualifier">
-      <category name="org.eclipse.papyrus.incubation.category"/>
-   </feature>
-   <feature url="features/org.eclipse.papyrus.diagramtemplate.feature.source_1.2.0.qualifier.jar" id="org.eclipse.papyrus.diagramtemplate.feature.source" version="1.2.0.qualifier">
+
+  <feature url="features/org.eclipse.papyrus.diagramtemplate.feature_1.2.1.qualifier.jar" id="org.eclipse.papyrus.diagramtemplate.feature" version="1.2.1.qualifier">
       <category name="org.eclipse.papyrus.incubation.category"/>
    </feature>
   

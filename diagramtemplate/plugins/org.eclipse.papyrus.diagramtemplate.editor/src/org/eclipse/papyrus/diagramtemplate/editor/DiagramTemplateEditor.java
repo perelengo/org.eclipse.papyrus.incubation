@@ -101,6 +101,7 @@ import org.eclipse.papyrus.infra.architecture.representation.PapyrusRepresentati
 import org.eclipse.papyrus.infra.core.architecture.RepresentationKind;
 import org.eclipse.papyrus.infra.core.architecture.merged.MergedArchitectureContext;
 import org.eclipse.papyrus.infra.core.architecture.merged.MergedArchitectureViewpoint;
+import org.eclipse.papyrus.infra.gmfdiag.common.helper.DiagramPrototype;
 import org.eclipse.papyrus.infra.viewpoints.policy.ViewPrototype;
 import org.eclipse.papyrus.uml.diagram.wizards.kind.DiagramKindLabelProvider;
 import org.eclipse.swt.SWT;
@@ -1020,8 +1021,8 @@ public class DiagramTemplateEditor extends EditorPart {
 
 			public void checkStateChanged(CheckStateChangedEvent event) {
 				Object element = event.getElement();
-				if (element instanceof CreationCommandDescriptor) {
-					SetCommand command = new SetCommand(editingDomain, currentDiagramDefinition, currentDiagramDefinition.eClass().getEStructuralFeature("diagramKind"), ((CreationCommandDescriptor) element).getCommandId()); //$NON-NLS-1$
+				if (element instanceof DiagramPrototype) {
+					SetCommand command = new SetCommand(editingDomain, currentDiagramDefinition, currentDiagramDefinition.eClass().getEStructuralFeature("diagramKind"),((DiagramPrototype)element).getLabel()); //$NON-NLS-1$
 					editingDomain.getCommandStack().execute(command);
 				}
 
@@ -1041,8 +1042,8 @@ public class DiagramTemplateEditor extends EditorPart {
 
 			public boolean isChecked(Object element) {
 				if (currentDiagramDefinition != null) {
-					if (element instanceof CreationCommandDescriptor && currentDiagramDefinition.getDiagramKind() != null) {
-						return ((CreationCommandDescriptor) element).getCommandId().equals(currentDiagramDefinition.getDiagramKind());
+					if (element instanceof DiagramPrototype && currentDiagramDefinition.getDiagramKind() != null) {
+						return ((DiagramPrototype) element).getLabel().equals(currentDiagramDefinition.getDiagramKind());
 					}
 				}
 				return false;

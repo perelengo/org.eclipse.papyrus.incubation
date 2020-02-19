@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+  <feature url="features/org.eclipse.papyrus.diagramtemplate.feature_${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}.qualifier.jar" id="org.eclipse.papyrus.diagramtemplate.feature" version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}.qualifier">
+      <category name="org.eclipse.papyrus.incubation.category"/>
+   </feature>
+  
+  <category-def name="org.eclipse.papyrus.incubation.category" label="Papyrus Incubation">
+      <description>
+         Papyrus Incubation features
+      </description>
+   </category-def>
+</site>

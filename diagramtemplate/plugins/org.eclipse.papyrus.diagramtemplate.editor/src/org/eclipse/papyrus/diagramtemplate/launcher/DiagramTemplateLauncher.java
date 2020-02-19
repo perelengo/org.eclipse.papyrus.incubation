@@ -208,7 +208,7 @@ public class DiagramTemplateLauncher {
 		for (Object object : diagramsKindlist) {
 			CreationCommandDescriptor command = (CreationCommandDescriptor) object;
 
-			if (command.getCommandId().equals(commandID)) {
+			if (command.getLabel().equals(commandID)) {
 				return command;
 			}
 		}
@@ -559,9 +559,9 @@ public class DiagramTemplateLauncher {
 													EObject diagram = it.next();
 													if (diagram instanceof Diagram) {
 														if (!diagramsInResource.contains(diagram.eResource().getURIFragment(diagram))) {
-															diagramsCreated.put(diagram.eResource().getURIFragment(diagram), selection);
 															diagramsInResource.add(diagram.eResource().getURIFragment(diagram));
-
+															diagramsCreated.put(diagram.eResource().getURIFragment(diagram), selection);
+															
 															creationReport.put(eObject, CreationReportKind.SUCCESS);
 														}
 													}
@@ -586,9 +586,9 @@ public class DiagramTemplateLauncher {
 													EObject diagram = it.next();
 													if (diagram instanceof Diagram) {
 														if (!diagramsInResource.contains(diagram.eResource().getURIFragment(diagram))) {
-															diagramsCreated.put(diagram.eResource().getURIFragment(diagram), selection);
 															diagramsInResource.add(diagram.eResource().getURIFragment(diagram));
-
+															diagramsCreated.put(diagram.eResource().getURIFragment(diagram), selection);
+															
 															creationReport.put(eObject, CreationReportKind.SUCCESS);
 														}
 													}
@@ -760,6 +760,7 @@ public class DiagramTemplateLauncher {
 										try {
 											System.out.println("Executing");
 											IPageManager pageManager = services.getService(IPageManager.class);
+					
 
 											System.out.println("Close all pages");
 											pageManager.closeAllOpenedPages();
